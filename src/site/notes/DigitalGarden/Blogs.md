@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Blogs/index.md","permalink":"/Blogs/index/","title":"Blogs","tags":["BG6LH","ODG","业余无线电","数字花园"],"dgHomeLink":"false","dgShowLocalGraph":"false","dgShowToc":"false","dgShowTags":"false","created":"2025-03-07, 04:00:00","updated":"2025-03-12, 03:59:01"}
+{"dg-publish":true,"dg-path":"Blogs","permalink":"/Blogs/","title":"Blogs","tags":["BG6LH","ODG","业余无线电","数字花园"],"dgHomeLink":"false","dgShowToc":"false","dgShowTags":"false"}
 ---
 
 
