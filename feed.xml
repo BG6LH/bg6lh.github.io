@@ -3,17 +3,17 @@
     <title>BG6LH&#39;s Digital Garden</title>
     <link href="https://bg6lh.github.io//feed.xml" rel="self" >
     <link href="https://bg6lh.github.io/" >
-    <updated>2025-03-12T03:16:16Z</updated>
+    <updated>2025-03-12T03:36:37Z</updated>
     <id>https://bg6lh.github.io/</id>
         <entry>
             <title>
                 欢迎来到BG6LH的数字花园
                 
             </title>
-            <updated>2025-03-10T02:33:47.000Z</updated>
+            <updated>2025-03-12T03:31:35.000Z</updated>
             <id>https://bg6lh.github.io//</id>
             <content type="html">
-                &lt;h2 id=&quot;bg-6-lh&quot; tabindex=&quot;-1&quot;&gt;欢迎来到BG6LH的数字花园～&lt;/h2&gt;
+                &lt;h1 id=&quot;bg-6-lh&quot; tabindex=&quot;-1&quot;&gt;欢迎来到BG6LH的数字花园&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;https://bg6lh.github.io/img/user/assets/Welcome%20to%20BG6LH&#39;s%20Digital%20Garden/img-Welcome%20to%20BG6LH&#39;s%20Digital%20Garden.jpg&quot; alt=&quot;img-Welcome to BG6LH&#39;s Digital Garden.jpg|800&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;这是一个新的开始，我正在使用Obsidian建立我的个人知识库，并且用上了AI，管理、建设我的本地化知识体系，包括我的工作、及爱好&lt;/li&gt;
@@ -32,7 +32,7 @@
                 Maidenhead 网格定位系统
                 
             </title>
-            <updated>2025-03-08T02:47:45.000Z</updated>
+            <updated>2025-03-12T03:33:35.000Z</updated>
             <id>https://bg6lh.github.io//Blogs/maidenhead-locator-system/</id>
             <content type="html">
                 &lt;p&gt;梅登黑德网格是一种用于报告电台位置的定位系统，最早在1980年4月由VHF工作组在梅登黑德决定使用。网格由五个字符对组成，其中前两个字符表示Field，接下来的两个字符表示Square，最后两个字符表示Subsquare。在短波领域通常报告到Square，而在V/UHF则报告到Subsquare。&lt;/p&gt;
@@ -68,15 +68,16 @@
                 DIY FT-817 数据电缆
                 
             </title>
-            <updated>2025-03-10T01:50:39.000Z</updated>
+            <updated>2025-03-12T03:34:07.000Z</updated>
             <id>https://bg6lh.github.io//Blogs/diy-ft-817-data-cable/</id>
             <content type="html">
-                &lt;p&gt;为了在FT-817上更方便地玩FT8，我做了一根DATA电脑连接线。配合以前买的一根写频线控制FT-817的PTT，整个系统工作的很顺溜。连接线的制作方法很简单，主要材料是一根标准MD6的线，两个立体声插头，一个USB声卡，直接连到一起就搞定。&lt;/p&gt;
-&lt;h2 id=&quot;ft-817-data&quot; tabindex=&quot;-1&quot;&gt;关于FT-817的DATA接口&lt;/h2&gt;
+                &lt;h1 id=&quot;diy-ft-817-data&quot; tabindex=&quot;-1&quot;&gt;DIY FT-817的DATA接口&lt;/h1&gt;
+&lt;p&gt;为了在FT-817上更方便地玩FT8，我做了一根DATA电脑连接线。配合以前买的一根写频线控制FT-817的PTT，整个系统工作的很顺溜。连接线的制作方法很简单，主要材料是一根标准MD6的线，两个立体声插头，一个USB声卡，直接连到一起就搞定。&lt;/p&gt;
+&lt;h1 id=&quot;ft-817-data&quot; tabindex=&quot;-1&quot;&gt;关于FT-817的DATA接口&lt;/h1&gt;
 &lt;p&gt;这个DATA接口，它的名字叫“数据”，其实是通过&lt;strong&gt;音频电平&lt;/strong&gt;、也就是音量，来跟其它设备进行信号传递的一种接口。这是一个彻头彻脑的“音频”设备。&lt;/p&gt;
 &lt;p&gt;FT8用AFSK模式调制信号。AFSK是&lt;strong&gt;音频&lt;/strong&gt;的频移键控。电台收发的是一种音频调制信号。这个声音通过电缆传送到电脑声卡里，再用的wsjt-x这类软件解调、播放声音，这个体系就是这样工作起来的。&lt;/p&gt;
 &lt;p&gt;我要做的这根线，就是电台到电脑的这段连接电缆。&lt;/p&gt;
-&lt;h2 id=&quot;材料清单&quot; tabindex=&quot;-1&quot;&gt;材料清单&lt;/h2&gt;
+&lt;h1 id=&quot;材料清单&quot; tabindex=&quot;-1&quot;&gt;材料清单&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;一根Mini-Din 6（MD6）的标准连接线&lt;/strong&gt; 这跟键盘鼠标用的PS/2线接口完全一样。但是PS/2键盘鼠标线大多数省略了2、6两根连线，对于DATA输入输出来说缺了接地线。所以一定要买一根标准的MD6连接线。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;一个USB声卡(带3.5mm的音频输入输出）&lt;/strong&gt; 这是为了把FT8的音频信号，跟系统其它软件的音效彻底隔离开。况且我这个2015年的MBP也没有音频输入接口了，只能靠电脑的内置麦克风“听”旁边电台的声音。&lt;/li&gt;
@@ -84,7 +85,7 @@
 &lt;li&gt;&lt;strong&gt;一根FT-817的ACC控制线&lt;/strong&gt; 如果你想让电脑来自主控制电台的信号收发，就需要这根线。这是一根USB转TTL的编程线、写频线，最早买来是为了给817写频用的，PL-2302芯片的。&lt;/li&gt;
 &lt;li&gt;最后在准备一些磁环，套在做好的线两端，用来抑制杂散信号的干扰。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&quot;ft-817-data-1&quot; tabindex=&quot;-1&quot;&gt;FT-817的DATA接口&lt;/h2&gt;
+&lt;h1 id=&quot;ft-817-data-1&quot; tabindex=&quot;-1&quot;&gt;FT-817的DATA接口&lt;/h1&gt;
 &lt;p&gt;在FT-817手册的第38/41页，有两张图，说明了DATA接口的连线方案。FT8使用的是AFSK调制模式，只用到了DATA接口的1200bps的针脚接口。所以参考38页那个也行。下边这个是41页那张图，说明了DATA接口所有的定义和连接方式。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://bg6lh.github.io/img/user/assets/diy-ft-817-data-cable.png&quot; alt=&quot;FT-817 DATA接口定义&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;MD6接口的定义：&lt;/strong&gt;&lt;/p&gt;
@@ -158,7 +159,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id=&quot;关于声卡的技术参数&quot; tabindex=&quot;-1&quot;&gt;关于声卡的技术参数&lt;/h2&gt;
+&lt;h1 id=&quot;关于声卡的技术参数&quot; tabindex=&quot;-1&quot;&gt;关于声卡的技术参数&lt;/h1&gt;
 &lt;p&gt;网上有一些成品化的连接器方案。比如使用了音频隔离变压器、光偶合的ACC控制电路。我这个主要还是因为只在QRP设备上用，没考虑太多。但是咨询了卖家这个USB声卡的参数，得到了一些参考数据。&lt;/p&gt;
 &lt;p&gt;这是绿联的US205 USB声卡，用的是HS-100B芯片的USB声卡方案，据卖家讲：&lt;/p&gt;
 &lt;ul&gt;
