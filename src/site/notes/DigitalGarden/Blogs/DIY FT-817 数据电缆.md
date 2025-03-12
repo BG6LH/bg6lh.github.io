@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Blogs/diy-ft-817-data-cable.md","permalink":"/Blogs/diy-ft-817-data-cable/","title":"DIY FT-817的DATA接口","tags":["daily","FT-817","FT8","业余无线电"],"noteIcon":"","created":"2025-03-08, 03:39:46","updated":"2025-03-12, 03:34:07"}
+{"dg-publish":true,"dg-path":"Blogs/diy-ft-817-data-cable.md","permalink":"/Blogs/diy-ft-817-data-cable/","title":"DIY FT-817的DATA接口","tags":["daily","FT-817","FT8","业余无线电"],"noteIcon":"","created":"2018-07-10, 04:00:00","updated":"2025-03-12, 03:31:04"}
 ---
 
 
