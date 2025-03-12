@@ -3,7 +3,7 @@
     <title>BG6LH‘s Digital Garden</title>
     <link href="https://bg6lh.github.io/feed.xml" rel="self" >
     <link href="https://bg6lh.github.io" >
-    <updated>2025-03-12T15:45:03Z</updated>
+    <updated>2025-03-12T16:00:14Z</updated>
     <id>https://bg6lh.github.io</id>
         <entry>
             <title>
@@ -185,5 +185,39 @@
 
             </content>
             <link href="https://bg6lh.github.io/Blogs/diy-ft-817-data-cable/" >
+        </entry>
+        <entry>
+            <title>
+                Blogs
+                
+            </title>
+            <updated>2025-03-12T03:59:01.000Z</updated>
+            <id>https://bg6lh.github.io/Blogs/index/</id>
+            <content type="html">
+                &lt;p&gt;我的近期博客&lt;/p&gt;
+&lt;table class=&quot;block-language-dataview&quot;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Title&lt;/th&gt;
+&lt;th&gt;Published&lt;/th&gt;
+&lt;th&gt;Desc&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&quot;internal-link&quot; target=&quot;&quot; data-note-icon=&quot;2&quot; href=&quot;https://bg6lh.github.io/Blogs/diy-ft-817-data-cable/&quot;&gt;DIY FT-817 数据电缆&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;2018-07-10&lt;/td&gt;
+&lt;td&gt;为了在FT-817上更方便地玩FT8，我做了一根DATA电脑连接线。配合以前买的一根写频线控制FT-817的PTT，整个系统工作的很顺溜。连接线的制作方法很简单，主要材料是一根标准MD6的线，两个立体声插头，一个USB声卡，直接连到一起就搞定。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a class=&quot;internal-link&quot; target=&quot;&quot; data-note-icon=&quot;2&quot; href=&quot;https://bg6lh.github.io/Blogs/maidenhead-locator-system/&quot;&gt;Maidenhead 网格定位系统&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;2018-06-06&lt;/td&gt;
+&lt;td&gt;梅登黑德网格是一种用于报告电台位置的定位系统，最早在1980年4月由VHF工作组在梅登黑德决定使用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+            </content>
+            <link href="https://bg6lh.github.io/Blogs/index/" >
         </entry>
 </feed>
