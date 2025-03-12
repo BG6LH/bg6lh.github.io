@@ -1,10 +1,10 @@
 ---
-{"dg-publish":true,"dg-path":"welcome","permalink":"/welcome/","title":"欢迎访问BG6LH的数字花园","pinned":true,"tags":["BG6LH","ODG","业余无线电","数字花园","gardenEntry"],"dgHomeLink":"false","dgShowLocalGraph":"false","dgShowInlineTitle":true,"created":"2025-03-07, 04:00:00","updated":"2025-03-12, 02:49:20"}
+{"dg-publish":true,"dg-path":"welcome","permalink":"/welcome/","title":"欢迎访问BG6LH的数字花园","pinned":true,"tags":["BG6LH","ODG","业余无线电","数字花园","gardenEntry"],"dgHomeLink":"false","dgShowLocalGraph":"false","dgShowToc":"false","created":"2025-03-07, 04:00:00","updated":"2025-03-12, 03:06:30"}
 ---
 
 
-
 ![img-Welcome to BG6LH's Digital Garden.jpg|800](/img/user/assets/Welcome%20to%20BG6LH's%20Digital%20Garden/img-Welcome%20to%20BG6LH's%20Digital%20Garden.jpg)
+## 欢迎来到我的数字花园
 
 - 这是一个新的开始，我正在使用Obsidian建立我的个人知识库，并且用上了AI，管理、建设我的本地化知识体系，包括我的工作、及爱好
 - 这些年，我玩业余无线电的心得，大多数都发布在我的微信公众号上
