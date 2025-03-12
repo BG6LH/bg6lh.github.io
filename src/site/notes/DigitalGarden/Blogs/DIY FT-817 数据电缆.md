@@ -1,9 +1,7 @@
 ---
-{"dg-publish":true,"dg-path":"Blogs/diy-ft-817-data-cable.md","permalink":"/Blogs/diy-ft-817-data-cable/","title":"DIY FT-817的DATA接口","tags":["daily","FT-817","FT8","业余无线电"],"noteIcon":"","created":"2018-07-10, 04:00:00","updated":"2025-03-12, 03:31:04"}
+{"dg-publish":true,"dg-path":"Blogs/diy-ft-817-data-cable.md","permalink":"/Blogs/diy-ft-817-data-cable/","title":"关于FT-817的DATA接口","tags":["daily","FT-817","FT8","业余无线电"],"noteIcon":"","created":"2018-07-10, 04:00:00","updated":"2025-03-12, 04:53:43"}
 ---
 
-
-# DIY FT-817的DATA接口
 
 为了在FT-817上更方便地玩FT8，我做了一根DATA电脑连接线。配合以前买的一根写频线控制FT-817的PTT，整个系统工作的很顺溜。连接线的制作方法很简单，主要材料是一根标准MD6的线，两个立体声插头，一个USB声卡，直接连到一起就搞定。
 
