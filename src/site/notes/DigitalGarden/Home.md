@@ -1,9 +1,9 @@
 ---
-{"dg-publish":true,"dg-path":"Home","permalink":"/Home/","title":"Home","pinned":true,"tags":["BG6LH","HamRadio","ODG","数字花园","gardenEntry","gardenEntry"],"dgHomeLink":"false","dgShowLocalGraph":"false","dgShowToc":"false","dgShowTags":"false"}
+{"dg-publish":true,"dg-path":"Home","permalink":"/Home/","title":"Home","pinned":true,"tags":["BG6LH","HamRadio","ODG","数字花园","gardenEntry","gardenEntry","gardenEntry"],"dgHomeLink":"false","dgShowLocalGraph":"false","dgShowToc":"false","dgShowTags":"false"}
 ---
 
 
-![img-Welcome to BG6LH's Digital Garden.jpg|800](/img/user/assets/Welcome%20to%20BG6LH's%20Digital%20Garden/img-Welcome%20to%20BG6LH's%20Digital%20Garden.jpg)
+![img-Welcome to BG6LH's Digital Garden.jpg|800](/img/user/assets/img-Welcome%20to%20BG6LH's%20Digital%20Garden.jpg)
 ## 欢迎来到我的数字花园
 
 - 这是一个新的开始，我正在使用Obsidian建立我的个人知识库，并且用上了AI，管理、建设我的本地化知识体系，包括我的工作、及爱好
