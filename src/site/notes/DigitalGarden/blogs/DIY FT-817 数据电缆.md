@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"blogs/DIY FT-817 数据电缆.md","dg-permalink":"bogs/diy-ft-817-data-cable.md","permalink":"/bogs/diy-ft-817-data-cable.md/","title":"DIY FT-817 数据电缆","tags":["daily","FT-817","FT8","HamRadio"],"created":"2018-07-10","updated":"2025-03-12"}
+{"dg-publish":true,"dg-path":"blogs/DIY FT-817 数据电缆.md","dg-permalink":"blogs/diy-ft-817-data-cable/","permalink":"/blogs/diy-ft-817-data-cable/","title":"DIY FT-817 数据电缆","tags":["daily","FT-817","FT8","HamRadio"],"created":"2018-07-10","updated":"2025-03-12"}
 ---
 
 

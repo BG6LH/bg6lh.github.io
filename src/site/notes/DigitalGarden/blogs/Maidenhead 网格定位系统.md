@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"blogs/Maidenhead 网格定位系统.md","dg-permalink":"blogs/maidenhead-locator-system.md","permalink":"/blogs/maidenhead-locator-system.md/","title":"Maidenhead 网格定位系统","tags":["HamRadio"],"created":"2018-06-06","updated":"2025-03-12"}
+{"dg-publish":true,"dg-path":"blogs/Maidenhead 网格定位系统.md","dg-permalink":"blogs/maidenhead-locator-system/","permalink":"/blogs/maidenhead-locator-system/","title":"Maidenhead 网格定位系统","tags":["HamRadio"],"created":"2018-06-06","updated":"2025-03-12"}
 ---
 
 
