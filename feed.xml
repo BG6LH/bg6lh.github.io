@@ -3,50 +3,14 @@
     <title>BG6LH‘s Digital Garden</title>
     <link href="https://bg6lh.github.io/feed.xml" rel="self" >
     <link href="https://bg6lh.github.io" >
-    <updated>2025-03-13T09:09:50Z</updated>
+    <updated>2025-03-13T09:09:54Z</updated>
     <id>https://bg6lh.github.io</id>
-        <entry>
-            <title>
-                Maidenhead 网格定位系统
-                
-            </title>
-            <updated>2025-03-12T00:00:00.000Z</updated>
-            <id>https://bg6lh.github.io/blogs/maidenhead-locator-system/</id>
-            <content type="html">
-                &lt;p&gt;梅登黑德网格是一种用于报告电台位置的定位系统，最早在1980年4月由VHF工作组在梅登黑德决定使用。网格由五对字符组成，其中前两个字符表示Field，接下来的两个字符表示Square，最后两个字符表示Subsquare。在短波领域通常报告到Square，而在V/UHF则报告到Subsquare。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;梅登黑德网格由VHF工作组在1980年决定采用。&lt;/li&gt;
-&lt;li&gt;网格由五个字符对组成：Field、Square和Subsquare。&lt;/li&gt;
-&lt;li&gt;短波领域通常报告到Square，V/UHF则报告到Subsquare。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;p&gt;梅登黑德（Maidenhead）是一个位于英国伯克郡的镇和非教区地，处在泰晤士河南岸，距离查令十字以西25.7英里（41.4千米）。&lt;/p&gt;
-&lt;p&gt;1980年4月VHF工作组在这里开了一次会，决定使用 Dr. John Morris G4ANB 的网格定位法来取代之前的QRA定位法。这就是梅登黑德网格。 1999年IARU决定，该方法的经纬度坐标应严格遵循WGS 84地心坐标。&lt;/p&gt;
-&lt;p&gt;网格定位的字符表示格式如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Maidenhead_Locator_System_explained.svg/640px-Maidenhead_Locator_System_explained.svg.png&quot; alt=&quot;梅登黑德网格&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;梅登黑德网格的分割方式：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;每两个字符一对儿，经度在前、纬度在后。&lt;/li&gt;
-&lt;li&gt;第一对，Field，编码从A-R，分别代表了18个经度（每20度一个字母）和18个纬度（每10度一组）。&lt;/li&gt;
-&lt;li&gt;第二对，Square，编码从0-9，把每一个Field分成100个Square。&lt;/li&gt;
-&lt;li&gt;第三对，Subsquare，编码从a-x，把每个Square分成256个Subsquare。&lt;/li&gt;
-&lt;li&gt;第四对，Extended Square，编码从0-9，把每个Subsquare分成100个Extended Square。&lt;/li&gt;
-&lt;li&gt;第五对之后的没有正式定义，基本可以按照第三、第四对的规律向后推算。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;在短波领域一般报告到“Square”，即4位。 在V/UHF，一般报告到Subsuqare，即6位。&lt;/p&gt;
-&lt;p&gt;为避免出现负数，这个系统定义：经度的起点在国际日期变更线，纬度的起点在南极。每一级分格的起点都是左下角。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Maidenhead_Locator_Map.png/640px-Maidenhead_Locator_Map.png&quot; alt=&quot;Field的顺序&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Maidenhead_grid_over_Europe.svg/584px-Maidenhead_grid_over_Europe.svg.png&quot; alt=&quot;Square的顺序&quot; /&gt;&lt;/p&gt;
-
-            </content>
-            <link href="https://bg6lh.github.io/blogs/maidenhead-locator-system/" >
-        </entry>
         <entry>
             <title>
                 Home
                 
             </title>
-            <updated>2025-03-13T09:09:40Z</updated>
+            <updated>2025-03-13T09:09:41Z</updated>
             <id>https://bg6lh.github.io/</id>
             <content type="html">
                 &lt;p&gt;&lt;img src=&quot;https://bg6lh.github.io/img/user/assets/img-Welcome%20to%20BG6LH&#39;s%20Digital%20Garden.jpg&quot; alt=&quot;img-Welcome to BG6LH&#39;s Digital Garden.jpg|800&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;
@@ -62,39 +26,5 @@
 
             </content>
             <link href="https://bg6lh.github.io/" >
-        </entry>
-        <entry>
-            <title>
-                Blogs
-                
-            </title>
-            <updated>2025-03-13T09:09:40Z</updated>
-            <id>https://bg6lh.github.io/blogs/</id>
-            <content type="html">
-                &lt;p&gt;我的近期博客&lt;/p&gt;
-&lt;table class=&quot;block-language-dataview&quot;&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Title&lt;/th&gt;
-&lt;th&gt;Published&lt;/th&gt;
-&lt;th&gt;Desc&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a class=&quot;internal-link is-unresolved&quot; href=&quot;https://bg6lh.github.io/404&quot; target=&quot;&quot;&gt;DIY FT-817 数据电缆&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;2018-07-10&lt;/td&gt;
-&lt;td&gt;为了在FT-817上更方便地玩FT8，我做了一根DATA电脑连接线。配合以前买的一根写频线控制FT-817的PTT，整个系统工作的很顺溜。连接线的制作方法很简单，主要材料是一根标准MD6的线，两个立体声插头，一个USB声卡，直接连到一起就搞定。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a class=&quot;internal-link&quot; target=&quot;&quot; data-note-icon=&quot;2&quot; href=&quot;https://bg6lh.github.io/blogs/maidenhead-locator-system/&quot;&gt;Maidenhead 网格定位系统&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;2018-06-06&lt;/td&gt;
-&lt;td&gt;梅登黑德网格是一种用于报告电台位置的定位系统，网格由五对字符组成，最早在1980年4月由VHF工作组在英国梅登黑德会议上决定使用。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-            </content>
-            <link href="https://bg6lh.github.io/blogs/" >
         </entry>
 </feed>
