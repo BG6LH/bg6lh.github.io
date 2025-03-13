@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"HamRadio/Index.md","permalink":"/HamRadio/Index/","title":"Index","pinned":true,"tags":["BG6LH","HamRadio","ODG","数字花园"],"dgHomeLink":"false","dgShowToc":"false","dgShowTags":"false"}
+{"dg-publish":true,"dg-path":"HamRadio/Index.md","dg-permalink":"hamradio/","permalink":"/hamradio/","title":"Index","pinned":true,"tags":["BG6LH","HamRadio","ODG","数字花园"],"dgHomeLink":"false","dgShowToc":"false","dgShowTags":"false"}
 ---
 
 
