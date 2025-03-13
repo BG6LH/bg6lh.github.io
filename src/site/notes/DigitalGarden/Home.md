@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"welcome","permalink":"/welcome/","title":"Home","pinned":true,"tags":["BG6LH","ODG","HamRadio","数字花园","gardenEntry"],"dgHomeLink":"false","dgShowLocalGraph":"false","dgShowToc":"false","dgShowTags":"false"}
+{"dg-publish":true,"dg-path":"welcome","permalink":"/welcome/","title":"Home","pinned":true,"tags":["BG6LH","ODG","HamRadio","数字花园","gardenEntry","gardenEntry"],"dgHomeLink":"false","dgShowLocalGraph":"false","dgShowToc":"false","dgShowTags":"false"}
 ---
 
 
