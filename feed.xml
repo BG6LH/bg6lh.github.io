@@ -3,7 +3,7 @@
     <title>BG6LH‘s Digital Garden</title>
     <link href="https://bg6lh.github.io/feed.xml" rel="self" >
     <link href="https://bg6lh.github.io" >
-    <updated>2025-03-13T08:38:22Z</updated>
+    <updated>2025-03-13T08:42:47Z</updated>
     <id>https://bg6lh.github.io</id>
         <entry>
             <title>
@@ -13,7 +13,7 @@
             <updated>2025-03-12T00:00:00.000Z</updated>
             <id>https://bg6lh.github.io/blogs/maidenhead-locator-system/</id>
             <content type="html">
-                &lt;p&gt;梅登黑德网格是一种用于报告电台位置的定位系统，最早在1980年4月由VHF工作组在梅登黑德决定使用。网格由五个字符对组成，其中前两个字符表示Field，接下来的两个字符表示Square，最后两个字符表示Subsquare。在短波领域通常报告到Square，而在V/UHF则报告到Subsquare。&lt;/p&gt;
+                &lt;p&gt;梅登黑德网格是一种用于报告电台位置的定位系统，最早在1980年4月由VHF工作组在梅登黑德决定使用。网格由五对字符组成，其中前两个字符表示Field，接下来的两个字符表示Square，最后两个字符表示Subsquare。在短波领域通常报告到Square，而在V/UHF则报告到Subsquare。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;梅登黑德网格由VHF工作组在1980年决定采用。&lt;/li&gt;
 &lt;li&gt;网格由五个字符对组成：Field、Square和Subsquare。&lt;/li&gt;
@@ -169,7 +169,7 @@
                 Home
                 
             </title>
-            <updated>2025-03-13T08:38:10Z</updated>
+            <updated>2025-03-13T08:42:35Z</updated>
             <id>https://bg6lh.github.io/</id>
             <content type="html">
                 &lt;p&gt;&lt;img src=&quot;https://bg6lh.github.io/img/user/assets/Welcome%20to%20BG6LH&#39;s%20Digital%20Garden/img-Welcome%20to%20BG6LH&#39;s%20Digital%20Garden.jpg&quot; alt=&quot;img-Welcome to BG6LH&#39;s Digital Garden.jpg|800&quot; width=&quot;800px&quot; /&gt;&lt;/p&gt;
@@ -191,7 +191,7 @@
                 Blogs
                 
             </title>
-            <updated>2025-03-13T08:38:10Z</updated>
+            <updated>2025-03-13T08:42:35Z</updated>
             <id>https://bg6lh.github.io/blogs/</id>
             <content type="html">
                 &lt;p&gt;我的近期博客&lt;/p&gt;
@@ -212,7 +212,7 @@
 &lt;tr&gt;
 &lt;td&gt;&lt;a class=&quot;internal-link&quot; target=&quot;&quot; data-note-icon=&quot;2&quot; href=&quot;https://bg6lh.github.io/blogs/maidenhead-locator-system/&quot;&gt;Maidenhead 网格定位系统&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;2018-06-06&lt;/td&gt;
-&lt;td&gt;梅登黑德网格是一种用于报告电台位置的定位系统，最早在1980年4月由VHF工作组在梅登黑德决定使用&lt;/td&gt;
+&lt;td&gt;梅登黑德网格是一种用于报告电台位置的定位系统，网格由五对字符组成，最早在1980年4月由VHF工作组在英国梅登黑德会议上决定使用。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
