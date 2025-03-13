@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Blogs/maidenhead-locator-system.md","permalink":"/Blogs/maidenhead-locator-system/","title":"Maidenhead 网格定位系统","tags":["业余无线电"],"created":"2018-06-06","updated":"2025-03-12"}
+{"dg-publish":true,"dg-path":"Blogs/Maidenhead 网格定位系统.md","dg-permalink":"blogs/maidenhead-locator-system.md","permalink":"/blogs/maidenhead-locator-system.md/","title":"Maidenhead 网格定位系统","tags":["HamRadio"],"created":"2018-06-06","updated":"2025-03-12"}
 ---
 
 

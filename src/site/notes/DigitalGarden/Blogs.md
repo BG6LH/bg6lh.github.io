@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"dg-path":"Blogs","permalink":"/Blogs/","title":"Blogs","tags":["BG6LH","ODG","业余无线电","数字花园"],"dgHomeLink":"false","dgShowToc":"false","dgShowTags":"false"}
+{"dg-publish":true,"dg-path":"Blogs","permalink":"/Blogs/","title":"Blogs","tags":["BG6LH","ODG","HamRadio","数字花园"],"dgHomeLink":"false","dgShowToc":"false","dgShowTags":"false"}
 ---
 
 
