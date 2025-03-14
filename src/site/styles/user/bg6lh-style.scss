@@ -6,7 +6,13 @@ body{
     --note-icon-1: url(/img/your-custom.svg);
     --note-icon-2: url(/img/tree-2.svg);
     --note-icon-3: url(/img/tree-3.svg);
-    --note-icon-fallback: url(/img/default-note-icon.svg);
+    --note-icon-fallback: url(/img/tree-custom.svg);
+
+    /* new UI font sizes */
+    --font-ui-smaller: 0.5rem;
+    --font-ui-small: 0.9rem;
+    --font-ui-medium: 1rem;
+    --font-ui-large: 1.5rem;
 }
 
 .notelink.active-note {
@@ -14,6 +20,11 @@ body{
 }
 
 .content {
-    font-size: 1rem;
+    font-size: var(--font-ui-medium);
     line-height: 1.8;
+}
+
+.filelist {
+    font-size: var(--font-ui-small);
+    line-height: 1.5;
 }
