@@ -1,0 +1,4 @@
+Sitemap: https://bg6lh.github.io/sitemap.xml
+
+User-agent:*
+Disallow:
