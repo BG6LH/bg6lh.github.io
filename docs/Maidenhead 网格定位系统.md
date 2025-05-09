@@ -9,7 +9,7 @@ author:
 date: 2018-06-05 08:00:00
 description: 梅登黑德网格是一种用于报告电台位置的定位系统，网格由五对字符组成，最早在1980年4月由VHF工作组在英国梅登黑德会议上决定使用。
 dg-created: 2018-06-06
-permalink: /maidenhead-locator-system/
+permalink: /blog/maidenhead-locator-system/
 dg-publish: true
 dg-updated: 2025-03-12
 linter-yaml-title-alias: Maidenhead 网格定位系统
