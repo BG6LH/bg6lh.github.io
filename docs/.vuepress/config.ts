@@ -170,9 +170,9 @@ export default defineUserConfig({
       provider: 'Giscus', // "Artalk" | "Giscus" | "Twikoo" | "Waline"
       comment: true,
       repo: 'BG6LH/bg6lh.github.io',
-      repoId: 'R_kgDOOGSWew',
+      repoId: 'R_kgDOOnAumg',
       category: 'general',
-      categoryId: 'DIC_kwDOOGSWe84CpsNt',
+      categoryId: 'DIC_kwDOOnAums4Cp8W5',
       mapping: 'pathname',
       reactionsEnabled: true,
       inputPosition: 'top',
