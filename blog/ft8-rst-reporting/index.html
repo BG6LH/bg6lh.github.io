@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="zh">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>FT8报告里的TX和RX是谁的信号？</title>
+		<meta name="description" content="玩FT8数字模式，电脑会记录TX/RX两个信噪比报告，哪个是你的？哪个是对方的？我有一个好记的方式。">
+		<link rel="alternate" href="/eleventy-base-blog/feed/feed.xml" type="application/atom+xml" title="BG6LH的数字花园">
+		<link rel="stylesheet" href="/eleventy-base-blog/css/style.out.css">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+		
+	</head>
+	<body class="flex flex-col antialiased">
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+<header class="flex justify-center px-4 py-12 sm:py-16">
+	<a href="/eleventy-base-blog/" class="home-link">BG6LH的数字花园</a>
+	<nav>
+        <h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+		<ul class="nav">
+            <li class="nav-item"><a href="/eleventy-base-blog/">Home</a></li>
+            <li class="nav-item"><a href="/eleventy-base-blog/blog/">Archive</a></li>
+            <li class="nav-item"><a href="/eleventy-base-blog/about/">About</a></li>
+            <li class="nav-item"><a href="/eleventy-base-blog/feed/feed.xml">Feed</a></li>
+		</ul>
+	</nav>
+</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+<h1 id="ft8-tx-rx">FT8报告里的TX和RX是谁的信号？</h1>
+
+<ul class="post-metadata">
+	<li><time datetime="2019-08-07">07 August 2019</time></li>
+	<li><a href="/eleventy-base-blog/tags/clippings/" class="post-tag">Clippings</a></li>
+</ul>
+
+
+<article class="bg-white">
+    
+        <figure>
+            <img src="/eleventy-base-blog/blog/ft8-rst-reporting/p2axj4lULg-574.webp" class="w-full" alt="FT8报告里的TX和RX是谁的信号？ image" loading="lazy" decoding="async" width="574" height="244">
+        </figure>
+    
+    <div class="px-4 pt-12 pb-16 sm:pt-16 sm:pb-24">
+        <header class="max-w-2xl mx-auto mb-8 text-center">
+            <h1 class="mb-2 text-3xl font-bold uppercase sm:text-4xl text-slate-800" id="ft8-tx-rx-2">FT8报告里的TX和RX是谁的信号？</h1>
+            <time class="text-sm text-slate-400" datetime="2019-08-07">07 August 2019</time>
+        </header>
+        <div class="max-w-2xl mx-auto prose prose-slate">
+            <p>玩FT8数字模式，电脑会记录TX/RX两个信噪比报告，哪个是你的？哪个是对方的？我有一个好记的方式。</p>
+<!--more-->
+<p>玩SSB和CW的都知道RST这套信号报告，就是599这种报告方式，这是接收台给发射台的报告，是给对方的报告。</p>
+<p>玩FT8等等数字模式，也有一套信噪比报告方式，记录的是双方信号相对于2500Hz标准噪声的强度，以分贝(dB)为单位。</p>
+<p>完成一次FT8的QSO之后，电脑会自动记录下来当时的TX/RX两个信号报告数据。</p>
+<p>然鹅，哪个是你的？哪个是对方的？当你需要给对方发QSL卡片时，RST这一栏该怎么写？分享一个好记的方法：</p>
+<ul>
+<li>先把自己忘了</li>
+<li>这条记录都是对方电台的TX/RX数据</li>
+<li>TX是他发射的强度，RX是他接收的强度</li>
+</ul>
+<p>好理解吗？举个栗子，用这个方式去理解一下。</p>
+<p><picture><source type="image/avif" srcset="/eleventy-base-blog/blog/ft8-rst-reporting/j_6IHcdyxC-1080.avif 1080w"><source type="image/webp" srcset="/eleventy-base-blog/blog/ft8-rst-reporting/j_6IHcdyxC-1080.webp 1080w"><img loading="lazy" decoding="async" src="/eleventy-base-blog/blog/ft8-rst-reporting/j_6IHcdyxC-1080.png" alt="图片" width="1080" height="117"></picture></p>
+<p>上图是一条我和BA1GG老师通联的记录，被我的软件记录下来。其中三个信息：</p>
+<ul>
+<li>Callsign：BA1GG</li>
+<li>TX：+14dB</li>
+<li>RX：-04dB</li>
+</ul>
+<p>这条记录表示：BA1GG，发射了+14dB的信号，接收到-04dB的信号。</p>
+<p>QSL卡上如果只有RST这一栏，可以只填写TX数据。他的TX信噪比，其实是我发给他的报告，也是他想知道的，自己的信号传播到哪里？能获得多大的信噪比？所以这个TX对应的就是我给他的RST。</p>
+<p>如果QSL卡上有sent和rcvd两栏怎么填？以下是这条记录的原始ADIF格式记录。里边的：</p>
+<ul>
+<li>rst_sent，对应TX。</li>
+<li>rst_rcvd，对应RX。</li>
+</ul>
+<p><picture><source type="image/avif" srcset="/eleventy-base-blog/blog/ft8-rst-reporting/wITU04KO9f-574.avif 574w"><source type="image/webp" srcset="/eleventy-base-blog/blog/ft8-rst-reporting/wITU04KO9f-574.webp 574w"><img loading="lazy" decoding="async" src="/eleventy-base-blog/blog/ft8-rst-reporting/wITU04KO9f-574.png" alt="图片" width="574" height="494"></picture></p>
+<p>如果你还记不住，多玩玩数字模式就好了。</p>
+<p>继续滑动看下一个</p>
+<p>BG6LH</p>
+<p>向上滑动看下一个</p>
+<hr>
+<p>原文发表在我的微信公众号上：<a href="https://mp.weixin.qq.com/s/Mlp-Y8ILuRpmpslyDArCWQ">https://mp.weixin.qq.com/s/Mlp-Y8ILuRpmpslyDArCWQ</a></p>
+
+        </div>
+    </div>
+</article>
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/eleventy-base-blog/blog/how-to-flash-nanovna-firmware-on-macos-using-dfu-util/">在mac上用dfu-util更新NanoVNA的固件</a></li><li class="links-nextprev-next">Next →<br><a href="/eleventy-base-blog/blog/maidenhead-grid-system/">梅登黑德定位系统</a></li>
+</ul>
+
+			</heading-anchors>
+		</main>
+
+    <footer class="bg-slate-800">
+        <div class="text-xs max-w-4xl mx-auto px-4 py-16 sm:py-24 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- 公司信息 -->
+            <div class="space-y-4">
+             <h3 class="font-semibold text-white mb-4" id="">袈蓝集团</h3>
+                <img src="content/images/syn-logo-white.svg" alt="袈蓝集团" class="w-16 h-16 sm:w-20 sm:h-20">
+                <div class="prose-sm prose text-xs text-slate-300 prose-invert">
+                    <p>袈蓝——城乡融合与乡村振兴系统解决方案引领者</p>
+                  
+                </div>
+            </div>
+
+            <!-- 网站栏目 -->
+            <div class="md:justify-self-center">
+                <h3 class="font-semibold text-white mb-4" id="-2">网站栏目</h3>
+                <ul class="space-y-2">
+                </ul>
+            </div>
+
+            <!-- 社交媒体 -->
+            <div class="md:justify-self-end">
+                <h3 class="font-semibold text-white mb-4" id="-3">关注袈蓝新媒体</h3>
+                <div class="flex gap-6">
+                    <div class="text-center">
+                        <img src="content/images/qr-vlog-wx.png" alt="微信公众号" class="w-24 h-24 mb-2">
+                        <p class="text-slate-300">微信：袈蓝邹迎晞</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="content/images/qr-vlog-dy.png" alt="抖音" class="w-24 h-24 mb-2">
+                        <p class="text-slate-300">抖音：袈蓝邹迎晞</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+		<!-- This page `/blog/ft8-rst-reporting/` was built on 2025-05-17T14:11:57.779Z -->
+		<script type="module" src="/eleventy-base-blog/dist/xbxy_EL6cU.js"></script>
+	</body>
+</html>
