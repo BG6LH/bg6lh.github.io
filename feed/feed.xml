@@ -15,11 +15,7 @@
     <link href="https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/" />
     <updated>2022-04-12T16:12:00Z</updated>
     <id>https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/</id>
-    <content type="html">&lt;p&gt;我以前认为无聊的所有东西现在都是一种‘可爱’的打发时间的方式。&lt;/p&gt;
-&lt;!--more--&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/jpGYksGhv--1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/jpGYksGhv--1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/jpGYksGhv--1080.jpeg&quot; alt=&quot;cover_image&quot; width=&quot;1080&quot; height=&quot;459&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;原创 BG6LH &lt;a href=&quot;https://mp.weixin.qq.com/s/&quot;&gt;BG6LH&lt;/a&gt; &lt;em&gt;2022年04月13日 00:12&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;看过汽车节目《Top Gear》的人都知道大嘴杰瑞米·克拉克森(Jeremy Clarkson)吧？他今年都62了，我的老天鹅。他算是赶上了燃油车的巅峰时代。如今已经满世界都是电动车了，所以他可能觉得自己out了。前几天他在生日之际谈起了对变老和死亡看法。最后一句话令人印象深刻：“我认为这就是老年的定义。 &lt;strong&gt;我以前认为无聊的所有东西现在都是一种‘可爱’的打发时间的方式。&lt;/strong&gt; ”&lt;/p&gt;
+    <content type="html">&lt;p&gt;看过汽车节目《Top Gear》的人都知道大嘴杰瑞米·克拉克森(Jeremy Clarkson)吧？他今年都62了，我的老天鹅。他算是赶上了燃油车的巅峰时代。如今已经满世界都是电动车了，所以他可能觉得自己out了。前几天他在生日之际谈起了对变老和死亡看法。最后一句话令人印象深刻：“我认为这就是老年的定义。 &lt;strong&gt;我以前认为无聊的所有东西现在都是一种‘可爱’的打发时间的方式。&lt;/strong&gt; ”&lt;/p&gt;
 &lt;p&gt;可能我也老了。最近做了一个自以为很可爱的实验，一个LM386的音频放大电路。这是2块9毛8包邮就能搞定的事情。但是我却安装了KiCad 6，自己画了原理图，在BD6CR设计的巧克力洞洞板上完成了制作。其间BI1EIH对我的电路设计给予了不少指导。其实也没啥可设计，因为任何LM386芯片的Datasheet 最后都有那个放大电路。有意思的是接不同的零件能产生不同的放大效果。不同的应用，侧重点不太一样。考虑到我打算给QCX-mini做个外放的便携音箱，所以我加了一个9V的电池供电、一个LED指示灯，以及几个高低频的滤波电容。&lt;/p&gt;
 &lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;545&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;p&gt;LM386的1、8脚之间的C5是可选的，可以把电路的放大增益从20dB提升到200dB。实验结果证明，20dB已经很响了，加了C5之后有点辣耳朵了。&lt;/p&gt;
@@ -38,12 +34,6 @@
 &lt;p&gt;&lt;strong&gt;这玩意儿目前没得卖！&lt;/strong&gt; 但是BD6CR分享了他的巧克力洞洞板设计。大家可以下载了自己去JLC打印。 一张PCB上有六块上边说的小板，中间用邮票孔分开，可以根据需要掰下一块就用。 &lt;strong&gt;它的尺寸特意控制在10x10cm之内，你懂的。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;BD6CR还写了一本《巧克力洞洞板制作》的电子书，里边有好多他用巧克力板做的小玩具，包括SSB接收机、皮鞋这些经典设备。&lt;/p&gt;
 &lt;p&gt;免费PCB文件、电子书，可以读BD6CR的文章： &lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzU1MDk5Mzg4Mg==&amp;amp;mid=2247485305&amp;amp;idx=1&amp;amp;sn=9735498aa9ef2a2e2302eaa405810007&amp;amp;chksm=fb996dcccceee4da959902b53d0836de17b90a8895edafcd62bd99953281cc0d68f4b72ad233&amp;amp;scene=21#wechat_redirect&quot;&gt;免费巧克力洞洞板&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;修改于 2022年04月13日&lt;/p&gt;
-&lt;p&gt;继续滑动看下一个&lt;/p&gt;
-&lt;p&gt;BG6LH&lt;/p&gt;
-&lt;p&gt;向上滑动看下一个&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;原文发表在我的微信公众号上：&lt;a href=&quot;https://mp.weixin.qq.com/s/wAm7z_vfApi_pS6c7Nq5Ww&quot;&gt;https://mp.weixin.qq.com/s/wAm7z_vfApi_pS6c7Nq5Ww&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -164,19 +154,9 @@
 &lt;li&gt;还有一些有趣的现象，第一次实验发现发射时表灭了，以为是压降太大，表不工作了。第三次实验发现发射时伏安表偶尔会显示16V电压，电流还正常。分析最大的可能还是发射时的射频干扰影响了伏安表。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;参考文档&lt;/p&gt;
-&lt;p&gt;《如何设计锂离子电池充电器，以从太阳能电池板获得最大电力》&lt;/p&gt;
-&lt;p&gt;http://www.ti.com.cn/general/cn/docs/gencontent.tsp?contentId=50707&lt;/p&gt;
-&lt;p&gt;天线 18&lt;/p&gt;
-&lt;p&gt;FT8 16&lt;/p&gt;
-&lt;p&gt;太阳能 1&lt;/p&gt;
-&lt;p&gt;FT-818 12&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/&quot;&gt;阅读原文&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;修改于 2021年09月24日&lt;/p&gt;
-&lt;p&gt;继续滑动看下一个&lt;/p&gt;
-&lt;p&gt;BG6LH&lt;/p&gt;
-&lt;p&gt;向上滑动看下一个&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;原文发表在我的微信公众号上：&lt;a href=&quot;https://mp.weixin.qq.com/s/DaX0D_5J-NJIbqaXYt-MFg&quot;&gt;https://mp.weixin.qq.com/s/DaX0D_5J-NJIbqaXYt-MFg&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ti.com.cn/general/cn/docs/gencontent.tsp?contentId=50707&quot;&gt;TI.com - 如何设计锂离子电池充电器，以从太阳能电池板获得最大电力&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
   </entry>
   <entry>
@@ -184,9 +164,7 @@
     <link href="https://bg6lh.github.io/blog/maidenhead-grid-system/" />
     <updated>2019-08-07T23:13:00Z</updated>
     <id>https://bg6lh.github.io/blog/maidenhead-grid-system/</id>
-    <content type="html">&lt;p&gt;这是一篇去年刚开始接触ARPS和FT8时写的Blog，搞懂了梅登黑德网格系统是怎么回事儿。主要信息来源是维基百科的相关词条。&lt;/p&gt;
-&lt;!--more--&gt;
-&lt;p&gt;梅登黑德（Maidenhead）是一个位于英国伯克郡的镇子。&lt;/p&gt;
+    <content type="html">&lt;p&gt;梅登黑德（Maidenhead）是一个位于英国伯克郡的镇子。&lt;/p&gt;
 &lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/maidenhead-grid-system/Jl3FiGgAqf-640.avif 640w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/maidenhead-grid-system/Jl3FiGgAqf-640.webp 640w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/maidenhead-grid-system/Jl3FiGgAqf-640.jpeg&quot; alt=&quot;图片&quot; width=&quot;640&quot; height=&quot;333&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;p&gt;1980年4月IARU VHF工作组在这里开了一次会，决定使用G4ANB，Dr. John Morris的网格定位法来取代之前的QRA定位法。之前的QRA定位法也是一个类似的网格定位方法。&lt;/p&gt;
 &lt;p&gt;这就是梅登黑德网格的由来。现在也叫QTH定位，和IARU定位。1999年IARU决定，该方法的经纬度坐标改为遵循WGS 84地心坐标。&lt;/p&gt;
@@ -211,17 +189,7 @@
 &lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/maidenhead-grid-system/OV7atwQ934-640.avif 640w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/maidenhead-grid-system/OV7atwQ934-640.webp 640w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/maidenhead-grid-system/OV7atwQ934-640.jpeg&quot; alt=&quot;图片&quot; width=&quot;640&quot; height=&quot;320&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/maidenhead-grid-system/51WbtpWl-v-584.avif 584w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/maidenhead-grid-system/51WbtpWl-v-584.webp 584w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/maidenhead-grid-system/51WbtpWl-v-584.jpeg&quot; alt=&quot;图片&quot; width=&quot;584&quot; height=&quot;480&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;p&gt;最后，你有冇发现，同样位数网格，越靠近地球两极，面积越小？那么北极点和南极点的QTH应该怎么表示呢？&lt;/p&gt;
-&lt;p&gt;声明：本文图片均来自维基百科条目，原文链接指向：&lt;/p&gt;
-&lt;p&gt;https://en.wikipedia.org/wiki/Maidenhead_Locator_System&lt;/p&gt;
-&lt;p&gt;梅登海德 3&lt;/p&gt;
-&lt;p&gt;火腿网格 3&lt;/p&gt;
-&lt;p&gt;VHF/UHF 7&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/&quot;&gt;阅读原文&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;继续滑动看下一个&lt;/p&gt;
-&lt;p&gt;BG6LH&lt;/p&gt;
-&lt;p&gt;向上滑动看下一个&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;原文发表在我的微信公众号上：&lt;a href=&quot;https://mp.weixin.qq.com/s/B2e7b50gVE-VNvZmxx3zyQ&quot;&gt;https://mp.weixin.qq.com/s/B2e7b50gVE-VNvZmxx3zyQ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;声明：本文图片均来自维基百科条目&lt;a href=&quot;https://en.wikipedia.org/wiki/Maidenhead_Locator_System&quot;&gt;Maidenhead_Locator_System&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -257,11 +225,6 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/ft8-rst-reporting/wITU04KO9f-574.avif 574w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/ft8-rst-reporting/wITU04KO9f-574.webp 574w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/ft8-rst-reporting/wITU04KO9f-574.png&quot; alt=&quot;图片&quot; width=&quot;574&quot; height=&quot;494&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;p&gt;如果你还记不住，多玩玩数字模式就好了。&lt;/p&gt;
-&lt;p&gt;继续滑动看下一个&lt;/p&gt;
-&lt;p&gt;BG6LH&lt;/p&gt;
-&lt;p&gt;向上滑动看下一个&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;原文发表在我的微信公众号上：&lt;a href=&quot;https://mp.weixin.qq.com/s/Mlp-Y8ILuRpmpslyDArCWQ&quot;&gt;https://mp.weixin.qq.com/s/Mlp-Y8ILuRpmpslyDArCWQ&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -311,8 +274,6 @@ Found DFU: [0483:df11] ver=2200, devnum=16, cfg=1, intf=0, path=&quot;20-1&quot;
 &lt;li&gt;NanoVNA不怕刷成砖，刷坏了再刷就行。&lt;/li&gt;
 &lt;li&gt;Linux和树莓派也可以装dfu-util。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;原文发表在我的微信公众号上： &lt;a href=&quot;https://mp.weixin.qq.com/s/h29UM2iwV9cKt8FxdvI-6w&quot;&gt;https://mp.weixin.qq.com/s/h29UM2iwV9cKt8FxdvI-6w&lt;/a&gt;&lt;/p&gt;
 </content>
   </entry>
   <entry>
