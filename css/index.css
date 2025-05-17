@@ -1,3 +1,6 @@
+@import "tailwindcss"; /*4.0 只需要这一句，一定要在第一行*/
+@plugin "@tailwindcss/typography"; /* 引用 typography插件*/
+
 /* Defaults */
 :root {
 	--font-family: -apple-system, system-ui, sans-serif;

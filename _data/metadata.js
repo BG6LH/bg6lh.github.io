@@ -1,11 +1,12 @@
 export default {
-	title: "Eleventy Base Blog v9",
+	title: "BG6LH的数字花园",
 	url: "https://example.com/",
-	language: "en",
-	description: "I am writing about my experiences as a naval navel-gazer.",
+	language: "zh",
+	description: "CQ CQ CQ 这里是 BG6LH，欢迎访问我的数字花园！我的业余无线电笔记。",
 	author: {
-		name: "Your Name Here",
-		email: "youremailaddress@example.com",
-		url: "https://example.com/about-me/"
+		name: "BG6LH",
+		email: "bg6lh@qsl.net",
+		url: "https://bg6lh.github.io/about-me/"
 	}
+
 }

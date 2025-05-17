@@ -14,7 +14,23 @@ layout: layouts/base.njk
 	{%- endfor %}
 </ul>
 
-{{ content | safe }}
+
+<article class="bg-white">
+    {% if image %}
+        <figure>
+            <img src="{{ image | url }}" class="w-full" eleventy:widths="960" eleventy:formats="webp" alt="{{ title }} image"/>
+        </figure>
+    {% endif %}
+    <div class="px-4 pt-12 pb-16 sm:pt-16 sm:pb-24">
+        <header class="max-w-2xl mx-auto mb-8 text-center">
+            <h1 class="mb-2 text-3xl font-bold uppercase sm:text-4xl text-slate-800">{{ title }}</h1>
+            <time class="text-sm text-slate-400" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+        </header>
+        <div class="max-w-2xl mx-auto prose prose-slate">
+            {{ content | safe }}
+        </div>
+    </div>
+</article>
 
 {%- if collections.posts %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem %}
