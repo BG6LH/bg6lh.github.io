@@ -9,9 +9,9 @@
 		"build:eleventy": "npx @11ty/eleventy",
 		"build": "npm run build:css && npm run build:eleventy",
 		"build-nocolor": "cross-env NODE_DISABLE_COLORS=1 npm run build",
-		"build-ghpages": "npm run build:css && npx @11ty/eleventy --pathprefix=/eleventy-base-blog/",
+		"build-ghpages": "npm run build:css && npx @11ty/eleventy --pathprefix=/",
 		"start": "concurrently \"npx @11ty/eleventy --serve --quiet\" \"npm run watch:css\"",
-		"start-ghpages": "concurrently \"npm run watch:css\" \"npx @11ty/eleventy --pathprefix=/eleventy-base-blog/ --serve --quiet\"",
+		"start-ghpages": "concurrently \"npm run watch:css\" \"npx @11ty/eleventy --pathprefix=/ --serve --quiet\"",
 		"debug": "cross-env DEBUG=Eleventy* npm run build:eleventy",
 		"debugstart": "cross-env DEBUG=Eleventy* npm run start",
 		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* npm run build:eleventy"
