@@ -71,12 +71,12 @@ export default async function(eleventyConfig) {
 			limit: 10,
 		},
 		metadata: {
-			language: "en",
-			title: "Blog Title",
-			subtitle: "This is a longer description about your blog.",
-			base: "https://example.com/",
+			language: "zh-CN",
+			title: "BG6LH的数字花园",
+			subtitle: "CQ DE BG6LH K，欢迎访问我的数字花园！我的业余无线电笔记。Copyright © 2025 BG6LH",
+			base: "https://bg6lh.github.io/",
 			author: {
-				name: "Your Name"
+				name: "BG6LH"
 			}
 		}
 	});
