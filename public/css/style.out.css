@@ -10,6 +10,9 @@
     --color-slate-300: oklch(86.9% 0.022 252.894);
     --color-slate-400: oklch(70.4% 0.04 256.788);
     --color-slate-800: oklch(27.9% 0.041 260.031);
+    --color-neutral-300: oklch(87% 0 0);
+    --color-neutral-400: oklch(70.8% 0 0);
+    --color-neutral-500: oklch(55.6% 0 0);
     --color-neutral-900: oklch(20.5% 0 0);
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -1048,11 +1051,8 @@
   .table {
     display: table;
   }
-  .h-16 {
-    height: calc(var(--spacing) * 16);
-  }
-  .w-16 {
-    width: calc(var(--spacing) * 16);
+  .w-32 {
+    width: calc(var(--spacing) * 32);
   }
   .w-full {
     width: 100%;
@@ -1137,9 +1137,29 @@
     border-block-style: var(--tw-border-style);
     border-block-width: 1px;
   }
+  .border-t-1 {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
+  .border-t-2 {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 2px;
+  }
   .border-dashed {
     --tw-border-style: dashed;
     border-style: dashed;
+  }
+  .border-t-neutral-300 {
+    border-top-color: var(--color-neutral-300);
+  }
+  .border-t-neutral-400 {
+    border-top-color: var(--color-neutral-400);
+  }
+  .border-t-neutral-500 {
+    border-top-color: var(--color-neutral-500);
+  }
+  .border-t-neutral-900 {
+    border-top-color: var(--color-neutral-900);
   }
   .bg-neutral-900 {
     background-color: var(--color-neutral-900);
@@ -1430,14 +1450,9 @@
       }
     }
   }
-  .sm\:h-20 {
+  .sm\:w-32 {
     @media (width >= 40rem) {
-      height: calc(var(--spacing) * 20);
-    }
-  }
-  .sm\:w-20 {
-    @media (width >= 40rem) {
-      width: calc(var(--spacing) * 20);
+      width: calc(var(--spacing) * 32);
     }
   }
   .sm\:py-16 {
@@ -1561,7 +1576,7 @@ p {
   line-height: 2;
 }
 li {
-  line-height: 1.5;
+  line-height: 2;
 }
 a[href] {
   color: var(--text-color-link);
@@ -1683,7 +1698,7 @@ header {
   margin-bottom: 1em;
 }
 .postlist-item:before {
-  display: inline-block;
+  display: none;
   pointer-events: none;
   content: "" counter(start-from, decimal-leading-zero) ". ";
   line-height: 100%;

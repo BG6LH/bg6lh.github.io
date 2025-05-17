@@ -220,30 +220,7 @@ FT-818是6W的机器，比FT-817大了20%呢！所以FT-817对电源的要求要
 
 参考文档  
 
-《如何设计锂离子电池充电器，以从太阳能电池板获得最大电力》
+- [TI.com - 如何设计锂离子电池充电器，以从太阳能电池板获得最大电力](http://www.ti.com.cn/general/cn/docs/gencontent.tsp?contentId=50707)
 
-http://www.ti.com.cn/general/cn/docs/gencontent.tsp?contentId=50707
 
-  
-  
 
-天线 18
-
-FT8 16
-
-太阳能 1
-
-FT-818 12
-
-[阅读原文](https://mp.weixin.qq.com/s/)
-
-修改于 2021年09月24日
-
-继续滑动看下一个
-
-BG6LH
-
-向上滑动看下一个
-
----
-原文发表在我的微信公众号上：[https://mp.weixin.qq.com/s/DaX0D_5J-NJIbqaXYt-MFg](https://mp.weixin.qq.com/s/DaX0D_5J-NJIbqaXYt-MFg)

@@ -103,7 +103,7 @@ p {
 }
 
 li {
-	line-height: 1.5;
+	line-height: 2;
 }
 
 a[href] {
@@ -245,7 +245,7 @@ header {
 	margin-bottom: 1em;
 }
 .postlist-item:before {
-	display: inline-block;
+	display: none;
 	pointer-events: none;
 	content: "" counter(start-from, decimal-leading-zero) ". ";
 	line-height: 100%;

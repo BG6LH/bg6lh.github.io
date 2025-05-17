@@ -28,6 +28,10 @@ layout: layouts/base.njk
         </header>
         <div class="max-w-2xl mx-auto prose prose-slate">
             {{ content | safe }}
+            {% if source and source.indexOf('https://mp.weixin.qq.com/s/') == 0 %}
+                <hr class="border-t-neutral-500 mb-2">
+                <span class="text-sm">原文发表于我的微信公众号 <a href="{{ source }}" target="_blank">BG6LH - {{ title }}</a></span>
+            {% endif %}
         </div>
     </div>
 </article>

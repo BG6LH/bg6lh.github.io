@@ -104,5 +104,3 @@ done parsing DfuSe file
 - NanoVNA不怕刷成砖，刷坏了再刷就行。
 - Linux和树莓派也可以装dfu-util。
 
----
-原文发表在我的微信公众号上： [https://mp.weixin.qq.com/s/h29UM2iwV9cKt8FxdvI-6w](https://mp.weixin.qq.com/s/h29UM2iwV9cKt8FxdvI-6w)
