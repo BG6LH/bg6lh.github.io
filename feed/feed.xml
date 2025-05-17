@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet href="pretty-atom-feed.xsl" type="text/xsl"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-  <title>Blog Title</title>
-  <subtitle>This is a longer description about your blog.</subtitle>
-  <link href="https://example.com/feed/feed.xml" rel="self" />
-  <link href="https://example.com/" />
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+  <title>BG6LH的数字花园</title>
+  <subtitle>CQ DE BG6LH K，欢迎访问我的数字花园！我的业余无线电笔记。Copyright © 2025 BG6LH</subtitle>
+  <link href="https://bg6lh.github.io/feed/feed.xml" rel="self" />
+  <link href="https://bg6lh.github.io/" />
   <updated>2022-04-12T16:12:00Z</updated>
-  <id>https://example.com/</id>
+  <id>https://bg6lh.github.io/</id>
   <author>
-    <name>Your Name</name>
+    <name>BG6LH</name>
   </author>
   <entry>
     <title>用巧克力洞洞板做LM386音频放大器</title>
-    <link href="https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/" />
+    <link href="https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/" />
     <updated>2022-04-12T16:12:00Z</updated>
-    <id>https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/</id>
+    <id>https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/</id>
     <content type="html">&lt;p&gt;我以前认为无聊的所有东西现在都是一种‘可爱’的打发时间的方式。&lt;/p&gt;
 &lt;!--more--&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/jpGYksGhv--1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/jpGYksGhv--1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/jpGYksGhv--1080.jpeg&quot; alt=&quot;cover_image&quot; width=&quot;1080&quot; height=&quot;459&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/jpGYksGhv--1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/jpGYksGhv--1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/jpGYksGhv--1080.jpeg&quot; alt=&quot;cover_image&quot; width=&quot;1080&quot; height=&quot;459&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;p&gt;原创 BG6LH &lt;a href=&quot;https://mp.weixin.qq.com/s/&quot;&gt;BG6LH&lt;/a&gt; &lt;em&gt;2022年04月13日 00:12&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;看过汽车节目《Top Gear》的人都知道大嘴杰瑞米·克拉克森(Jeremy Clarkson)吧？他今年都62了，我的老天鹅。他算是赶上了燃油车的巅峰时代。如今已经满世界都是电动车了，所以他可能觉得自己out了。前几天他在生日之际谈起了对变老和死亡看法。最后一句话令人印象深刻：“我认为这就是老年的定义。 &lt;strong&gt;我以前认为无聊的所有东西现在都是一种‘可爱’的打发时间的方式。&lt;/strong&gt; ”&lt;/p&gt;
 &lt;p&gt;可能我也老了。最近做了一个自以为很可爱的实验，一个LM386的音频放大电路。这是2块9毛8包邮就能搞定的事情。但是我却安装了KiCad 6，自己画了原理图，在BD6CR设计的巧克力洞洞板上完成了制作。其间BI1EIH对我的电路设计给予了不少指导。其实也没啥可设计，因为任何LM386芯片的Datasheet 最后都有那个放大电路。有意思的是接不同的零件能产生不同的放大效果。不同的应用，侧重点不太一样。考虑到我打算给QCX-mini做个外放的便携音箱，所以我加了一个9V的电池供电、一个LED指示灯，以及几个高低频的滤波电容。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;545&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;545&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;p&gt;LM386的1、8脚之间的C5是可选的，可以把电路的放大增益从20dB提升到200dB。实验结果证明，20dB已经很响了，加了C5之后有点辣耳朵了。&lt;/p&gt;
 &lt;p&gt;其实 我真 的不是 一个那么闲的人。 我只是希望在日子过的越来越复杂时，让自己能安静下来几分钟，体会一下自麦克斯韦以降，人类智慧的那点结晶。&lt;/p&gt;
 &lt;p&gt;BD6CR设计的巧克力洞洞板很好玩。它的焊盘不像普通洞洞板那样简单排列，而是在一小块4x3cm见方的板子上分布了大约13x10个焊盘，外围一圈是接地，里边又分成几组，有的串联，有的独立，每组还有就近接地。仔细观察它，你能体会到很多来自作者的巧思。这就是为电子爱好者精心设计的小玩具。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/_q0XB47wzI-561.avif 561w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/_q0XB47wzI-561.webp 561w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/_q0XB47wzI-561.png&quot; alt=&quot;图片&quot; width=&quot;561&quot; height=&quot;656&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/_q0XB47wzI-561.avif 561w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/_q0XB47wzI-561.webp 561w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/_q0XB47wzI-561.png&quot; alt=&quot;图片&quot; width=&quot;561&quot; height=&quot;656&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;p&gt;为了布置元件方便，我用KiCad画了一片巧克力板，就为了能事先把原件摆一摆，提高一下制作效率。 个人很享受这个过程，仿佛在玩 无线电老中医的乐高积木。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/PtcYyV5Irg-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/PtcYyV5Irg-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/PtcYyV5Irg-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;919&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/B1T8NVz0pp-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/B1T8NVz0pp-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/B1T8NVz0pp-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;919&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/PtcYyV5Irg-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/PtcYyV5Irg-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/PtcYyV5Irg-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;919&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/B1T8NVz0pp-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/B1T8NVz0pp-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/B1T8NVz0pp-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;919&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;p&gt;下边是完成后的作业。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/IvUGL4UtRM-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/IvUGL4UtRM-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/IvUGL4UtRM-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/IvUGL4UtRM-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/IvUGL4UtRM-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/IvUGL4UtRM-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;p&gt;看看背面，没咋飞线就搞定了。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/Mo8wiyQTC9-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/Mo8wiyQTC9-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/Mo8wiyQTC9-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/Mo8wiyQTC9-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/Mo8wiyQTC9-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/Mo8wiyQTC9-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;p&gt;再来段视频，证明我弄响了。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;哪儿能买到巧克力洞洞板？&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;这玩意儿目前没得卖！&lt;/strong&gt; 但是BD6CR分享了他的巧克力洞洞板设计。大家可以下载了自己去JLC打印。 一张PCB上有六块上边说的小板，中间用邮票孔分开，可以根据需要掰下一块就用。 &lt;strong&gt;它的尺寸特意控制在10x10cm之内，你懂的。&lt;/strong&gt;&lt;/p&gt;
@@ -48,9 +48,9 @@
   </entry>
   <entry>
     <title>QRP野战太阳能电源设计</title>
-    <link href="https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/" />
+    <link href="https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/" />
     <updated>2019-08-09T00:07:00Z</updated>
-    <id>https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/</id>
+    <id>https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/</id>
     <content type="html">&lt;p&gt;我给FT-818设计了这样一套野战浮充供电系统：一个7AH的胶体铅酸蓄电池，一个27W的折叠太阳能电池包&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;p&gt;我给FT-818配置了一套野战用的太阳能浮充电源系统：&lt;/p&gt;
@@ -60,7 +60,7 @@
 &lt;li&gt;一个数字伏安表，做太阳能电池的充电监测。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;以下是整个系统的设计图：&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/E1Tq3gHddp-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/E1Tq3gHddp-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/E1Tq3gHddp-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;613&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/E1Tq3gHddp-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/E1Tq3gHddp-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/E1Tq3gHddp-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;613&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;太阳能支路上增加了一个防返流的二极管；&lt;/li&gt;
 &lt;li&gt;电流表也在这里，监测着向蓄电池充电时的电流；&lt;/li&gt;
@@ -76,9 +76,9 @@
 &lt;li&gt;发射电流：HF和VHF是2.4A，UHF是2.7A。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;FT-818是6W的机器，比FT-817大了20%呢！所以FT-817对电源的要求要稍微低一点。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/m7zzOVNFVE-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/m7zzOVNFVE-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/m7zzOVNFVE-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1532&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/m7zzOVNFVE-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/m7zzOVNFVE-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/m7zzOVNFVE-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1532&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;p&gt;12V/4AH胶体蓄电池&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/PFYiC4ovXy-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/PFYiC4ovXy-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/PFYiC4ovXy-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/PFYiC4ovXy-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/PFYiC4ovXy-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/PFYiC4ovXy-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;胶体蓄电池优点是：充电时不需要稳定的电压和电流，放电时却可以持续稳定放电。缺点是重，4AH这个重达1.3kg。&lt;/li&gt;
 &lt;li&gt;4AH的电池大约可以满足FT-818持续发射2个小时不到。即便是玩数字模式，占空比将近50%，也能持续玩3小时以上。&lt;/li&gt;
@@ -87,7 +87,7 @@
 &lt;li&gt;胶体蓄电池充电电流在0.1C之内都不用担心过充。C表示蓄电池容量，4AH的0.1C就是400mA。如果充电电流最大不超过这个，那就算是安全的了。实际效果，充电电流最大看到过450mA，尚可。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;12V/27W的太阳能电池板&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/Gp4SbSE2Cv-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/Gp4SbSE2Cv-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/Gp4SbSE2Cv-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/Gp4SbSE2Cv-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/Gp4SbSE2Cv-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/Gp4SbSE2Cv-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;淘的某厂家半成品，100元上下&lt;/li&gt;
 &lt;li&gt;12V输出，开路电压标是18-20V&lt;/li&gt;
@@ -108,9 +108,9 @@
 &lt;p&gt;锂电池轻便，但是贵，而且还需要而外的充电管理模块，浮充的时候是否有干扰也不好保证。&lt;/p&gt;
 &lt;p&gt;数字伏安表DSN-VC288&lt;/p&gt;
 &lt;p&gt;为了让这一切显得靠谱，还是要监控一下充电的电压和电流。于是我买了DSN-VC288。网上搜“数字双显电流电压表”最便宜的那种就是它。这玩意儿满世界都是，似乎外国人玩的比国内还明白，有人都反向出来了电路图。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/gW_Yot_TKl-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/gW_Yot_TKl-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/gW_Yot_TKl-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/QLSfZVNBOJ-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/QLSfZVNBOJ-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/QLSfZVNBOJ-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kHOn9v6P2X-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kHOn9v6P2X-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kHOn9v6P2X-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/gW_Yot_TKl-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/gW_Yot_TKl-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/gW_Yot_TKl-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/QLSfZVNBOJ-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/QLSfZVNBOJ-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/QLSfZVNBOJ-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kHOn9v6P2X-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kHOn9v6P2X-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kHOn9v6P2X-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;买量程100V/10A足够了。太大的还得接分流器，影响QRP系统的便携性和精确性。&lt;/li&gt;
 &lt;li&gt;接线图就不再啰嗦了，注意，买的版本不同，接线方式也有不同。&lt;/li&gt;
@@ -123,10 +123,10 @@
 &lt;li&gt;电源线耐流也要高。我选的是AWG12#的硅胶线，15A的。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;此外，当太阳光照不足的时候，还要防止蓄电池给反向给太阳能电池“充电”。 所以我给太阳能支路加了一个防返流二极管： 1N5824，5A/30V整流二极管。 图省事，安装在伏安表的盒子里了。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/tzb8lzKHvQ-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/tzb8lzKHvQ-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/tzb8lzKHvQ-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/tzb8lzKHvQ-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/tzb8lzKHvQ-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/tzb8lzKHvQ-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;3D打印的安德森4路电源分配器&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;我一直在用Anderson PP15-45系列的插头，安全方便。所以我设计了一个3D打印的安德森4路电源分配器，有兴趣的可以去thingiverse.com上，下载我设计的打印文件。文末的 &lt;strong&gt;原文链接&lt;/strong&gt; 是下载地址。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kMaAEyqE-v-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kMaAEyqE-v-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kMaAEyqE-v-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kMaAEyqE-v-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kMaAEyqE-v-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kMaAEyqE-v-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;h2 id=&quot;&quot;&gt;实际使用效果&lt;/h2&gt;
 &lt;p&gt;刚刚的7月底8月初，我在北戴河(OM99pp)呆了一个星期，做了三天的通联实验。用的设备是FT-818、小环天线、Pac12天线，最大发射功率6瓦，FT8模式，发射占空比比较高，但不是持续在玩。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;第一次实验：&lt;/strong&gt;&lt;/p&gt;
@@ -135,17 +135,17 @@
 &lt;li&gt;接蓄电池和FT-818以后，伏安表显示，充电电压维持在13V上下，电流150-220mA之间；&lt;/li&gt;
 &lt;li&gt;一直能坚持到下午四点多，电流还是100mA以上。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/sSS-Rd6jmP-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/sSS-Rd6jmP-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/sSS-Rd6jmP-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/J7b1_JczCt-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/J7b1_JczCt-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/J7b1_JczCt-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/sSS-Rd6jmP-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/sSS-Rd6jmP-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/sSS-Rd6jmP-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/J7b1_JczCt-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/J7b1_JczCt-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/J7b1_JczCt-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;第二次实验：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;8月3日星期六，早上在海边用FT-818和Pac12天线，玩了一个半小时的FT8。没有带太阳能，全靠蓄电池。发射频率比较高，电池电压下降到11V左右。&lt;/li&gt;
 &lt;li&gt;下午两点多接上太阳能充电，边充边玩，此后一直接收到6点半左右，没太阳了，伏安表显示电压降到了7.5V，FT-818显示7.2V。&lt;/li&gt;
 &lt;li&gt;晚上用充电器给蓄电池充满电。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/lD98wiyAuN-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/lD98wiyAuN-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/lD98wiyAuN-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1080&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/hrNHdDb-vP-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/hrNHdDb-vP-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/hrNHdDb-vP-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1440&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/yPKSfAlv6q-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/yPKSfAlv6q-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/yPKSfAlv6q-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/lD98wiyAuN-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/lD98wiyAuN-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/lD98wiyAuN-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1080&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/hrNHdDb-vP-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/hrNHdDb-vP-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/hrNHdDb-vP-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1440&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/yPKSfAlv6q-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/yPKSfAlv6q-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/yPKSfAlv6q-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;第三次实验：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;8月4日，一个多云的阴天，太阳能开路电压18V+；&lt;/li&gt;
@@ -181,17 +181,17 @@
   </entry>
   <entry>
     <title>梅登黑德定位系统</title>
-    <link href="https://example.com/blog/maidenhead-grid-system/" />
+    <link href="https://bg6lh.github.io/blog/maidenhead-grid-system/" />
     <updated>2019-08-07T23:13:00Z</updated>
-    <id>https://example.com/blog/maidenhead-grid-system/</id>
+    <id>https://bg6lh.github.io/blog/maidenhead-grid-system/</id>
     <content type="html">&lt;p&gt;这是一篇去年刚开始接触ARPS和FT8时写的Blog，搞懂了梅登黑德网格系统是怎么回事儿。主要信息来源是维基百科的相关词条。&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;p&gt;梅登黑德（Maidenhead）是一个位于英国伯克郡的镇子。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/maidenhead-grid-system/Jl3FiGgAqf-640.avif 640w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/maidenhead-grid-system/Jl3FiGgAqf-640.webp 640w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/maidenhead-grid-system/Jl3FiGgAqf-640.jpeg&quot; alt=&quot;图片&quot; width=&quot;640&quot; height=&quot;333&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/maidenhead-grid-system/Jl3FiGgAqf-640.avif 640w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/maidenhead-grid-system/Jl3FiGgAqf-640.webp 640w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/maidenhead-grid-system/Jl3FiGgAqf-640.jpeg&quot; alt=&quot;图片&quot; width=&quot;640&quot; height=&quot;333&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;p&gt;1980年4月IARU VHF工作组在这里开了一次会，决定使用G4ANB，Dr. John Morris的网格定位法来取代之前的QRA定位法。之前的QRA定位法也是一个类似的网格定位方法。&lt;/p&gt;
 &lt;p&gt;这就是梅登黑德网格的由来。现在也叫QTH定位，和IARU定位。1999年IARU决定，该方法的经纬度坐标改为遵循WGS 84地心坐标。&lt;/p&gt;
 &lt;p&gt;梅登黑德网格定位的字符含义如下：&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/maidenhead-grid-system/SyoQsiozgr-640.avif 640w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/maidenhead-grid-system/SyoQsiozgr-640.webp 640w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/maidenhead-grid-system/SyoQsiozgr-640.png&quot; alt=&quot;图片&quot; width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/maidenhead-grid-system/SyoQsiozgr-640.avif 640w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/maidenhead-grid-system/SyoQsiozgr-640.webp 640w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/maidenhead-grid-system/SyoQsiozgr-640.png&quot; alt=&quot;图片&quot; width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;p&gt;梅登黑德网格的分割方式：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;每两个字符一对儿，经度在前、纬度在后。&lt;/li&gt;
@@ -208,8 +208,8 @@
 &lt;li&gt;纬度的起点在南极&lt;/li&gt;
 &lt;li&gt;每一级分格的起点都是左下角&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/maidenhead-grid-system/OV7atwQ934-640.avif 640w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/maidenhead-grid-system/OV7atwQ934-640.webp 640w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/maidenhead-grid-system/OV7atwQ934-640.jpeg&quot; alt=&quot;图片&quot; width=&quot;640&quot; height=&quot;320&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/maidenhead-grid-system/51WbtpWl-v-584.avif 584w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/maidenhead-grid-system/51WbtpWl-v-584.webp 584w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/maidenhead-grid-system/51WbtpWl-v-584.jpeg&quot; alt=&quot;图片&quot; width=&quot;584&quot; height=&quot;480&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/maidenhead-grid-system/OV7atwQ934-640.avif 640w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/maidenhead-grid-system/OV7atwQ934-640.webp 640w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/maidenhead-grid-system/OV7atwQ934-640.jpeg&quot; alt=&quot;图片&quot; width=&quot;640&quot; height=&quot;320&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/maidenhead-grid-system/51WbtpWl-v-584.avif 584w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/maidenhead-grid-system/51WbtpWl-v-584.webp 584w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/maidenhead-grid-system/51WbtpWl-v-584.jpeg&quot; alt=&quot;图片&quot; width=&quot;584&quot; height=&quot;480&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;p&gt;最后，你有冇发现，同样位数网格，越靠近地球两极，面积越小？那么北极点和南极点的QTH应该怎么表示呢？&lt;/p&gt;
 &lt;p&gt;声明：本文图片均来自维基百科条目，原文链接指向：&lt;/p&gt;
 &lt;p&gt;https://en.wikipedia.org/wiki/Maidenhead_Locator_System&lt;/p&gt;
@@ -226,9 +226,9 @@
   </entry>
   <entry>
     <title>FT8报告里的TX和RX是谁的信号？</title>
-    <link href="https://example.com/blog/ft8-rst-reporting/" />
+    <link href="https://bg6lh.github.io/blog/ft8-rst-reporting/" />
     <updated>2019-08-07T03:10:00Z</updated>
-    <id>https://example.com/blog/ft8-rst-reporting/</id>
+    <id>https://bg6lh.github.io/blog/ft8-rst-reporting/</id>
     <content type="html">&lt;p&gt;玩FT8数字模式，电脑会记录TX/RX两个信噪比报告，哪个是你的？哪个是对方的？我有一个好记的方式。&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;p&gt;玩SSB和CW的都知道RST这套信号报告，就是599这种报告方式，这是接收台给发射台的报告，是给对方的报告。&lt;/p&gt;
@@ -241,7 +241,7 @@
 &lt;li&gt;TX是他发射的强度，RX是他接收的强度&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;好理解吗？举个栗子，用这个方式去理解一下。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/ft8-rst-reporting/j_6IHcdyxC-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/ft8-rst-reporting/j_6IHcdyxC-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/ft8-rst-reporting/j_6IHcdyxC-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;117&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/ft8-rst-reporting/j_6IHcdyxC-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/ft8-rst-reporting/j_6IHcdyxC-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/ft8-rst-reporting/j_6IHcdyxC-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;117&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;p&gt;上图是一条我和BA1GG老师通联的记录，被我的软件记录下来。其中三个信息：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Callsign：BA1GG&lt;/li&gt;
@@ -255,7 +255,7 @@
 &lt;li&gt;rst_sent，对应TX。&lt;/li&gt;
 &lt;li&gt;rst_rcvd，对应RX。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://example.com/blog/ft8-rst-reporting/wITU04KO9f-574.avif 574w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://example.com/blog/ft8-rst-reporting/wITU04KO9f-574.webp 574w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/blog/ft8-rst-reporting/wITU04KO9f-574.png&quot; alt=&quot;图片&quot; width=&quot;574&quot; height=&quot;494&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/blog/ft8-rst-reporting/wITU04KO9f-574.avif 574w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/blog/ft8-rst-reporting/wITU04KO9f-574.webp 574w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/blog/ft8-rst-reporting/wITU04KO9f-574.png&quot; alt=&quot;图片&quot; width=&quot;574&quot; height=&quot;494&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;p&gt;如果你还记不住，多玩玩数字模式就好了。&lt;/p&gt;
 &lt;p&gt;继续滑动看下一个&lt;/p&gt;
 &lt;p&gt;BG6LH&lt;/p&gt;
@@ -266,9 +266,9 @@
   </entry>
   <entry>
     <title>在mac上用dfu-util更新NanoVNA的固件</title>
-    <link href="https://example.com/blog/how-to-flash-nanovna-firmware-on-macos-using-dfu-util/" />
+    <link href="https://bg6lh.github.io/blog/how-to-flash-nanovna-firmware-on-macos-using-dfu-util/" />
     <updated>2019-08-06T08:42:00Z</updated>
-    <id>https://example.com/blog/how-to-flash-nanovna-firmware-on-macos-using-dfu-util/</id>
+    <id>https://bg6lh.github.io/blog/how-to-flash-nanovna-firmware-on-macos-using-dfu-util/</id>
     <content type="html">&lt;p&gt;我只有Mac的机器，装了个虚拟机刷NanoVNA的固件总是失败。 于是转投了Mac和linux上常用的刷固件软件： dfu-util。&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;p&gt;这个软件兼容的芯片很多，nanoVNA用的STM32也是支持的。&lt;/p&gt;
@@ -317,9 +317,9 @@ Found DFU: [0483:df11] ver=2200, devnum=16, cfg=1, intf=0, path=&quot;20-1&quot;
   </entry>
   <entry>
     <title>DIY FT-817 数据电缆</title>
-    <link href="https://example.com/blog/diy-ft-817-data-cable/" />
+    <link href="https://bg6lh.github.io/blog/diy-ft-817-data-cable/" />
     <updated>2018-07-10T00:00:00Z</updated>
-    <id>https://example.com/blog/diy-ft-817-data-cable/</id>
+    <id>https://bg6lh.github.io/blog/diy-ft-817-data-cable/</id>
     <content type="html">&lt;p&gt;为了在FT-817上更方便地玩FT8，我做了一根DATA电脑连接线。配合以前买的一根写频线控制FT-817的PTT，整个系统工作的很顺溜。连接线的制作方法很简单，主要材料是一根标准MD6的线，两个立体声插头，一个USB声卡，直接连到一起就搞定。&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;h2 id=&quot;ft-817-data&quot;&gt;FT-817的DATA接口&lt;/h2&gt;
@@ -336,18 +336,18 @@ Found DFU: [0483:df11] ver=2200, devnum=16, cfg=1, intf=0, path=&quot;20-1&quot;
 &lt;/ol&gt;
 &lt;h2 id=&quot;data&quot;&gt;DATA连线方式&lt;/h2&gt;
 &lt;p&gt;在FT-817手册的第38/41页，有两张图，说明了DATA接口的连线方案。FT8使用的是AFSK调制模式，只用到了DATA接口的1200bps的针脚接口。所以参考38页那个也行。下边这个是41页那张图，说明了DATA接口所有的定义和连接方式。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://example.com/blog/diy-ft-817-data-cable/content/img/diy-ft-817-data-cable.png&quot; alt=&quot;FT-817 DATA接口定义&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://bg6lh.github.io/blog/diy-ft-817-data-cable/content/img/diy-ft-817-data-cable.png&quot; alt=&quot;FT-817 DATA接口定义&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;MD6接口的定义：&lt;/strong&gt;&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;&lt;img src=&quot;https://example.com/blog/diy-ft-817-data-cable/content/img/diy-ft-817-data-cable-1.png&quot; alt=&quot;插座正面&quot;&gt;&lt;/th&gt;
+&lt;th&gt;&lt;img src=&quot;https://bg6lh.github.io/blog/diy-ft-817-data-cable/content/img/diy-ft-817-data-cable-1.png&quot; alt=&quot;插座正面&quot;&gt;&lt;/th&gt;
 &lt;th&gt;插座正面图&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;img src=&quot;https://example.com/blog/diy-ft-817-data-cable/content/img/diy-ft-817-data-cable-2.png&quot; alt=&quot;插座镜像&quot;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;img src=&quot;https://bg6lh.github.io/blog/diy-ft-817-data-cable/content/img/diy-ft-817-data-cable-2.png&quot; alt=&quot;插座镜像&quot;&gt;&lt;/td&gt;
 &lt;td&gt;连线的时候要注意，对应的是插座正面的镜像标准画法反面图的针脚应该是黑色的圆点，表示是针&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
