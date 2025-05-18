@@ -10,13 +10,10 @@ image: "http://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHozbKcHYtbjXF1IibYI3BM8QRicprZ2Mw
 permalink: /blog/portable-solar-charging-system-for-ft818-qrp-transceiver/
 source: "https://mp.weixin.qq.com/s/DaX0D_5J-NJIbqaXYt-MFg"
 tags:
-  - "Clippings"
+  - FT-818
 title: "QRP野战太阳能电源设计"
 ---
 
-我给FT-818设计了这样一套野战浮充供电系统：一个7AH的胶体铅酸蓄电池，一个27W的折叠太阳能电池包
-
-<!--more-->
 
 我给FT-818配置了一套野战用的太阳能浮充电源系统：
 

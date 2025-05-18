@@ -3,6 +3,11 @@ import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import { I18nPlugin } from "@11ty/eleventy";
+
+
+
+
 
 import pluginFilters from "./_config/filters.js";
 
@@ -56,6 +61,26 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addPlugin(HtmlBasePlugin);
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
 
+
+
+	eleventyConfig.addPlugin(I18nPlugin, {
+		// any valid BCP 47-compatible language tag is supported
+		defaultLanguage: "zh", // Required, this site uses "en"
+
+		// Rename the default universal filter names
+		filters: {
+			// transform a URL with the current page’s locale code
+		//	url: "locale_url",
+
+			// find the other localized content for a specific input file
+		//	links: "locale_links",
+		},
+
+		// When to throw errors for missing localized content files
+		// errorMode: "strict", // throw an error if content is missing at /en/slug
+		// errorMode: "allow-fallback", // only throw an error when the content is missing at both /en/slug and /slug
+		// errorMode: "never", // don’t throw errors for missing content
+	});
 	eleventyConfig.addPlugin(feedPlugin, {
 		type: "atom", // or "rss", "json"
 		outputPath: "/feed/feed.xml",

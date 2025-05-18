@@ -36,12 +36,12 @@
 		{#- Add the heading-anchors web component to the JavaScript bundle #}
 		<script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
 	</head>
-	<body class="flex flex-col antialiased">
+	<body class="flex flex-col min-h-screen antialiased bg-neutral-600">
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
 
 {% include "components/header.njk" %}
 
-		<main id="main">
+		<main id="main" class="flex flex-col max-w-4xl mx-auto mb-16 sm:mb-24">
 			<heading-anchors>
 				{{ content | safe }}
 			</heading-anchors>

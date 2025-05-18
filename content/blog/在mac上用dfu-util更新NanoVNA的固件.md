@@ -19,8 +19,6 @@ title: 在mac上用dfu-util更新NanoVNA的固件
 
 我只有Mac的机器，装了个虚拟机刷NanoVNA的固件总是失败。 于是转投了Mac和linux上常用的刷固件软件： dfu-util。
 
-<!--more-->
-
 这个软件兼容的芯片很多，nanoVNA用的STM32也是支持的。
 
 软件网站在这： [http://dfu-util.sourceforge.net/](http://dfu-util.sourceforge.net/)
