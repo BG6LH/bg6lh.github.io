@@ -1,8 +1,10 @@
 {%- for post in postslist | reverse %}
-<article class="flex-row mx-auto max-w-md h-64
-                m-6 mb-6 overflow-hidden rounded-md bg-white shadow-md md:max-w-2xl">
+<article class="flex flex-row mx-3 max-w-md justify-center
+                m-6 mb-6 overflow-hidden rounded-md bg-white shadow-md
+                md:max-w-2xl md:h-64
+            ">
     <div class="md:flex">
-        {# 左侧#}
+        {# image #}
         {% if post.data.image %}
         <div class="md:shrink-0 md:h-64 md:w-64 overflow-hidden">
             <a href="{{ post.url }}">
@@ -14,7 +16,7 @@
             </a>
         </div>
         {% endif %}
-        {# 右侧#}
+        {# text #}
         <div class="p-8 pt-12 sm:pt-8 sm:pb-10">
             <time class="text-xs font-semibold tracking-wide text-neutral-500 uppercase" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
             <h2 class="mb-2 font-bold uppercase text-xl text-neutral-800">

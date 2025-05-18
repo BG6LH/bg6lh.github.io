@@ -1,7 +1,8 @@
-<header class="flex justify-center px-4 py-12 sm:py-16 text-neutral-50 bg-neutral-950">
-	
+<header class="flex flex-col justify-center w-full text-neutral-50 bg-neutral-950 md:flex-row">
 	{% if metadata.logo %}
-	<img src="{{ metadata.logo }}">
+            <figure class="inline-block h-8 w-8">
+                <img src={{ metadata.logo.src | url }} alt="{{ metadata.logo.alt }}"/>
+            </figure>
 	{% endif %}
 	<a href="/" class="home-link">{{ metadata.title }}</a>
 	
