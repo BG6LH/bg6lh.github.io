@@ -35,19 +35,40 @@
 
 		{#- Add the heading-anchors web component to the JavaScript bundle #}
 		<script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
+
+        <!-- favicon -->
+        <link rel="icon" href="/img/me.svg" type="image/svg+xml">
+
+        <!-- Open graph -->
+        <meta property="og:title" content="{{ title or metadata.title }}">
+        <meta property="og:description" content="{{ description or title }}">
+        <meta property="og:type" content="article">
+        <meta property="article:tag" content="{{ tags }}">
+        <meta property="og:url" content="{{ page.url | url }}">
+        <meta property="og:site_name" content="BG6LH">
+        <meta property="og:locale" content="zh_CN">
+        <meta property="og:image" content="{{ image }}">
+        <!-- Twitter -->
+        <meta name="twitter:title" content="{{ title }}">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@jamflying">
+        <meta name="twitter:description" content="{{ description or title }}">
+        <meta name="twitter:image" content="{{ image }}">
+		<script defer src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>
+
 	</head>
-	<body class="flex flex-col min-h-screen antialiased bg-neutral-600">
+	<body class="flex flex-col min-h-screen antialiased bg-white dark:bg-neutral-950">
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
 
-{% include "components/header.njk" %}
+		{% include "components/header.njk" %}
 
-		<main id="main" class="flex flex-col max-w-4xl mx-auto mb-16 sm:mb-24">
-			<heading-anchors>
+		<main id="main" class="p-0 m-0">
+			<heading-anchors class="p-0 m-0 bg-neutral-400">
 				{{ content | safe }}
 			</heading-anchors>
 		</main>
 
-{% include "components/footer.njk" %}
+		{% include "components/footer.njk" %}
 
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>

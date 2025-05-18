@@ -6,6 +6,10 @@ const eleventyNavigation = {
 
 const numberOfLatestPostsToShow = 10;
 ---
+
+{% include "components/hero.njk" %}
+
+
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 <h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>

@@ -1,21 +1,24 @@
-    <footer class="flex flex-col bg-neutral-200">
-        <div class="text-xs max-w-4xl mx-auto px-4 py-12 sm:py-24 grid grid-cols-1 md:grid-cols-3 gap-2">
-            <!-- 公司信息 -->
-            <div class="space-y-4">
-             <h3 class="font-semibold text-white mb-4">BG6LH</h3>
+    <footer class="flex flex-col bg-neutral-100 dark:bg-neutral-800 justify-self-center">
+        <div class="max-w-4xl mx-auto p-0 py-12
+                    grid grid-cols-1 gap-2 md:grid-cols-3
+                    prose-sm prose text-xs dark:prose-invert
+                ">
+            <!-- 基本信息 -->
+            <div class="">
+             <h3 class="font-semibold mb-4">BG6LH</h3>
                 <img src="/img/qrcode_for_bg6lh.jpg" alt="" class="w-32 sm:w-32">
-                <div class="prose-sm prose text-xs text-slate-300 prose-invert">
-                    <p>{{ metadata.description }}</p>
+                <div class="">
+                    <p>{{ metadata.copyrightText }}</p>
                 </div>
             </div>
 
             <!-- 网站栏目 -->
-            <div class="md:justify-self-center">
-                <h3 class="font-semibold text-white mb-4">网站栏目</h3>
+            <div class="">
+                <h3 class="font-semibol mb-4">网站栏目</h3>
             	<nav>
                     <ul class="space-y-2">
                         {%- for entry in collections.all | eleventyNavigation %}
-                        <li class="text-slate-300 hover:text-white transition"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+                        <li class=""><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
                         {%- endfor %}
                     </ul>
                 </nav>
@@ -23,8 +26,8 @@
 
 
             <!-- 社交媒体 -->
-            <div class="md:justify-self-end">
-                <h3 class="font-semibold text-white mb-4">Social Links</h3>
+            <div class="">
+                <h3 class="mb-4">Social Links</h3>
                 <div class="flex gap-6">
                     <div class="text-center">
 

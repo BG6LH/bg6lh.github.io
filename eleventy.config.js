@@ -5,10 +5,6 @@ import pluginNavigation from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import { I18nPlugin } from "@11ty/eleventy";
 
-
-
-
-
 import pluginFilters from "./_config/filters.js";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
@@ -22,11 +18,9 @@ export default async function(eleventyConfig) {
 
 	// Copy the contents of the `public` folder to the output folder
 	// For example, `./public/css/` ends up in `_site/css/`
-	eleventyConfig
-		.addPassthroughCopy({
-			"./public/": "/"
-		})
-		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
+	eleventyConfig.addPassthroughCopy({"./public/": "/"});
+	eleventyConfig.addPassthroughCopy({"./content/img/": "img"});
+	eleventyConfig.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
 
 	// Run Eleventy when these files change:
 	// https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets

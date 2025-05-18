@@ -1,6 +1,10 @@
-<header class="flex justify-center px-4 py-12 sm:py-16">
+<header class="flex justify-center px-4 py-12 sm:py-16 text-neutral-50 bg-neutral-950">
+	
+	{% if metadata.logo %}
+	<img src="{{ metadata.logo }}">
+	{% endif %}
 	<a href="/" class="home-link">{{ metadata.title }}</a>
-
+	
 	{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
 	<nav>
         <h2 class="visually-hidden">Top level navigation menu</h2>

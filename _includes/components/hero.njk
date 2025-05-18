@@ -1,0 +1,43 @@
+{% if metadata.hero %}
+<section id="hero" class="relative flex w-full h-96 overflow-hidden justify-center">
+    <!-- 背景层：绝对定位，铺满父容器，添加模糊 -->
+    <div class="absolute inset-0 bg-center bg-cover filter blur-xs scale-105" style="background-image: url('{{ metadata.hero.heroBackgroundImg }}')"></div>
+    <div class="relative z-10 p-8 text-neutral-100
+        flex flex-row m-0 max-w py-12 text-center 
+        {% if metadata.hero.image %}
+            px-4 sm:px-8 sm:text-left
+        {% else %}
+            max-w-2xl mx-auto sm:py-16
+        {% endif %}
+    ">
+        <div class="felx-col w-md">
+            {% if metadata.hero.title %}
+                <h1 class="mb-4 text-8xl text-shadow-lg font-bold uppercase sm:text-4x">{{ metadata.hero.title }}</h1>
+            {% endif %}
+        </div>
+        <div class="flex-col w-md">
+            {% if metadata.hero.text %}
+                <div class="flex-col mb-6">
+                    {{ metadata.hero.text | markdown | safe }}
+                </div>
+            {% endif %}
+            {% if metadata.hero.buttons %}
+                <div class="flex-col">
+                {% for button in metadata.hero.buttons %}
+                    <a href="{{ button.link }}"
+                    class="inline-block
+                    text-white
+                    hover:text-neutral-100
+                    visited:text-white
+                    bg-blue-500 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500
+                    link:text-neutral-100
+                    font-bold py-2 px-8 
+                    rounded-full shadow-lg
+                    ">{{ button.lable }}</a>
+                {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endif %}

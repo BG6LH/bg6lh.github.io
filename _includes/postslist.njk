@@ -1,27 +1,26 @@
-{# <ol reversed class="postlist" style="--postlist-index: {{ (postslistCounter or postslist.length) + 1 }}">
 {%- for post in postslist | reverse %}
-	<li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-		<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
-		<a href="{{ post.url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-		<p>{{ post.data.description }}</p>
-	</li>
-{%- endfor %}
-</ol> #}
-
-
-{%- for post in postslist | reverse %}
-    <article class="mx-auto max-w-md overflow-hidden rounded-md bg-white shadow-md md:max-w-2xl mb-6">
+<article class="flex-row mx-auto max-w-md h-64
+                m-6 mb-6 overflow-hidden rounded-md bg-white shadow-md md:max-w-2xl">
+    <div class="md:flex">
+        {# 左侧#}
         {% if post.data.image %}
+        <div class="md:shrink-0 md:h-64 md:w-64 overflow-hidden">
             <a href="{{ post.url }}">
-                <img src="{{ post.data.image | url }}" class="w-full" eleventy:widths="w-full" eleventy:formats="webp" alt="{{ post.data.title }} image">
+                <img
+                    class="object-cover md:aspect-square md:object-cover"
+                    src="{{ post.data.image | url }}"
+                    alt="{{ post.data.title }} image"
+                >
             </a>
+        </div>
         {% endif %}
-        <div class="p-8 pt-2 sm:pt-8 sm:pb-10">
+        {# 右侧#}
+        <div class="p-8 pt-12 sm:pt-8 sm:pb-10">
+            <time class="text-xs font-semibold tracking-wide text-neutral-500 uppercase" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
             <h2 class="mb-2 font-bold uppercase text-xl text-neutral-800">
 				<a href="{{ post.url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
             </h2>
-            <time class="text-xs font-semibold tracking-wide text-neutral-500 uppercase" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-            <div class="max-w-2xl mx-auto prose prose-neutral">
+            <div class="mx-auto prose prose-neutral">
 
 				{# 优先展示 frontmatter里的 descriptin #}
                 {% if post.data.description %}
@@ -33,11 +32,12 @@
                 {% else %}
                     <p>{{ post.content | striptags | truncate(140) | safe }}</p>
                 {% endif %}
-{#                     <p class="mt-12 text-center not-prose sm:mt-16">
+{#                  <p class="mt-12 text-center not-prose sm:mt-16">
                         <a href="{{ site.baseurl }}{{ post.url }}"
                         class="inline-flex px-6 py-4 text-xs font-medium tracking-widest no-underline uppercase transition bg-slate-100 hover:bg-slate-200">深入阅读</a>
                     </p> #}
             </div>
         </div>
-    </article>
+    </div>
+</article>
 {%- endfor %}
