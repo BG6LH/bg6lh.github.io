@@ -11,6 +11,7 @@ permalink: /blog/portable-solar-charging-system-for-ft818-qrp-transceiver/
 source: "https://mp.weixin.qq.com/s/DaX0D_5J-NJIbqaXYt-MFg"
 tags:
   - FT-818
+  - 太阳能
 title: "QRP野战太阳能电源设计"
 ---
 

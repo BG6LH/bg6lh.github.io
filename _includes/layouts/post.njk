@@ -4,7 +4,8 @@ layout: layouts/base.njk
 {# Only include the syntax highlighter CSS on blog posts, included with the CSS per-page bundle #}
 <style>{% include "node_modules/prismjs/themes/prism-okaidia.css" %}</style>
 <style>{% include "css/prism-diff.css" %}</style>
-<h1>{{ title }}</h1>
+
+{# <h1>{{ title }}</h1>
 
 <ul class="post-metadata">
 	<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
@@ -13,20 +14,31 @@ layout: layouts/base.njk
 	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
 	{%- endfor %}
 </ul>
+ #}
 
-
-<article class="bg-white">
     {% if image %}
-        <figure>
+        <figure class="w-full h-36 object-contain overflow-hidden md:h-96">
             <img src="{{ image | url }}" class="w-full" eleventy:widths="960" eleventy:formats="webp" alt="{{ title }} image"/>
         </figure>
     {% endif %}
+
+<article class="bg-white mx-auto max-w-4xl">
     <div class="px-4 pt-12 pb-16 sm:pt-16 sm:pb-24">
-        <header class="max-w-2xl mx-auto mb-8 text-center">
-            <h1 class="mb-2 text-3xl font-bold uppercase sm:text-4xl text-slate-800">{{ title }}</h1>
-            <time class="text-sm text-slate-400" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+        <header class="max-w-2xl flex flex-col mx-auto mb-12 border-t-neutral-500 border-b-1">
+            <div class="mb-2 text-3xl font-bold md:text-5xl text-center text-neutral-800">
+                <h1>{{ title }}</h1>
+            </div>
+            <time class="text-sm mx-auto text-neutral-400" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+            <ul class="post-metadata flex flex-row mx-auto">
+                <li>Keywords: </li>
+                {%- for tag in tags | filterTagList %}
+                {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+                <li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
+                {%- endfor %}
+            </ul>
+            
         </header>
-        <div class="max-w-2xl mx-auto prose prose-slate">
+        <div class="max-w-2xl mx-auto prose prose-neutral">
             {{ content | safe }}
             {% if source and source.indexOf('https://mp.weixin.qq.com/s/') == 0 %}
                 <hr class="border-t-neutral-500 mb-2">

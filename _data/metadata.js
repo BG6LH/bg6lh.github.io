@@ -15,7 +15,10 @@ export default {
 	"hero": {
         "type": "Hero",
         "title": "BG6LH's Digital Garden",
-        "text": "CQ DE BG6LH K，欢迎访问我的数字花园！我的业余无线电笔记。",
+        "text": [ // markdown is supported
+                "CQ DE BG6LH PSK K ...",
+                "欢迎访问我的数字花园！这里是我的业余无线电笔记。我们一起探索无线电的世界！",
+            ],
         "buttons": [
             {
                 "lable": "我的博客",

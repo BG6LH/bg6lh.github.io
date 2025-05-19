@@ -18,8 +18,8 @@ const numberOfLatestPostsToShow = 10;
 		{% set postsCount = collections.posts | length %}
 		{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 		
-		<div class="mx-auto px-6 pt-6 mt-0 text-sm">
-			<h3>最新文章</h3>
+		<div class="mx-auto p-6 my-0 text-2xl font-bold dark:text-neutral-100">
+			<h1>最新文章</h1>
 		</div>
 		{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 		{% set postslistCounter = postsCount %}
@@ -27,7 +27,8 @@ const numberOfLatestPostsToShow = 10;
 		{% include "postslist.njk" %}
 		</div>
 	</div>
-	<div class="">
+
+	<div class="mx-auto px-4">
 	{% set morePosts = postsCount - numberOfLatestPostsToShow %}
 	{% if morePosts > 0 %}
 	<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog.njk">更多博客</a>.</p>

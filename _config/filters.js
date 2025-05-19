@@ -1,10 +1,11 @@
 import { DateTime } from "luxon";
 import markdownit from "markdown-it";
+import { transliterate, slugify } from "transliteration";
 
 export default function(eleventyConfig) {
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
 		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
-		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");
+		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "yyyy-LL-dd");
 	});
 
 	eleventyConfig.addFilter("htmlDateString", (dateObj) => {
@@ -42,12 +43,21 @@ export default function(eleventyConfig) {
 		(strings || []).sort((b, a) => b.localeCompare(a))
 	);
 
-  // Parse markdown
-  const md = new markdownit({
-    html: true, // Allow HTML tags in Markdown content
-  });
-  eleventyConfig.addFilter("markdown", (markdownString) => {
-    return md.render(markdownString);
-  });	
+	// Parse markdown strings to HTML
+	const md = new markdownit({
+    	html: true, // Allow HTML tags in Markdown content
+	});
+	eleventyConfig.addFilter("markdown", (markdownString) => {
+		return md.render(markdownString);
+	});	
 
+	// Overwrite the built-in `slugify` filter with https://github.com/yf-hk/transliteration.
+	//1. Slugify to pin-yin
+	eleventyConfig.addFilter("slugify", (inputString) => {
+		return slugify(inputString);
+	});
+    //2. Transliterate to Pin Yin
+	eleventyConfig.addFilter("transliterate", (inputString) => {
+		return transliterate(inputString);
+	});
 };
