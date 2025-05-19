@@ -1,7 +1,11 @@
-# eleventy-base-blog v9
+# eleventy-3.1.0-base-blog with Tailwind CSS 4.1.7
+---
+本项目正在制作中
+---
 
-A starter repository showing how to build a blog with the [Eleventy](https://www.11ty.dev/) site generator (using the [v3.0 release](https://github.com/11ty/eleventy/releases/tag/v3.0.0)).
-
+本项目基于
+- [Eleventy 3.1.0](https://github.com/11ty/eleventy-base-blog)
+- [Tailwind CSS 4.1.7](https://tailwindcss.com/)
 ## Getting Started
 
 * [Want a more generic/detailed getting started guide?](https://www.11ty.dev/docs/getting-started/)
