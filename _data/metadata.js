@@ -9,7 +9,7 @@ export default {
 		url: "https://bg6lh.github.io/"
 	},
 	logo: {
-		"src": "/img/me.svg",
+		"src": "/img/me.png",
 		"alt": "BG6LH"
 	},
 	"hero": {

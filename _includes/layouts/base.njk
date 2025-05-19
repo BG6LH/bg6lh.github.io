@@ -57,19 +57,22 @@
 		<script defer src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>
 
 	</head>
-	<body class="flex flex-col min-h-screen antialiased bg-white dark:bg-neutral-950">
+	<body class="flex flex-col min-h-screen antialiased bg-white dark:bg-neutral-700">
+
+		<header class="flex w-full text-neutral-50 bg-neutral-950">
+			{% include "components/header.njk" %}
+		</header>
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
 
-		{% include "components/header.njk" %}
-
-		<main id="main" class="flex w-full justify-center">
+		<main class="flex-grow" id="main">
 			<heading-anchors class="">
 				{{ content | safe }}
 			</heading-anchors>
 		</main>
 
-		{% include "components/footer.njk" %}
-
+		<footer class="flex w-full text-neutral-800 dark:text-neutral-100 bg-neutral-100 dark:bg-neutral-800">
+			{% include "components/footer.njk" %}
+		</footer>
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
 	</body>

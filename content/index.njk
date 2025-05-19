@@ -6,27 +6,31 @@ const eleventyNavigation = {
 
 const numberOfLatestPostsToShow = 10;
 ---
-{% include "components/hero.njk" %}
+<section id="mainContent" class="flex-col mx-auto p-0">
+	
+	<!-- hero -->
+	{% if metadata.hero %}
+	{% include "components/hero.njk" %}
+	{% endif %}
 
-
-{% set postsCount = collections.posts | length %}
-{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
-
-{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-{% set postslistCounter = postsCount %}
-{% include "postslist.njk" %}
-
-{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-{% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="blog.njk">the archive</a>.</p>
-{% endif %}
-
-{# List every content page in the project #}
-{#
-<ul>
-	{%- for entry in collections.all %}
-	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
-	{%- endfor %}
-</ul>
-#}
+	<!-- postlist -->
+	<div class="mx-auto max-w-4xl p-0">
+		{% set postsCount = collections.posts | length %}
+		{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
+		
+		<div class="mx-auto px-6 pt-6 mt-0 text-sm">
+			<h3>最新文章</h3>
+		</div>
+		{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+		{% set postslistCounter = postsCount %}
+		<div class="mx-auto px-4">
+		{% include "postslist.njk" %}
+		</div>
+	</div>
+	<div class="">
+	{% set morePosts = postsCount - numberOfLatestPostsToShow %}
+	{% if morePosts > 0 %}
+	<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog.njk">更多博客</a>.</p>
+	{% endif %}
+	<div>
+</section>
