@@ -8,7 +8,7 @@ created: 2025-05-17 01:42:06
 date: 2019-08-07 11:10:00 +08:00
 description: "玩FT8数字模式，电脑会记录TX/RX两个信噪比报告，哪个是你的？哪个是对方的？我有一个好记的方式。"
 image: "http://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHoxr2zM6eiaZPXsKOhoicvW5d3fROh3tukHic3KoucbjD3cKFCbhniaLR5eIUQWDl7MEeia2iciaasQSKAUvw/0?wx_fmt=jpeg"
-permalink: /blog/ft8-rst-reporting/
+titleSlug: ft8-rst-reporting
 source: https://mp.weixin.qq.com/s/Mlp-Y8ILuRpmpslyDArCWQ
 tags:
   - Clippings

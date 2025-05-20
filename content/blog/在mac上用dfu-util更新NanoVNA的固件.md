@@ -6,8 +6,7 @@ category:
   - Posts
 image: http://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHozbKcHYtbjXF1IibYI3BM8QRuEKXS3YWxA5MAE52UfKyzu0cfI4sbib6kVNOyw3965aMy49V6fqEywg/0?wx_fmt=jpeg
 description: 我尝试用dfu-util在mac上刷NanoVNA固件，刷机成功。以下是我分享的心得。
-imageNameKey: how-to-flash-nanovna-firmware-on-macos-using-dfu-util
-permalink: /blog/how-to-flash-nanovna-firmware-on-macos-using-dfu-util/
+titleSlug: how-to-flash-nanovna-firmware-on-macos-using-dfu-util
 date: 2019-08-06 16:42:00 +08:00
 source: https://mp.weixin.qq.com/s/h29UM2iwV9cKt8FxdvI-6w
 tags:
