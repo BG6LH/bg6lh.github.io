@@ -9,8 +9,8 @@ description: 为了在FT-817上更方便地玩FT8，我做了一根DATA电脑连
 titleSlug: diy-ft-817-data-cable
 publish: truex
 tags:
-  - FT-817
   - FT8
+  - FT-817
   - HamRadio
 title: DIY FT-817 数据电缆
 lastUpdated: 2025-05-06 07:50:51
