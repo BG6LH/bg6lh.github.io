@@ -14,7 +14,7 @@ const layout = "layouts/home.njk";
 const eleventyComputed = {
 	title: "Tagged '{{ tag }}'",
 	permalink: function(data) {
-		return `/${this.lang}/tags/${this.slugify(data.tag)}/`;
+		return `/${data.lang}/tags/${this.slugify(data.tag)}/`;
 	}
 };
 ---
