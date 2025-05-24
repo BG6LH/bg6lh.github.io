@@ -1,15 +1,20 @@
 ---js
+const permalink = "/zh-CN/";
 const eleventyNavigation = {
 	key: "Home",
+	title: "首页",
 	order: 1
 };
 
 const numberOfLatestPostsToShow = 10;
+
 ---
+
 <section id="mainContent" class="flex-col mx-auto p-0">
-	
+
+
 	<!-- hero -->
-	{% if metadata.hero %}
+	{% if hero %}
 	{% include "components/hero.njk" %}
 	{% endif %}
 
@@ -19,7 +24,7 @@ const numberOfLatestPostsToShow = 10;
 		{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 		
 		<div class="mx-auto p-6 my-0 text-2xl font-bold dark:text-neutral-100">
-			<h1>最新文章</h1>
+			<h1>{{ languages[page.lang].newPosts}}</h1>
 		</div>
 		{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 		{% set postslistCounter = postsCount %}
@@ -31,7 +36,7 @@ const numberOfLatestPostsToShow = 10;
 	<div class="mx-auto px-4">
 	{% set morePosts = postsCount - numberOfLatestPostsToShow %}
 	{% if morePosts > 0 %}
-	<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog.njk">更多博客</a>.</p>
+	<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="{{"/blog.njk" | locale_url }}">更多博客</a>.</p>
 	{% endif %}
 	<div>
 </section>

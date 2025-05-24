@@ -1,25 +1,23 @@
-<section id="hero" class="flex flex-col w-auto relative overflow-hidden md:flew-row">
+<section id="hero" class="flex flex-col w-auto relative overflow-hidden h-108 md:flew-row">
     <!-- 背景层：绝对定位，铺满父容器，添加模糊 -->
-    <div class="absolute inset-0 bg-center bg-cover overflow-hidden filter blur-xs scale-105" style="background-image: url('{{ metadata.hero.heroBackgroundImg }}')"></div>
+    <div class="absolute inset-0 bg-center bg-cover overflow-hidden filter blur-xs scale-105" style="background-image: url('{{ hero[page.lang].heroBackgroundImg }}')"></div>
 
     <!-- container wrap -->
-    <div class="flex flex-col relative mx-auto z-10 p-6 m-0 py-12 text-white md:flex-row md:justify-center md:w-4xl">
+    <div class="flex flex-col items-center justify-center relative mx-auto z-10 p-6 m-0 text-white h-full md:flex-row md:w-4xl">
         <div class="flex felx-col justify-center">
-            {% if metadata.hero.title %}
-                <h1 class="mb-4 text-6xl text-shadow-lg font-bold md:text-8xl">{{ metadata.hero.title }}</h1>
+            {% if hero[page.lang].title %}
+                <h1 class="font-bold text-6xl text-shadow-lg md:text-8xl">{{ hero[page.lang].title }}</h1>
             {% endif %}
         </div>
         <div class="container">
-            {% if metadata.hero.text %}
+            {% if hero[page.lang].text %}
                 <div class="mx-auto md:pt-12">
-                    {% for line in metadata.hero.text %}
-                    {{ line | markdown | safe }}
-                    {% endfor %}
+                    {{ hero[page.lang].text | markdown | safe }}
                 </div>
             {% endif %}
-            {% if metadata.hero.buttons %}
+            {% if hero[page.lang].buttons %}
                 <div class="mx-auto flex-row m-6">
-                    {% for button in metadata.hero.buttons %}
+                    {% for button in hero[page.lang].buttons %}
                         <a href="{{ button.link }}"
                         class="inline-block
                         text-neutral-100 text-sm h-9

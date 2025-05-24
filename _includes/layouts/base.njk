@@ -1,6 +1,6 @@
 <!doctype html>
-<html lang="{{ metadata.language }}">
-	<head>
+<html lang="{{ page.lang or metadata.languageCode }}">
+<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>{{ title or metadata.title }}</title>
@@ -35,7 +35,6 @@
 
 		{#- Add the heading-anchors web component to the JavaScript bundle #}
 		<script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
-
         <!-- favicon -->
         <link rel="icon" href="/img/me.svg" type="image/svg+xml">
 
@@ -55,25 +54,47 @@
         <meta name="twitter:description" content="{{ description or title }}">
         <meta name="twitter:image" content="{{ image }}">
 		<script defer src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>
+<!-- Alpine 状态定义 -->
+		<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 	</head>
-	<body class="flex flex-col min-h-screen antialiased bg-white dark:bg-neutral-700">
-
-		<header class="flex w-full text-neutral-50 bg-neutral-950">
-			{% include "components/header.njk" %}
-		</header>
+	<body class="bg-white dark:bg-slate-800 overflow-auto dark:text-white text-gray-900" 
+	      x-data="{
+            open: false,
+            darkMode: localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+          }" 
+	      x-init="
+            $watch('open', value => { 
+                if (value) { 
+                    document.body.classList.add('overflow-hidden', 'md:overflow-auto'); 
+                } else { 
+                    document.body.classList.remove('overflow-hidden', 'md:overflow-auto'); 
+                } 
+            });
+            $watch('darkMode', value => {
+                if (value) {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+            if (darkMode) document.documentElement.classList.add('dark'); // Initial class on html
+          ">
+		{% include "components/header.njk" %}
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
 
-		<main class="flex-grow" id="main">
+		<main class="flex-grow pt-15">
 			<heading-anchors class="">
 				{{ content | safe }}
 			</heading-anchors>
 		</main>
-
 		<footer class="flex w-full text-neutral-800 dark:text-neutral-100 bg-neutral-100 dark:bg-neutral-800">
 			{% include "components/footer.njk" %}
 		</footer>
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
+
 	</body>
 </html>

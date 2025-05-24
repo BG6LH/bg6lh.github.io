@@ -1,7 +1,8 @@
 export default {
+	lang: "zh-CN",
 	tags: [
 		"posts"
 	],
-	permalink: "blog/{{titleSlug}}/index.html",
+	permalink: "/zh-CN/blog/{{titleSlug}}/index.html",
 	"layout": "layouts/post.njk",
 };

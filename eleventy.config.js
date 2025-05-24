@@ -6,6 +6,9 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import { I18nPlugin } from "@11ty/eleventy";
 
 import pluginFilters from "./_config/filters.js";
+import pluginIcons from 'eleventy-plugin-icons';
+
+
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
@@ -59,22 +62,23 @@ export default async function(eleventyConfig) {
 
 	eleventyConfig.addPlugin(I18nPlugin, {
 		// any valid BCP 47-compatible language tag is supported
-		defaultLanguage: "zh", // Required, this site uses "en"
+		defaultLanguage: "zh-CN", // Required, this site uses "en"
 
 		// Rename the default universal filter names
 		filters: {
 			// transform a URL with the current page’s locale code
-		//	url: "locale_url",
+			url: "locale_url",
 
 			// find the other localized content for a specific input file
-		//	links: "locale_links",
+			links: "locale_links",
 		},
 
 		// When to throw errors for missing localized content files
-		// errorMode: "strict", // throw an error if content is missing at /en/slug
-		// errorMode: "allow-fallback", // only throw an error when the content is missing at both /en/slug and /slug
-		// errorMode: "never", // don’t throw errors for missing content
+		 errorMode: "strict", // throw an error if content is missing at /en/slug
+		 errorMode: "allow-fallback", // only throw an error when the content is missing at both /en/slug and /slug
+		 errorMode: "never", // don’t throw errors for missing content
 	});
+
 	eleventyConfig.addPlugin(feedPlugin, {
 		type: "atom", // or "rss", "json"
 		outputPath: "/feed/feed.xml",
@@ -141,6 +145,23 @@ export default async function(eleventyConfig) {
 	// https://www.11ty.dev/docs/copy/#emulate-passthrough-copy-during-serve
 
 	// eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
+
+
+	// https://www.npmjs.com/package/eleventy-plugin-icons
+	eleventyConfig.addPlugin(pluginIcons, {
+		// The default value is `false`.
+		sources: [
+			{
+			  name: "simple", // 来源名称
+			  path: "./node_modules/simple-icons/icons", // 图标文件路径
+			  default: true, // 设置为默认来源
+			},
+			{
+				name: 'lucide', 
+				path: 'node_modules/lucide-static/icons' }
+		],
+	});
+
 };
 
 export const config = {

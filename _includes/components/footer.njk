@@ -1,41 +1,55 @@
 <section class="flex flex-col max-w-4xl mx-auto p-0 py-12
             grid grid-cols-1 gap-6
-            text-xs text-center justify-center
-            md:flex-row md:grid-cols-3 md:text-left md:justify-start
+            text-xs text-center justify-start
+            md:flex-row md:grid-cols-3 md:text-left
         ">
-
-    <!-- 基本信息 -->
-    <div class="flex flex-col items-center md:items-start">
-    <h3 class="font-bold mb-4">BG6LH</h3>
-        <img src="/img/qrcode_for_bg6lh.jpg" alt="" class="w-32 sm:w-32">
-        <div class="">
-            <p>{{ metadata.copyrightText }}</p>
-        </div>
-    </div>
 
     <!-- 网站栏目 -->
     <div class="">
-        <h3 class="font-bold mb-4">网站栏目</h3>
-        <nav>
-            <ul class="list-none">
-                {%- for entry in collections.all | eleventyNavigation %}
-                <li class=""><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-                {%- endfor %}
-            </ul>
+        <h3 class="font-bold mb-4">{{ languages[page.lang].naviTitle }}</h3>
+        <nav class="list-none flex flex-row justify-center md:justify-start md:flex-col">
+            {%- for entry in collections.all | eleventyNavigation %}
+            {% if entry.data.lang == page.lang %} 
+            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
+            {% endif %}
+            {% endfor %}
         </nav>
-    </div>
 
+
+    </div>
 
     <!-- 社交媒体 -->
     <div class="">
-        <h3 class="font-bold mb-4">Social Links</h3>
-        <div class="flex gap-6">
-            <div class="">
+        <h3 class="font-bold mb-4">{{ languages[page.lang].socialLinks }}</h3>
+        <div class="flex flex-row mx-auto justify-center md:justify-start">
 
-            </div>
-            <div class="">
-            </div>
+            {# social links with eleventy-plugin-icons #}
+            {%- for socialItem in sociallinks %}
+            <a href="{{ socialItem.url }}" aria-label="Open {{ socialItem.platform }} profile" target="_blank" rel="noopener">
+                {% icon socialItem.platform, class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100" %}
+            </a> 
+            {% endfor %}
+            {# end of social links#}
         </div>
+        <br />
+        <h3 class="font-bold mb-4">微信公众号 BG6LH</h3>
+        <div class="flex flex-row mx-auto justify-center md:justify-start">
+            <img src="/img/qrcode_for_bg6lh.jpg" alt="" class="w-32 sm:w-32">
+        </div>
+
     </div>
+
+    <!-- 基本信息 -->
+    <div class="flex flex-col items-center md:items-start">
+
+            <!-- copyright -->
+    <div class="mx-auto m-3">
+        <p>{{ metadata.copyrightText }}</p>
+        <p>Powered by Eleventy 3.1.0 & Tailwind CSS 4.1.7</p>
+    </div>
+    <!-- copyright -->
+    </div>
+
+
 
 </section>
