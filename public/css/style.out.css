@@ -198,6 +198,9 @@
   }
 }
 @layer utilities {
+  .collapse {
+    visibility: collapse;
+  }
   .visible {
     visibility: visible;
   }
@@ -1832,6 +1835,9 @@ table td, table th {
 pre, code {
   font-family: var(--font-family-monospace);
 }
+.prose code::before, .prose code::after {
+  content: none !important;
+}
 pre:not([class*="language-"]) {
   margin: .5em 0;
   line-height: 1.375;
@@ -1850,6 +1856,10 @@ pre:not([class*="language-"]) {
 }
 code {
   word-break: break-all;
+}
+a, .prose a, .prose code, code {
+  word-break: break-all;
+  overflow-wrap: anywhere;
 }
 header {
   display: flex;

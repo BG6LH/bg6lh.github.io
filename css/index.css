@@ -124,6 +124,11 @@ pre,
 code {
 	font-family: var(--font-family-monospace);
 }
+
+.prose code::before,
+.prose code::after {
+  content: none !important;
+}
 pre:not([class*="language-"]) {
 	margin: .5em 0;
 	line-height: 1.375; /* 22px /16 */
@@ -143,6 +148,12 @@ pre:not([class*="language-"]) {
 code {
 	word-break: break-all;
 }
+
+/* 所有链接允许折行 */
+a, .prose a, .prose code, code {
+	word-break: break-all;
+	overflow-wrap: anywhere;
+  }
 
 /* Header */
 header {

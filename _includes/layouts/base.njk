@@ -53,9 +53,6 @@
         <meta name="twitter:site" content="@jamflying">
         <meta name="twitter:description" content="{{ description or title }}">
         <meta name="twitter:image" content="{{ image }}">
-		<script defer src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>
-<!-- Alpine 状态定义 -->
-		<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 	</head>
 	<body class="bg-white dark:bg-slate-800 overflow-auto dark:text-white text-gray-900" 
@@ -94,6 +91,9 @@
 			{% include "components/footer.njk" %}
 		</footer>
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
+<!-- Alpine 状态定义 -->
+		<script defer src="/js/alpinejs@3.x.x.js"></script>
+		<script defer src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
 
 	</body>

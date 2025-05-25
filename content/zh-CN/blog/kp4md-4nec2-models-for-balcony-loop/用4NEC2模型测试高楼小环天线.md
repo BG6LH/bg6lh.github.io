@@ -216,22 +216,21 @@ https://www.qsl.net/kp4md/magloop.htm
 
   
 
-**4NEC2模型文件**
+### 4NEC2模型文件
 
 不同频率下的天线模型
 
-| Antenna Orientation            |                                |
-| ------------------------------ | ------------------------------ |
-| Horizontal                     | Vertical                       |
+| 水平 | 垂直 |
+| --- | --- |
 | [7.1 MHz](balconyloop07h.nec)  | [7.1 MHz](balconyloop07v.nec)  |
 | [14.2 MHz](balconyloop14h.nec) | [14.2 MHz](balconyloop14v.nec) |
 | [21.2 MHz](balconyloop21h.nec) | [21.2 MHz](balconyloop21v.nec) |
 | [28.4 MHz](balconyloop28h.nec) | [28.4 MHz](balconyloop28v.nec) |
+
 7M频率不同高度下的天线模型
 
-|Antenna Orientation|   |
-|---|---|
-|Horizontal|Vertical|
+| 水平 | 垂直 |
+| --- | --- |
 |[7 MHz @ 0.1 λ](balconyloop070r1h.nec)|[7 MHz @ 0.1 λ](balconyloop070r1v.nec)|
 |[7 MHz @ 0.2 λ](balconyloop070r2h.nec)|[7 MHz @ 0.2 λ](balconyloop070r2v.nec)|
 |[7 MHz @ 0.3 λ](balconyloop070r3h.nec)|[7 MHz @ 0.3 λ](balconyloop070r3v.nec)|
