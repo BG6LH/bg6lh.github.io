@@ -84,6 +84,332 @@
 </content>
   </entry>
   <entry>
+    <title>FAQ：可以用树莓派的GPIO串口控制电台吗？</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/faq-could-gpio-of-raspberry-ri-be-used-to-control-transceivers?/" />
+    <updated>2020-06-16T01:07:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/faq-could-gpio-of-raspberry-ri-be-used-to-control-transceivers?/</id>
+    <content type="html">&lt;p&gt;这个问题经常会被问到。大概因为一方面 商品电台配套的串口控制转接头、线、盒子等换外设往往很贵，另一方面树莓派又恰好有GPIO的串口。理论上讲这的确可以实现的。但是换个角度考虑， 用这个来实现串口控制电台的话，可以做的更经济吗？&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/faq-could-gpio-of-raspberry-ri-be-used-to-control-transceivers?/bXtzfk70hF-700.avif 700w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/faq-could-gpio-of-raspberry-ri-be-used-to-control-transceivers?/bXtzfk70hF-700.webp 700w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/faq-could-gpio-of-raspberry-ri-be-used-to-control-transceivers?/bXtzfk70hF-700.jpeg&quot; alt=&quot;图片&quot; width=&quot;700&quot; height=&quot;541&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;上图：树莓派的GPIO，来自raspberrypi.org&lt;/p&gt;
+&lt;p&gt;我们查阅了树莓派的官网GPIO说明文档，在一开始它就提到，连接GPIO引脚的电压如果超过3.3V，则有可能会把它烧了。详见：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.raspberrypi.org/documentation/hardware/raspberrypi/gpio/README.md&quot;&gt;https://www.raspberrypi.org/documentation/hardware/raspberrypi/gpio/README.md&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;此外，GPIO除了少数几个不可定义的引脚外，其它引脚的输入输出电平都是3V3的，这也包括了GPIO串口的信号收发引脚GPIO14和15。详见：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.raspberrypi.org/documentation/usage/gpio/README.md&quot;&gt;https://www.raspberrypi.org/documentation/usage/gpio/README.md&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;反过来看电台上常见的几种串口的电平：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;标准RS-232C接口(DB9接口)电平：+3V～+25V，或者-3V～-25V；&lt;/li&gt;
+&lt;li&gt;Yaesu的ACC接口(mD8接口) 电平： 0～5V；&lt;/li&gt;
+&lt;li&gt;Icom的CI-V接口(3.5mm音频接口)电平：0～5V；&lt;/li&gt;
+&lt;li&gt;标准USB接口电平：0～5V。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这基本上都是大于3.3V的电压。&lt;/p&gt;
+&lt;p&gt;所以，当你思考用树莓派的GPIO去直接控制电台的时候，你首先要考虑的是电平转换。这在成本上已经超出了早已白菜价的USB转TTL、或者USB转232的设备了。&lt;/p&gt;
+&lt;p&gt;我们暂时没找到GPIO串口直接控制电台的案例。看到过一些控制继电器实现PTT的案例，但这不是串口协议的，无法通过成熟的Hamlib库实现电台控制。欢迎有这方面经验的HAM给我们留言，大家一起交流。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>FAQ：关于RadioPi声音的两个问题</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/" />
+    <updated>2020-06-15T06:56:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/</id>
+    <content type="html">&lt;p&gt;RadioPi发布以来，关于“声音”的两个问题被问到的最多：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;手机上VNC的时候，能听到RadioPi的声音吗？&lt;/li&gt;
+&lt;li&gt;如何让RadioPi发射FT8的时候也能播放声音？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我们这里一起解答一下：&lt;/p&gt;
+&lt;h2 id=&quot;1-vnc-radiopi&quot;&gt;1，如何通过VNC听到RadioPi的声音？&lt;/h2&gt;
+&lt;p&gt;我们的回答是，&lt;strong&gt;手机上目前是听不到的。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;VNC的确可以“传递声音”。但这是“专业版”和“企业版”用户才享有的功能。而且这个功能在iOS或android手机的VNC Viewer上目前还不能用。其它不能用的情况还包括：在MacOS版本的VNC Server上不提供，使用“即时支持(Instant Support)”时候也不能用。&lt;/p&gt;
+&lt;p&gt;或许未来某天就可以用了也未尝可知，感兴趣的话可以关注RealVNC公司的相应服务： &lt;a href=&quot;https://www.realvnc.com/en/connect/audio/&quot;&gt;https://www.realvnc.com/en/connect/audio/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;2-radiopi-ft8&quot;&gt;2，如何让RadioPi发射FT8的时候也能播放声音？&lt;/h2&gt;
+&lt;p&gt;关心这个问题的用户，出发点大多是需要“监听”WSJT-X是否正常发射。&lt;/p&gt;
+&lt;p&gt;在RadioPi上，这需要把PulseAudio服务设置为：同步把声音播放到多个声卡硬件。 推荐大家简单地使用PulseAudio参数 (PulseAudio Preferences) 工具 ，模拟一个同步输出(Simultaneous Output)的设备即可 。&lt;/p&gt;
+&lt;p&gt;在 20200605版本的RadioPi镜像里 并没有添加这个 工具 ，需要大家自己手动安装。 这里简述一下安装步骤：&lt;/p&gt;
+&lt;h3 id=&quot;paprefs&quot;&gt;第一步：安装 paprefs&lt;/h3&gt;
+&lt;p&gt;点击屏幕左上角的“LX终端”（那个&amp;gt;_小黑窗户），在终端命令行窗口里，输入：&lt;/p&gt;
+&lt;pre class=&quot;language-sh&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; paprefs&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;根据提示完成paprefs安装。&lt;/p&gt;
+&lt;h3 id=&quot;&quot;&gt;第二步：添加模拟的虚拟输出设备&lt;/h3&gt;
+&lt;p&gt;在RadioPi屏幕左上角的开始菜单/首选项中打开PulseAudio属性。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/I78Y-j4g-g-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/I78Y-j4g-g-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/I78Y-j4g-g-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;851&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;打开第四个标签页“Simultaneous Output(同步输出)”，选中“在所有本地声卡中为模拟输出添加虚拟(V)输出设备”前的对号。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/bUtTgh1faN-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/bUtTgh1faN-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/bUtTgh1faN-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;851&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;h3 id=&quot;wsjt-x&quot;&gt;第三步：在WSJT-X中增加选中模拟的输出设备&lt;/h3&gt;
+&lt;p&gt;在WSJT-X的文件菜单里，打开“设置/音频”，在声卡的输出设备中，你会看到多出来一个叫“combined”的声卡设备，选择它。在JTDX里也一样。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/0hcc_tgd8z-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/0hcc_tgd8z-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/0hcc_tgd8z-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;851&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;现在，可以尝试去WJST-X中发射一个“调谐(Tune)”信号，此时，从RadioPi的3.5mm音频插孔或者HDMI设备上，应该能听到WSJT发射的声音。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!NOTE]
+注意，WSJT-X的设置/音频中要保持声卡原来的“输入”设备不变。因为paprefs并没有模拟一个音频输入的虚拟设备。此外，音频输入是否正常，通过观察WSJT-X的频谱瀑布即能判断，也不需要用耳朵听。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我们还是建议大家，在使用数字模式时养成看频谱的习惯，并通过观察软件显示的指标来判断问题所在。&lt;/p&gt;
+&lt;p&gt;修改于 2020年06月15日&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>无头(Headless)操作RadioPi</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/" />
+    <updated>2020-06-06T16:58:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/</id>
+    <content type="html">&lt;p&gt;所谓“无头”，就是不给RadioPi准备显示器、键盘和鼠标，而是用另外一台电脑或者手机，通过网络来操作它。&lt;/p&gt;
+&lt;p&gt;为什么要无头操作？理由很简单：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;野外通联时，力求极致的便携&lt;/li&gt;
+&lt;li&gt;远程控制时，咱也用不上家里的显示器啊……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/_WLsl3-AZ_-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/_WLsl3-AZ_-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/_WLsl3-AZ_-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;626&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;一套RadioPi和FT-818的便携集成&lt;/p&gt;
+&lt;p&gt;为简化表达，接下来我们把运行RadioPi的树莓派电脑简称为RadioPi。&lt;/p&gt;
+&lt;h2 id=&quot;vnc&quot;&gt;VNC，无头操作的关键工具&lt;/h2&gt;
+&lt;p&gt;VNC是Virtual Network Console的缩写，虚拟网络控制台。简言之，它类似QQ的“远程协助”，能把RadioPi“投射”到另外一台电脑上或手机上，实现远程操作。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/KtZhnRPUIb-654.avif 654w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/KtZhnRPUIb-654.webp 654w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/KtZhnRPUIb-654.png&quot; alt=&quot;图片&quot; width=&quot;654&quot; height=&quot;207&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;上图：VNC的基本概念，取自realvnc.com&lt;/p&gt;
+&lt;p&gt;我们在RadioPi上配置好了 VNC Server 以及相关的服务。接下来还需要你在另外一台电脑或者手机上， 安装VNC Viewer。&lt;/p&gt;
+&lt;p&gt;VNC Viewer的 下载地址：&lt;a href=&quot;https://www.realvnc.com/en/connect/download/viewer/&quot;&gt;https://www.realvnc.com/en/connect/download/viewer/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;它有各种平台的版本，你可以在电脑上、手机上都装一个。&lt;/p&gt;
+&lt;p&gt;对于安卓手机用户，国内的应用商店可能没有。 推荐从RealVNC公司直接下载安装包：&lt;a href=&quot;https://help.realvnc.com/hc/en-us/articles/360002762697&quot;&gt;https://help.realvnc.com/hc/en-us/articles/360002762697&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;radiopi&quot;&gt;给无头RadioPi连上局域网&lt;/h2&gt;
+&lt;p&gt;第一次启动RadioPi时，推荐把它连上家里的局域网。通常你家的Wi-Fi网络就是一个局域网，所有的电脑、手机、RadioPi，都在这个网上。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/C9yH1cC0mI-300.avif 300w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/C9yH1cC0mI-300.webp 300w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/C9yH1cC0mI-300.png&quot; alt=&quot;图片&quot; width=&quot;300&quot; height=&quot;188&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;上图：局域网里的VNC连接 取自realvnc.com&lt;/p&gt;
+&lt;p&gt;让RadioPi联网很简单： &lt;strong&gt;用网线把RadioPi和Wi-Fi路由器连起来。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;radiopi-2&quot;&gt;在局域网里找到RadioPi&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;在路由器上找radiopi&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;找到RadioPi的最简单方案，是到路由器上看看分给它的IP地址是什么。 RadioPi的默认主机 名是小写的radiopi。找到它对应的IP。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/jQKmArNVXM-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/jQKmArNVXM-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/jQKmArNVXM-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;724&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;上图：在路由器上找到radiopi对应的IP地址&lt;/p&gt;
+&lt;p&gt;然后打开VNC Viewer，在地址栏直接输入这个IP地址，即可访问到RadioPi。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/O4FNCMPUvA-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/O4FNCMPUvA-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/O4FNCMPUvA-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;825&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;上图： 在VNC Viewer地址栏直接输入IP地址&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;在局域网里扫描IP地址&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果你无法登录路由器，还可以用IP扫描工具在局域网里扫出radiopi的IP地址。这里推荐的软件是：IP Angry Scanner， 它把你的电脑所在的局域网整个扫一遍，列出来结果。 &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/5kYU5TLPo6-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/5kYU5TLPo6-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/5kYU5TLPo6-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;665&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;上图： 在Angry IP Scanner中，扫到radiopi主机的IP地址&lt;/p&gt;
+&lt;p&gt;它扫到了RadioPi 的IP地址是 192.16 8.32.209。&lt;/p&gt;
+&lt;p&gt;Angry IP Scanner的下载地址：&lt;br&gt;
+&lt;a href=&quot;https://angryip.org/download/&quot;&gt;https://angryip.org/download/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;在支持mDNS的设备上直接访问radiopi.local&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在苹果的电脑、手机、iPad上，打开VNC Viewer，在地址栏中直接输入radiopi.local，即可访问到RadioPi。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/MShmy9-Bjn-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/MShmy9-Bjn-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/MShmy9-Bjn-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;825&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;上图：在VNC Viewer地址栏直接输入radiopi.local&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!NOTE]
+&lt;strong&gt;RadioPi上的自动广播主机名服务&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;RadioPi的默认主机名是小写的radiopi。我们在RadioPi上配置了支持mDNS(多播域名)协议的Avahi服务。简言之，当RadioPi联网后，Avahi就在局域网内广播它的主机名，方便你找到它。它的网址就是：radiopi.local。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在苹果电脑或手机上使用Bonjour服务
+在苹果公司的设备上有Bonjour服务，它和Avahi一样支持mDNS协议。所以苹果的设备都可以直接访问radiopi.local。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在Windows上使用Bonjour服务
+微软的Windows系统中，默认是没有Avahi或者Bonjour服务的。有一个简单的方法：安装苹果公司的Bonjour打印服务程序，即可使Windows拥有类似的功能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bonjour打印服务Windows版的下载地址  &lt;a href=&quot;https://support.apple.com/kb/DL999&quot;&gt;https://support.apple.com/kb/DL999&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在linux系统上使用avahi服务
+在各种Linux类的电脑上，和树莓派一样要安装支持mDNS的服务avahi-daemon，过程这里不再赘述。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在安卓手机上……
+安卓手机不在用户的操作层面提供mDNS服务。所以需要在路由器上查找，或者扫描局域网IP的方式，获取到radiopi的IP地址。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;此外，RealVNC提供一种“云连接”的方式访问RadioPi。在完成设置之后，可以简化查找IP地址的过程。稍后会 介绍。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;第一次与RadioPi建立连接时，VNC Viewer 会有一个安全提示，选择Continue继续。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/3cGnz8AGfH-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/3cGnz8AGfH-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/3cGnz8AGfH-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;861&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;上图：第一次连接VNC的安全提示&lt;/p&gt;
+&lt;p&gt;接下来VNC Viewer会提示你输入登录radiopi.local的用户名和密码。我们用RadioPi的默认用户pi登录。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户名： pi&lt;/li&gt;
+&lt;li&gt;密码： radiopi599&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/Xn2br1X5tJ-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/Xn2br1X5tJ-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/Xn2br1X5tJ-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;861&quot;&gt;&lt;/picture&gt;
+上图：输入登录RadioPi的用户名密码&lt;/p&gt;
+&lt;p&gt;然后你就会在VNC Viewer的窗口里看到RadioPi的桌面。你可以像操作普通的电脑一样操作它了。至此，你已经实现了局域网内的RadioPi远程控制。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/qe5jjK39CL-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/qe5jjK39CL-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/qe5jjK39CL-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;851&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;上图：第一次登录到RadioPi的桌面&lt;/p&gt;
+&lt;p&gt;现在你可以通过VNC Viewer给RadioPi添加Wi-Fi无线网络，甩掉网线吧。&lt;/p&gt;
+&lt;h2 id=&quot;radiopi-3&quot;&gt;从公园遥控家里的RadioPi&lt;/h2&gt;
+&lt;p&gt;如果想实现更远的(跨互联网)远程控制——从公园里控制家里的树莓派——那就需要 注册RealVNC提供 &lt;strong&gt;“云连接(Cloud Connect)”&lt;/strong&gt; 服务。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/wruMAtj31U-376.avif 376w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/wruMAtj31U-376.webp 376w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/wruMAtj31U-376.png&quot; alt=&quot;图片&quot; width=&quot;376&quot; height=&quot;188&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;上图：通过互联网访问家里的VNC Server 取自realvnc.com&lt;/p&gt;
+&lt;p&gt;你需要在去公园之前，要完成以下操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;访问网站 &lt;a href=&quot;https://manage.realvnc.com&quot;&gt;https://manage.realvnc.com&lt;/a&gt; 注册一个RealVNC账号。&lt;/li&gt;
+&lt;li&gt;在RadioPi的VNC Server上登录这个账号。&lt;/li&gt;
+&lt;li&gt;在手机的VNC Viewer上也登录这个账号。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;每台设备第一次登录时，RealVNC都会要求用电子邮件进行安全验证。验证完之后，远程的RadioPi就会出自动现在VNC Viewer的地址簿中，下次访问时直接点击它就好。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/Q5Epaeh_mY-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/Q5Epaeh_mY-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/Q5Epaeh_mY-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;825&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;上图：建立云连接之后的VNC Viewer窗口&lt;/p&gt;
+&lt;h2 id=&quot;radiopi-4&quot;&gt;高级攻略：野外操作RadioPi&lt;/h2&gt;
+&lt;p&gt;终于说到了野外通联。无头的RadioPi和手机或者P ad配合起来，可以完全取代笔记本电脑。&lt;/p&gt;
+&lt;p&gt;我们仍然要依赖VNC提供的服务，这 意味着还要让RadioPi联网。 野外 最佳的联网手段，就是用手机共享一个Wi-Fi热点。&lt;/p&gt;
+&lt;p&gt;所以我们在RadioPi里预先保存了一个叫“radiopi”的无线网络连接：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ssid: radiopi&lt;/li&gt;
+&lt;li&gt;密码: radiopi599&lt;/li&gt;
+&lt;li&gt;加密方式：WPA-PSK&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;只要你在手机上共享一个叫“radiopi”的热点，把密码设置为：radiopi599，RadioPi 开机就会自动连接上来。&lt;/p&gt;
+&lt;p&gt;在iPhone、iPad上，共享热点的名称就是它的主机名。 需要在“设 置/通用/关于本机”中，把名称改成radiopi。&lt;/p&gt;
+&lt;p&gt;RadioPi联网之后，iPhone可以直接用VNC Viewer访问radiopi.local， 安卓手机用户可以访问“云连接”地址簿里的RadioPi。&lt;/p&gt;
+&lt;h3 id=&quot;radiopi-wi-fi&quot;&gt;硬核攻略：手动给RadioPi添加Wi-Fi**&lt;/h3&gt;
+&lt;p&gt;更技术性的方式，是直接在RadioPi的SD卡上放入Wi-Fi配置文件：&lt;/p&gt;
+&lt;p&gt;文件名：wpa_supplicant.conf&lt;/p&gt;
+&lt;p&gt;格式：txt文本&lt;/p&gt;
+&lt;p&gt;在此文件中，你可以写入多个Wi-Fi的连接信息。 首先，用电脑上的“记事本”这样的工具建立一个名叫wpa_supplicant.conf的文本文件。 然后把以下这段代码贴进去，并且修改为你自己的Wi-Fi热点信息。ssid就是热点的名字，psk是密码。 以下是配置文件的内容：&lt;/p&gt;
+&lt;pre class=&quot;language-zsh&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-zsh&quot;&gt;country=CN
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+network={
+ssid=&quot;radiopi&quot;
+psk=&quot;radiopi599&quot;
+}
+
+network={
+ssid=&quot;家里Wi-Fi热点的名字&quot;
+psk=&quot;Wi-Fi密码&quot;
+}
+
+network={
+ssid=&quot;单位Wi-Fi热点的名字&quot;
+psk=&quot;Wi-Fi密码&quot;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;把烧录好的RadioPi SD卡插回电脑，电脑会识别出来一个叫boot的驱动器。把写好的wpa_supplicant.conf文件，拷贝到它的根目录，弹出此盘，插给树莓派用即可。&lt;/p&gt;
+&lt;p&gt;在树莓派启动后，这个文件会自动更新RadioPi的Wi-Fi设置。然后它自行消失。&lt;/p&gt;
+&lt;p&gt;建议你把手机共享热点的信息提前写进去，以便于未来的野外操作。&lt;/p&gt;
+&lt;h2 id=&quot;&quot;&gt;结束语&lt;/h2&gt;
+&lt;p&gt;至此，你已经具备了远程控制RadioPi的一切了。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>RadioPi，Ham的树莓派懒人包</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/" />
+    <updated>2020-06-06T15:58:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/</id>
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;我们已于2024年6月16日正式放弃了radiopi.club域名，把网站托管在Github上。&lt;/p&gt;
+&lt;p&gt;感谢您四年来的参与。还记得那是COVID19的第一年，三个闲在家里的软件工程师，因为共同的爱好，给业余无线电做了一个树莓派的系统镜像。&lt;/p&gt;
+&lt;p&gt;今天，我们已经四年没有更新这个项目了。一部分原因是树莓派硬件的价格波动，另一部分是Pi OS的发展进程，他的32位和64位分支，给树莓派的通用软件库的更新带来了一点困扰。树莓派硬件也==正在偏离它低功耗、低维护的初衷==。&lt;/p&gt;
+&lt;p&gt;当然更重要的原因，还是我们太懒了。我们三个人的共同爱好和兴趣，也因为家庭、工作、生活发生了细微的变化。我们三个人仍然是好朋友。于是我们一直认为，继续不更新这个计划，对树莓派世界保持观察，对自己的兴趣保持初心。希望有一天树莓派的发展能给我们带来新的灵感。&lt;/p&gt;
+&lt;p&gt;依旧欢迎你在Github上与我们保持沟通！&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://radiopiclub.github.io/zh/&quot;&gt;https://radiopiclub.github.io/zh/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;73!&lt;/p&gt;
+&lt;p&gt;BG6LH BG1TPT BI1EIH&lt;/p&gt;
+&lt;p&gt;2024-5-16 更新于北京&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/hc-y8yFkSP-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/hc-y8yFkSP-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/hc-y8yFkSP-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;672&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;如果你想玩树莓派远程控制电台，但是又苦于Linux系统太繁琐，那你可以试试RadioPi。 这是一个配置好了的树莓派操作系统懒人包，安装了常用的HAM软件，对远程控制做了优化。你只要下载了它，烧个SD卡，往树莓派里一插，开机就能用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;RadioPi能干这些事：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;控制电台，玩FT8，记通联日志，上传LOTW挣DXCC积分。&lt;/li&gt;
+&lt;li&gt;一边在公园遛弯儿，一边用手机遥控家里电台。&lt;/li&gt;
+&lt;li&gt;去野外通联不用带笔记本电脑了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我们三个搞互联网的HAM，BG6LH、BG1TPT、BI1EIH，结合自己使用树莓派的体验，一起做了这个RadioPi系统镜像。 如果你也想体验这些乐趣，下载一个试试吧。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;下载地址： &lt;a href=&quot;https://pan.baidu.com/s/17HxJHYbyRwxaK_dh4-24WA&quot;&gt;https://pan.baidu.com/s/17HxJHYbyRwxaK_dh4-24WA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;提取码：02e7&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果你了解SHA校验，可以比对一下校验码，确保下载的文件准确无误。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;SHA-256: 99ab3ec6125cc07d878746d810a1d74db3db7bada44e5373ae1b7681da3e07f3&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;注意：刚下载的RaidoPi镜像是一个zip压缩包，烧卡之前要先解压缩，得到一个后缀是.img的文件。这个就是RadioPi镜像文件。&lt;/p&gt;
+&lt;h2 id=&quot;radiopi&quot;&gt;RadioPi简介&lt;/h2&gt;
+&lt;p&gt;RadioPi镜像是基于树莓派官方操作系统 的再发布版本。我们是有洁癖的工程师，努力把它做的跟官方镜像一样干净，除了HAM常用的软件，别的都没装。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这些软件是：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;WSJT-X 2.2.0，已中文支持。&lt;/li&gt;
+&lt;li&gt;JTDX 2.1.0-RC150，可选中文界面。&lt;/li&gt;
+&lt;li&gt;TQSL 2.4.3，已中文支持。&lt;/li&gt;
+&lt;li&gt;CQRLOG 2.3.0，Linux世界最好用的日志软件。&lt;/li&gt;
+&lt;li&gt;GQRX 5.11.3，软件无线电接收。&lt;/li&gt;
+&lt;li&gt;GNU Radio Companion 3.7.13.4，软件无线电工具包。&lt;/li&gt;
+&lt;li&gt;VNC Server 6.7.1，远程控制服务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些软件需要你自己完成开机设置，比如与电台的连接、呼号和LOTW账号等等。我们希望RadioPi能满足Ham的核心需求，也希望它尽量稳定，所以 一些软件是最新的， 一些是次新的 。欢迎各位推荐更好用的软件，我们在以后的版本里预装。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;RadioPi还做了：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;中文化的界面，预装谷歌拼音输入法。&lt;/li&gt;
+&lt;li&gt;预装时间同步软件、GPS的驱动。&lt;/li&gt;
+&lt;li&gt;精简了跟HAM无关的软件。&lt;/li&gt;
+&lt;li&gt;配置好了CQRLog的数据库，修订了它上传LOTW的Bug。&lt;/li&gt;
+&lt;li&gt;配置好了SSH、VNC、Avahi服务。&lt;/li&gt;
+&lt;li&gt;预存了一个叫radiopi的Wi-Fi连接，以便于野外通联。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;RadioPi的默认用户名和密码：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户名：pi&lt;/li&gt;
+&lt;li&gt;密码：radiopi599&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;RadioPi的默认主机名&lt;/strong&gt; ：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;主机名：radiopi&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;RadioPi配置了自动广播主机名的Avahi服务，你可以在支持mDNS协议的其它设备上直接访问radiopi.local找到它。详情请参考&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/&quot;&gt;《无头操作RadioPi》&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;我们把RadioPi设置为开机自动登录到桌面，这是为VNC远程控制做的一个优化。 第一次登录后，建议你立刻修改用户pi的密码。&lt;/p&gt;
+&lt;h2 id=&quot;&quot;&gt;使用前的准备&lt;/h2&gt;
+&lt;p&gt;使用RadioPi之前，需要做的一些准备：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;microSD卡，也叫TF卡、手机存储卡，推荐8G以上高速卡。&lt;/li&gt;
+&lt;li&gt;USB的TF卡读卡器，或者TF转标准SD卡的卡套，烧卡用。&lt;/li&gt;
+&lt;li&gt;电脑，烧卡用。&lt;/li&gt;
+&lt;li&gt;烧卡软件：&lt;/li&gt;
+&lt;li&gt;Windows下，推荐使用Win32DiskImager。
+&lt;ul&gt;
+&lt;li&gt;下载地址： &lt;a href=&quot;https://sourceforge.net/projects/win32diskimager/&quot;&gt;https://sourceforge.net/projects/win32diskimager/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;MacOS下，推荐使用balenaEtcher。&lt;/li&gt;
+&lt;li&gt;下载地址： &lt;a href=&quot;https://www.balena.io/etcher/&quot;&gt;https://www.balena.io/etcher/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;树莓派。&lt;/li&gt;
+&lt;li&gt;推荐购买Pi 4 model B，至少2G内存的版本。&lt;/li&gt;
+&lt;li&gt;如果你的树莓派不带Wi-Fi，建议买一个USB Wi-Fi网卡。&lt;/li&gt;
+&lt;li&gt;还可以准备一个USB GPS，获得更高精度的时间。这需要在radiopi上做一点点额外的配置。&lt;/li&gt;
+&lt;li&gt;显示器、键盘、鼠标，给树莓派用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;你也可以不用显示器、键盘和鼠标，以“无头(headless)”的方式使用RadioPi。RadioPi已经配置好了SSH、VNC、Avahi等等服务，并针对远程控制做了优化。所谓“远程控制电台”就是通过这些实现的。这才是玩树莓派的重点。关于这部分请参考&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/&quot;&gt;《无头操作RadioPi》&lt;/a&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无头操作RadioPi需要在其它电脑、或手机上安装VNC Viewer软件。它类似QQ的“远程协助”，能把RadioPi“投射”到另一台电脑或手机上，实现远程操作。&lt;/li&gt;
+&lt;li&gt;VNC Viewer下载地址：&lt;br&gt;
+&lt;a href=&quot;https://www.realvnc.com/en/connect/download/viewer/&quot;&gt;https://www.realvnc.com/en/connect/download/viewer/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;对于安卓手机用户，国内的应用商店可能没有。推荐从RealVNC公司直接下载安装包：&lt;br&gt;
+&lt;a href=&quot;https://help.realvnc.com/hc/en-us/articles/360002762697&quot;&gt;https://help.realvnc.com/hc/en-us/articles/360002762697&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;此外，根据电台的情况，你可能还需要准备一个USB声卡、以及USB转CAT的控制设备。比如YAESU FT-817就需要这些，而ICOM IC-7300就不用，直接用USB线接RadioPi和电台就可以了。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/_WLsl3-AZ_-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/_WLsl3-AZ_-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/_WLsl3-AZ_-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;626&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;上图：一套FT-818和RadioPi的便携集成&lt;/p&gt;
+&lt;h2 id=&quot;-2&quot;&gt;安全提示&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;RadioPi上的软件大部分基于Hamlib开源工具库，已经发展了二十年，成功且稳定。但是这些软件目前仍在更新，所以没人保证它们和每一个软件、每一个电台都能有完美的配合。&lt;/li&gt;
+&lt;li&gt;树莓派的硬件并非专门为射频工况设计，所以使用树莓派控制电台有一定的风险。当你用它和大功率电台、非平衡天馈系统一起工作时，不良的驻波、不佳的平衡与接地，都有可能对树莓派、电台及周边设备带来射频干扰。&lt;/li&gt;
+&lt;li&gt;我们使用过的电台有限，主要包括过FT-817/818、IC-7000/7300、D4D等，使用的天线包括端馈的长线、PAC12、G5RV、甚至小环天线。无论是QRO还是QRP操作，都有过上述的经历。&lt;/li&gt;
+&lt;li&gt;所以认真对待平衡、接地、驻波等问题是非常必要的，尤其在远程操作无人值守的电台时更要注意这些问题。&lt;/li&gt;
+&lt;li&gt;解决这些问题也是玩业余无线电的乐趣之一。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;-3&quot;&gt;使用协议&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;下载和使用RadioPi镜像表示你已同意自行承担使用它的风险和责任。&lt;/li&gt;
+&lt;li&gt;请确保自己在法律法规许可范围内操作计算机、无线电设备和互联网。&lt;/li&gt;
+&lt;li&gt;RadioPi 镜像遵循“创作共享 署名-相同方式共享 CC BY-SA 协议”。 https://creativecommons.org/licenses/by-sa/4.0/deed.zh&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;73！&lt;/p&gt;
+&lt;p&gt;BG6LH、BG1TPT、BI1EIH&lt;/p&gt;
+&lt;p&gt;2020年6月&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
     <title>安装德生2P3收音机套件</title>
     <link href="https://bg6lh.github.io/zh-CN/blog/building-a-tecsun-2p3-radio-kit/" />
     <updated>2020-04-07T14:23:00Z</updated>
@@ -312,20 +638,16 @@ https://www.qsl.net/kp4md/magloop.htm&lt;/p&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;p&gt;* 该天线有两个开关位可以切换不同容量，详情请参考原文&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;4NEC2模型文件&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;4nec2&quot;&gt;4NEC2模型文件&lt;/h3&gt;
 &lt;p&gt;不同频率下的天线模型&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Antenna Orientation&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;水平&lt;/th&gt;
+&lt;th&gt;垂直&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Horizontal&lt;/td&gt;
-&lt;td&gt;Vertical&lt;/td&gt;
-&lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/balconyloop07h.nec&quot;&gt;7.1 MHz&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/balconyloop07v.nec&quot;&gt;7.1 MHz&lt;/a&gt;&lt;/td&gt;
@@ -342,24 +664,17 @@ https://www.qsl.net/kp4md/magloop.htm&lt;/p&gt;
 &lt;td&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/balconyloop28h.nec&quot;&gt;28.4 MHz&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/balconyloop28v.nec&quot;&gt;28.4 MHz&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;7M频率不同高度下的天线模型&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;7M频率不同高度下的天线模型&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;Antenna Orientation&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;水平&lt;/th&gt;
+&lt;th&gt;垂直&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Horizontal&lt;/td&gt;
-&lt;td&gt;Vertical&lt;/td&gt;
-&lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/balconyloop070r1h.nec&quot;&gt;7 MHz @ 0.1 λ&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/balconyloop070r1v.nec&quot;&gt;7 MHz @ 0.1 λ&lt;/a&gt;&lt;/td&gt;
@@ -699,223 +1014,6 @@ https://www.zhihu.com/question/47895801&lt;/li&gt;
 &lt;li&gt;KA7OEI的FT-817 驻波指示器实验&lt;br&gt;
 http://www.ka7oei.com/ft817_vswr.html&lt;/li&gt;
 &lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Pac12和Army Loop天线的一次对比</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/" />
-    <updated>2019-08-21T10:08:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/</id>
-    <content type="html">&lt;p&gt;我有两套“便携”的短波天线。一套是商品化的Pac12天线，做工精美，自己配了16根2米电线做地网，经NanoVNA测量，驻波可以调到很低。另一套是4米7/8馈管做的小环天线，DIY的Army Loop，电容耦合式，调谐很麻烦，但是真能调到很低的驻波，而且带宽对于FT8来说足够大了。&lt;/p&gt;
-&lt;p&gt;这俩天线到底哪个更好使？&lt;/p&gt;
-&lt;p&gt;2019年8月初在北戴河，同一天里用不同天线做了测试，碰巧跟JE4NAN通了两次，都是FT8模式，使用的是FT-818ND，20米波段，6W发射。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/5u7NcYSfZi-948.avif 948w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/5u7NcYSfZi-948.webp 948w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/5u7NcYSfZi-948.jpeg&quot; alt=&quot;图片&quot; width=&quot;948&quot; height=&quot;144&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;一次是早上7点53分(UTC 2353+8)，在海边，用Pac12天线，他收我的信号： +1dB，我收他信号是-14dB&lt;/li&gt;
-&lt;li&gt;一次是中午14点06分(UTC 0606+8)，在海边800米左右的二楼阳台，用小环天线，他收我信号：-08dB，我收他的信号是-10dB&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这么看，PAC12显然发射的效果更好，多了9个dB的增益；小环接收更好，多了4dB的增益。但是，毕竟，早上和中午的传播条件不同，到海边的距离也有800米左右的变化，四十几个波长呢。此外，他是否改变了天线和发射功率，也未尝可知。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/kwojMOmTRs-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/kwojMOmTRs-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/kwojMOmTRs-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;在那几天里，Pac12只在早上那次通联里用过，通过PSKreporter.info上的spots来看，接收到我的信号最远的是新西兰，澳大利亚。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/n0XQm_zv6m-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/n0XQm_zv6m-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/n0XQm_zv6m-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;2339&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;但是小环天线，我一直绑在阳台上。所以有时候会发现一些意想不到的spot报告。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/KBU-_lGp19-960.avif 960w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/KBU-_lGp19-960.webp 960w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/KBU-_lGp19-960.jpeg&quot; alt=&quot;图片&quot; width=&quot;960&quot; height=&quot;1280&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;这是8月4日下午4点的一次截屏：&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/CCidq-GdN5-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/CCidq-GdN5-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/CCidq-GdN5-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;499&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;我收到了英国的信号，法国收到了我的信号。从大圆图上看，欧洲在西北边，正好跟澳洲对着，距离虽然没有澳洲远，但一个是陆路，一个是海路。当然，绕地球大半圈走Long Path的可能性也存在。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/eSUSRKMs9H-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/eSUSRKMs9H-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/eSUSRKMs9H-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1045&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;这是8月4日晚上，看 hamspots.net：&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/Q_IqVGx1or-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/Q_IqVGx1or-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/Q_IqVGx1or-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;608&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;居然有北美台收到我的小环发的信号了，-24dB和-19dB，人耳朵是听不到嗡嗡嗡了。&lt;/p&gt;
-&lt;p&gt;以上算是一次使用体会，不算是严谨的对比测试。欢迎交流&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>QRP野战太阳能电源设计</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/" />
-    <updated>2019-08-09T00:07:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/</id>
-    <content type="html">&lt;p&gt;我给FT-818配置了一套野战用的太阳能浮充电源系统：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;一个4AH胶体铅酸蓄电池给电台供电&lt;/li&gt;
-&lt;li&gt;一个27W太阳能电池折叠包，给蓄电池浮充补电；&lt;/li&gt;
-&lt;li&gt;一个数字伏安表，做太阳能电池的充电监测。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;以下是整个系统的设计图：&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/E1Tq3gHddp-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/E1Tq3gHddp-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/E1Tq3gHddp-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;613&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;太阳能支路上增加了一个防返流的二极管；&lt;/li&gt;
-&lt;li&gt;电流表也在这里，监测着向蓄电池充电时的电流；&lt;/li&gt;
-&lt;li&gt;负载支路上增加了一个5A的保险丝，以保护电台。&lt;/li&gt;
-&lt;li&gt;电压表在监测整个系统的电压。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;ft-818&quot;&gt;FT-818对电源的要求&lt;/h2&gt;
-&lt;p&gt;我最初的设想是，一套 &lt;strong&gt;简单、便宜、安全&lt;/strong&gt; 的电源，应付野外工作一个白天，别太沉。所以首先要确定FT-818对电源的要求。&lt;/p&gt;
-&lt;p&gt;FT-818英文版的手册上讲的很清楚：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;电压13.8V正负15%，可以工作在8V～16V的电压上；&lt;/li&gt;
-&lt;li&gt;接收电流：450mA，静噪启动后大约250mA；&lt;/li&gt;
-&lt;li&gt;发射电流：HF和VHF是2.4A，UHF是2.7A。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;FT-818是6W的机器，比FT-817大了20%呢！所以FT-817对电源的要求要稍微低一点。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/m7zzOVNFVE-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/m7zzOVNFVE-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/m7zzOVNFVE-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1532&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;h2 id=&quot;12v-4ah&quot;&gt;12V/4AH胶体蓄电池&lt;/h2&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/PFYiC4ovXy-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/PFYiC4ovXy-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/PFYiC4ovXy-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;胶体蓄电池优点是：充电时不需要稳定的电压和电流，放电时却可以持续稳定放电。缺点是重，4AH这个重达1.3kg。&lt;/li&gt;
-&lt;li&gt;4AH的电池大约可以满足FT-818持续发射2个小时不到。即便是玩数字模式，占空比将近50%，也能持续玩3小时以上。&lt;/li&gt;
-&lt;li&gt;一定要买不间断电源用的那种蓄电池，千万别买汽车用的启动电池。启动电池放电电流好几百安培。&lt;/li&gt;
-&lt;li&gt;我买的胶体蓄电池，最大充放电特性是180瓦/5分钟，也就是可以干5分钟15A的大电流。安全起见，各支路上安装了5A的保险丝。&lt;/li&gt;
-&lt;li&gt;胶体蓄电池充电电流在0.1C之内都不用担心过充。C表示蓄电池容量，4AH的0.1C就是400mA。如果充电电流最大不超过这个，那就算是安全的了。实际效果，充电电流最大看到过450mA，尚可。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;12v-27w&quot;&gt;12V/27W的太阳能电池板&lt;/h2&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/Gp4SbSE2Cv-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/Gp4SbSE2Cv-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/Gp4SbSE2Cv-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;淘的某厂家半成品，100元上下&lt;/li&gt;
-&lt;li&gt;12V输出，开路电压标是18-20V&lt;/li&gt;
-&lt;li&gt;单晶硅材料， 转化效率 17 ～18%&lt;/li&gt;
-&lt;li&gt;标称最大功率 27W(转化后)&lt;/li&gt;
-&lt;li&gt;工作温度-17°到48°，自重1.5kg&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;&quot;&gt;简单说下太阳能电池的特性：&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;当太阳能电池没挂负载时，两极的电压是最大的，这是它的 &lt;strong&gt;开路电压&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;当负载的电流逐渐增大，太阳能电池的电压会下降，直到降到0&lt;/li&gt;
-&lt;li&gt;如果太阳能电池板短路了，那么两极之间就没有电压了，这个最大的负载电流就是太阳能电池的 &lt;strong&gt;短路电流&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;有兴趣的可以读一下文末推荐的TI的一篇文章，它设计了一个太阳能的锂电池充电器，同时还介绍了太阳能电池的等效电路、伏安特性。&lt;/p&gt;
-&lt;p&gt;这个标称2 7W太阳能电池，它的最大电流应该可以干到2A上下，2A充那个4AH的电池还是有点玄乎的，所以还要做一个伏安表监测。如果电流太大，把太阳能板遮一下就好了。实际 跟FT-818和蓄电池一起 实验，在HF波段，太阳能支路的电流还没有超过500mA的情况。&lt;/p&gt;
-&lt;p&gt;太阳能充电系统一般都要设计一个最大功率跟踪电路，就是充电管理模块，以保证输出一个稳定的电流和电压。但我没有搞这个模块。因为胶体蓄电池本来就有比较耐折腾，直接冲就好了。&lt;/p&gt;
-&lt;h3 id=&quot;-2&quot;&gt;为什么不选锂电池&lt;/h3&gt;
-&lt;p&gt;锂电池轻便，但是贵，而且还需要而外的充电管理模块，浮充的时候是否有干扰也不好保证。&lt;/p&gt;
-&lt;h2 id=&quot;dsn-vc288&quot;&gt;数字伏安表DSN-VC288&lt;/h2&gt;
-&lt;p&gt;为了让这一切显得靠谱，还是要监控一下充电的电压和电流。于是我买了DSN-VC288。网上搜“数字双显电流电压表”最便宜的那种就是它。这玩意儿满世界都是，似乎外国人玩的比国内还明白，有人都反向出来了电路图。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/gW_Yot_TKl-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/gW_Yot_TKl-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/gW_Yot_TKl-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/QLSfZVNBOJ-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/QLSfZVNBOJ-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/QLSfZVNBOJ-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kHOn9v6P2X-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kHOn9v6P2X-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kHOn9v6P2X-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;买量程100V/10A足够了。太大的还得接分流器，影响QRP系统的便携性和精确性。&lt;/li&gt;
-&lt;li&gt;接线图就不再啰嗦了，注意，买的版本不同，接线方式也有不同。&lt;/li&gt;
-&lt;li&gt;这个表有校准的螺丝。但我没有校准。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;-3&quot;&gt;安全用电&lt;/h2&gt;
-&lt;p&gt;整个系统工作的最大电流是蓄电池的短路电流，能高达15A以上。所以：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;各处要防止意外短路，加入至少5A的保险丝。&lt;/li&gt;
-&lt;li&gt;电源线耐流也要高。我选的是AWG12#的硅胶线，15A的。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;此外，当太阳光照不足的时候，还要防止蓄电池给反向给太阳能电池“充电”。 所以我给太阳能支路加了一个防返流二极管： 1N5824，5A/30V整流二极管。 图省事，安装在伏安表的盒子里了。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/tzb8lzKHvQ-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/tzb8lzKHvQ-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/tzb8lzKHvQ-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;h3 id=&quot;3d-4&quot;&gt;3D打印的安德森4路电源分配器&lt;/h3&gt;
-&lt;p&gt;我一直在用Anderson PP15-45系列的插头，安全方便。所以我设计了一个3D打印的安德森4路电源分配器，有兴趣的可以去thingiverse.com上，下载我设计的打印文件。文末有下载地址。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kMaAEyqE-v-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kMaAEyqE-v-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kMaAEyqE-v-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;h2 id=&quot;-4&quot;&gt;实际使用效果&lt;/h2&gt;
-&lt;p&gt;刚刚的7月底8月初，我在北戴河(OM99pp)呆了一个星期，做了三天的通联实验。用的设备是FT-818、小环天线、Pac12天线，最大发射功率6瓦，FT8模式，发射占空比比较高，但不是持续在玩。&lt;/p&gt;
-&lt;h3 id=&quot;-5&quot;&gt;第一次实验：&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;7月30日，晴朗的下午2点，太阳能板开路电压20V+；&lt;/li&gt;
-&lt;li&gt;接蓄电池和FT-818以后，伏安表显示，充电电压维持在13V上下，电流150-220mA之间；&lt;/li&gt;
-&lt;li&gt;一直能坚持到下午四点多，电流还是100mA以上。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/sSS-Rd6jmP-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/sSS-Rd6jmP-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/sSS-Rd6jmP-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/J7b1_JczCt-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/J7b1_JczCt-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/J7b1_JczCt-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;h3 id=&quot;-6&quot;&gt;第二次实验：&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;8月3日星期六，早上在海边用FT-818和Pac12天线，玩了一个半小时的FT8。没有带太阳能，全靠蓄电池。发射频率比较高，电池电压下降到11V左右。&lt;/li&gt;
-&lt;li&gt;下午两点多接上太阳能充电，边充边玩，此后一直接收到6点半左右，没太阳了，伏安表显示电压降到了7.5V，FT-818显示7.2V。&lt;/li&gt;
-&lt;li&gt;晚上用充电器给蓄电池充满电。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/lD98wiyAuN-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/lD98wiyAuN-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/lD98wiyAuN-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1080&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/hrNHdDb-vP-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/hrNHdDb-vP-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/hrNHdDb-vP-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1440&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/yPKSfAlv6q-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/yPKSfAlv6q-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/yPKSfAlv6q-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;h3 id=&quot;-7&quot;&gt;第三次实验：&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;8月4日，一个多云的阴天，太阳能开路电压18V+；&lt;/li&gt;
-&lt;li&gt;头天晚上把电池充满了，上午接上太阳能电池和FT-818，无论是发射还是接收，整体电压维持在13V以上，电流在300～400mA上下。&lt;/li&gt;
-&lt;li&gt;下午四五点以后没有足够的光照，断开太阳能。持续接收，零星发射。&lt;/li&gt;
-&lt;li&gt;到晚上10点收摊儿，伏安表和电台的电压显示是11.8V。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;（这次忘了拍照了……）&lt;/p&gt;
-&lt;h2 id=&quot;-8&quot;&gt;最后的总结&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;玩半天到一个白天，有太阳能同时在浮充补电，这套系统还是足够的。&lt;/li&gt;
-&lt;li&gt;如果想坚持一个高强度的周末比赛，这套系统的容量似乎还是有点小了。&lt;/li&gt;
-&lt;li&gt;如果电池是满电状态，有太阳能浮充补电，可以玩的时间更长。 但 是到了晚上一定要用充电器充满电。 27W太阳能电池 浮充， 只能多维持 一会 儿电量，并不能边 玩边把电池充满。&lt;/li&gt;
-&lt;li&gt;27W的太阳能电池板1.5kg，4AH的蓄电池1.3kg，FT-818 0.9kg，这套系统加一起不低于3.7kg，已经很重了。&lt;/li&gt;
-&lt;li&gt;目前的实验都是夏天，冬天什么样还是未知。&lt;/li&gt;
-&lt;li&gt;还有一些有趣的现象，第一次实验发现发射时表灭了，以为是压降太大，表不工作了。第三次实验发现发射时伏安表偶尔会显示16V电压，电流还正常。分析最大的可能还是发射时的射频干扰影响了伏安表。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;-9&quot;&gt;参考文档&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.ti.com.cn/general/cn/docs/gencontent.tsp?contentId=50707&quot;&gt;TI.com - 如何设计锂离子电池充电器，以从太阳能电池板获得最大电力&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.thingiverse.com/thing:3774171&quot;&gt;安德森4路电源分配器&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>梅登黑德定位系统</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/maidenhead-grid-system/" />
-    <updated>2019-08-07T23:13:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/maidenhead-grid-system/</id>
-    <content type="html">&lt;p&gt;梅登黑德（Maidenhead）是一个位于英国伯克郡的镇子。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/maidenhead-grid-system/Jl3FiGgAqf-640.avif 640w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/maidenhead-grid-system/Jl3FiGgAqf-640.webp 640w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/maidenhead-grid-system/Jl3FiGgAqf-640.jpeg&quot; alt=&quot;图片&quot; width=&quot;640&quot; height=&quot;333&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;1980年4月IARU VHF工作组在这里开了一次会，决定使用G4ANB，Dr. John Morris的网格定位法来取代之前的QRA定位法。之前的QRA定位法也是一个类似的网格定位方法。&lt;/p&gt;
-&lt;p&gt;这就是梅登黑德网格的由来。现在也叫QTH定位，和IARU定位。1999年IARU决定，该方法的经纬度坐标改为遵循WGS 84地心坐标。&lt;/p&gt;
-&lt;p&gt;梅登黑德网格定位的字符含义如下：&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/maidenhead-grid-system/SyoQsiozgr-640.avif 640w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/maidenhead-grid-system/SyoQsiozgr-640.webp 640w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/maidenhead-grid-system/SyoQsiozgr-640.png&quot; alt=&quot;图片&quot; width=&quot;640&quot; height=&quot;480&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;梅登黑德网格的分割方式：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;每两个字符一对儿，经度在前、纬度在后。&lt;/li&gt;
-&lt;li&gt;第一对儿，Field，场。编码从大写字母A到R，18个字母，把地球分成了324个Field。每20°经度和10°纬度一格Field。&lt;/li&gt;
-&lt;li&gt;第二对儿，Square，方格。编码从数字0到9，把每一个Field分成100个Square，每2°经度和1°纬度一格Square。&lt;/li&gt;
-&lt;li&gt;第三对儿，Subsquare，子方格，编码从字母的a到x，24个字母通常是小写，把每个Square分成576个Subsquare，每5&#39;经度和2.5&#39;纬度一格Subsquare。&lt;/li&gt;
-&lt;li&gt;第四对儿，Extended Square，扩展方格，编码从0-9，把每个Subsquare分成100个Extended Square……&lt;/li&gt;
-&lt;li&gt;第五对儿之后的没有正式定义，基本可以按照第三、第四对儿的规律向后推算。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;在短波领域一般报告到“Square”，即4位。在V/UHF，一般报告到Subsuqare，即6位。&lt;/p&gt;
-&lt;p&gt;为避免出现负数，这个系统定义：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;经度的起点在国际日期变更线&lt;/li&gt;
-&lt;li&gt;纬度的起点在南极&lt;/li&gt;
-&lt;li&gt;每一级分格的起点都是左下角&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/maidenhead-grid-system/OV7atwQ934-640.avif 640w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/maidenhead-grid-system/OV7atwQ934-640.webp 640w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/maidenhead-grid-system/OV7atwQ934-640.jpeg&quot; alt=&quot;图片&quot; width=&quot;640&quot; height=&quot;320&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/maidenhead-grid-system/51WbtpWl-v-584.avif 584w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/maidenhead-grid-system/51WbtpWl-v-584.webp 584w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/maidenhead-grid-system/51WbtpWl-v-584.jpeg&quot; alt=&quot;图片&quot; width=&quot;584&quot; height=&quot;480&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;最后，你有冇发现，同样位数网格，越靠近地球两极，面积越小？那么北极点和南极点的QTH应该怎么表示呢？&lt;/p&gt;
-&lt;p&gt;声明：本文图片均来自维基百科条目&lt;a href=&quot;https://en.wikipedia.org/wiki/Maidenhead_Locator_System&quot;&gt;Maidenhead_Locator_System&lt;/a&gt;&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>FT8报告里的TX和RX是谁的信号？</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/ft8-rst-reporting/" />
-    <updated>2019-08-07T03:10:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/ft8-rst-reporting/</id>
-    <content type="html">&lt;p&gt;玩SSB和CW的都知道RST这套信号报告，就是599这种报告方式，这是接收台给发射台的报告，是给对方的报告。&lt;/p&gt;
-&lt;p&gt;玩FT8等等数字模式，也有一套信噪比报告方式，记录的是双方信号相对于2500Hz标准噪声的强度，以分贝(dB)为单位。&lt;/p&gt;
-&lt;p&gt;完成一次FT8的QSO之后，电脑会自动记录下来当时的TX/RX两个信号报告数据。&lt;/p&gt;
-&lt;p&gt;然鹅，哪个是你的？哪个是对方的？当你需要给对方发QSL卡片时，RST这一栏该怎么写？分享一个好记的方法：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;先把自己忘了&lt;/li&gt;
-&lt;li&gt;这条记录都是对方电台的TX/RX数据&lt;/li&gt;
-&lt;li&gt;TX是他发射的强度，RX是他接收的强度&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;好理解吗？举个栗子，用这个方式去理解一下。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-rst-reporting/j_6IHcdyxC-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-rst-reporting/j_6IHcdyxC-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-rst-reporting/j_6IHcdyxC-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;117&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;上图是一条我和BA1GG老师通联的记录，被我的软件记录下来。其中三个信息：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Callsign：BA1GG&lt;/li&gt;
-&lt;li&gt;TX：+14dB&lt;/li&gt;
-&lt;li&gt;RX：-04dB&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这条记录表示：BA1GG，发射了+14dB的信号，接收到-04dB的信号。&lt;/p&gt;
-&lt;p&gt;QSL卡上如果只有RST这一栏，可以只填写TX数据。他的TX信噪比，其实是我发给他的报告，也是他想知道的，自己的信号传播到哪里？能获得多大的信噪比？所以这个TX对应的就是我给他的RST。&lt;/p&gt;
-&lt;p&gt;如果QSL卡上有sent和rcvd两栏怎么填？以下是这条记录的原始ADIF格式记录。里边的：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;rst_sent，对应TX。&lt;/li&gt;
-&lt;li&gt;rst_rcvd，对应RX。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-rst-reporting/wITU04KO9f-574.avif 574w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-rst-reporting/wITU04KO9f-574.webp 574w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-rst-reporting/wITU04KO9f-574.png&quot; alt=&quot;图片&quot; width=&quot;574&quot; height=&quot;494&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;如果你还记不住，多玩玩数字模式就好了。&lt;/p&gt;
 </content>
   </entry>
 </feed>
