@@ -8,6 +8,8 @@ import { I18nPlugin } from "@11ty/eleventy";
 import pluginFilters from "./_config/filters.js";
 import pluginIcons from 'eleventy-plugin-icons';
 
+import embedEverything from "eleventy-plugin-embed-everything";
+
 
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
@@ -160,6 +162,16 @@ export default async function(eleventyConfig) {
 				name: 'lucide', 
 				path: 'node_modules/lucide-static/icons' }
 		],
+	});
+	
+	eleventyConfig.addPlugin(embedEverything,{
+		// youtube 配置选项，插件默认支持
+		// youtube: {
+		// 	options: {
+		// 	  allowFullscreen: false
+		// 	}
+		//   },
+
 	});
 
 };
