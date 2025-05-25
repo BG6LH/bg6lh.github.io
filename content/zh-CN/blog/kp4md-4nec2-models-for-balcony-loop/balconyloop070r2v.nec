@@ -1,0 +1,33 @@
+CM CHA F-Loop Antenna NEC model by Carol F. Milazzo, KP4MD
+CM Vertical orientation (using GH command)
+CM http://www.qsl.net/kp4md/magloop.htm
+CM Frequency = 7.1 MHz top feed
+CM 18-side polygon
+CM LMR-400 loop
+CM Average ground
+CE
+SY frq=7.1	'frequency MHz
+SY c=1.77e-10	'Input resonating capacitance
+SY rc=0.032+5800/(frq*(c*1e12)^2)+0.0039*(frq^0.5)	'Calculate capacitor Rc
+SY d=2.44	'Input loop diameter feet
+SY r=0.5*d	'Calculate loop radius
+SY od=0.405	'Input loop cable outer dia. inches
+SY rad2=0.5*od/12	'Calculate loop cable outer radius feet
+SY dia=0.32	'Input loop conductor dia. inches
+SY rad=0.5*dia/12	'Calculate loop conductor radius feet
+SY n=18	'Input n-polygon main loop
+SY h=69*0.4-1.22	'Input height to loop feet
+GH	1	n	1e-300	1e-300	r	r	r	r	rad
+GM	0	0	90	180-180/n	0	5	0	h+r	0
+SM	20	20	0	69	0	0	69	138
+SC	0	0	0	-69	138
+GS	0	0	0.3048
+GE	1
+LD	0	1	n	n	rc	0	c
+LD	5	0	0	0	4500000
+LD	7	0	0	0	4.5	rad2
+GN	2	0	0	0	13	0.005
+EK
+EX	0	1	n/2	0	1	0	0
+FR	0	0	0	0	frq	0
+EN
