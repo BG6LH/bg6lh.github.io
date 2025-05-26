@@ -37,6 +37,133 @@
 </content>
   </entry>
   <entry>
+    <title>关于2美元便携短波天线的调查</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/" />
+    <updated>2021-11-10T10:46:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/</id>
+    <content type="html">&lt;p&gt;这两天在hellocq.net跟人讨论他的迷之馈线，暮然发现他用的是一根： &lt;strong&gt;2美元的螺旋便携式短波天线&lt;/strong&gt; ，这是一个2008年流行的DIY天线。物理总长度只有2米出头，工作在20米波段。&lt;/p&gt;
+&lt;p&gt;起初我以为这是1/4波长GP天线的变种，但又看到好多人说这是1/2波长端馈。弄得我也含糊了，于是花了点时间做研究。&lt;/p&gt;
+&lt;h2 id=&quot;&quot;&gt;先说结论&lt;/h2&gt;
+&lt;p&gt;这的确是一副以1/4波长GP为原型的天线，它曾经在上世纪70年代流行过一阵子。到今天有几种和它相关的名字，提起来可能大家都会感到亲切：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;连续加载天线：Continually Loaded Vertical，CLV&lt;/li&gt;
+&lt;li&gt;螺旋缠绕天线：Helically Wound Vertical，HWV&lt;/li&gt;
+&lt;li&gt;橡皮鸭天线：对讲机上常见的螺旋振子套一个橡皮套的短天线&lt;/li&gt;
+&lt;li&gt;鱼竿天线：在高楼中间架设短波缩短天线的常见形式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/t82Odw-Amw-786.avif 786w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/t82Odw-Amw-786.webp 786w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/t82Odw-Amw-786.png&quot; alt=&quot;图片&quot; width=&quot;786&quot; height=&quot;328&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;BG3MDO随手画的这个天线的等效电路图&lt;/p&gt;
+&lt;p&gt;这种天线也可以叫做 &lt;strong&gt;谐振电感&lt;/strong&gt; 。大多数案例都使用了1/2波长的导线，绕制出 &lt;strong&gt;1/4波长电气长度&lt;/strong&gt; 的天线。&lt;/p&gt;
+&lt;p&gt;这种天线可以肯定是 &lt;strong&gt;负增益&lt;/strong&gt; 的，依赖于不同的材料和绕制工艺。基本上它损失一半效率。而且效率 &lt;strong&gt;受地网形态的影响很大&lt;/strong&gt; 。它的Q值高，所以带宽很窄。&lt;/p&gt;
+&lt;p&gt;它的优点也很明显：省地方， 小！驾驭它最简单的办法是 &lt;strong&gt;用天调&lt;/strong&gt; ，想玩明白至少也得有一个天分。&lt;/p&gt;
+&lt;h2 id=&quot;2&quot;&gt;2美元螺旋便携天线的特征&lt;/h2&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/HPBQpx3MsL-522.avif 522w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/HPBQpx3MsL-522.webp 522w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/HPBQpx3MsL-522.png&quot; alt=&quot;图片&quot; width=&quot;522&quot; height=&quot;205&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;这个天线用了将近9米多、约半个波长的导线，绕制了一个1.2米长的线圈，这部分很像典型的“连续加载”天线。但是它还有一个0.91米长的直线振子。导线总长度的确是1/2个波长。&lt;/p&gt;
+&lt;p&gt;但是它又有几个属于1/4波长GP天线的显著特征：单极、一端1:1馈电、使用1/4波长地网……馈电点电压低，电流高，阻抗低。&lt;/p&gt;
+&lt;h2 id=&quot;2-2&quot;&gt;2美元螺旋天线的出处&lt;/h2&gt;
+&lt;p&gt;我找到了这个天线的原始出处，2001年9月，AH6NF和WH6GS发表在夏威夷业余无线电网站的帖子：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://ham.aditl.com/ham/helical-antenna/index.html&quot;&gt;http://ham.aditl.com/ham/helical-antenna/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这个帖子和Hellocq.net上说的细节完全一致。同时它提到了：The design is a &lt;strong&gt;continuously loaded&lt;/strong&gt;, &lt;strong&gt;helically wound vertical&lt;/strong&gt; antenna with a three-foot stinger……关键字： &lt;strong&gt;连续加载&lt;/strong&gt; 、 &lt;strong&gt;螺旋缠绕&lt;/strong&gt; ，此外还带有一根3英尺(0.91米)长的直线振子(stinger)。&lt;/p&gt;
+&lt;p&gt;我按照“连续加载”这个关键字，寻找这个天线的理论模型，大部分是谈论电小天线、手机、Wi-Fi天线的设计。按照“螺旋缠绕”找，找出来好多业余届讨论过的帖子。他们大部分都是按照1/4波长GP天线为模型去设计的。&lt;/p&gt;
+&lt;h2 id=&quot;kk6gxg-40&quot;&gt;案例：KK6GXG的40米波段螺旋缠绕天线&lt;/h2&gt;
+&lt;p&gt;典型案例是KK6GXG的40米波段螺旋缠绕天线，他在2015年4月份做了一副。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.kk6gxg.com/40-meter-antenna/&quot;&gt;http://www.kk6gxg.com/40-meter-antenna/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;他的资料来自1975年的ARRL业余无线电手册，第606页的一张原理图：&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/lWl6jLVVX3-918.avif 918w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/lWl6jLVVX3-918.webp 918w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/lWl6jLVVX3-918.png&quot; alt=&quot;图片&quot; width=&quot;918&quot; height=&quot;1068&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;注意三个关键信息：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这天线原型图的年份是 &lt;strong&gt;“1975年”&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;缠绕电感部分，1975年的这张图上是建议用4到20英尺(1.5～6米)长的杆子，缠绕1/2波长长度的14AWG(2平方)的导线。而KK6GXG的实操，是用了66.5英尺(20米，40米 &lt;strong&gt;波长的一半&lt;/strong&gt;)的导线绕在一根6英尺(1.8米)的杆子上。&lt;/li&gt;
+&lt;li&gt;最后，KK6GXG计划用一个 &lt;strong&gt;Z-Match天调&lt;/strong&gt; 。1975年这张图用了一个可变电感，也推荐再用一个天调。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;gp&quot;&gt;螺旋缠绕的GP天线&lt;/h2&gt;
+&lt;p&gt;这些案例的原型显然都基于一个GP天线，因为他们都用到了1/4波长的地网，来提供一个“地平面”，以“镜像”另外一半虚拟的天线，达到一个偶极天线的“平衡”状态，所以他们都是低阻抗馈电的案例。&lt;/p&gt;
+&lt;p&gt;它到底是一个1/4GP？1/2GP？还是5/8GP？还是一个端馈的长线？ &lt;strong&gt;还是要看它的理论模型的电气长度&lt;/strong&gt; 。&lt;/p&gt;
+&lt;p&gt;我们回顾一下1/4波长的GP天线模型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1/4波长的GP天线，馈电点的电压最低，电流最高；&lt;/li&gt;
+&lt;li&gt;1/4GP的容抗和感抗组成的电抗为0，呈现出纯电阻性，这是所谓“谐振”的电学意义。&lt;/li&gt;
+&lt;li&gt;当天线短于1/4波长时，天线上的容抗增加，感抗减少，整体呈现的电抗增大——天线不谐振了；&lt;/li&gt;
+&lt;li&gt;通过加入串联电感，抵消掉多余容抗，让它整体呈现出0电抗——天线又回到“谐振”状态；&lt;/li&gt;
+&lt;li&gt;持续缩短，并增加电感，直到全都变成电感，感抗有可能大于容抗了——天线仍不“谐振”；&lt;/li&gt;
+&lt;li&gt;松绕电感线圈，可以减少感抗、增加容抗，理论上总电抗又可以归0——这就是“螺旋缠绕”；&lt;/li&gt;
+&lt;li&gt;如果电抗还没归0，那可以在另一头增加一根直线导体，它会带来一些容性的电抗，再抵消一部分感抗。&lt;/li&gt;
+&lt;li&gt;如果总电抗还没回归到0，那就可以上天调了……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;1-2&quot;&gt;为啥用了1/2波长的导线？&lt;/h2&gt;
+&lt;p&gt;现在我大概理解了“螺旋缠绕”的意义了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;把拉直的天线缠绕起来，使整个天线的物理长度变短，可以节约物理空间；&lt;/li&gt;
+&lt;li&gt;缠绕起来的天线就是一个大号的电感器；&lt;/li&gt;
+&lt;li&gt;如果是密绕，电磁波就憋在电感器里出不来；&lt;/li&gt;
+&lt;li&gt;松绕才能让电磁波辐射出来；&lt;/li&gt;
+&lt;li&gt;但是松绕电感又减少了，所以就要多绕更多导线；&lt;/li&gt;
+&lt;li&gt;完全绕成松绕的电感，要达到谐振，大约需要1/2波长的导线；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;为啥用了1/2波长？这个长度似乎没有一个硬性的规定&lt;/strong&gt; ， 参考2009年7月的QST杂志的封面文章，K6MM的160米HWV天线讨论，他用的是G4FGQ的建模工具计算的，相应的参数是导线的直径、线圈的直径、每圈之间的间隙等，算出来正好是大约1/2波长。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://hamuniverse.com/k6mm160metervertical.html&quot;&gt;https://hamuniverse.com/k6mm160metervertical.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;至少，不能简单地、把导线的长度当作天线模型的波长。 &lt;strong&gt;因为它的模型是按照谐振的1/4波长电气长度计算的。&lt;/strong&gt; 有兴趣深挖这个话题的， 可以去研究一下G4 FGQ的 建模工具， 文末有提及。&lt;/p&gt;
+&lt;p&gt;从这一点上，我也大致体会了一下“鱼竿天线”。 有人说“玩业余无线电的”很多零件都可以去“玩钓鱼的”那里找； 如果去“玩摄影的”那里找，相同功能的零件要贵上十几倍。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;鱼竿天线就是把长长的天线缠在鱼竿上；&lt;/li&gt;
+&lt;li&gt;它可以从阳台伸出去，不至于下垂太严重；&lt;/li&gt;
+&lt;li&gt;导线缠绕的疏密，带来了额外的感抗和容抗， 电抗变化 不 容易被 量化；&lt;/li&gt;
+&lt;li&gt;因此很难给出一 个标准模型、 能做到多波段谐振的天线， 只能是“盐少许，蒜蓉一小撮，烧至七成热……”，这时候可以用天 分 来做参考；&lt;/li&gt;
+&lt;li&gt;实在不行，交给天调吧。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;q&quot;&gt;高Q值天线，接地损耗差异大，效率低&lt;/h2&gt;
+&lt;p&gt;螺旋缠绕天线一般都是高Q值的，因为一大半都是电感嘛。想象一个很硬的弹簧，使劲按压到标定长度，很难保持是吧。 这就类似高Q值，高Q值表示可调谐的带宽会非常窄。 一些案例甚至说在LF和MF波段的应用上，都不能保证一个SSB的3000Hz语音的带宽，玩CW还凑合，FT8足够了。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.smeter.net/antennas/helical-modeling.php&quot;&gt;https://www.smeter.net/antennas/helical-modeling.php&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;上边这篇文章还提到它的“接地损耗”琢磨不定，不同质量、不同面积的“地”，带来的损耗差异很大。&lt;/p&gt;
+&lt;p&gt;和常规的加感天线相比，它的效率并不高，有评价说它的分布 &lt;strong&gt;损耗和增益基本上相当&lt;/strong&gt; ，后来人们建模和实际应用都证明了这一点。这是一个2012年，QRZ.com论坛上的讨论：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://forums.qrz.com/index.php?threads/helical-hf-antennas-%E2%80%93-anyone.358209/#post-2628608&quot;&gt;https://forums.qrz.com/index.php?threads/helical-hf-antennas-%E2%80%93-anyone.358209/#post-2628608&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;-2&quot;&gt;各种缠绕变形&lt;/h2&gt;
+&lt;p&gt;这个天线流行于上世纪70年代，那个年代还流行Slinky偶极天线。就是用两个松松的螺旋弹簧做的偶极天线。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/M3yvlS8yaL-1000.avif 1000w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/M3yvlS8yaL-1000.webp 1000w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/M3yvlS8yaL-1000.png&quot; alt=&quot;图片&quot; width=&quot;1000&quot; height=&quot;545&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;现在这种天线也有人玩，不仅仅是因为好玩，毕竟各种缠绕之后，它省地方啊，尤其是长波和中波，这些需要大尺寸空间的波段。&lt;/p&gt;
+&lt;h2 id=&quot;g4fgq&quot;&gt;G4FGQ螺线缠绕天线的建模工具&lt;/h2&gt;
+&lt;p&gt;G4FGQ有一个关于HWV天线的电感导线长度的计算公式：&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/75qG0QEWdR-720.avif 720w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/75qG0QEWdR-720.webp 720w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/75qG0QEWdR-720.png&quot; alt=&quot;图片&quot; width=&quot;720&quot; height=&quot;540&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;G4FGQ关于HWV的导线尺寸的计算公式&lt;/p&gt;
+&lt;p&gt;这里有G4FGQ的HWV天线建模计算器：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://static.smeter.net/software/helical3.exe&quot;&gt;http://static.smeter.net/software/helical3.exe&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;可惜我没下载下来，也不知道它该怎么用。它只是出现在跟这个话题相关的一个1997年的网页上，欢迎有兴趣的朋友去试试。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.smeter.net/antennas/helical-modeling.php&quot;&gt;https://www.smeter.net/antennas/helical-modeling.php&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;-3&quot;&gt;相关案例汇总&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;AH6NF和WH6GS发表在夏威夷业余无线电网站的帖子：&lt;a href=&quot;http://ham.aditl.com/ham/helical-antenna/index.html&quot;&gt;http://ham.aditl.com/ham/helical-antenna/index.html&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;KK6GXG的40米波段螺旋缠绕天线：&lt;a href=&quot;http://www.kk6gxg.com/40-meter-antenna/&quot;&gt;http://www.kk6gxg.com/40-meter-antenna/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;M0MCX的40米波段螺旋缠绕垂直天线：&lt;a href=&quot;https://www.m0mcx.co.uk/helically-wound-40m-vertical/&quot;&gt;https://www.m0mcx.co.uk/helically-wound-40m-vertical/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/02J_N1H1Zg-450.avif 450w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/02J_N1H1Zg-450.webp 450w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/02J_N1H1Zg-450.png&quot; alt=&quot;图片&quot; width=&quot;450&quot; height=&quot;600&quot;&gt;&lt;/picture&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;VA3ZNW的20米波段螺旋缠绕垂直天线：&lt;a href=&quot;http://www.antentop.org/017/files/va3znw_017.pdf&quot;&gt;http://www.antentop.org/017/files/va3znw_017.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;VE3YXO的2个160米波段螺旋缠绕天线：他用了一段阻抗为450Ω的梯子线做馈线，所以他同时用了1:1和1:9的两个巴伦。&lt;a href=&quot;http://www.antentop.org/021/files/VE3YXO_021.pdf&quot;&gt;http://www.antentop.org/021/files/VE3YXO_021.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;M0TCF的图腾柱天线，工作在80米波段，使用了四种共9个线圈，还包括一段1:4的自由变压器UNUN馈电。
+&lt;a href=&quot;http://www.torbayars.org.uk/down/totem%20pole.pdf&quot;&gt;http://www.torbayars.org.uk/down/totem%20pole.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/HN8_0gnKyf-764.avif 764w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/HN8_0gnKyf-764.webp 764w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/HN8_0gnKyf-764.png&quot; alt=&quot;图片&quot; width=&quot;764&quot; height=&quot;1272&quot;&gt;&lt;/picture&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ARRL的20美元车载天线，使用了三个不同疏密程度电感
+&lt;a href=&quot;http://www.arrl.org/files/file/Technology/tis/info/pdf/0004033.pdf&quot;&gt;http://www.arrl.org/files/file/Technology/tis/info/pdf/0004033.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
     <title>拯救iCOM IC-7000功放板</title>
     <link href="https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/" />
     <updated>2021-11-07T00:07:00Z</updated>
@@ -395,82 +522,6 @@ GPSD_OPTIONS=&quot;-n&quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&quot;language-zsh&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-zsh&quot;&gt;systemctl is-active gpsd
 systemctl is-active chronyd&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;得到反馈 &lt;code&gt;active&lt;/code&gt;，表示gpsd和chronyd已经正常提供服务了。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>树莓派解码FT8的性能评估</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/" />
-    <updated>2020-06-26T14:39:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/</id>
-    <content type="html">&lt;p&gt;在我们推出基于树莓派的RadioPi懒人包之后，许多OM们都会有这样一个疑问，小小的树莓派的性能究竟能不能满足FT8通联？为此我们设计了尽可能接近实际解码的场景，使用同一套模型对不同版本的树莓派和PC进行了一次FT8解码性能横向大比拼。&lt;/p&gt;
-&lt;h2 id=&quot;&quot;&gt;首先说结论&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;固定/远程/QRO：&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;首选 &lt;strong&gt;Raspberry Pi 4B 2G内存&lt;/strong&gt; 版本
-&lt;ul&gt;
-&lt;li&gt;可在开深度解码的情况下基本保证正常通联。&lt;/li&gt;
-&lt;li&gt;不过 并行信号多的时候可能需要对方重复多次发射。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;便携/QRP用途：&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;至少应使用 &lt;strong&gt;Raspberry Pi 3B&lt;/strong&gt; ，
-&lt;ul&gt;
-&lt;li&gt;不开深度解码（忽略微弱信号），在并行信号小于10个的情况下可以基本正常通联。&lt;/li&gt;
-&lt;li&gt;并行信号多的时候可能需要对方重复多次发射。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;SWL用途：&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;不开深度解码， &lt;strong&gt;Raspberry Pi 2B&lt;/strong&gt; 可满足需求。
-&lt;ul&gt;
-&lt;li&gt;开深度解码需要3B或以上型号可以保证基本完整解码。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;-2&quot;&gt;试验设计&lt;/h2&gt;
-&lt;p&gt;Joe Taylor教授发明的JT65、FT8等一系列业余无线电专用通信协议，通过一系列复杂的信息压缩、冗余和纠错以及分析预测，实现了在弱信号在高噪声链路上的可靠通信，已经逼近了香农定理的理论极限。这种优越模式的复杂算法决定了它比传统数字模式如RTTY/AFSK/PSK31等更严重的依赖计算性能。&lt;/p&gt;
-&lt;p&gt;以FT8为例，一个完整T/R循环为30秒，其中15秒为接收周期，15秒发射周期。每个周期中实际信号载波时间为12.6秒。&lt;/p&gt;
-&lt;p&gt;正常收/发工作情况下软件在第12.6秒载波结束时开始进行解码，有大约2.4秒的时间进行解码，并作出下一个15秒是否要开始发射的准备。&lt;/p&gt;
-&lt;p&gt;因为FT8大多数情况下是对0~3kHz音频带宽中所有的信号解码，因此并行的信号越多，解码速度就会越慢。通常情况下信噪比高的信号会较快的解码出来，而信噪比低的信号会花费较长的时间。 &lt;strong&gt;如果在2.4秒内无法解码，解码进程仍然会继续运行，如果整个解码过程在15秒内完成，还可以赶上下一个发射周期。&lt;/strong&gt; 如果过长时间无法解码，对方可能失去耐心而Halt TX。&lt;/p&gt;
-&lt;p&gt;所以要实现比较正常的通联， &lt;strong&gt;理想情况下一个周期内大部分信号的解码不应超过2.4秒。&lt;/strong&gt; 弱信号需要的运算量更大，更快的CPU有利于对弱信号深度解码。&lt;/p&gt;
-&lt;p&gt;为了能有一个稳定的基准，我们选择了WSJT-X记录下的真实接收到的分布在一天内不同的时间的12个信号片段，均为.wav文件。每个文件所包含的FT8信号从3个到21个不等（接收设备为IC-7300，滤波器带宽3.2kHz，简易阳台天线，20米波段），使用WSJT-X 2.2.2内置的jt9解码引擎（与图形界面后台调用一致）。&lt;/p&gt;
-&lt;p&gt;每种硬件均运行如下两个测试用例。&lt;/p&gt;
-&lt;h3 id=&quot;1-12&quot;&gt;用例1、使用标准解码深度，对全部12个信号片段进行解码的平均时间&lt;/h3&gt;
-&lt;p&gt;首先，使用以下命令，对所有12个信号片段，进行解码。&lt;/p&gt;
-&lt;pre class=&quot;language-js&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;ft8_samples $ jt9 &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;d &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;wav&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/2uCefg5Hw5-783.avif 783w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/2uCefg5Hw5-783.webp 783w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/2uCefg5Hw5-783.png&quot; alt=&quot;图片&quot; width=&quot;783&quot; height=&quot;516&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;上图：使用命令行对12个信号片段进行解码&lt;/p&gt;
-&lt;p&gt;执行完后目录下会生成一个timer.out 的汇总文件，红圈中的数据就是我们需要的解码总时间。这个数值除以12得到每片段的 &lt;strong&gt;平均解码时间&lt;/strong&gt; 。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/BKUyqFDCBn-795.avif 795w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/BKUyqFDCBn-795.webp 795w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/BKUyqFDCBn-795.png&quot; alt=&quot;图片&quot; width=&quot;795&quot; height=&quot;527&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;上图：查看12个信号片段的总解码时间&lt;/p&gt;
-&lt;h3 id=&quot;2&quot;&gt;用例2、对并行信号最多的单一片段，进行深度解码&lt;/h3&gt;
-&lt;p&gt;首先删除上个用例生成的解码预测文件&lt;code&gt;jt9&#92;_wisdom.dat&lt;/code&gt;：&lt;/p&gt;
-&lt;pre class=&quot;language-js&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;ft8_samples $ rm jt9_wisdom&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;dat&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;然后对信号片段&lt;code&gt;200614&#92;_153000.wav&lt;/code&gt;执行深度解码：&lt;/p&gt;
-&lt;pre class=&quot;language-js&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;ft8_samples $ jt9 &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;d &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;200614_153000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;wav&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/kjQHbafGlv-729.avif 729w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/kjQHbafGlv-729.webp 729w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/kjQHbafGlv-729.png&quot; alt=&quot;图片&quot; width=&quot;729&quot; height=&quot;220&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;上图： 使用命令行对单段信号片段进行解码&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/sEKiMp9vHi-727.avif 727w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/sEKiMp9vHi-727.webp 727w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/sEKiMp9vHi-727.png&quot; alt=&quot;图片&quot; width=&quot;727&quot; height=&quot;529&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;上图：查看单段信号片段的总解码时间&lt;/p&gt;
-&lt;h2 id=&quot;-3&quot;&gt;试验结果汇总&lt;/h2&gt;
-&lt;p&gt;我们一共测试了：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;五个树莓派的型号。&lt;/li&gt;
-&lt;li&gt;以及两个Thinkpad型号，作为对比参考。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;以下是测试结果的图表汇总。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/6ocguoAy6T-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/6ocguoAy6T-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/6ocguoAy6T-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;462&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;上表：各型号对FT8解码的性能汇总(单位：秒) ，其中单段深度解码的21个，表示解码出21个呼叫。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/oAwI5B-oXS-775.avif 775w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/oAwI5B-oXS-775.webp 775w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/oAwI5B-oXS-775.png&quot; alt=&quot;图片&quot; width=&quot;775&quot; height=&quot;1062&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;上图：各型号对FT8解码的性能对比(单位：秒)。&lt;br&gt;
-注： 统计条形图越长，说明所消耗的时间越多，越不适合用于FT8解码。&lt;/p&gt;
-&lt;p&gt;可见对于标准解码来说，树莓派 4代B型2G内存版是很合适的。4G内存版的性能已经不亚于Thinkpad X61，略逊于Thinkpad X280。&lt;/p&gt;
-&lt;p&gt;我们手边没有树莓派3B+，对它暂时没有结论。不过我们把测试的12个信号片段样本上传到了https://radiopi.club，有兴趣的朋友可以下载去自己测试一下。&lt;/p&gt;
-&lt;h3 id=&quot;-4&quot;&gt;下载地址&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://radiopiclub.github.io/downloads/ft8_samples/ft8_samples.tar.xz&quot;&gt;https://radiopiclub.github.io/downloads/ft8_samples/ft8_samples.tar.xz&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;SHA256:df20f47858ee8c28cd2c722d46c9963dc4e7d0b4fe3edff1610d5ba5ff7d2420&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;73&lt;/p&gt;
-&lt;p&gt;BI1EIH&lt;/p&gt;
-&lt;p&gt;2020.06.26&lt;/p&gt;
 </content>
   </entry>
 </feed>
