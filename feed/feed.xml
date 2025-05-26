@@ -339,6 +339,75 @@
 </content>
   </entry>
   <entry>
+    <title>“充气娃娃”甚高频通联竞赛</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/cqww-vhf-contest-grid-square-challenge/" />
+    <updated>2021-07-16T15:19:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/cqww-vhf-contest-grid-square-challenge/</id>
+    <content type="html">&lt;p&gt;业余无线电《CQ》杂志经常举办各种全球范围（World Wide）的通联竞赛，通常冠以“CQWW”开头。 于是国内业余届常将其戏称为“充气娃娃”比赛。&lt;/p&gt;
+&lt;p&gt;本周末即将举行一场2021年度 CQWW VHF Contest。 时间段是北京时间7月18日星期日凌晨2点，至7月19日星期一的早晨5点，共27小时。比赛内容是看谁在VHF频段(50/144MHz频段)，通联的 &lt;strong&gt;电台多&lt;/strong&gt; 、通联的 &lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247483672&amp;amp;idx=1&amp;amp;sn=54b09c008bee364b6dd6a68e2b6235dc&amp;amp;chksm=e9498792de3e0e84d8d769a87613278f12c10f1e476c4182e5e0c8ef03081127d0f714f5be43&amp;amp;scene=21#wechat_redirect&quot;&gt;&lt;strong&gt;梅登海德网格&lt;/strong&gt;&lt;/a&gt; &lt;strong&gt;多&lt;/strong&gt; 。&lt;/p&gt;
+&lt;h2 id=&quot;&quot;&gt;竞赛规则&lt;/h2&gt;
+&lt;p&gt;比赛方式很简单&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每个通联(QSO)只需要报告自己的呼号、所在的网格(前4位，比如我在ON80)；&lt;/li&gt;
+&lt;li&gt;同时抄下 对方的“呼号+网格”；&lt;/li&gt;
+&lt;li&gt;比赛结束后，提交日志给组委会；&lt;/li&gt;
+&lt;li&gt;算总分，算排名，发奖状。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/cqww-vhf-contest-grid-square-challenge/WDwWvAcOJ1-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/cqww-vhf-contest-grid-square-challenge/WDwWvAcOJ1-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/cqww-vhf-contest-grid-square-challenge/WDwWvAcOJ1-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;834&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;上图：IK6QON在2016年的CQ WWVHF竞赛奖状，参赛者以440分获得了单人小功率组第一名。图片来源：互联网搜索引擎，侵删。&lt;/p&gt;
+&lt;p&gt;它的计分规则也很关注网格：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在同一个网格里，每通一个不同 的电台(呼号)，算一次有效QSO记录，计算一个点数；&lt;/li&gt;
+&lt;li&gt;如 果 你移动到了新网格 ，再次 通联了 之 前 通过的台，还 可以再计一次点数；&lt;/li&gt;
+&lt;li&gt;最后，有效QSO里覆盖的不同网格数量，会用来乘以所有的点数，计总积分。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;QSO点数、总积分计算方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一次50MHz的有效记录计1个点；一次144MHz的有效记录计2个点；&lt;/li&gt;
+&lt;li&gt;总积分 = 总点数 x 网格总数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;是不是很刺激？听起来跟“四川麻将”里的加磅一样！&lt;/p&gt;
+&lt;p&gt;不过一个4位字母加数字的网格，在北京这边，跨度已经将近100多公里了。难度还是有点的。拔特：北京北五环以外是ON80，北五环以内就是OM89了；鹫峰国家公园西边几公里，正好是ON70、ON80、OM79、OM78四个网格交界的地方，跑去喊一圈，总点数就可以x4了！&lt;/p&gt;
+&lt;p&gt;另外，这个比赛不限制通信模式，也就是说，无论是FM的话音、还是CW、SSB、RTTY ， 乃至弱信号数字模式，例如FT8、FT4，都可以参赛，简直跟割韭菜一样。&lt;/p&gt;
+&lt;h2 id=&quot;vhf&quot;&gt;关于VHF&lt;/h2&gt;
+&lt;p&gt;VHF，甚高频，是指频率在30MHz～300MHz之内的频段。在我国 VHF几乎 是业余无线电的入门频段。 我国分配给业余无线电的VHF频段有两个，分别是： 50～54MHz、144-148MHz。在该范围内，业余无线电作为主要业务，与其它业务共享该频段。 其中144～146MHz还是唯一的主要业务。&lt;/p&gt;
+&lt;p&gt;这个两个频段的工作特点是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;依赖的天线尺寸不是特别大，50MHz上最简单的偶极谐振的天线大约才3米长，144MHz只有大约1米；所以特别适合车载移动通信、或者自制高指向性的天线。&lt;/li&gt;
+&lt;li&gt;VHF频段通信，常见的是在“视距”范围内的传播。但是在夏天，非常容易发生电离层E层的突发传播、 对流层散射、 大气高空逆温导致的波导传播，以及流星尾迹、月面反射等超视距传播现象，甚至飞机都能反射VHF电波。有惊喜～！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;-2&quot;&gt;关于参赛资格&lt;/h2&gt;
+&lt;p&gt;参加VHF通联比赛几乎没有任何门槛，持有《业余无线电A类操作证书》者即可参加该比赛。这是入门的最初级频段，国内有17万人具备这个资格。&lt;/p&gt;
+&lt;p&gt;这句话也可以这样理解：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我已有A类操作证书、但还没有买对讲机，也没有电台执照和呼号，可以参加这个比赛吗？&lt;/li&gt;
+&lt;li&gt;可以的。找一个有呼号、有执照的电台。取得设置人同意，并在他的监督下，使用该电台呼号参加比赛。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这么做合规吗？当然合规。参见《业余无线电台管理办法(2013)》第二十六、三十四条，以及附件《业余无线电台呼号说明》第7条。&lt;/p&gt;
+&lt;p&gt;值得注意的是，我国规定业余台在这两个频点上发射，辐射到自由空间的等效功率不得超过25W。&lt;/p&gt;
+&lt;h2 id=&quot;-3&quot;&gt;关于梅登海德网格&lt;/h2&gt;
+&lt;p&gt;参加 CQ WW VHF 比赛，网格信息很重要，如何确定自己的网格坐标？这个微信小程序应该用的上：“火腿网格”。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;火腿网格&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/cqww-vhf-contest-grid-square-challenge/pXiI-b80U6-1125.avif 1125w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/cqww-vhf-contest-grid-square-challenge/pXiI-b80U6-1125.webp 1125w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/cqww-vhf-contest-grid-square-challenge/pXiI-b80U6-1125.jpeg&quot; alt=&quot;&quot; data-weappcover=&quot;&quot; style=&quot;zoom:30%;&quot; width=&quot;1125&quot; height=&quot;899&quot;&gt;&lt;/picture&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/cqww-vhf-contest-grid-square-challenge/tI5VUI93hB-1280.avif 1280w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/cqww-vhf-contest-grid-square-challenge/tI5VUI93hB-1280.webp 1280w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/cqww-vhf-contest-grid-square-challenge/tI5VUI93hB-1280.jpeg&quot; style=&quot;zoom:30%;&quot; alt=&quot;火腿网格二维码&quot; width=&quot;1280&quot; height=&quot;1280&quot;&gt;&lt;/picture&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;cqww-vhf&quot;&gt;CQWW VHF比赛的详细规则&lt;/h2&gt;
+&lt;p&gt;这里不再赘述了，文末的原文链接是竞赛规则的网站。可以在浏览器里打开查看具体规则，参赛组别，功率组别，日志提交方式，以及奖状获得方式：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://cqww-vhf.com/rules.htm&quot;&gt;https://cqww-vhf.com/rules.htm&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
     <title>为usdx制作3D打印外壳</title>
     <link href="https://bg6lh.github.io/zh-CN/blog/a-3d-printed-enclosure-for-usdx-sdr/" />
     <updated>2021-07-03T16:12:00Z</updated>
@@ -421,6 +490,42 @@
 </content>
   </entry>
   <entry>
+    <title>用网线做端馈天线平衡器</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/" />
+    <updated>2021-04-20T03:55:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/</id>
+    <content type="html">&lt;h2 id=&quot;counterpoise&quot;&gt;Counterpoise&lt;/h2&gt;
+&lt;p&gt;最近读K7SZ的《小功率通信指南》(BD6CR译)一书，这老汉用50英尺(15米)长的5芯电缆做了一个平衡器。受他启发，我用3.3米长的8芯网线也做了一个。&lt;/p&gt;
+&lt;p&gt;我家住高层楼的6层，只能从阳台斜拉一根22.4米的长线天线到楼下。长线天线是一种非谐振天线，在任何业余频率上都不谐振，需要天调配合。 长线也是典型的“端馈天线”，从天线振子的一端馈电。&lt;/p&gt;
+&lt;p&gt;使用端馈天线的一个苦恼是，如果接地不良，它会对电台和连接的设备产生射频串扰。尤其在玩数字模式时，计算机偶尔会失效。我就遇到过鼠标不动、 触摸板不灵， USB转TTL接口掉线，WSJT-X软件报错，FT-817卡在发射状态……甚至旁边一个毫无连接的眼睛按摩仪都莫名其妙自己启动了……&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/jrn9jaCmsi-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/jrn9jaCmsi-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/jrn9jaCmsi-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;643&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;上图就是K7SZ设计的平衡器，counterpoise。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Counterpoise，平衡器&lt;/strong&gt;，K7SZ指的是长度是工作波长的1/4，或者1/4奇数倍的导线。因为满足1/4波长（1/4个电压相位）正好跟自己的反射电压互相抵消，不至于让它顺着射频地倒灌入设备。&lt;/p&gt;
+&lt;p&gt;我用过一个5米的卷尺做20米波段的平衡器。拉出四米多，在20米波段驻波明显下来了。关键的是，WSJT-X再也没有报过错。 只有在80米波段，那个眼睛按摩仪还会启动……不过后来它也好了，因为它没电了。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/lRsKo9Q1n2-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/lRsKo9Q1n2-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/lRsKo9Q1n2-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;看到了平衡器的必要性，我下决心做一个更正式的平衡器，能满足更多的波段，把卷尺留给更需要它的人。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/QepZWxdEKy-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/QepZWxdEKy-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/QepZWxdEKy-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;608&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;h2 id=&quot;&quot;&gt;设计思路&lt;/h2&gt;
+&lt;p&gt;下边是我的设计思路。8芯的网线，某几根分割一下，互相连接之后，争取给每个波段，都找到一份 &lt;strong&gt;“1/4波长奇数倍”&lt;/strong&gt; 的长度。或者将就一下跟其它波段共用。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/04PaBAYDjY-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/04PaBAYDjY-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/04PaBAYDjY-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;926&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;解释一下80米是如何连接的，其它就比较容易理解了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第8号线的0.4米处剪断，0.4+1米处剪断。0.4+1+1.8米处剪断；&lt;/li&gt;
+&lt;li&gt;第7号线的1.4米处剪断；&lt;/li&gt;
+&lt;li&gt;从7号线开始，在0.4米处，与8号线的1米段连接，然后8号线1米段再连回7号线的1.4米之后的那一段；然后7号线的末尾接6号线的末尾，6号的开头接4号的开头，4号的末尾接3号的末尾，3号的开头，接2号的开头，2号的末尾接1号的末尾。&lt;/li&gt;
+&lt;li&gt;所以是：7、8、7、6、 4、3、2、1，共19.8米，大约是80米波的1/4波长(20.42米)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;为什么是3.3米网线？ 其实我这根网线起先大约是3.5米，因为掐掉了两端的水晶头就剩下3.4米了。 后来中间又断开再连接，最后有效长度只有3.3米了。 所以原本预期能组成20.3米，结果只剩下19.8米了。不过网线是双绞线，芯线的实际长度比网线套管略长一点。我没找到这个长度比例。只看到五类双绞线的每节的扭绞长度是12.7mm，如果假设每扭绞一次，实际长度增加一次导线的带皮直径的话，那么大概是1mm/12.7mm，大约是8%。那么19.8米长的网线大概能组成21米长的平衡线。 大差不差， 已经能改善很多了。&lt;/p&gt;
+&lt;h2 id=&quot;-2&quot;&gt;怎么测试一下它是否有效呢？&lt;/h2&gt;
+&lt;p&gt;把它假设为一根1/4波长的GP天线，只要再模拟一个地网，检测一下它在各业余波段的驻波，结果应该会比较理想。&lt;/p&gt;
+&lt;p&gt;我把它从厨房的窗户顺下去，地线接了一个灌满水的易拉罐，易拉罐放在水池里，水池跟我的厨房台面连着，厨房台面是一整块三延长米的不锈钢板，这算是个凑合的地网吧。&lt;/p&gt;
+&lt;p&gt;以下是我用nanoVNA测试的从3MHz～30MHz的整体带宽。在14.070MHz、20米波段的驻波比是2.70：&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/qFM1xOiRxJ-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/qFM1xOiRxJ-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/qFM1xOiRxJ-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;看上去带宽可能不够，毕竟它只是一个平衡器，不需要考虑辐射效率，能抵消大部分多余的电势能就够了。此外，GP天线的地网很重要，厨房台面不能保证这段网线的最佳效率。 平衡器使用的时候也要尽量展开，拉直比盘起来测出来的带宽要大的多。&lt;/p&gt;
+&lt;p&gt;想知道最后应用的效果吗？等过一阵子我拿给BG1TPT测试一下。他家里也是长线天线，只是射频地接了一大坨被覆线，做天线剩下来的，盘成一个小救生圈那么大。他用7300做FT8，在80米，功率超过20瓦就死机。我准备把这个根平衡器拿给他测试一下，回头跟大家分享结果。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
     <title>终于响了！一个元件的矿石收音机</title>
     <link href="https://bg6lh.github.io/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/" />
     <updated>2021-03-26T16:39:00Z</updated>
@@ -438,90 +543,6 @@
 &lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/YM_rz82fjE-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/YM_rz82fjE-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/YM_rz82fjE-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;608&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;p&gt;我家附近七八公里，就是著名的杜仲公园，那里有一大片中波天线田。所以我才有信心做这个。即便是这样，我一开始还是没听到声音。 我 甚至开车到了跟杜仲公园一路之隔的地方。但仍然听不到声音。因为我就用了一根FT-818电台的BNC天线，没有接任何地线。&lt;/p&gt;
 &lt;p&gt;今天忽然下雨了！半夜雨停了。我找了根带鳄鱼夹的短地线，和一根10米长的天线，跑到了院子里的铁栏杆处。这排栏杆埋在地里，有几十米长。我 把天线扔到了树上，把地线夹在栏杆上。仔细听，还是没动静。用手捏了一下夹在栏杆上的鳄鱼夹，似乎有声音了？松开，又没动静了。再捏，又有动静了。就这样，反复捏了几下，感觉听到了音乐，节奏是连续的。过了一会儿，是一个女性的声音。这下我可以确认了： &lt;strong&gt;我终于听到了一个二极管从空气中筛选出来的电磁波！&lt;/strong&gt; 尽管完全听不出她说的啥，但是， &lt;strong&gt;我可以相信小时候看到的那张图，是真的！&lt;/strong&gt;&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>我是如何给微信小程序审核员普及业余无线电知识的</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/" />
-    <updated>2020-12-18T01:19:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/</id>
-    <content type="html">&lt;p&gt;这都2020年了，玩业余无线电的还是会受到群众的质疑和警惕。有在家里玩被邻居投诉的；有跑楼顶架设天线被物业阻挠的；有去山里玩电台被村民当间谍举报的……我遇到了更与时俱进的：做了个无线电相关的微信小程序被审核员给毙了。&lt;/p&gt;
-&lt;p&gt;事情是这样的。单位要上马一个微信小程序项目，我想先熟悉一下开发流程，于是就顺手做了一个非常简单的小程序。题材是业余无线电里常用到的“梅登海德网格”转换。这是一种用了几十年的简化位置表示法。它把一长串的经纬度，转换成4到6位字母和数字。&lt;/p&gt;
-&lt;p&gt;写代码的过程很简单，从微信官方的位置接口里获得手机的经纬度数据，再用两个开源的js脚本，分别转换成“度分秒”格式和“梅登海德”格式，最后显示在微信自带的地图上。用户可以靠拖拽屏幕上的地图，查询新位置的信息。全程就一个界面。如下图：&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/EdKCl9fOmC-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/EdKCl9fOmC-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/EdKCl9fOmC-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;2339&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;因为业余无线电玩家都自称为HAM、火腿，所以这个小程序就起名叫“火腿网格”。&lt;/p&gt;
-&lt;p&gt;我把体验版发到一些业余无线电玩家的群里，大伙儿评价还都挺好。于是我兴致勃勃地把正式版提给了微信的小程序审核平台。一经他们审核通过，就可以正式给公众使用了。&lt;/p&gt;
-&lt;p&gt;然鹅，没成想，下午收到了审核失败的通知：&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;em&gt;“小程序服务涉及暴露用户地理位置信息的情况，属于不正当使用用户隐私信息，平台不支持，请移违法违规服务，重新定位小程序服务功能。”&lt;/em&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;/table&gt;
-&lt;p&gt;被微信给毙了……&lt;/p&gt;
-&lt;p&gt;我有点蒙圈。“火腿网格”就一个服务，移除了就剩下个没馅儿的饺子皮儿了。&lt;/p&gt;
-&lt;p&gt;我在小程序里特地用了微信位置接口提供的GCJ02类型的数据，是国家法定标准。应用也符合微信的《微信小程序平台运营规范》第15.4地理位置条款的所有5项要求。对比那些外卖、快递、网约车的小程序，它们不也是把用户的地址显示出来了吗？只不过它们显示的是汉字，我显示的是英文字母而已。&lt;/p&gt;
-&lt;p&gt;于是我就跟微信的审核员进行了在线沟通。我说，这个小程序不涉及任何存储、传递用户位置和数据的功能，所以不涉及“不正当使用用户隐私信息”。并请他们说明，哪些信息算是“暴露用户地理位置信息”？显示经纬度坐标算吗？&lt;/p&gt;
-&lt;p&gt;他们应该内部沟通了好一阵，还是不能给通过，理由仍然是“暴露位置信息”。却又不能解释我对外卖、快递的同类功能的质疑。&lt;/p&gt;
-&lt;p&gt;又过了半天，他们给我发了一个截图，问：图片中红框内的信息是什么意思呢？&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/3KQXxV3Sq7-864.avif 864w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/3KQXxV3Sq7-864.webp 864w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/3KQXxV3Sq7-864.png&quot; alt=&quot;图片&quot; width=&quot;864&quot; height=&quot;788&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;我恍然大悟，原来他们质疑的是 &lt;strong&gt;“梅登海德网格”&lt;/strong&gt; 啊……&lt;/p&gt;
-&lt;p&gt;此时已经是下班时间，对方已经离线。晚上回到家，我整理了一小段“梅登海德网格”的简短介绍。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;[!quote]
-红框里的字母，是“梅登海德网格”，我有一篇公众号文章专门介绍这个。
-&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247483672&amp;amp;idx=1&amp;amp;sn=54b09c008bee364b6dd6a68e2b6235dc&amp;amp;scene=21#wechat_redirect&quot;&gt;https://mp.weixin.qq.com/s/B2e7b50gVE-VNvZmxx3zyQ&lt;/a&gt;  但是这个可能写的比较晦涩，偏技术性。&lt;/p&gt;
-&lt;p&gt;关于梅登海德网格的使用，是国际业余无线电联盟(IARU)推行的一种方案。用4-6个字母和数字，就能告诉对方自己的位置，而不用报出一长串经纬度数字。  在《业余无线电手册(第四版)》第30页提到过这个话题。  https://item.jd.com/11695330.html&lt;/p&gt;
-&lt;p&gt;我国也是IARU的成员国。代表中国加入IARU的是“中国无线电协会业余无线电分会”，简称CRAC。CRAC是在工信部的委托下，指导和组织中国业余无线电活动的社团(社政字号4873-1号)。详情请见CRAC的网站： http://crac.org.cn/  中国对梅登海德网格的应用，可以参见CRAC的操作证书考试题库。  这页是CRAC公布的操作证书考试题库：  http://crac.org.cn/News/Detail?ID=1862  请参见《2017-1031 题库电子版(v171031)》中的LK0862、LK0863、LK0864 三题。  总题库文件中，每道题的正确答案选择都是[A]。  &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/0pgaOIvbr0-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/0pgaOIvbr0-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/0pgaOIvbr0-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;659&quot;&gt;&lt;/picture&gt;  也就是说，这是国家鼓励大家使用的，一种表明自己位置用的方式。  &lt;strong&gt;这不是密码，也不是暗语，更不涉及国家安全和机密。&lt;/strong&gt;  大家也可以通过收到的“梅登海德网格”，反过来查询对方的位置。有很多网站、软件、APP都支持这个功能。您可以在各大应用商店，搜索“Maidenhead”关键字，就能找出来很多。  我做的这个小程序，就是用来方便大家在做无线电通信时，查询自己的网格用的。  目前做的只是查询用户“自己的”网格信息。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;第二天一早，我又联系到了前一天的审核员，然后把准备好的文字发给他。又过了好一会儿，我收到了回复：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;[!quote]
-“你好，这边将你的提供的信息反馈后，结合你的小程序当前服务功能，小程序暂不涉及暴露用户地理位置，辛苦重新提交代码审核，后续审核人员将以当时提审版本的具体服务功能为准~”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;审核通过了！于是乎。&lt;/p&gt;
-&lt;p&gt;今天这个小程序正式发布了。这番折腾后，我还是有点开心的。不仅是因为审核通过了，还因为这世界上又多了几个知道“业余无线电”的小伙伴，而且他们接受的很快。&lt;/p&gt;
-&lt;p&gt;这件事说大不大，说小也不小吧。如今个人的通信手段太发达了，电子产品也不那么神秘了。但民间对无线电的关注和理解似乎并没有多大变化。至今全国加入CRAC的各级会员也就是17万多人(A类15万，B类2.2万人，C类只有733人)。可见我们的土壤里多么缺少无线电文化的养分啊。 怎么说，业余无线电也算是工业文明的一部分吧。 国家刚开始提的“需求侧”改革， 工业文明是多好的抓手啊，里边有说不完的话题，业余无线电文化就是其一 。 这些可都是看得见、 摸得着 的“诗和远方”啊。这难道 不比“盲盒”香吗？&lt;/p&gt;
-&lt;p&gt;文末，给自己的小程序做个广告，欢迎大家来体验一下 &lt;strong&gt;“火腿网格”&lt;/strong&gt; 。&lt;/p&gt;
-&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/tI5VUI93hB-1280.avif 1280w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/tI5VUI93hB-1280.webp 1280w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/tI5VUI93hB-1280.jpeg&quot; alt=&quot;火腿网格&quot; style=&quot;zoom:30%;&quot; width=&quot;1280&quot; height=&quot;1280&quot;&gt;&lt;/picture&gt;
-</content>
-  </entry>
-  <entry>
-    <title>给RadioPi添加USB GPS</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/" />
-    <updated>2020-07-05T12:28:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/</id>
-    <content type="html">&lt;p&gt;众所周知，WSJT-X解码对时间的精度要求较高，而树莓派本身不带硬件时钟。 为了使WSJT-X能获得精确的时间，我们给 RadioPi预装了chrony。这可以使RadioPi通过互联网获得准确时间。此外，我们还预装了gpsd，你只需购买一个廉价的USB GPS，做一点额外的配置，即 可以获得更精确的GPS时间，同时还使RadioPi具备了卫星定位的能力，一举两得。&lt;/p&gt;
-&lt;p&gt;RadioPi使用chrony替代nptd执行时间同步。 在有互联网连接时，chrony可以从支持ntp协议的网络时间服务器获取时间； 没有互联网时，比如在野外，chrony可以从USB GPS获取时间。 以下是一个简明的配置 操 作说明。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/C-tOf0xPmY-1024.avif 1024w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/C-tOf0xPmY-1024.webp 1024w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/C-tOf0xPmY-1024.png&quot; alt=&quot;图片&quot; width=&quot;1024&quot; height=&quot;768&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;h2 id=&quot;usb-gps&quot;&gt;第一步：设置USB GPS&lt;/h2&gt;
-&lt;p&gt;给RadioPi插上USB GPS，开机后，打开终端(Terminal)窗口，通过以下命令找到RadioPi系统给GPS分配的串口ID。&lt;/p&gt;
-&lt;pre class=&quot;language-zsh&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-zsh&quot;&gt;ls -l /dev/serial/by-id&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/_Nf-8DXwts-1024.avif 1024w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/_Nf-8DXwts-1024.webp 1024w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/_Nf-8DXwts-1024.png&quot; alt=&quot;图片&quot; width=&quot;1024&quot; height=&quot;325&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;上图：列出所有串口设备的ID&lt;/p&gt;
-&lt;p&gt;本例中可以看到我们的GPS被分配的串口ID是 &lt;code&gt;ttyAMC0&lt;/code&gt; 。&lt;/p&gt;
-&lt;p&gt;记住这个编号，然后打开gpsd的配置文件：&lt;/p&gt;
-&lt;pre class=&quot;language-zsh&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-zsh&quot;&gt;sudo nano /etc/default/gpsd&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;按照以下内容，修改相应的设置：&lt;/p&gt;
-&lt;pre class=&quot;language-zsh&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-zsh&quot;&gt;START_DAEMON=&quot;true&quot;
-USBAUTO=&quot;true&quot;
-DEVICES=&quot;/dev/&lt;你的GPS串口ID&gt;&quot;
-GPSD_OPTIONS=&quot;-n&quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;DEVICES这里要写入你查到的具体ID。本例中要写入&lt;code&gt;ttyAMC0&lt;/code&gt;。然后 按Ctrl-X，保存修改并退出。&lt;/p&gt;
-&lt;h2 id=&quot;chrony-gps&quot;&gt;第二步：给chrony添加GPS授时服务&lt;/h2&gt;
-&lt;p&gt;接下来把GPS时钟添加到chrony中。&lt;/p&gt;
-&lt;p&gt;打开chrony的配置文件。&lt;/p&gt;
-&lt;pre class=&quot;language-zsh&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-zsh&quot;&gt;sudo nano /etc/chrony/chrony.conf&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;在文件末尾添加下面一行。&lt;/p&gt;
-&lt;pre class=&quot;language-zsh&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-zsh&quot;&gt;refclock SHM 0 offset 0.5 delay 0.2 refid NMEA&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;按 Ctrl-X，保存修改并退出。&lt;/p&gt;
-&lt;h2 id=&quot;radiopi&quot;&gt;第三步：重启RadioPi&lt;/h2&gt;
-&lt;p&gt;退出终端(Terminal)窗口，重启RadioPi。&lt;/p&gt;
-&lt;p&gt;重启之后，可以按照以下命令检查一下gpsd和chronyd是否正常运转。&lt;/p&gt;
-&lt;pre class=&quot;language-zsh&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-zsh&quot;&gt;systemctl is-active gpsd
-systemctl is-active chronyd&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;得到反馈 &lt;code&gt;active&lt;/code&gt;，表示gpsd和chronyd已经正常提供服务了。&lt;/p&gt;
 </content>
   </entry>
 </feed>
