@@ -37,6 +37,135 @@
 </content>
   </entry>
   <entry>
+    <title>冬奥追台记</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/hunting-wo22-winter-olympics-2022-special-station/" />
+    <updated>2022-02-22T18:04:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/hunting-wo22-winter-olympics-2022-special-station/</id>
+    <content type="html">&lt;p&gt;终于拿下了冬奥特设台通联大满贯，全靠QRP干的，发帖纪(xuan)念(yao)一下！&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/hunting-wo22-winter-olympics-2022-special-station/fP3jaM0IZB-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/hunting-wo22-winter-olympics-2022-special-station/fP3jaM0IZB-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/hunting-wo22-winter-olympics-2022-special-station/fP3jaM0IZB-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;608&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;伴随奥运会设立特别业余电台是国际惯例。今年CRAC没让全世界HAM失望，冬奥特设台 &lt;strong&gt;BY1CRA/WO22&lt;/strong&gt; 顺利开台，台址就在京郊凉水河畔的B1Z竞赛基地。我有一条天线就在它3公里之外，这条件不拿个大满贯实在说不过去。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tip]
+BY1CRA/WO22特设台在1.8～29.7MHz频率上的9个业余波段工作，可以使用CW、SSB、FT8，三种模式通联，共26种组合（因为30米波段没有SSB模式，所以是3x9-1=26种）。只要在任意波段、使用任意模式、跟WO22完成一次通联，就可以获得一个组合分。完成3个组合就可以拿铜奖、5个组合可以拿银奖，10个组合可以拿金奖。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;然鹅，就在春节前，我的100瓦机器FTDX10功放烧了，送回苏州厂家检修中。手边只剩下老伙计FT-818ND，一个6瓦的QRP机，电池模式下只能输出5瓦。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/hunting-wo22-winter-olympics-2022-special-station/yQ6Cmdn9dJ-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/hunting-wo22-winter-olympics-2022-special-station/yQ6Cmdn9dJ-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/hunting-wo22-winter-olympics-2022-special-station/yQ6Cmdn9dJ-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;h2 id=&quot;&quot;&gt;谋定而后动&lt;/h2&gt;
+&lt;p&gt;我有两套固定的天线，都是水平架设的20米端馈(EFHW)。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;天线A&lt;/strong&gt; 在城里，距离B1Z有30公里，离地高度15米；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;天线B&lt;/strong&gt; 在郊区，距离B1Z只有3公里，但是离地高度只有3米多，在一个狭窄的空间里，还不得不拐了个弯儿，周围是一圈儿楼。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;B1Z的天线大部分是 &lt;strong&gt;高塔上的八木天线&lt;/strong&gt; ，水平极化。八木天线具有很高的指向性，经电离层反射可以完成远距离通信。但是在北京周边一两百公里，主要靠地波传播，而且自己的天线也要足够高。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;B1Z的160米和80米天线是南北走向的倒V。&lt;/strong&gt; 它周边很开阔，无线电波的地波和天波的传播应该都有。这两个波段因为频率低，辐射效率也较低，天线振子又要足够长，发射功率也要足够高， 所以通联难度很大。&lt;/p&gt;
+&lt;p&gt;我的那个三米高的天线别看离得近，但是和B1Z中间有好几个村子，所有的建筑、树木都比我的天线高。地波受地形影响的衰减要比天波大很多。&lt;/p&gt;
+&lt;p&gt;还有一个难度。根据无线电传播的规律，WO22白天在30米以上高波段工作，夜间在30米以下低波段工作。白天我要上班，可以远程操作FT8，晚上回家以后，搞搞FT8和CW也还好，但是SSB需要扯开嗓子喊，尤其是160米这后半夜才有传播的波段。这会严重影响家人休息，以后还要多做很多家务，才能弥补全家对业余无线电的好感。&lt;/p&gt;
+&lt;h2 id=&quot;-2&quot;&gt;实际效果&lt;/h2&gt;
+&lt;p&gt;以上这些条件，对于FT8模式应该都不是大问题。第一个星期我就完成了FT8小满贯。CW问题也不大，只是OP为了节省时间统一给599的信号报告，所以无法准确知道我信号的强度。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SSB是难点。&lt;/strong&gt; 有文章对比过FT8、CW和SSB完成通信的所需要的最低信噪比，同样条件下，FT8需要-21dB信噪比，CW模式需要-15dB，SSB则需要+10dB才行。SSB和FT8里外差了30dB，相当于功率差1000倍。&lt;a href=&quot;https://site.ieee.org/msn/files/2019/04/FT8-KA9SWE.pdf&quot;&gt;https://site.ieee.org/msn/files/2019/04/FT8-KA9SWE.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下图我把用FT8模式跟WO22通联的信噪比列了出来，并标出了通信时距离B1Z的距离，即工作距离。&lt;/p&gt;
+&lt;p&gt;要说明一点，10米到40米波段，WO22用的是八木天线，它可能会根据需要随时转方向。所以我并不确定当时它正指向哪里。但是80米和160米天线是固定的倒V。因此80米和160米的数据比较有参考意义。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/hunting-wo22-winter-olympics-2022-special-station/CB5P3hjoXh-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/hunting-wo22-winter-olympics-2022-special-station/CB5P3hjoXh-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/hunting-wo22-winter-olympics-2022-special-station/CB5P3hjoXh-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;442&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;40米80米160米的SSB是在B1Z基地附近完成的，距离分别是600米，800米，和0米。&lt;/p&gt;
+&lt;p&gt;从图上看，在高波段的SSB还算顺利。哪怕我的电台才5瓦，无论30公里和3公里，两处都顺利完成了。除了10米和30米的SSB是在城里的天线A完成的，其他都是在郊区、距离B1Z三公里的天线B上完成的。可能我运气好，当时B1Z的天线正对着我。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;12米波段&lt;/strong&gt; ，FT8和SSB是前后脚完成的。FT8时我的信号传给WO22有+3dB的信噪比。当WO22开始SSB模式呼叫，频率上的大功率台把我的回应覆盖了。我连忙喊QRP、QRP！OP竟然听到了，他让其它台都暂停，给我让路，我这才完成了12米的SSB通联。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;40米波段，&lt;/strong&gt; 从FT8的结果看，我的信噪比只有-18dB。我判断天线目前不指向我。当SSB开始时，我怎么都喊不通。于是果断换上 &lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247484070&amp;amp;idx=1&amp;amp;sn=00a6a242207ba50364b176d01e343010&amp;amp;chksm=e949842cde3e0d3a6dc3f1e2654c6a241a0a4ab3418943c8a0f451326fb4ab7d722b78b1d8b5&amp;amp;scene=21#wechat_redirect&quot;&gt;&lt;strong&gt;品川天线&lt;/strong&gt;&lt;/a&gt; ，开车来到凉水河畔。B1Z基地就在对岸600米开外的村子里。我把天线拉杆横过来呼叫，搞定了40米SSB。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;80米和160米的“低波段之夜”，&lt;/strong&gt; WO22搞了四次。从FT8上看，我的信号过去只有-4dB、-7dB。所以到了SSB时，头两次我都铩羽而归，主要是半夜12点了，我家领导不让我喊……&lt;/p&gt;
+&lt;p&gt;第三次我换上了小环、品川，跑到院子里的假山上，依然不行。然后开车出去，到台湖公园停车场，大概距离B1Z有2公里的样子，还是不行。继续抵近到离B1Z村子800米外的河边，拉出20米端馈，这才搞定。但OP也听了四五遍才完全抄录。 后来跟他在网上聊，说我的信号只能给31，这是RST信号报告，如果换做信噪比，估计也就是0dB左右的。&lt;/p&gt;
+&lt;p&gt;最后只剩下160米波段SSB。 &lt;strong&gt;我已经想开了，玩QRPeeeeee脸皮要厚。&lt;/strong&gt; 抄起一根 &lt;strong&gt;中部加感的拉杆天线&lt;/strong&gt; 和 &lt;strong&gt;Elecraft T1天调&lt;/strong&gt; ，大摇大摆来到B1Z的门口。一直蹲守到晚上12点，就等160米SSB通联开张，完成了我的大满贯。&lt;/p&gt;
+&lt;h2 id=&quot;160&quot;&gt;160米波段为啥这么难？&lt;/h2&gt;
+&lt;p&gt;看了一下WO22的通联统计：&lt;a href=&quot;https://clublog.org/charts/?c=BY1CRA/WO22&quot;&gt;https://clublog.org/charts/?c=BY1CRA/WO22&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;能跟WO22完成160米SSB通联的电台，基本都在北京及周边的河北、天津、山西。我似乎听到过有日本台在160米呼叫，这很厉害，想必他不仅有足够长的天线，还得有1000瓦的功率。&lt;/p&gt;
+&lt;p&gt;160米为啥这么难？因为它波长太长，已经算中波了。它需要的天线尺寸至少是80米长，如果用缩短天线，效率会很低。而且电离层对160米波段的衰减也很大。只有在后半夜，以及灰线时刻，才能有较好的传播特性。有人说160米波段发射功率都是1000瓦起步的， &lt;strong&gt;100瓦算是QRP&lt;/strong&gt; 。&lt;/p&gt;
+&lt;p&gt;从2月22日WO22的通联统计看，已经完成的19700次通联中，160米波段只有353次，而且这是包含FT8和CW模式的。 除了亚洲外只有1个欧洲的俄罗斯台R8CT完成了160米FT8，它位于4300多公里外的叶卡捷琳堡 。&lt;/p&gt;
+&lt;p&gt;顺便说一下，在160米天线底下， &lt;strong&gt;用假负载可以通联吗？&lt;/strong&gt; 我实验了， &lt;strong&gt;不行！&lt;/strong&gt; 在160米假负载辐射效率几乎没有。换上了拉杆+天调才行。&lt;/p&gt;
+&lt;h2 id=&quot;wo22&quot;&gt;WO22还没收摊儿&lt;/h2&gt;
+&lt;p&gt;冬奥会结束了，但是WO22的通联活动要持续到冬残奥会结束，大家还有两周时间可以调整天线。周末OP会比较多，波段也会很全。各位加油，争取人手一个金墩墩奖状！&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>为啥15瓦以上短波电台归工信部管？</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/why-are-hf-transceivers-over-15-watts-regulated-by-miit-in-china/" />
+    <updated>2022-01-15T16:50:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/why-are-hf-transceivers-over-15-watts-regulated-by-miit-in-china/</id>
+    <content type="html">&lt;p&gt;终于在牛年尾巴尖上收到了我的C类业余无线电台执照，A4那么大的两张、工信部颁发的、15瓦以上短波业余电台执照 。这里引发我思考了一个问题： &lt;strong&gt;为啥15瓦以上短波电台归工信部管？&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;15&quot;&gt;“短波15瓦”的分界线何时出现？&lt;/h2&gt;
+&lt;p&gt;我读了1959年以来不同历史时期的无线电管理法规。发现1978年曾经有过按功率划分管理范围的规定。到1993年简化为按“通信业务范围”划分。再到2016年，也就是现行的《无线电管理条例》重新出现了按功率划分。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;1978年6月23日中央军委、国务院发布的《无线电管理规则》：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第七条 地区（省辖市、自治州、盟）所属单位设置 &lt;strong&gt;十五瓦&lt;/strong&gt; （含）以下 &lt;strong&gt;超短波&lt;/strong&gt; 电话（报）台和业余、科学实验无线电台以及 &lt;strong&gt;长、中、短波&lt;/strong&gt; 通信电台，由地区（省辖市，自治州、盟）无线电管理委员会审核，报地区行政公署（省辖市，自治州、盟革命委员会）批准；省（市、自治区）所述单位设置各种无线电台站，由省（市、自治区）无线电管理委员会审核，报革命委员会批准，两瓦（含）以下民用小型超短波无线电话机可由有关厅、局批准抄送有关无线电管理委员会；中央、国务院各部门及其直属单位设置各种无线电台站，由各该部门批准抄送有关无线电管理委员会，两瓦（含）以下民用小型超短波无线电话机可由有关司、局批准抄送有关无线电管理委员会。  第十六条 一百五十瓦（含）以下长、中、短波固定无线电通信台站、固定超短波无线电话（报）台和业余、科学实验无线电台站以及五十瓦（含）以下的广播、电视转播台，其台址均由省（市、自治区）无线电管理委员会批准，报大军区无线电管理委员会备案。……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;1993年9月11日国务院、中央军委《中华人民共和国无线电管理条例》中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第十三条：……(一)通信范围或者服务区域涉及两个以上的省或者涉及境外的无线电台(站)，中央国家机关(含其在京直属单位)设置、使用的无线电台(站)，其他因特殊需要设置、使用的无线电台(站)，由国家无线电管理机构审批。  (二)在省、自治区范围内跨地区通信或者服务的无线电台(站)，省、自治区机关(含其在省、自治区人民政府所在地直属单位)设置使用的无线电台(站)，由省、自治区无线电管理机构审批。在直辖市范围内通信或者服务的无线电台(站)，由直辖市无线电管理机构审批。  (三)在设区的市范围内通信或者服务的无线电台(站)，由设区的市无线电管理机构审批。依照前款规定申请设置固定无线电台(站)的，事先还应当经其上级业务主管部门同意。  设置、使用特别业务的无线电台(站)，由国家无线电管理机构委托国务院有关部门审批。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最近的“15瓦”字样出现在去年CRAC公布的《业余无线电台管理办法(2021修订版)》征求意见稿，电台管理相关内容已经跟2016年的新版《中华人民共和国无线电管理条例》完全对齐。明确提到了15瓦以上短波电台由国家实施许可。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2016年修订的《 中华人民共和国无线电管理条例 》中：
+&lt;ul&gt;
+&lt;li&gt;第三十条： “……设置、使用空间无线电台、卫星测控（导航）站、卫星关口站、卫星国际专线地球站、 &lt;strong&gt;15瓦以上的短波&lt;/strong&gt; 无线电台（站）以及涉及国家主权、安全的其他重要无线电台（站），由国家无线电管理机构实施许可”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;《无线电管理条例》是《业余无线电台管办法》的上位法。现行的《办法》还是2013版的，它颁布时《条例》还是1993年的。而1993版《条例》按照“通信范围”来划分国家和地方的管辖权。也就是HAM们经常纠结的、执照上到底应该写“省内”、“省际”、“全国”还是“涉外”这个话题。 今年如果《业余无线电台管理办法2021修订》顺利实施，以后大家的执照就不用纠结“通信范围”了，直接是干干净净的A、B、C三类。&lt;/p&gt;
+&lt;p&gt;由此我能体会到，国家的无线电管理理念始终在做与时俱进的调整。&lt;/p&gt;
+&lt;h2 id=&quot;15-2&quot;&gt;为啥是15瓦？&lt;/h2&gt;
+&lt;p&gt;我没有找到明确的资料能说明15瓦功率对于短波无线电管理的意义。甚至在电磁辐射的环保标准里，也没看到过对15瓦功率的具体限制。我只能从历史资料里推测，这很可能是一个 &lt;strong&gt;“应用惯例”&lt;/strong&gt; 。&lt;/p&gt;
+&lt;p&gt;在二十世纪上半叶 &lt;strong&gt;电子管&lt;/strong&gt; 大行其道。1906年德弗雷斯特发明了有放大功能的电子三极管。那时候的三极管有灯泡那么大。电台想做小是有极限的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1927年奉系在哈尔滨花8万元建立1000瓦广播电台，其中5万元购买电台设备，剩下3万用于盖电台的楼。这就是当年1000瓦台的规模。&lt;/li&gt;
+&lt;li&gt;1930年红军缴获的 &lt;strong&gt;15瓦电台&lt;/strong&gt; 接收机部分，长宽高尺寸是 40x27x31cm 。这还只是个接收机。81.cn上有一个复原的360°开箱照。看起来是一个三灯的再生接收机。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/why-are-hf-transceivers-over-15-watts-regulated-by-miit-in-china/2Iqbj5dpfn-950.avif 950w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/why-are-hf-transceivers-over-15-watts-regulated-by-miit-in-china/2Iqbj5dpfn-950.webp 950w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/why-are-hf-transceivers-over-15-watts-regulated-by-miit-in-china/2Iqbj5dpfn-950.png&quot; alt=&quot;图片&quot; width=&quot;950&quot; height=&quot;850&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;1930年红军缴获的电台接收机。上世纪50年代，原总参通讯兵部建陈列馆，王铮嘱咐工作人员将这个电台送到展览馆。1959年，军事博物馆建馆，根据原总政治部要求，总参通讯兵部将这部电台移交给军博。后来，为了总参通讯兵部展览所需，王诤亲自按照这部电台的原型，重新仿制了一部，放在了通讯兵部展览室中。(来源:81.cn)&lt;/p&gt;
+&lt;p&gt;说到电子管，1932年国人已经开始制造电子管电台。1936年实现了30W电子功放管试制。1950年10月，南京电照厂试制成功2E22电子功放管，这就是后来的曙光FD422电子功放管。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/why-are-hf-transceivers-over-15-watts-regulated-by-miit-in-china/lqIPrcH55--474.avif 474w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/why-are-hf-transceivers-over-15-watts-regulated-by-miit-in-china/lqIPrcH55--474.webp 474w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/why-are-hf-transceivers-over-15-watts-regulated-by-miit-in-china/lqIPrcH55--474.jpeg&quot; alt=&quot;图片&quot; width=&quot;474&quot; height=&quot;355&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;电子功放管2E22&lt;/p&gt;
+&lt;p&gt;2E22是著名的美军军用电台AR/GNC-9使用的功放管。量产于1943年，屏极功耗30瓦，放大电路属于效率不高的甲类功放，在CW模式下最大可以输出 &lt;strong&gt;15瓦&lt;/strong&gt; 。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/why-are-hf-transceivers-over-15-watts-regulated-by-miit-in-china/5uhA5PNhmL-480.avif 480w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/why-are-hf-transceivers-over-15-watts-regulated-by-miit-in-china/5uhA5PNhmL-480.webp 480w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/why-are-hf-transceivers-over-15-watts-regulated-by-miit-in-china/5uhA5PNhmL-480.jpeg&quot; alt=&quot;图片&quot; width=&quot;480&quot; height=&quot;640&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;AN/GRC-9 电台 2～12MHz，AM/CW模式，最大发射功率7W/15W&lt;/p&gt;
+&lt;p&gt;AR/GNC-9是很成功的军用“地面无线电通信” 电台 ，从二战一直用到越战。解放后，咱们参照它研制了著名的“大八一”， &lt;strong&gt;15瓦&lt;/strong&gt; 师团级短波电台。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/why-are-hf-transceivers-over-15-watts-regulated-by-miit-in-china/ciTYK1U56H-800.avif 800w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/why-are-hf-transceivers-over-15-watts-regulated-by-miit-in-china/ciTYK1U56H-800.webp 800w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/why-are-hf-transceivers-over-15-watts-regulated-by-miit-in-china/ciTYK1U56H-800.jpeg&quot; alt=&quot;图片&quot; width=&quot;800&quot; height=&quot;533&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;八一型15瓦短波电台， 2～12MHz，AM/CW模式，最大发射功率7W/15W&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/why-are-hf-transceivers-over-15-watts-regulated-by-miit-in-china/eZ_YLp7cpS-1024.avif 1024w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/why-are-hf-transceivers-over-15-watts-regulated-by-miit-in-china/eZ_YLp7cpS-1024.webp 1024w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/why-are-hf-transceivers-over-15-watts-regulated-by-miit-in-china/eZ_YLp7cpS-1024.png&quot; alt=&quot;图片&quot; width=&quot;1024&quot; height=&quot;632&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;借用矿坛的一张照片：左边是“大八一”电台，上边是发射部，下边是接收部139接收机，缺的一块是电池。右边是著名的“小八一”电台，是大八一的晶体管化换代。&lt;/p&gt;
+&lt;p&gt;在1951年，我军已经可以量产全套系列战术电台，从军师级的100瓦91型、师团级 &lt;strong&gt;15瓦&lt;/strong&gt; 81型、团营级2瓦71型(王成用的)，到营连级100毫瓦的701、702短波超再生步谈机。&lt;/p&gt;
+&lt;p&gt;那个时期常见的电台功率不只15瓦。还包括20瓦、50瓦、100瓦……更大更小的功率都有文献提到过。但是军用的15瓦电台在各种历史资料里很常见。很可能在当时， &lt;strong&gt;15瓦电台是在便携、实用、电子管和电源技术，几重制约下的产物&lt;/strong&gt; 。&lt;/p&gt;
+&lt;p&gt;我们国家的无线电管理体制，最早也是起源自军事。从南昌起义至今，军方一直是无线电管理的主导者。军方划分电台等级的惯例是按照功率来的。15瓦电台是配属给团级单位，对应行政体制是市县级单位。 很可能正是基于以上这些原因， &lt;strong&gt;“15瓦”作为一个“管理惯例”沿用至今&lt;/strong&gt; 。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;说实在的，读这段历史，尤其是我军的红色历史，收到的体会比研究“15瓦”本身更有意义。&lt;/strong&gt; 我把我读过的资料罗列在文末，有兴趣的可以延伸阅读。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果有朋友了解15瓦的确切出处，欢迎在留言区交流！&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;&quot;&gt;最后，为啥只是短波？&lt;/h2&gt;
+&lt;p&gt;最后吐槽一下，短波(HF)定义是3MHz～30MHz之间的电波。可我的电台还包含了两头的1.8MHz中波(MF)，和50MHz超短波(VHF)。结果工信部的执照里这两个频率就不给载明了。 这让我很困惑：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这俩频段我能直接使用吗？&lt;/li&gt;
+&lt;li&gt;还要单独给这俩频段申请一个“地方执照”吗？&lt;/li&gt;
+&lt;li&gt;我应该回河南、还是在北京申请？&lt;/li&gt;
+&lt;li&gt;这个电台已经在工信部注册了，还能再在其他地方注册吗？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;-2&quot;&gt;本文引用的相关材料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.crac.org.cn/News/Detail?ID=713&quot;&gt;CRAC：我国业余无线电管理体制历史研究&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.srrc.org.cn/news155.aspx&quot;&gt;工信部无线电管理：无线电发展史&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.doc88.com/p-8819992452771.html&quot;&gt;刘继忠：广播电台的诞生与早年发展&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jssdfz.jiangsu.gov.cn/szbook/slsz/dzgyz/FL/FL1.HTM&quot;&gt;江苏省电子工业志：附录1，大事年表&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://baike.baidu.com/item/%E5%8D%95%E5%AE%97%E8%82%83/5720122&quot;&gt;百度百科：单宗肃&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://photo.81.cn/zhuanti/2016-09/23/content_7273348.htm&quot;&gt;红军的第一部电台&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://vr.81.cn/H5/jb/92/index.html&quot;&gt;红军的第一部电台复制品360°照片&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://tv.cctv.com/2014/08/17/VIDE1408283999062873.shtml&quot;&gt;CCTV7：《军迷淘天下》 20140817 抗战天空中的红色电波&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cena.com.cn/industrynews/20210422/111565.html&quot;&gt;中国电子信息产业网：“一部半电台”起家，开辟红军无线电通信新纪元&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.kechuang.org/t/6221&quot;&gt;电子部七所李进良：我军老一代战术电台的研制与改进&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.radiomuseum.org/tubes/tube_2e22.html&quot;&gt;电子功放管 2E22&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.radionerds.com/index.php/AN~GRC-9&quot;&gt;AN/GRC-9 电台信息&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
     <title>关于2美元便携短波天线的调查</title>
     <link href="https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/" />
     <updated>2021-11-10T10:46:00Z</updated>
@@ -339,6 +468,29 @@
 </content>
   </entry>
   <entry>
+    <title>分享一次可怕的意外</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/a-terrifying-accident-in-my-ham-shack/" />
+    <updated>2021-08-15T04:00:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/a-terrifying-accident-in-my-ham-shack/</id>
+    <content type="html">&lt;p&gt;这是一次差点毁掉我业余无线电生涯的事故：2018年的一个晚上，我打开FT-817，GSV3000，瞬间看到BNC保护帽的铁链子烧红了！还闻到了塑料融化的味道！立马关掉电源。。。。GSV3000的外壳留下了一个永久的印记。&lt;/p&gt;
+&lt;p&gt;事故原因分析：&lt;/p&gt;
+&lt;p&gt;我给FT-817的前天线接口加了一个BNC保护帽，带链子的那种。开机时，817放在了电源GSV3000上，BNC保护帽顺着链子耷拉了下来，你说巧不巧，那个长度正好触碰到了给817接出的电源接线正极上，而电源线接头恰好有一截暴露出来。所以，一开机就短路了！&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/a-terrifying-accident-in-my-ham-shack/IYOyBpIDCE-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/a-terrifying-accident-in-my-ham-shack/IYOyBpIDCE-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/a-terrifying-accident-in-my-ham-shack/IYOyBpIDCE-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1440&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;上图是复原的事故现场&lt;/p&gt;
+&lt;p&gt;当时我的设备还少，后来我给电台室增加了一个架子，把七七八八的设备都摆好。一朝被蛇咬，十年怕井绳。我仔细琢磨这里有一个安全隐患：&lt;strong&gt;电源放在了最下边&lt;/strong&gt;。在重力作用下，保不齐会有什么东西掉下来。万一是个金属的，大概率会碰触在接线柱暴露的部分。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/a-terrifying-accident-in-my-ham-shack/UsHk1cweYB-952.avif 952w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/a-terrifying-accident-in-my-ham-shack/UsHk1cweYB-952.webp 952w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/a-terrifying-accident-in-my-ham-shack/UsHk1cweYB-952.png&quot; alt=&quot;图片&quot; width=&quot;952&quot; height=&quot;1269&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;于是就把架子改了：把电源放到了最上边。相对来说这更稳妥。为了增加安全冗余，有必要做好各种防护措施。但那是打补丁。在安全方面，&lt;strong&gt;防呆设计要前置！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/a-terrifying-accident-in-my-ham-shack/Cal_TdlqQZ-624.avif 624w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/a-terrifying-accident-in-my-ham-shack/Cal_TdlqQZ-624.webp 624w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/a-terrifying-accident-in-my-ham-shack/Cal_TdlqQZ-624.png&quot; alt=&quot;图片&quot; width=&quot;624&quot; height=&quot;832&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;之后我又做了几点小改进：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每对儿电源传输线的正、负极都增加保险丝，并尽量靠近电源输出；&lt;/li&gt;
+&lt;li&gt;把电台室所有用到市电的设备，电源插头都改成了&lt;strong&gt;国标三头&lt;/strong&gt;的，确保有保护地；&lt;/li&gt;
+&lt;li&gt;常备一个水基灭火器；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;带链子的BNC保护帽，果断垃圾桶。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
     <title>“充气娃娃”甚高频通联竞赛</title>
     <link href="https://bg6lh.github.io/zh-CN/blog/cqww-vhf-contest-grid-square-challenge/" />
     <updated>2021-07-16T15:19:00Z</updated>
@@ -438,111 +590,6 @@
 &lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/a-3d-printed-enclosure-for-usdx-sdr/-Q8Nz1vfzx-792.avif 792w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/a-3d-printed-enclosure-for-usdx-sdr/-Q8Nz1vfzx-792.webp 792w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/a-3d-printed-enclosure-for-usdx-sdr/-Q8Nz1vfzx-792.jpeg&quot; alt=&quot;图片&quot; width=&quot;792&quot; height=&quot;612&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 &lt;p&gt;最后，我的usdx外壳文件是在这里下载的：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.thingiverse.com/thing:4831906&quot;&gt;https://www.thingiverse.com/thing:4831906&lt;/a&gt;&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>制作黄河741收音机套件，一次半导体考古</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/" />
-    <updated>2021-06-04T15:45:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/</id>
-    <content type="html">&lt;p&gt;最近做了一个黄河741套件，有七个锗三极管的超外差半导体收音机，全程焊接了一堆腿儿都氧化变黑了的、 各种古时候的 分立元件。 整个过程仿佛经历了一把半导体考古。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/DH5H6k9QWR-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/DH5H6k9QWR-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/DH5H6k9QWR-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;很久很久以前，我在高中的劳动课上做过一个带集成电路的黄河741 。 还记得当时几组小伙伴一起焊收音机，教室上空飞过的电线忽然冒烟了，同学们惊叫着跑出教室，老师冲进去咔嚓把电源闸刀扳下……那闸刀只有一个陶瓷底座。&lt;/p&gt;
-&lt;p&gt;后来的岁月里，每天中午吃饭的时候，十二点半，袁阔成、单田芳、田连元、刘兰芳……准时出来，讲述着引人入胜的故事，传播着中华文明古老的价值观。 这些都是从那个黄河741里听到的。 去年我老爸搬了一次家，居然这个老黄河741找不到了。&lt;/p&gt;
-&lt;p&gt;黄河741收音机是郑州无线电厂生产的。最早发源于哪年没考证出来。我在网上看到一张1976年9月10日， 资兴县供销社开的 741收音机销售收据，单价25.6元一台。还有一条新闻说1973年在郑州托人14.5元买了一台。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/uVW2CIzqzi-1000.avif 1000w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/uVW2CIzqzi-1000.webp 1000w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/uVW2CIzqzi-1000.jpeg&quot; alt=&quot;图片&quot; width=&quot;1000&quot; height=&quot;950&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;再后来，郑州无线电厂，跟那个时代无数个曾经辉煌过的工厂一样，湮没在了改革开放的历史大潮中。但是黄河741的传说被 &lt;strong&gt;“郑州中原电子科学技术普及站”&lt;/strong&gt; 发行的741 套件继承了。&lt;/p&gt;
-&lt;p&gt;741套件在收音机爱好者的心目中的地位，可能仅次于 &lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247483824&amp;amp;idx=1&amp;amp;sn=eee8d9cef424b6cff93dfa1deb03bdb3&amp;amp;chksm=e949873ade3e0e2cc1e4d501644dbbebda3d9c7a0b808fb563630ad9f3c612c23002547e866a&amp;amp;scene=21#wechat_redirect&quot;&gt;&lt;strong&gt;2P3&lt;/strong&gt;&lt;/a&gt; (一个流行于文革时期的收音机外壳，各路高手自己设计能塞进去的电路，所以它成为了那个时代一个经久不衰的DIY平台)。741套件版本流传于世的应该不低于六个：741、741A、741B、741C、集成电路版本的741(也可能叫TP-741)，还有一种叫714。我在网上还见过99-741和2020-741的电路板，看上去像是爱好者复刻的。&lt;/p&gt;
-&lt;p&gt;我收的这套不知道是中原科普站的第几个版本。 据BI1EIH回忆，他九几年在郑州火车站中州商场三楼，就见过这种，下边用毛笔划了一道的741说明书。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/SogU6GuI9A-410.avif 410w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/SogU6GuI9A-410.webp 410w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/SogU6GuI9A-410.jpeg&quot; alt=&quot;图片&quot; width=&quot;410&quot; height=&quot;741&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/Lr9960ogN0-420.avif 420w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/Lr9960ogN0-420.webp 420w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/Lr9960ogN0-420.jpeg&quot; alt=&quot;图片&quot; width=&quot;420&quot; height=&quot;739&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/SnQsM5e3_f-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/SnQsM5e3_f-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/SnQsM5e3_f-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;569&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;下边是印刷电路板图纸。网上能看到的版本都是 &lt;strong&gt;草绿色&lt;/strong&gt; 的，那是741A、741B的图纸。如果你见到过 &lt;strong&gt;天蓝色&lt;/strong&gt; 的741电路板图纸，欢迎留言交流交流。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/2b2Ja57oQV-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/2b2Ja57oQV-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/2b2Ja57oQV-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;726&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;这套的中周B2，跟电路板图纸里画的是镜像的。 蚀刻的电路板铜皮也略有不同。 所以这套应该是优化了的，估计是741 v1.01？&lt;/p&gt;
-&lt;p&gt;感谢万能的互联网，我花了100块钱淘到了一套。而且 买完之后，这套件就下线了。 所以我有理由相信， 这可能是世界上最后一套“科普站版”的黄河741。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/jhRZHgL-3U-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/jhRZHgL-3U-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/jhRZHgL-3U-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;608&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;整个制作过程有惊无险。刚上来R1就把我难住了，两个焊点恨不得飞过半个电路板，一时间无从下手。 后来 改从音频部分开始，一级级倒着往回做，历经七级放大，坚持到最后，居然一个个都对上了。 最后把电阻R1、R4焊接在了电路板的背面。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/QZO3ZuHxIl-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/QZO3ZuHxIl-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/QZO3ZuHxIl-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;以下是我整理的BOM表。 有心自己复刻的朋友欢迎收藏：&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/14sXc6Q0cf-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/14sXc6Q0cf-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/14sXc6Q0cf-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;2279&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;套件包里有几个电阻和电容对不上。 为了不愧对这家伙的年份，我 专门从半导体老中医那讨了几个“古时候的”元件。最后还富余一个三色环的电阻，没读出来色环的读数，用万用表测量是340KΩ。 不知道是干啥用的。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/qQ_a0f6k9y-551.avif 551w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/qQ_a0f6k9y-551.webp 551w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/qQ_a0f6k9y-551.jpeg&quot; alt=&quot;图片&quot; width=&quot;551&quot; height=&quot;413&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;找到了7个测试点，指标都正常。 &lt;strong&gt;但是，现在还收不到台&lt;/strong&gt; 。因为还需要对几个元件的振荡频率进行统调。&lt;/p&gt;
-&lt;p&gt;“统调”是最激动人心的时刻了！&lt;/p&gt;
-&lt;p&gt;我专门约了BI1EIH和BG1TPT，带着一个信号发生器来我家。BI1EIH把统调比喻为瞄准。脑补一下， 先调音频，再调中频和本振，再调跟踪……频率瞄准了，收音机就收到台了。&lt;/p&gt;
-&lt;p&gt;最后还要调一个拉丝电容，靠拉开缠绕的金属细丝，改变电容量，补偿调台用的双联电容。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/ysznKF1xiT-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/ysznKF1xiT-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/ysznKF1xiT-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;607&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;这是个古董，现代电路里已经很罕见了。鉴于我和BI1EIH小时候都玩过拉丝了，这个 给 “拉丝 电容 ”拉丝 的机会留给了BG1TPT，补上了他人生一课。拉开多少很重要，不然调谐的振荡频率会偏，找台就偏了。幸好，我们有信号发生器。一段一段找，最后拉掉了几乎1/3，完美找到了最佳补偿。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/xdZQxt9kd5-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/xdZQxt9kd5-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/xdZQxt9kd5-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;608&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;然鹅，741还没有收到任何台。挨个检查测试点，发现检波的二极管击穿了。幸好我刚做了个 &lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247483948&amp;amp;idx=1&amp;amp;sn=5173e54dc84bda22547c4be06142dad0&amp;amp;chksm=e94984a6de3e0db063f73e45bfb442f05afc806d0b2c398331bbab867c619a7a2cb5bd3a65be&amp;amp;scene=21#wechat_redirect&quot;&gt;&lt;strong&gt;矿石收音机&lt;/strong&gt;&lt;/a&gt; ，拆了它的2AP9拿来换上。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/XIjUD6OqN3-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/XIjUD6OqN3-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/XIjUD6OqN3-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1440&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;然鹅，还是收不到任何台。三个半导体老中医又把几个中周调了一遍，感觉无论怎么挪磁棒上的线圈，喇叭的声音没有明显变化。于是 怀疑是线圈的问题。仔细检查，还真是，线圈焊短路了。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/E6Ku6tKbBl-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/E6Ku6tKbBl-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/E6Ku6tKbBl-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1440&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;重焊，开机， &lt;strong&gt;It works！&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;听听这来自锗晶体管的浑厚的声音吧。&lt;/p&gt;
-&lt;div style=&quot;position: relative; padding: 30% 45%;&quot;&gt;
-		  &lt;iframe style=&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot; src=&quot;https://player.bilibili.com/player.html?bvid=BV1TvjjzHE2u&amp;cid=30157310813&amp;page=1&amp;high_quality=1&amp;autoplay=false&quot; frameborder=&quot;no&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;true&quot;&gt;
-	      &lt;/iframe&gt;
-		&lt;/div&gt;
-&lt;p&gt;最后，下边那个红色的就是 &lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247483824&amp;amp;idx=1&amp;amp;sn=eee8d9cef424b6cff93dfa1deb03bdb3&amp;amp;chksm=e949873ade3e0e2cc1e4d501644dbbebda3d9c7a0b808fb563630ad9f3c612c23002547e866a&amp;amp;scene=21#wechat_redirect&quot;&gt;&lt;strong&gt;2P3&lt;/strong&gt;&lt;/a&gt; 。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/NmzIIP_Y-U-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/NmzIIP_Y-U-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/NmzIIP_Y-U-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>用网线做端馈天线平衡器</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/" />
-    <updated>2021-04-20T03:55:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/</id>
-    <content type="html">&lt;h2 id=&quot;counterpoise&quot;&gt;Counterpoise&lt;/h2&gt;
-&lt;p&gt;最近读K7SZ的《小功率通信指南》(BD6CR译)一书，这老汉用50英尺(15米)长的5芯电缆做了一个平衡器。受他启发，我用3.3米长的8芯网线也做了一个。&lt;/p&gt;
-&lt;p&gt;我家住高层楼的6层，只能从阳台斜拉一根22.4米的长线天线到楼下。长线天线是一种非谐振天线，在任何业余频率上都不谐振，需要天调配合。 长线也是典型的“端馈天线”，从天线振子的一端馈电。&lt;/p&gt;
-&lt;p&gt;使用端馈天线的一个苦恼是，如果接地不良，它会对电台和连接的设备产生射频串扰。尤其在玩数字模式时，计算机偶尔会失效。我就遇到过鼠标不动、 触摸板不灵， USB转TTL接口掉线，WSJT-X软件报错，FT-817卡在发射状态……甚至旁边一个毫无连接的眼睛按摩仪都莫名其妙自己启动了……&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/jrn9jaCmsi-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/jrn9jaCmsi-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/jrn9jaCmsi-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;643&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;上图就是K7SZ设计的平衡器，counterpoise。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Counterpoise，平衡器&lt;/strong&gt;，K7SZ指的是长度是工作波长的1/4，或者1/4奇数倍的导线。因为满足1/4波长（1/4个电压相位）正好跟自己的反射电压互相抵消，不至于让它顺着射频地倒灌入设备。&lt;/p&gt;
-&lt;p&gt;我用过一个5米的卷尺做20米波段的平衡器。拉出四米多，在20米波段驻波明显下来了。关键的是，WSJT-X再也没有报过错。 只有在80米波段，那个眼睛按摩仪还会启动……不过后来它也好了，因为它没电了。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/lRsKo9Q1n2-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/lRsKo9Q1n2-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/lRsKo9Q1n2-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;看到了平衡器的必要性，我下决心做一个更正式的平衡器，能满足更多的波段，把卷尺留给更需要它的人。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/QepZWxdEKy-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/QepZWxdEKy-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/QepZWxdEKy-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;608&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;h2 id=&quot;&quot;&gt;设计思路&lt;/h2&gt;
-&lt;p&gt;下边是我的设计思路。8芯的网线，某几根分割一下，互相连接之后，争取给每个波段，都找到一份 &lt;strong&gt;“1/4波长奇数倍”&lt;/strong&gt; 的长度。或者将就一下跟其它波段共用。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/04PaBAYDjY-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/04PaBAYDjY-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/04PaBAYDjY-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;926&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;解释一下80米是如何连接的，其它就比较容易理解了：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;第8号线的0.4米处剪断，0.4+1米处剪断。0.4+1+1.8米处剪断；&lt;/li&gt;
-&lt;li&gt;第7号线的1.4米处剪断；&lt;/li&gt;
-&lt;li&gt;从7号线开始，在0.4米处，与8号线的1米段连接，然后8号线1米段再连回7号线的1.4米之后的那一段；然后7号线的末尾接6号线的末尾，6号的开头接4号的开头，4号的末尾接3号的末尾，3号的开头，接2号的开头，2号的末尾接1号的末尾。&lt;/li&gt;
-&lt;li&gt;所以是：7、8、7、6、 4、3、2、1，共19.8米，大约是80米波的1/4波长(20.42米)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;为什么是3.3米网线？ 其实我这根网线起先大约是3.5米，因为掐掉了两端的水晶头就剩下3.4米了。 后来中间又断开再连接，最后有效长度只有3.3米了。 所以原本预期能组成20.3米，结果只剩下19.8米了。不过网线是双绞线，芯线的实际长度比网线套管略长一点。我没找到这个长度比例。只看到五类双绞线的每节的扭绞长度是12.7mm，如果假设每扭绞一次，实际长度增加一次导线的带皮直径的话，那么大概是1mm/12.7mm，大约是8%。那么19.8米长的网线大概能组成21米长的平衡线。 大差不差， 已经能改善很多了。&lt;/p&gt;
-&lt;h2 id=&quot;-2&quot;&gt;怎么测试一下它是否有效呢？&lt;/h2&gt;
-&lt;p&gt;把它假设为一根1/4波长的GP天线，只要再模拟一个地网，检测一下它在各业余波段的驻波，结果应该会比较理想。&lt;/p&gt;
-&lt;p&gt;我把它从厨房的窗户顺下去，地线接了一个灌满水的易拉罐，易拉罐放在水池里，水池跟我的厨房台面连着，厨房台面是一整块三延长米的不锈钢板，这算是个凑合的地网吧。&lt;/p&gt;
-&lt;p&gt;以下是我用nanoVNA测试的从3MHz～30MHz的整体带宽。在14.070MHz、20米波段的驻波比是2.70：&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/qFM1xOiRxJ-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/qFM1xOiRxJ-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/qFM1xOiRxJ-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;看上去带宽可能不够，毕竟它只是一个平衡器，不需要考虑辐射效率，能抵消大部分多余的电势能就够了。此外，GP天线的地网很重要，厨房台面不能保证这段网线的最佳效率。 平衡器使用的时候也要尽量展开，拉直比盘起来测出来的带宽要大的多。&lt;/p&gt;
-&lt;p&gt;想知道最后应用的效果吗？等过一阵子我拿给BG1TPT测试一下。他家里也是长线天线，只是射频地接了一大坨被覆线，做天线剩下来的，盘成一个小救生圈那么大。他用7300做FT8，在80米，功率超过20瓦就死机。我准备把这个根平衡器拿给他测试一下，回头跟大家分享结果。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>终于响了！一个元件的矿石收音机</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/" />
-    <updated>2021-03-26T16:39:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/</id>
-    <content type="html">&lt;p&gt;小时候就听说过最简单的矿石收音机：一个耳机并联一个二极管，一头接天线，一头接水管，就能听到广播的声音，还不用电池。我曾经做过一个，没听到任何动静。可BI1EIH 就做成了，还绘声绘色地说，听到了比蚊子哼哼还弱30dB的声音……他怎么算的？-25dB的FT8信号就已经听不到了。再后来我就把这件事抛到脑后了。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/UGVn3eFzZd-750.avif 750w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/UGVn3eFzZd-750.webp 750w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/UGVn3eFzZd-750.png&quot; alt=&quot;图片&quot; width=&quot;750&quot; height=&quot;750&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;直到最近，我在闲鱼上看到一个老兄，他做了好多精致的矿石收音机。他不断迭代，改进元件的选型，外观越来越优雅。最新一代的“蒸汽朋克风”更是独具匠心。这又勾起了我内心的波澜。感谢万能的淘宝，我买到了几个2AP9二极管 。再加上历史遗留下来的一个2200Ω的高阻耳机，谢天谢地，几十年之后，我终于把BOM表凑齐了。，什么？就一个能称为元件的东西好不好！&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/v6pERYlYOS-350.avif 350w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/v6pERYlYOS-350.webp 350w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/v6pERYlYOS-350.png&quot; alt=&quot;图片&quot; width=&quot;350&quot; height=&quot;240&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;接线图就是这张图，网上找的，跟我小时候看到的一毛一样，只是现在的水管都是PPR了，灯都是LED的了。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/3ak7hbtVfv-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/3ak7hbtVfv-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/3ak7hbtVfv-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;694&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;闲着也是闲着，用KiCad画了一个原理图。这是一个学会计的互联网产品经理第一次画电路图，别笑话我。我想呢，理论上接地这块是信号地的意思，但是这个收音机是用大地(earth)当回路的，大地其实是个元件。所以特意挑了一个“保护地”的图标。意思就是要强调，把地线跟大地接上。&lt;/p&gt;
-&lt;p&gt;这是成品的样子：&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/_I0YJs6sj5-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/_I0YJs6sj5-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/_I0YJs6sj5-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;608&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;我有好多牙线盒子，嘿嘿。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/YM_rz82fjE-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/YM_rz82fjE-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/YM_rz82fjE-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;608&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;我家附近七八公里，就是著名的杜仲公园，那里有一大片中波天线田。所以我才有信心做这个。即便是这样，我一开始还是没听到声音。 我 甚至开车到了跟杜仲公园一路之隔的地方。但仍然听不到声音。因为我就用了一根FT-818电台的BNC天线，没有接任何地线。&lt;/p&gt;
-&lt;p&gt;今天忽然下雨了！半夜雨停了。我找了根带鳄鱼夹的短地线，和一根10米长的天线，跑到了院子里的铁栏杆处。这排栏杆埋在地里，有几十米长。我 把天线扔到了树上，把地线夹在栏杆上。仔细听，还是没动静。用手捏了一下夹在栏杆上的鳄鱼夹，似乎有声音了？松开，又没动静了。再捏，又有动静了。就这样，反复捏了几下，感觉听到了音乐，节奏是连续的。过了一会儿，是一个女性的声音。这下我可以确认了： &lt;strong&gt;我终于听到了一个二极管从空气中筛选出来的电磁波！&lt;/strong&gt; 尽管完全听不出她说的啥，但是， &lt;strong&gt;我可以相信小时候看到的那张图，是真的！&lt;/strong&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>
