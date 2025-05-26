@@ -37,6 +37,42 @@
 </content>
   </entry>
   <entry>
+    <title>拯救iCOM IC-7000功放板</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/" />
+    <updated>2021-11-07T00:07:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/</id>
+    <content type="html">&lt;p&gt;最近BI1KFY的IC-7000推动级功放板烧了。无线电老中医BI1EIH新做了PCB 给完美修复 。这机器现在可以叫IC-7001，或者IC-7000 BI1EIH remix吗？&lt;/p&gt;
+&lt;p&gt;IC-7000是日本 iCOM公司 2006年上市的一款HF/VHF/UHF收发信机。它的早期产品，烧功放是个常见故障， 原因是推动级设计阻尼不足，容易诱发自激，导致推动管和PCB一起烧毁。 在推动级自激时，有时会发生同时烧毁UHF功放管（即使当时UHF不在工作状态）。&lt;/p&gt;
+&lt;h2 id=&quot;&quot;&gt;故障现象&lt;/h2&gt;
+&lt;p&gt;接收正常，按PTT可进入发射状态，但HF/VHF/UHF均无输出。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/PWMXzrwO0y-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/PWMXzrwO0y-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/PWMXzrwO0y-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1440&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;拆掉这个板子，需要专业工具，费老劲了……&lt;/p&gt;
+&lt;h2 id=&quot;-2&quot;&gt;解决思路&lt;/h2&gt;
+&lt;p&gt;在推动级功放板上增加一个1～10Ω的阻尼电阻，可大大降低自激的可能性。IC-7000 的 晚期产品也是这么解决的，它们加的电阻是1Ω。&lt;/p&gt;
+&lt;p&gt;如果你的还没烧，可以自己加一个试试，用小刀在电路板划一个口子，再焊上一个电阻。很多老外就是这么干的。如果你的板子已经烧了，那福音来了：&lt;/p&gt;
+&lt;p&gt;BI1EIH按原尺寸重新测量、设计、反复打样制作了新的推动板，增加了阻尼电阻，原位精确更换。而且，这个PCB还开源了，需要的朋友赶紧去他的Github下载吧： https://github.com/sgub/ic7k-driver-pcb&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/LNM8UHpj1x-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/LNM8UHpj1x-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/LNM8UHpj1x-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;808&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;BI1EIH设计的PCB，R103是新增的电阻&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/PN37qkw8JB-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/PN37qkw8JB-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/PN37qkw8JB-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;808&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;左边是BI1EIH做好的新功放板，右边是烧掉的原厂货&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/IjpId0AHNJ-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/IjpId0AHNJ-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/IjpId0AHNJ-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;808&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;做好以后的新功放板总成&lt;/p&gt;
+&lt;p&gt;推动管元件，建议别去“马家店”买，假货泛滥……从贸泽(mouser)的海外站订购更靠谱。Mouser零件编号：511-PD55015-E。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/40L_J2IEhU-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/40L_J2IEhU-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/40L_J2IEhU-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;325&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/cZOzL6N6lI-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/cZOzL6N6lI-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/cZOzL6N6lI-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;808&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;用mouser上买的心里踏实&lt;/p&gt;
+&lt;h2 id=&quot;-3&quot;&gt;校准&lt;/h2&gt;
+&lt;p&gt;最后，别忘了校准一下IC7000推动级的 &lt;strong&gt;静态工作点&lt;/strong&gt; ，确保功率输出达标。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/3yrL2MP4HB-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/3yrL2MP4HB-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/3yrL2MP4HB-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1440&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;最最后，汇总一下重要信息：&lt;/p&gt;
+&lt;h2 id=&quot;bi1eih-ic-7000-pcb&quot;&gt;BI1EIH的IC-7000功放板PCB下载&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/sgub/ic7k-driver-pcb&quot;&gt;https://github.com/sgub/ic7k-driver-pcb&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;如果你的IC-7000也烧了，可以去无线电老中医BI1EIH的 &lt;strong&gt;闲鱼号sgub&lt;/strong&gt; 问诊：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;27€nrpSXE3A5o1€ https://m.tb.cn/h.fghxdWW 我在闲鱼发布了【#技能服务# #设备维修# iCOM IC-7000推动级功】
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+  </entry>
+  <entry>
     <title>品川天线QRP实操体会</title>
     <link href="https://bg6lh.github.io/zh-CN/blog/experiencing-on-gawant/" />
     <updated>2021-10-02T16:49:00Z</updated>
@@ -435,30 +471,6 @@ systemctl is-active chronyd&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;73&lt;/p&gt;
 &lt;p&gt;BI1EIH&lt;/p&gt;
 &lt;p&gt;2020.06.26&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>FAQ：可以用树莓派的GPIO串口控制电台吗？</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/faq-could-gpio-of-raspberry-ri-be-used-to-control-transceivers?/" />
-    <updated>2020-06-16T01:07:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/faq-could-gpio-of-raspberry-ri-be-used-to-control-transceivers?/</id>
-    <content type="html">&lt;p&gt;这个问题经常会被问到。大概因为一方面 商品电台配套的串口控制转接头、线、盒子等换外设往往很贵，另一方面树莓派又恰好有GPIO的串口。理论上讲这的确可以实现的。但是换个角度考虑， 用这个来实现串口控制电台的话，可以做的更经济吗？&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/faq-could-gpio-of-raspberry-ri-be-used-to-control-transceivers?/bXtzfk70hF-700.avif 700w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/faq-could-gpio-of-raspberry-ri-be-used-to-control-transceivers?/bXtzfk70hF-700.webp 700w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/faq-could-gpio-of-raspberry-ri-be-used-to-control-transceivers?/bXtzfk70hF-700.jpeg&quot; alt=&quot;图片&quot; width=&quot;700&quot; height=&quot;541&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;上图：树莓派的GPIO，来自raspberrypi.org&lt;/p&gt;
-&lt;p&gt;我们查阅了树莓派的官网GPIO说明文档，在一开始它就提到，连接GPIO引脚的电压如果超过3.3V，则有可能会把它烧了。详见：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.raspberrypi.org/documentation/hardware/raspberrypi/gpio/README.md&quot;&gt;https://www.raspberrypi.org/documentation/hardware/raspberrypi/gpio/README.md&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;此外，GPIO除了少数几个不可定义的引脚外，其它引脚的输入输出电平都是3V3的，这也包括了GPIO串口的信号收发引脚GPIO14和15。详见：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.raspberrypi.org/documentation/usage/gpio/README.md&quot;&gt;https://www.raspberrypi.org/documentation/usage/gpio/README.md&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;反过来看电台上常见的几种串口的电平：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;标准RS-232C接口(DB9接口)电平：+3V～+25V，或者-3V～-25V；&lt;/li&gt;
-&lt;li&gt;Yaesu的ACC接口(mD8接口) 电平： 0～5V；&lt;/li&gt;
-&lt;li&gt;Icom的CI-V接口(3.5mm音频接口)电平：0～5V；&lt;/li&gt;
-&lt;li&gt;标准USB接口电平：0～5V。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这基本上都是大于3.3V的电压。&lt;/p&gt;
-&lt;p&gt;所以，当你思考用树莓派的GPIO去直接控制电台的时候，你首先要考虑的是电平转换。这在成本上已经超出了早已白菜价的USB转TTL、或者USB转232的设备了。&lt;/p&gt;
-&lt;p&gt;我们暂时没找到GPIO串口直接控制电台的案例。看到过一些控制继电器实现PTT的案例，但这不是串口协议的，无法通过成熟的Hamlib库实现电台控制。欢迎有这方面经验的HAM给我们留言，大家一起交流。&lt;/p&gt;
 </content>
   </entry>
 </feed>
