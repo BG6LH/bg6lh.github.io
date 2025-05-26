@@ -1,6 +1,6 @@
 <header class="fixed top-0 left-0 right-0 z-50 flex flex-row p-3 w-full 
-                items-center 
-                text-sm text-neutral-800 bg-neutral-100 px-15
+                items-center  px-15
+                text-sm text-neutral-800 bg-neutral-100
                 dark:text-neutral-100 dark:bg-neutral-950
               ">
     <div class="container mx-auto flex flex-row w-full items-center justify-between">
@@ -11,7 +11,7 @@
                     <img class="h-8 w-8 rounded-full shadow-lg" src="{{ metadata.logo.src | url }}" alt="{{ metadata.logo.alt }}"/>
                 </figure>
             {% endif %}
-            <a class="flex p-1 home-link" href="/">{{ metadata.title }}</a>
+            <a class="flex p-1 home-link href="/">{{ metadata.title }}</a>
         </div>
         <!-- site logo and title : end -->
 
@@ -30,7 +30,7 @@
             <a href="{{ target_lang_link.url }}" 
                lang="{{ target_lang_link.lang }}" 
                hreflang="{{ target_lang_link.lang }}" 
-               class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" 
+               class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" 
                aria-label="Switch to {{ target_lang_link.label }}">
                 <span class="w-6 h-6 flex items-center justify-center">
                     {% icon "lucide:globe", class="w-5 h-5" %}
@@ -44,10 +44,10 @@
             <div id="theme-toggle" class="z-50">
                 <button @click="darkMode = !darkMode" class="w-6 h-6 flex items-center justify-center" aria-label="Toggle theme">
                     <span x-show="!darkMode">
-                        {% icon "lucide:sun", class="w-5 h-5 text-neutral-800 dark:text-neutral-100" %}
+                        {% icon "lucide:sun", class="w-5 h-5" %}
                     </span>
                     <span x-show="darkMode">
-                        {% icon "lucide:moon", class="w-5 h-5 text-neutral-800 dark:text-neutral-100" %}
+                        {% icon "lucide:moon", class="w-5 h-5" %}
                     </span>
                 </button>
             </div>
@@ -65,7 +65,7 @@
             <nav class="hidden md:flex space-x-6">
                 {% for entry in collections.all | eleventyNavigation %}
                 {% if entry.data.lang == page.lang %}
-                <a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %} class="hover:text-blue-500">{{ entry.title }}</a>
+                <a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
                 {% endif %}
                 {% endfor %}
             </nav>
@@ -78,7 +78,7 @@
 <div class="fixed inset-x-0 top-15 bottom-0 z-40 flex flex-col
 md:hidden items-center w-full h-auto
 border-t-1 border-neutral-800
-text-sm text-neutral-800 bg-neutral-100/75 px-15
+text-sm text-neutral-800 bg-neutral-100 px-15
  dark:text-neutral-100 dark:bg-neutral-950
 font-medium transition-all duration-100"
         x-show="open" x-transition:enter="transform transition ease-out duration-300"

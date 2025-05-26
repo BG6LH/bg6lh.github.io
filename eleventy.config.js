@@ -173,6 +173,19 @@ export default async function(eleventyConfig) {
 		//   },
 
 	});
+	// 自定义一个哔哩哔哩 短代码：
+	// 用法：{% bilibili bvid cid %}
+	eleventyConfig.addShortcode("bilibili", function(bvid, cid) {
+		return `<div style="position: relative; padding: 30% 45%;">
+		  <iframe
+			style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"
+			src="https://player.bilibili.com/player.html?bvid=${bvid}&cid=${cid}&page=1&high_quality=1&autoplay=false"
+			frameborder="no"
+			scrolling="no"
+			allowfullscreen="true">
+	      </iframe>
+		</div>`;
+	});
 
 };
 

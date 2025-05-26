@@ -14,6 +14,7 @@ tags:
   - 4NEC2
   - KP4MD
   - NEC2
+  - 小环天线
 title: 用4NEC2模型测试高楼小环天线
 titleSlug: kp4md-4nec2-models-for-balcony-loop
 updated: 2025-05-25 06:26:59

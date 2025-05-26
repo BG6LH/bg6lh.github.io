@@ -12,6 +12,7 @@ image: http://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHowwAWqyzw8xGpJNfNXtMQu2fZPwHu1Qxo
 source: https://mp.weixin.qq.com/s/flXPdidZVzOzY3q8hf4GqQ
 tags:
   - 小环天线
+  - AA5TB
 title: 翻译：小环发射天线 - AA5TB
 titleSlug: aa5tb-small-transmitting-loop-antennas
 updated: 2025-05-24 04:11:38

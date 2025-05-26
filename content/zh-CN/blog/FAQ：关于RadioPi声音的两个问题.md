@@ -1,6 +1,5 @@
 ---
 aliases:
-  - 'FAQ: How to Listen to RadioPi Sounds via VNC and During FT8 Transmissions'
   - 'FAQ: Two Questions About RadioPi Sound'
 author:
   - BG6LH
@@ -10,15 +9,13 @@ created: 2025-05-25 03:50:02
 date: 2020-06-15 14:56:00 +08:00
 description: "RadioPi发布以来关于“声音”的两个问题被问到的最多：手机上VNC能听到RadioPi的声音吗？RadioPi发射FT8的时候能播放声音吗？现在一起解答一下。"
 image: "http://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHoxhAh1Kr0cIjcxvj2GicNlfxQplQNxN96mlewQAKO6oX0nrKB1UOv5cd1gUgz8IvwrQMIqYXicK5QcQ/0?wx_fmt=jpeg"
-source: "https://mp.weixin.qq.com/s/c19-NKyaEJcmDibe3KSStA?token=644013800&lang=zh_CN"
+source: https://mp.weixin.qq.com/s/c19-NKyaEJcmDibe3KSStA
 tags:
   - FT8
   - radiopi
   - VNC
-
 title: FAQ：关于RadioPi声音的两个问题
-titleSlug: "faq-two-questions-about-radiopi-sound"
-updated: 2025-05-25 03:56:36
+titleSlug: faq-two-questions-about-radiopi-sound
 ---
 
 RadioPi发布以来，关于“声音”的两个问题被问到的最多：

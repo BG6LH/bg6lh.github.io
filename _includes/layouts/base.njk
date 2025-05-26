@@ -55,30 +55,32 @@
         <meta name="twitter:image" content="{{ image }}">
 
 	</head>
-	<body class="bg-white dark:bg-slate-800 overflow-auto dark:text-white text-gray-900" 
+	<body class="bg-white dark:bg-slate-800 overflow-auto dark:text-white dark:text-gray-900"
 	      x-data="{
-            open: false,
-            darkMode: localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-          }" 
+	        open: false,
+	        darkMode: localStorage.getItem('theme') === 'dark',
+	      }"
 	      x-init="
-            $watch('open', value => { 
-                if (value) { 
-                    document.body.classList.add('overflow-hidden', 'md:overflow-auto'); 
-                } else { 
-                    document.body.classList.remove('overflow-hidden', 'md:overflow-auto'); 
-                } 
-            });
-            $watch('darkMode', value => {
-                if (value) {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('theme', 'dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('theme', 'light');
-                }
-            });
-            if (darkMode) document.documentElement.classList.add('dark'); // Initial class on html
-          ">
+	        $watch('open', value => {
+	          if (value) {
+	            document.body.classList.add('overflow-hidden', 'md:overflow-auto');
+	          } else {
+	            document.body.classList.remove('overflow-hidden', 'md:overflow-auto');
+	          }
+	        });
+	        $watch('darkMode', value => {
+	          if (value) {
+	            document.documentElement.classList.add('dark');
+	            localStorage.setItem('theme', 'dark');
+	          } else {
+	            document.documentElement.classList.remove('dark');
+	            localStorage.setItem('theme', 'light');
+	          }
+	        });
+	        if (darkMode) document.documentElement.classList.add('dark');
+	        else document.documentElement.classList.remove('dark');
+	      "
+	>
 		{% include "components/header.njk" %}
 		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
 
