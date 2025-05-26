@@ -4,7 +4,7 @@ aliases:
 author:
   - BG6LH
 category:
-  - Posts
+  - RadioPi
 created: 2025-05-25 01:47:19
 date: 2020-06-06 23:58:00 +08:00
 description: RadioPi 是一个配置好了的树莓派操作系统镜像，安装了常用的HAM软件，对远程控制做了优化。你只要下载了它，回去烧个SD卡，往树莓派里一插，开机就能用。

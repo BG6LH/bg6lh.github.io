@@ -11,7 +11,8 @@ image: "http://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHoxr2zM6eiaZPXsKOhoicvW5d3fROh3tu
 titleSlug: ft8-rst-reporting
 source: https://mp.weixin.qq.com/s/Mlp-Y8ILuRpmpslyDArCWQ
 tags:
-  - Clippings
+  - RST
+  - FT8
 title: FT8报告里的TX和RX是谁的信号？
 updated: 2025-05-17 01:42:23
 ---

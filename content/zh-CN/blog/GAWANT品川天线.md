@@ -4,7 +4,7 @@ aliases:
 author:
   - BG6LH
 category:
-  - Posts
+  - Antenna
 created: 2025-05-26 07:56:24
 date: 2021-09-15 07:28:00 +08:00
 description: 最近又做了一根GAWANT天线，刚装在FT-818ND上，去7023MHz上发CW想看看驻波，居然收到了BG3OJZ的回应。也就是说，一根2米的拉杆天线，在我家阳台上窗户都没出，就从北京通联了保定，直线距离150公里。

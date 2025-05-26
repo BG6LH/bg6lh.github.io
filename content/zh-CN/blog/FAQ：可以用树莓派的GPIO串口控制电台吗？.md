@@ -4,7 +4,7 @@ aliases:
 author:
   - BG6LH
 category:
-  - Posts
+  - RadioPi
 created: 2025-05-25 04:02:48
 date: 2020-06-16 09:07:00 +08:00
 description: "换个角度考虑，用这个来实现串口控制电台的话，可以做的更经济吗？"

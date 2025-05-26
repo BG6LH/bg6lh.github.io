@@ -4,14 +4,13 @@ aliases:
 author:
   - BG6LH
 category:
-  - Posts
+  - Ham Shack
 created: 2025-05-26 08:21:43
 date: 2021-11-07 08:07:00 +08:00
 description: 打板子修好的IC7000，可以叫IC7001，或者IC-7000 BI1EIH remix吗？
 image: http://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHow84hOLJ5cITQZeWEDvwOGnmFP0U6fjNnSoKDzWVKbl2JrCQJ4RzNKNgd6mt6E7njiblfa6PBWR3Cg/0?wx_fmt=jpeg
 source: https://mp.weixin.qq.com/s/CP97xmAye9cErsm6qDpu_A
 tags:
-  - Clippings
   - 设备维修
 title: 拯救iCOM IC-7000功放板
 titleSlug: saving-ic-7000-power-amplifier-board

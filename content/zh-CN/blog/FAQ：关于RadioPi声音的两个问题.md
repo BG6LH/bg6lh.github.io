@@ -4,7 +4,7 @@ aliases:
 author:
   - BG6LH
 category:
-  - Posts
+  - RadioPi
 created: 2025-05-25 03:50:02
 date: 2020-06-15 14:56:00 +08:00
 description: "RadioPi发布以来关于“声音”的两个问题被问到的最多：手机上VNC能听到RadioPi的声音吗？RadioPi发射FT8的时候能播放声音吗？现在一起解答一下。"
@@ -13,7 +13,7 @@ source: https://mp.weixin.qq.com/s/c19-NKyaEJcmDibe3KSStA
 tags:
   - FT8
   - radiopi
-  - VNC
+  - VNA
 title: FAQ：关于RadioPi声音的两个问题
 titleSlug: faq-two-questions-about-radiopi-sound
 ---

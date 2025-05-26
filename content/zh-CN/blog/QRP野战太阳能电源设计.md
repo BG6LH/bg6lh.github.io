@@ -3,7 +3,7 @@ aliases: "Portable Solar Charging System for FT-818 QRP Transceiver"
 author:
   - "BG6LH"
 category:
-  - "Posts"
+  - QRP
 date: 2019-08-09 08:07:00 +08:00
 description: "我给FT-818设计了这样一套野战浮充供电系统：一个7AH的胶体铅酸蓄电池，一个27W的折叠太阳能电池包"
 image: "http://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHozbKcHYtbjXF1IibYI3BM8QRicprZ2MwwWsWjscYzagXqaMDibFfzk2icVU6lngsFvTV76OHJgJhpicpww/0?wx_fmt=jpeg"
@@ -13,6 +13,7 @@ tags:
   - FT-818
   - FT-817
   - 太阳能
+  - QRP
 title: "QRP野战太阳能电源设计"
 ---
 
