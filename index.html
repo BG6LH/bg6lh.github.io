@@ -32,31 +32,32 @@
         <meta name="twitter:image" content="">
 
 	</head>
-	<body class="bg-white dark:bg-slate-800 overflow-auto dark:text-white text-gray-900" x-data="{
-            open: false,
-            darkMode: localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-          }" x-init="
-            $watch('open', value => { 
-                if (value) { 
-                    document.body.classList.add('overflow-hidden', 'md:overflow-auto'); 
-                } else { 
-                    document.body.classList.remove('overflow-hidden', 'md:overflow-auto'); 
-                } 
-            });
-            $watch('darkMode', value => {
-                if (value) {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('theme', 'dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('theme', 'light');
-                }
-            });
-            if (darkMode) document.documentElement.classList.add('dark'); // Initial class on html
-          ">
+	<body class="bg-white dark:bg-slate-800 overflow-auto dark:text-white dark:text-gray-900" x-data="{
+	        open: false,
+	        darkMode: localStorage.getItem('theme') === 'dark',
+	      }" x-init="
+	        $watch('open', value => {
+	          if (value) {
+	            document.body.classList.add('overflow-hidden', 'md:overflow-auto');
+	          } else {
+	            document.body.classList.remove('overflow-hidden', 'md:overflow-auto');
+	          }
+	        });
+	        $watch('darkMode', value => {
+	          if (value) {
+	            document.documentElement.classList.add('dark');
+	            localStorage.setItem('theme', 'dark');
+	          } else {
+	            document.documentElement.classList.remove('dark');
+	            localStorage.setItem('theme', 'light');
+	          }
+	        });
+	        if (darkMode) document.documentElement.classList.add('dark');
+	        else document.documentElement.classList.remove('dark');
+	      ">
 		<header class="fixed top-0 left-0 right-0 z-50 flex flex-row p-3 w-full 
-                items-center 
-                text-sm text-neutral-800 bg-neutral-100 px-15
+                items-center  px-15
+                text-sm text-neutral-800 bg-neutral-100
                 dark:text-neutral-100 dark:bg-neutral-950
               ">
     <div class="container mx-auto flex flex-row w-full items-center justify-between">
@@ -67,7 +68,7 @@
                     <picture><source type="image/avif" srcset="/img/P2oVwTwU_L-601.avif 601w"><source type="image/webp" srcset="/img/P2oVwTwU_L-601.webp 601w"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-601.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601"></picture>
                 </figure>
             
-            <a class="flex p-1 home-link" href="/">BG6LH</a>
+            <a class="flex p-1 home-link href=" "="">BG6LH</a>
         </div>
         <!-- site logo and title : end -->
 
@@ -83,7 +84,7 @@
             
 
             
-            <a href="/en/" lang="en" hreflang="en" class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-label="Switch to English">
+            <a href="/en/" lang="en" hreflang="en" class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-label="Switch to English">
                 <span class="w-6 h-6 flex items-center justify-center">
                     
 <!-- @license lucide-static v0.511.0 - ISC -->
@@ -104,7 +105,7 @@
                     <span x-show="!darkMode">
                         
 <!-- @license lucide-static v0.511.0 - ISC -->
-<svg class="w-5 h-5 text-neutral-800 dark:text-neutral-100 icon icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<svg class="w-5 h-5 icon icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <circle cx="12" cy="12" r="4"></circle>
   <path d="M12 2v2"></path>
   <path d="M12 20v2"></path>
@@ -119,7 +120,7 @@
                     <span x-show="darkMode">
                         
 <!-- @license lucide-static v0.511.0 - ISC -->
-<svg class="w-5 h-5 text-neutral-800 dark:text-neutral-100 icon icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<svg class="w-5 h-5 icon icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
 </svg>
                     </span>
@@ -141,19 +142,19 @@
                 
                 
                 
-                <a href="/" aria-current="page" class="hover:text-blue-500">首页</a>
+                <a href="/" aria-current="page">首页</a>
                 
                 
                 
                 
                 
-                <a href="/zh-CN/blog/" class="hover:text-blue-500">归档</a>
+                <a href="/zh-CN/blog/">归档</a>
                 
                 
                 
                 
                 
-                <a href="/zh-CN/about/" class="hover:text-blue-500">关于</a>
+                <a href="/zh-CN/about/">关于</a>
                 
                 
                 
@@ -168,7 +169,7 @@
 <div class="fixed inset-x-0 top-15 bottom-0 z-40 flex flex-col
 md:hidden items-center w-full h-auto
 border-t-1 border-neutral-800
-text-sm text-neutral-800 bg-neutral-100/75 px-15
+text-sm text-neutral-800 bg-neutral-100 px-15
  dark:text-neutral-100 dark:bg-neutral-950
 font-medium transition-all duration-100" x-show="open" x-transition:enter="transform transition ease-out duration-300" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 scale-100" @click.outside="open = false">
 		
@@ -233,14 +234,14 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
             
                 <div class="mx-auto flex-row m-6">
                     
-                        <a href="/zh-CN/blog/" class="inline-block
+                        <a href="/zh-CN/blog/" class="inline-block button
                         text-neutral-100 text-sm h-9
                         font-bold p-2 px-4 mr-3
                         bg-blue-500 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500
                         rounded-full shadow-lg
                         ">我的博客</a>
                     
-                        <a href="https://bg6lh.github.io/" class="inline-block
+                        <a href="https://bg6lh.github.io/" class="inline-block button
                         text-neutral-100 text-sm h-9
                         font-bold p-2 px-4 mr-3
                         bg-blue-500 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500
@@ -307,6 +308,130 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         
         
         <div class="md:shrink-0 md:h-64 md:w-64 overflow-hidden">
+            <a href="/zh-CN/blog/about-gawant-antenna/">
+                <picture><source type="image/avif" srcset="/XYWLEu-Vp8-1080.avif 1080w"><source type="image/webp" srcset="/XYWLEu-Vp8-1080.webp 1080w"><img loading="lazy" decoding="async" src="/XYWLEu-Vp8-1080.jpeg" class="object-cover md:aspect-square md:object-cover" alt="GAWANT品川天线 image" width="1080" height="459"></picture>
+            </a>
+        </div>
+        
+        
+        <div class="p-8 pt-12 sm:pt-8 sm:pb-10">
+            <time class="text-xs font-semibold tracking-wide text-neutral-500 uppercase" datetime="2021-09-14">2021-09-14</time>
+            <h2 class="mb-2 font-bold uppercase text-xl text-neutral-800" id="gawant">
+				<a href="/zh-CN/blog/about-gawant-antenna/">GAWANT品川天线</a>
+            </h2>
+            <div class="mx-auto prose prose-neutral">
+
+				
+                
+                    <p>最近又做了一根GAWANT天线，刚装在FT-818ND上，去7023MHz上发CW想看看驻波，居然收到了BG3OJZ的回应。也就是说，一根2米的拉杆天线，在我家阳台上窗户都没出，就从北京通联了保定，直线距离150公里。</p><p>
+				
+                
+
+            </p></div>
+        </div>
+    </div>
+</article>
+<article class="flex flex-row mx-auto mb-6 max-w-4xl
+                overflow-hidden rounded-md bg-white shadow-md
+                md:max-w-4xl md:h-64
+            ">
+    <div class="md:flex">
+        
+        
+        <div class="md:shrink-0 md:h-64 md:w-64 overflow-hidden">
+            <a href="/zh-CN/blog/a-3d-printed-enclosure-for-usdx-sdr/">
+                <picture><source type="image/avif" srcset="/Lv1IXFJDoO-1280.avif 1280w"><source type="image/webp" srcset="/Lv1IXFJDoO-1280.webp 1280w"><img loading="lazy" decoding="async" src="/Lv1IXFJDoO-1280.jpeg" class="object-cover md:aspect-square md:object-cover" alt="为usdx制作3D打印外壳 image" width="1280" height="544"></picture>
+            </a>
+        </div>
+        
+        
+        <div class="p-8 pt-12 sm:pt-8 sm:pb-10">
+            <time class="text-xs font-semibold tracking-wide text-neutral-500 uppercase" datetime="2021-07-03">2021-07-03</time>
+            <h2 class="mb-2 font-bold uppercase text-xl text-neutral-800" id="usdx-3d">
+				<a href="/zh-CN/blog/a-3d-printed-enclosure-for-usdx-sdr/">为usdx制作3D打印外壳</a>
+            </h2>
+            <div class="mx-auto prose prose-neutral">
+
+				
+                
+                    <p>这是一个因为剩了半碟子醋而包了顿饺子的故事……所以前方高能预警本文歪楼会歪的很严重。</p><p>
+				
+                
+
+            </p></div>
+        </div>
+    </div>
+</article>
+<article class="flex flex-row mx-auto mb-6 max-w-4xl
+                overflow-hidden rounded-md bg-white shadow-md
+                md:max-w-4xl md:h-64
+            ">
+    <div class="md:flex">
+        
+        
+        <div class="md:shrink-0 md:h-64 md:w-64 overflow-hidden">
+            <a href="/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/">
+                <picture><source type="image/avif" srcset="/yo7dGOIBaJ-1080.avif 1080w"><source type="image/webp" srcset="/yo7dGOIBaJ-1080.webp 1080w"><img loading="lazy" decoding="async" src="/yo7dGOIBaJ-1080.jpeg" class="object-cover md:aspect-square md:object-cover" alt="制作黄河741收音机套件，一次半导体考古 image" width="1080" height="459"></picture>
+            </a>
+        </div>
+        
+        
+        <div class="p-8 pt-12 sm:pt-8 sm:pb-10">
+            <time class="text-xs font-semibold tracking-wide text-neutral-500 uppercase" datetime="2021-06-04">2021-06-04</time>
+            <h2 class="mb-2 font-bold uppercase text-xl text-neutral-800" id="741">
+				<a href="/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/">制作黄河741收音机套件，一次半导体考古</a>
+            </h2>
+            <div class="mx-auto prose prose-neutral">
+
+				
+                
+                    <p>最近做了一个黄河741，有七个锗三极管的超外差半导体收音机，全程焊接了一堆腿儿都氧化变黑了的、各种古时候的分立元件。整个过程仿佛经历了一把半导体考古。</p><p>
+				
+                
+
+            </p></div>
+        </div>
+    </div>
+</article>
+<article class="flex flex-row mx-auto mb-6 max-w-4xl
+                overflow-hidden rounded-md bg-white shadow-md
+                md:max-w-4xl md:h-64
+            ">
+    <div class="md:flex">
+        
+        
+        <div class="md:shrink-0 md:h-64 md:w-64 overflow-hidden">
+            <a href="/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/">
+                <picture><source type="image/avif" srcset="/pAK4L-ozXd-1080.avif 1080w"><source type="image/webp" srcset="/pAK4L-ozXd-1080.webp 1080w"><img loading="lazy" decoding="async" src="/pAK4L-ozXd-1080.jpeg" class="object-cover md:aspect-square md:object-cover" alt="终于响了！一个元件的矿石收音机 image" width="1080" height="463"></picture>
+            </a>
+        </div>
+        
+        
+        <div class="p-8 pt-12 sm:pt-8 sm:pb-10">
+            <time class="text-xs font-semibold tracking-wide text-neutral-500 uppercase" datetime="2021-03-26">2021-03-26</time>
+            <h2 class="mb-2 font-bold uppercase text-xl text-neutral-800" id="-2">
+				<a href="/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/">终于响了！一个元件的矿石收音机</a>
+            </h2>
+            <div class="mx-auto prose prose-neutral">
+
+				
+                
+                    <p>小时候就听说过最简单的矿石收音机：一个耳机并联一个二极管，一头接天线，一头接水管，就能听到广播的声音。</p><p>
+				
+                
+
+            </p></div>
+        </div>
+    </div>
+</article>
+<article class="flex flex-row mx-auto mb-6 max-w-4xl
+                overflow-hidden rounded-md bg-white shadow-md
+                md:max-w-4xl md:h-64
+            ">
+    <div class="md:flex">
+        
+        
+        <div class="md:shrink-0 md:h-64 md:w-64 overflow-hidden">
             <a href="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/">
                 <picture><source type="image/avif" srcset="/eIRoUHYaaP-1080.avif 1080w"><source type="image/webp" srcset="/eIRoUHYaaP-1080.webp 1080w"><img loading="lazy" decoding="async" src="/eIRoUHYaaP-1080.jpeg" class="object-cover md:aspect-square md:object-cover" alt="我是如何给微信小程序审核员普及业余无线电知识的 image" width="1080" height="458"></picture>
             </a>
@@ -315,7 +440,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         
         <div class="p-8 pt-12 sm:pt-8 sm:pb-10">
             <time class="text-xs font-semibold tracking-wide text-neutral-500 uppercase" datetime="2020-12-18">2020-12-18</time>
-            <h2 class="mb-2 font-bold uppercase text-xl text-neutral-800" id="-2">
+            <h2 class="mb-2 font-bold uppercase text-xl text-neutral-800" id="-3">
 				<a href="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/">我是如何给微信小程序审核员普及业余无线电知识的</a>
             </h2>
             <div class="mx-auto prose prose-neutral">
@@ -323,6 +448,68 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 				
                 
                     <p>这都2020年了，玩业余无线电的还是会受到群众的质疑和警惕。我遇到了更与时俱进的：做了个无线电相关的微信小程序被审核员给毙了。</p><p>
+				
+                
+
+            </p></div>
+        </div>
+    </div>
+</article>
+<article class="flex flex-row mx-auto mb-6 max-w-4xl
+                overflow-hidden rounded-md bg-white shadow-md
+                md:max-w-4xl md:h-64
+            ">
+    <div class="md:flex">
+        
+        
+        <div class="md:shrink-0 md:h-64 md:w-64 overflow-hidden">
+            <a href="/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/">
+                <picture><source type="image/avif" srcset="/mCHcFPFs9a-1024.avif 1024w"><source type="image/webp" srcset="/mCHcFPFs9a-1024.webp 1024w"><img loading="lazy" decoding="async" src="/mCHcFPFs9a-1024.jpeg" class="object-cover md:aspect-square md:object-cover" alt="给RadioPi添加USB GPS image" width="1024" height="437"></picture>
+            </a>
+        </div>
+        
+        
+        <div class="p-8 pt-12 sm:pt-8 sm:pb-10">
+            <time class="text-xs font-semibold tracking-wide text-neutral-500 uppercase" datetime="2020-07-05">2020-07-05</time>
+            <h2 class="mb-2 font-bold uppercase text-xl text-neutral-800" id="radiopi-usb-gps">
+				<a href="/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/">给RadioPi添加USB GPS</a>
+            </h2>
+            <div class="mx-auto prose prose-neutral">
+
+				
+                
+                    <p>在野外通联、没有互联网的情况下，你可以使用一个廉价的USB的GPS，来提供一个GPS时钟，并由chrony负责和它对时。</p><p>
+				
+                
+
+            </p></div>
+        </div>
+    </div>
+</article>
+<article class="flex flex-row mx-auto mb-6 max-w-4xl
+                overflow-hidden rounded-md bg-white shadow-md
+                md:max-w-4xl md:h-64
+            ">
+    <div class="md:flex">
+        
+        
+        <div class="md:shrink-0 md:h-64 md:w-64 overflow-hidden">
+            <a href="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/">
+                <picture><source type="image/avif" srcset="/ZcWLmC8VwW-774.avif 774w"><source type="image/webp" srcset="/ZcWLmC8VwW-774.webp 774w"><img loading="lazy" decoding="async" src="/ZcWLmC8VwW-774.jpeg" class="object-cover md:aspect-square md:object-cover" alt="树莓派解码FT8的性能评估 image" width="774" height="327"></picture>
+            </a>
+        </div>
+        
+        
+        <div class="p-8 pt-12 sm:pt-8 sm:pb-10">
+            <time class="text-xs font-semibold tracking-wide text-neutral-500 uppercase" datetime="2020-06-26">2020-06-26</time>
+            <h2 class="mb-2 font-bold uppercase text-xl text-neutral-800" id="ft8">
+				<a href="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/">树莓派解码FT8的性能评估</a>
+            </h2>
+            <div class="mx-auto prose prose-neutral">
+
+				
+                
+                    <p>树莓派的性能究竟能不能满足FT8通联？为此我们设计了尽可能接近实际解码的场景，使用同一套模型对不同版本的树莓派和PC进行了一次FT8解码性能横向大比拼。</p><p>
 				
                 
 
@@ -392,201 +579,22 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         </div>
     </div>
 </article>
-<article class="flex flex-row mx-auto mb-6 max-w-4xl
-                overflow-hidden rounded-md bg-white shadow-md
-                md:max-w-4xl md:h-64
-            ">
-    <div class="md:flex">
-        
-        
-        <div class="md:shrink-0 md:h-64 md:w-64 overflow-hidden">
-            <a href="/zh-CN/blog/headless-operation-with-radiopi/">
-                <picture><source type="image/avif" srcset="/eaJwloBcPK-1080.avif 1080w"><source type="image/webp" srcset="/eaJwloBcPK-1080.webp 1080w"><img loading="lazy" decoding="async" src="/eaJwloBcPK-1080.jpeg" class="object-cover md:aspect-square md:object-cover" alt="无头(Headless)操作RadioPi image" width="1080" height="459"></picture>
-            </a>
-        </div>
-        
-        
-        <div class="p-8 pt-12 sm:pt-8 sm:pb-10">
-            <time class="text-xs font-semibold tracking-wide text-neutral-500 uppercase" datetime="2020-06-06">2020-06-06</time>
-            <h2 class="mb-2 font-bold uppercase text-xl text-neutral-800" id="headless-radiopi">
-				<a href="/zh-CN/blog/headless-operation-with-radiopi/">无头(Headless)操作RadioPi</a>
-            </h2>
-            <div class="mx-auto prose prose-neutral">
-
-				
-                
-                    <p>所谓“无头”就是不给RadioPi准备显示器、键盘和鼠标，而是用另外一台电脑或者手机，通过网络来操作它。</p><p>
-				
-                
-
-            </p></div>
-        </div>
-    </div>
-</article>
-<article class="flex flex-row mx-auto mb-6 max-w-4xl
-                overflow-hidden rounded-md bg-white shadow-md
-                md:max-w-4xl md:h-64
-            ">
-    <div class="md:flex">
-        
-        
-        <div class="md:shrink-0 md:h-64 md:w-64 overflow-hidden">
-            <a href="/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/">
-                <picture><source type="image/avif" srcset="/fGfmolCeix-1280.avif 1280w"><source type="image/webp" srcset="/fGfmolCeix-1280.webp 1280w"><img loading="lazy" decoding="async" src="/fGfmolCeix-1280.jpeg" class="object-cover md:aspect-square md:object-cover" alt="RadioPi，Ham的树莓派懒人包 image" width="1280" height="546"></picture>
-            </a>
-        </div>
-        
-        
-        <div class="p-8 pt-12 sm:pt-8 sm:pb-10">
-            <time class="text-xs font-semibold tracking-wide text-neutral-500 uppercase" datetime="2020-06-06">2020-06-06</time>
-            <h2 class="mb-2 font-bold uppercase text-xl text-neutral-800" id="radiopi-ham">
-				<a href="/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/">RadioPi，Ham的树莓派懒人包</a>
-            </h2>
-            <div class="mx-auto prose prose-neutral">
-
-				
-                
-                    <p>RadioPi 是一个配置好了的树莓派操作系统镜像，安装了常用的HAM软件，对远程控制做了优化。你只要下载了它，回去烧个SD卡，往树莓派里一插，开机就能用。</p><p>
-				
-                
-
-            </p></div>
-        </div>
-    </div>
-</article>
-<article class="flex flex-row mx-auto mb-6 max-w-4xl
-                overflow-hidden rounded-md bg-white shadow-md
-                md:max-w-4xl md:h-64
-            ">
-    <div class="md:flex">
-        
-        
-        <div class="md:shrink-0 md:h-64 md:w-64 overflow-hidden">
-            <a href="/zh-CN/blog/building-a-tecsun-2p3-radio-kit/">
-                <picture><source type="image/avif" srcset="/qp8nUWolbs-640.avif 640w"><source type="image/webp" srcset="/qp8nUWolbs-640.webp 640w"><img loading="lazy" decoding="async" src="/qp8nUWolbs-640.jpeg" class="object-cover md:aspect-square md:object-cover" alt="安装德生2P3收音机套件 image" width="640" height="272"></picture>
-            </a>
-        </div>
-        
-        
-        <div class="p-8 pt-12 sm:pt-8 sm:pb-10">
-            <time class="text-xs font-semibold tracking-wide text-neutral-500 uppercase" datetime="2020-04-07">2020-04-07</time>
-            <h2 class="mb-2 font-bold uppercase text-xl text-neutral-800" id="2p3">
-				<a href="/zh-CN/blog/building-a-tecsun-2p3-radio-kit/">安装德生2P3收音机套件</a>
-            </h2>
-            <div class="mx-auto prose prose-neutral">
-
-				
-                
-                    <p>我从BI1EIH那儿化缘来一套德生2P3收音机套件，花了点功夫装好了。</p><p>
-				
-                
-
-            </p></div>
-        </div>
-    </div>
-</article>
-<article class="flex flex-row mx-auto mb-6 max-w-4xl
-                overflow-hidden rounded-md bg-white shadow-md
-                md:max-w-4xl md:h-64
-            ">
-    <div class="md:flex">
-        
-        
-        <div class="md:shrink-0 md:h-64 md:w-64 overflow-hidden">
-            <a href="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/">
-                <picture><source type="image/avif" srcset="/fgpl3SsKk7-640.avif 640w"><source type="image/webp" srcset="/fgpl3SsKk7-640.webp 640w"><img loading="lazy" decoding="async" src="/fgpl3SsKk7-640.jpeg" class="object-cover md:aspect-square md:object-cover" alt="用4NEC2模型测试高楼小环天线 image" width="640" height="273"></picture>
-            </a>
-        </div>
-        
-        
-        <div class="p-8 pt-12 sm:pt-8 sm:pb-10">
-            <time class="text-xs font-semibold tracking-wide text-neutral-500 uppercase" datetime="2019-09-28">2019-09-28</time>
-            <h2 class="mb-2 font-bold uppercase text-xl text-neutral-800" id="4nec2">
-				<a href="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/">用4NEC2模型测试高楼小环天线</a>
-            </h2>
-            <div class="mx-auto prose prose-neutral">
-
-				
-                
-                    <p>最近看到一篇KP4MD的文章，用4NEC2仿真，纯理论的模型，测试了小环天线在高层大楼上应用的方向图和性能，并给出了不同频率，和不同高度的两组仿真数据。关键步骤是用了4nec2的patch功能做了一个大号贴片反射器，来模拟她家的大楼外立面。</p><p>
-				
-                
-
-            </p></div>
-        </div>
-    </div>
-</article>
-<article class="flex flex-row mx-auto mb-6 max-w-4xl
-                overflow-hidden rounded-md bg-white shadow-md
-                md:max-w-4xl md:h-64
-            ">
-    <div class="md:flex">
-        
-        
-        <div class="md:shrink-0 md:h-64 md:w-64 overflow-hidden">
-            <a href="/zh-CN/blog/aa5tb-small-transmitting-loop-antennas/">
-                <picture><source type="image/avif" srcset="/nMruD-s2O0-1044.avif 1044w"><source type="image/webp" srcset="/nMruD-s2O0-1044.webp 1044w"><img loading="lazy" decoding="async" src="/nMruD-s2O0-1044.jpeg" class="object-cover md:aspect-square md:object-cover" alt="翻译：小环发射天线 - AA5TB image" width="1044" height="442"></picture>
-            </a>
-        </div>
-        
-        
-        <div class="p-8 pt-12 sm:pt-8 sm:pb-10">
-            <time class="text-xs font-semibold tracking-wide text-neutral-500 uppercase" datetime="2019-09-24">2019-09-24</time>
-            <h2 class="mb-2 font-bold uppercase text-xl text-neutral-800" id="aa5tb">
-				<a href="/zh-CN/blog/aa5tb-small-transmitting-loop-antennas/">翻译：小环发射天线 - AA5TB</a>
-            </h2>
-            <div class="mx-auto prose prose-neutral">
-
-				
-                
-                    <p>AA5TB对业余届最重要的贡献恐怕就是他的小环天线计算器了，很多HAM做小环天线时都会用这个excel预测一下参数和性能。我把我阅读他网页时记的笔记整理了一篇译文。分享给业余届的朋友们。</p><p>
-				
-                
-
-            </p></div>
-        </div>
-    </div>
-</article>
-<article class="flex flex-row mx-auto mb-6 max-w-4xl
-                overflow-hidden rounded-md bg-white shadow-md
-                md:max-w-4xl md:h-64
-            ">
-    <div class="md:flex">
-        
-        
-        <div class="md:shrink-0 md:h-64 md:w-64 overflow-hidden">
-            <a href="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/">
-                <picture><source type="image/avif" srcset="/bvFCyVmdZe-1080.avif 1080w"><source type="image/webp" srcset="/bvFCyVmdZe-1080.webp 1080w"><img loading="lazy" decoding="async" src="/bvFCyVmdZe-1080.jpeg" class="object-cover md:aspect-square md:object-cover" alt="在行李架横杆上装车载天线 image" width="1080" height="459"></picture>
-            </a>
-        </div>
-        
-        
-        <div class="p-8 pt-12 sm:pt-8 sm:pb-10">
-            <time class="text-xs font-semibold tracking-wide text-neutral-500 uppercase" datetime="2019-09-03">2019-09-03</time>
-            <h2 class="mb-2 font-bold uppercase text-xl text-neutral-800" id="-3">
-				<a href="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/">在行李架横杆上装车载天线</a>
-            </h2>
-            <div class="mx-auto prose prose-neutral">
-
-				
-                
-                    <p>我给大面包夏朗找到一个新的天线固定位：行李架横杆上的T形槽。这个位置对于UV段天线很理想，也很合理。</p><p>
-				
-                
-
-            </p></div>
-        </div>
-    </div>
-</article>
 		</div>
+
+
+		<div class="mx-auto p-6 my-0 text-2xl font-bold dark:text-neutral-100">
+			<h1 class"text-2xl="" font-bold"="" id="-4">博客合集</h1>
+		</div>
+		<div class="mx-auto px-4 pb-10 dark:text-neutral-100">
+			
+			
+			<p>在<a href="/zh-CN/blog/">博客合集</a>中还有12篇博文。</p>
+			
+		<div>
+
 	</div>
 
-	<div class="mx-auto px-4">
-	
-	
-	<p>6 more posts can be found in <a href="/blog.njk">更多博客</a>.</p>
-	
-	<div>
+
 </div></div></section>
 
 
@@ -601,7 +609,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 
     <!-- 网站栏目 -->
     <div class="">
-        <h3 class="font-bold mb-4" id="-4">网站导航</h3>
+        <h3 class="font-bold mb-4" id="-5">网站导航</h3>
         <nav class="list-none flex flex-row justify-center md:justify-start md:flex-col">
             
             
@@ -692,7 +700,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/` was built on 2025-05-25T16:13:29.931Z -->
+		<!-- This page `/` was built on 2025-05-26T08:09:39.694Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>
