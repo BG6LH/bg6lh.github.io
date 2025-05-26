@@ -37,6 +37,98 @@
 </content>
   </entry>
   <entry>
+    <title>品川天线QRP实操体会</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/experiencing-on-gawant/" />
+    <updated>2021-10-02T16:49:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/experiencing-on-gawant/</id>
+    <content type="html">&lt;p&gt;国庆假期里体验了一下品川天线+QRP电台的效果，为了做对比，第二天拉了根20米端馈天线。两天在SSB/CW/FT8都有收获。最远一个 QSO是FT8通了俄罗斯欧洲部分的R3KAB，最近的一个是北京房山的BG1II。&lt;/p&gt;
+&lt;h2 id=&quot;&quot;&gt;先说说实验条件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;我的QTH在北京通州的环球影城附近，Loc：OM89HU。&lt;/li&gt;
+&lt;li&gt;使用Yaesu的FT-818ND，WindCamp锂电池操作，从11.9V用到了10.8V，始终保持6W发射功率设定。&lt;/li&gt;
+&lt;li&gt;在40米、20米波段。白天尝试SSB和CW操作，晚上7点以后FT8模式。&lt;/li&gt;
+&lt;li&gt;天线：&lt;/li&gt;
+&lt;li&gt;第一天下午，在一个花园里，四周没有高大建筑，品川天线直接装在电台上，垂直极化；
+&lt;ul&gt;
+&lt;li&gt;第一天晚上，在旁边200米的停车场，南北分别有两个六层楼，东西仍然是开阔的，品川天线装在了车顶上。&lt;/li&gt;
+&lt;li&gt;第二天下午，在花园的假山上横拉了一根20米端馈，东西走向，距山顶地面3-4米。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;ssb-cw&quot;&gt;第一天下午，SSB/CW&lt;/h2&gt;
+&lt;p&gt;10月1日下午2点到4点，在小花园里，主要以SSB话音模式操作。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/experiencing-on-gawant/uBBECQEEp0-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/experiencing-on-gawant/uBBECQEEp0-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/experiencing-on-gawant/uBBECQEEp0-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1920&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;在40米波段，白天的远距离传播并不好，但是电离层的一次反射还可以。所以收到很多邻省的强信号。比如山西忻州的BG3XX，使用倒V天线，信号翻越了五台山，到我这里还能59(满分)。一个天津台刚装了正V750，还有一个 还有呼和浩特的台， 本区(1区北京)有一个顺义台也能达到59，好像也是750或者倒V。可惜，这些老师的呼号我没记下来。这些都是有高仰角的天线，可以利用垂直天波反射，达到近距离无盲区通信效果，也就是传说中的NVIS通联。隐约也能听到有1区 其他 台，但听不清呼号。&lt;/p&gt;
+&lt;p&gt;在20米波段，白天传播条件很好。收到了很多7区湖南、5区浙江的台。14.260MHz上，长沙的蓝天救援队集体台BH7HA，一个女操作员正在值机。她的信号也是59。没听到她讲天线。但是长沙的信号过来，肯定是多次天波反射的结果。&lt;/p&gt;
+&lt;p&gt;17米波段我也尝试了一次，在18.130MHz上收到了一个国外台，听到呼号是U开头的，但是话音听不清，信号大约有33。或许是一个俄罗斯台。&lt;/p&gt;
+&lt;p&gt;在以上这些频段，品川天线都能调谐，驻波都能调到无指示(FT-818/817类电台自带的SWR强度指示)。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/experiencing-on-gawant/Lni7vwdfih-720.avif 720w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/experiencing-on-gawant/Lni7vwdfih-720.webp 720w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/experiencing-on-gawant/Lni7vwdfih-720.jpeg&quot; alt=&quot;图片&quot; width=&quot;720&quot; height=&quot;1366&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;坊间流传的一份推荐的QRP通联频道列表&lt;/p&gt;
+&lt;p&gt;一个QRP(小功率)电台，加上2米的拉杆天线，很难在“菜市场”频道占到优势，大功率台张嘴就把我覆盖了。 &lt;strong&gt;很难说是功率太小？还是天线不好？&lt;/strong&gt; 但是可以肯定：这天线和功率都 &lt;strong&gt;不足够好&lt;/strong&gt; 。如果是100W机器，如果是全尺寸天线，怎么也能喊个仨瓜俩枣儿的吧。&lt;/p&gt;
+&lt;h2 id=&quot;ft8&quot;&gt;第一天晚上，FT8&lt;/h2&gt;
+&lt;p&gt;晚上7点半到9点，主要以FT8模式为主。FT8是一个极弱信号的数字通信模式。我用FT8已经通联了102个不同的国家和地区，其中91个是QRP通的。最远通到了阿根廷，无论信号是从地球哪边反射过去的，都是两万公里。而且 只用了5W的发射功率，跟一个LED手电筒差不多。这些用的是家里固定的22.4米长线和20米端馈天线。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;FT8模式通联的信噪比下限是-26dB。这是什么概念呢？如果换做人讲话，至少话音和噪音得一样强，才能听出人在说话，还不一定听明白他说啥。这个 信噪比 起点是0dB (10*lg1=0)。要想听明白他说啥，人的声音要比噪音大，这信噪比至少是正数。&lt;/li&gt;
+&lt;li&gt;在数字通信模式下，信号的音频单调，比较容易从噪声里分辨出来。所以据说听力好的人，可以听到-15dB的数字信号，这时噪音大约比信号音强30倍(10的1.5次方)。但是FT8能解码信噪比-26dB的信号，这时噪音比信号强400倍(10的2.6次方)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我在SSB话音模式下，跟别人通不上，可能是被他邻居的电动车充电桩的杂散辐射给压制了。所以我要换FT8模式试试，如果FT8都通不了，那这个品川天线就可以送给娃去捞鱼了。&lt;/p&gt;
+&lt;p&gt;晚上我把天线装在了车顶上。天太黑，没拍照。形式和之前参加 &lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247484030&amp;amp;idx=1&amp;amp;sn=00c48ae0c7580918f752b1c2e138f2d7&amp;amp;chksm=e94984f4de3e0de2cf5a49711966bbbae24e90c1aa2eca76e3c5a860a668a714b04a5934c9d1&amp;amp;scene=21#wechat_redirect&quot;&gt;CQWW VHF 比赛&lt;/a&gt; 的那次是一样的：&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/experiencing-on-gawant/ItcuLYX2PV-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/experiencing-on-gawant/ItcuLYX2PV-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/experiencing-on-gawant/ItcuLYX2PV-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;我用了5米馈线，有2米从车顶接入车内，剩余3米绕成了一卷，算是个Choke，接在电台一侧。这完美克服了端馈天线上的共模电流对 Macbook Pro 触摸板的干扰。&lt;/p&gt;
+&lt;p&gt;两个小时之后，通过iOS上的Wave Guide，查看了我的信号传播统计：&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/experiencing-on-gawant/_Pv53E6XnE-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/experiencing-on-gawant/_Pv53E6XnE-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/experiencing-on-gawant/_Pv53E6XnE-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;617&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;这些小圆点表示跟我信号有关联的电台：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;金点，表示我们互相收到了对方；&lt;/li&gt;
+&lt;li&gt;红点，表示他收到了我信号，但是我没收到他。可能是他只是收听，没有发射；&lt;/li&gt;
+&lt;li&gt;绿点，表示我收到了他的信号，但是他收不到我；&lt;/li&gt;
+&lt;li&gt;地图中间深蓝色的区域是夜间。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;再看蓝线，这是40米波段的信号传播情况：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;晚上是40米传播的黄金时间；&lt;/li&gt;
+&lt;li&gt;品川天线 + QRP电台，最远 能辐射的到日本、蒙古、俄罗斯西伯利亚一带，近的也有河南、韩国；&lt;/li&gt;
+&lt;li&gt;那些红点，大概率是可以通联成功的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;黄线，这是20米波段的传播：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;晚上电离层逐渐降温，所以20米传播有衰落；&lt;/li&gt;
+&lt;li&gt;前半夜还行，后半夜基本就关闭了，所以 信号更多的传播到了欧洲，他们还是白天；&lt;/li&gt;
+&lt;li&gt;20米只有三个台收到了我的信号。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我发现了20米欧洲有一个金色的点：R3KAB，就直接呼叫他，完成了全天唯一一次通联。他的信号到我这里是+12dB的信噪比，他收到我是-15dB。&lt;/p&gt;
+&lt;p&gt;晚上实验了一个半小时，还约了本地两个无线电老中医，我能收到他们，他们只能偶尔收到一次我，不能完成一次完整的FT8通联。&lt;/p&gt;
+&lt;p&gt;有很多日本的台收到了我。但是Wave Guide上没有信噪比信息。这时可以去 HamSpots.net网站看看，那里列出来了这些电台收我的信噪比。看了一下，报上来的最高只有-13dB：&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/experiencing-on-gawant/_-7gJbxl83-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/experiencing-on-gawant/_-7gJbxl83-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/experiencing-on-gawant/_-7gJbxl83-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1343&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;这么看就有点意思了哈，可以 &lt;strong&gt;推测一些数字指标&lt;/strong&gt; ，比如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我跟R3KAB的信噪比，我们里外里差了27dB(-15dB-12dB=-27dB)；&lt;/li&gt;
+&lt;li&gt;假设我们的环境噪声差不多，比如家门口的充电桩都是同一个山寨厂的，那我们俩的信号强度差别是10的2.7次方、 大约是500倍 ；&lt;/li&gt;
+&lt;li&gt;如果他是100W发射，我的就毛算是5瓦的，那么它的功率是我的20倍，强我13个dB；&lt;/li&gt;
+&lt;li&gt;所以他的天线增益似乎是我的25倍，大约是14dB；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;打住吧，这个分析实在不是很严谨了，也就是能体会一下：6瓦电台和2米拉杆天线，真的有点难兄难弟的意思了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;BTW：&lt;/strong&gt; 我查阅了QRZCQ.com上R3KAB的天线资料，他有两幅天线可以工作在40米。一套是可以工作在160-80-40米波段的OCFD(偏馈偶极)， &lt;strong&gt;这效率跟半波偶极一样的&lt;/strong&gt; 。另一套是工作在80-40-30-20-17米波段的CCD(受控电流分布)天线，这个我还很陌生。&lt;/p&gt;
+&lt;h2 id=&quot;-2&quot;&gt;第二天下午，奇迹发生了&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;因为我把品川扔家里了。&lt;/strong&gt; 改用20米的 端馈天线，先把天线的因素排除掉，看看QRP到底能不能行。&lt;/p&gt;
+&lt;p&gt;新的天线是一根全尺寸端馈，20米长，东西走向，水平横拉，距离假山山顶地面3-4米，假山也就是三四米高，山脚下是昨天的长凳。&lt;/p&gt;
+&lt;p&gt;这种横拉架设方式，常常被用在近距离无盲区(NVIS)通联的场景。利用电离层的第一次反射，能覆盖方圆五百公里左右，就像往天花板上喷水，反射回来把全屋子地面都浇透。这种天线适合在全天候、低波段(8MHz以下)使用。在今天之前，以上这些知识都是在网上看到的，我还从来没体会过。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/experiencing-on-gawant/3xm38nAt5--1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/experiencing-on-gawant/3xm38nAt5--1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/experiencing-on-gawant/3xm38nAt5--1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1440&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;我在7.050MHz上依然一无所获。只收到了河北邢台的BH3QAA和天津台的通联，双方的信号到我这里都可以59。但是我插不上话，功率太小了。&lt;/p&gt;
+&lt;p&gt;索性到7.024MHz上，发了一把CW电报，嘀嘀嘀哒的样子，忽然间听到有人回应我。然鹅，我只听懂了我自己的呼号，对方的呼号似乎是一个BG3***。这让我信心大增。看来QRP不是问题了。&lt;/p&gt;
+&lt;p&gt;再次回到SSB，在“菜市场”7.050MHz附近来回扫听，收到7.056MHz上BG1II正在呼叫CQ。我马上应答他，他居然收到了！我的信号很弱，他反复几遍才能抄全我的呼号。他在用大功率发射，一根斜拉端馈天线，QTH在房山。我报告我是6W发射，他似乎很惊奇。他 给了我45的信号报告，说明信号可辨程度尚可(5分制的4分)，但是信号强度不足(9分制的5分)。我给他的信号报告59。之 后就QSB了，干扰也上来了，我们赶快喊73结束通联。&lt;/p&gt;
+&lt;p&gt;晚上回到家，我在网上联系到了BG1II，请教他天线的具体情况：这是一根南北走向的天线，北高南低，并且在楼体南侧。这跟我的天线基本是垂直的。也就是极化方向完全不搭。说明这次极大可能是利用了电离层的直上直下的反射。 &lt;strong&gt;这是一次典型的QRP NVIS通联！&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;-3&quot;&gt;总结&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;品川天线， 以及这一类的小尺寸天线， 接收性能还是不错的；&lt;/li&gt;
+&lt;li&gt;小天线能辐射电磁波， 愣要去 大功率云集的地方凑热闹是不自量力 ；&lt;/li&gt;
+&lt;li&gt;玩 Q RP要 有喂蚊子的耐心；&lt;/li&gt;
+&lt;li&gt;把不靠谱的因素排除掉，并确认剩下是靠谱的，再次分析问题；&lt;/li&gt;
+&lt;li&gt;不管用啥天线，都要对它的性能有足够的理解，期望过高、或者过低都是一种伤害。&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
     <title>GAWANT品川天线</title>
     <link href="https://bg6lh.github.io/zh-CN/blog/about-gawant-antenna/" />
     <updated>2021-09-14T23:28:00Z</updated>
@@ -367,46 +459,6 @@ systemctl is-active chronyd&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;这基本上都是大于3.3V的电压。&lt;/p&gt;
 &lt;p&gt;所以，当你思考用树莓派的GPIO去直接控制电台的时候，你首先要考虑的是电平转换。这在成本上已经超出了早已白菜价的USB转TTL、或者USB转232的设备了。&lt;/p&gt;
 &lt;p&gt;我们暂时没找到GPIO串口直接控制电台的案例。看到过一些控制继电器实现PTT的案例，但这不是串口协议的，无法通过成熟的Hamlib库实现电台控制。欢迎有这方面经验的HAM给我们留言，大家一起交流。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>FAQ：关于RadioPi声音的两个问题</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/" />
-    <updated>2020-06-15T06:56:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/</id>
-    <content type="html">&lt;p&gt;RadioPi发布以来，关于“声音”的两个问题被问到的最多：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;手机上VNC的时候，能听到RadioPi的声音吗？&lt;/li&gt;
-&lt;li&gt;如何让RadioPi发射FT8的时候也能播放声音？&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;我们这里一起解答一下：&lt;/p&gt;
-&lt;h2 id=&quot;1-vnc-radiopi&quot;&gt;1，如何通过VNC听到RadioPi的声音？&lt;/h2&gt;
-&lt;p&gt;我们的回答是，&lt;strong&gt;手机上目前是听不到的。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;VNC的确可以“传递声音”。但这是“专业版”和“企业版”用户才享有的功能。而且这个功能在iOS或android手机的VNC Viewer上目前还不能用。其它不能用的情况还包括：在MacOS版本的VNC Server上不提供，使用“即时支持(Instant Support)”时候也不能用。&lt;/p&gt;
-&lt;p&gt;或许未来某天就可以用了也未尝可知，感兴趣的话可以关注RealVNC公司的相应服务： &lt;a href=&quot;https://www.realvnc.com/en/connect/audio/&quot;&gt;https://www.realvnc.com/en/connect/audio/&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;2-radiopi-ft8&quot;&gt;2，如何让RadioPi发射FT8的时候也能播放声音？&lt;/h2&gt;
-&lt;p&gt;关心这个问题的用户，出发点大多是需要“监听”WSJT-X是否正常发射。&lt;/p&gt;
-&lt;p&gt;在RadioPi上，这需要把PulseAudio服务设置为：同步把声音播放到多个声卡硬件。 推荐大家简单地使用PulseAudio参数 (PulseAudio Preferences) 工具 ，模拟一个同步输出(Simultaneous Output)的设备即可 。&lt;/p&gt;
-&lt;p&gt;在 20200605版本的RadioPi镜像里 并没有添加这个 工具 ，需要大家自己手动安装。 这里简述一下安装步骤：&lt;/p&gt;
-&lt;h3 id=&quot;paprefs&quot;&gt;第一步：安装 paprefs&lt;/h3&gt;
-&lt;p&gt;点击屏幕左上角的“LX终端”（那个&amp;gt;_小黑窗户），在终端命令行窗口里，输入：&lt;/p&gt;
-&lt;pre class=&quot;language-sh&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-sh&quot;&gt;&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; paprefs&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;根据提示完成paprefs安装。&lt;/p&gt;
-&lt;h3 id=&quot;&quot;&gt;第二步：添加模拟的虚拟输出设备&lt;/h3&gt;
-&lt;p&gt;在RadioPi屏幕左上角的开始菜单/首选项中打开PulseAudio属性。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/I78Y-j4g-g-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/I78Y-j4g-g-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/I78Y-j4g-g-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;851&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;打开第四个标签页“Simultaneous Output(同步输出)”，选中“在所有本地声卡中为模拟输出添加虚拟(V)输出设备”前的对号。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/bUtTgh1faN-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/bUtTgh1faN-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/bUtTgh1faN-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;851&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;h3 id=&quot;wsjt-x&quot;&gt;第三步：在WSJT-X中增加选中模拟的输出设备&lt;/h3&gt;
-&lt;p&gt;在WSJT-X的文件菜单里，打开“设置/音频”，在声卡的输出设备中，你会看到多出来一个叫“combined”的声卡设备，选择它。在JTDX里也一样。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/0hcc_tgd8z-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/0hcc_tgd8z-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/0hcc_tgd8z-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;851&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;现在，可以尝试去WJST-X中发射一个“调谐(Tune)”信号，此时，从RadioPi的3.5mm音频插孔或者HDMI设备上，应该能听到WSJT发射的声音。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;[!NOTE]
-注意，WSJT-X的设置/音频中要保持声卡原来的“输入”设备不变。因为paprefs并没有模拟一个音频输入的虚拟设备。此外，音频输入是否正常，通过观察WSJT-X的频谱瀑布即能判断，也不需要用耳朵听。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;我们还是建议大家，在使用数字模式时养成看频谱的习惯，并通过观察软件显示的指标来判断问题所在。&lt;/p&gt;
-&lt;p&gt;修改于 2020年06月15日&lt;/p&gt;
 </content>
   </entry>
 </feed>
