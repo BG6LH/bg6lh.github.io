@@ -398,11 +398,11 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <p>在RadioPi上，这需要把PulseAudio服务设置为：同步把声音播放到多个声卡硬件。 推荐大家简单地使用PulseAudio参数 (PulseAudio Preferences) 工具 ，模拟一个同步输出(Simultaneous Output)的设备即可 。</p>
 <p>在 20200605版本的RadioPi镜像里 并没有添加这个 工具 ，需要大家自己手动安装。 这里简述一下安装步骤：</p>
 <h3 id="paprefs">第一步：安装 paprefs</h3>
-<p>点击屏幕左上角的“LX终端”（那个&gt;_小黑窗户），在终端命令行窗口里，输入：</p>
-<pre class="language-sh" tabindex="0"><code class="language-sh"><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> paprefs</code></pre>
+<p>点击屏幕左上角的“LX终端”（那个小黑窗户），在终端命令行窗口里，输入：</p>
+<pre class="language-zsh" tabindex="0"><code class="language-zsh">sudo apt install paprefs</code></pre>
 <p>根据提示完成paprefs安装。</p>
 <h3 id="">第二步：添加模拟的虚拟输出设备</h3>
-<p>在RadioPi屏幕左上角的开始菜单/首选项中打开PulseAudio属性。</p>
+<p>在RadioPi屏幕左上角的开始菜单-首选项中打开PulseAudio属性。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/faq-two-questions-about-radiopi-sound/I78Y-j4g-g-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/faq-two-questions-about-radiopi-sound/I78Y-j4g-g-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/faq-two-questions-about-radiopi-sound/I78Y-j4g-g-1080.png" alt="图片" width="1080" height="851"></picture></p>
 <p>打开第四个标签页“Simultaneous Output(同步输出)”，选中“在所有本地声卡中为模拟输出添加虚拟(V)输出设备”前的对号。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/faq-two-questions-about-radiopi-sound/bUtTgh1faN-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/faq-two-questions-about-radiopi-sound/bUtTgh1faN-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/faq-two-questions-about-radiopi-sound/bUtTgh1faN-1080.png" alt="图片" width="1080" height="851"></picture></p>
@@ -544,7 +544,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/faq-two-questions-about-radiopi-sound/` was built on 2025-05-26T16:15:04.658Z -->
+		<!-- This page `/zh-CN/blog/faq-two-questions-about-radiopi-sound/` was built on 2025-05-27T07:33:58.900Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>
