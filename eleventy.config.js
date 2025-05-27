@@ -4,13 +4,9 @@ import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import { I18nPlugin } from "@11ty/eleventy";
-
 import pluginFilters from "./_config/filters.js";
 import pluginIcons from 'eleventy-plugin-icons';
-
 import embedEverything from "eleventy-plugin-embed-everything";
-
-
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
@@ -187,6 +183,7 @@ export default async function(eleventyConfig) {
 		</div>`;
 	});
 
+	
 };
 
 export const config = {
