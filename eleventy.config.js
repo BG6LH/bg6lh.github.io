@@ -7,9 +7,20 @@ import { I18nPlugin } from "@11ty/eleventy";
 import pluginFilters from "./_config/filters.js";
 import pluginIcons from 'eleventy-plugin-icons';
 import embedEverything from "eleventy-plugin-embed-everything";
+import taskLists from "markdown-it-task-lists";
+import markdownItMath from "markdown-it-math";
+import markdownItMathTemml from "markdown-it-math/temml";
+
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
+	// 添加 markdown-it-math
+    eleventyConfig.amendLibrary("md", mdLib => mdLib.use(markdownItMath));
+    // 添加 markdown-it-math-temml
+	eleventyConfig.amendLibrary("md", mdLib => mdLib.use(markdownItMathTemml));
+    // 添加 markdown-it-task-lists
+    eleventyConfig.amendLibrary("md", mdLib => mdLib.use(taskLists));
+
 	// Drafts, see also _data/eleventyDataSchema.js
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
 		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
@@ -125,7 +136,7 @@ export default async function(eleventyConfig) {
 
 	// Filters
 	eleventyConfig.addPlugin(pluginFilters);
-
+	
 	eleventyConfig.addPlugin(IdAttributePlugin, {
 		// by default we use Eleventy’s built-in `slugify` filter:
 		// slugify: eleventyConfig.getFilter("slugify"),
@@ -183,7 +194,7 @@ export default async function(eleventyConfig) {
 		</div>`;
 	});
 
-	
+
 };
 
 export const config = {

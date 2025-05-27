@@ -60,7 +60,10 @@
 		"eleventy-plugin-embed-everything": "^1.21.0",
 		"eleventy-plugin-icons": "^4.5.3",
 		"lucide-static": "^0.511.0",
+		"markdown-it-math": "^5.2.1",
+		"markdown-it-task-lists": "^2.1.1",
 		"simple-icons": "^14.14.0",
+		"temml": "^0.11.7",
 		"transliteration": "^2.3.5"
 	}
 }
