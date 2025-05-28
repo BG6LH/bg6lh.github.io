@@ -6,8 +6,8 @@ layout: layouts/base.njk
 <style>{% include "css/prism-diff.css" %}</style>
 
     {% if image %}
-        <figure class="w-full h-36 object-contain overflow-hidden md:h-96">
-            <img src="{{ image | url }}" class="w-full" eleventy:widths="960" eleventy:formats="webp" alt="{{ title }} image"/>
+        <figure class="w-full h-36 object-contain overflow-hidden md:h-96 ">
+            <img src="{{ image | url }}" class="w-full blur-xs brightness-75 scale-105" eleventy:widths="960" eleventy:formats="webp" alt="{{ title }} image"/>
         </figure>
     {% endif %}
 <article class="bg-white mx-auto max-w-4xl prose prose-neutral">
@@ -27,6 +27,7 @@ layout: layouts/base.njk
             
         </header>
         <div class="relative">
+            {% if content | toc %}
             <aside id="artical-toc" class="block 
                         md:sticky md:top-32 md:pl-6 md:float-right md:mr-[-20vw] md:w-64 md:max-h-[70vh] md:overflow-auto
                         md:border-l-1 md:border-neutral-200
@@ -35,6 +36,7 @@ layout: layouts/base.njk
              <p class="font-bold">内容目录</p>
             {{ content | toc | safe }}
             </aside>
+            {% endif %}
           <div class="max-w-2xl mx-auto">
             {{ content | safe }}
             {% if source and source.indexOf('https://mp.weixin.qq.com/s/') == 0 %}
