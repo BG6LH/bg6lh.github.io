@@ -7,14 +7,13 @@ import { I18nPlugin } from "@11ty/eleventy";
 import pluginFilters from "./_config/filters.js";
 import pluginIcons from 'eleventy-plugin-icons';
 import embedEverything from "eleventy-plugin-embed-everything";
-import markdownItTaskLists from "markdown-it-task-lists";
+import { tasklist } from "@mdit/plugin-tasklist";
 import markdownItCallouts from "markdown-it-callouts";
 import markdownItMath from "markdown-it-math";
 import markdownItMathTemml from "markdown-it-math/temml";
 import markdownItAnchor from "markdown-it-anchor";
 import pluginTOC from "eleventy-plugin-toc";
-
-
+import { imgSize, obsidianImgSize } from "@mdit/plugin-img-size";
 
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
@@ -26,12 +25,17 @@ export default async function(eleventyConfig) {
 		mdLib.use(markdownItMath);
 		// 添加 markdown-it-math-temml
 		mdLib.use(markdownItMathTemml);
-		// 添加 markdown-it-task-lists
-		mdLib.use(markdownItTaskLists);
+		// 添加 markdown-it-tas-lists
+		mdLib.use(tasklist);
 		// 添加 markdown-it-anchor
 		mdLib.use(markdownItAnchor);
 		// 添加 markdown-it-callouts
 		mdLib.use(markdownItCallouts);
+
+		// 添加 markdown-it-img-size 的三个子插件：
+		mdLib.use(imgSize);
+		mdLib.use(obsidianImgSize);
+
 		});
 
 	////////  end of markdown-it 插件的子插件：

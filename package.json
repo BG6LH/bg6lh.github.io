@@ -43,6 +43,8 @@
 		"@11ty/eleventy-navigation": "^1.0.4",
 		"@11ty/eleventy-plugin-rss": "^2.0.4",
 		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.1",
+		"@mdit/plugin-img-size": "^0.20.0",
+		"@mdit/plugin-tasklist": "^0.20.0",
 		"@tailwindcss/cli": "^4.1.7",
 		"@tailwindcss/typography": "^0.5.16",
 		"concurrently": "^9.1.2",
@@ -64,7 +66,6 @@
 		"markdown-it-anchor": "^9.2.0",
 		"markdown-it-callouts": "^1.0.3",
 		"markdown-it-math": "^5.2.1",
-		"markdown-it-task-lists": "^2.1.1",
 		"simple-icons": "^14.14.0",
 		"temml": "^0.11.7",
 		"transliteration": "^2.3.5"
