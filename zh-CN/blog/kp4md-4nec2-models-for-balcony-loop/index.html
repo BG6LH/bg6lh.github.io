@@ -362,8 +362,8 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 
 
     
-        <figure class="w-full h-36 object-contain overflow-hidden md:h-96">
-            <img src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/fgpl3SsKk7-640.webp" class="w-full" alt="用4NEC2模型测试高楼小环天线 image" loading="lazy" decoding="async" width="640" height="273">
+        <figure class="w-full h-36 object-contain overflow-hidden md:h-96 ">
+            <img src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/fgpl3SsKk7-640.webp" class="w-full blur-xs brightness-75 scale-105" alt="用4NEC2模型测试高楼小环天线 image" loading="lazy" decoding="async" width="640" height="273">
         </figure>
     
 <article class="bg-white mx-auto max-w-4xl prose prose-neutral">
@@ -383,6 +383,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
             
         </header>
         <div class="relative">
+            
             <aside id="artical-toc" class="block 
                         md:sticky md:top-32 md:pl-6 md:float-right md:mr-[-20vw] md:w-64 md:max-h-[70vh] md:overflow-auto
                         md:border-l-1 md:border-neutral-200
@@ -393,6 +394,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <ul><li><a href="#%E5%AE%89%E8%A3%85%E5%9C%A8%E9%98%B3%E5%8F%B0%E7%9A%84%E5%B0%8F%E7%8E%AF%E5%A4%A9%E7%BA%BF%E2%80%94%E2%80%94%E7%94%A8nec%E6%A8%A1%E5%9E%8B%E5%81%9A%E7%9A%84%E5%B0%8F%E7%8E%AF%E5%A4%A9%E7%BA%BF%E6%9C%9D%E5%90%91%E5%92%8C%E6%80%A7%E8%83%BD%E7%9A%84%E5%AF%B9%E6%AF%94%E5%88%86%E6%9E%90">安装在阳台的小环天线——用NEC模型做的小环天线朝向和性能的对比分析</a><ul><li><a href="#%E4%BB%8B%E7%BB%8D">介绍</a></li><li><a href="#%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1">模型设计</a></li><li><a href="#%E6%95%B0%E6%8D%AE">数据</a></li><li><a href="#%E7%A6%BB%E5%9C%B00.5%E5%88%B02%E4%B8%AA%E6%B3%A2%E9%95%BF%E5%AF%B9%E6%AF%94%E7%BB%84">离地0.5到2个波长对比组</a></li><li><a href="#7.1mhz%E5%B0%8F%E7%8E%AF%E5%A4%A9%E7%BA%BF%E7%A6%BB%E5%9C%B00.1%E5%88%B00.4%E6%B3%A2%E9%95%BF%E5%AF%B9%E6%AF%94%E7%BB%84">7.1MHz小环天线离地0.1到0.4波长对比组</a></li><li><a href="#%E8%AE%A8%E8%AE%BA">讨论</a></li><li><a href="#%E7%BB%93%E8%AE%BA">结论</a></li><li><a href="#%E5%8F%82%E8%80%83">参考</a></li><li><a href="#%E7%9B%B8%E5%86%8C(%E5%B7%B2%E5%A4%B1%E6%95%88)">相册(已失效)</a></li><li><a href="#nec%E6%A8%A1%E5%9E%8B%E5%8F%82%E6%95%B0%5B2%5D">NEC模型参数[2]</a></li><li><a href="#4nec2%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6">4NEC2模型文件</a></li></ul></li></ul>
       </nav>
             </aside>
+            
           <div class="max-w-2xl mx-auto">
             <p>最近看到一篇KP4MD的文章，用4NEC2仿真软件，纯理论的模型，测试了小环天线在高层大楼上应用的方向图和性能，并给出了不同频率，和不同高度的两组仿真数据对比。关键步骤是用了4nec2的patch功能做了一个大号贴片反射器，来模拟她家的大楼外立面。她的结论是DX应用水平安装好一点，NVIS应用垂直安装更好一点。</p>
 <p>她架天线的环境跟我的非常类似，都是十几层的板式公寓楼，高低上下都基本处在大楼正中间。我曾经想过大楼本身应该是个垂直的“地”，但是没考虑反射器效果，我也挺想用NEC2工具搞一个模型看看。正好KP4MD做了这件事。不同的是她家对面是大海，我家对面30米左右是另一个正好跟我层高一样的矮楼，那我再画一个反射器好吧。</p>
@@ -778,7 +780,7 @@ https://www.qsl.net/kp4md/magloop.htm</p>
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/` was built on 2025-05-28T08:07:29.487Z -->
+		<!-- This page `/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/` was built on 2025-05-28T08:54:18.248Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>
