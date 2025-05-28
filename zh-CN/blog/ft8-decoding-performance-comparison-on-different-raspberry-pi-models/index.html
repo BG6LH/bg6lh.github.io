@@ -366,9 +366,8 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
             <img src="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/ZcWLmC8VwW-774.webp" class="w-full blur-xs brightness-75 scale-105" alt="树莓派解码FT8的性能评估 image" loading="lazy" decoding="async" width="774" height="327">
         </figure>
     
+<div class="mx-auto grid w-full max-w-4xl grid-cols-1 gap-4 md:grid-cols-[minmax(800px,1fr)_240px]">
     <article class="bg-white p-8 md:p-12 mx-auto max-w-4xl prose prose-neutral">
-
-
         <!-- article header : begin-->
         <header class="flex flex-col mx-auto mb-12 border-t-neutral-500 border-b-1">
             <div class="mx-auto font-bold md:text-xl text-center text-neutral-800">
@@ -384,21 +383,6 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         </header>
         <!-- article header : end-->
 
-        <!-- toc begin -->
-        
-        <aside id="artical-toc" class="block relative
-                        md:sticky md:top-32 md:pl-6 md:float-right md:mr-[-20vw] md:w-64 md:max-h-[70vh] md:overflow-auto
-                        md:border-l-1 md:border-neutral-200
-                        md:dark:border-0
-                        z-10 mb-6 text-xs md:dark:text-neutral-200
-                        ">
-        <p class="font-bold">内容目录</p>
-        <nav class="toc">
-        <ul><li><a href="#%E9%A6%96%E5%85%88%E8%AF%B4%E7%BB%93%E8%AE%BA">首先说结论</a></li><li><a href="#%E8%AF%95%E9%AA%8C%E8%AE%BE%E8%AE%A1">试验设计</a><ul><li><a href="#%E7%94%A8%E4%BE%8B1%E3%80%81%E4%BD%BF%E7%94%A8%E6%A0%87%E5%87%86%E8%A7%A3%E7%A0%81%E6%B7%B1%E5%BA%A6%EF%BC%8C%E5%AF%B9%E5%85%A8%E9%83%A812%E4%B8%AA%E4%BF%A1%E5%8F%B7%E7%89%87%E6%AE%B5%E8%BF%9B%E8%A1%8C%E8%A7%A3%E7%A0%81%E7%9A%84%E5%B9%B3%E5%9D%87%E6%97%B6%E9%97%B4">用例1、使用标准解码深度，对全部12个信号片段进行解码的平均时间</a></li><li><a href="#%E7%94%A8%E4%BE%8B2%E3%80%81%E5%AF%B9%E5%B9%B6%E8%A1%8C%E4%BF%A1%E5%8F%B7%E6%9C%80%E5%A4%9A%E7%9A%84%E5%8D%95%E4%B8%80%E7%89%87%E6%AE%B5%EF%BC%8C%E8%BF%9B%E8%A1%8C%E6%B7%B1%E5%BA%A6%E8%A7%A3%E7%A0%81">用例2、对并行信号最多的单一片段，进行深度解码</a></li></ul></li><li><a href="#%E8%AF%95%E9%AA%8C%E7%BB%93%E6%9E%9C%E6%B1%87%E6%80%BB">试验结果汇总</a><ul><li><a href="#%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80">下载地址</a></li></ul></li></ul>
-      </nav>
-        </aside>
-        
-        <!-- toc end -->
 
         <!-- article content : begin-->
         <div class="mx-auto">
@@ -511,6 +495,23 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 
     </article>
 
+        <!-- toc begin -->
+        
+        <aside id="artical-toc" class="sticky top-14 max-h-[calc(100svh-3.5rem)] overflow-x-hidden
+                    px-0 pt-10 pb-24 prose prose-neutral text-sm
+                    dark:prose-invert
+                    max-xl:hidden
+                    ">
+        <p class="font-bold">内容目录</p>
+        <nav class="toc">
+        <ul><li><a href="#%E9%A6%96%E5%85%88%E8%AF%B4%E7%BB%93%E8%AE%BA">首先说结论</a></li><li><a href="#%E8%AF%95%E9%AA%8C%E8%AE%BE%E8%AE%A1">试验设计</a><ul><li><a href="#%E7%94%A8%E4%BE%8B1%E3%80%81%E4%BD%BF%E7%94%A8%E6%A0%87%E5%87%86%E8%A7%A3%E7%A0%81%E6%B7%B1%E5%BA%A6%EF%BC%8C%E5%AF%B9%E5%85%A8%E9%83%A812%E4%B8%AA%E4%BF%A1%E5%8F%B7%E7%89%87%E6%AE%B5%E8%BF%9B%E8%A1%8C%E8%A7%A3%E7%A0%81%E7%9A%84%E5%B9%B3%E5%9D%87%E6%97%B6%E9%97%B4">用例1、使用标准解码深度，对全部12个信号片段进行解码的平均时间</a></li><li><a href="#%E7%94%A8%E4%BE%8B2%E3%80%81%E5%AF%B9%E5%B9%B6%E8%A1%8C%E4%BF%A1%E5%8F%B7%E6%9C%80%E5%A4%9A%E7%9A%84%E5%8D%95%E4%B8%80%E7%89%87%E6%AE%B5%EF%BC%8C%E8%BF%9B%E8%A1%8C%E6%B7%B1%E5%BA%A6%E8%A7%A3%E7%A0%81">用例2、对并行信号最多的单一片段，进行深度解码</a></li></ul></li><li><a href="#%E8%AF%95%E9%AA%8C%E7%BB%93%E6%9E%9C%E6%B1%87%E6%80%BB">试验结果汇总</a><ul><li><a href="#%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80">下载地址</a></li></ul></li></ul>
+      </nav>
+        </aside>
+        
+        <!-- toc end -->
+
+
+</div>
 			</heading-anchors>
 		</main>
 		<footer class="flex w-full text-neutral-800 dark:text-neutral-100 bg-neutral-100 dark:bg-neutral-800">
@@ -614,7 +615,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/` was built on 2025-05-28T16:12:28.262Z -->
+		<!-- This page `/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/` was built on 2025-05-28T16:50:31.127Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>
