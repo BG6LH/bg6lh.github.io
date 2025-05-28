@@ -18,10 +18,6 @@ titleSlug: null-modem-rs232c-connector-of-ftdx10
 updated: 2025-05-27 06:57:47
 ---
 
-![cover_image](https://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHozzgVD5Q2s96ISPH3N4QJsBZ1vrCc4a2GxbiafBsCgakuGA1ASdicOgjOgG6QiccdH7whZwr7zhzNnCQ/0?wx_fmt=jpeg)
-
-原创 BG6LH [BG6LH](https://mp.weixin.qq.com/s/) *2022年11月12日 01:39*
-
 因为要腾出FTDX10的USB接口，给SCU-LAN10做远程控制，我就琢磨用RS-232C电缆控制FTDX10。
 
 逛了几个FTDX10的论坛，发现关于电缆的选择众说纷纭。ftdx10@groups.io 有两个人为这事儿还较真儿了。Bob KC9RF 说，应该用第2、3针脚交叉的。他专门测试了是2-3，3-2的，并验证成功。另一个叫Franco的说不能用交叉的，他就是用一根RS-232C直连的电缆，直接用在电脑上完全没问题，还测试了电缆的针脚，真的是2-2，3-3的。而且八重洲出的 FTDX10 CAT 操作参考手册，第3页说，一定要用标准的RS-232C电缆，不是那种被称作“非modem”的电缆。它说“非猫”就那种2、3针交叉的RS-232C电缆。

@@ -10,9 +10,11 @@ layout: layouts/base.njk
             <img src="{{ image | url }}" class="w-full blur-xs brightness-75 scale-105" eleventy:widths="960" eleventy:formats="webp" alt="{{ title }} image"/>
         </figure>
     {% endif %}
-<article class="bg-white mx-auto max-w-4xl prose prose-neutral">
-    <div class="px-4 pt-12 pb-16 sm:pt-16 sm:pb-24">
-        <header class="max-w-2xl flex flex-col mx-auto mb-12 border-t-neutral-500 border-b-1">
+    <article class="bg-white p-8 md:p-12 mx-auto max-w-4xl prose prose-neutral">
+
+
+        <!-- article header : begin-->
+        <header class="flex flex-col mx-auto mb-12 border-t-neutral-500 border-b-1">
             <div class="mx-auto font-bold md:text-xl text-center text-neutral-800">
                 <h1>{{ title }}</h1>
             </div>
@@ -24,50 +26,68 @@ layout: layouts/base.njk
                 <a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}
                 {%- endfor %}
             </span>
-            
         </header>
-        <div class="relative">
-            {% if content | toc %}
-            <aside id="artical-toc" class="block 
+        <!-- article header : end-->
+
+        <!-- toc begin -->
+        {% if content | toc %}
+        <aside id="artical-toc" class="block relative
                         md:sticky md:top-32 md:pl-6 md:float-right md:mr-[-20vw] md:w-64 md:max-h-[70vh] md:overflow-auto
                         md:border-l-1 md:border-neutral-200
+                        md:dark:border-0
                         z-10 mb-6 text-xs md:dark:text-neutral-200
                         ">
-             <p class="font-bold">内容目录</p>
-            {{ content | toc | safe }}
-            </aside>
-            {% endif %}
-          <div class="max-w-2xl mx-auto">
+        <p class="font-bold">内容目录</p>
+        {{ content | toc | safe }}
+        </aside>
+        {% endif %}
+        <!-- toc end -->
+
+        <!-- article content : begin-->
+        <div class="mx-auto">
             {{ content | safe }}
             {% if source and source.indexOf('https://mp.weixin.qq.com/s/') == 0 %}
               <hr class="border-t-neutral-500 mb-2">
               <span class="text-sm">原文发表于我的微信公众号 <a href="{{ source }}" target="_blank">BG6LH - {{ title }}</a></span>
             {% endif %}
-          </div>
         </div>
-        
-        {# 翻页器 #}
-        <div class="max-w-2xl mx-auto">
-            {%- if collections.posts %}
-            {%- set previousPost = collections.posts | getPreviousCollectionItem %}
-            {%- set nextPost = collections.posts | getNextCollectionItem %}
-            {%- if nextPost or previousPost %}
-            <ul class="links-nextprev">
-                {%- if previousPost %}<li class="links-nextprev-prev">← {{ languages[page.lang].postPrevious }}<br> <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-                {%- if nextPost %}<li class="links-nextprev-next">{{ languages[page.lang].postNext }} →<br><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-            </ul>
-            {%- endif %}
-            {%- endif %}
-        </div>
-    </div>
-</article>
-<!-- Giscus : begin -->
-<article class="bg-white mx-auto max-w-4xl prose prose-neutral">
-    <div class="px-4 pt-12 pb-16 sm:pt-16 sm:pb-24">
-        <div class="max-w-2xl mx-auto">
-    {% include "components/giscus.njk" %}
-        </div>
-    </div>
-</article>
-<!-- Giscus : end -->
+        <!-- article content : end-->
 
+        <!-- 翻页器 begin -->
+        <div class="mx-auto grid grid-cols-1 gap-2 py-12
+                    md:grid-cols-2
+                ">
+            {%- if collections.posts %}
+                {%- set previousPost = collections.posts | getPreviousCollectionItem %}
+                {%- set nextPost = collections.posts | getNextCollectionItem %}
+                {%- if nextPost or previousPost %}
+                    {%- if previousPost %}
+                        <a href="{{ previousPost.url }}" class="
+                        flex flex-col left-0 p-2 block hover:bg-neutral-100
+                        ">
+                            < {{ languages[page.lang].postPrevious }}
+                            <br>
+                            {{ previousPost.data.title }}
+                        </a>
+                    {% endif %}
+                    {%- if nextPost %}
+                        <a href="{{ nextPost.url }}" class="
+                        flex flex-col md:text-right right-0 p-2 hover:bg-neutral-100
+                        ">
+                            {{ languages[page.lang].postNext }} >
+                            <br>
+                            {{ nextPost.data.title }}
+                        </a>
+                    {% endif %}
+                {%- endif %}
+            {%- endif %}
+        </div>
+        <!-- 翻页器 end -->
+
+        <!-- Giscus : begin -->
+        <div class="mx-auto">
+        {% include "components/giscus.njk" %}
+        </div>
+        <!-- Giscus : end -->
+
+    </article>

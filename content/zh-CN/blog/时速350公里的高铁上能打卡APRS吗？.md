@@ -57,7 +57,7 @@ updated: 2025-05-27 05:50:12
 代入数值：$f_d = \frac{97.2}{3 \times 10^8} \cdot 144.640 \times 10^6 \approx 46.8\, \text{Hz}$
 
 
-$频率误差PPM = \frac{f_d}{f_0} \times 10^6 = \frac{46.8}{144640000} \times 10^6 \approx 0.3236 \, \text{ppm}$
+$频率误差ppm = \frac{46.8}{144640000} \times 10^6 \approx 0.3236 \, \text{ppm}$
 
 
 

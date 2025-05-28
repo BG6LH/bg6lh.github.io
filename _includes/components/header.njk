@@ -87,11 +87,11 @@ font-medium transition-all duration-100"
         x-transition:leave-start="opacity-100 scale-100"
         @click.outside="open = false">
 		{% for entry in collections.all | eleventyNavigation %}
-		{% if entry.data.lang == page.lang %}
-		<div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
-      <a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %} @click="open = false">{{ entry.title }}</a>
-    </div>
-		{% endif %}
+            {% if entry.data.lang == page.lang %}
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %} @click="open = false">{{ entry.title }}</a>
+                </div>
+            {% endif %}
 		{% endfor %}
 </div>
 <!-- Fullscreen Menu Overlay: mobile only , end -->
