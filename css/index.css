@@ -296,3 +296,32 @@ header {
 .post-metadata time {
 	margin-right: 1em;
 }
+
+/* Callouts
+   Remember that callouts can be nested, so text direction can
+   change within a nested set of callouts
+*/
+
+/* Callouts */
+
+.callout {	@apply p-4 my-4 border-l-4 rounded text-sm; }
+.callout-quote		{ @apply bg-neutral-50 border-neutral-400 text-neutral-800;}
+
+.callout-tip		{ @apply bg-cyan-50 border-cyan-400 text-cyan-800;}
+.callout-important	{ @apply bg-cyan-50 border-cyan-400 text-cyan-800;}
+.callout-summary	{ @apply bg-cyan-50 border-cyan-400 text-cyan-800;}
+
+.callout-default	{ @apply bg-blue-50 border-blue-400 text-blue-800;}
+.callout-note 		{ @apply bg-blue-50 border-blue-400 text-blue-800; }
+.callout-info		{ @apply bg-blue-50 border-blue-400 text-blue-800;}
+.callout-todo		{ @apply bg-blue-50 border-blue-400 text-blue-800;}
+
+.callout-question	{ @apply bg-orange-50 border-orange-400 text-orange-800;}
+.callout-warning	{ @apply bg-orange-50 border-orange-400 text-orange-800;}
+
+.callout-error		{ @apply bg-red-50 border-red-400 text-red-800;}
+.callout-fail		{ @apply bg-red-50 border-red-400 text-red-800;}
+.callout-bug		{ @apply bg-red-50 border-red-400 text-red-800;}
+
+.callout-example 	{ @apply bg-purple-50 border-purple-400 text-purple-800;}
+.callout-success	{ @apply bg-green-50 border-green-400 text-green-800;}

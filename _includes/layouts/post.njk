@@ -26,12 +26,22 @@ layout: layouts/base.njk
             </span>
             
         </header>
-        <div class="max-w-2xl mx-auto">
+        <div class="relative">
+            <aside id="artical-toc" class="block 
+                        md:sticky md:top-32 md:pl-6 md:float-right md:mr-[-20vw] md:w-64 md:max-h-[70vh] md:overflow-auto
+                        md:border-l-1 md:border-neutral-200
+                        z-10 mb-6 text-xs md:dark:text-neutral-200
+                        ">
+             <p class="font-bold">内容目录</p>
+            {{ content | toc | safe }}
+            </aside>
+          <div class="max-w-2xl mx-auto">
             {{ content | safe }}
             {% if source and source.indexOf('https://mp.weixin.qq.com/s/') == 0 %}
-                <hr class="border-t-neutral-500 mb-2">
-                <span class="text-sm">原文发表于我的微信公众号 <a href="{{ source }}" target="_blank">BG6LH - {{ title }}</a></span>
+              <hr class="border-t-neutral-500 mb-2">
+              <span class="text-sm">原文发表于我的微信公众号 <a href="{{ source }}" target="_blank">BG6LH - {{ title }}</a></span>
             {% endif %}
+          </div>
         </div>
         
         {# 翻页器 #}

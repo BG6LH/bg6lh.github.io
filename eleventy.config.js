@@ -7,19 +7,34 @@ import { I18nPlugin } from "@11ty/eleventy";
 import pluginFilters from "./_config/filters.js";
 import pluginIcons from 'eleventy-plugin-icons';
 import embedEverything from "eleventy-plugin-embed-everything";
-import taskLists from "markdown-it-task-lists";
+import markdownItTaskLists from "markdown-it-task-lists";
+import markdownItCallouts from "markdown-it-callouts";
 import markdownItMath from "markdown-it-math";
 import markdownItMathTemml from "markdown-it-math/temml";
+import markdownItAnchor from "markdown-it-anchor";
+import pluginTOC from "eleventy-plugin-toc";
+
+
 
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
-	// 添加 markdown-it-math
-    eleventyConfig.amendLibrary("md", mdLib => mdLib.use(markdownItMath));
-    // 添加 markdown-it-math-temml
-	eleventyConfig.amendLibrary("md", mdLib => mdLib.use(markdownItMathTemml));
-    // 添加 markdown-it-task-lists
-    eleventyConfig.amendLibrary("md", mdLib => mdLib.use(taskLists));
+
+	//////// begin of markdown-it 插件的子插件：
+	eleventyConfig.amendLibrary("md", mdLib => {
+ 		// 添加 markdown-it-math
+		mdLib.use(markdownItMath);
+		// 添加 markdown-it-math-temml
+		mdLib.use(markdownItMathTemml);
+		// 添加 markdown-it-task-lists
+		mdLib.use(markdownItTaskLists);
+		// 添加 markdown-it-anchor
+		mdLib.use(markdownItAnchor);
+		// 添加 markdown-it-callouts
+		mdLib.use(markdownItCallouts);
+		});
+
+	////////  end of markdown-it 插件的子插件：
 
 	// Drafts, see also _data/eleventyDataSchema.js
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
@@ -194,6 +209,13 @@ export default async function(eleventyConfig) {
 		</div>`;
 	});
 
+	// 添加 eleventy-plugin-toc：
+	eleventyConfig.addPlugin(pluginTOC, {
+		tags: ["h2", "h3"],       // 指定需要生成 TOC 的标题标签
+		wrapper: "nav",           // 用哪个标签包裹 TOC（默认为 'nav'）
+		wrapperClass: "toc",      // TOC 外层容器的 class
+		ul: true,                 // 使用 ol（false）还是 ul（true）
+	  });
 
 };
 
