@@ -381,7 +381,18 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
             </span>
             
         </header>
-        <div class="max-w-2xl mx-auto">
+        <div class="relative">
+            <aside id="artical-toc" class="block 
+                        md:sticky md:top-32 md:pl-6 md:float-right md:mr-[-20vw] md:w-64 md:max-h-[70vh] md:overflow-auto
+                        md:border-l-1 md:border-neutral-200
+                        z-10 mb-6 text-xs md:dark:text-neutral-200
+                        ">
+             <p class="font-bold">内容目录</p>
+            <nav class="toc">
+        <ul><li><a href="#radiopi%E7%AE%80%E4%BB%8B">RadioPi简介</a></li><li><a href="#%E4%BD%BF%E7%94%A8%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87">使用前的准备</a></li><li><a href="#%E5%AE%89%E5%85%A8%E6%8F%90%E7%A4%BA">安全提示</a></li><li><a href="#%E4%BD%BF%E7%94%A8%E5%8D%8F%E8%AE%AE">使用协议</a></li></ul>
+      </nav>
+            </aside>
+          <div class="max-w-2xl mx-auto">
             <blockquote>
 <p>我们已于2024年6月16日正式放弃了radiopi.club域名，把网站托管在Github上。</p>
 <p>感谢您四年来的参与。还记得那是COVID19的第一年，三个闲在家里的软件工程师，因为共同的爱好，给业余无线电做了一个树莓派的系统镜像。</p>
@@ -409,7 +420,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <p>如果你了解SHA校验，可以比对一下校验码，确保下载的文件准确无误。</p>
 <p><code>SHA-256: 99ab3ec6125cc07d878746d810a1d74db3db7bada44e5373ae1b7681da3e07f3</code></p>
 <p>注意：刚下载的RaidoPi镜像是一个zip压缩包，烧卡之前要先解压缩，得到一个后缀是.img的文件。这个就是RadioPi镜像文件。</p>
-<h2 id="radiopi">RadioPi简介</h2>
+<h2 id="radiopi%E7%AE%80%E4%BB%8B" tabindex="-1">RadioPi简介</h2>
 <p>RadioPi镜像是基于树莓派官方操作系统 的再发布版本。我们是有洁癖的工程师，努力把它做的跟官方镜像一样干净，除了HAM常用的软件，别的都没装。</p>
 <p><strong>这些软件是：</strong></p>
 <ul>
@@ -442,7 +453,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </ul>
 <p>RadioPi配置了自动广播主机名的Avahi服务，你可以在支持mDNS协议的其它设备上直接访问radiopi.local找到它。详情请参考<a href="../headless-operation-with-radiopi/">《无头操作RadioPi》</a>。</p>
 <p>我们把RadioPi设置为开机自动登录到桌面，这是为VNC远程控制做的一个优化。 第一次登录后，建议你立刻修改用户pi的密码。</p>
-<h2 id="">使用前的准备</h2>
+<h2 id="%E4%BD%BF%E7%94%A8%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87" tabindex="-1">使用前的准备</h2>
 <p>使用RadioPi之前，需要做的一些准备：</p>
 <ul>
 <li>microSD卡，也叫TF卡、手机存储卡，推荐8G以上高速卡。</li>
@@ -473,7 +484,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <p>此外，根据电台的情况，你可能还需要准备一个USB声卡、以及USB转CAT的控制设备。比如YAESU FT-817就需要这些，而ICOM IC-7300就不用，直接用USB线接RadioPi和电台就可以了。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/_WLsl3-AZ_-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/_WLsl3-AZ_-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/_WLsl3-AZ_-1080.jpeg" alt="图片" width="1080" height="626"></picture></p>
 <p>上图：一套FT-818和RadioPi的便携集成</p>
-<h2 id="-2">安全提示</h2>
+<h2 id="%E5%AE%89%E5%85%A8%E6%8F%90%E7%A4%BA" tabindex="-1">安全提示</h2>
 <ul>
 <li>RadioPi上的软件大部分基于Hamlib开源工具库，已经发展了二十年，成功且稳定。但是这些软件目前仍在更新，所以没人保证它们和每一个软件、每一个电台都能有完美的配合。</li>
 <li>树莓派的硬件并非专门为射频工况设计，所以使用树莓派控制电台有一定的风险。当你用它和大功率电台、非平衡天馈系统一起工作时，不良的驻波、不佳的平衡与接地，都有可能对树莓派、电台及周边设备带来射频干扰。</li>
@@ -481,7 +492,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <li>所以认真对待平衡、接地、驻波等问题是非常必要的，尤其在远程操作无人值守的电台时更要注意这些问题。</li>
 <li>解决这些问题也是玩业余无线电的乐趣之一。</li>
 </ul>
-<h2 id="-3">使用协议</h2>
+<h2 id="%E4%BD%BF%E7%94%A8%E5%8D%8F%E8%AE%AE" tabindex="-1">使用协议</h2>
 <ul>
 <li>下载和使用RadioPi镜像表示你已同意自行承担使用它的风险和责任。</li>
 <li>请确保自己在法律法规许可范围内操作计算机、无线电设备和互联网。</li>
@@ -492,9 +503,10 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <p>2020年6月</p>
 
             
-                <hr class="border-t-neutral-500 mb-2">
-                <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/6Alvr-vHNIJy3v-AkAbqpQ" target="_blank">BG6LH - RadioPi，Ham的树莓派懒人包</a></span>
+              <hr class="border-t-neutral-500 mb-2">
+              <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/6Alvr-vHNIJy3v-AkAbqpQ" target="_blank">BG6LH - RadioPi，Ham的树莓派懒人包</a></span>
             
+          </div>
         </div>
         
         
@@ -527,7 +539,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 
     <!-- 网站栏目 -->
     <div class="">
-        <h3 class="font-bold mb-4" id="-4">网站导航</h3>
+        <h3 class="font-bold mb-4" id="">网站导航</h3>
         <nav class="list-none flex flex-row justify-center md:justify-start md:flex-col">
             
             
@@ -619,7 +631,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/` was built on 2025-05-27T17:09:21.449Z -->
+		<!-- This page `/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/` was built on 2025-05-28T08:07:29.341Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>

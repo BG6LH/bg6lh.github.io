@@ -381,45 +381,56 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
             </span>
             
         </header>
-        <div class="max-w-2xl mx-auto">
+        <div class="relative">
+            <aside id="artical-toc" class="block 
+                        md:sticky md:top-32 md:pl-6 md:float-right md:mr-[-20vw] md:w-64 md:max-h-[70vh] md:overflow-auto
+                        md:border-l-1 md:border-neutral-200
+                        z-10 mb-6 text-xs md:dark:text-neutral-200
+                        ">
+             <p class="font-bold">内容目录</p>
+            <nav class="toc">
+        <ul><li><a href="#1%EF%BC%8C%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87vnc%E5%90%AC%E5%88%B0radiopi%E7%9A%84%E5%A3%B0%E9%9F%B3%EF%BC%9F">1，如何通过VNC听到RadioPi的声音？</a></li><li><a href="#2%EF%BC%8C%E5%A6%82%E4%BD%95%E8%AE%A9radiopi%E5%8F%91%E5%B0%84ft8%E7%9A%84%E6%97%B6%E5%80%99%E4%B9%9F%E8%83%BD%E6%92%AD%E6%94%BE%E5%A3%B0%E9%9F%B3%EF%BC%9F">2，如何让RadioPi发射FT8的时候也能播放声音？</a><ul><li><a href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%85-paprefs">第一步：安装 paprefs</a></li><li><a href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E6%B7%BB%E5%8A%A0%E6%A8%A1%E6%8B%9F%E7%9A%84%E8%99%9A%E6%8B%9F%E8%BE%93%E5%87%BA%E8%AE%BE%E5%A4%87">第二步：添加模拟的虚拟输出设备</a></li><li><a href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E5%9C%A8wsjt-x%E4%B8%AD%E5%A2%9E%E5%8A%A0%E9%80%89%E4%B8%AD%E6%A8%A1%E6%8B%9F%E7%9A%84%E8%BE%93%E5%87%BA%E8%AE%BE%E5%A4%87">第三步：在WSJT-X中增加选中模拟的输出设备</a></li></ul></li></ul>
+      </nav>
+            </aside>
+          <div class="max-w-2xl mx-auto">
             <p>RadioPi发布以来，关于“声音”的两个问题被问到的最多：</p>
 <ul>
 <li>手机上VNC的时候，能听到RadioPi的声音吗？</li>
 <li>如何让RadioPi发射FT8的时候也能播放声音？</li>
 </ul>
 <p>我们这里一起解答一下：</p>
-<h2 id="1-vnc-radiopi">1，如何通过VNC听到RadioPi的声音？</h2>
+<h2 id="1%EF%BC%8C%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87vnc%E5%90%AC%E5%88%B0radiopi%E7%9A%84%E5%A3%B0%E9%9F%B3%EF%BC%9F" tabindex="-1">1，如何通过VNC听到RadioPi的声音？</h2>
 <p>我们的回答是，<strong>手机上目前是听不到的。</strong></p>
 <p>VNC的确可以“传递声音”。但这是“专业版”和“企业版”用户才享有的功能。而且这个功能在iOS或android手机的VNC Viewer上目前还不能用。其它不能用的情况还包括：在MacOS版本的VNC Server上不提供，使用“即时支持(Instant Support)”时候也不能用。</p>
 <p>或许未来某天就可以用了也未尝可知，感兴趣的话可以关注RealVNC公司的相应服务： <a href="https://www.realvnc.com/en/connect/audio/">https://www.realvnc.com/en/connect/audio/</a></p>
-<h2 id="2-radiopi-ft8">2，如何让RadioPi发射FT8的时候也能播放声音？</h2>
+<h2 id="2%EF%BC%8C%E5%A6%82%E4%BD%95%E8%AE%A9radiopi%E5%8F%91%E5%B0%84ft8%E7%9A%84%E6%97%B6%E5%80%99%E4%B9%9F%E8%83%BD%E6%92%AD%E6%94%BE%E5%A3%B0%E9%9F%B3%EF%BC%9F" tabindex="-1">2，如何让RadioPi发射FT8的时候也能播放声音？</h2>
 <p>关心这个问题的用户，出发点大多是需要“监听”WSJT-X是否正常发射。</p>
 <p>在RadioPi上，这需要把PulseAudio服务设置为：同步把声音播放到多个声卡硬件。 推荐大家简单地使用PulseAudio参数 (PulseAudio Preferences) 工具 ，模拟一个同步输出(Simultaneous Output)的设备即可 。</p>
 <p>在 20200605版本的RadioPi镜像里 并没有添加这个 工具 ，需要大家自己手动安装。 这里简述一下安装步骤：</p>
-<h3 id="paprefs">第一步：安装 paprefs</h3>
+<h3 id="%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%85-paprefs" tabindex="-1">第一步：安装 paprefs</h3>
 <p>点击屏幕左上角的“LX终端”（那个小黑窗户），在终端命令行窗口里，输入：</p>
 <pre class="language-zsh" tabindex="0"><code class="language-zsh">sudo apt install paprefs</code></pre>
 <p>根据提示完成paprefs安装。</p>
-<h3 id="">第二步：添加模拟的虚拟输出设备</h3>
+<h3 id="%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E6%B7%BB%E5%8A%A0%E6%A8%A1%E6%8B%9F%E7%9A%84%E8%99%9A%E6%8B%9F%E8%BE%93%E5%87%BA%E8%AE%BE%E5%A4%87" tabindex="-1">第二步：添加模拟的虚拟输出设备</h3>
 <p>在RadioPi屏幕左上角的开始菜单-首选项中打开PulseAudio属性。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/faq-two-questions-about-radiopi-sound/I78Y-j4g-g-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/faq-two-questions-about-radiopi-sound/I78Y-j4g-g-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/faq-two-questions-about-radiopi-sound/I78Y-j4g-g-1080.png" alt="图片" width="1080" height="851"></picture></p>
 <p>打开第四个标签页“Simultaneous Output(同步输出)”，选中“在所有本地声卡中为模拟输出添加虚拟(V)输出设备”前的对号。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/faq-two-questions-about-radiopi-sound/bUtTgh1faN-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/faq-two-questions-about-radiopi-sound/bUtTgh1faN-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/faq-two-questions-about-radiopi-sound/bUtTgh1faN-1080.png" alt="图片" width="1080" height="851"></picture></p>
-<h3 id="wsjt-x">第三步：在WSJT-X中增加选中模拟的输出设备</h3>
+<h3 id="%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E5%9C%A8wsjt-x%E4%B8%AD%E5%A2%9E%E5%8A%A0%E9%80%89%E4%B8%AD%E6%A8%A1%E6%8B%9F%E7%9A%84%E8%BE%93%E5%87%BA%E8%AE%BE%E5%A4%87" tabindex="-1">第三步：在WSJT-X中增加选中模拟的输出设备</h3>
 <p>在WSJT-X的文件菜单里，打开“设置/音频”，在声卡的输出设备中，你会看到多出来一个叫“combined”的声卡设备，选择它。在JTDX里也一样。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/faq-two-questions-about-radiopi-sound/0hcc_tgd8z-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/faq-two-questions-about-radiopi-sound/0hcc_tgd8z-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/faq-two-questions-about-radiopi-sound/0hcc_tgd8z-1080.png" alt="图片" width="1080" height="851"></picture></p>
 <p>现在，可以尝试去WJST-X中发射一个“调谐(Tune)”信号，此时，从RadioPi的3.5mm音频插孔或者HDMI设备上，应该能听到WSJT发射的声音。</p>
-<blockquote>
-<p>[!NOTE]
-注意，WSJT-X的设置/音频中要保持声卡原来的“输入”设备不变。因为paprefs并没有模拟一个音频输入的虚拟设备。此外，音频输入是否正常，通过观察WSJT-X的频谱瀑布即能判断，也不需要用耳朵听。</p>
-</blockquote>
+<div class="callout callout-note">
+<p>注意，WSJT-X的设置/音频中要保持声卡原来的“输入”设备不变。因为paprefs并没有模拟一个音频输入的虚拟设备。此外，音频输入是否正常，通过观察WSJT-X的频谱瀑布即能判断，也不需要用耳朵听。</p>
+</div>
 <p>我们还是建议大家，在使用数字模式时养成看频谱的习惯，并通过观察软件显示的指标来判断问题所在。</p>
 <p>修改于 2020年06月15日</p>
 
             
-                <hr class="border-t-neutral-500 mb-2">
-                <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/c19-NKyaEJcmDibe3KSStA" target="_blank">BG6LH - FAQ：关于RadioPi声音的两个问题</a></span>
+              <hr class="border-t-neutral-500 mb-2">
+              <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/c19-NKyaEJcmDibe3KSStA" target="_blank">BG6LH - FAQ：关于RadioPi声音的两个问题</a></span>
             
+          </div>
         </div>
         
         
@@ -452,7 +463,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 
     <!-- 网站栏目 -->
     <div class="">
-        <h3 class="font-bold mb-4" id="-2">网站导航</h3>
+        <h3 class="font-bold mb-4" id="">网站导航</h3>
         <nav class="list-none flex flex-row justify-center md:justify-start md:flex-col">
             
             
@@ -544,7 +555,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/faq-two-questions-about-radiopi-sound/` was built on 2025-05-27T17:09:21.350Z -->
+		<!-- This page `/zh-CN/blog/faq-two-questions-about-radiopi-sound/` was built on 2025-05-28T08:07:29.294Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>

@@ -380,8 +380,19 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
             </span>
             
         </header>
-        <div class="max-w-2xl mx-auto">
-            <h2 id="counterpoise">Counterpoise</h2>
+        <div class="relative">
+            <aside id="artical-toc" class="block 
+                        md:sticky md:top-32 md:pl-6 md:float-right md:mr-[-20vw] md:w-64 md:max-h-[70vh] md:overflow-auto
+                        md:border-l-1 md:border-neutral-200
+                        z-10 mb-6 text-xs md:dark:text-neutral-200
+                        ">
+             <p class="font-bold">内容目录</p>
+            <nav class="toc">
+        <ul><li><a href="#counterpoise">Counterpoise</a></li><li><a href="#%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF">设计思路</a></li><li><a href="#%E6%80%8E%E4%B9%88%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B%E5%AE%83%E6%98%AF%E5%90%A6%E6%9C%89%E6%95%88%E5%91%A2%EF%BC%9F">怎么测试一下它是否有效呢？</a></li></ul>
+      </nav>
+            </aside>
+          <div class="max-w-2xl mx-auto">
+            <h2 id="counterpoise" tabindex="-1">Counterpoise</h2>
 <p>最近读K7SZ的《小功率通信指南》(BD6CR译)一书，这老汉用50英尺(15米)长的5芯电缆做了一个平衡器。受他启发，我用3.3米长的8芯网线也做了一个。</p>
 <p>我家住高层楼的6层，只能从阳台斜拉一根22.4米的长线天线到楼下。长线天线是一种非谐振天线，在任何业余频率上都不谐振，需要天调配合。 长线也是典型的“端馈天线”，从天线振子的一端馈电。</p>
 <p>使用端馈天线的一个苦恼是，如果接地不良，它会对电台和连接的设备产生射频串扰。尤其在玩数字模式时，计算机偶尔会失效。我就遇到过鼠标不动、 触摸板不灵， USB转TTL接口掉线，WSJT-X软件报错，FT-817卡在发射状态……甚至旁边一个毫无连接的眼睛按摩仪都莫名其妙自己启动了……</p>
@@ -392,7 +403,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/building-a-counterpoise-with-network-cable/lRsKo9Q1n2-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/building-a-counterpoise-with-network-cable/lRsKo9Q1n2-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/building-a-counterpoise-with-network-cable/lRsKo9Q1n2-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
 <p>看到了平衡器的必要性，我下决心做一个更正式的平衡器，能满足更多的波段，把卷尺留给更需要它的人。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/building-a-counterpoise-with-network-cable/QepZWxdEKy-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/building-a-counterpoise-with-network-cable/QepZWxdEKy-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/building-a-counterpoise-with-network-cable/QepZWxdEKy-1080.jpeg" alt="图片" width="1080" height="608"></picture></p>
-<h2 id="-2">设计思路</h2>
+<h2 id="%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF" tabindex="-1">设计思路</h2>
 <p>下边是我的设计思路。8芯的网线，某几根分割一下，互相连接之后，争取给每个波段，都找到一份 <strong>“1/4波长奇数倍”</strong> 的长度。或者将就一下跟其它波段共用。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/building-a-counterpoise-with-network-cable/04PaBAYDjY-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/building-a-counterpoise-with-network-cable/04PaBAYDjY-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/building-a-counterpoise-with-network-cable/04PaBAYDjY-1080.png" alt="图片" width="1080" height="926"></picture></p>
 <p>解释一下80米是如何连接的，其它就比较容易理解了：</p>
@@ -403,7 +414,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <li>所以是：7、8、7、6、 4、3、2、1，共19.8米，大约是80米波的1/4波长(20.42米)</li>
 </ul>
 <p>为什么是3.3米网线？ 其实我这根网线起先大约是3.5米，因为掐掉了两端的水晶头就剩下3.4米了。 后来中间又断开再连接，最后有效长度只有3.3米了。 所以原本预期能组成20.3米，结果只剩下19.8米了。不过网线是双绞线，芯线的实际长度比网线套管略长一点。我没找到这个长度比例。只看到五类双绞线的每节的扭绞长度是12.7mm，如果假设每扭绞一次，实际长度增加一次导线的带皮直径的话，那么大概是1mm/12.7mm，大约是8%。那么19.8米长的网线大概能组成21米长的平衡线。 大差不差， 已经能改善很多了。</p>
-<h2 id="-3">怎么测试一下它是否有效呢？</h2>
+<h2 id="%E6%80%8E%E4%B9%88%E6%B5%8B%E8%AF%95%E4%B8%80%E4%B8%8B%E5%AE%83%E6%98%AF%E5%90%A6%E6%9C%89%E6%95%88%E5%91%A2%EF%BC%9F" tabindex="-1">怎么测试一下它是否有效呢？</h2>
 <p>把它假设为一根1/4波长的GP天线，只要再模拟一个地网，检测一下它在各业余波段的驻波，结果应该会比较理想。</p>
 <p>我把它从厨房的窗户顺下去，地线接了一个灌满水的易拉罐，易拉罐放在水池里，水池跟我的厨房台面连着，厨房台面是一整块三延长米的不锈钢板，这算是个凑合的地网吧。</p>
 <p>以下是我用nanoVNA测试的从3MHz～30MHz的整体带宽。在14.070MHz、20米波段的驻波比是2.70：</p>
@@ -412,9 +423,10 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <p>想知道最后应用的效果吗？等过一阵子我拿给BG1TPT测试一下。他家里也是长线天线，只是射频地接了一大坨被覆线，做天线剩下来的，盘成一个小救生圈那么大。他用7300做FT8，在80米，功率超过20瓦就死机。我准备把这个根平衡器拿给他测试一下，回头跟大家分享结果。</p>
 
             
-                <hr class="border-t-neutral-500 mb-2">
-                <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/4ZhL6UqRThwJYXNoga7DcQ?token=644013800&amp;lang=zh_CN" target="_blank">BG6LH - 用网线做端馈天线平衡器</a></span>
+              <hr class="border-t-neutral-500 mb-2">
+              <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/4ZhL6UqRThwJYXNoga7DcQ?token=644013800&amp;lang=zh_CN" target="_blank">BG6LH - 用网线做端馈天线平衡器</a></span>
             
+          </div>
         </div>
         
         
@@ -447,7 +459,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 
     <!-- 网站栏目 -->
     <div class="">
-        <h3 class="font-bold mb-4" id="-4">网站导航</h3>
+        <h3 class="font-bold mb-4" id="-2">网站导航</h3>
         <nav class="list-none flex flex-row justify-center md:justify-start md:flex-col">
             
             
@@ -539,7 +551,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/building-a-counterpoise-with-network-cable/` was built on 2025-05-27T17:09:21.588Z -->
+		<!-- This page `/zh-CN/blog/building-a-counterpoise-with-network-cable/` was built on 2025-05-28T08:07:29.442Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>

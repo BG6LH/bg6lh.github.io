@@ -381,12 +381,23 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
             </span>
             
         </header>
-        <div class="max-w-2xl mx-auto">
+        <div class="relative">
+            <aside id="artical-toc" class="block 
+                        md:sticky md:top-32 md:pl-6 md:float-right md:mr-[-20vw] md:w-64 md:max-h-[70vh] md:overflow-auto
+                        md:border-l-1 md:border-neutral-200
+                        z-10 mb-6 text-xs md:dark:text-neutral-200
+                        ">
+             <p class="font-bold">内容目录</p>
+            <nav class="toc">
+        <ul><li><a href="#%E7%AC%AC%E4%B8%80%E7%89%88%EF%BC%9A%E7%AC%94%E8%AE%B0%E6%9C%AC%E6%95%A3%E7%83%AD%E5%99%A8">第一版：笔记本散热器</a></li><li><a href="#%E7%AC%AC%E4%BA%8C%E7%89%88%EF%BC%9A1515%E9%93%9D%E5%9E%8B%E6%9D%90%E8%83%8C%E6%9E%B6">第二版：1515铝型材背架</a></li></ul>
+      </nav>
+            </aside>
+          <div class="max-w-2xl mx-auto">
             <p>每次出门操作，连接树莓派和马工盒子要耽误不少时间。一直琢磨要搞一个整合的方案，淘宝上卖的都不够 <em>K.I.S.S.</em> 啊，直到有一天，翻出来一个废弃的笔记本电脑散热器，于是把全套FT8野战装备全捆上去了……</p>
-<h2 id="">第一版：笔记本散热器</h2>
+<h2 id="%E7%AC%AC%E4%B8%80%E7%89%88%EF%BC%9A%E7%AC%94%E8%AE%B0%E6%9C%AC%E6%95%A3%E7%83%AD%E5%99%A8" tabindex="-1">第一版：笔记本散热器</h2>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/ft8-go-pack-system/IqNwRFEJUY-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft8-go-pack-system/IqNwRFEJUY-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft8-go-pack-system/IqNwRFEJUY-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/ft8-go-pack-system/68BxFske0d-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft8-go-pack-system/68BxFske0d-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft8-go-pack-system/68BxFske0d-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
-<h2 id="1515">第二版：1515铝型材背架</h2>
+<h2 id="%E7%AC%AC%E4%BA%8C%E7%89%88%EF%BC%9A1515%E9%93%9D%E5%9E%8B%E6%9D%90%E8%83%8C%E6%9E%B6" tabindex="-1">第二版：1515铝型材背架</h2>
 <p>受限于笔记本电脑散热器的形式，这个只能横着走。我又做了一个竖版的一提走。用的是1515铝型材，和防水盒里的安装板。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/ft8-go-pack-system/1LvDUaz0Q1-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft8-go-pack-system/1LvDUaz0Q1-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft8-go-pack-system/1LvDUaz0Q1-1080.jpeg" alt="图片" width="1080" height="810"></picture> FT8一提走全貌</p>
 <p>这套的关键就是安装板，我特别想用铝合金材料的洞洞板，可惜没找到合适的成品。要定做就贵大发了。后来转移到防水盒里的AG固定安装板，这个很合适。基本上可以用扎带把任意形式的东西固定住。</p>
@@ -404,9 +415,10 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <p>趁天还不冷去野外架台吧！</p>
 
             
-                <hr class="border-t-neutral-500 mb-2">
-                <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/1ku35QQxOS-j0tafKk1nNQ" target="_blank">BG6LH - 终于拔草FT8一提走</a></span>
+              <hr class="border-t-neutral-500 mb-2">
+              <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/1ku35QQxOS-j0tafKk1nNQ" target="_blank">BG6LH - 终于拔草FT8一提走</a></span>
             
+          </div>
         </div>
         
         
@@ -439,7 +451,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 
     <!-- 网站栏目 -->
     <div class="">
-        <h3 class="font-bold mb-4" id="-2">网站导航</h3>
+        <h3 class="font-bold mb-4" id="">网站导航</h3>
         <nav class="list-none flex flex-row justify-center md:justify-start md:flex-col">
             
             
@@ -531,7 +543,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/ft8-go-pack-system/` was built on 2025-05-27T17:09:21.606Z -->
+		<!-- This page `/zh-CN/blog/ft8-go-pack-system/` was built on 2025-05-28T08:07:29.447Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>

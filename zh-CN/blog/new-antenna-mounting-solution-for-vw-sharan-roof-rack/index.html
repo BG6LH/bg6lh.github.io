@@ -380,62 +380,73 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
             </span>
             
         </header>
-        <div class="max-w-2xl mx-auto">
+        <div class="relative">
+            <aside id="artical-toc" class="block 
+                        md:sticky md:top-32 md:pl-6 md:float-right md:mr-[-20vw] md:w-64 md:max-h-[70vh] md:overflow-auto
+                        md:border-l-1 md:border-neutral-200
+                        z-10 mb-6 text-xs md:dark:text-neutral-200
+                        ">
+             <p class="font-bold">内容目录</p>
+            <nav class="toc">
+        <ul><li><a href="#%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%A4%A7%E8%84%9A%E6%9D%BF%E5%A4%A9%E7%BA%BF%E5%9B%BA%E5%AE%9A%E5%99%A8">机器人大脚板天线固定器</a></li><li><a href="#%E5%A4%A9%E7%BA%BF%E6%8E%A5%E5%A4%B4%EF%BC%9A%E5%B8%A6%E8%9E%BA%E6%AF%8D%E7%9A%84%E5%B0%84%E9%A2%91%E8%BF%9E%E6%8E%A5%E5%99%A8">天线接头：带螺母的射频连接器</a></li><li><a href="#%E8%87%AA%E5%88%B6%E4%B8%80%E6%A0%B9choke%E7%9A%84%E9%A6%88%E7%BA%BF">自制一根Choke的馈线</a></li><li><a href="#%E5%A4%A9%E7%BA%BF%E5%9B%BA%E5%AE%9A%E6%9D%BF%EF%BC%9A%E4%B9%B0%E7%9A%84diy%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%94%A8%E7%9A%84%E5%A4%A7%E8%84%9A%E6%9D%BF">天线固定板：买的DIY机器人用的大脚板</a></li><li><a href="#t%E5%BD%A2%E8%BD%A8%E9%81%93%E8%9E%BA%E6%A0%93%EF%BC%9Am8%E7%9A%84t%E5%BD%A2%E6%96%B9%E5%A4%B4%E8%9E%BA%E6%A0%93">T形轨道螺栓：M8的T形方头螺栓</a></li><li><a href="#thule%E7%9A%84t-track%E5%B0%BA%E5%AF%B8">Thule的T-Track尺寸</a></li><li><a href="#%E8%A3%85%E8%BD%A6%E7%9A%84%E6%95%B4%E4%BD%93%E6%95%88%E6%9E%9C">装车的整体效果</a></li><li><a href="#%E6%B5%8B%E8%AF%95">测试</a></li><li><a href="#%E8%A3%85ft-818nd%E4%B8%8A%E8%BD%A6%E8%AF%95%E8%AF%95">装FT-818ND上车试试</a></li><li><a href="#%E8%9E%BA%E6%A0%93%E7%9A%84%E5%BC%BA%E5%BA%A6">螺栓的强度</a></li><li><a href="#%E5%90%8E%E8%AE%B0">后记</a></li><li><a href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">参考资料</a></li></ul>
+      </nav>
+            </aside>
+          <div class="max-w-2xl mx-auto">
             <p>我给大面包夏朗找到一个新的天线固定位：行李架横杆上的T形槽。这个位置对于UV段天线很理想，也很合理。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/xypZn8jWo3-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/xypZn8jWo3-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/xypZn8jWo3-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
 <p>我并没有打算装个固定的车台，我只是发现行李架上那个T形轨道很有意思，扩展性很强，什么都能装，那就装个天线接口试试，以后有机会DIY短波车载天线玩，所以就有了这套解决方案：</p>
-<h2 id="-2">机器人大脚板天线固定器</h2>
+<h2 id="%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%A4%A7%E8%84%9A%E6%9D%BF%E5%A4%A9%E7%BA%BF%E5%9B%BA%E5%AE%9A%E5%99%A8" tabindex="-1">机器人大脚板天线固定器</h2>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/o9dRTMpXNk-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/o9dRTMpXNk-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/o9dRTMpXNk-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
-<h2 id="-3">天线接头：带螺母的射频连接器</h2>
+<h2 id="%E5%A4%A9%E7%BA%BF%E6%8E%A5%E5%A4%B4%EF%BC%9A%E5%B8%A6%E8%9E%BA%E6%AF%8D%E7%9A%84%E5%B0%84%E9%A2%91%E8%BF%9E%E6%8E%A5%E5%99%A8" tabindex="-1">天线接头：带螺母的射频连接器</h2>
 <ul>
 <li>直径都是M16的</li>
 <li>分别买了N母转N母、M母、SMA母</li>
 <li>我喜欢N头，防水性好</li>
 </ul>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/UbpXwMaBpd-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/UbpXwMaBpd-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/UbpXwMaBpd-1080.jpeg" alt="图片" width="1080" height="1920"></picture></p>
-<h2 id="choke">自制一根Choke的馈线</h2>
+<h2 id="%E8%87%AA%E5%88%B6%E4%B8%80%E6%A0%B9choke%E7%9A%84%E9%A6%88%E7%BA%BF" tabindex="-1">自制一根Choke的馈线</h2>
 <ul>
 <li>5米N头50-3的同轴馈线</li>
 <li>用NXO-100的45-26-8的磁环，直接把馈线绕了12圈做Choke</li>
 <li>准备用在3.5M以上频段，抑制潜在的共模电流</li>
 </ul>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/ptOrWhKraf-788.avif 788w"><source type="image/webp" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/ptOrWhKraf-788.webp 788w"><img loading="lazy" decoding="async" src="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/ptOrWhKraf-788.jpeg" alt="图片" width="788" height="433"></picture></p>
-<h2 id="diy">天线固定板：买的DIY机器人用的大脚板</h2>
+<h2 id="%E5%A4%A9%E7%BA%BF%E5%9B%BA%E5%AE%9A%E6%9D%BF%EF%BC%9A%E4%B9%B0%E7%9A%84diy%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%94%A8%E7%9A%84%E5%A4%A7%E8%84%9A%E6%9D%BF" tabindex="-1">天线固定板：买的DIY机器人用的大脚板</h2>
 <ul>
 <li>上边的螺丝孔正好有3个M8和6个M16的</li>
 <li>2mm厚铝合金，强度还行</li>
 <li>装车发现有点短，只能用到最外边2个天线孔。</li>
 </ul>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/7cktvg1wEe-590.avif 590w"><source type="image/webp" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/7cktvg1wEe-590.webp 590w"><img loading="lazy" decoding="async" src="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/7cktvg1wEe-590.jpeg" alt="图片" width="590" height="513"></picture></p>
-<h2 id="t-m8-t">T形轨道螺栓：M8的T形方头螺栓</h2>
+<h2 id="t%E5%BD%A2%E8%BD%A8%E9%81%93%E8%9E%BA%E6%A0%93%EF%BC%9Am8%E7%9A%84t%E5%BD%A2%E6%96%B9%E5%A4%B4%E8%9E%BA%E6%A0%93" tabindex="-1">T形轨道螺栓：M8的T形方头螺栓</h2>
 <ul>
 <li>轨道内的尺寸大概是：宽20mm，深5mm，开口10mm。</li>
 <li>不兼容常见的4040铝型材的T形螺栓，但是好像兼容很多汽车座椅的轨道螺栓</li>
 <li>我买到的是17x17mm，4mm厚，M8，强度等级4.8；顺便还买了一些吊环螺母。</li>
 </ul>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/aM-0kKtgqb-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/aM-0kKtgqb-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/aM-0kKtgqb-1080.jpeg" alt="图片" width="1080" height="719"></picture></p>
-<h2 id="thule-t-track">Thule的T-Track尺寸</h2>
+<h2 id="thule%E7%9A%84t-track%E5%B0%BA%E5%AF%B8" tabindex="-1">Thule的T-Track尺寸</h2>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/CA2Ui1aI6i-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/CA2Ui1aI6i-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/CA2Ui1aI6i-1080.jpeg" alt="图片" width="1080" height="788"></picture></p>
-<h2 id="-4">装车的整体效果</h2>
+<h2 id="%E8%A3%85%E8%BD%A6%E7%9A%84%E6%95%B4%E4%BD%93%E6%95%88%E6%9E%9C" tabindex="-1">装车的整体效果</h2>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/Hy869Yc3nC-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/Hy869Yc3nC-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/Hy869Yc3nC-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/yJFE9l0tlS-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/yJFE9l0tlS-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/yJFE9l0tlS-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/b9-GYJ7B1h-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/b9-GYJ7B1h-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/b9-GYJ7B1h-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
-<h2 id="-5">测试</h2>
+<h2 id="%E6%B5%8B%E8%AF%95" tabindex="-1">测试</h2>
 <p>天线目前只有770H，还没有短波天线。整个天馈系统用NanoVNA测试了一下，如图：</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/N2X6UjgUs7-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/N2X6UjgUs7-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/N2X6UjgUs7-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
 <p>UHF段的驻波和史密斯图</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/GAKdlCAgkJ-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/GAKdlCAgkJ-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/GAKdlCAgkJ-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
 <p>VHF段的驻波和史密斯图</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/vkqLtyM4Dh-960.avif 960w"><source type="image/webp" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/vkqLtyM4Dh-960.webp 960w"><img loading="lazy" decoding="async" src="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/vkqLtyM4Dh-960.jpeg" alt="图片" width="960" height="1280"></picture></p>
-<h2 id="ft-818nd">装FT-818ND上车试试</h2>
+<h2 id="%E8%A3%85ft-818nd%E4%B8%8A%E8%BD%A6%E8%AF%95%E8%AF%95" tabindex="-1">装FT-818ND上车试试</h2>
 <p>装车上高速跑了10公里，观察员说很稳当。期间用FT-818ND通联了本地协会UHF中继上的一个台，对方给我报告59，我看到818有3格驻波显示，根据KA7OEI早年间的一个实验，FT-817在432MHz上显示3格，VSWR大概会在1.5:1。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/-6Q1nlAOs6-948.avif 948w"><source type="image/webp" srcset="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/-6Q1nlAOs6-948.webp 948w"><img loading="lazy" decoding="async" src="/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/-6Q1nlAOs6-948.jpeg" alt="图片" width="948" height="1745"></picture></p>
 <p>KA7OEI分享的FT-817驻波指示器对应的VSWR</p>
-<h2 id="-6">螺栓的强度</h2>
+<h2 id="%E8%9E%BA%E6%A0%93%E7%9A%84%E5%BC%BA%E5%BA%A6" tabindex="-1">螺栓的强度</h2>
 <p>强度等级4.8的M8螺栓能有多大承载力暂时没法确定，只查到最大轴力是1570千克力。没找到Thule的M8螺栓的强度等级资料。夏朗车顶最大负载100公斤(含行李架等附件)，并且载重时要限速。我只能说我感觉四颗螺钉4.8等级的螺栓承受这个重量的是没问题的。如果能找到8.8以上等级的还是放心一些。承受车载天线绰绰有余。有人了解这些指标的话欢迎告诉我。</p>
-<h2 id="-7">后记</h2>
+<h2 id="%E5%90%8E%E8%AE%B0" tabindex="-1">后记</h2>
 <p>现在很多MPV、SUV爱用一种借用尾门液压杆支脚的天线座，或者用车顶纵轨/横杆的抱箍。临时固定常用吸盘。还有用强磁贴着天窗玻璃的磁耦合方案。另外还有一种快拆的卡边，但是这个尺寸可能卡不到行李架的T形槽内。所以我这个T形槽方案作为一种补充供大家参考。</p>
-<h2 id="-8">参考资料</h2>
+<h2 id="%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99" tabindex="-1">参考资料</h2>
 <ul>
 <li>磁环巴伦计算器<br>
 http://toroids.info/</li>
@@ -448,9 +459,10 @@ http://www.ka7oei.com/ft817_vswr.html</li>
 </ul>
 
             
-                <hr class="border-t-neutral-500 mb-2">
-                <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/4qf1YtV9ZIP9Xn_6triWeg" target="_blank">BG6LH - 在行李架横杆上装车载天线</a></span>
+              <hr class="border-t-neutral-500 mb-2">
+              <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/4qf1YtV9ZIP9Xn_6triWeg" target="_blank">BG6LH - 在行李架横杆上装车载天线</a></span>
             
+          </div>
         </div>
         
         
@@ -483,7 +495,7 @@ http://www.ka7oei.com/ft817_vswr.html</li>
 
     <!-- 网站栏目 -->
     <div class="">
-        <h3 class="font-bold mb-4" id="-9">网站导航</h3>
+        <h3 class="font-bold mb-4" id="-2">网站导航</h3>
         <nav class="list-none flex flex-row justify-center md:justify-start md:flex-col">
             
             
@@ -575,7 +587,7 @@ http://www.ka7oei.com/ft817_vswr.html</li>
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/` was built on 2025-05-27T17:09:21.504Z -->
+		<!-- This page `/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/` was built on 2025-05-28T08:07:29.396Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>

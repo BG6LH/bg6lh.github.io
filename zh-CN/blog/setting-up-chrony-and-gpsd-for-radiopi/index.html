@@ -381,11 +381,22 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
             </span>
             
         </header>
-        <div class="max-w-2xl mx-auto">
+        <div class="relative">
+            <aside id="artical-toc" class="block 
+                        md:sticky md:top-32 md:pl-6 md:float-right md:mr-[-20vw] md:w-64 md:max-h-[70vh] md:overflow-auto
+                        md:border-l-1 md:border-neutral-200
+                        z-10 mb-6 text-xs md:dark:text-neutral-200
+                        ">
+             <p class="font-bold">内容目录</p>
+            <nav class="toc">
+        <ul><li><a href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E8%AE%BE%E7%BD%AEusb-gps">第一步：设置USB GPS</a></li><li><a href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E7%BB%99chrony%E6%B7%BB%E5%8A%A0gps%E6%8E%88%E6%97%B6%E6%9C%8D%E5%8A%A1">第二步：给chrony添加GPS授时服务</a></li><li><a href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E9%87%8D%E5%90%AFradiopi">第三步：重启RadioPi</a></li></ul>
+      </nav>
+            </aside>
+          <div class="max-w-2xl mx-auto">
             <p>众所周知，WSJT-X解码对时间的精度要求较高，而树莓派本身不带硬件时钟。 为了使WSJT-X能获得精确的时间，我们给 RadioPi预装了chrony。这可以使RadioPi通过互联网获得准确时间。此外，我们还预装了gpsd，你只需购买一个廉价的USB GPS，做一点额外的配置，即 可以获得更精确的GPS时间，同时还使RadioPi具备了卫星定位的能力，一举两得。</p>
 <p>RadioPi使用chrony替代nptd执行时间同步。 在有互联网连接时，chrony可以从支持ntp协议的网络时间服务器获取时间； 没有互联网时，比如在野外，chrony可以从USB GPS获取时间。 以下是一个简明的配置 操 作说明。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/C-tOf0xPmY-1024.avif 1024w"><source type="image/webp" srcset="/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/C-tOf0xPmY-1024.webp 1024w"><img loading="lazy" decoding="async" src="/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/C-tOf0xPmY-1024.png" alt="图片" width="1024" height="768"></picture></p>
-<h2 id="usb-gps">第一步：设置USB GPS</h2>
+<h2 id="%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E8%AE%BE%E7%BD%AEusb-gps" tabindex="-1">第一步：设置USB GPS</h2>
 <p>给RadioPi插上USB GPS，开机后，打开终端(Terminal)窗口，通过以下命令找到RadioPi系统给GPS分配的串口ID。</p>
 <pre class="language-zsh" tabindex="0"><code class="language-zsh">ls -l /dev/serial/by-id</code></pre>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/_Nf-8DXwts-1024.avif 1024w"><source type="image/webp" srcset="/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/_Nf-8DXwts-1024.webp 1024w"><img loading="lazy" decoding="async" src="/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/_Nf-8DXwts-1024.png" alt="图片" width="1024" height="325"></picture></p>
@@ -399,14 +410,14 @@ USBAUTO="true"
 DEVICES="/dev/<你的GPS串口ID>"
 GPSD_OPTIONS="-n"</code></pre>
 <p>DEVICES这里要写入你查到的具体ID。本例中要写入<code>ttyAMC0</code>。然后 按Ctrl-X，保存修改并退出。</p>
-<h2 id="chrony-gps">第二步：给chrony添加GPS授时服务</h2>
+<h2 id="%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E7%BB%99chrony%E6%B7%BB%E5%8A%A0gps%E6%8E%88%E6%97%B6%E6%9C%8D%E5%8A%A1" tabindex="-1">第二步：给chrony添加GPS授时服务</h2>
 <p>接下来把GPS时钟添加到chrony中。</p>
 <p>打开chrony的配置文件。</p>
 <pre class="language-zsh" tabindex="0"><code class="language-zsh">sudo nano /etc/chrony/chrony.conf</code></pre>
 <p>在文件末尾添加下面一行。</p>
 <pre class="language-zsh" tabindex="0"><code class="language-zsh">refclock SHM 0 offset 0.5 delay 0.2 refid NMEA</code></pre>
 <p>按 Ctrl-X，保存修改并退出。</p>
-<h2 id="radiopi">第三步：重启RadioPi</h2>
+<h2 id="%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E9%87%8D%E5%90%AFradiopi" tabindex="-1">第三步：重启RadioPi</h2>
 <p>退出终端(Terminal)窗口，重启RadioPi。</p>
 <p>重启之后，可以按照以下命令检查一下gpsd和chronyd是否正常运转。</p>
 <pre class="language-zsh" tabindex="0"><code class="language-zsh">systemctl is-active gpsd
@@ -414,9 +425,10 @@ systemctl is-active chronyd</code></pre>
 <p>得到反馈 <code>active</code>，表示gpsd和chronyd已经正常提供服务了。</p>
 
             
-                <hr class="border-t-neutral-500 mb-2">
-                <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/CIC2s_TMSHdaFZWs39sNYg" target="_blank">BG6LH - 给RadioPi添加USB GPS</a></span>
+              <hr class="border-t-neutral-500 mb-2">
+              <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/CIC2s_TMSHdaFZWs39sNYg" target="_blank">BG6LH - 给RadioPi添加USB GPS</a></span>
             
+          </div>
         </div>
         
         
@@ -541,7 +553,7 @@ systemctl is-active chronyd</code></pre>
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/` was built on 2025-05-27T17:09:21.597Z -->
+		<!-- This page `/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/` was built on 2025-05-28T08:07:29.457Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>

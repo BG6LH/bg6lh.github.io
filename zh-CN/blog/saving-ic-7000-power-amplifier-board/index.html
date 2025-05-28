@@ -379,14 +379,25 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
             </span>
             
         </header>
-        <div class="max-w-2xl mx-auto">
+        <div class="relative">
+            <aside id="artical-toc" class="block 
+                        md:sticky md:top-32 md:pl-6 md:float-right md:mr-[-20vw] md:w-64 md:max-h-[70vh] md:overflow-auto
+                        md:border-l-1 md:border-neutral-200
+                        z-10 mb-6 text-xs md:dark:text-neutral-200
+                        ">
+             <p class="font-bold">内容目录</p>
+            <nav class="toc">
+        <ul><li><a href="#%E6%95%85%E9%9A%9C%E7%8E%B0%E8%B1%A1">故障现象</a></li><li><a href="#%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF">解决思路</a></li><li><a href="#%E6%A0%A1%E5%87%86">校准</a></li><li><a href="#bi1eih%E7%9A%84ic-7000%E5%8A%9F%E6%94%BE%E6%9D%BFpcb%E4%B8%8B%E8%BD%BD">BI1EIH的IC-7000功放板PCB下载</a></li></ul>
+      </nav>
+            </aside>
+          <div class="max-w-2xl mx-auto">
             <p>最近BI1KFY的IC-7000推动级功放板烧了。无线电老中医BI1EIH新做了PCB 给完美修复 。这机器现在可以叫IC-7001，或者IC-7000 BI1EIH remix吗？</p>
 <p>IC-7000是日本 iCOM公司 2006年上市的一款HF/VHF/UHF收发信机。它的早期产品，烧功放是个常见故障， 原因是推动级设计阻尼不足，容易诱发自激，导致推动管和PCB一起烧毁。 在推动级自激时，有时会发生同时烧毁UHF功放管（即使当时UHF不在工作状态）。</p>
-<h2 id="">故障现象</h2>
+<h2 id="%E6%95%85%E9%9A%9C%E7%8E%B0%E8%B1%A1" tabindex="-1">故障现象</h2>
 <p>接收正常，按PTT可进入发射状态，但HF/VHF/UHF均无输出。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/saving-ic-7000-power-amplifier-board/PWMXzrwO0y-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/saving-ic-7000-power-amplifier-board/PWMXzrwO0y-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/saving-ic-7000-power-amplifier-board/PWMXzrwO0y-1080.jpeg" alt="图片" width="1080" height="1440"></picture></p>
 <p>拆掉这个板子，需要专业工具，费老劲了……</p>
-<h2 id="-2">解决思路</h2>
+<h2 id="%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF" tabindex="-1">解决思路</h2>
 <p>在推动级功放板上增加一个1～10Ω的阻尼电阻，可大大降低自激的可能性。IC-7000 的 晚期产品也是这么解决的，它们加的电阻是1Ω。</p>
 <p>如果你的还没烧，可以自己加一个试试，用小刀在电路板划一个口子，再焊上一个电阻。很多老外就是这么干的。如果你的板子已经烧了，那福音来了：</p>
 <p>BI1EIH按原尺寸重新测量、设计、反复打样制作了新的推动板，增加了阻尼电阻，原位精确更换。而且，这个PCB还开源了，需要的朋友赶紧去他的Github下载吧： https://github.com/sgub/ic7k-driver-pcb</p>
@@ -400,20 +411,21 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/saving-ic-7000-power-amplifier-board/40L_J2IEhU-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/saving-ic-7000-power-amplifier-board/40L_J2IEhU-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/saving-ic-7000-power-amplifier-board/40L_J2IEhU-1080.png" alt="图片" width="1080" height="325"></picture></p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/saving-ic-7000-power-amplifier-board/cZOzL6N6lI-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/saving-ic-7000-power-amplifier-board/cZOzL6N6lI-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/saving-ic-7000-power-amplifier-board/cZOzL6N6lI-1080.jpeg" alt="图片" width="1080" height="808"></picture></p>
 <p>用mouser上买的心里踏实</p>
-<h2 id="-3">校准</h2>
+<h2 id="%E6%A0%A1%E5%87%86" tabindex="-1">校准</h2>
 <p>最后，别忘了校准一下IC7000推动级的 <strong>静态工作点</strong> ，确保功率输出达标。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/saving-ic-7000-power-amplifier-board/3yrL2MP4HB-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/saving-ic-7000-power-amplifier-board/3yrL2MP4HB-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/saving-ic-7000-power-amplifier-board/3yrL2MP4HB-1080.jpeg" alt="图片" width="1080" height="1440"></picture></p>
 <p>最最后，汇总一下重要信息：</p>
-<h2 id="bi1eih-ic-7000-pcb">BI1EIH的IC-7000功放板PCB下载</h2>
+<h2 id="bi1eih%E7%9A%84ic-7000%E5%8A%9F%E6%94%BE%E6%9D%BFpcb%E4%B8%8B%E8%BD%BD" tabindex="-1">BI1EIH的IC-7000功放板PCB下载</h2>
 <p><a href="https://github.com/sgub/ic7k-driver-pcb">https://github.com/sgub/ic7k-driver-pcb</a></p>
 <p>如果你的IC-7000也烧了，可以去无线电老中医BI1EIH的 <strong>闲鱼号sgub</strong> 问诊：</p>
 <pre><code>27€nrpSXE3A5o1€ https://m.tb.cn/h.fghxdWW 我在闲鱼发布了【#技能服务# #设备维修# iCOM IC-7000推动级功】
 </code></pre>
 
             
-                <hr class="border-t-neutral-500 mb-2">
-                <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/CP97xmAye9cErsm6qDpu_A" target="_blank">BG6LH - 拯救iCOM IC-7000功放板</a></span>
+              <hr class="border-t-neutral-500 mb-2">
+              <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/CP97xmAye9cErsm6qDpu_A" target="_blank">BG6LH - 拯救iCOM IC-7000功放板</a></span>
             
+          </div>
         </div>
         
         
@@ -446,7 +458,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 
     <!-- 网站栏目 -->
     <div class="">
-        <h3 class="font-bold mb-4" id="-4">网站导航</h3>
+        <h3 class="font-bold mb-4" id="">网站导航</h3>
         <nav class="list-none flex flex-row justify-center md:justify-start md:flex-col">
             
             
@@ -538,7 +550,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/saving-ic-7000-power-amplifier-board/` was built on 2025-05-27T17:09:21.524Z -->
+		<!-- This page `/zh-CN/blog/saving-ic-7000-power-amplifier-board/` was built on 2025-05-28T08:07:29.413Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>

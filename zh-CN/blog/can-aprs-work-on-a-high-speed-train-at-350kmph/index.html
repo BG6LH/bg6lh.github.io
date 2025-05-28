@@ -379,7 +379,18 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
             </span>
             
         </header>
-        <div class="max-w-2xl mx-auto">
+        <div class="relative">
+            <aside id="artical-toc" class="block 
+                        md:sticky md:top-32 md:pl-6 md:float-right md:mr-[-20vw] md:w-64 md:max-h-[70vh] md:overflow-auto
+                        md:border-l-1 md:border-neutral-200
+                        z-10 mb-6 text-xs md:dark:text-neutral-200
+                        ">
+             <p class="font-bold">内容目录</p>
+            <nav class="toc">
+        <ul><li><a href="#%E9%9A%BE%E9%81%93%E6%98%AF%E9%AB%98%E9%93%81%E9%80%9F%E5%BA%A6%E5%A4%AA%E5%BF%AB%E4%BA%86%E5%90%97%EF%BC%9F">难道是高铁速度太快了吗？</a><ul><li><a href="#%E5%A4%9A%E6%99%AE%E5%8B%92%E6%95%88%E5%BA%94">多普勒效应</a></li><li><a href="#%E5%AF%B9aprs%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%BD%B1%E5%93%8D">对APRS信号的影响</a></li></ul></li><li><a href="#%E9%80%9F%E5%BA%A6%E4%B8%8D%E6%98%AF%E5%85%B3%E9%94%AE%E5%BD%B1%E5%93%8D">速度不是关键影响</a></li><li><a href="#%E7%AA%97%E6%88%B7%E5%8F%AF%E8%83%BD%E6%98%AF%E6%A0%B8%E5%BF%83%E9%97%AE%E9%A2%98">窗户可能是核心问题</a></li><li><a href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">参考资料</a></li></ul>
+      </nav>
+            </aside>
+          <div class="max-w-2xl mx-auto">
             <p><strong>2025-05-27更新</strong></p>
 <ul>
 <li>原文的多普勒频移在线计算器有错误，导致计算结果大了一倍，现已经更新。并且采取了新的计算公式。</li>
@@ -391,8 +402,8 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <p>从北京出发， 在西边高山上就有几个APRS基站，我正好坐在列车西侧靠窗位置，基本可以目视通信。河北的APRS普及的不错，一路上 有很多业余爱好者建立的基站。沿路的几个大城市，保定、石家庄、邢台、邯郸，也都在铁路以西。</p>
 <p>我把对讲机设置为每分钟发送一次信标。 然鹅，一小时后到了石家庄，竟然一个信标都没打上。只收到过4条1区呼号的APRS信标。要知道这几个基站，平时在市区里用对讲机都能轻松打卡。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/Z1DVfzcX1G-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/Z1DVfzcX1G-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/Z1DVfzcX1G-1080.jpeg" alt="图片" width="1080" height="809"></picture></p>
-<h2 id="">难道是高铁速度太快了吗？</h2>
-<h3 id="-2">多普勒效应</h3>
+<h2 id="%E9%9A%BE%E9%81%93%E6%98%AF%E9%AB%98%E9%93%81%E9%80%9F%E5%BA%A6%E5%A4%AA%E5%BF%AB%E4%BA%86%E5%90%97%EF%BC%9F" tabindex="-1">难道是高铁速度太快了吗？</h2>
+<h3 id="%E5%A4%9A%E6%99%AE%E5%8B%92%E6%95%88%E5%BA%94" tabindex="-1">多普勒效应</h3>
 <p>所谓多普勒效应就是，当声音，光和无线电波等振动源与观测者以相对速度V相对运动时，观测者所收到的振动频率与振动源所发出的频率有所不同。因为这一现象是奥地利科学家多普勒最早发现的，所以称之为多普勒效应。由多普勒效应所形成的频率变化叫做多普勒频移，它与相对速度V成正比，与振动的频率成反比。</p>
 <p>高铁时速350千米/小时(km/h) = 0.0972千米/秒(km/s)=97.2米/秒。APRS用的是144.640MHz的频率，波长是2米左右，这么一算移动一个波长大概是1/50秒。这大约是50Hz的样子。</p>
 <p>找了一个在线的多普勒频移计算器，验证了一下，算出来的频率误差是46.8Hz，相当于0.32ppm，这点误差几乎可以忽略不计了。</p>
@@ -406,21 +417,21 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </ul>
 <p>代入数值：<math><mrow><msub><mi>f</mi><mi>d</mi></msub><mo>=</mo></mrow><mrow><mfrac><mn>97.2</mn><mrow><mn>3</mn><mo>×</mo><msup><mn>10</mn><mn>8</mn></msup></mrow></mfrac><mo>⋅</mo></mrow><mrow><mn>144.640</mn><mo>×</mo></mrow><mrow><msup><mn>10</mn><mn>6</mn></msup><mo>≈</mo></mrow><mrow><mn>46.8</mn><mspace width="0.1667em"></mspace><mtext>Hz</mtext></mrow></math></p>
 <p><math><mrow><mtext>频</mtext><mtext>率</mtext><mtext>误</mtext><mtext>差</mtext><mi>P</mi><mi>P</mi><mi>M</mi><mo>=</mo></mrow><mrow><mfrac><msub><mi>f</mi><mi>d</mi></msub><msub><mi>f</mi><mn>0</mn></msub></mfrac><mo>×</mo></mrow><mrow><msup><mn>10</mn><mn>6</mn></msup><mo>=</mo></mrow><mrow><mfrac><mn>46.8</mn><mn>144640000</mn></mfrac><mo>×</mo></mrow><mrow><msup><mn>10</mn><mn>6</mn></msup><mo>≈</mo></mrow><mrow><mn>0.3236</mn><mspace width="0.1667em"></mspace><mtext>ppm</mtext></mrow></math></p>
-<h3 id="aprs">对APRS信号的影响</h3>
+<h3 id="%E5%AF%B9aprs%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%BD%B1%E5%93%8D" tabindex="-1">对APRS信号的影响</h3>
 <p>46.8Hz的频偏，对于APRS信号的144.640MHz载频来说，影响微乎其微。</p>
 <p>但是这个频偏一般会传导到信号的音频部分会怎样？</p>
 <p>APRS信号使用的是AX.25协议帧格式的AFSK，Audio Frequency-Shift Keying，音频频移键控进行调制的。分别用1200Hz的音频表示1，2200Hz音频表示0。46.8Hz的误差并不是很突出。</p>
 <p>此外IARU第1区对VHF技术建议中，对信标台的频率容错要求是±200Hz，对音频响应的范围是300～3000Hz，这些也都包容了46.8Hz那点误差。</p>
-<h2 id="-3">速度不是关键影响</h2>
+<h2 id="%E9%80%9F%E5%BA%A6%E4%B8%8D%E6%98%AF%E5%85%B3%E9%94%AE%E5%BD%B1%E5%93%8D" tabindex="-1">速度不是关键影响</h2>
 <p><strong>看来350公里/小时的速度对VHF通信影响微乎其微。</strong> 空间站的速度是27000多公里/小时，这才有多普勒效应的影响，不得不做频率补偿的话题。</p>
 <p>眼看到了邢台，我用手动模式持续发了十几个。终于在BI1ACW-15基站上打上了两个点，说明使点劲儿还是能通的。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/6NWYuSWKZE-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/6NWYuSWKZE-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/6NWYuSWKZE-1080.jpeg" alt="图片" width="1080" height="2337"></picture></p>
 <p>有RAW数据为证。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/cJ47XL9qz9-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/cJ47XL9qz9-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/cJ47XL9qz9-1080.jpeg" alt="图片" width="1080" height="739"></picture></p>
-<h2 id="-4">窗户可能是核心问题</h2>
+<h2 id="%E7%AA%97%E6%88%B7%E5%8F%AF%E8%83%BD%E6%98%AF%E6%A0%B8%E5%BF%83%E9%97%AE%E9%A2%98" tabindex="-1">窗户可能是核心问题</h2>
 <p>为啥高铁上这么难打卡APRS，想来想去，恐怕还是 <strong>高铁玻璃对无线电信号衰减的太大</strong> 。那玻璃是多层的，有金属镀膜，还有电加热丝……最终辐射出去的信号很弱了。</p>
 <p>如果你有更好的办法在高铁上打卡APRS，欢迎分享！</p>
-<h2 id="-5">参考资料</h2>
+<h2 id="%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99" tabindex="-1">参考资料</h2>
 <ul>
 <li>
 <p><a href="https://www.omnicalculator.com/physics/doppler-effect">https://www.omnicalculator.com/physics/doppler-effect</a></p>
@@ -434,9 +445,10 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </ul>
 
             
-                <hr class="border-t-neutral-500 mb-2">
-                <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/5uxxs9BUamgI4Lkmi2raQQ" target="_blank">BG6LH - 时速350公里的高铁上能打卡APRS吗？</a></span>
+              <hr class="border-t-neutral-500 mb-2">
+              <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/5uxxs9BUamgI4Lkmi2raQQ" target="_blank">BG6LH - 时速350公里的高铁上能打卡APRS吗？</a></span>
             
+          </div>
         </div>
         
         
@@ -469,7 +481,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 
     <!-- 网站栏目 -->
     <div class="">
-        <h3 class="font-bold mb-4" id="-6">网站导航</h3>
+        <h3 class="font-bold mb-4" id="">网站导航</h3>
         <nav class="list-none flex flex-row justify-center md:justify-start md:flex-col">
             
             
@@ -561,7 +573,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/` was built on 2025-05-27T17:09:21.573Z -->
+		<!-- This page `/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/` was built on 2025-05-28T08:07:29.425Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>

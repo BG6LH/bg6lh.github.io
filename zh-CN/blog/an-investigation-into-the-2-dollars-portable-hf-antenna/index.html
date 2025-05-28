@@ -379,10 +379,21 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
             </span>
             
         </header>
-        <div class="max-w-2xl mx-auto">
+        <div class="relative">
+            <aside id="artical-toc" class="block 
+                        md:sticky md:top-32 md:pl-6 md:float-right md:mr-[-20vw] md:w-64 md:max-h-[70vh] md:overflow-auto
+                        md:border-l-1 md:border-neutral-200
+                        z-10 mb-6 text-xs md:dark:text-neutral-200
+                        ">
+             <p class="font-bold">内容目录</p>
+            <nav class="toc">
+        <ul><li><a href="#%E5%85%88%E8%AF%B4%E7%BB%93%E8%AE%BA">先说结论</a></li><li><a href="#2%E7%BE%8E%E5%85%83%E8%9E%BA%E6%97%8B%E4%BE%BF%E6%90%BA%E5%A4%A9%E7%BA%BF%E7%9A%84%E7%89%B9%E5%BE%81">2美元螺旋便携天线的特征</a></li><li><a href="#2%E7%BE%8E%E5%85%83%E8%9E%BA%E6%97%8B%E5%A4%A9%E7%BA%BF%E7%9A%84%E5%87%BA%E5%A4%84">2美元螺旋天线的出处</a></li><li><a href="#%E6%A1%88%E4%BE%8B%EF%BC%9Akk6gxg%E7%9A%8440%E7%B1%B3%E6%B3%A2%E6%AE%B5%E8%9E%BA%E6%97%8B%E7%BC%A0%E7%BB%95%E5%A4%A9%E7%BA%BF">案例：KK6GXG的40米波段螺旋缠绕天线</a></li><li><a href="#%E8%9E%BA%E6%97%8B%E7%BC%A0%E7%BB%95%E7%9A%84gp%E5%A4%A9%E7%BA%BF">螺旋缠绕的GP天线</a></li><li><a href="#%E4%B8%BA%E5%95%A5%E7%94%A8%E4%BA%861%2F2%E6%B3%A2%E9%95%BF%E7%9A%84%E5%AF%BC%E7%BA%BF%EF%BC%9F">为啥用了1/2波长的导线？</a></li><li><a href="#%E9%AB%98q%E5%80%BC%E5%A4%A9%E7%BA%BF%EF%BC%8C%E6%8E%A5%E5%9C%B0%E6%8D%9F%E8%80%97%E5%B7%AE%E5%BC%82%E5%A4%A7%EF%BC%8C%E6%95%88%E7%8E%87%E4%BD%8E">高Q值天线，接地损耗差异大，效率低</a></li><li><a href="#%E5%90%84%E7%A7%8D%E7%BC%A0%E7%BB%95%E5%8F%98%E5%BD%A2">各种缠绕变形</a></li><li><a href="#g4fgq%E8%9E%BA%E7%BA%BF%E7%BC%A0%E7%BB%95%E5%A4%A9%E7%BA%BF%E7%9A%84%E5%BB%BA%E6%A8%A1%E5%B7%A5%E5%85%B7">G4FGQ螺线缠绕天线的建模工具</a></li><li><a href="#%E7%9B%B8%E5%85%B3%E6%A1%88%E4%BE%8B%E6%B1%87%E6%80%BB">相关案例汇总</a></li></ul>
+      </nav>
+            </aside>
+          <div class="max-w-2xl mx-auto">
             <p>这两天在hellocq.net跟人讨论他的迷之馈线，暮然发现他用的是一根： <strong>2美元的螺旋便携式短波天线</strong> ，这是一个2008年流行的DIY天线。物理总长度只有2米出头，工作在20米波段。</p>
 <p>起初我以为这是1/4波长GP天线的变种，但又看到好多人说这是1/2波长端馈。弄得我也含糊了，于是花了点时间做研究。</p>
-<h2 id="">先说结论</h2>
+<h2 id="%E5%85%88%E8%AF%B4%E7%BB%93%E8%AE%BA" tabindex="-1">先说结论</h2>
 <p>这的确是一副以1/4波长GP为原型的天线，它曾经在上世纪70年代流行过一阵子。到今天有几种和它相关的名字，提起来可能大家都会感到亲切：</p>
 <ul>
 <li>连续加载天线：Continually Loaded Vertical，CLV</li>
@@ -395,16 +406,16 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <p>这种天线也可以叫做 <strong>谐振电感</strong> 。大多数案例都使用了1/2波长的导线，绕制出 <strong>1/4波长电气长度</strong> 的天线。</p>
 <p>这种天线可以肯定是 <strong>负增益</strong> 的，依赖于不同的材料和绕制工艺。基本上它损失一半效率。而且效率 <strong>受地网形态的影响很大</strong> 。它的Q值高，所以带宽很窄。</p>
 <p>它的优点也很明显：省地方， 小！驾驭它最简单的办法是 <strong>用天调</strong> ，想玩明白至少也得有一个天分。</p>
-<h2 id="2-2">2美元螺旋便携天线的特征</h2>
+<h2 id="2%E7%BE%8E%E5%85%83%E8%9E%BA%E6%97%8B%E4%BE%BF%E6%90%BA%E5%A4%A9%E7%BA%BF%E7%9A%84%E7%89%B9%E5%BE%81" tabindex="-1">2美元螺旋便携天线的特征</h2>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/HPBQpx3MsL-522.avif 522w"><source type="image/webp" srcset="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/HPBQpx3MsL-522.webp 522w"><img loading="lazy" decoding="async" src="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/HPBQpx3MsL-522.png" alt="图片" width="522" height="205"></picture></p>
 <p>这个天线用了将近9米多、约半个波长的导线，绕制了一个1.2米长的线圈，这部分很像典型的“连续加载”天线。但是它还有一个0.91米长的直线振子。导线总长度的确是1/2个波长。</p>
 <p>但是它又有几个属于1/4波长GP天线的显著特征：单极、一端1:1馈电、使用1/4波长地网……馈电点电压低，电流高，阻抗低。</p>
-<h2 id="2-3">2美元螺旋天线的出处</h2>
+<h2 id="2%E7%BE%8E%E5%85%83%E8%9E%BA%E6%97%8B%E5%A4%A9%E7%BA%BF%E7%9A%84%E5%87%BA%E5%A4%84" tabindex="-1">2美元螺旋天线的出处</h2>
 <p>我找到了这个天线的原始出处，2001年9月，AH6NF和WH6GS发表在夏威夷业余无线电网站的帖子：</p>
 <p><a href="http://ham.aditl.com/ham/helical-antenna/index.html">http://ham.aditl.com/ham/helical-antenna/index.html</a></p>
 <p>这个帖子和Hellocq.net上说的细节完全一致。同时它提到了：The design is a <strong>continuously loaded</strong>, <strong>helically wound vertical</strong> antenna with a three-foot stinger……关键字： <strong>连续加载</strong> 、 <strong>螺旋缠绕</strong> ，此外还带有一根3英尺(0.91米)长的直线振子(stinger)。</p>
 <p>我按照“连续加载”这个关键字，寻找这个天线的理论模型，大部分是谈论电小天线、手机、Wi-Fi天线的设计。按照“螺旋缠绕”找，找出来好多业余届讨论过的帖子。他们大部分都是按照1/4波长GP天线为模型去设计的。</p>
-<h2 id="kk6gxg-40">案例：KK6GXG的40米波段螺旋缠绕天线</h2>
+<h2 id="%E6%A1%88%E4%BE%8B%EF%BC%9Akk6gxg%E7%9A%8440%E7%B1%B3%E6%B3%A2%E6%AE%B5%E8%9E%BA%E6%97%8B%E7%BC%A0%E7%BB%95%E5%A4%A9%E7%BA%BF" tabindex="-1">案例：KK6GXG的40米波段螺旋缠绕天线</h2>
 <p>典型案例是KK6GXG的40米波段螺旋缠绕天线，他在2015年4月份做了一副。</p>
 <p><a href="http://www.kk6gxg.com/40-meter-antenna/">http://www.kk6gxg.com/40-meter-antenna/</a></p>
 <p>他的资料来自1975年的ARRL业余无线电手册，第606页的一张原理图：</p>
@@ -415,7 +426,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <li>缠绕电感部分，1975年的这张图上是建议用4到20英尺(1.5～6米)长的杆子，缠绕1/2波长长度的14AWG(2平方)的导线。而KK6GXG的实操，是用了66.5英尺(20米，40米 <strong>波长的一半</strong>)的导线绕在一根6英尺(1.8米)的杆子上。</li>
 <li>最后，KK6GXG计划用一个 <strong>Z-Match天调</strong> 。1975年这张图用了一个可变电感，也推荐再用一个天调。</li>
 </ul>
-<h2 id="gp">螺旋缠绕的GP天线</h2>
+<h2 id="%E8%9E%BA%E6%97%8B%E7%BC%A0%E7%BB%95%E7%9A%84gp%E5%A4%A9%E7%BA%BF" tabindex="-1">螺旋缠绕的GP天线</h2>
 <p>这些案例的原型显然都基于一个GP天线，因为他们都用到了1/4波长的地网，来提供一个“地平面”，以“镜像”另外一半虚拟的天线，达到一个偶极天线的“平衡”状态，所以他们都是低阻抗馈电的案例。</p>
 <p>它到底是一个1/4GP？1/2GP？还是5/8GP？还是一个端馈的长线？ <strong>还是要看它的理论模型的电气长度</strong> 。</p>
 <p>我们回顾一下1/4波长的GP天线模型：</p>
@@ -429,7 +440,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <li>如果电抗还没归0，那可以在另一头增加一根直线导体，它会带来一些容性的电抗，再抵消一部分感抗。</li>
 <li>如果总电抗还没回归到0，那就可以上天调了……</li>
 </ul>
-<h2 id="1-2">为啥用了1/2波长的导线？</h2>
+<h2 id="%E4%B8%BA%E5%95%A5%E7%94%A8%E4%BA%861%2F2%E6%B3%A2%E9%95%BF%E7%9A%84%E5%AF%BC%E7%BA%BF%EF%BC%9F" tabindex="-1">为啥用了1/2波长的导线？</h2>
 <p>现在我大概理解了“螺旋缠绕”的意义了：</p>
 <ul>
 <li>把拉直的天线缠绕起来，使整个天线的物理长度变短，可以节约物理空间；</li>
@@ -450,17 +461,17 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <li>因此很难给出一 个标准模型、 能做到多波段谐振的天线， 只能是“盐少许，蒜蓉一小撮，烧至七成热……”，这时候可以用天 分 来做参考；</li>
 <li>实在不行，交给天调吧。</li>
 </ul>
-<h2 id="q">高Q值天线，接地损耗差异大，效率低</h2>
+<h2 id="%E9%AB%98q%E5%80%BC%E5%A4%A9%E7%BA%BF%EF%BC%8C%E6%8E%A5%E5%9C%B0%E6%8D%9F%E8%80%97%E5%B7%AE%E5%BC%82%E5%A4%A7%EF%BC%8C%E6%95%88%E7%8E%87%E4%BD%8E" tabindex="-1">高Q值天线，接地损耗差异大，效率低</h2>
 <p>螺旋缠绕天线一般都是高Q值的，因为一大半都是电感嘛。想象一个很硬的弹簧，使劲按压到标定长度，很难保持是吧。 这就类似高Q值，高Q值表示可调谐的带宽会非常窄。 一些案例甚至说在LF和MF波段的应用上，都不能保证一个SSB的3000Hz语音的带宽，玩CW还凑合，FT8足够了。</p>
 <p><a href="https://www.smeter.net/antennas/helical-modeling.php">https://www.smeter.net/antennas/helical-modeling.php</a></p>
 <p>上边这篇文章还提到它的“接地损耗”琢磨不定，不同质量、不同面积的“地”，带来的损耗差异很大。</p>
 <p>和常规的加感天线相比，它的效率并不高，有评价说它的分布 <strong>损耗和增益基本上相当</strong> ，后来人们建模和实际应用都证明了这一点。这是一个2012年，QRZ.com论坛上的讨论：</p>
 <p><a href="https://forums.qrz.com/index.php?threads/helical-hf-antennas-%E2%80%93-anyone.358209/#post-2628608">https://forums.qrz.com/index.php?threads/helical-hf-antennas-%E2%80%93-anyone.358209/#post-2628608</a></p>
-<h2 id="-2">各种缠绕变形</h2>
+<h2 id="%E5%90%84%E7%A7%8D%E7%BC%A0%E7%BB%95%E5%8F%98%E5%BD%A2" tabindex="-1">各种缠绕变形</h2>
 <p>这个天线流行于上世纪70年代，那个年代还流行Slinky偶极天线。就是用两个松松的螺旋弹簧做的偶极天线。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/M3yvlS8yaL-1000.avif 1000w"><source type="image/webp" srcset="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/M3yvlS8yaL-1000.webp 1000w"><img loading="lazy" decoding="async" src="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/M3yvlS8yaL-1000.png" alt="图片" width="1000" height="545"></picture></p>
 <p>现在这种天线也有人玩，不仅仅是因为好玩，毕竟各种缠绕之后，它省地方啊，尤其是长波和中波，这些需要大尺寸空间的波段。</p>
-<h2 id="g4fgq">G4FGQ螺线缠绕天线的建模工具</h2>
+<h2 id="g4fgq%E8%9E%BA%E7%BA%BF%E7%BC%A0%E7%BB%95%E5%A4%A9%E7%BA%BF%E7%9A%84%E5%BB%BA%E6%A8%A1%E5%B7%A5%E5%85%B7" tabindex="-1">G4FGQ螺线缠绕天线的建模工具</h2>
 <p>G4FGQ有一个关于HWV天线的电感导线长度的计算公式：</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/75qG0QEWdR-720.avif 720w"><source type="image/webp" srcset="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/75qG0QEWdR-720.webp 720w"><img loading="lazy" decoding="async" src="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/75qG0QEWdR-720.png" alt="图片" width="720" height="540"></picture></p>
 <p>G4FGQ关于HWV的导线尺寸的计算公式</p>
@@ -468,7 +479,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <p><a href="http://static.smeter.net/software/helical3.exe">http://static.smeter.net/software/helical3.exe</a></p>
 <p>可惜我没下载下来，也不知道它该怎么用。它只是出现在跟这个话题相关的一个1997年的网页上，欢迎有兴趣的朋友去试试。</p>
 <p><a href="https://www.smeter.net/antennas/helical-modeling.php">https://www.smeter.net/antennas/helical-modeling.php</a></p>
-<h2 id="-3">相关案例汇总</h2>
+<h2 id="%E7%9B%B8%E5%85%B3%E6%A1%88%E4%BE%8B%E6%B1%87%E6%80%BB" tabindex="-1">相关案例汇总</h2>
 <ul>
 <li>
 <p>AH6NF和WH6GS发表在夏威夷业余无线电网站的帖子：<a href="http://ham.aditl.com/ham/helical-antenna/index.html">http://ham.aditl.com/ham/helical-antenna/index.html</a></p>
@@ -502,9 +513,10 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </ul>
 
             
-                <hr class="border-t-neutral-500 mb-2">
-                <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/Rx5klKuPlmX7ghvrFOJEzQ" target="_blank">BG6LH - 关于2美元便携短波天线的调查</a></span>
+              <hr class="border-t-neutral-500 mb-2">
+              <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/Rx5klKuPlmX7ghvrFOJEzQ" target="_blank">BG6LH - 关于2美元便携短波天线的调查</a></span>
             
+          </div>
         </div>
         
         
@@ -537,7 +549,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 
     <!-- 网站栏目 -->
     <div class="">
-        <h3 class="font-bold mb-4" id="-4">网站导航</h3>
+        <h3 class="font-bold mb-4" id="">网站导航</h3>
         <nav class="list-none flex flex-row justify-center md:justify-start md:flex-col">
             
             
@@ -629,7 +641,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/` was built on 2025-05-27T17:09:21.457Z -->
+		<!-- This page `/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/` was built on 2025-05-28T08:07:29.362Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>

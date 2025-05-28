@@ -380,25 +380,47 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
             </span>
             
         </header>
-        <div class="max-w-2xl mx-auto">
+        <div class="relative">
+            <aside id="artical-toc" class="block 
+                        md:sticky md:top-32 md:pl-6 md:float-right md:mr-[-20vw] md:w-64 md:max-h-[70vh] md:overflow-auto
+                        md:border-l-1 md:border-neutral-200
+                        z-10 mb-6 text-xs md:dark:text-neutral-200
+                        ">
+             <p class="font-bold">内容目录</p>
+            <nav class="toc">
+        <ul><li><a href="#%E4%BD%BF%E7%94%A8%E4%BD%93%E4%BC%9A">使用体会</a></li><li><a href="#%E8%BF%9C%E7%A8%8B%E7%BB%84%E7%BD%91%E7%AD%96%E7%95%A5">远程组网策略</a></li><li><a href="#scu-lan10%E5%92%8Cscu-17%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%93%8D%E4%BD%9C%E7%9A%84%E7%BB%84%E7%BD%91%E6%96%B9%E6%A1%88">SCU-LAN10和SCU-17实现远程操作的组网方案</a><ul><li><a href="#%E8%BF%9E%E6%8E%A5-scu-lan10-%E7%9A%84%E6%AD%A5%E9%AA%A4">连接 SCU-LAN10 的步骤</a></li><li><a href="#%E8%BF%9E%E6%8E%A5scu-17%E7%9A%84%E8%A6%81%E7%82%B9">连接SCU-17的要点</a></li><li><a href="#%E5%BF%85%E9%A1%BB%E7%94%A8scu-17%E5%90%97%EF%BC%9F">必须用SCU-17吗？</a></li></ul></li><li><a href="#%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%8F%B0%E7%AB%99%E5%AE%9E%E6%99%AF">远程控制台站实景</a></li><li><a href="#scu-lan10%E7%9A%84%E6%9C%80%E4%BD%B3%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF">SCU-LAN10的最佳应用场景</a></li><li><a href="#scu-lan10%E7%9A%84%E5%BB%B6%E6%97%B6%E8%83%BD%E6%9C%89%E5%A4%9A%E5%A4%A7%EF%BC%9F">SCU-LAN10的延时能有多大？</a></li><li><a href="#%E5%85%B3%E4%BA%8Escu-lan10%E7%9A%84%E4%B8%80%E4%BA%9B%E6%9C%9F%E5%BE%85">关于SCU-LAN10的一些期待</a><ul><li><a href="#%E6%8E%A8%E6%B5%8B%E4%B8%80%E4%B8%8Bscu-lan10%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84">推测一下SCU-LAN10的软件架构</a></li><li><a href="#%E5%85%B3%E4%BA%8Escu-lan10%E7%9A%84%E6%8E%A5%E5%8F%A3%E7%8C%9C%E6%83%B3">关于SCU-LAN10的接口猜想</a></li></ul></li><li><a href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8Bcw%EF%BC%9F">如何实现远程CW？</a></li><li><a href="#%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99">相关资料</a></li></ul>
+      </nav>
+            </aside>
+          <div class="max-w-2xl mx-auto">
             <p>我的FTDX10和天线都在ON80fa，平时大部分时间住在<code>OM89hu</code>，工作在<code>OM89it</code>，还经常出差，一年到头FTDX10没开过几天，<a href="http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;mid=2247484186&amp;idx=1&amp;sn=4587a8e29c3f55153ac5b67853325061&amp;chksm=e9498590de3e0c8619b3b1453bd1a61daffce85117634f64ca09453121ec6184ee09314808cc&amp;scene=21#wechat_redirect">就这还烧了两次功放</a>。为了解决远程摸黑儿操作这个痛点，我部署了一个SCU-LAN10和SCU-17支撑的FTDX10远程操作网络，达成了实时电台监控、远程参加了CQWW SSB比赛、还能继续远程FT8、自动日志，真是相当开心。</p>
 <p>SCU-LAN10是八重洲专门为SDR架构的收发信机推出的网络控制模块，支持FTDX10、101D、101MP，以及新出的FT-710。真是SDR时代来了，频谱数据可以在网上到处飞了。</p>
-<h2 id="">使用体会</h2>
-<p>SCU-LAN10（它的硬件软件都叫SCU-LAN10）是个相当不错的远程电台操作、监控系统。它可以实时呈现FTDX10当前的所有状态，尤其是那些非常重要的：天调开关、驻波、功率、ALC、VFO-A/B切换、Split状态；最重要的，还有声音和频谱；它几乎覆盖了FTDX10里的所有功能，至少业务操作该有的全有；新的固件还支持了远程关机；比起FTDX10外接显示器提供了更丰富的操作界面；在电脑的大屏幕上可以直接操作3D频谱，如果是配合FTDX101则有两个频谱窗口可用，信息量巨大；它还支持鼠标操作，选择各种功能参数，拨动鼠标滚选频，快捷直观。终于不用小心翼翼地躲开大拨轮，在一堆旋钮和按键里找功能了。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/NhcF0k4rdG-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/NhcF0k4rdG-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/NhcF0k4rdG-1080.png" alt="图片" width="1080" height="607"></picture></p>
-<p>用SCU-LAN10软件观察7MHz业余频段全段的频谱</p>
-<p>SCU-LAN10提供了远程的SSB通讯的能力。你可以按着电脑的空格键当PTT，或者打开VOX直接对着电脑呼叫。今年的CQWW SSB比赛，我拿它远程扫地搞了69个QSO。顺便说，比赛时3D频谱选频其实并不是很实用。还是2D的频谱容易准确定位。</p>
-<p>遗憾是，时至今日SCU-LAN10只支持<strong>SSB话</strong>业务的全功能收发。CW只能收听，且没有解码功能。FT8、RTTY、SSTV这些操作则完全不支持。至少不能靠SCU-LAN10直接的功能实现，只能寻找别的解决方案。为啥不给CW、Digital的全功能发送？有人猜测是网络延时会影响CW开关信号的准确性，听起来有点道理。可是SCU-LAN10又提供了丰富的CW相关功能，比如ZIN、APF、CW Pitch甚至WPM速度设定。或许未来的固件升级会逐步打开一些新功能？SCU-LAN10似乎是正在演进中的产品。</p>
-<blockquote>
-<p>[!NOTE]</p>
-<h3 id="scu-lan10">推测一下SCU-LAN10的软件架构</h3>
-<p>SCU-LAN10是一个封闭的软件架构，而且只支持Window操作系统。一般来说，如果想在跟SCU-LAN10的同一台电脑上实现CW信号传输，应该依赖SCU-LAN10提供的软件API接口、或DLL动态调用库，或者SCU-LAN10直接兼容最通用的标准软件库，比如Hamlib。可我在Windows里翻了翻，没看到它跟Hamlib这类软件库有关联。说明这很可能是YAESU自己开发的一套黑盒应用。QST杂志研究说，或许可以通过在Windows上改变声卡配置，把音频分享给类似WSJT-X这类软件，再通过SCU-LAN10的VOX方式发射。这听起来应该能实现，但是VOX不太靠谱啊。所以目前各种常见的HAM软件，比如WSJT-X、N1MN、WINTEST、RUMLog，fldigi这些，基本没法跟SCU-LAN10一起用。</p>
-<p>可以研究一下SCU-LAN10的网络数据传输接口。它依赖50000～50003这四个UDP协议端口，依次传输控制、CAT、音频和频谱数据。如果有人能从这一层截取数据，并做成开放接口，倒是一个有趣的破题路线。总之，还是期待YAESU能主动开放软件接口，提供给HAM世界更多的可玩性。</p>
-</blockquote>
-<p>由于SCU-LAN10占用了FTDX10上唯一的USB CAT端口，以前比较成熟的**“台站侧值班电脑+远程桌面软件”**实现的远程控制也不行了。破题思路只剩下利用FTDX10机器上空闲的R-S232C和RTTY/DATA接口，实现第二组“USB串口+声卡”通道。<strong>这时SCU-17成了首选</strong>。</p>
+<h2 id="%E4%BD%BF%E7%94%A8%E4%BD%93%E4%BC%9A" tabindex="-1">使用体会</h2>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/NhcF0k4rdG-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/NhcF0k4rdG-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/NhcF0k4rdG-1080.png" alt="用SCU-LAN10软件观察7MHz业余频段全段的频谱" width="1080" height="607"></picture></p>
+<p>SCU-LAN10（它的硬件软件都叫SCU-LAN10）是个相当不错的远程电台操作、监控系统。它可以实时呈现FTDX10当前的所有状态，尤其是那些非常重要的：</p>
+<ul>
+<li>天调开关、驻波、功率、ALC、VFO-A/B切换、Split状态；</li>
+<li>最重要的，还有声音和频谱；</li>
+<li>它几乎覆盖了FTDX10里的所有功能，至少业务操作该有的全有；</li>
+<li>新的固件还支持了远程关机；</li>
+<li>比起FTDX10外接显示器提供了更丰富的操作界面；</li>
+<li>在电脑的大屏幕上可以直接操作3D频谱，如果是配合FTDX101则有两个频谱窗口可用，信息量巨大；</li>
+<li>它还支持鼠标操作，选择各种功能参数，拨动鼠标滚选频，快捷直观。终于不用小心翼翼地躲开大拨轮，在一堆旋钮和按键里找功能了。</li>
+<li>SCU-LAN10提供了远程的SSB通讯的能力。你可以按着电脑的空格键当PTT，或者打开VOX直接对着电脑呼叫。今年的CQWW SSB比赛，我拿它远程扫地搞了69个QSO。顺便说，比赛时3D频谱选频其实并不是很实用。还是2D的频谱容易准确定位。</li>
+</ul>
+<p>小遗憾的是：</p>
+<ul>
+<li>时至今日SCU-LAN10只支持<strong>SSB话</strong>业务的全功能收发。</li>
+<li>CW只能收听，且没有解码功能。</li>
+<li>FT8、RTTY、SSTV这些操作则完全不支持。至少不能靠SCU-LAN10直接的功能实现，只能寻找别的解决方案。</li>
+</ul>
+<p>为啥不给CW、Digital的全功能发送？有人猜测是网络延时会影响CW开关信号的准确性，听起来有点道理。可是SCU-LAN10又提供了丰富的CW相关功能，比如ZIN、APF、CW Pitch甚至WPM速度设定。或许未来的固件升级会逐步打开一些新功能？SCU-LAN10似乎是正在演进中的产品。</p>
+<h2 id="%E8%BF%9C%E7%A8%8B%E7%BB%84%E7%BD%91%E7%AD%96%E7%95%A5" tabindex="-1">远程组网策略</h2>
+<p>由于SCU-LAN10占用了FTDX10上唯一的USB CAT端口，以前比较成熟的<em><strong>台站侧值班电脑</strong></em> + <em><strong>远程桌面软件</strong></em>实现的远程控制也不行了。破题思路只剩下利用FTDX10机器上空闲的R-S232C和RTTY/DATA接口，实现第二组“USB串口+声卡”通道。<strong>这时SCU-17成了首选</strong>。</p>
+<div class="callout callout-tip">
 <p>FTDX系列机器上还有两个USB-A的端口，那是给键盘鼠标用的，没有音频IO，也不能做CAT控制，估计电流不会超过500mA，或许可以接个LED台灯或者呼号灯牌啥的。</p>
+</div>
 <p>安装SCU-LAN10，并不像买个天调接上那么简单。想用上它至少得有点网络管理的经验，知道怎么设置IP地址，什么是端口转发，这涉及到安装和日后使用。想完成跨局域网的远程操作还是有相当的技术门槛。在这里我只分享一下我的基本解决思路，供大家一起讨论。详细设置请参考说明书。</p>
-<h2 id="scu-lan10-scu-17">SCU-LAN10和SCU-17实现远程操作的组网方案</h2>
+<h2 id="scu-lan10%E5%92%8Cscu-17%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%93%8D%E4%BD%9C%E7%9A%84%E7%BB%84%E7%BD%91%E6%96%B9%E6%A1%88" tabindex="-1">SCU-LAN10和SCU-17实现远程操作的组网方案</h2>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/bX4kcUGJa_-809.avif 809w"><source type="image/webp" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/bX4kcUGJa_-809.webp 809w"><img loading="lazy" decoding="async" src="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/bX4kcUGJa_-809.png" alt="图片" width="809" height="572"></picture></p>
 <p>这个方案需要SCU-LAN10、SCU-17和两台电脑，直接组成了通过互联网的远程操作方案。</p>
 <ul>
@@ -411,7 +433,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <li>CW怎么办？我还没实验过，后续再探讨吧。</li>
 </ul>
 <p>敲黑板，下面说几个要点：</p>
-<h3 id="scu-lan10-2">连接 SCU-LAN10 的步骤</h3>
+<h3 id="%E8%BF%9E%E6%8E%A5-scu-lan10-%E7%9A%84%E6%AD%A5%E9%AA%A4" tabindex="-1">连接 SCU-LAN10 的步骤</h3>
 <ol>
 <li><strong>SCU-LAN10联网</strong>
 <ul>
@@ -430,7 +452,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </li>
 </ol>
 <p>连接SCU-17相对简单，把随机提供的USB CAT线，RS-232C电缆，DATA电缆，跟FTDX10背面对应的接口连接好。但是有两个重要的提示：</p>
-<h3 id="scu-17">连接SCU-17的要点</h3>
+<h3 id="%E8%BF%9E%E6%8E%A5scu-17%E7%9A%84%E8%A6%81%E7%82%B9" tabindex="-1">连接SCU-17的要点</h3>
 <ul>
 <li><strong>没有声音输出？</strong>
 <ul>
@@ -456,12 +478,14 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </li>
 </ul>
 <p>好了，关于SCU-LAN10和SCU-17部署上的坑，基本上就这些。</p>
-<h3 id="scu-17-2">必须用SCU-17吗？</h3>
+<h3 id="%E5%BF%85%E9%A1%BB%E7%94%A8scu-17%E5%90%97%EF%BC%9F" tabindex="-1">必须用SCU-17吗？</h3>
 <p><strong>当然不是</strong>。熟悉数据盒子的人自然知道要怎么做。心灵手巧的无线电老中医也可以自己DIY接口电缆、音频线，实现和SCU-17同样的能力。我用FT-818ND玩FT8时，还在用自己两年前DIY两根数据线和一个USB声卡。我也买过数据盒子，后来玩烧了。窃以为SCU-17是这些产品里最靠谱的设备。</p>
-<p>通过RS-232C和DATA接口实现CAT是业余无线电二十年的老话题。如果你的电脑还有RS-232C接口，你可以用一根标准RS-232C电缆直连收发机。现代电脑基本只有USB接口了，这时需要买一根RS-232C转USB的串口线，请注意这种RS-232C接口的2、3针脚要交差。请参考上一篇<a href="http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;mid=2247484237&amp;idx=1&amp;sn=ee1d4b5b356ed77a9b7aacb50cd1ecc2&amp;chksm=e94985c7de3e0cd1f104ffc7984e5d3c4632afa2845a2f36551434ff5df7487320b7a425e696&amp;scene=21#wechat_redirect">《FTDX10使用RS-232C接口CAT操作指北》</a>。</p>
+<div class="callout callout-tip">
+<h3 class="callout-title" id="rs-232c-ftdx10">通过RS-232C连接FTDX10电台</h3><p>通过RS-232C和DATA接口实现CAT是业余无线电二十年的老话题。如果你的电脑还有RS-232C接口，你可以用一根标准RS-232C电缆直连收发机。现代电脑基本只有USB接口了，这时需要买一根RS-232C转USB的串口线，请注意这种RS-232C接口的2、3针脚要交差。请参考上一篇<a href="http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;mid=2247484237&amp;idx=1&amp;sn=ee1d4b5b356ed77a9b7aacb50cd1ecc2&amp;chksm=e94985c7de3e0cd1f104ffc7984e5d3c4632afa2845a2f36551434ff5df7487320b7a425e696&amp;scene=21#wechat_redirect">《FTDX10使用RS-232C接口CAT操作指北》</a>。</p>
 <p>在QRO和不谐振天线的设备组合上，直接用RS-232C电缆连电脑，有高度的RFI风险。建议选FTDI芯片的工业级电缆，最好再配一个隔离器。DIY的DATA音频线倒是不会有大问题，但也最好缠几圈磁环。</p>
 <p>FTDX10支持101项CAT操作，FTDX101支持105项，通过RS-232C电缆控制收发机，只有一项开关机不支持，其它都支持。</p>
-<h2 id="-2">远程控制台站实景</h2>
+</div>
+<h2 id="%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%8F%B0%E7%AB%99%E5%AE%9E%E6%99%AF" tabindex="-1">远程控制台站实景</h2>
 <p>下边这张图就是我的书房远程控制台站，此时是在家里的局域网环境下。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/WAMhT6wemS-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/WAMhT6wemS-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/WAMhT6wemS-1080.jpeg" alt="图片" width="1080" height="608"></picture></p>
 <p>由于我工作的电脑主要是Mac OS和Linux的系统，所以我部署了三台电脑：</p>
@@ -478,10 +502,10 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <li>第二层是电源线的扼流磁环、SCU-LAN10、SCU-17。</li>
 <li>第一层是FTDX10，驻波表，1973年的常熟K4手键。</li>
 </ul>
-<h2 id="scu-lan10-3">SCU-LAN10的最佳应用场景</h2>
+<h2 id="scu-lan10%E7%9A%84%E6%9C%80%E4%BD%B3%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF" tabindex="-1">SCU-LAN10的最佳应用场景</h2>
 <p>SCU-LAN10的最佳应用场景应该还是在局域网，要不怎么叫“LAN10”呢。当电台收发信机不适合放在书房，或者没有一个舒服的操作位置时，这玩意儿大幅提升了操作体验。还节约了几十米电缆，降低了RFI治理成本。</p>
 <p>当把家里的局域网跟公共广域网打通之后，还可以在更远的地方操作。虽然难免会有延时，但还能接受，用来收听、监控设备状态还是没问题的。</p>
-<h2 id="scu-lan10-4">SCU-LAN10的延时能有多大？</h2>
+<h2 id="scu-lan10%E7%9A%84%E5%BB%B6%E6%97%B6%E8%83%BD%E6%9C%89%E5%A4%9A%E5%A4%A7%EF%BC%9F" tabindex="-1">SCU-LAN10的延时能有多大？</h2>
 <p>我在局域网环境下做了个对比实验。结果感人！</p>
 <ul>
 <li>在安装了SCU-LAN10软件的ThinkPad X230上，把电脑音量开到最大；启动WSJT-X v2.54软件，对操作系统麦克风收到所有声音信号解码，所以信噪比就不用比了，只看延时。</li>
@@ -491,13 +515,17 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/QoRvpSPQfm-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/QoRvpSPQfm-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/QoRvpSPQfm-1080.png" alt="图片" width="1080" height="607"></picture></p>
 <p>通过局域网传到SCU-LAN10软件的信号比FTDX10上的信号慢了0.8秒！这是有点头大了。再慢点WSJT-X就不解码了。可能这会儿家人在刷手机视频吧，早先看才0.3秒左右。</p>
 <p>我的SCU-LAN10硬件连的是百兆交换机，X230连的是百兆无线网，看来是时候考虑全屋的千兆网升级、VLAN优化了。</p>
-<h3 id="scu-lan10-5">关于SCU-LAN10的接口猜想</h3>
+<h2 id="%E5%85%B3%E4%BA%8Escu-lan10%E7%9A%84%E4%B8%80%E4%BA%9B%E6%9C%9F%E5%BE%85" tabindex="-1">关于SCU-LAN10的一些期待</h2>
+<h3 id="%E6%8E%A8%E6%B5%8B%E4%B8%80%E4%B8%8Bscu-lan10%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84" tabindex="-1">推测一下SCU-LAN10的软件架构</h3>
+<p>SCU-LAN10是一个封闭的软件架构，而且只支持Window操作系统。一般来说，如果想在跟SCU-LAN10的同一台电脑上实现CW信号传输，应该依赖SCU-LAN10提供的软件API接口、或DLL动态调用库，或者SCU-LAN10直接兼容最通用的标准软件库，比如Hamlib。可我在Windows里翻了翻，没看到它跟Hamlib这类软件库有关联。说明这很可能是YAESU自己开发的一套黑盒应用。QST杂志研究说，或许可以通过在Windows上改变声卡配置，把音频分享给类似WSJT-X这类软件，再通过SCU-LAN10的VOX方式发射。这听起来应该能实现，但是VOX不太靠谱啊。所以目前各种常见的HAM软件，比如WSJT-X、N1MN、WINTEST、RUMLog，fldigi这些，基本没法跟SCU-LAN10一起用。</p>
+<p>可以研究一下SCU-LAN10的网络数据传输接口。它依赖50000～50003这四个UDP协议端口，依次传输控制、CAT、音频和频谱数据。如果有人能从这一层截取数据，并做成开放接口，倒是一个有趣的破题路线。总之，还是期待YAESU能主动开放软件接口，提供给HAM世界更多的可玩性。</p>
+<h3 id="%E5%85%B3%E4%BA%8Escu-lan10%E7%9A%84%E6%8E%A5%E5%8F%A3%E7%8C%9C%E6%83%B3" tabindex="-1">关于SCU-LAN10的接口猜想</h3>
 <p>SCU-LAN10上还有一个RS-232C接口，我曾尝试用RS-232C电缆代替USB，接到电脑上看看会有啥反应？结果是SCU-LAN10报错，说没找到USB，必须用USB。但是它的确识别出来了有RS-232C设备接入。</p>
 <p>我还发现最早出厂的SCU-LAN10带有一个音频输入输出的接口，但是新出厂的产品，这个接口取消了。打开盒子看电路板，那里还有一个4脚的Audio插座的位置。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/1u4eFYgANu-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/1u4eFYgANu-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/1u4eFYgANu-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
 <p>右下角就是音频接口的位置</p>
 <p>不知道YAESU葫芦里卖的什么药。莫非是用来配合值班电脑实现DATA模式？<strong>如果你手边有老的SCU-LAN10，可以试一试哦！</strong></p>
-<h2 id="cw">如何实现远程CW？</h2>
+<h2 id="%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8Bcw%EF%BC%9F" tabindex="-1">如何实现远程CW？</h2>
 <p>上边分析过了，这个路径可能还得依赖值班电脑上的软件，比如fldigi通过RTS发CW。如果想在本地操作手键，控制远端的收发机发射，有一个思路跟大家探讨：</p>
 <ul>
 <li>首先要组好一个“鲁棒性佳”的虚拟专网，要靠谱，比如千兆有线局域网。</li>
@@ -506,7 +534,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </ul>
 <p>等我把BG6JJI的K3NG套件完成了就试试这个思路。如果你已经知道这一条弯路，请告诉我。</p>
 <p>这些年YAESU的产品作风一直很保守，世人有目共睹。它好像把电台当钢琴来做了，带着一身老工匠的矜持，闷头打磨一台古典乐器。SCU-LAN10好比给钢琴加装了个蓝牙模块，可以用Pad示谱，增加了练习的趣味性。可是竞争对手直接在量产数字钢琴了。或许YAESU能想明白，尽快给SCU-LAN10软件开放接口，让大家玩的开心。它再不搞，ICOM、Flexradio、Elecraft就搞出来了。</p>
-<h2 id="-3">相关资料</h2>
+<h2 id="%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99" tabindex="-1">相关资料</h2>
 <ul>
 <li><a href="https://static.dxengineering.com/global/images/technicalarticles/ysu-scu-lan10.pdf?_gl=1*1em267r*_ga*MTM4NTA4NDI3MS4xNjUyOTc3NTIy*_ga_NZB590FMHY*MTY2ODYwNjg4Ny43LjEuMTY2ODYwNjkxMi4zNS4wLjA">QST杂志SCU-LAN10的评测，2021年5月</a></li>
 <li><a href="https://www.yaesu.com/downloadFile.cfm?FileID=16693&amp;FileCatID=158&amp;FileName=SCU%2DLAN10%5FInstallation%5FManual%5FENG%5F2012%2DB.pdf&amp;FileContentType=application%2Fpdf">YAESU SCU-LAN10安装手册</a></li>
@@ -515,9 +543,10 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </ul>
 
             
-                <hr class="border-t-neutral-500 mb-2">
-                <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/AfPvxMBo1MzaWMYA3H0gEQ" target="_blank">BG6LH - SCU-LAN10远程操作FTDX10的组网实践</a></span>
+              <hr class="border-t-neutral-500 mb-2">
+              <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/AfPvxMBo1MzaWMYA3H0gEQ" target="_blank">BG6LH - SCU-LAN10远程操作FTDX10的组网实践</a></span>
             
+          </div>
         </div>
         
         
@@ -550,7 +579,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 
     <!-- 网站栏目 -->
     <div class="">
-        <h3 class="font-bold mb-4" id="-4">网站导航</h3>
+        <h3 class="font-bold mb-4" id="">网站导航</h3>
         <nav class="list-none flex flex-row justify-center md:justify-start md:flex-col">
             
             
@@ -642,7 +671,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/` was built on 2025-05-27T17:09:21.426Z -->
+		<!-- This page `/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/` was built on 2025-05-28T08:07:29.357Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>

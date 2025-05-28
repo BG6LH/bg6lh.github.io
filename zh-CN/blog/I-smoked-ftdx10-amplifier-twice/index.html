@@ -379,25 +379,36 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
             </span>
             
         </header>
-        <div class="max-w-2xl mx-auto">
+        <div class="relative">
+            <aside id="artical-toc" class="block 
+                        md:sticky md:top-32 md:pl-6 md:float-right md:mr-[-20vw] md:w-64 md:max-h-[70vh] md:overflow-auto
+                        md:border-l-1 md:border-neutral-200
+                        z-10 mb-6 text-xs md:dark:text-neutral-200
+                        ">
+             <p class="font-bold">内容目录</p>
+            <nav class="toc">
+        <ul><li><a href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%83%A7">第一次烧</a></li><li><a href="#%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%83%A7">第二次烧</a></li><li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88ftdx10%E4%BC%9A%E7%83%A7%E5%8A%9F%E6%94%BE">为什么FTDX10会烧功放</a></li><li><a href="#%E5%87%A0%E4%B8%AA%E5%85%B3%E4%BA%8Eftdx10%E5%92%8Cfc-40%E7%9A%84%E9%87%8D%E8%A6%81%E4%BA%8B%E5%AE%9E">几个关于FTDX10和FC-40的重要事实</a></li><li><a href="#%E9%82%A3%E4%B9%88%EF%BC%8C%E5%85%AB%E9%87%8D%E6%B4%B2%E8%BF%98%E5%80%BC%E5%BE%97%E4%BF%A1%E4%BB%BB%E5%90%97%EF%BC%9F">那么，八重洲还值得信任吗？</a></li><li><a href="#ftdx10%E5%BC%80%E6%9C%BA%E6%A3%80%E6%9F%A5%E5%8D%95">FTDX10开机检查单</a></li></ul>
+      </nav>
+            </aside>
+          <div class="max-w-2xl mx-auto">
             <p>有几个月没出来吹牛了。最近唯一值得吹吹的事儿就是我把YAESU FTDX10的功放烧了，而且还烧了两次。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/I-smoked-ftdx10-amplifier-twice/lGSgA-6MwN-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/I-smoked-ftdx10-amplifier-twice/lGSgA-6MwN-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/I-smoked-ftdx10-amplifier-twice/lGSgA-6MwN-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
-<h2 id="">第一次烧</h2>
+<h2 id="%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%83%A7" tabindex="-1">第一次烧</h2>
 <p>第一次是哪天烧的我已经不能确认了。</p>
 <p>话说今年春节前的某一天，我刚把一条22.5米的随机长线天线，换成了20米的端馈天线。随后测试FTDX10在各波段发射的驻波比，居然都不起表，甚至160米波段也很“优秀”。欣喜之余，猛然惊醒， 这不科学啊？ ！</p>
 <p>仔细 用外置驻波表检查了所有频段的输出 功率，都 只测出来0.5瓦， 难怪机内检测不到高驻波。 我只好联系八重洲的售后，工程师说： 把机器寄回来吧……</p>
 <p>当时他们没有功放管配件，需要从日本总部订货。 本来他们答应发一个备用机器给我用，结果只剩一台FT-991A，也没有功率输出了。看来 都在等功放管啊。 于是开始了漫长的等待，一等就是四个月。</p>
 <p>八重洲中国的售后在苏州，这里也是它们在国内的生产厂。每月他们汇总一次需要的配件清单，报给日本总部。总部在下个月会把配件发回来。这中间经历了春节假期，再一个月上报，一个月下发，然后又遇到疫情，配件卡在浦东机场海关出不来，好不容易出关了，苏州又居家办公了……终于，到了劳动节，机器修好发回来了。</p>
-<h2 id="-2">第二次烧</h2>
+<h2 id="%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%83%A7" tabindex="-1">第二次烧</h2>
 <p>在这段等待的时间里，我 买了一个YAESU FC-40自动天调。</p>
 <p>初夏的北京，秋高气爽，春意盎然。</p>
 <p>我把修回来的FTDX10恭恭敬敬地摆回了机位。把阳台外端馈天线的20米振子，从1:49巴伦上拿下来，绑在了FC-40天调上。 然后打开了FTDX10， 美丽的3D频谱显示了出来。</p>
 <p>我拿起电键，调到了40米波段CW频点附近，把输出功率降低到20瓦，随手发了一个VVV。然后……又没有功率输出了。</p>
-<h2 id="ftdx10-2">为什么FTDX10会烧功放</h2>
+<h2 id="%E4%B8%BA%E4%BB%80%E4%B9%88ftdx10%E4%BC%9A%E7%83%A7%E5%8A%9F%E6%94%BE" tabindex="-1">为什么FTDX10会烧功放</h2>
 <p>这是我半年来一直思考的问题。</p>
 <p>第一次烧，我当时在用22.5米长线，1:9巴伦，这套天馈曾经用VNA检查过，各波段驻波比都在1:3～1:8之间。也就是各波段都不太谐振，但驻波也不是高的很离谱。这根天线斜拉到楼下的树上，冬天曾经遭遇狂风大作，再加上FT8、远程操作，不知道哪下可能就给烧了。</p>
 <p>第二次烧，纯粹是我大意了。我把20米的天线振子，接到了一个 全新的、 还 没 调过的 FC-40天调上，这相当于是直通振子的状态。大家都知道，20米天线在40米波段正好是半个波长，端馈输入的驻波是1:49，电压可以高达2450V上下……</p>
-<h2 id="ftdx10-fc-40">几个关于FTDX10和FC-40的重要事实</h2>
+<h2 id="%E5%87%A0%E4%B8%AA%E5%85%B3%E4%BA%8Eftdx10%E5%92%8Cfc-40%E7%9A%84%E9%87%8D%E8%A6%81%E4%BA%8B%E5%AE%9E" tabindex="-1">几个关于FTDX10和FC-40的重要事实</h2>
 <ol>
 <li><strong>FTDX10只有驻波检测，没有高驻波保护</strong>。它只负责告诉你驻波是高还是低，即便是高驻波，它也会继续发射，直到功放管烧掉。</li>
 <li><strong>FTDX10在无法调谐的频点，就放弃调谐了</strong>。当你看到调谐停止时，不代表调到了谐振。注意观察机内驻波表的指针，如果它调到最后又跳了一下，很可能没谐振。</li>
@@ -411,9 +422,9 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <p>就说这么多吧。这样的系统在电信运营商眼里叫 <strong>“鲁棒性低”</strong> 是不是？</p>
 <p>毕竟FTDX10是个业余机，不是业务机。基本上它预设的操作场景，是一个老司机开着个八缸手动挡切诺基。相比之下，一套ICOM的系统，比如典型的IC-7300配一个AH-120自动天调，应用起来要轻松多了，有自动启调，有高驻波保护，几乎是傻瓜型的。</p>
 <p>另外，我是从FT-817ND开始入坑的。玩QRP小功率，不需要太关注高驻波，这也留下很多坏毛病。两次烧功放的经历，算是把我的毛病治好了， 要认真度量系统冗余 ， <strong>要敬畏驻波</strong> 。</p>
-<h2 id="-3">那么，八重洲还值得信任吗？</h2>
+<h2 id="%E9%82%A3%E4%B9%88%EF%BC%8C%E5%85%AB%E9%87%8D%E6%B4%B2%E8%BF%98%E5%80%BC%E5%BE%97%E4%BF%A1%E4%BB%BB%E5%90%97%EF%BC%9F" tabindex="-1">那么，八重洲还值得信任吗？</h2>
 <p>这一点毋庸置疑。如果在“性能”和“应用”之间选择，性能还是首选。业余无线电，玩的就是个寂寞……更何况，八重洲给了<em><strong>三年免费保修</strong></em>（包邮换功放）服务，三年调教一个老司机足够了。</p>
-<h2 id="ftdx10-3">FTDX10开机检查单</h2>
+<h2 id="ftdx10%E5%BC%80%E6%9C%BA%E6%A3%80%E6%9F%A5%E5%8D%95" tabindex="-1">FTDX10开机检查单</h2>
 <p>最后，我总结了一个FTDX10开机检查单，希望能改善自己的操作习惯。 也欢迎大家一起来交流操作心得。</p>
 <ol>
 <li>GSV3000电源检查
@@ -466,9 +477,10 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </ol>
 
             
-                <hr class="border-t-neutral-500 mb-2">
-                <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/zCj9kcB1Mkbt9FLBlZG6cw?token=644013800&amp;lang=zh_CN" target="_blank">BG6LH - 烧了两次FTDX10的功放</a></span>
+              <hr class="border-t-neutral-500 mb-2">
+              <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/zCj9kcB1Mkbt9FLBlZG6cw?token=644013800&amp;lang=zh_CN" target="_blank">BG6LH - 烧了两次FTDX10的功放</a></span>
             
+          </div>
         </div>
         
         
@@ -501,7 +513,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 
     <!-- 网站栏目 -->
     <div class="">
-        <h3 class="font-bold mb-4" id="-4">网站导航</h3>
+        <h3 class="font-bold mb-4" id="">网站导航</h3>
         <nav class="list-none flex flex-row justify-center md:justify-start md:flex-col">
             
             
@@ -593,7 +605,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/I-smoked-ftdx10-amplifier-twice/` was built on 2025-05-27T17:09:21.562Z -->
+		<!-- This page `/zh-CN/blog/I-smoked-ftdx10-amplifier-twice/` was built on 2025-05-28T08:07:29.429Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>
