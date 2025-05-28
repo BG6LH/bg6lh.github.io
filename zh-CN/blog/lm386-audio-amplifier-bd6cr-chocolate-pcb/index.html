@@ -324,31 +324,31 @@ text-sm text-neutral-800 bg-neutral-100 px-15
  dark:text-neutral-100 dark:bg-neutral-950
 font-medium transition-all duration-100" x-show="open" x-transition:enter="transform transition ease-out duration-300" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 scale-100" @click.outside="open = false">
 		
+            
 		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/" @click="open = false">首页</a>
+                </div>
+            
 		
+            
 		
-		<div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
-      <a href="/" @click="open = false">首页</a>
-    </div>
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/zh-CN/blog/" @click="open = false">归档</a>
+                </div>
+            
 		
+            
 		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/zh-CN/about/" @click="open = false">关于</a>
+                </div>
+            
 		
-		
-		
-		<div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
-      <a href="/zh-CN/blog/" @click="open = false">归档</a>
-    </div>
-		
-		
-		
-		
-		
-		<div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
-      <a href="/zh-CN/about/" @click="open = false">关于</a>
-    </div>
-		
-		
-		
+            
 		
 </div>
 <!-- Fullscreen Menu Overlay: mobile only , end -->
@@ -366,9 +366,11 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
             <img src="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/5cq656L6UH-960.webp" class="w-full blur-xs brightness-75 scale-105" alt="用巧克力洞洞板做LM386音频放大器 image" loading="lazy" decoding="async" width="960" height="408">
         </figure>
     
-<article class="bg-white mx-auto max-w-4xl prose prose-neutral">
-    <div class="px-4 pt-12 pb-16 sm:pt-16 sm:pb-24">
-        <header class="max-w-2xl flex flex-col mx-auto mb-12 border-t-neutral-500 border-b-1">
+    <article class="bg-white p-8 md:p-12 mx-auto max-w-4xl prose prose-neutral">
+
+
+        <!-- article header : begin-->
+        <header class="flex flex-col mx-auto mb-12 border-t-neutral-500 border-b-1">
             <div class="mx-auto font-bold md:text-xl text-center text-neutral-800">
                 <h1 id="lm386">用巧克力洞洞板做LM386音频放大器</h1>
             </div>
@@ -379,11 +381,15 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
                 <a href="/zh-CN/tags/qiao-ke-li-dong-dong-ban/" class="post-tag">巧克力洞洞板</a>, 
                 <a href="/zh-CN/tags/bd6cr/" class="post-tag">BD6CR</a>
             </span>
-            
         </header>
-        <div class="relative">
-            
-          <div class="max-w-2xl mx-auto">
+        <!-- article header : end-->
+
+        <!-- toc begin -->
+        
+        <!-- toc end -->
+
+        <!-- article content : begin-->
+        <div class="mx-auto">
             <p>看过汽车节目《Top Gear》的人都知道大嘴杰瑞米·克拉克森(Jeremy Clarkson)吧？他今年都62了，我的老天鹅。他算是赶上了燃油车的巅峰时代。如今已经满世界都是电动车了，所以他可能觉得自己out了。前几天他在生日之际谈起了对变老和死亡看法。最后一句话令人印象深刻：“我认为这就是老年的定义。 <strong>我以前认为无聊的所有东西现在都是一种‘可爱’的打发时间的方式。</strong> ”</p>
 <p>可能我也老了。最近做了一个自以为很可爱的实验，一个LM386的音频放大电路。这是2块9毛8包邮就能搞定的事情。但是我却安装了KiCad 6，自己画了原理图，在 BD6CR 设计的巧克力洞洞板上完成了制作。其间BI1EIH对我的电路设计给予了不少指导。其实也没啥可设计，因为任何LM386芯片的Datasheet 最后都有那个放大电路。有意思的是接不同的零件能产生不同的放大效果。不同的应用，侧重点不太一样。考虑到我打算给QCX-mini做个外放的便携音箱，所以我加了一个9V的电池供电、一个LED指示灯，以及几个高低频的滤波电容。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-1080.png" alt="图片" width="1080" height="545"></picture></p>
@@ -408,27 +414,40 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
               <hr class="border-t-neutral-500 mb-2">
               <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/wAm7z_vfApi_pS6c7Nq5Ww" target="_blank">BG6LH - 用巧克力洞洞板做LM386音频放大器</a></span>
             
-          </div>
         </div>
-        
-        
-        <div class="max-w-2xl mx-auto">
-            <ul class="links-nextprev"><li class="links-nextprev-prev">← 上一篇<br> <a href="/zh-CN/blog/hunting-wo22-winter-olympics-2022-special-station/">冬奥追台记</a></li><li class="links-nextprev-next">下一篇 →<br><a href="/zh-CN/blog/I-smoked-ftdx10-amplifier-twice/">烧了两次FTDX10的功放</a></li>
-            </ul>
+        <!-- article content : end-->
+
+        <!-- 翻页器 begin -->
+        <div class="mx-auto grid grid-cols-1 gap-2 py-12
+                    md:grid-cols-2
+                ">
+                        <a href="/zh-CN/blog/hunting-wo22-winter-olympics-2022-special-station/" class="
+                        flex flex-col left-0 p-2 block hover:bg-neutral-100
+                        ">
+                            < 上一篇
+                            <br>
+                            冬奥追台记
+                        </a>
+                    
+                        <a href="/zh-CN/blog/I-smoked-ftdx10-amplifier-twice/" class="
+                        flex flex-col md:text-right right-0 p-2 hover:bg-neutral-100
+                        ">
+                            下一篇 >
+                            <br>
+                            烧了两次FTDX10的功放
+                        </a>
+                    
         </div>
-    </div>
-</article>
-<!-- Giscus : begin -->
-<article class="bg-white mx-auto max-w-4xl prose prose-neutral">
-    <div class="px-4 pt-12 pb-16 sm:pt-16 sm:pb-24">
-        <div class="max-w-2xl mx-auto">
-    <div id="giscus_thread"></div>
+        <!-- 翻页器 end -->
+
+        <!-- Giscus : begin -->
+        <div class="mx-auto">
+        <div id="giscus_thread"></div>
 
         </div>
-    </div>
-</article>
-<!-- Giscus : end -->
+        <!-- Giscus : end -->
 
+    </article>
 
 			</heading-anchors>
 		</main>
@@ -533,7 +552,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/` was built on 2025-05-28T10:01:45.315Z -->
+		<!-- This page `/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/` was built on 2025-05-28T16:12:28.259Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>

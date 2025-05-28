@@ -324,31 +324,31 @@ text-sm text-neutral-800 bg-neutral-100 px-15
  dark:text-neutral-100 dark:bg-neutral-950
 font-medium transition-all duration-100" x-show="open" x-transition:enter="transform transition ease-out duration-300" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 scale-100" @click.outside="open = false">
 		
+            
 		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/" @click="open = false">首页</a>
+                </div>
+            
 		
+            
 		
-		<div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
-      <a href="/" @click="open = false">首页</a>
-    </div>
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/zh-CN/blog/" @click="open = false">归档</a>
+                </div>
+            
 		
+            
 		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/zh-CN/about/" @click="open = false">关于</a>
+                </div>
+            
 		
-		
-		
-		<div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
-      <a href="/zh-CN/blog/" @click="open = false">归档</a>
-    </div>
-		
-		
-		
-		
-		
-		<div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
-      <a href="/zh-CN/about/" @click="open = false">关于</a>
-    </div>
-		
-		
-		
+            
 		
 </div>
 <!-- Fullscreen Menu Overlay: mobile only , end -->
@@ -366,9 +366,11 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
             <img src="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/nFQBMvDTuK-960.webp" class="w-full blur-xs brightness-75 scale-105" alt="SCU-LAN10远程操作FTDX10的组网实践 image" loading="lazy" decoding="async" width="960" height="408">
         </figure>
     
-<article class="bg-white mx-auto max-w-4xl prose prose-neutral">
-    <div class="px-4 pt-12 pb-16 sm:pt-16 sm:pb-24">
-        <header class="max-w-2xl flex flex-col mx-auto mb-12 border-t-neutral-500 border-b-1">
+    <article class="bg-white p-8 md:p-12 mx-auto max-w-4xl prose prose-neutral">
+
+
+        <!-- article header : begin-->
+        <header class="flex flex-col mx-auto mb-12 border-t-neutral-500 border-b-1">
             <div class="mx-auto font-bold md:text-xl text-center text-neutral-800">
                 <h1 id="scu-lan10-ftdx10">SCU-LAN10远程操作FTDX10的组网实践</h1>
             </div>
@@ -378,22 +380,27 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
                 <a href="/zh-CN/tags/ftdx10/" class="post-tag">FTDX10</a>, 
                 <a href="/zh-CN/tags/scu-lan10/" class="post-tag">SCU-LAN10</a>
             </span>
-            
         </header>
-        <div class="relative">
-            
-            <aside id="artical-toc" class="block 
+        <!-- article header : end-->
+
+        <!-- toc begin -->
+        
+        <aside id="artical-toc" class="block relative
                         md:sticky md:top-32 md:pl-6 md:float-right md:mr-[-20vw] md:w-64 md:max-h-[70vh] md:overflow-auto
                         md:border-l-1 md:border-neutral-200
+                        md:dark:border-0
                         z-10 mb-6 text-xs md:dark:text-neutral-200
                         ">
-             <p class="font-bold">内容目录</p>
-            <nav class="toc">
+        <p class="font-bold">内容目录</p>
+        <nav class="toc">
         <ul><li><a href="#%E4%BD%BF%E7%94%A8%E4%BD%93%E4%BC%9A">使用体会</a></li><li><a href="#%E8%BF%9C%E7%A8%8B%E7%BB%84%E7%BD%91%E7%AD%96%E7%95%A5">远程组网策略</a></li><li><a href="#scu-lan10%E5%92%8Cscu-17%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%93%8D%E4%BD%9C%E7%9A%84%E7%BB%84%E7%BD%91%E6%96%B9%E6%A1%88">SCU-LAN10和SCU-17实现远程操作的组网方案</a><ul><li><a href="#%E8%BF%9E%E6%8E%A5-scu-lan10-%E7%9A%84%E6%AD%A5%E9%AA%A4">连接 SCU-LAN10 的步骤</a></li><li><a href="#%E8%BF%9E%E6%8E%A5scu-17%E7%9A%84%E8%A6%81%E7%82%B9">连接SCU-17的要点</a></li><li><a href="#%E5%BF%85%E9%A1%BB%E7%94%A8scu-17%E5%90%97%EF%BC%9F">必须用SCU-17吗？</a></li></ul></li><li><a href="#%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%8F%B0%E7%AB%99%E5%AE%9E%E6%99%AF">远程控制台站实景</a></li><li><a href="#scu-lan10%E7%9A%84%E6%9C%80%E4%BD%B3%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF">SCU-LAN10的最佳应用场景</a></li><li><a href="#scu-lan10%E7%9A%84%E5%BB%B6%E6%97%B6%E8%83%BD%E6%9C%89%E5%A4%9A%E5%A4%A7%EF%BC%9F">SCU-LAN10的延时能有多大？</a></li><li><a href="#%E5%85%B3%E4%BA%8Escu-lan10%E7%9A%84%E4%B8%80%E4%BA%9B%E6%9C%9F%E5%BE%85">关于SCU-LAN10的一些期待</a><ul><li><a href="#%E6%8E%A8%E6%B5%8B%E4%B8%80%E4%B8%8Bscu-lan10%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84">推测一下SCU-LAN10的软件架构</a></li><li><a href="#%E5%85%B3%E4%BA%8Escu-lan10%E7%9A%84%E6%8E%A5%E5%8F%A3%E7%8C%9C%E6%83%B3">关于SCU-LAN10的接口猜想</a></li></ul></li><li><a href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8Bcw%EF%BC%9F">如何实现远程CW？</a></li><li><a href="#%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99">相关资料</a></li></ul>
       </nav>
-            </aside>
-            
-          <div class="max-w-2xl mx-auto">
+        </aside>
+        
+        <!-- toc end -->
+
+        <!-- article content : begin-->
+        <div class="mx-auto">
             <p>我的FTDX10和天线都在ON80fa，平时大部分时间住在<code>OM89hu</code>，工作在<code>OM89it</code>，还经常出差，一年到头FTDX10没开过几天，<a href="http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;mid=2247484186&amp;idx=1&amp;sn=4587a8e29c3f55153ac5b67853325061&amp;chksm=e9498590de3e0c8619b3b1453bd1a61daffce85117634f64ca09453121ec6184ee09314808cc&amp;scene=21#wechat_redirect">就这还烧了两次功放</a>。为了解决远程摸黑儿操作这个痛点，我部署了一个SCU-LAN10和SCU-17支撑的FTDX10远程操作网络，达成了实时电台监控、远程参加了CQWW SSB比赛、还能继续远程FT8、自动日志，真是相当开心。</p>
 <p>SCU-LAN10是八重洲专门为SDR架构的收发信机推出的网络控制模块，支持FTDX10、101D、101MP，以及新出的FT-710。真是SDR时代来了，频谱数据可以在网上到处飞了。</p>
 <h2 id="%E4%BD%BF%E7%94%A8%E4%BD%93%E4%BC%9A" tabindex="-1">使用体会</h2>
@@ -548,27 +555,32 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
               <hr class="border-t-neutral-500 mb-2">
               <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/AfPvxMBo1MzaWMYA3H0gEQ" target="_blank">BG6LH - SCU-LAN10远程操作FTDX10的组网实践</a></span>
             
-          </div>
         </div>
-        
-        
-        <div class="max-w-2xl mx-auto">
-            <ul class="links-nextprev"><li class="links-nextprev-prev">← 上一篇<br> <a href="/zh-CN/blog/null-modem-rs232c-connector-of-ftdx10/">FTDX10使用RS-232C接口CAT操作指北</a></li>
-            </ul>
+        <!-- article content : end-->
+
+        <!-- 翻页器 begin -->
+        <div class="mx-auto grid grid-cols-1 gap-2 py-12
+                    md:grid-cols-2
+                ">
+                        <a href="/zh-CN/blog/null-modem-rs232c-connector-of-ftdx10/" class="
+                        flex flex-col left-0 p-2 block hover:bg-neutral-100
+                        ">
+                            < 上一篇
+                            <br>
+                            FTDX10使用RS-232C接口CAT操作指北
+                        </a>
+                    
         </div>
-    </div>
-</article>
-<!-- Giscus : begin -->
-<article class="bg-white mx-auto max-w-4xl prose prose-neutral">
-    <div class="px-4 pt-12 pb-16 sm:pt-16 sm:pb-24">
-        <div class="max-w-2xl mx-auto">
-    <div id="giscus_thread"></div>
+        <!-- 翻页器 end -->
+
+        <!-- Giscus : begin -->
+        <div class="mx-auto">
+        <div id="giscus_thread"></div>
 
         </div>
-    </div>
-</article>
-<!-- Giscus : end -->
+        <!-- Giscus : end -->
 
+    </article>
 
 			</heading-anchors>
 		</main>
@@ -673,7 +685,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/` was built on 2025-05-28T10:01:45.222Z -->
+		<!-- This page `/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/` was built on 2025-05-28T16:12:28.168Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>

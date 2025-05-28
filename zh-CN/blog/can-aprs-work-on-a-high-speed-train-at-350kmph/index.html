@@ -324,31 +324,31 @@ text-sm text-neutral-800 bg-neutral-100 px-15
  dark:text-neutral-100 dark:bg-neutral-950
 font-medium transition-all duration-100" x-show="open" x-transition:enter="transform transition ease-out duration-300" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 scale-100" @click.outside="open = false">
 		
+            
 		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/" @click="open = false">首页</a>
+                </div>
+            
 		
+            
 		
-		<div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
-      <a href="/" @click="open = false">首页</a>
-    </div>
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/zh-CN/blog/" @click="open = false">归档</a>
+                </div>
+            
 		
+            
 		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/zh-CN/about/" @click="open = false">关于</a>
+                </div>
+            
 		
-		
-		
-		<div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
-      <a href="/zh-CN/blog/" @click="open = false">归档</a>
-    </div>
-		
-		
-		
-		
-		
-		<div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
-      <a href="/zh-CN/about/" @click="open = false">关于</a>
-    </div>
-		
-		
-		
+            
 		
 </div>
 <!-- Fullscreen Menu Overlay: mobile only , end -->
@@ -366,9 +366,11 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
             <img src="/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/hu2o8h9Vag-960.webp" class="w-full blur-xs brightness-75 scale-105" alt="时速350公里的高铁上能打卡APRS吗？ image" loading="lazy" decoding="async" width="960" height="408">
         </figure>
     
-<article class="bg-white mx-auto max-w-4xl prose prose-neutral">
-    <div class="px-4 pt-12 pb-16 sm:pt-16 sm:pb-24">
-        <header class="max-w-2xl flex flex-col mx-auto mb-12 border-t-neutral-500 border-b-1">
+    <article class="bg-white p-8 md:p-12 mx-auto max-w-4xl prose prose-neutral">
+
+
+        <!-- article header : begin-->
+        <header class="flex flex-col mx-auto mb-12 border-t-neutral-500 border-b-1">
             <div class="mx-auto font-bold md:text-xl text-center text-neutral-800">
                 <h1 id="350-aprs">时速350公里的高铁上能打卡APRS吗？</h1>
             </div>
@@ -377,22 +379,27 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
                 关键词:
                 <a href="/zh-CN/tags/aprs/" class="post-tag">APRS</a>
             </span>
-            
         </header>
-        <div class="relative">
-            
-            <aside id="artical-toc" class="block 
+        <!-- article header : end-->
+
+        <!-- toc begin -->
+        
+        <aside id="artical-toc" class="block relative
                         md:sticky md:top-32 md:pl-6 md:float-right md:mr-[-20vw] md:w-64 md:max-h-[70vh] md:overflow-auto
                         md:border-l-1 md:border-neutral-200
+                        md:dark:border-0
                         z-10 mb-6 text-xs md:dark:text-neutral-200
                         ">
-             <p class="font-bold">内容目录</p>
-            <nav class="toc">
+        <p class="font-bold">内容目录</p>
+        <nav class="toc">
         <ul><li><a href="#%E9%9A%BE%E9%81%93%E6%98%AF%E9%AB%98%E9%93%81%E9%80%9F%E5%BA%A6%E5%A4%AA%E5%BF%AB%E4%BA%86%E5%90%97%EF%BC%9F">难道是高铁速度太快了吗？</a><ul><li><a href="#%E5%A4%9A%E6%99%AE%E5%8B%92%E6%95%88%E5%BA%94">多普勒效应</a></li><li><a href="#%E5%AF%B9aprs%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%BD%B1%E5%93%8D">对APRS信号的影响</a></li></ul></li><li><a href="#%E9%80%9F%E5%BA%A6%E4%B8%8D%E6%98%AF%E5%85%B3%E9%94%AE%E5%BD%B1%E5%93%8D">速度不是关键影响</a></li><li><a href="#%E7%AA%97%E6%88%B7%E5%8F%AF%E8%83%BD%E6%98%AF%E6%A0%B8%E5%BF%83%E9%97%AE%E9%A2%98">窗户可能是核心问题</a></li><li><a href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">参考资料</a></li></ul>
       </nav>
-            </aside>
-            
-          <div class="max-w-2xl mx-auto">
+        </aside>
+        
+        <!-- toc end -->
+
+        <!-- article content : begin-->
+        <div class="mx-auto">
             <p><strong>2025-05-27更新</strong></p>
 <ul>
 <li>原文的多普勒频移在线计算器有错误，导致计算结果大了一倍，现已经更新。并且采取了新的计算公式。</li>
@@ -418,7 +425,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <li><math><mrow><msub><mi>f</mi><mn>0</mn></msub><mo>=</mo></mrow><mrow><mn>144.640</mn><mo>×</mo></mrow><mrow><msup><mn>10</mn><mn>6</mn></msup><mspace width="0.1667em"></mspace><mtext>Hz</mtext></mrow></math>：为信号的载频</li>
 </ul>
 <p>代入数值：<math><mrow><msub><mi>f</mi><mi>d</mi></msub><mo>=</mo></mrow><mrow><mfrac><mn>97.2</mn><mrow><mn>3</mn><mo>×</mo><msup><mn>10</mn><mn>8</mn></msup></mrow></mfrac><mo>⋅</mo></mrow><mrow><mn>144.640</mn><mo>×</mo></mrow><mrow><msup><mn>10</mn><mn>6</mn></msup><mo>≈</mo></mrow><mrow><mn>46.8</mn><mspace width="0.1667em"></mspace><mtext>Hz</mtext></mrow></math></p>
-<p><math><mrow><mtext>频</mtext><mtext>率</mtext><mtext>误</mtext><mtext>差</mtext><mi>P</mi><mi>P</mi><mi>M</mi><mo>=</mo></mrow><mrow><mfrac><msub><mi>f</mi><mi>d</mi></msub><msub><mi>f</mi><mn>0</mn></msub></mfrac><mo>×</mo></mrow><mrow><msup><mn>10</mn><mn>6</mn></msup><mo>=</mo></mrow><mrow><mfrac><mn>46.8</mn><mn>144640000</mn></mfrac><mo>×</mo></mrow><mrow><msup><mn>10</mn><mn>6</mn></msup><mo>≈</mo></mrow><mrow><mn>0.3236</mn><mspace width="0.1667em"></mspace><mtext>ppm</mtext></mrow></math></p>
+<p><math><mrow><mtext>频</mtext><mtext>率</mtext><mtext>误</mtext><mtext>差</mtext><mi>p</mi><mi>p</mi><mi>m</mi><mo>=</mo></mrow><mrow><mfrac><mn>46.8</mn><mn>144640000</mn></mfrac><mo>×</mo></mrow><mrow><msup><mn>10</mn><mn>6</mn></msup><mo>≈</mo></mrow><mrow><mn>0.3236</mn><mspace width="0.1667em"></mspace><mtext>ppm</mtext></mrow></math></p>
 <h3 id="%E5%AF%B9aprs%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%BD%B1%E5%93%8D" tabindex="-1">对APRS信号的影响</h3>
 <p>46.8Hz的频偏，对于APRS信号的144.640MHz载频来说，影响微乎其微。</p>
 <p>但是这个频偏一般会传导到信号的音频部分会怎样？</p>
@@ -450,27 +457,40 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
               <hr class="border-t-neutral-500 mb-2">
               <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/5uxxs9BUamgI4Lkmi2raQQ" target="_blank">BG6LH - 时速350公里的高铁上能打卡APRS吗？</a></span>
             
-          </div>
         </div>
-        
-        
-        <div class="max-w-2xl mx-auto">
-            <ul class="links-nextprev"><li class="links-nextprev-prev">← 上一篇<br> <a href="/zh-CN/blog/I-smoked-ftdx10-amplifier-twice/">烧了两次FTDX10的功放</a></li><li class="links-nextprev-next">下一篇 →<br><a href="/zh-CN/blog/understanding-the-efhw-antenna-once-more/">再次认识端馈半波天线(EFHW)</a></li>
-            </ul>
+        <!-- article content : end-->
+
+        <!-- 翻页器 begin -->
+        <div class="mx-auto grid grid-cols-1 gap-2 py-12
+                    md:grid-cols-2
+                ">
+                        <a href="/zh-CN/blog/I-smoked-ftdx10-amplifier-twice/" class="
+                        flex flex-col left-0 p-2 block hover:bg-neutral-100
+                        ">
+                            < 上一篇
+                            <br>
+                            烧了两次FTDX10的功放
+                        </a>
+                    
+                        <a href="/zh-CN/blog/understanding-the-efhw-antenna-once-more/" class="
+                        flex flex-col md:text-right right-0 p-2 hover:bg-neutral-100
+                        ">
+                            下一篇 >
+                            <br>
+                            再次认识端馈半波天线(EFHW)
+                        </a>
+                    
         </div>
-    </div>
-</article>
-<!-- Giscus : begin -->
-<article class="bg-white mx-auto max-w-4xl prose prose-neutral">
-    <div class="px-4 pt-12 pb-16 sm:pt-16 sm:pb-24">
-        <div class="max-w-2xl mx-auto">
-    <div id="giscus_thread"></div>
+        <!-- 翻页器 end -->
+
+        <!-- Giscus : begin -->
+        <div class="mx-auto">
+        <div id="giscus_thread"></div>
 
         </div>
-    </div>
-</article>
-<!-- Giscus : end -->
+        <!-- Giscus : end -->
 
+    </article>
 
 			</heading-anchors>
 		</main>
@@ -575,7 +595,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/` was built on 2025-05-28T10:01:45.308Z -->
+		<!-- This page `/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/` was built on 2025-05-28T16:12:28.247Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>

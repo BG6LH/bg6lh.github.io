@@ -324,31 +324,31 @@ text-sm text-neutral-800 bg-neutral-100 px-15
  dark:text-neutral-100 dark:bg-neutral-950
 font-medium transition-all duration-100" x-show="open" x-transition:enter="transform transition ease-out duration-300" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 scale-100" @click.outside="open = false">
 		
+            
 		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/" @click="open = false">首页</a>
+                </div>
+            
 		
+            
 		
-		<div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
-      <a href="/" @click="open = false">首页</a>
-    </div>
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/zh-CN/blog/" @click="open = false">归档</a>
+                </div>
+            
 		
+            
 		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/zh-CN/about/" @click="open = false">关于</a>
+                </div>
+            
 		
-		
-		
-		<div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
-      <a href="/zh-CN/blog/" @click="open = false">归档</a>
-    </div>
-		
-		
-		
-		
-		
-		<div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
-      <a href="/zh-CN/about/" @click="open = false">关于</a>
-    </div>
-		
-		
-		
+            
 		
 </div>
 <!-- Fullscreen Menu Overlay: mobile only , end -->
@@ -366,9 +366,11 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
             <img src="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/eIRoUHYaaP-960.webp" class="w-full blur-xs brightness-75 scale-105" alt="我是如何给微信小程序审核员普及业余无线电知识的 image" loading="lazy" decoding="async" width="960" height="407">
         </figure>
     
-<article class="bg-white mx-auto max-w-4xl prose prose-neutral">
-    <div class="px-4 pt-12 pb-16 sm:pt-16 sm:pb-24">
-        <header class="max-w-2xl flex flex-col mx-auto mb-12 border-t-neutral-500 border-b-1">
+    <article class="bg-white p-8 md:p-12 mx-auto max-w-4xl prose prose-neutral">
+
+
+        <!-- article header : begin-->
+        <header class="flex flex-col mx-auto mb-12 border-t-neutral-500 border-b-1">
             <div class="mx-auto font-bold md:text-xl text-center text-neutral-800">
                 <h1 id="">我是如何给微信小程序审核员普及业余无线电知识的</h1>
             </div>
@@ -378,11 +380,15 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
                 <a href="/zh-CN/tags/maidenhead/" class="post-tag">Maidenhead</a>, 
                 <a href="/zh-CN/tags/huo-tui-wang-ge/" class="post-tag">火腿网格</a>
             </span>
-            
         </header>
-        <div class="relative">
-            
-          <div class="max-w-2xl mx-auto">
+        <!-- article header : end-->
+
+        <!-- toc begin -->
+        
+        <!-- toc end -->
+
+        <!-- article content : begin-->
+        <div class="mx-auto">
             <p>这都2020年了，玩业余无线电的还是会受到群众的质疑和警惕。有在家里玩被邻居投诉的；有跑楼顶架设天线被物业阻挠的；有去山里玩电台被村民当间谍举报的……我遇到了更与时俱进的：做了个无线电相关的微信小程序被审核员给毙了。</p>
 <p>事情是这样的。单位要上马一个微信小程序项目，我想先熟悉一下开发流程，于是就顺手做了一个非常简单的小程序。题材是业余无线电里常用到的“梅登海德网格”转换。这是一种用了几十年的简化位置表示法。它把一长串的经纬度，转换成4到6位字母和数字。</p>
 <p>写代码的过程很简单，从微信官方的位置接口里获得手机的经纬度数据，再用两个开源的js脚本，分别转换成“度分秒”格式和“梅登海德”格式，最后显示在微信自带的地图上。用户可以靠拖拽屏幕上的地图，查询新位置的信息。全程就一个界面。如下图：</p>
@@ -426,27 +432,40 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
               <hr class="border-t-neutral-500 mb-2">
               <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/3S2F6UScJ25Vwxfz-KBd6A" target="_blank">BG6LH - 我是如何给微信小程序审核员普及业余无线电知识的</a></span>
             
-          </div>
         </div>
-        
-        
-        <div class="max-w-2xl mx-auto">
-            <ul class="links-nextprev"><li class="links-nextprev-prev">← 上一篇<br> <a href="/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/">给RadioPi添加USB GPS</a></li><li class="links-nextprev-next">下一篇 →<br><a href="/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/">终于响了！一个元件的矿石收音机</a></li>
-            </ul>
+        <!-- article content : end-->
+
+        <!-- 翻页器 begin -->
+        <div class="mx-auto grid grid-cols-1 gap-2 py-12
+                    md:grid-cols-2
+                ">
+                        <a href="/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/" class="
+                        flex flex-col left-0 p-2 block hover:bg-neutral-100
+                        ">
+                            < 上一篇
+                            <br>
+                            给RadioPi添加USB GPS
+                        </a>
+                    
+                        <a href="/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/" class="
+                        flex flex-col md:text-right right-0 p-2 hover:bg-neutral-100
+                        ">
+                            下一篇 >
+                            <br>
+                            终于响了！一个元件的矿石收音机
+                        </a>
+                    
         </div>
-    </div>
-</article>
-<!-- Giscus : begin -->
-<article class="bg-white mx-auto max-w-4xl prose prose-neutral">
-    <div class="px-4 pt-12 pb-16 sm:pt-16 sm:pb-24">
-        <div class="max-w-2xl mx-auto">
-    <div id="giscus_thread"></div>
+        <!-- 翻页器 end -->
+
+        <!-- Giscus : begin -->
+        <div class="mx-auto">
+        <div id="giscus_thread"></div>
 
         </div>
-    </div>
-</article>
-<!-- Giscus : end -->
+        <!-- Giscus : end -->
 
+    </article>
 
 			</heading-anchors>
 		</main>
@@ -551,7 +570,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/` was built on 2025-05-28T10:01:45.332Z -->
+		<!-- This page `/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/` was built on 2025-05-28T16:12:28.294Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>
