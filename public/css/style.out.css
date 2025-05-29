@@ -34,15 +34,12 @@
     --color-gray-900: oklch(21% 0.034 264.665);
     --color-neutral-50: oklch(98.5% 0 0);
     --color-neutral-100: oklch(97% 0 0);
-    --color-neutral-200: oklch(92.2% 0 0);
     --color-neutral-400: oklch(70.8% 0 0);
     --color-neutral-500: oklch(55.6% 0 0);
     --color-neutral-800: oklch(26.9% 0 0);
     --color-neutral-950: oklch(14.5% 0 0);
     --color-white: #fff;
     --spacing: 0.25rem;
-    --container-3xs: 16rem;
-    --container-2xs: 18rem;
     --container-4xl: 56rem;
     --text-xs: 0.75rem;
     --text-xs--line-height: calc(1 / 0.75);
@@ -1586,21 +1583,6 @@
       padding-bottom: calc(var(--spacing) * 10);
     }
   }
-  .md\:sticky {
-    @media (width >= 48rem) {
-      position: sticky;
-    }
-  }
-  .md\:top-32 {
-    @media (width >= 48rem) {
-      top: calc(var(--spacing) * 32);
-    }
-  }
-  .md\:float-right {
-    @media (width >= 48rem) {
-      float: right;
-    }
-  }
   .md\:m-0 {
     @media (width >= 48rem) {
       margin: calc(var(--spacing) * 0);
@@ -1609,11 +1591,6 @@
   .md\:mr-3 {
     @media (width >= 48rem) {
       margin-right: calc(var(--spacing) * 3);
-    }
-  }
-  .md\:mr-\[-20vw\] {
-    @media (width >= 48rem) {
-      margin-right: -20vw;
     }
   }
   .md\:flex {
@@ -1639,11 +1616,6 @@
   .md\:h-96 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 96);
-    }
-  }
-  .md\:max-h-\[70vh\] {
-    @media (width >= 48rem) {
-      max-height: 70vh;
     }
   }
   .md\:w-4xl {
@@ -1676,34 +1648,9 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
-  .md\:grid-cols-\[minmax\(800px\,1fr\)_100px\] {
-    @media (width >= 48rem) {
-      grid-template-columns: minmax(800px,1fr) 100px;
-    }
-  }
-  .md\:grid-cols-\[minmax\(800px\,1fr\)_200px\] {
-    @media (width >= 48rem) {
-      grid-template-columns: minmax(800px,1fr) 200px;
-    }
-  }
   .md\:grid-cols-\[minmax\(800px\,1fr\)_240px\] {
     @media (width >= 48rem) {
       grid-template-columns: minmax(800px,1fr) 240px;
-    }
-  }
-  .md\:grid-cols-\[minmax\(800px\,1fr\)_260px\] {
-    @media (width >= 48rem) {
-      grid-template-columns: minmax(800px,1fr) 260px;
-    }
-  }
-  .md\:grid-cols-\[minmax\(800px\,1fr\)_var\(--container-2xs\)\] {
-    @media (width >= 48rem) {
-      grid-template-columns: minmax(800px,1fr) var(--container-2xs);
-    }
-  }
-  .md\:grid-cols-\[minmax\(800px\,1fr\)_var\(--container-3xs\)\] {
-    @media (width >= 48rem) {
-      grid-template-columns: minmax(800px,1fr) var(--container-3xs);
     }
   }
   .md\:flex-col {
@@ -1731,17 +1678,6 @@
       overflow: auto;
     }
   }
-  .md\:border-l-1 {
-    @media (width >= 48rem) {
-      border-left-style: var(--tw-border-style);
-      border-left-width: 1px;
-    }
-  }
-  .md\:border-neutral-200 {
-    @media (width >= 48rem) {
-      border-color: var(--color-neutral-200);
-    }
-  }
   .md\:object-cover {
     @media (width >= 48rem) {
       object-fit: cover;
@@ -1765,11 +1701,6 @@
   .md\:pt-12 {
     @media (width >= 48rem) {
       padding-top: calc(var(--spacing) * 12);
-    }
-  }
-  .md\:pl-6 {
-    @media (width >= 48rem) {
-      padding-left: calc(var(--spacing) * 6);
     }
   }
   .md\:text-left {
@@ -1849,21 +1780,6 @@
       --tw-prose-pre-bg: var(--tw-prose-invert-pre-bg);
       --tw-prose-th-borders: var(--tw-prose-invert-th-borders);
       --tw-prose-td-borders: var(--tw-prose-invert-td-borders);
-    }
-  }
-  .md\:dark\:border-0 {
-    @media (width >= 48rem) {
-      &:where(.dark, .dark *) {
-        border-style: var(--tw-border-style);
-        border-width: 0px;
-      }
-    }
-  }
-  .md\:dark\:text-neutral-200 {
-    @media (width >= 48rem) {
-      &:where(.dark, .dark *) {
-        color: var(--color-neutral-200);
-      }
     }
   }
 }
@@ -2175,6 +2091,22 @@ header {
   border-color: var(--color-green-400);
   background-color: var(--color-green-50);
   color: var(--color-green-800);
+}
+.footnotes-sep {
+  margin-top: calc(var(--spacing) * 12);
+  margin-bottom: calc(var(--spacing) * 2);
+  border-top-color: var(--color-neutral-500);
+  padding-block: calc(var(--spacing) * 0);
+}
+.footnotes {
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+}
+.footnote-anchor {
+  scroll-margin-top: calc(var(--spacing) * 20);
+}
+h1, h2, h3, h4, h5, h6 {
+  scroll-margin-top: calc(var(--spacing) * 20);
 }
 @property --tw-scale-x {
   syntax: "*";

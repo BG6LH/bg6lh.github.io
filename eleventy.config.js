@@ -14,6 +14,9 @@ import markdownItMathTemml from "markdown-it-math/temml";
 import markdownItAnchor from "markdown-it-anchor";
 import pluginTOC from "eleventy-plugin-toc";
 import { imgSize, obsidianImgSize } from "@mdit/plugin-img-size";
+import { footnote } from "@mdit/plugin-footnote";
+
+
 
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
@@ -35,6 +38,7 @@ export default async function(eleventyConfig) {
 		// 添加 markdown-it-img-size 的三个子插件：
 		mdLib.use(imgSize);
 		mdLib.use(obsidianImgSize);
+		mdLib.use(footnote);
 
 		});
 

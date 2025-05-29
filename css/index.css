@@ -312,3 +312,21 @@ header {
 
 .callout-example 	{ @apply bg-purple-50 border-purple-400 text-purple-800;}
 .callout-success	{ @apply bg-green-50 border-green-400 text-green-800;}
+
+
+/* Footnotes 
+
+可用样式还包扩
+.footnote-ref
+.footnote-backref
+
+*/
+.footnotes-sep 	{ @apply border-t-neutral-500 mt-12 mb-2 py-0;}
+.footnotes 		{ @apply text-sm; }
+.footnote-anchor { @apply scroll-mt-20; }
+
+
+/* H1, H2, H3 ... 标题锚点补偿
+因为本模版的head时fixed在顶部的，所以标题锚点会被遮住。
+*/
+h1, h2, h3, h4, h5, h6 { @apply scroll-mt-20;}
