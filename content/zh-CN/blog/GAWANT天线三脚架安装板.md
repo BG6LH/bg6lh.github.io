@@ -9,7 +9,7 @@ created: 2025-05-28 04:36:35
 date: 2023-03-11 02:11:00 +08:00
 description: 做了一个3D打印的三脚架安装板。
 image: http://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHowz2uLAicHnPibN8Db4vU3Yliaj4lCRPaf7Sxheknicq3Gic5YcRKHPsMDzm05KlqTkHgTydgM0ibwtZITg/0?wx_fmt=jpeg
-source: https://mp.weixin.qq.com/s/1hMDjWVV8cnLVn0-_YQTVQ?token=644013800&lang=zh_CN
+source: https://mp.weixin.qq.com/s/1hMDjWVV8cnLVn0-_YQTVQ
 tags:
   - 3D打印
   - GAWANT

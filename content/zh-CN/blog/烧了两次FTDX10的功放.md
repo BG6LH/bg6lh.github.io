@@ -9,7 +9,7 @@ created: 2025-05-27 07:01:08
 date: 2022-07-16 02:11:00 +08:00
 description: 最近唯一值得吹牛的事儿就是我把YAESU FTDX10的功放烧了两次。
 image: https://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHoyBMA4dQGspjYmQFwgibP9icfcpQUThCaNWP1jNXzgnCKlRHXnia30GngxTI8fE8eAyqxtGwibz5q5SIw/0?wx_fmt=jpeg
-source: https://mp.weixin.qq.com/s/zCj9kcB1Mkbt9FLBlZG6cw?token=644013800&lang=zh_CN
+source: https://mp.weixin.qq.com/s/zCj9kcB1Mkbt9FLBlZG6cw
 tags:
   - FTDX10
 title: 烧了两次FTDX10的功放

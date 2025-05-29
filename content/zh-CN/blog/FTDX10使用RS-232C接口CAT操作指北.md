@@ -9,7 +9,7 @@ created: 2025-05-27 06:48:23
 date: 2022-11-12 01:39:00 +08:00
 description: 这是多么完美的一天，两个吵架的人都没错，连八重洲都是对的，就我这个看热闹的错了！
 image: https://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHozzgVD5Q2s96ISPH3N4QJsBZ1vrCc4a2GxbiafBsCgakuGA1ASdicOgjOgG6QiccdH7whZwr7zhzNnCQ/0?wx_fmt=jpeg
-source: https://mp.weixin.qq.com/s/Z_JCgCAVa6bmIyb2dBYqNA?token=644013800&lang=zh_CN
+source: https://mp.weixin.qq.com/s/Z_JCgCAVa6bmIyb2dBYqNA
 tags:
   - RS232
   - null-modem

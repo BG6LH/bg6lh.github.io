@@ -9,7 +9,7 @@ created: 2025-05-29 04:18:28
 date: 2023-03-20 23:58:00 +08:00
 description: nanoVNA Testboard买回来有点懵圈，里边有两个0805的贴片49Ω电阻，贴哪儿？整个板子上还有一个七七四十九的排母阵列，怎么用？
 image: https://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHozjMfRDGgaU1IbicXDnDsqbp484nAxDzicEnLQudu3bhVqOoMlrbro8bOC3ICnzxhXJYkdhOicoHc5XA/0?wx_fmt=jpeg
-source: https://mp.weixin.qq.com/s/KyO6IBCfBhq5Bi_D54BuYA?token=629047808&lang=zh_CN
+source: https://mp.weixin.qq.com/s/KyO6IBCfBhq5Bi_D54BuYA
 tags:
   - nanoVNA
 title: nanoVNA的测试板小套件

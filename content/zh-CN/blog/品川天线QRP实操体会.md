@@ -9,7 +9,7 @@ created: 2025-05-26 08:08:49
 date: 2021-10-03 00:49:00 +08:00
 description: 国庆假期里体验了一下品川天线+QRP电台的效果，为了做对比，第二天拉了根20米端馈天线。两天在SSB/CW/FT8都有收获。最远一个QSO是FT8通了俄罗斯欧洲部分的R3KAB，最近的一个是北京房山的BG1II。
 image: http://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHowkBrvFLHQGibnleMF8QmKYZGYJgadS7QXLHlIl8bVDicvxaXTuZh7m8MmaoDfq7Uxee41GerpbSqmg/0?wx_fmt=jpeg
-source: https://mp.weixin.qq.com/s/yu3dFao0gjiY4CMP76FAJA?token=644013800&lang=zh_CN
+source: https://mp.weixin.qq.com/s/yu3dFao0gjiY4CMP76FAJA
 tags:
   - Antenna
   - GAWANT
