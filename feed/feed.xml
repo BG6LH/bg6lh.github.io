@@ -5,11 +5,70 @@
   <subtitle>CQ DE BG6LH K，欢迎访问我的数字花园！我的业余无线电笔记。Copyright © 2025 BG6LH</subtitle>
   <link href="https://bg6lh.github.io/feed/feed.xml" rel="self" />
   <link href="https://bg6lh.github.io/" />
-  <updated>2022-11-17T01:37:00Z</updated>
+  <updated>2023-03-20T15:58:00Z</updated>
   <id>https://bg6lh.github.io/</id>
   <author>
     <name>BG6LH</name>
   </author>
+  <entry>
+    <title>nanoVNA的测试板小套件</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/" />
+    <updated>2023-03-20T15:58:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/</id>
+    <content type="html">&lt;p&gt;在淘宝店买了一个nanoVNA的Testboard套件。 可以辅助nanoVNA测量一些元件的射频性能，测试一些电路的反射系数和插损。看起来很方便的样子。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/LPSncFnrP8-552.avif 552w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/LPSncFnrP8-552.webp 552w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/LPSncFnrP8-552.jpeg&quot; alt=&quot;图片&quot; width=&quot;552&quot; height=&quot;414&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;来自第一个把nanoVNA开源项目做成产品的&lt;a href=&quot;https://gen111.taobao.com&quot;&gt;Hugen的店&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;买回来有点懵圈，里边有两个0805的贴片49Ω电阻，贴哪儿？ 整个板子上还有一个七七四十九的排母阵列，怎么用？ 于是上网收集了一些资料。 在这里做一个笔记。&lt;/p&gt;
+&lt;p&gt;首先找到一张&lt;code&gt;KL0S&lt;/code&gt;画的nanoVNA测试板的草图&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/#footnote1&quot;&gt;[1]&lt;/a&gt;&lt;a class=&quot;footnote-anchor&quot; id=&quot;footnote-ref1&quot;&gt;&lt;/a&gt;&lt;/sup&gt;。下边这张图是完全按照比照测试板画的。有三对儿SMA母座是作为测试的接口。但是上下两对儿其实是预留给某种目的的校准、或匹配电路的。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/QberJVz-EH-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/QberJVz-EH-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/QberJVz-EH-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1388&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;中间一对儿SMA母座连接着7x7的测试排母阵列。但是这个阵列不是完全独立或者联通的。它有一定排布的结构 ， 用来 跨 接各种可能的 组 合 。&lt;/p&gt;
+&lt;p&gt;测试板的核心设计，其实是参考了DG8SAQ设计SDR-Kits的测试板&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/#footnote2&quot;&gt;[2]&lt;/a&gt;&lt;a class=&quot;footnote-anchor&quot; id=&quot;footnote-ref2&quot;&gt;&lt;/a&gt;&lt;/sup&gt;。下边这张图是测试排母焊盘结构。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/yVGFS5jkeH-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/yVGFS5jkeH-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/yVGFS5jkeH-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;787&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;那两个0805的49Ω贴片电阻，也可以直接用来做成测试用的小工具，和测试电路组合使用。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/8oqRfBo8c--1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/8oqRfBo8c--1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/8oqRfBo8c--1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;842&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;上图：《VNWA Testboard kit for Ham Radio Workshop》by DG8SAQ&lt;/p&gt;
+&lt;p&gt;最后，为了从正面容易识别排母之间的关系，我用娃的琉金彩绘笔给它们上了点颜色。是不是很好看？&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/9UEG28F5Nb-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/9UEG28F5Nb-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/9UEG28F5Nb-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;关于具体的测试实验，DG8SAQ写过一个PPT，详细介绍了如何使用，如何DIY一些小零件辅助测试：&lt;strong&gt;Experiments with the DG8SAQ VNWA and the SDR-Kits Test Board&lt;/strong&gt; 。&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/#footnote3&quot;&gt;[3]&lt;/a&gt;&lt;a class=&quot;footnote-anchor&quot; id=&quot;footnote-ref3&quot;&gt;&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;以上资料都在本文末尾脚注里，有兴趣的朋友可以去看看。&lt;/p&gt;
+&lt;hr class=&quot;footnotes-sep&quot;&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;footnote1&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://groups.io/g/nanovna-users/attachment/25683/0/NanoVNA%20Test%20Kit%20_KL0S_.pdf&quot;&gt;https://groups.io/g/nanovna-users/attachment/25683/0/NanoVNA%20Test%20Kit%20_KL0S_.pdf&lt;/a&gt; &lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/#footnote-ref1&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&quot;footnote2&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://www.sdr-kits.net/documents/Testboard_kit.pdf&quot;&gt;https://www.sdr-kits.net/documents/Testboard_kit.pdf&lt;/a&gt; &lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/#footnote-ref2&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&quot;footnote3&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;Experiments with the DG8SAQ VNWA and the SDR-Kits Test Board, By Tom BAIER DG8SAQ：&lt;a href=&quot;https://groups.io/g/nanovna-users/attachment/14860/1/VNWA_Experiments.pdf&quot;&gt;https://groups.io/g/nanovna-users/attachment/14860/1/VNWA_Experiments.pdf&lt;/a&gt; &lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/#footnote-ref3&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+  </entry>
+  <entry>
+    <title>GAWANT天线三脚架安装板</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/" />
+    <updated>2023-03-10T18:11:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/</id>
+    <content type="html">&lt;p&gt;为了更好地体验BD6CR的 &lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzU1MDk5Mzg4Mg==&amp;amp;mid=2247486193&amp;amp;idx=1&amp;amp;sn=e387952c96f33d6ef81aa89106d2235f&amp;amp;scene=21#wechat_redirect&quot;&gt;ADX-S&lt;/a&gt; 收发器，我做了一个3D打印的三脚架安装板。可以把 &lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247484070&amp;amp;idx=1&amp;amp;sn=00a6a242207ba50364b176d01e343010&amp;amp;scene=21#wechat_redirect&quot;&gt;GAWANT天线&lt;/a&gt; 支起来用。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/xOm32FSAXN-628.avif 628w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/xOm32FSAXN-628.webp 628w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/xOm32FSAXN-628.png&quot; alt=&quot;图片&quot; width=&quot;628&quot; height=&quot;472&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;这是受Elecraft的AX1天线适配器的启发，它用了个金属的小片片固定了一个BNC双母头的直通连接器。我碰巧有个3D打印机，于是就做了这么个设计，半小时就搞定了。&lt;/p&gt;
+&lt;p&gt;BNC双通型号是SL16-KKY。 有的店也标做 SL1 6-KKY-1， SL16 -KKY/母 。 中间 螺纹部分 的直径是12.9mm。&lt;/p&gt;
+&lt;p&gt;为了增加支撑强度，我给四周加了一圈3mm高的墙。三脚架安装部分正好可以加厚，放一个预埋螺母进去。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/83f8x0ymWV-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/83f8x0ymWV-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/83f8x0ymWV-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;碰巧我还有几个预埋螺母。 外径8mm。 所以我设计的预埋孔上开口9mm，下开口6mm。 把螺母在上开口放平，用一只加热的烙铁，抵住螺母顶部，轻轻往下推，时刻注意保持螺母水平。&lt;/p&gt;
+&lt;p&gt;留意烙铁的温度，比3D打印材料的打印温度稍高一点就好。 我用的PLA材料打印温度是220°C，所以埋螺母时，我把烙铁加热到了240°C。如果太热，材料液化的太快、螺母进的也太快、四周容易变形。&lt;/p&gt;
+&lt;p&gt;这个结构支撑2米以内的拉杆天线问题不大。但是天线想横着有点难。即便是2米拉杆横在这么短的结构上产生的力矩也很大。我在一个球形的小云台上做了实验，结果是小板子还好，但是云台的球抗不住了。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/eSMMMyI7gD-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/eSMMMyI7gD-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/eSMMMyI7gD-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1440&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;支撑GAWANT天线的效果。我的ADX-S还没调试好，所以背景是个QCX-mini。周末打算带到杭州桐庐的茶山上玩玩。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/M_Bd9wvFNn-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/M_Bd9wvFNn-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/M_Bd9wvFNn-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;感兴趣的朋友可以到Thingiverse.com上下载去，地址是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;BNC antenna tripod adapter&lt;/strong&gt;: &lt;a href=&quot;https://www.thingiverse.com/thing:5899922&quot;&gt;https://www.thingiverse.com/thing:5899922&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;扫码也可以哦。我的空间里也有QCX-mini的外壳，免费下，别客气。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/hbR7dzy9qM-200.avif 200w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/hbR7dzy9qM-200.webp 200w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/hbR7dzy9qM-200.png&quot; alt=&quot;图片&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>SCU-LAN10远程操作FTDX10的组网实践</title>
     <link href="https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/" />
@@ -508,169 +567,6 @@
 &lt;li&gt;&lt;a href=&quot;https://www.radiomuseum.org/tubes/tube_2e22.html&quot;&gt;电子功放管 2E22&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.radionerds.com/index.php/AN~GRC-9&quot;&gt;AN/GRC-9 电台信息&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>关于2美元便携短波天线的调查</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/" />
-    <updated>2021-11-10T10:46:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/</id>
-    <content type="html">&lt;p&gt;这两天在hellocq.net跟人讨论他的迷之馈线，暮然发现他用的是一根： &lt;strong&gt;2美元的螺旋便携式短波天线&lt;/strong&gt; ，这是一个2008年流行的DIY天线。物理总长度只有2米出头，工作在20米波段。&lt;/p&gt;
-&lt;p&gt;起初我以为这是1/4波长GP天线的变种，但又看到好多人说这是1/2波长端馈。弄得我也含糊了，于是花了点时间做研究。&lt;/p&gt;
-&lt;h2 id=&quot;%E5%85%88%E8%AF%B4%E7%BB%93%E8%AE%BA&quot; tabindex=&quot;-1&quot;&gt;先说结论&lt;/h2&gt;
-&lt;p&gt;这的确是一副以1/4波长GP为原型的天线，它曾经在上世纪70年代流行过一阵子。到今天有几种和它相关的名字，提起来可能大家都会感到亲切：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;连续加载天线：Continually Loaded Vertical，CLV&lt;/li&gt;
-&lt;li&gt;螺旋缠绕天线：Helically Wound Vertical，HWV&lt;/li&gt;
-&lt;li&gt;橡皮鸭天线：对讲机上常见的螺旋振子套一个橡皮套的短天线&lt;/li&gt;
-&lt;li&gt;鱼竿天线：在高楼中间架设短波缩短天线的常见形式&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/t82Odw-Amw-786.avif 786w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/t82Odw-Amw-786.webp 786w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/t82Odw-Amw-786.png&quot; alt=&quot;图片&quot; width=&quot;786&quot; height=&quot;328&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;BG3MDO随手画的这个天线的等效电路图&lt;/p&gt;
-&lt;p&gt;这种天线也可以叫做 &lt;strong&gt;谐振电感&lt;/strong&gt; 。大多数案例都使用了1/2波长的导线，绕制出 &lt;strong&gt;1/4波长电气长度&lt;/strong&gt; 的天线。&lt;/p&gt;
-&lt;p&gt;这种天线可以肯定是 &lt;strong&gt;负增益&lt;/strong&gt; 的，依赖于不同的材料和绕制工艺。基本上它损失一半效率。而且效率 &lt;strong&gt;受地网形态的影响很大&lt;/strong&gt; 。它的Q值高，所以带宽很窄。&lt;/p&gt;
-&lt;p&gt;它的优点也很明显：省地方， 小！驾驭它最简单的办法是 &lt;strong&gt;用天调&lt;/strong&gt; ，想玩明白至少也得有一个天分。&lt;/p&gt;
-&lt;h2 id=&quot;2%E7%BE%8E%E5%85%83%E8%9E%BA%E6%97%8B%E4%BE%BF%E6%90%BA%E5%A4%A9%E7%BA%BF%E7%9A%84%E7%89%B9%E5%BE%81&quot; tabindex=&quot;-1&quot;&gt;2美元螺旋便携天线的特征&lt;/h2&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/HPBQpx3MsL-522.avif 522w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/HPBQpx3MsL-522.webp 522w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/HPBQpx3MsL-522.png&quot; alt=&quot;图片&quot; width=&quot;522&quot; height=&quot;205&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;这个天线用了将近9米多、约半个波长的导线，绕制了一个1.2米长的线圈，这部分很像典型的“连续加载”天线。但是它还有一个0.91米长的直线振子。导线总长度的确是1/2个波长。&lt;/p&gt;
-&lt;p&gt;但是它又有几个属于1/4波长GP天线的显著特征：单极、一端1:1馈电、使用1/4波长地网……馈电点电压低，电流高，阻抗低。&lt;/p&gt;
-&lt;h2 id=&quot;2%E7%BE%8E%E5%85%83%E8%9E%BA%E6%97%8B%E5%A4%A9%E7%BA%BF%E7%9A%84%E5%87%BA%E5%A4%84&quot; tabindex=&quot;-1&quot;&gt;2美元螺旋天线的出处&lt;/h2&gt;
-&lt;p&gt;我找到了这个天线的原始出处，2001年9月，AH6NF和WH6GS发表在夏威夷业余无线电网站的帖子：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://ham.aditl.com/ham/helical-antenna/index.html&quot;&gt;http://ham.aditl.com/ham/helical-antenna/index.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;这个帖子和Hellocq.net上说的细节完全一致。同时它提到了：The design is a &lt;strong&gt;continuously loaded&lt;/strong&gt;, &lt;strong&gt;helically wound vertical&lt;/strong&gt; antenna with a three-foot stinger……关键字： &lt;strong&gt;连续加载&lt;/strong&gt; 、 &lt;strong&gt;螺旋缠绕&lt;/strong&gt; ，此外还带有一根3英尺(0.91米)长的直线振子(stinger)。&lt;/p&gt;
-&lt;p&gt;我按照“连续加载”这个关键字，寻找这个天线的理论模型，大部分是谈论电小天线、手机、Wi-Fi天线的设计。按照“螺旋缠绕”找，找出来好多业余届讨论过的帖子。他们大部分都是按照1/4波长GP天线为模型去设计的。&lt;/p&gt;
-&lt;h2 id=&quot;%E6%A1%88%E4%BE%8B%EF%BC%9Akk6gxg%E7%9A%8440%E7%B1%B3%E6%B3%A2%E6%AE%B5%E8%9E%BA%E6%97%8B%E7%BC%A0%E7%BB%95%E5%A4%A9%E7%BA%BF&quot; tabindex=&quot;-1&quot;&gt;案例：KK6GXG的40米波段螺旋缠绕天线&lt;/h2&gt;
-&lt;p&gt;典型案例是KK6GXG的40米波段螺旋缠绕天线，他在2015年4月份做了一副。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.kk6gxg.com/40-meter-antenna/&quot;&gt;http://www.kk6gxg.com/40-meter-antenna/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;他的资料来自1975年的ARRL业余无线电手册，第606页的一张原理图：&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/lWl6jLVVX3-918.avif 918w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/lWl6jLVVX3-918.webp 918w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/lWl6jLVVX3-918.png&quot; alt=&quot;图片&quot; width=&quot;918&quot; height=&quot;1068&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;注意三个关键信息：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;这天线原型图的年份是 &lt;strong&gt;“1975年”&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;缠绕电感部分，1975年的这张图上是建议用4到20英尺(1.5～6米)长的杆子，缠绕1/2波长长度的14AWG(2平方)的导线。而KK6GXG的实操，是用了66.5英尺(20米，40米 &lt;strong&gt;波长的一半&lt;/strong&gt;)的导线绕在一根6英尺(1.8米)的杆子上。&lt;/li&gt;
-&lt;li&gt;最后，KK6GXG计划用一个 &lt;strong&gt;Z-Match天调&lt;/strong&gt; 。1975年这张图用了一个可变电感，也推荐再用一个天调。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;%E8%9E%BA%E6%97%8B%E7%BC%A0%E7%BB%95%E7%9A%84gp%E5%A4%A9%E7%BA%BF&quot; tabindex=&quot;-1&quot;&gt;螺旋缠绕的GP天线&lt;/h2&gt;
-&lt;p&gt;这些案例的原型显然都基于一个GP天线，因为他们都用到了1/4波长的地网，来提供一个“地平面”，以“镜像”另外一半虚拟的天线，达到一个偶极天线的“平衡”状态，所以他们都是低阻抗馈电的案例。&lt;/p&gt;
-&lt;p&gt;它到底是一个1/4GP？1/2GP？还是5/8GP？还是一个端馈的长线？ &lt;strong&gt;还是要看它的理论模型的电气长度&lt;/strong&gt; 。&lt;/p&gt;
-&lt;p&gt;我们回顾一下1/4波长的GP天线模型：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1/4波长的GP天线，馈电点的电压最低，电流最高；&lt;/li&gt;
-&lt;li&gt;1/4GP的容抗和感抗组成的电抗为0，呈现出纯电阻性，这是所谓“谐振”的电学意义。&lt;/li&gt;
-&lt;li&gt;当天线短于1/4波长时，天线上的容抗增加，感抗减少，整体呈现的电抗增大——天线不谐振了；&lt;/li&gt;
-&lt;li&gt;通过加入串联电感，抵消掉多余容抗，让它整体呈现出0电抗——天线又回到“谐振”状态；&lt;/li&gt;
-&lt;li&gt;持续缩短，并增加电感，直到全都变成电感，感抗有可能大于容抗了——天线仍不“谐振”；&lt;/li&gt;
-&lt;li&gt;松绕电感线圈，可以减少感抗、增加容抗，理论上总电抗又可以归0——这就是“螺旋缠绕”；&lt;/li&gt;
-&lt;li&gt;如果电抗还没归0，那可以在另一头增加一根直线导体，它会带来一些容性的电抗，再抵消一部分感抗。&lt;/li&gt;
-&lt;li&gt;如果总电抗还没回归到0，那就可以上天调了……&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;%E4%B8%BA%E5%95%A5%E7%94%A8%E4%BA%861%2F2%E6%B3%A2%E9%95%BF%E7%9A%84%E5%AF%BC%E7%BA%BF%EF%BC%9F&quot; tabindex=&quot;-1&quot;&gt;为啥用了1/2波长的导线？&lt;/h2&gt;
-&lt;p&gt;现在我大概理解了“螺旋缠绕”的意义了：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;把拉直的天线缠绕起来，使整个天线的物理长度变短，可以节约物理空间；&lt;/li&gt;
-&lt;li&gt;缠绕起来的天线就是一个大号的电感器；&lt;/li&gt;
-&lt;li&gt;如果是密绕，电磁波就憋在电感器里出不来；&lt;/li&gt;
-&lt;li&gt;松绕才能让电磁波辐射出来；&lt;/li&gt;
-&lt;li&gt;但是松绕电感又减少了，所以就要多绕更多导线；&lt;/li&gt;
-&lt;li&gt;完全绕成松绕的电感，要达到谐振，大约需要1/2波长的导线；&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;为啥用了1/2波长？这个长度似乎没有一个硬性的规定&lt;/strong&gt; ， 参考2009年7月的QST杂志的封面文章，K6MM的160米HWV天线讨论，他用的是G4FGQ的建模工具计算的，相应的参数是导线的直径、线圈的直径、每圈之间的间隙等，算出来正好是大约1/2波长。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://hamuniverse.com/k6mm160metervertical.html&quot;&gt;https://hamuniverse.com/k6mm160metervertical.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;至少，不能简单地、把导线的长度当作天线模型的波长。 &lt;strong&gt;因为它的模型是按照谐振的1/4波长电气长度计算的。&lt;/strong&gt; 有兴趣深挖这个话题的， 可以去研究一下G4 FGQ的 建模工具， 文末有提及。&lt;/p&gt;
-&lt;p&gt;从这一点上，我也大致体会了一下“鱼竿天线”。 有人说“玩业余无线电的”很多零件都可以去“玩钓鱼的”那里找； 如果去“玩摄影的”那里找，相同功能的零件要贵上十几倍。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;鱼竿天线就是把长长的天线缠在鱼竿上；&lt;/li&gt;
-&lt;li&gt;它可以从阳台伸出去，不至于下垂太严重；&lt;/li&gt;
-&lt;li&gt;导线缠绕的疏密，带来了额外的感抗和容抗， 电抗变化 不 容易被 量化；&lt;/li&gt;
-&lt;li&gt;因此很难给出一 个标准模型、 能做到多波段谐振的天线， 只能是“盐少许，蒜蓉一小撮，烧至七成热……”，这时候可以用天 分 来做参考；&lt;/li&gt;
-&lt;li&gt;实在不行，交给天调吧。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;%E9%AB%98q%E5%80%BC%E5%A4%A9%E7%BA%BF%EF%BC%8C%E6%8E%A5%E5%9C%B0%E6%8D%9F%E8%80%97%E5%B7%AE%E5%BC%82%E5%A4%A7%EF%BC%8C%E6%95%88%E7%8E%87%E4%BD%8E&quot; tabindex=&quot;-1&quot;&gt;高Q值天线，接地损耗差异大，效率低&lt;/h2&gt;
-&lt;p&gt;螺旋缠绕天线一般都是高Q值的，因为一大半都是电感嘛。想象一个很硬的弹簧，使劲按压到标定长度，很难保持是吧。 这就类似高Q值，高Q值表示可调谐的带宽会非常窄。 一些案例甚至说在LF和MF波段的应用上，都不能保证一个SSB的3000Hz语音的带宽，玩CW还凑合，FT8足够了。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.smeter.net/antennas/helical-modeling.php&quot;&gt;https://www.smeter.net/antennas/helical-modeling.php&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;上边这篇文章还提到它的“接地损耗”琢磨不定，不同质量、不同面积的“地”，带来的损耗差异很大。&lt;/p&gt;
-&lt;p&gt;和常规的加感天线相比，它的效率并不高，有评价说它的分布 &lt;strong&gt;损耗和增益基本上相当&lt;/strong&gt; ，后来人们建模和实际应用都证明了这一点。这是一个2012年，QRZ.com论坛上的讨论：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://forums.qrz.com/index.php?threads/helical-hf-antennas-%E2%80%93-anyone.358209/#post-2628608&quot;&gt;https://forums.qrz.com/index.php?threads/helical-hf-antennas-%E2%80%93-anyone.358209/#post-2628608&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;%E5%90%84%E7%A7%8D%E7%BC%A0%E7%BB%95%E5%8F%98%E5%BD%A2&quot; tabindex=&quot;-1&quot;&gt;各种缠绕变形&lt;/h2&gt;
-&lt;p&gt;这个天线流行于上世纪70年代，那个年代还流行Slinky偶极天线。就是用两个松松的螺旋弹簧做的偶极天线。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/M3yvlS8yaL-1000.avif 1000w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/M3yvlS8yaL-1000.webp 1000w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/M3yvlS8yaL-1000.png&quot; alt=&quot;图片&quot; width=&quot;1000&quot; height=&quot;545&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;现在这种天线也有人玩，不仅仅是因为好玩，毕竟各种缠绕之后，它省地方啊，尤其是长波和中波，这些需要大尺寸空间的波段。&lt;/p&gt;
-&lt;h2 id=&quot;g4fgq%E8%9E%BA%E7%BA%BF%E7%BC%A0%E7%BB%95%E5%A4%A9%E7%BA%BF%E7%9A%84%E5%BB%BA%E6%A8%A1%E5%B7%A5%E5%85%B7&quot; tabindex=&quot;-1&quot;&gt;G4FGQ螺线缠绕天线的建模工具&lt;/h2&gt;
-&lt;p&gt;G4FGQ有一个关于HWV天线的电感导线长度的计算公式：&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/75qG0QEWdR-720.avif 720w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/75qG0QEWdR-720.webp 720w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/75qG0QEWdR-720.png&quot; alt=&quot;图片&quot; width=&quot;720&quot; height=&quot;540&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;G4FGQ关于HWV的导线尺寸的计算公式&lt;/p&gt;
-&lt;p&gt;这里有G4FGQ的HWV天线建模计算器：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://static.smeter.net/software/helical3.exe&quot;&gt;http://static.smeter.net/software/helical3.exe&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;可惜我没下载下来，也不知道它该怎么用。它只是出现在跟这个话题相关的一个1997年的网页上，欢迎有兴趣的朋友去试试。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.smeter.net/antennas/helical-modeling.php&quot;&gt;https://www.smeter.net/antennas/helical-modeling.php&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;%E7%9B%B8%E5%85%B3%E6%A1%88%E4%BE%8B%E6%B1%87%E6%80%BB&quot; tabindex=&quot;-1&quot;&gt;相关案例汇总&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;AH6NF和WH6GS发表在夏威夷业余无线电网站的帖子：&lt;a href=&quot;http://ham.aditl.com/ham/helical-antenna/index.html&quot;&gt;http://ham.aditl.com/ham/helical-antenna/index.html&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;KK6GXG的40米波段螺旋缠绕天线：&lt;a href=&quot;http://www.kk6gxg.com/40-meter-antenna/&quot;&gt;http://www.kk6gxg.com/40-meter-antenna/&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;M0MCX的40米波段螺旋缠绕垂直天线：&lt;a href=&quot;https://www.m0mcx.co.uk/helically-wound-40m-vertical/&quot;&gt;https://www.m0mcx.co.uk/helically-wound-40m-vertical/&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/02J_N1H1Zg-450.avif 450w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/02J_N1H1Zg-450.webp 450w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/02J_N1H1Zg-450.png&quot; alt=&quot;图片&quot; width=&quot;450&quot; height=&quot;600&quot;&gt;&lt;/picture&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;VA3ZNW的20米波段螺旋缠绕垂直天线：&lt;a href=&quot;http://www.antentop.org/017/files/va3znw_017.pdf&quot;&gt;http://www.antentop.org/017/files/va3znw_017.pdf&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;VE3YXO的2个160米波段螺旋缠绕天线：他用了一段阻抗为450Ω的梯子线做馈线，所以他同时用了1:1和1:9的两个巴伦。&lt;a href=&quot;http://www.antentop.org/021/files/VE3YXO_021.pdf&quot;&gt;http://www.antentop.org/021/files/VE3YXO_021.pdf&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;M0TCF的图腾柱天线，工作在80米波段，使用了四种共9个线圈，还包括一段1:4的自由变压器UNUN馈电。
-&lt;a href=&quot;http://www.torbayars.org.uk/down/totem%20pole.pdf&quot;&gt;http://www.torbayars.org.uk/down/totem%20pole.pdf&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/HN8_0gnKyf-764.avif 764w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/HN8_0gnKyf-764.webp 764w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/HN8_0gnKyf-764.png&quot; alt=&quot;图片&quot; width=&quot;764&quot; height=&quot;1272&quot;&gt;&lt;/picture&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;ARRL的20美元车载天线，使用了三个不同疏密程度电感
-&lt;a href=&quot;http://www.arrl.org/files/file/Technology/tis/info/pdf/0004033.pdf&quot;&gt;http://www.arrl.org/files/file/Technology/tis/info/pdf/0004033.pdf&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>拯救iCOM IC-7000功放板</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/" />
-    <updated>2021-11-07T00:07:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/</id>
-    <content type="html">&lt;p&gt;最近BI1KFY的IC-7000推动级功放板烧了。无线电老中医BI1EIH新做了PCB 给完美修复 。这机器现在可以叫IC-7001，或者IC-7000 BI1EIH remix吗？&lt;/p&gt;
-&lt;p&gt;IC-7000是日本 iCOM公司 2006年上市的一款HF/VHF/UHF收发信机。它的早期产品，烧功放是个常见故障， 原因是推动级设计阻尼不足，容易诱发自激，导致推动管和PCB一起烧毁。 在推动级自激时，有时会发生同时烧毁UHF功放管（即使当时UHF不在工作状态）。&lt;/p&gt;
-&lt;h2 id=&quot;%E6%95%85%E9%9A%9C%E7%8E%B0%E8%B1%A1&quot; tabindex=&quot;-1&quot;&gt;故障现象&lt;/h2&gt;
-&lt;p&gt;接收正常，按PTT可进入发射状态，但HF/VHF/UHF均无输出。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/PWMXzrwO0y-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/PWMXzrwO0y-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/PWMXzrwO0y-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1440&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;拆掉这个板子，需要专业工具，费老劲了……&lt;/p&gt;
-&lt;h2 id=&quot;%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF&quot; tabindex=&quot;-1&quot;&gt;解决思路&lt;/h2&gt;
-&lt;p&gt;在推动级功放板上增加一个1～10Ω的阻尼电阻，可大大降低自激的可能性。IC-7000 的 晚期产品也是这么解决的，它们加的电阻是1Ω。&lt;/p&gt;
-&lt;p&gt;如果你的还没烧，可以自己加一个试试，用小刀在电路板划一个口子，再焊上一个电阻。很多老外就是这么干的。如果你的板子已经烧了，那福音来了：&lt;/p&gt;
-&lt;p&gt;BI1EIH按原尺寸重新测量、设计、反复打样制作了新的推动板，增加了阻尼电阻，原位精确更换。而且，这个PCB还开源了，需要的朋友赶紧去他的Github下载吧： https://github.com/sgub/ic7k-driver-pcb&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/LNM8UHpj1x-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/LNM8UHpj1x-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/LNM8UHpj1x-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;808&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;BI1EIH设计的PCB，R103是新增的电阻&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/PN37qkw8JB-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/PN37qkw8JB-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/PN37qkw8JB-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;808&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;左边是BI1EIH做好的新功放板，右边是烧掉的原厂货&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/IjpId0AHNJ-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/IjpId0AHNJ-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/IjpId0AHNJ-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;808&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;做好以后的新功放板总成&lt;/p&gt;
-&lt;p&gt;推动管元件，建议别去“马家店”买，假货泛滥……从贸泽(mouser)的海外站订购更靠谱。Mouser零件编号：511-PD55015-E。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/40L_J2IEhU-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/40L_J2IEhU-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/40L_J2IEhU-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;325&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/cZOzL6N6lI-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/cZOzL6N6lI-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/cZOzL6N6lI-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;808&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;用mouser上买的心里踏实&lt;/p&gt;
-&lt;h2 id=&quot;%E6%A0%A1%E5%87%86&quot; tabindex=&quot;-1&quot;&gt;校准&lt;/h2&gt;
-&lt;p&gt;最后，别忘了校准一下IC7000推动级的 &lt;strong&gt;静态工作点&lt;/strong&gt; ，确保功率输出达标。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/3yrL2MP4HB-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/3yrL2MP4HB-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/3yrL2MP4HB-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1440&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;最最后，汇总一下重要信息：&lt;/p&gt;
-&lt;h2 id=&quot;bi1eih%E7%9A%84ic-7000%E5%8A%9F%E6%94%BE%E6%9D%BFpcb%E4%B8%8B%E8%BD%BD&quot; tabindex=&quot;-1&quot;&gt;BI1EIH的IC-7000功放板PCB下载&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/sgub/ic7k-driver-pcb&quot;&gt;https://github.com/sgub/ic7k-driver-pcb&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;如果你的IC-7000也烧了，可以去无线电老中医BI1EIH的 &lt;strong&gt;闲鱼号sgub&lt;/strong&gt; 问诊：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;27€nrpSXE3A5o1€ https://m.tb.cn/h.fghxdWW 我在闲鱼发布了【#技能服务# #设备维修# iCOM IC-7000推动级功】
-&lt;/code&gt;&lt;/pre&gt;
 </content>
   </entry>
 </feed>
