@@ -292,6 +292,8 @@ header {
 /* Callouts */
 
 .callout {	@apply p-4 my-4 border-l-4 rounded text-sm; }
+.callout-title { @apply font-semibold text-sm; }
+
 .callout-quote		{ @apply bg-neutral-50 border-neutral-400 text-neutral-800;}
 
 .callout-tip		{ @apply bg-cyan-50 border-cyan-400 text-cyan-800;}

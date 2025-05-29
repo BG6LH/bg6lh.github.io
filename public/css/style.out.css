@@ -2017,6 +2017,12 @@ header {
   font-size: var(--text-sm);
   line-height: var(--tw-leading, var(--text-sm--line-height));
 }
+.callout-title {
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+}
 .callout-quote {
   border-color: var(--color-neutral-400);
   background-color: var(--color-neutral-50);
