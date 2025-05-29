@@ -82,7 +82,7 @@
 	</url>
 	
 	<url>
-		<loc>https://bg6lh.github.io/zh-CN/blog/faq-could-gpio-of-raspberry-ri-be-used-to-control-transceivers?/</loc>
+		<loc>https://bg6lh.github.io/zh-CN/blog/faq-could-gpio-of-raspberry-ri-be-used-to-control-transceivers/</loc>
 		<lastmod>2020-06-16 01:07:00 UTC</lastmod>
 	</url>
 	
@@ -202,42 +202,52 @@
 	</url>
 	
 	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/</loc>
+		<lastmod>2023-04-07 20:04:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/</loc>
+		<lastmod>2023-04-15 02:37:00 UTC</lastmod>
+	</url>
+	
+	<url>
 		<loc>https://bg6lh.github.io/en/about/</loc>
-		<lastmod>2025-05-29 14:19:25 UTC</lastmod>
+		<lastmod>2025-05-29 15:23:01 UTC</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://bg6lh.github.io/en/blog/</loc>
-		<lastmod>2025-05-29 14:19:25 UTC</lastmod>
+		<lastmod>2025-05-29 15:23:01 UTC</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://bg6lh.github.io/en/</loc>
-		<lastmod>2025-05-29 14:19:25 UTC</lastmod>
+		<lastmod>2025-05-29 15:23:01 UTC</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://bg6lh.github.io/zh-CN/about/</loc>
-		<lastmod>2025-05-29 14:19:25 UTC</lastmod>
+		<lastmod>2025-05-29 15:23:01 UTC</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://bg6lh.github.io/zh-CN/blog/</loc>
-		<lastmod>2025-05-29 14:19:25 UTC</lastmod>
+		<lastmod>2025-05-29 15:23:01 UTC</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://bg6lh.github.io/</loc>
-		<lastmod>2025-05-29 14:19:25 UTC</lastmod>
+		<lastmod>2025-05-29 15:23:01 UTC</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://bg6lh.github.io/zh-CN/tags/</loc>
-		<lastmod>2025-05-29 14:19:25 UTC</lastmod>
+		<lastmod>2025-05-29 15:23:01 UTC</lastmod>
 	</url>
 	
 	<url>
 		<loc>https://bg6lh.github.io/feed/feed.xml</loc>
-		<lastmod>2025-05-29 14:19:39 UTC</lastmod>
+		<lastmod>2025-05-29 15:23:15 UTC</lastmod>
 	</url>
 </urlset>
