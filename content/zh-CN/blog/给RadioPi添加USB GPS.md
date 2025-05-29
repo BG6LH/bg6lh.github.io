@@ -15,7 +15,7 @@ tags:
   - gpsd
   - radiopi
 title: 给RadioPi添加USB GPS
-titleSlug: "setting-up-chrony-and-gpsd-for-radiopi"
+titleSlug: setting-up-chrony-and-gpsd-for-radiopi
 updated: 2025-05-26 04:01:42
 ---
 

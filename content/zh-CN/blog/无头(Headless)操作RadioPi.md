@@ -16,7 +16,7 @@ tags:
   - headless
   - FT8
 title: 无头(Headless)操作RadioPi
-titleSlug: "headless-operation-with-radiopi"
+titleSlug: headless-operation-with-radiopi
 updated: 2025-05-25 02:19:30
 ---
 

@@ -14,7 +14,7 @@ tags:
   - radiopi
   - GPIO
 title: FAQ：可以用树莓派的GPIO串口控制电台吗？
-titleSlug: "faq-could-gpio-of-raspberry-ri-be-used-to-control-transceivers"
+titleSlug: faq-could-gpio-of-raspberry-ri-be-used-to-control-transceivers
 updated: 2025-05-25 04:05:38
 ---
 

@@ -14,7 +14,7 @@ tags:
   - 3D打印
   - usdx
 title: 为usdx制作3D打印外壳
-titleSlug: "a-3d-printed-enclosure-for-usdx-sdr"
+titleSlug: a-3d-printed-enclosure-for-usdx-sdr
 updated: 2025-05-26 07:26:50
 ---
 

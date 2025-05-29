@@ -13,7 +13,7 @@ source: https://mp.weixin.qq.com/s/zCj9kcB1Mkbt9FLBlZG6cw
 tags:
   - FTDX10
 title: 烧了两次FTDX10的功放
-titleSlug: I-smoked-ftdx10-amplifier-twice
+titleSlug: i-smoked-ftdx10-amplifier-twice
 updated: 2025-05-27 07:12:33
 ---
 

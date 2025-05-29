@@ -15,7 +15,7 @@ tags:
   - radiopi
   - rpi
 title: 树莓派解码FT8的性能评估
-titleSlug: "ft8-decoding-performance-comparison-on-different-raspberry-pi-models"
+titleSlug: ft8-decoding-performance-comparison-on-different-raspberry-pi-models
 updated: 2025-05-26 03:52:25
 ---
 

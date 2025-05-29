@@ -15,7 +15,7 @@ tags:
   - WB2CBA
   - nanoVNA 
 title: WB2CBA低通滤波器测试板
-titleSlug: "wb2cba-low-pass-filter-testing-kit"
+titleSlug: wb2cba-low-pass-filter-testing-kit
 updated: 2025-05-29 02:23:41
 ---
 
