@@ -44,7 +44,7 @@ updated: 2025-05-29 04:23:01
 
 ![图片](https://mmbiz.qpic.cn/mmbiz_png/8havQfBUHozjMfRDGgaU1IbicXDnDsqbprsjd2reSz8q1fPUbB6rFLCFfAo8JiccmicA6J2UnGo6l0W97Z0MrFX0A/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
 
-上图：《VNWA Testboard kit for Ham Radio Workshop》by DG8SAQ  
+上图：《VNWA Testboard kit for Ham Radio Workshop》by DG8SAQ  [^2]
 
 最后，为了从正面容易识别排母之间的关系，我用娃的琉金彩绘笔给它们上了点颜色。是不是很好看？
 
