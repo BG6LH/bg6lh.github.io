@@ -1,3 +1,6 @@
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?label=DXCC&url=https://raw.githubusercontent.com/BG6LH/bg6lh.github.io/refs/heads/main/_data/lotwDxcc.json&query=confirmed_dxcc_count&color=blue)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?label=LoTW%20QSL&url=https://raw.githubusercontent.com/BG6LH/bg6lh.github.io/refs/heads/main/_data/lotwDxcc.json&query=total_confirmed_qsos&color=blue)
+
 # eleventy-3.1.0-base-blog with Tailwind CSS 4.1.7
 ---
 本项目正在制作中
