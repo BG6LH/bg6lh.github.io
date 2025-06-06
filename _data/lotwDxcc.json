@@ -1,0 +1,1747 @@
+{
+  "confirmed_dxcc_count": 193,
+  "confirmed_dxcc_entities": [
+    0,
+    1,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9,
+    11,
+    13,
+    14,
+    15,
+    18,
+    21,
+    22,
+    27,
+    29,
+    31,
+    32,
+    34,
+    38,
+    40,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    52,
+    53,
+    54,
+    66,
+    69,
+    70,
+    72,
+    75,
+    91,
+    95,
+    99,
+    100,
+    103,
+    106,
+    108,
+    110,
+    112,
+    114,
+    116,
+    120,
+    122,
+    125,
+    126,
+    130,
+    132,
+    135,
+    137,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    149,
+    150,
+    152,
+    157,
+    158,
+    159,
+    160,
+    162,
+    163,
+    165,
+    166,
+    168,
+    169,
+    170,
+    172,
+    173,
+    175,
+    176,
+    177,
+    179,
+    185,
+    188,
+    189,
+    190,
+    191,
+    192,
+    197,
+    202,
+    203,
+    206,
+    209,
+    212,
+    214,
+    215,
+    221,
+    222,
+    223,
+    224,
+    225,
+    227,
+    230,
+    234,
+    236,
+    239,
+    242,
+    245,
+    248,
+    254,
+    256,
+    259,
+    262,
+    263,
+    265,
+    266,
+    269,
+    272,
+    275,
+    279,
+    281,
+    282,
+    283,
+    284,
+    285,
+    286,
+    287,
+    288,
+    291,
+    292,
+    293,
+    294,
+    296,
+    298,
+    299,
+    304,
+    305,
+    306,
+    308,
+    312,
+    315,
+    318,
+    321,
+    324,
+    327,
+    330,
+    336,
+    339,
+    342,
+    345,
+    348,
+    354,
+    363,
+    369,
+    370,
+    372,
+    375,
+    376,
+    378,
+    379,
+    381,
+    386,
+    387,
+    390,
+    391,
+    402,
+    404,
+    409,
+    412,
+    416,
+    420,
+    424,
+    430,
+    432,
+    434,
+    440,
+    446,
+    453,
+    454,
+    460,
+    462,
+    482,
+    492,
+    497,
+    499,
+    501,
+    502,
+    503,
+    504,
+    507,
+    508,
+    511,
+    513,
+    515
+  ],
+  "dxcc_details": [
+    {
+      "dxcc": 0,
+      "country": "Unknown",
+      "sample_call": "FO4AE/MM",
+      "sample_date": "20230725",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 1,
+      "country": "CANADA",
+      "sample_call": "VA3DX",
+      "sample_date": "20240413",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 3,
+      "country": "AFGHANISTAN",
+      "sample_call": "T6AA",
+      "sample_date": "20210501",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 4,
+      "country": "AGALEGA & SAINT BRANDON ISLANDS",
+      "sample_call": "3B7M",
+      "sample_date": "20230306",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 5,
+      "country": "ALAND ISLANDS",
+      "sample_call": "OH0Z",
+      "sample_date": "20221016",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 6,
+      "country": "ALASKA",
+      "sample_call": "KL7RRC",
+      "sample_date": "20231213",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 7,
+      "country": "ALBANIA",
+      "sample_call": "ZA/OE6VCG",
+      "sample_date": "20221003",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 9,
+      "country": "AMERICAN SAMOA",
+      "sample_call": "K8K",
+      "sample_date": "20240709",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 11,
+      "country": "ANDAMAN & NICOBAR ISLANDS",
+      "sample_call": "VU4N",
+      "sample_date": "20231219",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 13,
+      "country": "ANTARCTICA",
+      "sample_call": "8J1RL",
+      "sample_date": "20210511",
+      "sample_band": "17M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 14,
+      "country": "ARMENIA",
+      "sample_call": "EK/RX3DPK",
+      "sample_date": "20240723",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 15,
+      "country": "ASIATIC RUSSIA",
+      "sample_call": "R8LCA",
+      "sample_date": "20250421",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 18,
+      "country": "AZERBAIJAN",
+      "sample_call": "4K7RF",
+      "sample_date": "20231025",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 21,
+      "country": "BALEARIC ISLANDS",
+      "sample_call": "EC6AAE",
+      "sample_date": "20221209",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 22,
+      "country": "PALAU",
+      "sample_call": "T88SS",
+      "sample_date": "20221218",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 27,
+      "country": "BELARUS",
+      "sample_call": "EW4M",
+      "sample_date": "20221209",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 29,
+      "country": "CANARY ISLANDS",
+      "sample_call": "EA8TH",
+      "sample_date": "20231229",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 31,
+      "country": "CENTRAL KIRIBATI",
+      "sample_call": "T31EU",
+      "sample_date": "20190223",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 32,
+      "country": "CEUTA & MELILLA",
+      "sample_call": "EA9ACE",
+      "sample_date": "20250221",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 34,
+      "country": "CHATHAM ISLAND",
+      "sample_call": "ZL7IO",
+      "sample_date": "20230919",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 38,
+      "country": "COCOS (KEELING) ISLANDS",
+      "sample_call": "VK9CY",
+      "sample_date": "20231207",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 40,
+      "country": "CRETE",
+      "sample_call": "SV9CAF",
+      "sample_date": "20231226",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 45,
+      "country": "DODECANESE",
+      "sample_call": "SV5AZP",
+      "sample_date": "20210516",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 46,
+      "country": "EAST MALAYSIA",
+      "sample_call": "9M1Z",
+      "sample_date": "20240624",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 47,
+      "country": "EASTER ISLAND",
+      "sample_call": "3G0YA",
+      "sample_date": "20240428",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 48,
+      "country": "EASTERN KIRIBATI",
+      "sample_call": "T32EU",
+      "sample_date": "20240316",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 49,
+      "country": "EQUATORIAL GUINEA",
+      "sample_call": "3C3CA",
+      "sample_date": "20221212",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 50,
+      "country": "MEXICO",
+      "sample_call": "XE2W",
+      "sample_date": "20230613",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 52,
+      "country": "ESTONIA",
+      "sample_call": "ES6DO",
+      "sample_date": "20210508",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 53,
+      "country": "ETHIOPIA",
+      "sample_call": "ET3AA",
+      "sample_date": "20210526",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 54,
+      "country": "EUROPEAN RUSSIA",
+      "sample_call": "R8AGF",
+      "sample_date": "20241126",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 66,
+      "country": "BELIZE",
+      "sample_call": "V31DL",
+      "sample_date": "20240331",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 69,
+      "country": "CAYMAN ISLANDS",
+      "sample_call": "ZF1EJ",
+      "sample_date": "20230615",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 70,
+      "country": "CUBA",
+      "sample_call": "CO2QU",
+      "sample_date": "20230120",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 72,
+      "country": "DOMINICAN REPUBLIC",
+      "sample_call": "HI3Y",
+      "sample_date": "20240117",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 75,
+      "country": "GEORGIA",
+      "sample_call": "4L8A",
+      "sample_date": "20230427",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 91,
+      "country": "ARUBA",
+      "sample_call": "P4/WE9V",
+      "sample_date": "20240306",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 95,
+      "country": "DOMINICA",
+      "sample_call": "J79WTA",
+      "sample_date": "20230130",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 99,
+      "country": "GLORIOSO ISLAND",
+      "sample_call": "FT4GL",
+      "sample_date": "20240602",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 100,
+      "country": "ARGENTINA",
+      "sample_call": "LW6EQG",
+      "sample_date": "20220516",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 103,
+      "country": "GUAM",
+      "sample_call": "KH2AA",
+      "sample_date": "20231127",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 106,
+      "country": "GUERNSEY",
+      "sample_call": "GU0SUP",
+      "sample_date": "20241128",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 108,
+      "country": "BRAZIL",
+      "sample_call": "PY7XC",
+      "sample_date": "20241226",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 110,
+      "country": "HAWAII",
+      "sample_call": "WH6S",
+      "sample_date": "20240327",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 112,
+      "country": "CHILE",
+      "sample_call": "CD6SNT",
+      "sample_date": "20241128",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 114,
+      "country": "ISLE OF MAN",
+      "sample_call": "GD6ICR",
+      "sample_date": "20240412",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 116,
+      "country": "COLOMBIA",
+      "sample_call": "HK4J",
+      "sample_date": "20230421",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 120,
+      "country": "ECUADOR",
+      "sample_call": "HC2GRC",
+      "sample_date": "20241108",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 122,
+      "country": "JERSEY",
+      "sample_call": "GJ0KYZ",
+      "sample_date": "20230731",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 125,
+      "country": "JUAN FERNANDEZ ISLAND",
+      "sample_call": "CB0ZA",
+      "sample_date": "20240223",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 126,
+      "country": "KALININGRAD",
+      "sample_call": "UA2FF",
+      "sample_date": "20230912",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 130,
+      "country": "KAZAKHSTAN",
+      "sample_call": "UN7PNF",
+      "sample_date": "20231222",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 132,
+      "country": "PARAGUAY",
+      "sample_call": "ZP9MCE",
+      "sample_date": "20230214",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 135,
+      "country": "KYRGYZSTAN",
+      "sample_call": "EX8BT",
+      "sample_date": "20240421",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 137,
+      "country": "REPUBLIC OF KOREA",
+      "sample_call": "HL1JLF",
+      "sample_date": "20221210",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 142,
+      "country": "LAKSHADWEEP ISLANDS",
+      "sample_call": "VU7A",
+      "sample_date": "20231210",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 143,
+      "country": "LAOS",
+      "sample_call": "XW5SI",
+      "sample_date": "20230825",
+      "sample_band": "10M",
+      "sample_mode": "MFSK"
+    },
+    {
+      "dxcc": 144,
+      "country": "URUGUAY",
+      "sample_call": "CX6TU",
+      "sample_date": "20241011",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 145,
+      "country": "LATVIA",
+      "sample_call": "YL2KF",
+      "sample_date": "20230719",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 146,
+      "country": "LITHUANIA",
+      "sample_call": "LY2J",
+      "sample_date": "20231006",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 147,
+      "country": "LORD HOWE ISLAND",
+      "sample_call": "VK9LAA",
+      "sample_date": "20231002",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 149,
+      "country": "AZORES",
+      "sample_call": "CU2AP",
+      "sample_date": "20240214",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 150,
+      "country": "AUSTRALIA",
+      "sample_call": "VK5COL",
+      "sample_date": "20240105",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 152,
+      "country": "MACAO",
+      "sample_call": "XX9ET",
+      "sample_date": "20230130",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 157,
+      "country": "NAURU",
+      "sample_call": "C21TS",
+      "sample_date": "20231209",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 158,
+      "country": "VANUATU",
+      "sample_call": "YJ0VK",
+      "sample_date": "20240331",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 159,
+      "country": "MALDIVES",
+      "sample_call": "8Q7PR",
+      "sample_date": "20230721",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 160,
+      "country": "TONGA",
+      "sample_call": "A31DL",
+      "sample_date": "20240225",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 162,
+      "country": "NEW CALEDONIA",
+      "sample_call": "FK8CE",
+      "sample_date": "20230711",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 163,
+      "country": "PAPUA NEW GUINEA",
+      "sample_call": "P29KW",
+      "sample_date": "20190411",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 165,
+      "country": "MAURITIUS ISLAND",
+      "sample_call": "3B8HK",
+      "sample_date": "20240308",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 166,
+      "country": "MARIANA ISLANDS",
+      "sample_call": "WH0B",
+      "sample_date": "20240425",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 168,
+      "country": "MARSHALL ISLANDS",
+      "sample_call": "V73WW",
+      "sample_date": "20250220",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 169,
+      "country": "MAYOTTE ISLAND",
+      "sample_call": "FH4VVK",
+      "sample_date": "20230712",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 170,
+      "country": "NEW ZEALAND",
+      "sample_call": "ZL3TE",
+      "sample_date": "20240425",
+      "sample_band": "15M",
+      "sample_mode": "MFSK"
+    },
+    {
+      "dxcc": 172,
+      "country": "PITCAIRN ISLAND",
+      "sample_call": "VP6MW",
+      "sample_date": "20230902",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 173,
+      "country": "MICRONESIA",
+      "sample_call": "V6EU",
+      "sample_date": "20231214",
+      "sample_band": "40M",
+      "sample_mode": "CW"
+    },
+    {
+      "dxcc": 175,
+      "country": "FRENCH POLYNESIA",
+      "sample_call": "FO5QB",
+      "sample_date": "20231223",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 176,
+      "country": "FIJI ISLANDS",
+      "sample_call": "3D2AG",
+      "sample_date": "20240301",
+      "sample_band": "40M",
+      "sample_mode": "CW"
+    },
+    {
+      "dxcc": 177,
+      "country": "MINAMI TORISHIMA",
+      "sample_call": "JG8NQJ/JD1",
+      "sample_date": "20230805",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 179,
+      "country": "MOLDOVA",
+      "sample_call": "ER5DX",
+      "sample_date": "20240425",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 185,
+      "country": "SOLOMON ISLANDS",
+      "sample_call": "H44MS",
+      "sample_date": "20230311",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 188,
+      "country": "NIUE",
+      "sample_call": "E6AM",
+      "sample_date": "20231020",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 189,
+      "country": "NORFOLK ISLAND",
+      "sample_call": "VK9DX",
+      "sample_date": "20231026",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 190,
+      "country": "SAMOA",
+      "sample_call": "5W0LM",
+      "sample_date": "20231004",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 191,
+      "country": "NORTH COOK ISLANDS",
+      "sample_call": "E51D",
+      "sample_date": "20230824",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 192,
+      "country": "OGASAWARA",
+      "sample_call": "JD1YCE",
+      "sample_date": "20231219",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 197,
+      "country": "PALMYRA & JARVIS ISLANDS",
+      "sample_call": "N5J",
+      "sample_date": "20240820",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 202,
+      "country": "PUERTO RICO",
+      "sample_call": "WP3R",
+      "sample_date": "20241023",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 203,
+      "country": "ANDORRA",
+      "sample_call": "C31VM",
+      "sample_date": "20241223",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 206,
+      "country": "AUSTRIA",
+      "sample_call": "OE3FVU",
+      "sample_date": "20240723",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 209,
+      "country": "BELGIUM",
+      "sample_call": "ON7EH",
+      "sample_date": "20240313",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 212,
+      "country": "BULGARIA",
+      "sample_call": "LZ100IARU",
+      "sample_date": "20250421",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 214,
+      "country": "CORSICA",
+      "sample_call": "TK4LS",
+      "sample_date": "20221006",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 215,
+      "country": "CYPRUS",
+      "sample_call": "5B4AMM",
+      "sample_date": "20220331",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 221,
+      "country": "DENMARK",
+      "sample_call": "OZ1DWK",
+      "sample_date": "20221209",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 222,
+      "country": "FAROE ISLANDS",
+      "sample_call": "OY1OF",
+      "sample_date": "20220313",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 223,
+      "country": "ENGLAND",
+      "sample_call": "M0PNN",
+      "sample_date": "20240803",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 224,
+      "country": "FINLAND",
+      "sample_call": "OH6IH",
+      "sample_date": "20230831",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 225,
+      "country": "SARDINIA",
+      "sample_call": "IS0KNG",
+      "sample_date": "20240213",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 227,
+      "country": "FRANCE",
+      "sample_call": "F1DSZ",
+      "sample_date": "20240426",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 230,
+      "country": "FEDERAL REPUBLIC OF GERMANY",
+      "sample_call": "DL5AN",
+      "sample_date": "20241226",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 234,
+      "country": "SOUTH COOK ISLANDS",
+      "sample_call": "E51WEG",
+      "sample_date": "20230417",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 236,
+      "country": "GREECE",
+      "sample_call": "SX0W",
+      "sample_date": "20250103",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 239,
+      "country": "HUNGARY",
+      "sample_call": "HA3LI",
+      "sample_date": "20240330",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 242,
+      "country": "ICELAND",
+      "sample_call": "TF5B",
+      "sample_date": "20230411",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 245,
+      "country": "IRELAND",
+      "sample_call": "EI3JS",
+      "sample_date": "20231003",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 248,
+      "country": "ITALY",
+      "sample_call": "IN3THU",
+      "sample_date": "20240330",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 254,
+      "country": "LUXEMBOURG",
+      "sample_call": "LX1CC",
+      "sample_date": "20240415",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 256,
+      "country": "MADEIRA ISLANDS",
+      "sample_call": "CT3MD",
+      "sample_date": "20230731",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 259,
+      "country": "SVALBARD",
+      "sample_call": "JW/DC8TM",
+      "sample_date": "20230412",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 262,
+      "country": "TAJIKISTAN",
+      "sample_call": "EY8MM",
+      "sample_date": "20241219",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 263,
+      "country": "NETHERLANDS",
+      "sample_call": "PD4RD",
+      "sample_date": "20241226",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 265,
+      "country": "NORTHERN IRELAND",
+      "sample_call": "MI0NWA",
+      "sample_date": "20230211",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 266,
+      "country": "NORWAY",
+      "sample_call": "LA6YEA",
+      "sample_date": "20240426",
+      "sample_band": "15M",
+      "sample_mode": "MFSK"
+    },
+    {
+      "dxcc": 269,
+      "country": "POLAND",
+      "sample_call": "SP5AA",
+      "sample_date": "20241126",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 272,
+      "country": "PORTUGAL",
+      "sample_call": "CT7BIZ",
+      "sample_date": "20231126",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 275,
+      "country": "ROMANIA",
+      "sample_call": "YO4NF",
+      "sample_date": "20240112",
+      "sample_band": "40M",
+      "sample_mode": "MFSK"
+    },
+    {
+      "dxcc": 279,
+      "country": "SCOTLAND",
+      "sample_call": "GM4FDM",
+      "sample_date": "20240415",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 281,
+      "country": "SPAIN",
+      "sample_call": "EG4WWA",
+      "sample_date": "20250104",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 282,
+      "country": "TUVALU",
+      "sample_call": "T2C",
+      "sample_date": "20231020",
+      "sample_band": "20M",
+      "sample_mode": "CW"
+    },
+    {
+      "dxcc": 283,
+      "country": "U K BASES ON CYPRUS",
+      "sample_call": "ZC4GR",
+      "sample_date": "20230214",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 284,
+      "country": "SWEDEN",
+      "sample_call": "SE2T",
+      "sample_date": "20231229",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 285,
+      "country": "US VIRGIN ISLANDS",
+      "sample_call": "KP2B",
+      "sample_date": "20230825",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 286,
+      "country": "UGANDA",
+      "sample_call": "5X3K",
+      "sample_date": "20231005",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 287,
+      "country": "SWITZERLAND",
+      "sample_call": "HB9EFK",
+      "sample_date": "20221117",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 288,
+      "country": "UKRAINE",
+      "sample_call": "UT7UJ",
+      "sample_date": "20201009",
+      "sample_band": "17M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 291,
+      "country": "UNITED STATES OF AMERICA",
+      "sample_call": "N1PPP",
+      "sample_date": "20241126",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 292,
+      "country": "UZBEKISTAN",
+      "sample_call": "UK8GG",
+      "sample_date": "20240326",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 293,
+      "country": "VIET NAM",
+      "sample_call": "XV9B",
+      "sample_date": "20241219",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 294,
+      "country": "WALES",
+      "sample_call": "GW4FRX",
+      "sample_date": "20230816",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 296,
+      "country": "SERBIA",
+      "sample_call": "YU1EA",
+      "sample_date": "20230218",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 298,
+      "country": "WALLIS & FUTUNA ISLANDS",
+      "sample_call": "FW1JG",
+      "sample_date": "20230323",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 299,
+      "country": "WEST MALAYSIA",
+      "sample_call": "9M2DA",
+      "sample_date": "20230816",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 304,
+      "country": "BAHRAIN",
+      "sample_call": "A92GE",
+      "sample_date": "20220202",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 305,
+      "country": "BANGLADESH",
+      "sample_call": "S21PL",
+      "sample_date": "20240302",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 306,
+      "country": "BHUTAN",
+      "sample_call": "A52P",
+      "sample_date": "20240423",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 308,
+      "country": "COSTA RICA",
+      "sample_call": "TI2YO",
+      "sample_date": "20230815",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 312,
+      "country": "CAMBODIA",
+      "sample_call": "XU7GNY",
+      "sample_date": "20240709",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 315,
+      "country": "SRI LANKA",
+      "sample_call": "4S7KKG",
+      "sample_date": "20241121",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 318,
+      "country": "CHINA",
+      "sample_call": "BH6RQG",
+      "sample_date": "20250505",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 321,
+      "country": "HONG KONG",
+      "sample_call": "VR2VHI",
+      "sample_date": "20250104",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 324,
+      "country": "INDIA",
+      "sample_call": "VU2WJ",
+      "sample_date": "20230804",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 327,
+      "country": "INDONESIA",
+      "sample_call": "YB1BZV",
+      "sample_date": "20211205",
+      "sample_band": "15M",
+      "sample_mode": "DATA"
+    },
+    {
+      "dxcc": 330,
+      "country": "IRAN",
+      "sample_call": "EP4HR",
+      "sample_date": "20221126",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 336,
+      "country": "ISRAEL",
+      "sample_call": "4X1UF",
+      "sample_date": "20200813",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 339,
+      "country": "JAPAN",
+      "sample_call": "JH2BUF",
+      "sample_date": "20250505",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 342,
+      "country": "JORDAN",
+      "sample_call": "JY4CH",
+      "sample_date": "20230412",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 345,
+      "country": "BRUNEI",
+      "sample_call": "V85RH",
+      "sample_date": "20230709",
+      "sample_band": "40M",
+      "sample_mode": "CW"
+    },
+    {
+      "dxcc": 348,
+      "country": "KUWAIT",
+      "sample_call": "9K2HN",
+      "sample_date": "20230825",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 354,
+      "country": "LEBANON",
+      "sample_call": "OD5YA",
+      "sample_date": "20240308",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 363,
+      "country": "MONGOLIA",
+      "sample_call": "JT1DN",
+      "sample_date": "20241025",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 369,
+      "country": "NEPAL",
+      "sample_call": "9N7CI",
+      "sample_date": "20220429",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 370,
+      "country": "OMAN",
+      "sample_call": "A41DL",
+      "sample_date": "20230815",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 372,
+      "country": "PAKISTAN",
+      "sample_call": "AP2MKB",
+      "sample_date": "20201104",
+      "sample_band": "17M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 375,
+      "country": "PHILIPPINES",
+      "sample_call": "JI1FGX/DU9",
+      "sample_date": "20241011",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 376,
+      "country": "QATAR",
+      "sample_call": "A71UN",
+      "sample_date": "20230515",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 378,
+      "country": "SAUDI ARABIA",
+      "sample_call": "HZ1TT",
+      "sample_date": "20240710",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 379,
+      "country": "SEYCHELLES ISLANDS",
+      "sample_call": "S79VU",
+      "sample_date": "20230218",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 381,
+      "country": "SINGAPORE",
+      "sample_call": "9V1DE",
+      "sample_date": "20240403",
+      "sample_band": "20M",
+      "sample_mode": "MFSK"
+    },
+    {
+      "dxcc": 386,
+      "country": "TAIWAN",
+      "sample_call": "BV2NF",
+      "sample_date": "20240116",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 387,
+      "country": "THAILAND",
+      "sample_call": "HS72KING",
+      "sample_date": "20240708",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 390,
+      "country": "TURKEY",
+      "sample_call": "TA2ANK",
+      "sample_date": "20240710",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 391,
+      "country": "UNITED ARAB EMIRATES",
+      "sample_call": "A61BG",
+      "sample_date": "20220429",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 402,
+      "country": "BOTSWANA",
+      "sample_call": "A25R",
+      "sample_date": "20231101",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 404,
+      "country": "BURUNDI",
+      "sample_call": "9U5R",
+      "sample_date": "20230218",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 409,
+      "country": "CAPE VERDE",
+      "sample_call": "D44PM",
+      "sample_date": "20230401",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 412,
+      "country": "REPUBLIC OF THE CONGO",
+      "sample_call": "TN8K",
+      "sample_date": "20230118",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 416,
+      "country": "BENIN",
+      "sample_call": "TY0RU",
+      "sample_date": "20221017",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 420,
+      "country": "GABON",
+      "sample_call": "TR8CA",
+      "sample_date": "20221220",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 424,
+      "country": "GHANA",
+      "sample_call": "9G5FI",
+      "sample_date": "20210506",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 430,
+      "country": "KENYA",
+      "sample_call": "5Z4VJ",
+      "sample_date": "20230522",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 432,
+      "country": "LESOTHO",
+      "sample_call": "7P8EI",
+      "sample_date": "20240328",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 434,
+      "country": "LIBERIA",
+      "sample_call": "A8OK",
+      "sample_date": "20240413",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 440,
+      "country": "MALAWI",
+      "sample_call": "7Q5BM",
+      "sample_date": "20241126",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 446,
+      "country": "MOROCCO",
+      "sample_call": "CN8NS",
+      "sample_date": "20250225",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 453,
+      "country": "REUNION ISLAND",
+      "sample_call": "FR4OO",
+      "sample_date": "20230804",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 454,
+      "country": "RWANDA",
+      "sample_call": "9X5RU",
+      "sample_date": "20230401",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 460,
+      "country": "ROTUMA",
+      "sample_call": "3D2AG/P",
+      "sample_date": "20241027",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 462,
+      "country": "REPUBLIC OF SOUTH AFRICA",
+      "sample_call": "ZS1WC",
+      "sample_date": "20230815",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 482,
+      "country": "ZAMBIA",
+      "sample_call": "9J2BS",
+      "sample_date": "20210524",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 492,
+      "country": "YEMEN",
+      "sample_call": "7O73T",
+      "sample_date": "20231127",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 497,
+      "country": "CROATIA",
+      "sample_call": "9A24WARD",
+      "sample_date": "20240426",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 499,
+      "country": "SLOVENIA",
+      "sample_call": "S52D",
+      "sample_date": "20230413",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 501,
+      "country": "BOSNIA-HERZEGOVINA",
+      "sample_call": "E75C",
+      "sample_date": "20240412",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 502,
+      "country": "NORTH MACEDONIA",
+      "sample_call": "Z36W",
+      "sample_date": "20230412",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 503,
+      "country": "CZECH REPUBLIC",
+      "sample_call": "OK4YL",
+      "sample_date": "20240309",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 504,
+      "country": "SLOVAK REPUBLIC",
+      "sample_call": "OM0R",
+      "sample_date": "20240713",
+      "sample_band": "15M",
+      "sample_mode": "CW"
+    },
+    {
+      "dxcc": 507,
+      "country": "TEMOTU PROVINCE",
+      "sample_call": "H40WA",
+      "sample_date": "20240302",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 508,
+      "country": "AUSTRAL ISLANDS",
+      "sample_call": "TX7W",
+      "sample_date": "20240424",
+      "sample_band": "10M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 511,
+      "country": "TIMOR - LESTE",
+      "sample_call": "4W8X",
+      "sample_date": "20231117",
+      "sample_band": "15M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 513,
+      "country": "DUCIE ISLAND",
+      "sample_call": "VP6A",
+      "sample_date": "20230614",
+      "sample_band": "20M",
+      "sample_mode": "FT8"
+    },
+    {
+      "dxcc": 515,
+      "country": "SWAINS ISLAND",
+      "sample_call": "W8S",
+      "sample_date": "20231008",
+      "sample_band": "40M",
+      "sample_mode": "FT8"
+    }
+  ],
+  "last_updated": "2025-06-06T07:50:14.159Z",
+  "total_records_processed": 4078,
+  "total_confirmed_qsos": 4078
+}

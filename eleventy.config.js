@@ -17,9 +17,18 @@ import { imgSize, obsidianImgSize } from "@mdit/plugin-img-size";
 import { footnote } from "@mdit/plugin-footnote";
 import { mark } from "@mdit/plugin-mark";
 
+//import lotwQueryPlugin from "./plugins/eleventy-plugin-lotw-query/index.js"
+import lotwPlugin from './plugins/eleventy-plugin-lotw-query/index.js';
+
+
+
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
+
+	// 查询LOTW积分的插件：
+	eleventyConfig.addPlugin(lotwPlugin);
+
 
 	//////// begin of markdown-it 插件的子插件：
 	eleventyConfig.amendLibrary("md", mdLib => {

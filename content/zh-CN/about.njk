@@ -13,9 +13,13 @@ const eleventyNavigation = {
 		</div>
 	</div>
 	<div class="mx-auto px-4 prose dark:prose-invert">
+		
+<img src="https://img.shields.io/badge/DXCC-{{ lotwDxcc.confirmed_dxcc_count }}-brightgreen" alt="DXCC Badge">
 
-       I am a person that writes stuff.
-	
+	{% lotwConfirmedDXCC %}
+	{% lotwDXCCProgress 340 %}
+
 	</div>
+
 </section>
 
