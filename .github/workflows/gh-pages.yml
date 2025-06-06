@@ -18,6 +18,9 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          # 获取完整的git历史，用于增量构建
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v3
@@ -28,16 +31,27 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Cache Eleventy .cache
         uses: actions/cache@v3
         with:
           path: ./.cache
-          key: ${{ runner.os }}-eleventy-fetch-cache
+          key: ${{ runner.os }}-eleventy-fetch-cache-${{ hashFiles('**/*.md', '**/*.njk', '**/*.js') }}
+          restore-keys: |
+            ${{ runner.os }}-eleventy-fetch-cache-
 
+      - name: Cache Eleventy build output
+        uses: actions/cache@v3
+        with:
+          path: ./_site
+          key: ${{ runner.os }}-eleventy-build-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-eleventy-build-
 
-      - run: npm install
+      - run: npm ci
       - run: npm run build-ghpages
 
       - name: Deploy

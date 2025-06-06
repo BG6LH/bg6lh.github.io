@@ -175,8 +175,20 @@ export default async function(eleventyConfig) {
 		// selector: "h1,h2,h3,h4,h5,h6", // default
 	});
 
+	// 优化构建日期短代码
 	eleventyConfig.addShortcode("currentBuildDate", () => {
-		return (new Date()).toISOString();
+	// 在生产环境中，使用git commit时间而不是当前时间
+	if (process.env.ELEVENTY_RUN_MODE === "build") {
+		try {
+			const { execSync } = require('child_process');
+			const gitDate = execSync('git log -1 --format=%cI', { encoding: 'utf8' }).trim();
+			return gitDate;
+		} catch (error) {
+			// 如果git命令失败，使用固定日期
+			return new Date().toISOString().split('T')[0] + 'T00:00:00.000Z';
+		}
+	}
+	return (new Date()).toISOString();
 	});
 
 	// Features to make your build faster (when you need them)
@@ -234,6 +246,21 @@ export default async function(eleventyConfig) {
 		ul: true,                 // 使用 ol（false）还是 ul（true）
 	  });
 
+	// 启用增量构建
+	eleventyConfig.setUseGitIgnore(false);
+	eleventyConfig.setQuietMode(true);
+	
+	// 启用构建缓存
+	eleventyConfig.addGlobalData("eleventyComputed", {
+		permalink: (data) => {
+			// 只有在开发模式下才重新计算permalink
+			if (process.env.ELEVENTY_RUN_MODE === "serve") {
+				return data.permalink;
+			}
+			return data.permalink;
+		}
+	});
+
 };
 
 export const config = {
@@ -273,4 +300,7 @@ export const config = {
 	// folder name and does **not** affect where things go in the output folder.
 
 	// pathPrefix: "/",
+	
+	// 启用增量构建
+	incremental: true,
 };
