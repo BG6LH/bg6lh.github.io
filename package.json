@@ -71,5 +71,8 @@
 		"simple-icons": "^14.14.0",
 		"temml": "^0.11.7",
 		"transliteration": "^2.3.5"
-	}
+	},
+	"workspaces": [
+		"plugins/*"
+	]
 }
