@@ -1,1 +1,28 @@
+name: Run update-lotw-data Script
 
+on:
+  push:
+    branches: [main]  # 或换成你实际使用的分支
+  workflow_dispatch:   # 支持手动触发
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📦 Checkout code
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 📥 Install dependencies
+        run: npm install
+
+      - name: 🔐 Run update-lotw-data.js with secrets
+        env:
+          LOTW_USERNAME: ${{ secrets.LOTW_USERNAME }}
+          LOTW_PASSWORD: ${{ secrets.LOTW_PASSWORD }}
+        run: node plugins/eleventy-plugin-lotw-query/update-lotw-data.js
