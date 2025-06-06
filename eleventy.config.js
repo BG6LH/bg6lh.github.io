@@ -18,7 +18,7 @@ import { footnote } from "@mdit/plugin-footnote";
 import { mark } from "@mdit/plugin-mark";
 
 //import lotwQueryPlugin from "./plugins/eleventy-plugin-lotw-query/index.js"
-import lotwPlugin from './plugins/eleventy-plugin-lotw-query/index.js';
+import lotwPlugin from 'eleventy-plugin-dxcc-badges';
 
 
 
@@ -26,9 +26,14 @@ import lotwPlugin from './plugins/eleventy-plugin-lotw-query/index.js';
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
 
-	// 查询LOTW积分的插件：
-	eleventyConfig.addPlugin(lotwPlugin);
 
+	// 查询LOTW积分的插件：
+	eleventyConfig.addPlugin(lotwPlugin, {
+		// 可能需要的配置选项
+		dataPath: './_data/',
+		lotwDataFile: 'lotwDxcc.json',
+		qsoDataFile: 'lotwQso.adif'
+	});
 
 	//////// begin of markdown-it 插件的子插件：
 	eleventyConfig.amendLibrary("md", mdLib => {
