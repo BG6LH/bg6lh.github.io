@@ -28,12 +28,7 @@ export default async function(eleventyConfig) {
 
 
 	// 查询LOTW积分的插件：
-	eleventyConfig.addPlugin(lotwPlugin, {
-		// 可能需要的配置选项
-		dataPath: './_data/',
-		lotwDataFile: 'lotwDxcc.json',
-		qsoDataFile: 'lotwQso.adif'
-	});
+	eleventyConfig.addPlugin(lotwPlugin);
 
 	//////// begin of markdown-it 插件的子插件：
 	eleventyConfig.amendLibrary("md", mdLib => {
