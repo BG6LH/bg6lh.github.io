@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>SCU-LAN10远程操作FTDX10的组网实践</title>
+		<meta name="description" content="我部署了一个SCU-LAN10和SCU-17支撑的FTDX10远程操作网络，达成了实时电台监控、SSB、FT8、自动日志，真是相当开心。">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="BG6LH">
+		<link rel="stylesheet" href="/css/style.out.css">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+		
+        <!-- favicon -->
+        <link rel="icon" href="/img/me.svg" type="image/svg+xml">
+
+        <!-- Open graph -->
+        <meta property="og:title" content="SCU-LAN10远程操作FTDX10的组网实践">
+        <meta property="og:description" content="我部署了一个SCU-LAN10和SCU-17支撑的FTDX10远程操作网络，达成了实时电台监控、SSB、FT8、自动日志，真是相当开心。">
+        <meta property="og:type" content="article">
+        <meta property="article:tag" content="posts,FTDX10,SCU-LAN10">
+        <meta property="og:url" content="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/">
+        <meta property="og:site_name" content="BG6LH">
+        <meta property="og:locale" content="zh_CN">
+        <meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHoyUV6zjy1Wfr8M4T4IqOGnCcVdUdT9mz9nKVhgr7ZV1OawaqjAicQ7PjxTUNQTFT226BB9GwooqRWA/0?wx_fmt=jpeg">
+        <!-- Twitter -->
+        <meta name="twitter:title" content="SCU-LAN10远程操作FTDX10的组网实践">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@jamflying">
+        <meta name="twitter:description" content="我部署了一个SCU-LAN10和SCU-17支撑的FTDX10远程操作网络，达成了实时电台监控、SSB、FT8、自动日志，真是相当开心。">
+        <meta name="twitter:image" content="https://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHoyUV6zjy1Wfr8M4T4IqOGnCcVdUdT9mz9nKVhgr7ZV1OawaqjAicQ7PjxTUNQTFT226BB9GwooqRWA/0?wx_fmt=jpeg">
+	</head>
+	<body class="bg-white dark:bg-slate-800 overflow-auto dark:text-white dark:text-gray-900" x-data="{
+	        open: false,
+	        darkMode: localStorage.getItem('theme') === 'dark',
+	      }" x-init="
+	        $watch('open', value => {
+	          if (value) {
+	            document.body.classList.add('overflow-hidden', 'md:overflow-auto');
+	          } else {
+	            document.body.classList.remove('overflow-hidden', 'md:overflow-auto');
+	          }
+	        });
+	        $watch('darkMode', value => {
+	          if (value) {
+	            document.documentElement.classList.add('dark');
+	            localStorage.setItem('theme', 'dark');
+	          } else {
+	            document.documentElement.classList.remove('dark');
+	            localStorage.setItem('theme', 'light');
+	          }
+	        });
+	        if (darkMode) document.documentElement.classList.add('dark');
+	        else document.documentElement.classList.remove('dark');
+	      ">
+		<header class="fixed top-0 left-0 right-0 z-50 flex flex-row p-3 w-full 
+                items-center  px-15
+                text-sm text-neutral-800 bg-neutral-100
+                dark:text-neutral-100 dark:bg-neutral-950
+              ">
+    <div class="container mx-auto flex flex-row w-full items-center justify-between">
+        <!--  site logo and title : start -->
+        <div class="flex flex-row items-center">
+            
+                <figure class="flex p-1 inline-block h-8 w-8 mr-2">
+                    <picture><source type="image/avif" srcset="/img/P2oVwTwU_L-601.avif 601w"><source type="image/webp" srcset="/img/P2oVwTwU_L-601.webp 601w"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-601.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601"></picture>
+                </figure>
+            
+            <a class="flex p-1 home-link href=" "="">BG6LH</a>
+        </div>
+        <!-- site logo and title : end -->
+
+        
+
+        <div class="flex items-center space-x-4">
+            
+            
+            
+
+            
+            
+
+            
+            <!-- Theme toggle: visible on all screens -->
+            <div id="theme-toggle" class="z-50">
+                <button @click="darkMode = !darkMode" class="w-6 h-6 flex items-center justify-center" aria-label="Toggle theme">
+                    <span x-show="!darkMode">
+                        
+<!-- @license lucide-static v0.511.0 - ISC -->
+<svg class="w-5 h-5 icon icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="4"></circle>
+  <path d="M12 2v2"></path>
+  <path d="M12 20v2"></path>
+  <path d="m4.93 4.93 1.41 1.41"></path>
+  <path d="m17.66 17.66 1.41 1.41"></path>
+  <path d="M2 12h2"></path>
+  <path d="M20 12h2"></path>
+  <path d="m6.34 17.66-1.41 1.41"></path>
+  <path d="m19.07 4.93-1.41 1.41"></path>
+</svg>
+                    </span>
+                    <span x-show="darkMode">
+                        
+<!-- @license lucide-static v0.511.0 - ISC -->
+<svg class="w-5 h-5 icon icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+</svg>
+                    </span>
+                </button>
+            </div>
+
+            <!-- Mobile menu icon : start -->
+            <button class="md:hidden z-50" @click="open = !open">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <path x-show="!open" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path x-show="open" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <!-- mobile menu icon : end -->
+
+            <!-- Navigation: wide screen : start -->
+            <nav class="hidden md:flex space-x-6">
+                
+                
+                
+                
+                <a href="/">首页</a>
+                
+                
+                
+                
+                
+                <a href="/zh-CN/blog/">归档</a>
+                
+                
+                
+                
+                
+                <a href="/zh-CN/about/">关于</a>
+                
+                
+                
+                
+            </nav>
+            <!-- Navigation: wide screen : end -->
+        </div>
+    </div>
+</header>
+
+<!-- Fullscreen Menu Overlay: mobile only , start -->
+<div class="fixed inset-x-0 top-15 bottom-0 z-40 flex flex-col
+md:hidden items-center w-full h-auto
+border-t-1 border-neutral-800
+text-sm text-neutral-800 bg-neutral-100 px-15
+ dark:text-neutral-100 dark:bg-neutral-950
+font-medium transition-all duration-100" x-show="open" x-transition:enter="transform transition ease-out duration-300" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 scale-100" @click.outside="open = false">
+		
+            
+		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/" @click="open = false">首页</a>
+                </div>
+            
+		
+            
+		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/zh-CN/blog/" @click="open = false">归档</a>
+                </div>
+            
+		
+            
+		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/zh-CN/about/" @click="open = false">关于</a>
+                </div>
+            
+		
+            
+		
+</div>
+<!-- Fullscreen Menu Overlay: mobile only , end -->
+
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<main class="flex-grow pt-15">
+			<heading-anchors class="">
+				
+
+
+
+    
+        <figure class="w-full h-36 object-contain overflow-hidden md:h-96 ">
+            <img src="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/nFQBMvDTuK-960.webp" class="w-full blur-xs brightness-75 scale-105" alt="SCU-LAN10远程操作FTDX10的组网实践 image" loading="lazy" decoding="async" width="960" height="408">
+        </figure>
+    
+<div class="mx-auto grid w-full max-w-4xl grid-cols-1 gap-4 md:grid-cols-[minmax(800px,1fr)_240px]">
+    <article class="bg-white p-8 md:p-12 mx-auto max-w-4xl prose prose-neutral">
+        <!-- article header : begin-->
+        <header class="flex flex-col mx-auto mb-12 border-t-neutral-500 border-b-1">
+            <div class="mx-auto font-bold md:text-xl text-center text-neutral-800">
+                <h1 id="scu-lan10-ftdx10">SCU-LAN10远程操作FTDX10的组网实践</h1>
+            </div>
+            <time class="text-sm mx-auto text-neutral-400" datetime="2022-11-17 01:37:00 UTC">2022-11-17 01:37:00 UTC</time>
+            <span class="post-metadata flex flex-row mx-auto p-0">
+                关键词:
+                <a href="/zh-CN/tags/ftdx10/" class="post-tag">FTDX10</a>, 
+                <a href="/zh-CN/tags/scu-lan10/" class="post-tag">SCU-LAN10</a>
+            </span>
+        </header>
+        <!-- article header : end-->
+
+
+        <!-- article content : begin-->
+        <div class="mx-auto">
+            <p>我的FTDX10和天线都在ON80fa，平时大部分时间住在<code>OM89hu</code>，工作在<code>OM89it</code>，还经常出差，一年到头FTDX10没开过几天，<a href="http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;mid=2247484186&amp;idx=1&amp;sn=4587a8e29c3f55153ac5b67853325061&amp;chksm=e9498590de3e0c8619b3b1453bd1a61daffce85117634f64ca09453121ec6184ee09314808cc&amp;scene=21#wechat_redirect">就这还烧了两次功放</a>。为了解决远程摸黑儿操作这个痛点，我部署了一个SCU-LAN10和SCU-17支撑的FTDX10远程操作网络，达成了实时电台监控、远程参加了CQWW SSB比赛、还能继续远程FT8、自动日志，真是相当开心。</p>
+<p>SCU-LAN10是八重洲专门为SDR架构的收发信机推出的网络控制模块，支持FTDX10、101D、101MP，以及新出的FT-710。真是SDR时代来了，频谱数据可以在网上到处飞了。</p>
+<h2 id="%E4%BD%BF%E7%94%A8%E4%BD%93%E4%BC%9A" tabindex="-1">使用体会</h2>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/NhcF0k4rdG-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/NhcF0k4rdG-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/NhcF0k4rdG-1080.png" alt="用SCU-LAN10软件观察7MHz业余频段全段的频谱" width="1080" height="607"></picture></p>
+<p>SCU-LAN10（它的硬件软件都叫SCU-LAN10）是个相当不错的远程电台操作、监控系统。它可以实时呈现FTDX10当前的所有状态，尤其是那些非常重要的：</p>
+<ul>
+<li>天调开关、驻波、功率、ALC、VFO-A/B切换、Split状态；</li>
+<li>最重要的，还有声音和频谱；</li>
+<li>它几乎覆盖了FTDX10里的所有功能，至少业务操作该有的全有；</li>
+<li>新的固件还支持了远程关机；</li>
+<li>比起FTDX10外接显示器提供了更丰富的操作界面；</li>
+<li>在电脑的大屏幕上可以直接操作3D频谱，如果是配合FTDX101则有两个频谱窗口可用，信息量巨大；</li>
+<li>它还支持鼠标操作，选择各种功能参数，拨动鼠标滚选频，快捷直观。终于不用小心翼翼地躲开大拨轮，在一堆旋钮和按键里找功能了。</li>
+<li>SCU-LAN10提供了远程的SSB通讯的能力。你可以按着电脑的空格键当PTT，或者打开VOX直接对着电脑呼叫。今年的CQWW SSB比赛，我拿它远程扫地搞了69个QSO。顺便说，比赛时3D频谱选频其实并不是很实用。还是2D的频谱容易准确定位。</li>
+</ul>
+<p>小遗憾的是：</p>
+<ul>
+<li>时至今日SCU-LAN10只支持<strong>SSB话</strong>业务的全功能收发。</li>
+<li>CW只能收听，且没有解码功能。</li>
+<li>FT8、RTTY、SSTV这些操作则完全不支持。至少不能靠SCU-LAN10直接的功能实现，只能寻找别的解决方案。</li>
+</ul>
+<p>为啥不给CW、Digital的全功能发送？有人猜测是网络延时会影响CW开关信号的准确性，听起来有点道理。可是SCU-LAN10又提供了丰富的CW相关功能，比如ZIN、APF、CW Pitch甚至WPM速度设定。或许未来的固件升级会逐步打开一些新功能？SCU-LAN10似乎是正在演进中的产品。</p>
+<h2 id="%E8%BF%9C%E7%A8%8B%E7%BB%84%E7%BD%91%E7%AD%96%E7%95%A5" tabindex="-1">远程组网策略</h2>
+<p>由于SCU-LAN10占用了FTDX10上唯一的USB CAT端口，以前比较成熟的<em><strong>台站侧值班电脑</strong></em> + <em><strong>远程桌面软件</strong></em>实现的远程控制也不行了。破题思路只剩下利用FTDX10机器上空闲的R-S232C和RTTY/DATA接口，实现第二组“USB串口+声卡”通道。<strong>这时SCU-17成了首选</strong>。</p>
+<div class="callout callout-tip">
+<p>FTDX系列机器上还有两个USB-A的端口，那是给键盘鼠标用的，没有音频IO，也不能做CAT控制，估计电流不会超过500mA，或许可以接个LED台灯或者呼号灯牌啥的。</p>
+</div>
+<p>安装SCU-LAN10，并不像买个天调接上那么简单。想用上它至少得有点网络管理的经验，知道怎么设置IP地址，什么是端口转发，这涉及到安装和日后使用。想完成跨局域网的远程操作还是有相当的技术门槛。在这里我只分享一下我的基本解决思路，供大家一起讨论。详细设置请参考说明书。</p>
+<h2 id="scu-lan10%E5%92%8Cscu-17%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%93%8D%E4%BD%9C%E7%9A%84%E7%BB%84%E7%BD%91%E6%96%B9%E6%A1%88" tabindex="-1">SCU-LAN10和SCU-17实现远程操作的组网方案</h2>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/bX4kcUGJa_-809.avif 809w"><source type="image/webp" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/bX4kcUGJa_-809.webp 809w"><img loading="lazy" decoding="async" src="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/bX4kcUGJa_-809.png" alt="图片" width="809" height="572"></picture></p>
+<p>这个方案需要SCU-LAN10、SCU-17和两台电脑，直接组成了通过互联网的远程操作方案。</p>
+<ul>
+<li><strong>红色线</strong>是SCU-LAN10的连接方式；</li>
+<li>在台站之外，<strong>电脑A</strong>通过互联网连接到SCU-LAN10，实现监控、操作FTDX10的目标；</li>
+<li><strong>绿色线</strong>是SCU-17的连接方式；</li>
+<li>它在台站侧，和收发信机、电脑B，保持物理连接；</li>
+<li>在台站侧的电脑B，运行各种HAM软件，比如FT8。</li>
+<li>在电脑A、B上，安装远程桌面软，实现从电脑A上操作电脑B上的各种HAM软件。</li>
+<li>CW怎么办？我还没实验过，后续再探讨吧。</li>
+</ul>
+<p>敲黑板，下面说几个要点：</p>
+<h3 id="%E8%BF%9E%E6%8E%A5-scu-lan10-%E7%9A%84%E6%AD%A5%E9%AA%A4" tabindex="-1">连接 SCU-LAN10 的步骤</h3>
+<ol>
+<li><strong>SCU-LAN10联网</strong>
+<ul>
+<li>SCU-LAN10是个固定IP设备，而且只能通过IP地址访问。所以设置前要先把自己电脑的IP，改成跟它出厂预设的IP地址（192.168.49.1）在一个网段（比如192.168.49.73），然后就可以用YAESU提供的设置软件，直接登录进去了。</li>
+<li>通过一根网线，把SCU-LAN10和家里的路由器下行接口（LAN口）连起来。你可能不得不把一个Wi-Fi路由器摆到它附近。</li>
+<li>一般的Wi-Fi路由器，使用的是动态分配的IP地址，要确保给SCU-LAN10预留一个固定IP地址。这要看路由器的说明书。</li>
+<li>如果要从台站以外访问SCU-LAN10，还需要记得打开路由器的防火墙，把50000～50003四个UDP端口，转发到SCU-LAN10的固定IP上去。</li>
+<li>从外部访问台站上的SCU-LAN10，还需知道自家的公网IP地址。有些路由器提供手机管理软件，可以查询到家里最新的IP地址；也可以琢磨在家里部署一个虚拟专网。</li>
+</ul>
+</li>
+<li><strong>把随机提供的USB CAT线、ACC线接到收发信机后边的相应接口。</strong>
+<ul>
+<li>FTDX系列提供了一个13芯的ACC接口，看起来它是传输电台状态数据的，并给SCU-LAN10供电的。电台控制、音频数据、频谱数据则是通过USB完成的。</li>
+<li>FT-710没有ACC接口。数据采集、收发信机控制、音频传输、频谱数据完全通过USB实现，但是需要给SCU-LAN10加一个12V电源。</li>
+</ul>
+</li>
+</ol>
+<p>连接SCU-17相对简单，把随机提供的USB CAT线，RS-232C电缆，DATA电缆，跟FTDX10背面对应的接口连接好。但是有两个重要的提示：</p>
+<h3 id="%E8%BF%9E%E6%8E%A5scu-17%E7%9A%84%E8%A6%81%E7%82%B9" tabindex="-1">连接SCU-17的要点</h3>
+<ul>
+<li><strong>没有声音输出？</strong>
+<ul>
+<li>刚连上SCU-17，直接发射可能没有音频输出，调整SCU-17的音量旋钮也不行。这可能是因为收发机上的DATA模式选择了USB。因为SCU-17是从DATA接口获取的音频，应该把收发机的切换到DATA。设置路径是</li>
+</ul>
+</li>
+<li><strong>功能菜单：Radio Setting &gt; MODE PSK/DATA &gt; REAR SELECT = DATA</strong>
+<ul>
+<li>由于FTDX系列的新固件附加了一组**“PRESET”**预设值（主要针对FT8等DATA模式）。它把相应的设置预存好了批处理一下，切换到DATA模式就启动，切换其它模式再恢复之前的设置。“PRESET”是给收发信机上的主USB接口设计的，它默认会把REAR SELECT换成USB。</li>
+</ul>
+</li>
+<li><strong>莫名其妙的自动发射？</strong>
+<ul>
+<li>在电脑开机时，接了RS-232C电缆的收发信机可能会有几秒钟处在发射状态。我猜或许是因为电脑启动时串口初始化会上电，此时触发了RTS发射。</li>
+<li>你可以关掉RTS。“PRESET”预设的 CAT RTS 就是关闭的。</li>
+<li>手动关闭收发机 CAT RTS 的路径是：
+<ul>
+<li><strong>功能菜单：Operation Setting &gt; General &gt; CAT RTS = OFF</strong></li>
+</ul>
+</li>
+<li>但是关掉它会不会不影响其它玩具？比如fldigi发射CW？这些要以后慢慢研究了。</li>
+</ul>
+</li>
+</ul>
+<p>好了，关于SCU-LAN10和SCU-17部署上的坑，基本上就这些。</p>
+<h3 id="%E5%BF%85%E9%A1%BB%E7%94%A8scu-17%E5%90%97%EF%BC%9F" tabindex="-1">必须用SCU-17吗？</h3>
+<p><strong>当然不是</strong>。熟悉数据盒子的人自然知道要怎么做。心灵手巧的无线电老中医也可以自己DIY接口电缆、音频线，实现和SCU-17同样的能力。我用FT-818ND玩FT8时，还在用自己两年前DIY两根数据线和一个USB声卡。我也买过数据盒子，后来玩烧了。窃以为SCU-17是这些产品里最靠谱的设备。</p>
+<div class="callout callout-tip">
+<h3 class="callout-title" id="rs-232c-ftdx10">通过RS-232C连接FTDX10电台</h3><p>通过RS-232C和DATA接口实现CAT是业余无线电二十年的老话题。如果你的电脑还有RS-232C接口，你可以用一根标准RS-232C电缆直连收发机。现代电脑基本只有USB接口了，这时需要买一根RS-232C转USB的串口线，请注意这种RS-232C接口的2、3针脚要交差。请参考上一篇<a href="http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;mid=2247484237&amp;idx=1&amp;sn=ee1d4b5b356ed77a9b7aacb50cd1ecc2&amp;chksm=e94985c7de3e0cd1f104ffc7984e5d3c4632afa2845a2f36551434ff5df7487320b7a425e696&amp;scene=21#wechat_redirect">《FTDX10使用RS-232C接口CAT操作指北》</a>。</p>
+<p>在QRO和不谐振天线的设备组合上，直接用RS-232C电缆连电脑，有高度的RFI风险。建议选FTDI芯片的工业级电缆，最好再配一个隔离器。DIY的DATA音频线倒是不会有大问题，但也最好缠几圈磁环。</p>
+<p>FTDX10支持101项CAT操作，FTDX101支持105项，通过RS-232C电缆控制收发机，只有一项开关机不支持，其它都支持。</p>
+</div>
+<h2 id="%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%8F%B0%E7%AB%99%E5%AE%9E%E6%99%AF" tabindex="-1">远程控制台站实景</h2>
+<p>下边这张图就是我的书房远程控制台站，此时是在家里的局域网环境下。</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/WAMhT6wemS-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/WAMhT6wemS-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/WAMhT6wemS-1080.jpeg" alt="图片" width="1080" height="608"></picture></p>
+<p>由于我工作的电脑主要是Mac OS和Linux的系统，所以我部署了三台电脑：</p>
+<ul>
+<li>一台<a href="http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;mid=2247483860&amp;idx=1&amp;sn=706a4c29d4198a667f89a0db5e684c30&amp;chksm=e949875ede3e0e48f9818a0faaa78362e81d1ad60599a916438273a5e7620f0a0ca6842a6c86&amp;scene=21#wechat_redirect">RadioPi，在阳台跟FTDX一起做值班电脑</a>，这张图里看不到它。大屏幕上的JTDX软件，就是从它那边通过远程桌面投射过来的。</li>
+<li>一台Macbook是我工作时随身带的，主要用来运行远程桌面，查看RadioPi的运行情况。同时运行着RUMLogNG，Mac世界里最好用的日志软件。RadioPi上的JTDX通过UDP端口，把DX提醒、QSO记录传送给RUMLogNG。</li>
+<li>另有一台Tinkpad X230是专门用来运行SCU-LAN10软件监控电台的。当然X230也可以跑远程桌面，那样Macbook就可以下班了。只是我得找一个在Windows上好用的日志软件。</li>
+</ul>
+<p>我尝试过在Macbook Pro 16上，运行Windows虚拟机跑SCU-LAN10。给虚拟机分配了一半的运算力，4个CPU内核、8G内存。但是SCU-LAN10对系统的消耗相当大，没十分钟它自己就挂了。还把Mac给累坏了，风扇嗷嗷转了好久才缓过劲儿来。</p>
+<p>下边这张气氛诡异的图就是我神秘的阳台壁橱台站。</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/46BbURJ7p--1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/46BbURJ7p--1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/46BbURJ7p--1080.jpeg" alt="图片" width="1080" height="809"></picture></p>
+<ul>
+<li>RadioPi藏在第三层，电源GSV-3000右边，有一个63电报机挡住了它，那个红色的光就是它。</li>
+<li>第二层是电源线的扼流磁环、SCU-LAN10、SCU-17。</li>
+<li>第一层是FTDX10，驻波表，1973年的常熟K4手键。</li>
+</ul>
+<h2 id="scu-lan10%E7%9A%84%E6%9C%80%E4%BD%B3%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF" tabindex="-1">SCU-LAN10的最佳应用场景</h2>
+<p>SCU-LAN10的最佳应用场景应该还是在局域网，要不怎么叫“LAN10”呢。当电台收发信机不适合放在书房，或者没有一个舒服的操作位置时，这玩意儿大幅提升了操作体验。还节约了几十米电缆，降低了RFI治理成本。</p>
+<p>当把家里的局域网跟公共广域网打通之后，还可以在更远的地方操作。虽然难免会有延时，但还能接受，用来收听、监控设备状态还是没问题的。</p>
+<h2 id="scu-lan10%E7%9A%84%E5%BB%B6%E6%97%B6%E8%83%BD%E6%9C%89%E5%A4%9A%E5%A4%A7%EF%BC%9F" tabindex="-1">SCU-LAN10的延时能有多大？</h2>
+<p>我在局域网环境下做了个对比实验。结果感人！</p>
+<ul>
+<li>在安装了SCU-LAN10软件的ThinkPad X230上，把电脑音量开到最大；启动WSJT-X v2.54软件，对操作系统麦克风收到所有声音信号解码，所以信噪比就不用比了，只看延时。</li>
+<li>在阳台的值班电脑RadioPi上，也运行着WSJT-X v2.54，通过远程桌面观察解码结果。</li>
+<li>对比两个窗口解码出的相同信号，查看延时的情况。</li>
+</ul>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/QoRvpSPQfm-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/QoRvpSPQfm-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/QoRvpSPQfm-1080.png" alt="图片" width="1080" height="607"></picture></p>
+<p>通过局域网传到SCU-LAN10软件的信号比FTDX10上的信号慢了0.8秒！这是有点头大了。再慢点WSJT-X就不解码了。可能这会儿家人在刷手机视频吧，早先看才0.3秒左右。</p>
+<p>我的SCU-LAN10硬件连的是百兆交换机，X230连的是百兆无线网，看来是时候考虑全屋的千兆网升级、VLAN优化了。</p>
+<h2 id="%E5%85%B3%E4%BA%8Escu-lan10%E7%9A%84%E4%B8%80%E4%BA%9B%E6%9C%9F%E5%BE%85" tabindex="-1">关于SCU-LAN10的一些期待</h2>
+<h3 id="%E6%8E%A8%E6%B5%8B%E4%B8%80%E4%B8%8Bscu-lan10%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84" tabindex="-1">推测一下SCU-LAN10的软件架构</h3>
+<p>SCU-LAN10是一个封闭的软件架构，而且只支持Window操作系统。一般来说，如果想在跟SCU-LAN10的同一台电脑上实现CW信号传输，应该依赖SCU-LAN10提供的软件API接口、或DLL动态调用库，或者SCU-LAN10直接兼容最通用的标准软件库，比如Hamlib。可我在Windows里翻了翻，没看到它跟Hamlib这类软件库有关联。说明这很可能是YAESU自己开发的一套黑盒应用。QST杂志研究说，或许可以通过在Windows上改变声卡配置，把音频分享给类似WSJT-X这类软件，再通过SCU-LAN10的VOX方式发射。这听起来应该能实现，但是VOX不太靠谱啊。所以目前各种常见的HAM软件，比如WSJT-X、N1MN、WINTEST、RUMLog，fldigi这些，基本没法跟SCU-LAN10一起用。</p>
+<p>可以研究一下SCU-LAN10的网络数据传输接口。它依赖50000～50003这四个UDP协议端口，依次传输控制、CAT、音频和频谱数据。如果有人能从这一层截取数据，并做成开放接口，倒是一个有趣的破题路线。总之，还是期待YAESU能主动开放软件接口，提供给HAM世界更多的可玩性。</p>
+<h3 id="%E5%85%B3%E4%BA%8Escu-lan10%E7%9A%84%E6%8E%A5%E5%8F%A3%E7%8C%9C%E6%83%B3" tabindex="-1">关于SCU-LAN10的接口猜想</h3>
+<p>SCU-LAN10上还有一个RS-232C接口，我曾尝试用RS-232C电缆代替USB，接到电脑上看看会有啥反应？结果是SCU-LAN10报错，说没找到USB，必须用USB。但是它的确识别出来了有RS-232C设备接入。</p>
+<p>我还发现最早出厂的SCU-LAN10带有一个音频输入输出的接口，但是新出厂的产品，这个接口取消了。打开盒子看电路板，那里还有一个4脚的Audio插座的位置。</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/1u4eFYgANu-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/1u4eFYgANu-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/1u4eFYgANu-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<p>右下角就是音频接口的位置</p>
+<p>不知道YAESU葫芦里卖的什么药。莫非是用来配合值班电脑实现DATA模式？<strong>如果你手边有老的SCU-LAN10，可以试一试哦！</strong></p>
+<h2 id="%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8Bcw%EF%BC%9F" tabindex="-1">如何实现远程CW？</h2>
+<p>上边分析过了，这个路径可能还得依赖值班电脑上的软件，比如fldigi通过RTS发CW。如果想在本地操作手键，控制远端的收发机发射，有一个思路跟大家探讨：</p>
+<ul>
+<li>首先要组好一个“鲁棒性佳”的虚拟专网，要靠谱，比如千兆有线局域网。</li>
+<li>值班电脑B上运行Hamlib Net rigctl，把FTDX10虚拟成一台网络电台；</li>
+<li>然后在本地电脑A上，通过Winkey这类软件，连一个K3NG这类keyer，再连手键、自动键。</li>
+</ul>
+<p>等我把BG6JJI的K3NG套件完成了就试试这个思路。如果你已经知道这一条弯路，请告诉我。</p>
+<p>这些年YAESU的产品作风一直很保守，世人有目共睹。它好像把电台当钢琴来做了，带着一身老工匠的矜持，闷头打磨一台古典乐器。SCU-LAN10好比给钢琴加装了个蓝牙模块，可以用Pad示谱，增加了练习的趣味性。可是竞争对手直接在量产数字钢琴了。或许YAESU能想明白，尽快给SCU-LAN10软件开放接口，让大家玩的开心。它再不搞，ICOM、Flexradio、Elecraft就搞出来了。</p>
+<h2 id="%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99" tabindex="-1">相关资料</h2>
+<ul>
+<li><a href="https://static.dxengineering.com/global/images/technicalarticles/ysu-scu-lan10.pdf?_gl=1*1em267r*_ga*MTM4NTA4NDI3MS4xNjUyOTc3NTIy*_ga_NZB590FMHY*MTY2ODYwNjg4Ny43LjEuMTY2ODYwNjkxMi4zNS4wLjA">QST杂志SCU-LAN10的评测，2021年5月</a></li>
+<li><a href="https://www.yaesu.com/downloadFile.cfm?FileID=16693&amp;FileCatID=158&amp;FileName=SCU%2DLAN10%5FInstallation%5FManual%5FENG%5F2012%2DB.pdf&amp;FileContentType=application%2Fpdf">YAESU SCU-LAN10安装手册</a></li>
+<li><a href="https://www.yaesu.com/downloadFile.cfm?FileID=16690&amp;FileCatID=158&amp;FileName=SCU%2DLAN10%5FOperation%5FManual%5FENG%5F2012%2DB.pdf&amp;FileContentType=application%2Fpdf">YAESU SCU-LAN10操作手册</a></li>
+<li><a href="http://yaesu.com/jp/manuals/yaesu_m/SCU-17_OM_ENG_JPN.pdf">YAESU SCU-17操作手册</a></li>
+</ul>
+
+            
+              <hr class="border-t-neutral-500 mb-2">
+              <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/AfPvxMBo1MzaWMYA3H0gEQ" target="_blank">BG6LH - SCU-LAN10远程操作FTDX10的组网实践</a></span>
+            
+        </div>
+        <!-- article content : end-->
+
+        <!-- 翻页器 begin -->
+        <div class="mx-auto grid grid-cols-1 gap-2 py-12
+                    md:grid-cols-2
+                ">
+                        <a href="/zh-CN/blog/null-modem-rs232c-connector-of-ftdx10/" class="
+                        flex flex-col left-0 p-2 block hover:bg-neutral-100
+                        ">
+                            < 上一篇
+                            <br>
+                            FTDX10使用RS-232C接口CAT操作指北
+                        </a>
+                    
+                        <a href="/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/" class="
+                        flex flex-col md:text-right right-0 p-2 hover:bg-neutral-100
+                        ">
+                            下一篇 >
+                            <br>
+                            GAWANT天线三脚架安装板
+                        </a>
+                    
+        </div>
+        <!-- 翻页器 end -->
+
+        <!-- Giscus : begin -->
+        <div class="mx-auto">
+        <div id="giscus_thread"></div>
+
+        </div>
+        <!-- Giscus : end -->
+
+    </article>
+
+        <!-- toc begin -->
+        
+        <aside id="artical-toc" class="sticky top-14 max-h-[calc(100svh-3.5rem)] overflow-x-hidden
+                    px-0 pt-10 pb-24 prose prose-neutral text-sm
+                    dark:prose-invert
+                    max-xl:hidden
+                    ">
+        <p class="font-bold">内容目录</p>
+        <nav class="toc">
+        <ul><li><a href="#%E4%BD%BF%E7%94%A8%E4%BD%93%E4%BC%9A">使用体会</a></li><li><a href="#%E8%BF%9C%E7%A8%8B%E7%BB%84%E7%BD%91%E7%AD%96%E7%95%A5">远程组网策略</a></li><li><a href="#scu-lan10%E5%92%8Cscu-17%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%93%8D%E4%BD%9C%E7%9A%84%E7%BB%84%E7%BD%91%E6%96%B9%E6%A1%88">SCU-LAN10和SCU-17实现远程操作的组网方案</a><ul><li><a href="#%E8%BF%9E%E6%8E%A5-scu-lan10-%E7%9A%84%E6%AD%A5%E9%AA%A4">连接 SCU-LAN10 的步骤</a></li><li><a href="#%E8%BF%9E%E6%8E%A5scu-17%E7%9A%84%E8%A6%81%E7%82%B9">连接SCU-17的要点</a></li><li><a href="#%E5%BF%85%E9%A1%BB%E7%94%A8scu-17%E5%90%97%EF%BC%9F">必须用SCU-17吗？</a></li></ul></li><li><a href="#%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%8F%B0%E7%AB%99%E5%AE%9E%E6%99%AF">远程控制台站实景</a></li><li><a href="#scu-lan10%E7%9A%84%E6%9C%80%E4%BD%B3%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF">SCU-LAN10的最佳应用场景</a></li><li><a href="#scu-lan10%E7%9A%84%E5%BB%B6%E6%97%B6%E8%83%BD%E6%9C%89%E5%A4%9A%E5%A4%A7%EF%BC%9F">SCU-LAN10的延时能有多大？</a></li><li><a href="#%E5%85%B3%E4%BA%8Escu-lan10%E7%9A%84%E4%B8%80%E4%BA%9B%E6%9C%9F%E5%BE%85">关于SCU-LAN10的一些期待</a><ul><li><a href="#%E6%8E%A8%E6%B5%8B%E4%B8%80%E4%B8%8Bscu-lan10%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84">推测一下SCU-LAN10的软件架构</a></li><li><a href="#%E5%85%B3%E4%BA%8Escu-lan10%E7%9A%84%E6%8E%A5%E5%8F%A3%E7%8C%9C%E6%83%B3">关于SCU-LAN10的接口猜想</a></li></ul></li><li><a href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8Bcw%EF%BC%9F">如何实现远程CW？</a></li><li><a href="#%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99">相关资料</a></li></ul>
+      </nav>
+        </aside>
+        
+        <!-- toc end -->
+
+
+</div>
+			</heading-anchors>
+		</main>
+		<footer class="flex w-full text-neutral-800 dark:text-neutral-100 bg-neutral-100 dark:bg-neutral-800">
+			<section class="flex flex-col max-w-4xl mx-auto p-0 py-12
+            grid grid-cols-1 gap-6
+            text-xs text-center justify-start
+            md:flex-row md:grid-cols-3 md:text-left
+        ">
+
+    <!-- 网站栏目 -->
+    <div class="">
+        <h3 class="font-bold mb-4" id="">网站导航</h3>
+        <nav class="list-none flex flex-row justify-center md:justify-start md:flex-col">
+            
+            
+             
+            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/">首页</a>
+            
+            
+            
+            
+             
+            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/zh-CN/blog/">归档</a>
+            
+            
+            
+            
+             
+            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/zh-CN/about/">关于</a>
+            
+            
+            
+            
+        </nav>
+
+
+    </div>
+
+    <!-- 社交媒体 -->
+    <div class="">
+        <h3 class="font-bold mb-4" id="social-links">Social Links</h3>
+        <div class="flex flex-row mx-auto justify-center md:justify-start">
+
+            
+            <a href="https://github.com/" aria-label="Open github profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-github">
+  <title>GitHub</title>
+  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+</svg>
+            </a> 
+            
+            <a href="https://x.com/jamflying" aria-label="Open x profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-x">
+  <title>X</title>
+  <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path>
+</svg>
+            </a> 
+            
+            <a href="https://instagram.com/bg6lh" aria-label="Open instagram profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-instagram">
+  <title>Instagram</title>
+  <path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"></path>
+</svg>
+            </a> 
+            
+            <a href="https://ko-fi.com/T6T01D9CDW" aria-label="Open kofi profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-kofi">
+  <title>Ko-fi</title>
+  <path d="M11.351 2.715c-2.7 0-4.986.025-6.83.26C2.078 3.285 0 5.154 0 8.61c0 3.506.182 6.13 1.585 8.493 1.584 2.701 4.233 4.182 7.662 4.182h.83c4.209 0 6.494-2.234 7.637-4a9.5 9.5 0 0 0 1.091-2.338C21.792 14.688 24 12.22 24 9.208v-.415c0-3.247-2.13-5.507-5.792-5.87-1.558-.156-2.65-.208-6.857-.208m0 1.947c4.208 0 5.09.052 6.571.182 2.624.311 4.13 1.584 4.13 4v.39c0 2.156-1.792 3.844-3.87 3.844h-.935l-.156.649c-.208 1.013-.597 1.818-1.039 2.546-.909 1.428-2.545 3.064-5.922 3.064h-.805c-2.571 0-4.831-.883-6.078-3.195-1.09-2-1.298-4.155-1.298-7.506 0-2.181.857-3.402 3.012-3.714 1.533-.233 3.559-.26 6.39-.26m6.547 2.287c-.416 0-.65.234-.65.546v2.935c0 .311.234.545.65.545 1.324 0 2.051-.754 2.051-2s-.727-2.026-2.052-2.026m-10.39.182c-1.818 0-3.013 1.48-3.013 3.142 0 1.533.858 2.857 1.949 3.897.727.701 1.87 1.429 2.649 1.896a1.47 1.47 0 0 0 1.507 0c.78-.467 1.922-1.195 2.623-1.896 1.117-1.039 1.974-2.364 1.974-3.897 0-1.662-1.247-3.142-3.039-3.142-1.065 0-1.792.545-2.338 1.298-.493-.753-1.246-1.298-2.312-1.298"></path>
+</svg>
+            </a> 
+            
+            
+        </div>
+        <br>
+        <h3 class="font-bold mb-4" id="bg6lh">微信公众号 BG6LH</h3>
+        <div class="flex flex-row mx-auto justify-center md:justify-start">
+            <picture><source type="image/avif" srcset="/img/ul2gn8FVCu-430.avif 430w"><source type="image/webp" srcset="/img/ul2gn8FVCu-430.webp 430w"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-430.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430"></picture>
+        </div>
+
+    </div>
+
+    <!-- 基本信息 -->
+    <div class="flex flex-col items-center md:items-start">
+
+            <!-- copyright -->
+    <div class="mx-auto m-3">
+        <p>Copyright © 2025 BG6LH All rights reserved.</p>
+        <p>Powered by Eleventy 3.1.0 & Tailwind CSS 4.1.7</p>
+        <a href="https://github.com/BG6LH/bg6lh.github.io/tree/main/./content/zh-CN/blog/SCU-LAN10远程操作FTDX10的组网实践.md">Edit this page on GitHub</a>
+    </div>
+    <!-- copyright -->
+    </div>
+
+
+
+</section>
+
+		</footer>
+		<!-- This page `/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/` was built on 2025-06-09T00:00:00.000Z -->
+<!-- Alpine 状态定义 -->
+		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
+		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>
+		<script type="module" src="/dist/uM5at4w28x.js"></script>
+
+	</body>
+</html>

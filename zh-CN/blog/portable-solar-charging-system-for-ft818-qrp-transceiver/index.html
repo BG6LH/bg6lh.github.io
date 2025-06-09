@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>QRP野战太阳能电源设计</title>
+		<meta name="description" content="我给FT-818设计了这样一套野战浮充供电系统：一个7AH的胶体铅酸蓄电池，一个27W的折叠太阳能电池包">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="BG6LH">
+		<link rel="stylesheet" href="/css/style.out.css">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+		
+        <!-- favicon -->
+        <link rel="icon" href="/img/me.svg" type="image/svg+xml">
+
+        <!-- Open graph -->
+        <meta property="og:title" content="QRP野战太阳能电源设计">
+        <meta property="og:description" content="我给FT-818设计了这样一套野战浮充供电系统：一个7AH的胶体铅酸蓄电池，一个27W的折叠太阳能电池包">
+        <meta property="og:type" content="article">
+        <meta property="article:tag" content="posts,FT-818,FT-817,太阳能,QRP">
+        <meta property="og:url" content="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/">
+        <meta property="og:site_name" content="BG6LH">
+        <meta property="og:locale" content="zh_CN">
+        <meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHozbKcHYtbjXF1IibYI3BM8QRicprZ2MwwWsWjscYzagXqaMDibFfzk2icVU6lngsFvTV76OHJgJhpicpww/0?wx_fmt=jpeg">
+        <!-- Twitter -->
+        <meta name="twitter:title" content="QRP野战太阳能电源设计">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@jamflying">
+        <meta name="twitter:description" content="我给FT-818设计了这样一套野战浮充供电系统：一个7AH的胶体铅酸蓄电池，一个27W的折叠太阳能电池包">
+        <meta name="twitter:image" content="http://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHozbKcHYtbjXF1IibYI3BM8QRicprZ2MwwWsWjscYzagXqaMDibFfzk2icVU6lngsFvTV76OHJgJhpicpww/0?wx_fmt=jpeg">
+	</head>
+	<body class="bg-white dark:bg-slate-800 overflow-auto dark:text-white dark:text-gray-900" x-data="{
+	        open: false,
+	        darkMode: localStorage.getItem('theme') === 'dark',
+	      }" x-init="
+	        $watch('open', value => {
+	          if (value) {
+	            document.body.classList.add('overflow-hidden', 'md:overflow-auto');
+	          } else {
+	            document.body.classList.remove('overflow-hidden', 'md:overflow-auto');
+	          }
+	        });
+	        $watch('darkMode', value => {
+	          if (value) {
+	            document.documentElement.classList.add('dark');
+	            localStorage.setItem('theme', 'dark');
+	          } else {
+	            document.documentElement.classList.remove('dark');
+	            localStorage.setItem('theme', 'light');
+	          }
+	        });
+	        if (darkMode) document.documentElement.classList.add('dark');
+	        else document.documentElement.classList.remove('dark');
+	      ">
+		<header class="fixed top-0 left-0 right-0 z-50 flex flex-row p-3 w-full 
+                items-center  px-15
+                text-sm text-neutral-800 bg-neutral-100
+                dark:text-neutral-100 dark:bg-neutral-950
+              ">
+    <div class="container mx-auto flex flex-row w-full items-center justify-between">
+        <!--  site logo and title : start -->
+        <div class="flex flex-row items-center">
+            
+                <figure class="flex p-1 inline-block h-8 w-8 mr-2">
+                    <picture><source type="image/avif" srcset="/img/P2oVwTwU_L-601.avif 601w"><source type="image/webp" srcset="/img/P2oVwTwU_L-601.webp 601w"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-601.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601"></picture>
+                </figure>
+            
+            <a class="flex p-1 home-link href=" "="">BG6LH</a>
+        </div>
+        <!-- site logo and title : end -->
+
+        
+
+        <div class="flex items-center space-x-4">
+            
+            
+            
+
+            
+            
+
+            
+            <!-- Theme toggle: visible on all screens -->
+            <div id="theme-toggle" class="z-50">
+                <button @click="darkMode = !darkMode" class="w-6 h-6 flex items-center justify-center" aria-label="Toggle theme">
+                    <span x-show="!darkMode">
+                        
+<!-- @license lucide-static v0.511.0 - ISC -->
+<svg class="w-5 h-5 icon icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="4"></circle>
+  <path d="M12 2v2"></path>
+  <path d="M12 20v2"></path>
+  <path d="m4.93 4.93 1.41 1.41"></path>
+  <path d="m17.66 17.66 1.41 1.41"></path>
+  <path d="M2 12h2"></path>
+  <path d="M20 12h2"></path>
+  <path d="m6.34 17.66-1.41 1.41"></path>
+  <path d="m19.07 4.93-1.41 1.41"></path>
+</svg>
+                    </span>
+                    <span x-show="darkMode">
+                        
+<!-- @license lucide-static v0.511.0 - ISC -->
+<svg class="w-5 h-5 icon icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+</svg>
+                    </span>
+                </button>
+            </div>
+
+            <!-- Mobile menu icon : start -->
+            <button class="md:hidden z-50" @click="open = !open">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <path x-show="!open" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path x-show="open" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <!-- mobile menu icon : end -->
+
+            <!-- Navigation: wide screen : start -->
+            <nav class="hidden md:flex space-x-6">
+                
+                
+                
+                
+                <a href="/">首页</a>
+                
+                
+                
+                
+                
+                <a href="/zh-CN/blog/">归档</a>
+                
+                
+                
+                
+                
+                <a href="/zh-CN/about/">关于</a>
+                
+                
+                
+                
+            </nav>
+            <!-- Navigation: wide screen : end -->
+        </div>
+    </div>
+</header>
+
+<!-- Fullscreen Menu Overlay: mobile only , start -->
+<div class="fixed inset-x-0 top-15 bottom-0 z-40 flex flex-col
+md:hidden items-center w-full h-auto
+border-t-1 border-neutral-800
+text-sm text-neutral-800 bg-neutral-100 px-15
+ dark:text-neutral-100 dark:bg-neutral-950
+font-medium transition-all duration-100" x-show="open" x-transition:enter="transform transition ease-out duration-300" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 scale-100" @click.outside="open = false">
+		
+            
+		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/" @click="open = false">首页</a>
+                </div>
+            
+		
+            
+		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/zh-CN/blog/" @click="open = false">归档</a>
+                </div>
+            
+		
+            
+		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/zh-CN/about/" @click="open = false">关于</a>
+                </div>
+            
+		
+            
+		
+</div>
+<!-- Fullscreen Menu Overlay: mobile only , end -->
+
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<main class="flex-grow pt-15">
+			<heading-anchors class="">
+				
+
+
+
+    
+        <figure class="w-full h-36 object-contain overflow-hidden md:h-96 ">
+            <img src="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/5rm18RBb2u-960.webp" class="w-full blur-xs brightness-75 scale-105" alt="QRP野战太阳能电源设计 image" loading="lazy" decoding="async" width="960" height="545">
+        </figure>
+    
+<div class="mx-auto grid w-full max-w-4xl grid-cols-1 gap-4 md:grid-cols-[minmax(800px,1fr)_240px]">
+    <article class="bg-white p-8 md:p-12 mx-auto max-w-4xl prose prose-neutral">
+        <!-- article header : begin-->
+        <header class="flex flex-col mx-auto mb-12 border-t-neutral-500 border-b-1">
+            <div class="mx-auto font-bold md:text-xl text-center text-neutral-800">
+                <h1 id="qrp">QRP野战太阳能电源设计</h1>
+            </div>
+            <time class="text-sm mx-auto text-neutral-400" datetime="2019-08-09 00:07:00 UTC">2019-08-09 00:07:00 UTC</time>
+            <span class="post-metadata flex flex-row mx-auto p-0">
+                关键词:
+                <a href="/zh-CN/tags/ft-818/" class="post-tag">FT-818</a>, 
+                <a href="/zh-CN/tags/ft-817/" class="post-tag">FT-817</a>, 
+                <a href="/zh-CN/tags/tai-yang-neng/" class="post-tag">太阳能</a>, 
+                <a href="/zh-CN/tags/qrp/" class="post-tag">QRP</a>
+            </span>
+        </header>
+        <!-- article header : end-->
+
+
+        <!-- article content : begin-->
+        <div class="mx-auto">
+            <p>我给FT-818配置了一套野战用的太阳能浮充电源系统：</p>
+<ul>
+<li>一个4AH胶体铅酸蓄电池给电台供电</li>
+<li>一个27W太阳能电池折叠包，给蓄电池浮充补电；</li>
+<li>一个数字伏安表，做太阳能电池的充电监测。</li>
+</ul>
+<p>以下是整个系统的设计图：</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/E1Tq3gHddp-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/E1Tq3gHddp-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/E1Tq3gHddp-1080.png" alt="图片" width="1080" height="613"></picture></p>
+<ul>
+<li>太阳能支路上增加了一个防返流的二极管；</li>
+<li>电流表也在这里，监测着向蓄电池充电时的电流；</li>
+<li>负载支路上增加了一个5A的保险丝，以保护电台。</li>
+<li>电压表在监测整个系统的电压。</li>
+</ul>
+<h2 id="ft-818%E5%AF%B9%E7%94%B5%E6%BA%90%E7%9A%84%E8%A6%81%E6%B1%82" tabindex="-1">FT-818对电源的要求</h2>
+<p>我最初的设想是，一套 <strong>简单、便宜、安全</strong> 的电源，应付野外工作一个白天，别太沉。所以首先要确定FT-818对电源的要求。</p>
+<p>FT-818英文版的手册上讲的很清楚：</p>
+<ul>
+<li>电压13.8V正负15%，可以工作在8V～16V的电压上；</li>
+<li>接收电流：450mA，静噪启动后大约250mA；</li>
+<li>发射电流：HF和VHF是2.4A，UHF是2.7A。</li>
+</ul>
+<p>FT-818是6W的机器，比FT-817大了20%呢！所以FT-817对电源的要求要稍微低一点。</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/m7zzOVNFVE-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/m7zzOVNFVE-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/m7zzOVNFVE-1080.jpeg" alt="图片" width="1080" height="1532"></picture></p>
+<h2 id="12v%2F4ah%E8%83%B6%E4%BD%93%E8%93%84%E7%94%B5%E6%B1%A0" tabindex="-1">12V/4AH胶体蓄电池</h2>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/PFYiC4ovXy-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/PFYiC4ovXy-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/PFYiC4ovXy-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<ul>
+<li>胶体蓄电池优点是：充电时不需要稳定的电压和电流，放电时却可以持续稳定放电。缺点是重，4AH这个重达1.3kg。</li>
+<li>4AH的电池大约可以满足FT-818持续发射2个小时不到。即便是玩数字模式，占空比将近50%，也能持续玩3小时以上。</li>
+<li>一定要买不间断电源用的那种蓄电池，千万别买汽车用的启动电池。启动电池放电电流好几百安培。</li>
+<li>我买的胶体蓄电池，最大充放电特性是180瓦/5分钟，也就是可以干5分钟15A的大电流。安全起见，各支路上安装了5A的保险丝。</li>
+<li>胶体蓄电池充电电流在0.1C之内都不用担心过充。C表示蓄电池容量，4AH的0.1C就是400mA。如果充电电流最大不超过这个，那就算是安全的了。实际效果，充电电流最大看到过450mA，尚可。</li>
+</ul>
+<h2 id="12v%2F27w%E7%9A%84%E5%A4%AA%E9%98%B3%E8%83%BD%E7%94%B5%E6%B1%A0%E6%9D%BF" tabindex="-1">12V/27W的太阳能电池板</h2>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/Gp4SbSE2Cv-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/Gp4SbSE2Cv-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/Gp4SbSE2Cv-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<ul>
+<li>淘的某厂家半成品，100元上下</li>
+<li>12V输出，开路电压标是18-20V</li>
+<li>单晶硅材料， 转化效率 17 ～18%</li>
+<li>标称最大功率 27W(转化后)</li>
+<li>工作温度-17°到48°，自重1.5kg</li>
+</ul>
+<h3 id="%E7%AE%80%E5%8D%95%E8%AF%B4%E4%B8%8B%E5%A4%AA%E9%98%B3%E8%83%BD%E7%94%B5%E6%B1%A0%E7%9A%84%E7%89%B9%E6%80%A7%EF%BC%9A" tabindex="-1">简单说下太阳能电池的特性：</h3>
+<ul>
+<li>当太阳能电池没挂负载时，两极的电压是最大的，这是它的 <strong>开路电压</strong></li>
+<li>当负载的电流逐渐增大，太阳能电池的电压会下降，直到降到0</li>
+<li>如果太阳能电池板短路了，那么两极之间就没有电压了，这个最大的负载电流就是太阳能电池的 <strong>短路电流</strong></li>
+</ul>
+<p>有兴趣的可以读一下文末推荐的TI的一篇文章，它设计了一个太阳能的锂电池充电器，同时还介绍了太阳能电池的等效电路、伏安特性。</p>
+<p>这个标称2 7W太阳能电池，它的最大电流应该可以干到2A上下，2A充那个4AH的电池还是有点玄乎的，所以还要做一个伏安表监测。如果电流太大，把太阳能板遮一下就好了。实际 跟FT-818和蓄电池一起 实验，在HF波段，太阳能支路的电流还没有超过500mA的情况。</p>
+<p>太阳能充电系统一般都要设计一个最大功率跟踪电路，就是充电管理模块，以保证输出一个稳定的电流和电压。但我没有搞这个模块。因为胶体蓄电池本来就有比较耐折腾，直接冲就好了。</p>
+<h3 id="%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E9%80%89%E9%94%82%E7%94%B5%E6%B1%A0" tabindex="-1">为什么不选锂电池</h3>
+<p>锂电池轻便，但是贵，而且还需要而外的充电管理模块，浮充的时候是否有干扰也不好保证。</p>
+<h2 id="%E6%95%B0%E5%AD%97%E4%BC%8F%E5%AE%89%E8%A1%A8dsn-vc288" tabindex="-1">数字伏安表DSN-VC288</h2>
+<p>为了让这一切显得靠谱，还是要监控一下充电的电压和电流。于是我买了DSN-VC288。网上搜“数字双显电流电压表”最便宜的那种就是它。这玩意儿满世界都是，似乎外国人玩的比国内还明白，有人都反向出来了电路图。</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/gW_Yot_TKl-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/gW_Yot_TKl-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/gW_Yot_TKl-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/QLSfZVNBOJ-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/QLSfZVNBOJ-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/QLSfZVNBOJ-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kHOn9v6P2X-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kHOn9v6P2X-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kHOn9v6P2X-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<ul>
+<li>买量程100V/10A足够了。太大的还得接分流器，影响QRP系统的便携性和精确性。</li>
+<li>接线图就不再啰嗦了，注意，买的版本不同，接线方式也有不同。</li>
+<li>这个表有校准的螺丝。但我没有校准。</li>
+</ul>
+<h2 id="%E5%AE%89%E5%85%A8%E7%94%A8%E7%94%B5" tabindex="-1">安全用电</h2>
+<p>整个系统工作的最大电流是蓄电池的短路电流，能高达15A以上。所以：</p>
+<ul>
+<li>各处要防止意外短路，加入至少5A的保险丝。</li>
+<li>电源线耐流也要高。我选的是AWG12#的硅胶线，15A的。</li>
+</ul>
+<p>此外，当太阳光照不足的时候，还要防止蓄电池给反向给太阳能电池“充电”。 所以我给太阳能支路加了一个防返流二极管： 1N5824，5A/30V整流二极管。 图省事，安装在伏安表的盒子里了。</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/tzb8lzKHvQ-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/tzb8lzKHvQ-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/tzb8lzKHvQ-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<h3 id="3d%E6%89%93%E5%8D%B0%E7%9A%84%E5%AE%89%E5%BE%B7%E6%A3%AE4%E8%B7%AF%E7%94%B5%E6%BA%90%E5%88%86%E9%85%8D%E5%99%A8" tabindex="-1">3D打印的安德森4路电源分配器</h3>
+<p>我一直在用Anderson PP15-45系列的插头，安全方便。所以我设计了一个3D打印的安德森4路电源分配器，有兴趣的可以去thingiverse.com上，下载我设计的打印文件。文末有下载地址。</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kMaAEyqE-v-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kMaAEyqE-v-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/kMaAEyqE-v-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<h2 id="%E5%AE%9E%E9%99%85%E4%BD%BF%E7%94%A8%E6%95%88%E6%9E%9C" tabindex="-1">实际使用效果</h2>
+<p>刚刚的7月底8月初，我在北戴河(OM99pp)呆了一个星期，做了三天的通联实验。用的设备是FT-818、小环天线、Pac12天线，最大发射功率6瓦，FT8模式，发射占空比比较高，但不是持续在玩。</p>
+<h3 id="%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%AE%9E%E9%AA%8C%EF%BC%9A" tabindex="-1">第一次实验：</h3>
+<ul>
+<li>7月30日，晴朗的下午2点，太阳能板开路电压20V+；</li>
+<li>接蓄电池和FT-818以后，伏安表显示，充电电压维持在13V上下，电流150-220mA之间；</li>
+<li>一直能坚持到下午四点多，电流还是100mA以上。</li>
+</ul>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/sSS-Rd6jmP-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/sSS-Rd6jmP-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/sSS-Rd6jmP-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/J7b1_JczCt-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/J7b1_JczCt-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/J7b1_JczCt-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<h3 id="%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%AE%9E%E9%AA%8C%EF%BC%9A" tabindex="-1">第二次实验：</h3>
+<ul>
+<li>8月3日星期六，早上在海边用FT-818和Pac12天线，玩了一个半小时的FT8。没有带太阳能，全靠蓄电池。发射频率比较高，电池电压下降到11V左右。</li>
+<li>下午两点多接上太阳能充电，边充边玩，此后一直接收到6点半左右，没太阳了，伏安表显示电压降到了7.5V，FT-818显示7.2V。</li>
+<li>晚上用充电器给蓄电池充满电。</li>
+</ul>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/lD98wiyAuN-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/lD98wiyAuN-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/lD98wiyAuN-1080.jpeg" alt="图片" width="1080" height="1080"></picture></p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/hrNHdDb-vP-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/hrNHdDb-vP-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/hrNHdDb-vP-1080.jpeg" alt="图片" width="1080" height="1440"></picture></p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/yPKSfAlv6q-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/yPKSfAlv6q-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/yPKSfAlv6q-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<h3 id="%E7%AC%AC%E4%B8%89%E6%AC%A1%E5%AE%9E%E9%AA%8C%EF%BC%9A" tabindex="-1">第三次实验：</h3>
+<ul>
+<li>8月4日，一个多云的阴天，太阳能开路电压18V+；</li>
+<li>头天晚上把电池充满了，上午接上太阳能电池和FT-818，无论是发射还是接收，整体电压维持在13V以上，电流在300～400mA上下。</li>
+<li>下午四五点以后没有足够的光照，断开太阳能。持续接收，零星发射。</li>
+<li>到晚上10点收摊儿，伏安表和电台的电压显示是11.8V。</li>
+</ul>
+<p>（这次忘了拍照了……）</p>
+<h2 id="%E6%9C%80%E5%90%8E%E7%9A%84%E6%80%BB%E7%BB%93" tabindex="-1">最后的总结</h2>
+<ul>
+<li>玩半天到一个白天，有太阳能同时在浮充补电，这套系统还是足够的。</li>
+<li>如果想坚持一个高强度的周末比赛，这套系统的容量似乎还是有点小了。</li>
+<li>如果电池是满电状态，有太阳能浮充补电，可以玩的时间更长。 但 是到了晚上一定要用充电器充满电。 27W太阳能电池 浮充， 只能多维持 一会 儿电量，并不能边 玩边把电池充满。</li>
+<li>27W的太阳能电池板1.5kg，4AH的蓄电池1.3kg，FT-818 0.9kg，这套系统加一起不低于3.7kg，已经很重了。</li>
+<li>目前的实验都是夏天，冬天什么样还是未知。</li>
+<li>还有一些有趣的现象，第一次实验发现发射时表灭了，以为是压降太大，表不工作了。第三次实验发现发射时伏安表偶尔会显示16V电压，电流还正常。分析最大的可能还是发射时的射频干扰影响了伏安表。</li>
+</ul>
+<h2 id="%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3" tabindex="-1">参考文档</h2>
+<ul>
+<li><a href="http://www.ti.com.cn/general/cn/docs/gencontent.tsp?contentId=50707">TI.com - 如何设计锂离子电池充电器，以从太阳能电池板获得最大电力</a></li>
+<li><a href="https://www.thingiverse.com/thing:3774171">安德森4路电源分配器</a></li>
+</ul>
+
+            
+              <hr class="border-t-neutral-500 mb-2">
+              <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/DaX0D_5J-NJIbqaXYt-MFg" target="_blank">BG6LH - QRP野战太阳能电源设计</a></span>
+            
+        </div>
+        <!-- article content : end-->
+
+        <!-- 翻页器 begin -->
+        <div class="mx-auto grid grid-cols-1 gap-2 py-12
+                    md:grid-cols-2
+                ">
+                        <a href="/zh-CN/blog/maidenhead-grid-system/" class="
+                        flex flex-col left-0 p-2 block hover:bg-neutral-100
+                        ">
+                            < 上一篇
+                            <br>
+                            梅登黑德定位系统
+                        </a>
+                    
+                        <a href="/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/" class="
+                        flex flex-col md:text-right right-0 p-2 hover:bg-neutral-100
+                        ">
+                            下一篇 >
+                            <br>
+                            Pac12和Army Loop天线的一次对比
+                        </a>
+                    
+        </div>
+        <!-- 翻页器 end -->
+
+        <!-- Giscus : begin -->
+        <div class="mx-auto">
+        <div id="giscus_thread"></div>
+
+        </div>
+        <!-- Giscus : end -->
+
+    </article>
+
+        <!-- toc begin -->
+        
+        <aside id="artical-toc" class="sticky top-14 max-h-[calc(100svh-3.5rem)] overflow-x-hidden
+                    px-0 pt-10 pb-24 prose prose-neutral text-sm
+                    dark:prose-invert
+                    max-xl:hidden
+                    ">
+        <p class="font-bold">内容目录</p>
+        <nav class="toc">
+        <ul><li><a href="#ft-818%E5%AF%B9%E7%94%B5%E6%BA%90%E7%9A%84%E8%A6%81%E6%B1%82">FT-818对电源的要求</a></li><li><a href="#12v%2F4ah%E8%83%B6%E4%BD%93%E8%93%84%E7%94%B5%E6%B1%A0">12V/4AH胶体蓄电池</a></li><li><a href="#12v%2F27w%E7%9A%84%E5%A4%AA%E9%98%B3%E8%83%BD%E7%94%B5%E6%B1%A0%E6%9D%BF">12V/27W的太阳能电池板</a><ul><li><a href="#%E7%AE%80%E5%8D%95%E8%AF%B4%E4%B8%8B%E5%A4%AA%E9%98%B3%E8%83%BD%E7%94%B5%E6%B1%A0%E7%9A%84%E7%89%B9%E6%80%A7%EF%BC%9A">简单说下太阳能电池的特性：</a></li><li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E9%80%89%E9%94%82%E7%94%B5%E6%B1%A0">为什么不选锂电池</a></li></ul></li><li><a href="#%E6%95%B0%E5%AD%97%E4%BC%8F%E5%AE%89%E8%A1%A8dsn-vc288">数字伏安表DSN-VC288</a></li><li><a href="#%E5%AE%89%E5%85%A8%E7%94%A8%E7%94%B5">安全用电</a><ul><li><a href="#3d%E6%89%93%E5%8D%B0%E7%9A%84%E5%AE%89%E5%BE%B7%E6%A3%AE4%E8%B7%AF%E7%94%B5%E6%BA%90%E5%88%86%E9%85%8D%E5%99%A8">3D打印的安德森4路电源分配器</a></li></ul></li><li><a href="#%E5%AE%9E%E9%99%85%E4%BD%BF%E7%94%A8%E6%95%88%E6%9E%9C">实际使用效果</a><ul><li><a href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%AE%9E%E9%AA%8C%EF%BC%9A">第一次实验：</a></li><li><a href="#%E7%AC%AC%E4%BA%8C%E6%AC%A1%E5%AE%9E%E9%AA%8C%EF%BC%9A">第二次实验：</a></li><li><a href="#%E7%AC%AC%E4%B8%89%E6%AC%A1%E5%AE%9E%E9%AA%8C%EF%BC%9A">第三次实验：</a></li></ul></li><li><a href="#%E6%9C%80%E5%90%8E%E7%9A%84%E6%80%BB%E7%BB%93">最后的总结</a></li><li><a href="#%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3">参考文档</a></li></ul>
+      </nav>
+        </aside>
+        
+        <!-- toc end -->
+
+
+</div>
+			</heading-anchors>
+		</main>
+		<footer class="flex w-full text-neutral-800 dark:text-neutral-100 bg-neutral-100 dark:bg-neutral-800">
+			<section class="flex flex-col max-w-4xl mx-auto p-0 py-12
+            grid grid-cols-1 gap-6
+            text-xs text-center justify-start
+            md:flex-row md:grid-cols-3 md:text-left
+        ">
+
+    <!-- 网站栏目 -->
+    <div class="">
+        <h3 class="font-bold mb-4" id="">网站导航</h3>
+        <nav class="list-none flex flex-row justify-center md:justify-start md:flex-col">
+            
+            
+             
+            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/">首页</a>
+            
+            
+            
+            
+             
+            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/zh-CN/blog/">归档</a>
+            
+            
+            
+            
+             
+            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/zh-CN/about/">关于</a>
+            
+            
+            
+            
+        </nav>
+
+
+    </div>
+
+    <!-- 社交媒体 -->
+    <div class="">
+        <h3 class="font-bold mb-4" id="social-links">Social Links</h3>
+        <div class="flex flex-row mx-auto justify-center md:justify-start">
+
+            
+            <a href="https://github.com/" aria-label="Open github profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-github">
+  <title>GitHub</title>
+  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+</svg>
+            </a> 
+            
+            <a href="https://x.com/jamflying" aria-label="Open x profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-x">
+  <title>X</title>
+  <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path>
+</svg>
+            </a> 
+            
+            <a href="https://instagram.com/bg6lh" aria-label="Open instagram profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-instagram">
+  <title>Instagram</title>
+  <path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"></path>
+</svg>
+            </a> 
+            
+            <a href="https://ko-fi.com/T6T01D9CDW" aria-label="Open kofi profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-kofi">
+  <title>Ko-fi</title>
+  <path d="M11.351 2.715c-2.7 0-4.986.025-6.83.26C2.078 3.285 0 5.154 0 8.61c0 3.506.182 6.13 1.585 8.493 1.584 2.701 4.233 4.182 7.662 4.182h.83c4.209 0 6.494-2.234 7.637-4a9.5 9.5 0 0 0 1.091-2.338C21.792 14.688 24 12.22 24 9.208v-.415c0-3.247-2.13-5.507-5.792-5.87-1.558-.156-2.65-.208-6.857-.208m0 1.947c4.208 0 5.09.052 6.571.182 2.624.311 4.13 1.584 4.13 4v.39c0 2.156-1.792 3.844-3.87 3.844h-.935l-.156.649c-.208 1.013-.597 1.818-1.039 2.546-.909 1.428-2.545 3.064-5.922 3.064h-.805c-2.571 0-4.831-.883-6.078-3.195-1.09-2-1.298-4.155-1.298-7.506 0-2.181.857-3.402 3.012-3.714 1.533-.233 3.559-.26 6.39-.26m6.547 2.287c-.416 0-.65.234-.65.546v2.935c0 .311.234.545.65.545 1.324 0 2.051-.754 2.051-2s-.727-2.026-2.052-2.026m-10.39.182c-1.818 0-3.013 1.48-3.013 3.142 0 1.533.858 2.857 1.949 3.897.727.701 1.87 1.429 2.649 1.896a1.47 1.47 0 0 0 1.507 0c.78-.467 1.922-1.195 2.623-1.896 1.117-1.039 1.974-2.364 1.974-3.897 0-1.662-1.247-3.142-3.039-3.142-1.065 0-1.792.545-2.338 1.298-.493-.753-1.246-1.298-2.312-1.298"></path>
+</svg>
+            </a> 
+            
+            
+        </div>
+        <br>
+        <h3 class="font-bold mb-4" id="bg6lh">微信公众号 BG6LH</h3>
+        <div class="flex flex-row mx-auto justify-center md:justify-start">
+            <picture><source type="image/avif" srcset="/img/ul2gn8FVCu-430.avif 430w"><source type="image/webp" srcset="/img/ul2gn8FVCu-430.webp 430w"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-430.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430"></picture>
+        </div>
+
+    </div>
+
+    <!-- 基本信息 -->
+    <div class="flex flex-col items-center md:items-start">
+
+            <!-- copyright -->
+    <div class="mx-auto m-3">
+        <p>Copyright © 2025 BG6LH All rights reserved.</p>
+        <p>Powered by Eleventy 3.1.0 & Tailwind CSS 4.1.7</p>
+        <a href="https://github.com/BG6LH/bg6lh.github.io/tree/main/./content/zh-CN/blog/QRP野战太阳能电源设计.md">Edit this page on GitHub</a>
+    </div>
+    <!-- copyright -->
+    </div>
+
+
+
+</section>
+
+		</footer>
+		<!-- This page `/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/` was built on 2025-06-09T00:00:00.000Z -->
+<!-- Alpine 状态定义 -->
+		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
+		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>
+		<script type="module" src="/dist/uM5at4w28x.js"></script>
+
+	</body>
+</html>

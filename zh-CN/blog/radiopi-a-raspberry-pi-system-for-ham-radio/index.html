@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>RadioPi，Ham的树莓派懒人包</title>
+		<meta name="description" content="RadioPi 是一个配置好了的树莓派操作系统镜像，安装了常用的HAM软件，对远程控制做了优化。你只要下载了它，回去烧个SD卡，往树莓派里一插，开机就能用。">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="BG6LH">
+		<link rel="stylesheet" href="/css/style.out.css">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+		
+        <!-- favicon -->
+        <link rel="icon" href="/img/me.svg" type="image/svg+xml">
+
+        <!-- Open graph -->
+        <meta property="og:title" content="RadioPi，Ham的树莓派懒人包">
+        <meta property="og:description" content="RadioPi 是一个配置好了的树莓派操作系统镜像，安装了常用的HAM软件，对远程控制做了优化。你只要下载了它，回去烧个SD卡，往树莓派里一插，开机就能用。">
+        <meta property="og:type" content="article">
+        <meta property="article:tag" content="posts,FT8,radiopi,rpi">
+        <meta property="og:url" content="/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/">
+        <meta property="og:site_name" content="BG6LH">
+        <meta property="og:locale" content="zh_CN">
+        <meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHoxsRfaUV74h76ZmNSPOVS7mp8RJ9OQByxMrP6b0MJ1uibONNibg7b7xLXGiatJsjMicEDywC2UDrtIl6g/0?wx_fmt=jpeg">
+        <!-- Twitter -->
+        <meta name="twitter:title" content="RadioPi，Ham的树莓派懒人包">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@jamflying">
+        <meta name="twitter:description" content="RadioPi 是一个配置好了的树莓派操作系统镜像，安装了常用的HAM软件，对远程控制做了优化。你只要下载了它，回去烧个SD卡，往树莓派里一插，开机就能用。">
+        <meta name="twitter:image" content="http://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHoxsRfaUV74h76ZmNSPOVS7mp8RJ9OQByxMrP6b0MJ1uibONNibg7b7xLXGiatJsjMicEDywC2UDrtIl6g/0?wx_fmt=jpeg">
+	</head>
+	<body class="bg-white dark:bg-slate-800 overflow-auto dark:text-white dark:text-gray-900" x-data="{
+	        open: false,
+	        darkMode: localStorage.getItem('theme') === 'dark',
+	      }" x-init="
+	        $watch('open', value => {
+	          if (value) {
+	            document.body.classList.add('overflow-hidden', 'md:overflow-auto');
+	          } else {
+	            document.body.classList.remove('overflow-hidden', 'md:overflow-auto');
+	          }
+	        });
+	        $watch('darkMode', value => {
+	          if (value) {
+	            document.documentElement.classList.add('dark');
+	            localStorage.setItem('theme', 'dark');
+	          } else {
+	            document.documentElement.classList.remove('dark');
+	            localStorage.setItem('theme', 'light');
+	          }
+	        });
+	        if (darkMode) document.documentElement.classList.add('dark');
+	        else document.documentElement.classList.remove('dark');
+	      ">
+		<header class="fixed top-0 left-0 right-0 z-50 flex flex-row p-3 w-full 
+                items-center  px-15
+                text-sm text-neutral-800 bg-neutral-100
+                dark:text-neutral-100 dark:bg-neutral-950
+              ">
+    <div class="container mx-auto flex flex-row w-full items-center justify-between">
+        <!--  site logo and title : start -->
+        <div class="flex flex-row items-center">
+            
+                <figure class="flex p-1 inline-block h-8 w-8 mr-2">
+                    <picture><source type="image/avif" srcset="/img/P2oVwTwU_L-601.avif 601w"><source type="image/webp" srcset="/img/P2oVwTwU_L-601.webp 601w"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-601.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601"></picture>
+                </figure>
+            
+            <a class="flex p-1 home-link href=" "="">BG6LH</a>
+        </div>
+        <!-- site logo and title : end -->
+
+        
+
+        <div class="flex items-center space-x-4">
+            
+            
+            
+
+            
+            
+
+            
+            <!-- Theme toggle: visible on all screens -->
+            <div id="theme-toggle" class="z-50">
+                <button @click="darkMode = !darkMode" class="w-6 h-6 flex items-center justify-center" aria-label="Toggle theme">
+                    <span x-show="!darkMode">
+                        
+<!-- @license lucide-static v0.511.0 - ISC -->
+<svg class="w-5 h-5 icon icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="4"></circle>
+  <path d="M12 2v2"></path>
+  <path d="M12 20v2"></path>
+  <path d="m4.93 4.93 1.41 1.41"></path>
+  <path d="m17.66 17.66 1.41 1.41"></path>
+  <path d="M2 12h2"></path>
+  <path d="M20 12h2"></path>
+  <path d="m6.34 17.66-1.41 1.41"></path>
+  <path d="m19.07 4.93-1.41 1.41"></path>
+</svg>
+                    </span>
+                    <span x-show="darkMode">
+                        
+<!-- @license lucide-static v0.511.0 - ISC -->
+<svg class="w-5 h-5 icon icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+</svg>
+                    </span>
+                </button>
+            </div>
+
+            <!-- Mobile menu icon : start -->
+            <button class="md:hidden z-50" @click="open = !open">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <path x-show="!open" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path x-show="open" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <!-- mobile menu icon : end -->
+
+            <!-- Navigation: wide screen : start -->
+            <nav class="hidden md:flex space-x-6">
+                
+                
+                
+                
+                <a href="/">首页</a>
+                
+                
+                
+                
+                
+                <a href="/zh-CN/blog/">归档</a>
+                
+                
+                
+                
+                
+                <a href="/zh-CN/about/">关于</a>
+                
+                
+                
+                
+            </nav>
+            <!-- Navigation: wide screen : end -->
+        </div>
+    </div>
+</header>
+
+<!-- Fullscreen Menu Overlay: mobile only , start -->
+<div class="fixed inset-x-0 top-15 bottom-0 z-40 flex flex-col
+md:hidden items-center w-full h-auto
+border-t-1 border-neutral-800
+text-sm text-neutral-800 bg-neutral-100 px-15
+ dark:text-neutral-100 dark:bg-neutral-950
+font-medium transition-all duration-100" x-show="open" x-transition:enter="transform transition ease-out duration-300" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 scale-100" @click.outside="open = false">
+		
+            
+		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/" @click="open = false">首页</a>
+                </div>
+            
+		
+            
+		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/zh-CN/blog/" @click="open = false">归档</a>
+                </div>
+            
+		
+            
+		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/zh-CN/about/" @click="open = false">关于</a>
+                </div>
+            
+		
+            
+		
+</div>
+<!-- Fullscreen Menu Overlay: mobile only , end -->
+
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<main class="flex-grow pt-15">
+			<heading-anchors class="">
+				
+
+
+
+    
+        <figure class="w-full h-36 object-contain overflow-hidden md:h-96 ">
+            <img src="/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/fGfmolCeix-960.webp" class="w-full blur-xs brightness-75 scale-105" alt="RadioPi，Ham的树莓派懒人包 image" loading="lazy" decoding="async" width="960" height="409">
+        </figure>
+    
+<div class="mx-auto grid w-full max-w-4xl grid-cols-1 gap-4 md:grid-cols-[minmax(800px,1fr)_240px]">
+    <article class="bg-white p-8 md:p-12 mx-auto max-w-4xl prose prose-neutral">
+        <!-- article header : begin-->
+        <header class="flex flex-col mx-auto mb-12 border-t-neutral-500 border-b-1">
+            <div class="mx-auto font-bold md:text-xl text-center text-neutral-800">
+                <h1 id="radiopi-ham">RadioPi，Ham的树莓派懒人包</h1>
+            </div>
+            <time class="text-sm mx-auto text-neutral-400" datetime="2020-06-06 15:58:00 UTC">2020-06-06 15:58:00 UTC</time>
+            <span class="post-metadata flex flex-row mx-auto p-0">
+                关键词:
+                <a href="/zh-CN/tags/ft8/" class="post-tag">FT8</a>, 
+                <a href="/zh-CN/tags/radiopi/" class="post-tag">radiopi</a>, 
+                <a href="/zh-CN/tags/rpi/" class="post-tag">rpi</a>
+            </span>
+        </header>
+        <!-- article header : end-->
+
+
+        <!-- article content : begin-->
+        <div class="mx-auto">
+            <blockquote>
+<p>我们已于2024年6月16日正式放弃了radiopi.club域名，把网站托管在Github上。</p>
+<p>感谢您四年来的参与。还记得那是COVID19的第一年，三个闲在家里的软件工程师，因为共同的爱好，给业余无线电做了一个树莓派的系统镜像。</p>
+<p>今天，我们已经四年没有更新这个项目了。一部分原因是树莓派硬件的价格波动，另一部分是Pi OS的发展进程，他的32位和64位分支，给树莓派的通用软件库的更新带来了一点困扰。树莓派硬件也<mark>正在偏离它低功耗、低维护的初衷</mark>。</p>
+<p>当然更重要的原因，还是我们太懒了。我们三个人的共同爱好和兴趣，也因为家庭、工作、生活发生了细微的变化。我们三个人仍然是好朋友。于是我们一直认为，继续不更新这个计划，对树莓派世界保持观察，对自己的兴趣保持初心。希望有一天树莓派的发展能给我们带来新的灵感。</p>
+<p>依旧欢迎你在Github上与我们保持沟通！</p>
+<p><a href="https://radiopiclub.github.io/zh/">https://radiopiclub.github.io/zh/</a></p>
+<p>73!</p>
+<p>BG6LH BG1TPT BI1EIH</p>
+<p>2024-5-16 更新于北京</p>
+</blockquote>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/hc-y8yFkSP-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/hc-y8yFkSP-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/hc-y8yFkSP-1080.png" alt="图片" width="1080" height="672"></picture></p>
+<p>如果你想玩树莓派远程控制电台，但是又苦于Linux系统太繁琐，那你可以试试RadioPi。 这是一个配置好了的树莓派操作系统懒人包，安装了常用的HAM软件，对远程控制做了优化。你只要下载了它，烧个SD卡，往树莓派里一插，开机就能用。</p>
+<p><strong>RadioPi能干这些事：</strong></p>
+<ul>
+<li>控制电台，玩FT8，记通联日志，上传LOTW挣DXCC积分。</li>
+<li>一边在公园遛弯儿，一边用手机遥控家里电台。</li>
+<li>去野外通联不用带笔记本电脑了。</li>
+</ul>
+<p>我们三个搞互联网的HAM，BG6LH、BG1TPT、BI1EIH，结合自己使用树莓派的体验，一起做了这个RadioPi系统镜像。 如果你也想体验这些乐趣，下载一个试试吧。</p>
+<ul>
+<li>下载地址： <a href="https://pan.baidu.com/s/17HxJHYbyRwxaK_dh4-24WA">https://pan.baidu.com/s/17HxJHYbyRwxaK_dh4-24WA</a></li>
+<li>提取码：02e7</li>
+</ul>
+<p>如果你了解SHA校验，可以比对一下校验码，确保下载的文件准确无误。</p>
+<p><code>SHA-256: 99ab3ec6125cc07d878746d810a1d74db3db7bada44e5373ae1b7681da3e07f3</code></p>
+<p>注意：刚下载的RaidoPi镜像是一个zip压缩包，烧卡之前要先解压缩，得到一个后缀是.img的文件。这个就是RadioPi镜像文件。</p>
+<h2 id="radiopi%E7%AE%80%E4%BB%8B" tabindex="-1">RadioPi简介</h2>
+<p>RadioPi镜像是基于树莓派官方操作系统 的再发布版本。我们是有洁癖的工程师，努力把它做的跟官方镜像一样干净，除了HAM常用的软件，别的都没装。</p>
+<p><strong>这些软件是：</strong></p>
+<ul>
+<li>WSJT-X 2.2.0，已中文支持。</li>
+<li>JTDX 2.1.0-RC150，可选中文界面。</li>
+<li>TQSL 2.4.3，已中文支持。</li>
+<li>CQRLOG 2.3.0，Linux世界最好用的日志软件。</li>
+<li>GQRX 5.11.3，软件无线电接收。</li>
+<li>GNU Radio Companion 3.7.13.4，软件无线电工具包。</li>
+<li>VNC Server 6.7.1，远程控制服务。</li>
+</ul>
+<p>这些软件需要你自己完成开机设置，比如与电台的连接、呼号和LOTW账号等等。我们希望RadioPi能满足Ham的核心需求，也希望它尽量稳定，所以 一些软件是最新的， 一些是次新的 。欢迎各位推荐更好用的软件，我们在以后的版本里预装。</p>
+<p><strong>RadioPi还做了：</strong></p>
+<ul>
+<li>中文化的界面，预装谷歌拼音输入法。</li>
+<li>预装时间同步软件、GPS的驱动。</li>
+<li>精简了跟HAM无关的软件。</li>
+<li>配置好了CQRLog的数据库，修订了它上传LOTW的Bug。</li>
+<li>配置好了SSH、VNC、Avahi服务。</li>
+<li>预存了一个叫radiopi的Wi-Fi连接，以便于野外通联。</li>
+</ul>
+<p><strong>RadioPi的默认用户名和密码：</strong></p>
+<ul>
+<li>用户名：pi</li>
+<li>密码：radiopi599</li>
+</ul>
+<p><strong>RadioPi的默认主机名</strong> ：</p>
+<ul>
+<li>主机名：radiopi</li>
+</ul>
+<p>RadioPi配置了自动广播主机名的Avahi服务，你可以在支持mDNS协议的其它设备上直接访问radiopi.local找到它。详情请参考<a href="../headless-operation-with-radiopi/">《无头操作RadioPi》</a>。</p>
+<p>我们把RadioPi设置为开机自动登录到桌面，这是为VNC远程控制做的一个优化。 第一次登录后，建议你立刻修改用户pi的密码。</p>
+<h2 id="%E4%BD%BF%E7%94%A8%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87" tabindex="-1">使用前的准备</h2>
+<p>使用RadioPi之前，需要做的一些准备：</p>
+<ul>
+<li>microSD卡，也叫TF卡、手机存储卡，推荐8G以上高速卡。</li>
+<li>USB的TF卡读卡器，或者TF转标准SD卡的卡套，烧卡用。</li>
+<li>电脑，烧卡用。</li>
+<li>烧卡软件：</li>
+<li>Windows下，推荐使用Win32DiskImager。
+<ul>
+<li>下载地址： <a href="https://sourceforge.net/projects/win32diskimager/">https://sourceforge.net/projects/win32diskimager/</a></li>
+<li>MacOS下，推荐使用balenaEtcher。</li>
+<li>下载地址： <a href="https://www.balena.io/etcher/">https://www.balena.io/etcher/</a></li>
+</ul>
+</li>
+<li>树莓派。</li>
+<li>推荐购买Pi 4 model B，至少2G内存的版本。</li>
+<li>如果你的树莓派不带Wi-Fi，建议买一个USB Wi-Fi网卡。</li>
+<li>还可以准备一个USB GPS，获得更高精度的时间。这需要在radiopi上做一点点额外的配置。</li>
+<li>显示器、键盘、鼠标，给树莓派用。</li>
+</ul>
+<p>你也可以不用显示器、键盘和鼠标，以“无头(headless)”的方式使用RadioPi。RadioPi已经配置好了SSH、VNC、Avahi等等服务，并针对远程控制做了优化。所谓“远程控制电台”就是通过这些实现的。这才是玩树莓派的重点。关于这部分请参考<a href="../headless-operation-with-radiopi/">《无头操作RadioPi》</a>。</p>
+<ul>
+<li>无头操作RadioPi需要在其它电脑、或手机上安装VNC Viewer软件。它类似QQ的“远程协助”，能把RadioPi“投射”到另一台电脑或手机上，实现远程操作。</li>
+<li>VNC Viewer下载地址：<br>
+<a href="https://www.realvnc.com/en/connect/download/viewer/">https://www.realvnc.com/en/connect/download/viewer/</a></li>
+<li>对于安卓手机用户，国内的应用商店可能没有。推荐从RealVNC公司直接下载安装包：<br>
+<a href="https://help.realvnc.com/hc/en-us/articles/360002762697">https://help.realvnc.com/hc/en-us/articles/360002762697</a></li>
+</ul>
+<p>此外，根据电台的情况，你可能还需要准备一个USB声卡、以及USB转CAT的控制设备。比如YAESU FT-817就需要这些，而ICOM IC-7300就不用，直接用USB线接RadioPi和电台就可以了。</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/_WLsl3-AZ_-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/_WLsl3-AZ_-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/_WLsl3-AZ_-1080.jpeg" alt="图片" width="1080" height="626"></picture></p>
+<p>上图：一套FT-818和RadioPi的便携集成</p>
+<h2 id="%E5%AE%89%E5%85%A8%E6%8F%90%E7%A4%BA" tabindex="-1">安全提示</h2>
+<ul>
+<li>RadioPi上的软件大部分基于Hamlib开源工具库，已经发展了二十年，成功且稳定。但是这些软件目前仍在更新，所以没人保证它们和每一个软件、每一个电台都能有完美的配合。</li>
+<li>树莓派的硬件并非专门为射频工况设计，所以使用树莓派控制电台有一定的风险。当你用它和大功率电台、非平衡天馈系统一起工作时，不良的驻波、不佳的平衡与接地，都有可能对树莓派、电台及周边设备带来射频干扰。</li>
+<li>我们使用过的电台有限，主要包括过FT-817/818、IC-7000/7300、D4D等，使用的天线包括端馈的长线、PAC12、G5RV、甚至小环天线。无论是QRO还是QRP操作，都有过上述的经历。</li>
+<li>所以认真对待平衡、接地、驻波等问题是非常必要的，尤其在远程操作无人值守的电台时更要注意这些问题。</li>
+<li>解决这些问题也是玩业余无线电的乐趣之一。</li>
+</ul>
+<h2 id="%E4%BD%BF%E7%94%A8%E5%8D%8F%E8%AE%AE" tabindex="-1">使用协议</h2>
+<ul>
+<li>下载和使用RadioPi镜像表示你已同意自行承担使用它的风险和责任。</li>
+<li>请确保自己在法律法规许可范围内操作计算机、无线电设备和互联网。</li>
+<li>RadioPi 镜像遵循“创作共享 署名-相同方式共享 CC BY-SA 协议”。 https://creativecommons.org/licenses/by-sa/4.0/deed.zh</li>
+</ul>
+<p>73！</p>
+<p>BG6LH、BG1TPT、BI1EIH</p>
+<p>2020年6月</p>
+
+            
+              <hr class="border-t-neutral-500 mb-2">
+              <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/6Alvr-vHNIJy3v-AkAbqpQ" target="_blank">BG6LH - RadioPi，Ham的树莓派懒人包</a></span>
+            
+        </div>
+        <!-- article content : end-->
+
+        <!-- 翻页器 begin -->
+        <div class="mx-auto grid grid-cols-1 gap-2 py-12
+                    md:grid-cols-2
+                ">
+                        <a href="/zh-CN/blog/building-a-tecsun-2p3-radio-kit/" class="
+                        flex flex-col left-0 p-2 block hover:bg-neutral-100
+                        ">
+                            < 上一篇
+                            <br>
+                            安装德生2P3收音机套件
+                        </a>
+                    
+                        <a href="/zh-CN/blog/headless-operation-with-radiopi/" class="
+                        flex flex-col md:text-right right-0 p-2 hover:bg-neutral-100
+                        ">
+                            下一篇 >
+                            <br>
+                            无头(Headless)操作RadioPi
+                        </a>
+                    
+        </div>
+        <!-- 翻页器 end -->
+
+        <!-- Giscus : begin -->
+        <div class="mx-auto">
+        <div id="giscus_thread"></div>
+
+        </div>
+        <!-- Giscus : end -->
+
+    </article>
+
+        <!-- toc begin -->
+        
+        <aside id="artical-toc" class="sticky top-14 max-h-[calc(100svh-3.5rem)] overflow-x-hidden
+                    px-0 pt-10 pb-24 prose prose-neutral text-sm
+                    dark:prose-invert
+                    max-xl:hidden
+                    ">
+        <p class="font-bold">内容目录</p>
+        <nav class="toc">
+        <ul><li><a href="#radiopi%E7%AE%80%E4%BB%8B">RadioPi简介</a></li><li><a href="#%E4%BD%BF%E7%94%A8%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87">使用前的准备</a></li><li><a href="#%E5%AE%89%E5%85%A8%E6%8F%90%E7%A4%BA">安全提示</a></li><li><a href="#%E4%BD%BF%E7%94%A8%E5%8D%8F%E8%AE%AE">使用协议</a></li></ul>
+      </nav>
+        </aside>
+        
+        <!-- toc end -->
+
+
+</div>
+			</heading-anchors>
+		</main>
+		<footer class="flex w-full text-neutral-800 dark:text-neutral-100 bg-neutral-100 dark:bg-neutral-800">
+			<section class="flex flex-col max-w-4xl mx-auto p-0 py-12
+            grid grid-cols-1 gap-6
+            text-xs text-center justify-start
+            md:flex-row md:grid-cols-3 md:text-left
+        ">
+
+    <!-- 网站栏目 -->
+    <div class="">
+        <h3 class="font-bold mb-4" id="">网站导航</h3>
+        <nav class="list-none flex flex-row justify-center md:justify-start md:flex-col">
+            
+            
+             
+            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/">首页</a>
+            
+            
+            
+            
+             
+            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/zh-CN/blog/">归档</a>
+            
+            
+            
+            
+             
+            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/zh-CN/about/">关于</a>
+            
+            
+            
+            
+        </nav>
+
+
+    </div>
+
+    <!-- 社交媒体 -->
+    <div class="">
+        <h3 class="font-bold mb-4" id="social-links">Social Links</h3>
+        <div class="flex flex-row mx-auto justify-center md:justify-start">
+
+            
+            <a href="https://github.com/" aria-label="Open github profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-github">
+  <title>GitHub</title>
+  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+</svg>
+            </a> 
+            
+            <a href="https://x.com/jamflying" aria-label="Open x profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-x">
+  <title>X</title>
+  <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path>
+</svg>
+            </a> 
+            
+            <a href="https://instagram.com/bg6lh" aria-label="Open instagram profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-instagram">
+  <title>Instagram</title>
+  <path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"></path>
+</svg>
+            </a> 
+            
+            <a href="https://ko-fi.com/T6T01D9CDW" aria-label="Open kofi profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-kofi">
+  <title>Ko-fi</title>
+  <path d="M11.351 2.715c-2.7 0-4.986.025-6.83.26C2.078 3.285 0 5.154 0 8.61c0 3.506.182 6.13 1.585 8.493 1.584 2.701 4.233 4.182 7.662 4.182h.83c4.209 0 6.494-2.234 7.637-4a9.5 9.5 0 0 0 1.091-2.338C21.792 14.688 24 12.22 24 9.208v-.415c0-3.247-2.13-5.507-5.792-5.87-1.558-.156-2.65-.208-6.857-.208m0 1.947c4.208 0 5.09.052 6.571.182 2.624.311 4.13 1.584 4.13 4v.39c0 2.156-1.792 3.844-3.87 3.844h-.935l-.156.649c-.208 1.013-.597 1.818-1.039 2.546-.909 1.428-2.545 3.064-5.922 3.064h-.805c-2.571 0-4.831-.883-6.078-3.195-1.09-2-1.298-4.155-1.298-7.506 0-2.181.857-3.402 3.012-3.714 1.533-.233 3.559-.26 6.39-.26m6.547 2.287c-.416 0-.65.234-.65.546v2.935c0 .311.234.545.65.545 1.324 0 2.051-.754 2.051-2s-.727-2.026-2.052-2.026m-10.39.182c-1.818 0-3.013 1.48-3.013 3.142 0 1.533.858 2.857 1.949 3.897.727.701 1.87 1.429 2.649 1.896a1.47 1.47 0 0 0 1.507 0c.78-.467 1.922-1.195 2.623-1.896 1.117-1.039 1.974-2.364 1.974-3.897 0-1.662-1.247-3.142-3.039-3.142-1.065 0-1.792.545-2.338 1.298-.493-.753-1.246-1.298-2.312-1.298"></path>
+</svg>
+            </a> 
+            
+            
+        </div>
+        <br>
+        <h3 class="font-bold mb-4" id="bg6lh">微信公众号 BG6LH</h3>
+        <div class="flex flex-row mx-auto justify-center md:justify-start">
+            <picture><source type="image/avif" srcset="/img/ul2gn8FVCu-430.avif 430w"><source type="image/webp" srcset="/img/ul2gn8FVCu-430.webp 430w"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-430.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430"></picture>
+        </div>
+
+    </div>
+
+    <!-- 基本信息 -->
+    <div class="flex flex-col items-center md:items-start">
+
+            <!-- copyright -->
+    <div class="mx-auto m-3">
+        <p>Copyright © 2025 BG6LH All rights reserved.</p>
+        <p>Powered by Eleventy 3.1.0 & Tailwind CSS 4.1.7</p>
+        <a href="https://github.com/BG6LH/bg6lh.github.io/tree/main/./content/zh-CN/blog/RadioPi，Ham的树莓派懒人包.md">Edit this page on GitHub</a>
+    </div>
+    <!-- copyright -->
+    </div>
+
+
+
+</section>
+
+		</footer>
+		<!-- This page `/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/` was built on 2025-06-09T00:00:00.000Z -->
+<!-- Alpine 状态定义 -->
+		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
+		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>
+		<script type="module" src="/dist/uM5at4w28x.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>用4NEC2模型测试高楼小环天线</title>
+		<meta name="description" content="最近看到一篇KP4MD的文章，用4NEC2仿真，纯理论的模型，测试了小环天线在高层大楼上应用的方向图和性能，并给出了不同频率，和不同高度的两组仿真数据。关键步骤是用了4nec2的patch功能做了一个大号贴片反射器，来模拟她家的大楼外立面。">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="BG6LH">
+		<link rel="stylesheet" href="/css/style.out.css">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+		
+        <!-- favicon -->
+        <link rel="icon" href="/img/me.svg" type="image/svg+xml">
+
+        <!-- Open graph -->
+        <meta property="og:title" content="用4NEC2模型测试高楼小环天线">
+        <meta property="og:description" content="最近看到一篇KP4MD的文章，用4NEC2仿真，纯理论的模型，测试了小环天线在高层大楼上应用的方向图和性能，并给出了不同频率，和不同高度的两组仿真数据。关键步骤是用了4nec2的patch功能做了一个大号贴片反射器，来模拟她家的大楼外立面。">
+        <meta property="og:type" content="article">
+        <meta property="article:tag" content="posts,4NEC2,KP4MD,NEC2,小环天线">
+        <meta property="og:url" content="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/">
+        <meta property="og:site_name" content="BG6LH">
+        <meta property="og:locale" content="zh_CN">
+        <meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHowVdRmt5ncetibzao5JpzGIR9Qd74en7lY0icv7tq5wA015d69icpHibfYQmLF2mDDpKzZbhn2SPhWwaA/0?wx_fmt=jpeg">
+        <!-- Twitter -->
+        <meta name="twitter:title" content="用4NEC2模型测试高楼小环天线">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@jamflying">
+        <meta name="twitter:description" content="最近看到一篇KP4MD的文章，用4NEC2仿真，纯理论的模型，测试了小环天线在高层大楼上应用的方向图和性能，并给出了不同频率，和不同高度的两组仿真数据。关键步骤是用了4nec2的patch功能做了一个大号贴片反射器，来模拟她家的大楼外立面。">
+        <meta name="twitter:image" content="http://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHowVdRmt5ncetibzao5JpzGIR9Qd74en7lY0icv7tq5wA015d69icpHibfYQmLF2mDDpKzZbhn2SPhWwaA/0?wx_fmt=jpeg">
+	</head>
+	<body class="bg-white dark:bg-slate-800 overflow-auto dark:text-white dark:text-gray-900" x-data="{
+	        open: false,
+	        darkMode: localStorage.getItem('theme') === 'dark',
+	      }" x-init="
+	        $watch('open', value => {
+	          if (value) {
+	            document.body.classList.add('overflow-hidden', 'md:overflow-auto');
+	          } else {
+	            document.body.classList.remove('overflow-hidden', 'md:overflow-auto');
+	          }
+	        });
+	        $watch('darkMode', value => {
+	          if (value) {
+	            document.documentElement.classList.add('dark');
+	            localStorage.setItem('theme', 'dark');
+	          } else {
+	            document.documentElement.classList.remove('dark');
+	            localStorage.setItem('theme', 'light');
+	          }
+	        });
+	        if (darkMode) document.documentElement.classList.add('dark');
+	        else document.documentElement.classList.remove('dark');
+	      ">
+		<header class="fixed top-0 left-0 right-0 z-50 flex flex-row p-3 w-full 
+                items-center  px-15
+                text-sm text-neutral-800 bg-neutral-100
+                dark:text-neutral-100 dark:bg-neutral-950
+              ">
+    <div class="container mx-auto flex flex-row w-full items-center justify-between">
+        <!--  site logo and title : start -->
+        <div class="flex flex-row items-center">
+            
+                <figure class="flex p-1 inline-block h-8 w-8 mr-2">
+                    <picture><source type="image/avif" srcset="/img/P2oVwTwU_L-601.avif 601w"><source type="image/webp" srcset="/img/P2oVwTwU_L-601.webp 601w"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-601.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601"></picture>
+                </figure>
+            
+            <a class="flex p-1 home-link href=" "="">BG6LH</a>
+        </div>
+        <!-- site logo and title : end -->
+
+        
+
+        <div class="flex items-center space-x-4">
+            
+            
+            
+
+            
+            
+
+            
+            <!-- Theme toggle: visible on all screens -->
+            <div id="theme-toggle" class="z-50">
+                <button @click="darkMode = !darkMode" class="w-6 h-6 flex items-center justify-center" aria-label="Toggle theme">
+                    <span x-show="!darkMode">
+                        
+<!-- @license lucide-static v0.511.0 - ISC -->
+<svg class="w-5 h-5 icon icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="4"></circle>
+  <path d="M12 2v2"></path>
+  <path d="M12 20v2"></path>
+  <path d="m4.93 4.93 1.41 1.41"></path>
+  <path d="m17.66 17.66 1.41 1.41"></path>
+  <path d="M2 12h2"></path>
+  <path d="M20 12h2"></path>
+  <path d="m6.34 17.66-1.41 1.41"></path>
+  <path d="m19.07 4.93-1.41 1.41"></path>
+</svg>
+                    </span>
+                    <span x-show="darkMode">
+                        
+<!-- @license lucide-static v0.511.0 - ISC -->
+<svg class="w-5 h-5 icon icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+</svg>
+                    </span>
+                </button>
+            </div>
+
+            <!-- Mobile menu icon : start -->
+            <button class="md:hidden z-50" @click="open = !open">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <path x-show="!open" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path x-show="open" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <!-- mobile menu icon : end -->
+
+            <!-- Navigation: wide screen : start -->
+            <nav class="hidden md:flex space-x-6">
+                
+                
+                
+                
+                <a href="/">首页</a>
+                
+                
+                
+                
+                
+                <a href="/zh-CN/blog/">归档</a>
+                
+                
+                
+                
+                
+                <a href="/zh-CN/about/">关于</a>
+                
+                
+                
+                
+            </nav>
+            <!-- Navigation: wide screen : end -->
+        </div>
+    </div>
+</header>
+
+<!-- Fullscreen Menu Overlay: mobile only , start -->
+<div class="fixed inset-x-0 top-15 bottom-0 z-40 flex flex-col
+md:hidden items-center w-full h-auto
+border-t-1 border-neutral-800
+text-sm text-neutral-800 bg-neutral-100 px-15
+ dark:text-neutral-100 dark:bg-neutral-950
+font-medium transition-all duration-100" x-show="open" x-transition:enter="transform transition ease-out duration-300" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 scale-100" @click.outside="open = false">
+		
+            
+		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/" @click="open = false">首页</a>
+                </div>
+            
+		
+            
+		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/zh-CN/blog/" @click="open = false">归档</a>
+                </div>
+            
+		
+            
+		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/zh-CN/about/" @click="open = false">关于</a>
+                </div>
+            
+		
+            
+		
+</div>
+<!-- Fullscreen Menu Overlay: mobile only , end -->
+
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<main class="flex-grow pt-15">
+			<heading-anchors class="">
+				
+
+
+
+    
+        <figure class="w-full h-36 object-contain overflow-hidden md:h-96 ">
+            <img src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/fgpl3SsKk7-640.webp" class="w-full blur-xs brightness-75 scale-105" alt="用4NEC2模型测试高楼小环天线 image" loading="lazy" decoding="async" width="640" height="273">
+        </figure>
+    
+<div class="mx-auto grid w-full max-w-4xl grid-cols-1 gap-4 md:grid-cols-[minmax(800px,1fr)_240px]">
+    <article class="bg-white p-8 md:p-12 mx-auto max-w-4xl prose prose-neutral">
+        <!-- article header : begin-->
+        <header class="flex flex-col mx-auto mb-12 border-t-neutral-500 border-b-1">
+            <div class="mx-auto font-bold md:text-xl text-center text-neutral-800">
+                <h1 id="4nec2">用4NEC2模型测试高楼小环天线</h1>
+            </div>
+            <time class="text-sm mx-auto text-neutral-400" datetime="2019-09-28 14:05:00 UTC">2019-09-28 14:05:00 UTC</time>
+            <span class="post-metadata flex flex-row mx-auto p-0">
+                关键词:
+                <a href="/zh-CN/tags/4nec2/" class="post-tag">4NEC2</a>, 
+                <a href="/zh-CN/tags/kp4md/" class="post-tag">KP4MD</a>, 
+                <a href="/zh-CN/tags/nec2/" class="post-tag">NEC2</a>, 
+                <a href="/zh-CN/tags/xiao-huan-tian-xian/" class="post-tag">小环天线</a>
+            </span>
+        </header>
+        <!-- article header : end-->
+
+
+        <!-- article content : begin-->
+        <div class="mx-auto">
+            <p>最近看到一篇KP4MD的文章，用4NEC2仿真软件，纯理论的模型，测试了小环天线在高层大楼上应用的方向图和性能，并给出了不同频率，和不同高度的两组仿真数据对比。关键步骤是用了4nec2的patch功能做了一个大号贴片反射器，来模拟她家的大楼外立面。她的结论是DX应用水平安装好一点，NVIS应用垂直安装更好一点。</p>
+<p>她架天线的环境跟我的非常类似，都是十几层的板式公寓楼，高低上下都基本处在大楼正中间。我曾经想过大楼本身应该是个垂直的“地”，但是没考虑反射器效果，我也挺想用NEC2工具搞一个模型看看。正好KP4MD做了这件事。不同的是她家对面是大海，我家对面30米左右是另一个正好跟我层高一样的矮楼，那我再画一个反射器好吧。</p>
+<p>这篇仿真测试的文章不长，有大量的数据和图表可以参考，发表于2015年6月12日KP4MD在的QSL.net的个人主页上的文章《<a href="https://www.qsl.net/kp4md/balconyloop.htm">The Balcony Mounted Magnetic Loop Antenna</a>》。本文图片均来自原文链接。</p>
+<p>我在翻译上一篇 <a href="http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;mid=2247483779&amp;idx=1&amp;sn=5bf876ea2210b6bb6a86676e0373cb8c&amp;chksm=e9498709de3e0e1f91cc34fbfe3fbf2808c59d26b4a3e81d1c008016d715b4e401801becb22c&amp;scene=21#wechat_redirect">《AA5TB：</a> <a href="http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;mid=2247483779&amp;idx=1&amp;sn=5bf876ea2210b6bb6a86676e0373cb8c&amp;chksm=e9498709de3e0e1f91cc34fbfe3fbf2808c59d26b4a3e81d1c008016d715b4e401801becb22c&amp;scene=21#wechat_redirect">小环发射天线》</a> 时，经常被小环天线朝向的不同说法、零点方向的文字描述搞晕。一直想找个模型文件来再现一下。大好人KP4MD博士(女)在另外一篇文章里提供了一组通用的小环天线NEC2模型文件，有兴趣的可以去下载来自己模拟一下。</p>
+<p>73，DE BG6LH
+20190927</p>
+<p>以下是翻译KP4MD的文章。</p>
+<hr>
+<h2 id="%E5%AE%89%E8%A3%85%E5%9C%A8%E9%98%B3%E5%8F%B0%E7%9A%84%E5%B0%8F%E7%8E%AF%E5%A4%A9%E7%BA%BF%E2%80%94%E2%80%94%E7%94%A8nec%E6%A8%A1%E5%9E%8B%E5%81%9A%E7%9A%84%E5%B0%8F%E7%8E%AF%E5%A4%A9%E7%BA%BF%E6%9C%9D%E5%90%91%E5%92%8C%E6%80%A7%E8%83%BD%E7%9A%84%E5%AF%B9%E6%AF%94%E5%88%86%E6%9E%90" tabindex="-1">安装在阳台的小环天线——用NEC模型做的小环天线朝向和性能的对比分析</h2>
+<p><strong>Dr. Carol F, Milazzo, KP4MD (2015年6月12日)</strong></p>
+<h3 id="%E4%BB%8B%E7%BB%8D" tabindex="-1">介绍</h3>
+<p>磁小环天线对于有限空间和移动通联来说是个有用的折衷天线。因此对于住高楼的人来说，磁环天线是个实用的高频天线解决方案。这种条件下不同朝向的性能效果很少有人写过。这个研究用4NEC2[1]模型对比分析了装在高楼窗户或阳台栏杆上的磁环天线，朝向的影响，以及方向图和效率。</p>
+<h3 id="%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1" tabindex="-1">模型设计</h3>
+<p>问题是比较Chameleon CHA F-Loop 天线的性能，直径0.74米(2.44英尺)的辐射环，用DX Engineering的DXE-400 MAX牌的LMR-400同轴馈线做的。分别水平和垂直地安装在一个阳台栏杆上，阳台位于高层公寓建筑的中心附近(图1)。</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/Qvlg8Q84Z6-640.avif 640w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/Qvlg8Q84Z6-640.webp 640w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/Qvlg8Q84Z6-640.jpeg" alt="图片" width="640" height="480"></picture></p>
+<p>图1，高层公寓楼建筑</p>
+<p>这种情况类似于一个直角的角反射器天线，用地和大楼墙体作为反射器。之前做过这个 天线的验证模型[2]，现在把它放在一个20x20格的表面贴片垂直反射器的正中心，反射器尺寸是40x40米(图2)。</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/FhTfffQEqV-416.avif 416w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/FhTfffQEqV-416.webp 416w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/FhTfffQEqV-416.png" alt="图片" width="416" height="447"></picture></p>
+<p>图2，4NEC2几何模型</p>
+<p>天线被放在高于地面正好0.5个7MHz波长、1个14MHz波长等等的 高度 。地面类型被指定为“平均”。天线距离反射器5英尺(1.52米)，电容一边朝向反射器(图3、图4)。 因为NE C代码的局限，想把天线更靠近反射器，但是不行。</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/Q0n67BcQjk-576.avif 576w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/Q0n67BcQjk-576.webp 576w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/Q0n67BcQjk-576.png" alt="图片" width="576" height="506"></picture></p>
+<p>图3，水平朝向</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/KVWyW-RFrH-576.avif 576w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/KVWyW-RFrH-576.webp 576w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/KVWyW-RFrH-576.png" alt="图片" width="576" height="506"></picture></p>
+<p>图4，垂直朝向</p>
+<p>天线在7.1、14.2、21.2和 28.4MHz上测试谐振。这分别对应了0.5、1、1.5和2波长高度(注：这个高度是对应相应频点来说的)。为了观察更低的天线高度的效果，又把7.1MHz谐振天线在0.1、0.2、0.3和0.4波长的离地高度上做了测试。</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/ANxe4oFCoy-640.avif 640w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/ANxe4oFCoy-640.webp 640w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/ANxe4oFCoy-640.jpeg" alt="图片" width="640" height="360"></picture></p>
+<p>图5，红圈里是磁环天线，很低调</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/b_KQz9jmUn-640.avif 640w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/b_KQz9jmUn-640.webp 640w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/b_KQz9jmUn-640.jpeg" alt="图片" width="640" height="360"></picture></p>
+<p>图6，磁环天线，垂直朝向，对着西北方的北美大陆</p>
+<p>预测的增益跟真实的增益会不一样，因为模型不能再现天线直接安装在阳台栏杆的情况、也不能反应大楼外墙复杂的反射、或者附近物体和其它表面的反射。NEC的表面贴片提供的精确性略低于用线网画的反射器，但是更容易画，比画线网快四倍[3]。不管咋说，这种模型能提供一些不同天线朝向的执行效率和辐射方向图的有用的对比信息。</p>
+<h3 id="%E6%95%B0%E6%8D%AE" tabindex="-1">数据</h3>
+<p>每个测试频率下的数据列在下边的大表里，按照以下顺序排列：</p>
+<ol>
+<li>4NEC2主屏幕数据（水平朝向）；</li>
+<li>4NEC2主屏幕数据（垂直朝向）；</li>
+<li>水平朝向上最大增益的方位角辐射方向图；</li>
+<li>垂直朝向上最大增益的方位角辐射方向图；</li>
+<li>仰角辐射图；</li>
+<li>水平朝向的三维辐射方向图；</li>
+<li>垂直朝向的三维辐射方向图。</li>
+</ol>
+<p>在每个二维辐射方向图上，红线表示水平朝向，蓝线表示垂直朝向。</p>
+<p>（注，KP4MD把两组测试的4NEC2截图组成了两个4x7的表。在我微信公众号里的翻译是横过来看的，在网页上就没必要这么麻烦了。）</p>
+<hr>
+<h3 id="%E7%A6%BB%E5%9C%B00.5%E5%88%B02%E4%B8%AA%E6%B3%A2%E9%95%BF%E5%AF%B9%E6%AF%94%E7%BB%84" tabindex="-1">离地0.5到2个波长对比组</h3>
+<table>
+<thead>
+<tr>
+<th>7.1 MHz (0.5 λ)</th>
+<th>14.2 MHz (1 λ)</th>
+<th>21.2 MHz (1.5 λ)</th>
+<th>28.4 MHz (2 λ)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/vO5-cYrz6C-361.avif 361w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/vO5-cYrz6C-361.webp 361w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/vO5-cYrz6C-361.png" alt="7.1 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Horizontal orientation" title="7.1 MHz Magnetic LoopAntenna Parameters - Horizontal orientation" width="361" height="512"></picture>7.1 MHz Magnetic Loop Antenna Parameters - Horizontal orientation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/hkQv7sA0rI-361.avif 361w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/hkQv7sA0rI-361.webp 361w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/hkQv7sA0rI-361.png" alt="14.2 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Horizontal orientation" title="14.2 MHz Magnetic&lt;br&gt;Loop Antenna Parameters - Horizontal orientation" width="361" height="512"></picture> 14.2 MHz Magnetic Loop Antenna Parameters - Horizontal orientation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/x2ak0DP4tV-361.avif 361w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/x2ak0DP4tV-361.webp 361w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/x2ak0DP4tV-361.png" alt="21.2 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Horizontal orientation" title="21.2 MHz Magnetic&lt;br&gt;Loop Antenna Parameters - Horizontal orientation" width="361" height="512"></picture>21.2 MHz Magnetic Loop Antenna Parameters - Horizontal orientation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/VyVclHFuLV-361.avif 361w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/VyVclHFuLV-361.webp 361w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/VyVclHFuLV-361.png" alt="28.4 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Horizontal orientation" title="28.4 MHz Magnetic&lt;br&gt;Loop Antenna Parameters - Horizontal orientation" width="361" height="512"></picture>28.4 MHz Magnetic Loop Antenna Parameters - Horizontal orientation</td>
+</tr>
+<tr>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/6sxJx5W8cs-361.avif 361w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/6sxJx5W8cs-361.webp 361w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/6sxJx5W8cs-361.png" alt="7.1 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Vertical orientation" title="7.1 MHz Magnetic Loop&lt;br&gt;Antenna Parameters - Vertical orientation" width="361" height="512"></picture>7.1 MHz Magnetic Loop Antenna Parameters - Vertical orientation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/BjJFgukvrn-361.avif 361w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/BjJFgukvrn-361.webp 361w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/BjJFgukvrn-361.png" alt="14.2 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Vertical orientation" title="14.2 MHz Magnetic Loop&lt;br&gt;Antenna Parameters - Vertical orientation" width="361" height="512"></picture>14.2 MHz Magnetic Loop Antenna Parameters - Vertical orientation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/f8BeIfP2QY-361.avif 361w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/f8BeIfP2QY-361.webp 361w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/f8BeIfP2QY-361.png" alt="21.2 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Vertical orientation" title="21.2 MHz Magnetic Loop&lt;br&gt;Antenna Parameters - Vertical orientation" width="361" height="512"></picture>21.2 MHz Magnetic Loop Antenna Parameters - Vertical orientation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/5YqxagRI_V-361.avif 361w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/5YqxagRI_V-361.webp 361w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/5YqxagRI_V-361.png" alt="28.4 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Vertical orientation" title="28.4 MHz Magnetic Loop&lt;br&gt;Antenna Parameters - Vertical orientation" width="361" height="512"></picture>28.4 MHz Magnetic Loop Antenna Parameters - Vertical orientation</td>
+</tr>
+<tr>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/53W4hswdX7-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/53W4hswdX7-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/53W4hswdX7-395.png" alt="7.1 MHz Magnetic Loop Antenna - Azimuth&lt;br&gt;radiation pattern at 25° elevation" title="7.1 MHz&lt;br&gt;Magnetic Loop Antenna - Azimuth radiation pattern at&lt;br&gt;25° elevation" width="395" height="437"></picture>7.1 MHz Magnetic Loop Antenna - Azimuth radiation pattern at 25° elevation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/BxyBR2S19j-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/BxyBR2S19j-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/BxyBR2S19j-395.png" alt="14.2 MHz Magnetic Loop Antenna - Azimuth&lt;br&gt;radiation pattern at 15° elevation" title="14.2 MHz&lt;br&gt;Magnetic Loop Antenna - Azimuth radiation pattern at&lt;br&gt;15° elevation" width="395" height="437"></picture>14.2 MHz Magnetic Loop Antenna - Azimuth radiation pattern at 15° elevation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/wJbWxWlkRD-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/wJbWxWlkRD-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/wJbWxWlkRD-395.png" alt="21.2 MHz Magnetic Loop Antenna - Azimuth&lt;br&gt;radiation pattern at 10° elevation" title="21.2 MHz&lt;br&gt;Magnetic Loop Antenna - Azimuth radiation pattern at&lt;br&gt;10° elevation" width="395" height="437"></picture>21.2 MHz Magnetic Loop Antenna - Azimuth radiation pattern at 10° elevation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/EuRDoUtMRw-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/EuRDoUtMRw-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/EuRDoUtMRw-395.png" alt="28.4 MHz Magnetic Loop Antenna - Azimuth&lt;br&gt;radiation pattern at 20° elevation" title="28.4 MHz&lt;br&gt;Magnetic Loop Antenna - Azimuth radiation pattern at&lt;br&gt;20° elevation" width="395" height="437"></picture>28.4 MHz Magnetic Loop Antenna - Azimuth radiation pattern at 20° elevation</td>
+</tr>
+<tr>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/X1IWL976Ry-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/X1IWL976Ry-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/X1IWL976Ry-395.png" alt="7.1 MHz Magnetic Loop Antenna - Azimuth&lt;br&gt;radiation pattern at 55° elevation" title="7.1 MHz&lt;br&gt;Magnetic Loop Antenna - Azimuth radiation pattern at&lt;br&gt;55° elevation" width="395" height="437"></picture>7.1 MHz Magnetic Loop Antenna - Azimuth radiation pattern at 55° elevation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/Q3BOgy0lq7-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/Q3BOgy0lq7-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/Q3BOgy0lq7-395.png" alt="14.2 MHz Magnetic Loop Antenna - Azimuth&lt;br&gt;radiation pattern at 30° elevation" title="14.2 MHz&lt;br&gt;Magnetic Loop Antenna - Azimuth radiation pattern at&lt;br&gt;30° elevation" width="395" height="437"></picture>14.2 MHz Magnetic Loop Antenna - Azimuth radiation pattern at 30° elevation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/9Tg24MNpaa-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/9Tg24MNpaa-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/9Tg24MNpaa-395.png" alt="21.2 MHz Magnetic Loop Antenna - Azimuth&lt;br&gt;radiation pattern at 40° elevation" title="21.2 MHz&lt;br&gt;Magnetic Loop Antenna - Azimuth radiation pattern at&lt;br&gt;40° elevation" width="395" height="437"></picture>21.2 MHz Magnetic Loop Antenna - Azimuth radiation pattern at 40° elevation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/FLDFy7Nqf5-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/FLDFy7Nqf5-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/FLDFy7Nqf5-395.png" alt="28.4 MHz Magnetic Loop Antenna - Azimuth&lt;br&gt;radiation pattern at 50° elevation" title="28.4 MHz&lt;br&gt;Magnetic Loop Antenna - Azimuth radiation pattern at&lt;br&gt;50° elevation" width="395" height="437"></picture>28.4 MHz Magnetic Loop Antenna - Azimuth radiation pattern at 50° elevation</td>
+</tr>
+<tr>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/b_OJbSrnQL-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/b_OJbSrnQL-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/b_OJbSrnQL-395.png" alt="7.1 MHz Magnetic Loop Antenna - Elevation&lt;br&gt;radiation pattern" title="7.1 MHz Magnetic Loop&lt;br&gt;Antenna - Elevation radiation pattern" width="395" height="437"></picture>7.1 MHz Magnetic Loop Antenna - Elevation radiation pattern</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/kN-bI-cxi1-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/kN-bI-cxi1-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/kN-bI-cxi1-395.png" alt="14.2 MHz Magnetic Loop Antenna - Elevation&lt;br&gt;radiation pattern" title="14.2 MHz Magnetic Loop&lt;br&gt;Antenna - Elevation radiation pattern" width="395" height="437"></picture>14.2 MHz Magnetic Loop Antenna - Elevation radiation pattern</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/_ov7VdvhbB-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/_ov7VdvhbB-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/_ov7VdvhbB-395.png" alt="21.2 MHz Magnetic Loop Antenna - Elevation&lt;br&gt;radiation pattern" title="21.2 MHz Magnetic Loop&lt;br&gt;Antenna - Elevation radiation pattern" width="395" height="437"></picture>21.2 MHz Magnetic Loop Antenna - Elevation radiation pattern</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/_dPC3uqajK-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/_dPC3uqajK-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/_dPC3uqajK-395.png" alt="28.4 MHz Magnetic Loop Antenna - Elevation&lt;br&gt;radiation pattern" title="28.4 MHz Magnetic Loop&lt;br&gt;Antenna - Elevation radiation pattern" width="395" height="437"></picture>28.4 MHz Magnetic Loop Antenna - Elevation radiation pattern</td>
+</tr>
+<tr>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/GyhtPutC4g-576.avif 576w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/GyhtPutC4g-576.webp 576w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/GyhtPutC4g-576.png" alt="7.1 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Horizontal orientation" title="7.1 MHz Magnetic Loop&lt;br&gt;Antenna Parameters - Horizontal orientation" width="576" height="506"></picture>7.1 MHz Magnetic Loop Antenna Radiation Pattern - Horizontal orientation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/4WW8twq33m-576.avif 576w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/4WW8twq33m-576.webp 576w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/4WW8twq33m-576.png" alt="14.2 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Horizontal orientation" title="14.2 MHz Magnetic&lt;br&gt;Loop Antenna Parameters - Horizontal orientation" width="576" height="506"></picture>14.2 MHz Magnetic Loop Antenna Radiation Pattern - Horizontal orientation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/Z6d7FE-hdR-576.avif 576w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/Z6d7FE-hdR-576.webp 576w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/Z6d7FE-hdR-576.png" alt="21.2 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Horizontal orientation" title="21.2 MHz Magnetic&lt;br&gt;Loop Antenna Parameters - Horizontal orientation" width="576" height="506"></picture>21.2 MHz Magnetic Loop Antenna Radiation Pattern - Horizontal orientation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/CNKI5jJt25-576.avif 576w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/CNKI5jJt25-576.webp 576w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/CNKI5jJt25-576.png" alt="28.4 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Horizontal orientation" title="28.4 MHz Magnetic&lt;br&gt;Loop Antenna Parameters - Horizontal orientation" width="576" height="506"></picture>28.4 MHz Magnetic Loop Antenna Radiation Pattern - Horizontal orientation</td>
+</tr>
+<tr>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/szWMgWJe3C-576.avif 576w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/szWMgWJe3C-576.webp 576w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/szWMgWJe3C-576.png" alt="7.1 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Vertical orientation" title="7.1 MHz Magnetic Loop&lt;br&gt;Antenna Parameters - Vertical orientation" width="576" height="506"></picture>7.1 MHz Magnetic Loop Antenna Radiation Pattern - Vertical orientation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/tIrPVtdQUW-576.avif 576w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/tIrPVtdQUW-576.webp 576w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/tIrPVtdQUW-576.png" alt="14.2 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Vertical orientation" title="14.2 MHz Magnetic Loop&lt;br&gt;Antenna Parameters - Vertical orientation" width="576" height="506"></picture>14.2 MHz Magnetic Loop Antenna Radiation Pattern - Vertical orientation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/KY6wuqAF8P-576.avif 576w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/KY6wuqAF8P-576.webp 576w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/KY6wuqAF8P-576.png" alt="21.2 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Vertical orientation" title="21.2 MHz Magnetic Loop&lt;br&gt;Antenna Parameters - Vertical orientation" width="576" height="506"></picture>21.2 MHz Magnetic Loop Antenna Radiation Pattern - Vertical orientation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/ybr17QNo5T-576.avif 576w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/ybr17QNo5T-576.webp 576w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/ybr17QNo5T-576.png" alt="28.4 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Vertical orientation" title="28.4 MHz Magnetic Loop&lt;br&gt;Antenna Parameters - Vertical orientation" width="576" height="506"></picture>28.4 MHz Magnetic Loop Antenna Radiation Pattern - Vertical orientation</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="7.1mhz%E5%B0%8F%E7%8E%AF%E5%A4%A9%E7%BA%BF%E7%A6%BB%E5%9C%B00.1%E5%88%B00.4%E6%B3%A2%E9%95%BF%E5%AF%B9%E6%AF%94%E7%BB%84" tabindex="-1">7.1MHz小环天线离地0.1到0.4波长对比组</h3>
+<table>
+<thead>
+<tr>
+<th>7.1 MHz (0.1 λ)</th>
+<th>7.1 MHz (0.2 λ)</th>
+<th>7.1 MHz (0.3 λ)</th>
+<th>7.1 MHz (0.4 λ)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/KJ6rOkTNCd-367.avif 367w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/KJ6rOkTNCd-367.webp 367w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/KJ6rOkTNCd-367.png" alt="7.1 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Horizontal orientation at 4m (0.1 λ)" title="7.1 MHz&lt;br&gt;Magnetic Loop Antenna Parameters - Horizontal&lt;br&gt;orientation at 4m (0.1 λ)" width="367" height="510"></picture>7.1 MHz Magnetic Loop Antenna Parameters - Horizontal orientation at 4m (0.1 λ)</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/6vvGSINmds-367.avif 367w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/6vvGSINmds-367.webp 367w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/6vvGSINmds-367.png" alt="7.1 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Horizontal orientation at 8m (0.2 λ)" title="7.1 MHz&lt;br&gt;Magnetic Loop Antenna Parameters - Horizontal&lt;br&gt;orientation at 8m (0.2 λ)" width="367" height="510"></picture>7.1 MHz Magnetic Loop Antenna Parameters - Horizontal orientation at 8m (0.2 λ)</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/9abw1cqPjl-367.avif 367w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/9abw1cqPjl-367.webp 367w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/9abw1cqPjl-367.png" alt="7.1 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Horizontal orientation at 12m (0.3 λ)" title="7.1&lt;br&gt;MHz Magnetic Loop Antenna Parameters - Horizontal&lt;br&gt;orientation at 12m (0.3 λ)" width="367" height="510"></picture>7.1 MHz Magnetic Loop Antenna Parameters - Horizontal orientation at 12m (0.3 λ)</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/FtH2OU-_T4-367.avif 367w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/FtH2OU-_T4-367.webp 367w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/FtH2OU-_T4-367.png" alt="7.1 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Horizontal orientation at 16m (0.4 λ)" title="7.1&lt;br&gt;MHz Magnetic Loop Antenna Parameters - Horizontal&lt;br&gt;orientation at 16m (0.4 λ)" width="367" height="510"></picture>7.1 MHz Magnetic Loop Antenna Parameters - Horizontal orientation at 16m (0.4 λ)</td>
+</tr>
+<tr>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/RJJeFXPytN-367.avif 367w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/RJJeFXPytN-367.webp 367w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/RJJeFXPytN-367.png" alt="7.1 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Vertical orientation at 4m (0.1 λ)" title="7.1 MHz&lt;br&gt;Magnetic Loop Antenna Parameters - Vertical&lt;br&gt;orientation at 4m (0.1 λ)" width="367" height="510"></picture>7.1 MHz Magnetic Loop Antenna Parameters - Vertical orientation at 4m (0.1 λ)</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/wYlR0p3NHn-367.avif 367w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/wYlR0p3NHn-367.webp 367w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/wYlR0p3NHn-367.png" alt="7.1 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Vertical orientation at 8m (0.2 λ)" title="7.1 MHz&lt;br&gt;Magnetic Loop Antenna Parameters - Vertical&lt;br&gt;orientation at 8m (0.2 λ)" width="367" height="510"></picture>7.1 MHz Magnetic Loop Antenna Parameters - Vertical orientation at 8m (0.2 λ)</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/mREMLEdSTg-367.avif 367w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/mREMLEdSTg-367.webp 367w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/mREMLEdSTg-367.png" alt="7.1 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Vertical orientation at 12m (0.3 λ)" title="7.1 MHz&lt;br&gt;Magnetic Loop Antenna Parameters - Vertical&lt;br&gt;orientation at 12m (0.3 λ)" width="367" height="510"></picture>7.1 MHz Magnetic Loop Antenna Parameters - Vertical orientation at 12m (0.3 λ)</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/d-DRJSIBFb-367.avif 367w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/d-DRJSIBFb-367.webp 367w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/d-DRJSIBFb-367.png" alt="7.1 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Vertical orientation at 16m (0.4 λ)" title="7.1 MHz&lt;br&gt;Magnetic Loop Antenna Parameters - Vertical&lt;br&gt;orientation at 16m (0.4 λ)" width="367" height="510"></picture>7.1 MHz Magnetic Loop Antenna Parameters - Vertical orientation at 16m (0.4 λ)</td>
+</tr>
+<tr>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/K_ewHdq2-r-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/K_ewHdq2-r-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/K_ewHdq2-r-395.png" alt="7.1 MHz Magnetic Loop Antenna at 4m (0.1 λ) -&lt;br&gt;Azimuth radiation pattern at 40° elevation" title="7.1 MHz Magnetic Loop Antenna at 4m (0.1 λ) -&lt;br&gt;Azimuth radiation pattern at 40° elevation" width="395" height="437"></picture>7.1 MHz Magnetic Loop Antenna at 4m (0.1 λ) - Azimuth radiation pattern at 40° elevation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/2GrucKHZth-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/2GrucKHZth-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/2GrucKHZth-395.png" alt="7.1 MHz Magnetic Loop Antenna at 8m (0.2 λ) -&lt;br&gt;Azimuth radiation pattern at 35° elevation" title="7.1 MHz Magnetic Loop Antenna at 8m (0.2 λ) -&lt;br&gt;Azimuth radiation pattern at 35° elevation" width="395" height="437"></picture>7.1 MHz Magnetic Loop Antenna at 8m (0.2 λ) - Azimuth radiation pattern at 35° elevation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/N0SGTshhFe-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/N0SGTshhFe-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/N0SGTshhFe-395.png" alt="7.1 MHz Magnetic Loop Antenna at 12m (0.3 λ) -&lt;br&gt;Azimuth radiation pattern at 20° elevation" title="7.1 MHz Magnetic Loop Antenna at 12m (0.3 λ)&lt;br&gt;- Azimuth radiation pattern at 20° elevation" width="395" height="437"></picture>7.1 MHz Magnetic Loop Antenna at 12m (0.3 λ) - Azimuth radiation pattern at 20° elevation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/0TKme7zqwj-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/0TKme7zqwj-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/0TKme7zqwj-395.png" alt="7.1 MHz Magnetic Loop Antenna at 16m (0.4 λ) -&lt;br&gt;Azimuth radiation pattern at 15° elevation" title="7.1 MHz Magnetic Loop Antenna at 16m (0.4 λ)&lt;br&gt;- Azimuth radiation pattern at 15° elevation" width="395" height="437"></picture>7.1 MHz Magnetic Loop Antenna at 16m (0.4 λ) - Azimuth radiation pattern at 15° elevation</td>
+</tr>
+<tr>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/K_ewHdq2-r-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/K_ewHdq2-r-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/K_ewHdq2-r-395.png" alt="7.1 MHz Magnetic Loop Antenna at 4m (0.1 λ) -&lt;br&gt;Azimuth radiation pattern at 40° elevation" title="7.1 MHz Magnetic Loop Antenna at 4m (0.1 λ) -&lt;br&gt;Azimuth radiation pattern at 40° elevation" width="395" height="437"></picture>7.1 MHz Magnetic Loop Antenna at 4m (0.1 λ) - Azimuth radiation pattern at 40° elevation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/2GrucKHZth-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/2GrucKHZth-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/2GrucKHZth-395.png" alt="7.1 MHz Magnetic Loop Antenna at 8m (0.2 λ) -&lt;br&gt;Azimuth radiation pattern at 35° elevation" title="7.1 MHz Magnetic Loop Antenna at 8m (0.2 λ) -&lt;br&gt;Azimuth radiation pattern at 35° elevation" width="395" height="437"></picture>7.1 MHz Magnetic Loop Antenna at 8m (0.2 λ) - Azimuth radiation pattern at 35° elevation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/f2yZyDz92c-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/f2yZyDz92c-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/f2yZyDz92c-395.png" alt="7.1 MHz Magnetic Loop Antenna at 12m (0.3 λ) -&lt;br&gt;Azimuth radiation pattern at 30° elevation" title="7.1 MHz Magnetic Loop Antenna at 12m (0.3 λ)&lt;br&gt;- Azimuth radiation pattern at 30° elevation" width="395" height="437"></picture>7.1 MHz Magnetic Loop Antenna at 12m (0.3 λ) - Azimuth radiation pattern at 30° elevation</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/Dq-Kb0-TUN-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/Dq-Kb0-TUN-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/Dq-Kb0-TUN-395.png" alt="7.1 MHz Magnetic Loop Antenna at 16m (0.4 λ) -&lt;br&gt;Azimuth radiation pattern at 30° elevation" title="7.1 MHz Magnetic Loop Antenna at 16m (0.4 λ)&lt;br&gt;- Azimuth radiation pattern at 30° elevation" width="395" height="437"></picture>7.1 MHz Magnetic Loop Antenna at 16m (0.4 λ) - Azimuth radiation pattern at 30° elevation</td>
+</tr>
+<tr>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/KUlqRFYPlg-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/KUlqRFYPlg-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/KUlqRFYPlg-395.png" alt="7.1 MHz Magnetic Loop Antenna at 4m (0.1 λ) -&lt;br&gt;Elevation radiation pattern" title="7.1 MHz Magnetic&lt;br&gt;Loop Antenna at 4m (0.1 λ) - Elevation radiation&lt;br&gt;pattern" width="395" height="437"></picture>7.1 MHz Magnetic Loop Antenna at 4m (0.1 λ) - Elevation radiation pattern</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/GVmDF2vOaE-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/GVmDF2vOaE-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/GVmDF2vOaE-395.png" alt="7.1 MHz Magnetic Loop Antenna at 8m (0.2 λ) -&lt;br&gt;Elevation radiation pattern" title="7.1 MHz Magnetic&lt;br&gt;Loop Antenna at 8m (0.2 λ) - Elevation radiation&lt;br&gt;pattern" width="395" height="437"></picture>7.1 MHz Magnetic Loop Antenna at 8m (0.2 λ) - Elevation radiation pattern</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/UcGKqa5oVQ-395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/UcGKqa5oVQ-395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/UcGKqa5oVQ-395.png" alt="7.1 MHz Magnetic Loop Antenna at 12m (0.3 λ) -&lt;br&gt;Elevation radiation pattern" title="7.1 MHz Magnetic&lt;br&gt;Loop Antenna at 12m (0.3 λ) - Elevation radiation&lt;br&gt;pattern" width="395" height="437"></picture>7.1 MHz Magnetic Loop Antenna at 12m (0.3 λ) - Elevation radiation pattern</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/HjtyA6WI9--395.avif 395w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/HjtyA6WI9--395.webp 395w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/HjtyA6WI9--395.png" alt="7.1 MHz Magnetic Loop Antenna at 16m (0.4 λ) -&lt;br&gt;Elevation radiation pattern" title="7.1 MHz Magnetic&lt;br&gt;Loop Antenna at 16m (0.4 λ) - Elevation radiation&lt;br&gt;pattern" width="395" height="437"></picture>7.1 MHz Magnetic Loop Antenna at 16m (0.4 λ) - Elevation radiation pattern</td>
+</tr>
+<tr>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/mmDx6kmujw-576.avif 576w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/mmDx6kmujw-576.webp 576w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/mmDx6kmujw-576.png" alt="7.1 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Horizontal orientation at 4m (0.1 λ)" title="7.1 MHz&lt;br&gt;Magnetic Loop Antenna Parameters - Horizontal&lt;br&gt;orientation at 4m (0.1 λ)" width="576" height="507"></picture>7.1 MHz Magnetic Loop Antenna Pattern - Horizontal orientation at 4m (0.1 λ)</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/Rmr2epkUNb-576.avif 576w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/Rmr2epkUNb-576.webp 576w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/Rmr2epkUNb-576.png" alt="7.1 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Horizontal orientation at 8m (0.2 λ)" title="7.1 MHz&lt;br&gt;Magnetic Loop Antenna Parameters - Horizontal&lt;br&gt;orientation at 8m (0.2 λ)" width="576" height="507"></picture>7.1 MHz Magnetic Loop Antenna Pattern - Horizontal orientation at 8m (0.2 λ)</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/vlphEVvR7s-576.avif 576w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/vlphEVvR7s-576.webp 576w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/vlphEVvR7s-576.png" alt="7.1 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Horizontal orientation at 12m (0.3 λ)" title="7.1&lt;br&gt;MHz Magnetic Loop Antenna Parameters - Horizontal&lt;br&gt;orientation at 12m (0.3 λ)" width="576" height="507"></picture>7.1 MHz Magnetic Loop Antenna Pattern - Horizontal orientation at 12m (0.3 λ)</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/7VjB5d6mjy-576.avif 576w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/7VjB5d6mjy-576.webp 576w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/7VjB5d6mjy-576.png" alt="7.1 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Horizontal orientation at 16m (0.4 λ)" title="7.1&lt;br&gt;MHz Magnetic Loop Antenna Parameters - Horizontal&lt;br&gt;orientation at 16m (0.4 λ)" width="576" height="507"></picture>7.1 MHz Magnetic Loop Antenna Pattern - Horizontal orientation at 16m (0.4 λ)</td>
+</tr>
+<tr>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/y20eMf-xGr-576.avif 576w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/y20eMf-xGr-576.webp 576w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/y20eMf-xGr-576.png" alt="7.1 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Vertical orientation at 4m (0.1 λ)" title="7.1 MHz&lt;br&gt;Magnetic Loop Antenna Parameters - Vertical&lt;br&gt;orientation at 4m (0.1 λ)" width="576" height="507"></picture>7.1 MHz Magnetic Loop Antenna Pattern - Vertical orientation at 4m (0.1 λ)</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/u4Jrj3Ai9S-576.avif 576w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/u4Jrj3Ai9S-576.webp 576w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/u4Jrj3Ai9S-576.png" alt="7.1 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Vertical orientation at 8m (0.2 λ)" title="7.1 MHz&lt;br&gt;Magnetic Loop Antenna Parameters - Vertical&lt;br&gt;orientation at 8m (0.2 λ)" width="576" height="507"></picture>7.1 MHz Magnetic Loop Antenna Pattern - Vertical orientation at 8m (0.2 λ)</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/JObRmHtSxo-576.avif 576w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/JObRmHtSxo-576.webp 576w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/JObRmHtSxo-576.png" alt="7.1 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Vertical orientation at 12m (0.3 λ)" title="7.1 MHz&lt;br&gt;Magnetic Loop Antenna Parameters - Vertical&lt;br&gt;orientation at 12m (0.3 λ)" width="576" height="507"></picture>7.1 MHz Magnetic Loop Antenna Pattern - Vertical orientation at 12m (0.3 λ)</td>
+<td><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/9q0LYLwKg9-576.avif 576w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/9q0LYLwKg9-576.webp 576w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/9q0LYLwKg9-576.png" alt="7.1 MHz Magnetic Loop Antenna Parameters -&lt;br&gt;Vertical orientation at 16m (0.4 λ)" title="7.1 MHz&lt;br&gt;Magnetic Loop Antenna Parameters - Vertical&lt;br&gt;orientation at 16m (0.4 λ)" width="576" height="507"></picture>7.1 MHz Magnetic Loop Antenna Pattern - Vertical orientation at 16m (0.4 λ)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="%E8%AE%A8%E8%AE%BA" tabindex="-1">讨论</h3>
+<p>预测出来的天线参数</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/mS5V1oK0cp-1638.avif 1638w"><source type="image/webp" srcset="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/mS5V1oK0cp-1638.webp 1638w"><img loading="lazy" decoding="async" src="/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/mS5V1oK0cp-1638.png" alt="图片" width="1638" height="522"></picture></p>
+<p>这些模型预测显示：</p>
+<ul>
+<li>在离地0.2波长高度以上，水平朝向小环天线的辐射效率和主瓣增益都会更高。 效率高是意料之中的，因为垂直朝向的一半方向图都指向了地面，被地面吸收了。</li>
+<li>在更高频率上，辐射方向图的波瓣和零点会增加。</li>
+<li>在0.5波长高度以上，水平朝向的天线都会屈从于更低角度的最大辐射波瓣，这有利于远距离电离层传播。</li>
+<li>在0.5波长高度以上，垂直朝向的的天线都会屈从于更高角度的辐射波瓣，在7MHz、55°仰角上会比水平朝向多7dB的信号，有利于短距离近垂直入射天波(NVIS)传播。</li>
+</ul>
+<h3 id="%E7%BB%93%E8%AE%BA" tabindex="-1">结论</h3>
+<p>这个NEC模型对比显示，磁环天线做远距离电离层传播时最好水平朝向，做NVIS传播时最好垂直朝向。实际应用中，天线的最佳朝向也会考虑本地噪声的极化方向。垂直极化的28MHz FM中继就首选垂直朝向。</p>
+<h3 id="%E5%8F%82%E8%80%83" tabindex="-1">参考</h3>
+<p>[1] 4nec2 Antenna Modeling Program, Voors,
+https://www.qsl.net/4nec2/</p>
+<p>[2] Chameleon CHA F-Loop Antenna Parameters, Milazzo, C, KP4MD
+https://www.qsl.net/kp4md/chafloop.htm</p>
+<p>[3] Planar Reflectors: Wire Grid vs. SM Patches, Cebik, L, W4RNL
+http://www.antennex.com/w4rnl/col0406/amod98.html</p>
+<p>[4] A Universal HF Magnetic Loop Model, Milazzo, C, KP4MD
+https://www.qsl.net/kp4md/magloop.htm</p>
+<h3 id="%E7%9B%B8%E5%86%8C(%E5%B7%B2%E5%A4%B1%E6%95%88)" tabindex="-1">相册(已失效)</h3>
+<ol>
+<li>Balcony Mounted Magnetic Loop Antenna, Milazzo, C, KP4MD</li>
+<li>Balcony Rail Mount for Magnetic Loop Antenna, Milazzo, C, KP4MD</li>
+<li>KP4MD/P Amateur Radio Station in Puerto Rico, Milazzo, C, KP4MD</li>
+</ol>
+<h3 id="nec%E6%A8%A1%E5%9E%8B%E5%8F%82%E6%95%B0%5B2%5D" tabindex="-1">NEC模型参数[2]</h3>
+<ul>
+<li>离地高度：69英尺(21.05米)</li>
+<li>模拟地类型：平均</li>
+<li>环直径：2.44英尺(0.74米)</li>
+<li>环周长：92英寸(2.34米)</li>
+<li>环NEC模型分段：18段</li>
+<li>DXE-400电缆外径：0.405英寸(10.3mm)</li>
+<li>外皮材料：PVC</li>
+<li>外编织屏蔽层直径：0.32英寸(8.13mm)</li>
+<li>DXE-400编织层导电率：4500000 mhos/米</li>
+<li>电容 Q=Xc/Rc：118-1800*</li>
+</ul>
+<hr>
+<p>* 该天线有两个开关位可以切换不同容量，详情请参考原文</p>
+<h3 id="4nec2%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6" tabindex="-1">4NEC2模型文件</h3>
+<p>不同频率下的天线模型</p>
+<table>
+<thead>
+<tr>
+<th>水平</th>
+<th>垂直</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="balconyloop07h.nec">7.1 MHz</a></td>
+<td><a href="balconyloop07v.nec">7.1 MHz</a></td>
+</tr>
+<tr>
+<td><a href="balconyloop14h.nec">14.2 MHz</a></td>
+<td><a href="balconyloop14v.nec">14.2 MHz</a></td>
+</tr>
+<tr>
+<td><a href="balconyloop21h.nec">21.2 MHz</a></td>
+<td><a href="balconyloop21v.nec">21.2 MHz</a></td>
+</tr>
+<tr>
+<td><a href="balconyloop28h.nec">28.4 MHz</a></td>
+<td><a href="balconyloop28v.nec">28.4 MHz</a></td>
+</tr>
+</tbody>
+</table>
+<p>7M频率不同高度下的天线模型</p>
+<table>
+<thead>
+<tr>
+<th>水平</th>
+<th>垂直</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="balconyloop070r1h.nec">7 MHz @ 0.1 λ</a></td>
+<td><a href="balconyloop070r1v.nec">7 MHz @ 0.1 λ</a></td>
+</tr>
+<tr>
+<td><a href="balconyloop070r2h.nec">7 MHz @ 0.2 λ</a></td>
+<td><a href="balconyloop070r2v.nec">7 MHz @ 0.2 λ</a></td>
+</tr>
+<tr>
+<td><a href="balconyloop070r3h.nec">7 MHz @ 0.3 λ</a></td>
+<td><a href="balconyloop070r3v.nec">7 MHz @ 0.3 λ</a></td>
+</tr>
+<tr>
+<td><a href="balconyloop070r4h.nec">7 MHz @ 0.4 λ</a></td>
+<td><a href="balconyloop070r4v.nec">7 MHz @ 0.4 λ</a></td>
+</tr>
+</tbody>
+</table>
+<p>&lt;译完&gt;</p>
+
+            
+              <hr class="border-t-neutral-500 mb-2">
+              <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/Vrxq-B7eYoXcEbTbtI6apQ" target="_blank">BG6LH - 用4NEC2模型测试高楼小环天线</a></span>
+            
+        </div>
+        <!-- article content : end-->
+
+        <!-- 翻页器 begin -->
+        <div class="mx-auto grid grid-cols-1 gap-2 py-12
+                    md:grid-cols-2
+                ">
+                        <a href="/zh-CN/blog/aa5tb-small-transmitting-loop-antennas/" class="
+                        flex flex-col left-0 p-2 block hover:bg-neutral-100
+                        ">
+                            < 上一篇
+                            <br>
+                            翻译：小环发射天线 - AA5TB
+                        </a>
+                    
+                        <a href="/zh-CN/blog/ft8-go-pack-system/" class="
+                        flex flex-col md:text-right right-0 p-2 hover:bg-neutral-100
+                        ">
+                            下一篇 >
+                            <br>
+                            终于拔草FT8一提走
+                        </a>
+                    
+        </div>
+        <!-- 翻页器 end -->
+
+        <!-- Giscus : begin -->
+        <div class="mx-auto">
+        <div id="giscus_thread"></div>
+
+        </div>
+        <!-- Giscus : end -->
+
+    </article>
+
+        <!-- toc begin -->
+        
+        <aside id="artical-toc" class="sticky top-14 max-h-[calc(100svh-3.5rem)] overflow-x-hidden
+                    px-0 pt-10 pb-24 prose prose-neutral text-sm
+                    dark:prose-invert
+                    max-xl:hidden
+                    ">
+        <p class="font-bold">内容目录</p>
+        <nav class="toc">
+        <ul><li><a href="#%E5%AE%89%E8%A3%85%E5%9C%A8%E9%98%B3%E5%8F%B0%E7%9A%84%E5%B0%8F%E7%8E%AF%E5%A4%A9%E7%BA%BF%E2%80%94%E2%80%94%E7%94%A8nec%E6%A8%A1%E5%9E%8B%E5%81%9A%E7%9A%84%E5%B0%8F%E7%8E%AF%E5%A4%A9%E7%BA%BF%E6%9C%9D%E5%90%91%E5%92%8C%E6%80%A7%E8%83%BD%E7%9A%84%E5%AF%B9%E6%AF%94%E5%88%86%E6%9E%90">安装在阳台的小环天线——用NEC模型做的小环天线朝向和性能的对比分析</a><ul><li><a href="#%E4%BB%8B%E7%BB%8D">介绍</a></li><li><a href="#%E6%A8%A1%E5%9E%8B%E8%AE%BE%E8%AE%A1">模型设计</a></li><li><a href="#%E6%95%B0%E6%8D%AE">数据</a></li><li><a href="#%E7%A6%BB%E5%9C%B00.5%E5%88%B02%E4%B8%AA%E6%B3%A2%E9%95%BF%E5%AF%B9%E6%AF%94%E7%BB%84">离地0.5到2个波长对比组</a></li><li><a href="#7.1mhz%E5%B0%8F%E7%8E%AF%E5%A4%A9%E7%BA%BF%E7%A6%BB%E5%9C%B00.1%E5%88%B00.4%E6%B3%A2%E9%95%BF%E5%AF%B9%E6%AF%94%E7%BB%84">7.1MHz小环天线离地0.1到0.4波长对比组</a></li><li><a href="#%E8%AE%A8%E8%AE%BA">讨论</a></li><li><a href="#%E7%BB%93%E8%AE%BA">结论</a></li><li><a href="#%E5%8F%82%E8%80%83">参考</a></li><li><a href="#%E7%9B%B8%E5%86%8C(%E5%B7%B2%E5%A4%B1%E6%95%88)">相册(已失效)</a></li><li><a href="#nec%E6%A8%A1%E5%9E%8B%E5%8F%82%E6%95%B0%5B2%5D">NEC模型参数[2]</a></li><li><a href="#4nec2%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6">4NEC2模型文件</a></li></ul></li></ul>
+      </nav>
+        </aside>
+        
+        <!-- toc end -->
+
+
+</div>
+			</heading-anchors>
+		</main>
+		<footer class="flex w-full text-neutral-800 dark:text-neutral-100 bg-neutral-100 dark:bg-neutral-800">
+			<section class="flex flex-col max-w-4xl mx-auto p-0 py-12
+            grid grid-cols-1 gap-6
+            text-xs text-center justify-start
+            md:flex-row md:grid-cols-3 md:text-left
+        ">
+
+    <!-- 网站栏目 -->
+    <div class="">
+        <h3 class="font-bold mb-4" id="">网站导航</h3>
+        <nav class="list-none flex flex-row justify-center md:justify-start md:flex-col">
+            
+            
+             
+            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/">首页</a>
+            
+            
+            
+            
+             
+            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/zh-CN/blog/">归档</a>
+            
+            
+            
+            
+             
+            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/zh-CN/about/">关于</a>
+            
+            
+            
+            
+        </nav>
+
+
+    </div>
+
+    <!-- 社交媒体 -->
+    <div class="">
+        <h3 class="font-bold mb-4" id="social-links">Social Links</h3>
+        <div class="flex flex-row mx-auto justify-center md:justify-start">
+
+            
+            <a href="https://github.com/" aria-label="Open github profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-github">
+  <title>GitHub</title>
+  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+</svg>
+            </a> 
+            
+            <a href="https://x.com/jamflying" aria-label="Open x profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-x">
+  <title>X</title>
+  <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path>
+</svg>
+            </a> 
+            
+            <a href="https://instagram.com/bg6lh" aria-label="Open instagram profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-instagram">
+  <title>Instagram</title>
+  <path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"></path>
+</svg>
+            </a> 
+            
+            <a href="https://ko-fi.com/T6T01D9CDW" aria-label="Open kofi profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-kofi">
+  <title>Ko-fi</title>
+  <path d="M11.351 2.715c-2.7 0-4.986.025-6.83.26C2.078 3.285 0 5.154 0 8.61c0 3.506.182 6.13 1.585 8.493 1.584 2.701 4.233 4.182 7.662 4.182h.83c4.209 0 6.494-2.234 7.637-4a9.5 9.5 0 0 0 1.091-2.338C21.792 14.688 24 12.22 24 9.208v-.415c0-3.247-2.13-5.507-5.792-5.87-1.558-.156-2.65-.208-6.857-.208m0 1.947c4.208 0 5.09.052 6.571.182 2.624.311 4.13 1.584 4.13 4v.39c0 2.156-1.792 3.844-3.87 3.844h-.935l-.156.649c-.208 1.013-.597 1.818-1.039 2.546-.909 1.428-2.545 3.064-5.922 3.064h-.805c-2.571 0-4.831-.883-6.078-3.195-1.09-2-1.298-4.155-1.298-7.506 0-2.181.857-3.402 3.012-3.714 1.533-.233 3.559-.26 6.39-.26m6.547 2.287c-.416 0-.65.234-.65.546v2.935c0 .311.234.545.65.545 1.324 0 2.051-.754 2.051-2s-.727-2.026-2.052-2.026m-10.39.182c-1.818 0-3.013 1.48-3.013 3.142 0 1.533.858 2.857 1.949 3.897.727.701 1.87 1.429 2.649 1.896a1.47 1.47 0 0 0 1.507 0c.78-.467 1.922-1.195 2.623-1.896 1.117-1.039 1.974-2.364 1.974-3.897 0-1.662-1.247-3.142-3.039-3.142-1.065 0-1.792.545-2.338 1.298-.493-.753-1.246-1.298-2.312-1.298"></path>
+</svg>
+            </a> 
+            
+            
+        </div>
+        <br>
+        <h3 class="font-bold mb-4" id="bg6lh">微信公众号 BG6LH</h3>
+        <div class="flex flex-row mx-auto justify-center md:justify-start">
+            <picture><source type="image/avif" srcset="/img/ul2gn8FVCu-430.avif 430w"><source type="image/webp" srcset="/img/ul2gn8FVCu-430.webp 430w"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-430.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430"></picture>
+        </div>
+
+    </div>
+
+    <!-- 基本信息 -->
+    <div class="flex flex-col items-center md:items-start">
+
+            <!-- copyright -->
+    <div class="mx-auto m-3">
+        <p>Copyright © 2025 BG6LH All rights reserved.</p>
+        <p>Powered by Eleventy 3.1.0 & Tailwind CSS 4.1.7</p>
+        <a href="https://github.com/BG6LH/bg6lh.github.io/tree/main/./content/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/用4NEC2模型测试高楼小环天线.md">Edit this page on GitHub</a>
+    </div>
+    <!-- copyright -->
+    </div>
+
+
+
+</section>
+
+		</footer>
+		<!-- This page `/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/` was built on 2025-06-09T00:00:00.000Z -->
+<!-- Alpine 状态定义 -->
+		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
+		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>
+		<script type="module" src="/dist/uM5at4w28x.js"></script>
+
+	</body>
+</html>

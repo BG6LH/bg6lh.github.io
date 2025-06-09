@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/diy-ft-817-data-cable/</loc>
+		<lastmod>2018-07-10 00:00:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/how-to-flash-nanovna-firmware-on-macos-using-dfu-util/</loc>
+		<lastmod>2019-08-06 08:42:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/ft8-rst-reporting/</loc>
+		<lastmod>2019-08-07 03:10:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/maidenhead-grid-system/</loc>
+		<lastmod>2019-08-07 23:13:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/portable-solar-charging-system-for-ft818-qrp-transceiver/</loc>
+		<lastmod>2019-08-09 00:07:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/portable-hf-antennas-comparison-pac12-vs-diy-small-loop/</loc>
+		<lastmod>2019-08-21 10:08:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/new-antenna-mounting-solution-for-vw-sharan-roof-rack/</loc>
+		<lastmod>2019-09-03 09:07:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/quarter-wave-nvis-antenna/</loc>
+		<lastmod>2019-09-08 15:19:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/a-half-loop-nvis-antenna/</loc>
+		<lastmod>2019-09-11 10:03:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/aa5tb-small-transmitting-loop-antennas/</loc>
+		<lastmod>2019-09-24 14:44:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/kp4md-4nec2-models-for-balcony-loop/</loc>
+		<lastmod>2019-09-28 14:05:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/ft8-go-pack-system/</loc>
+		<lastmod>2019-11-01 10:55:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/building-a-tecsun-2p3-radio-kit/</loc>
+		<lastmod>2020-04-07 14:23:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/</loc>
+		<lastmod>2020-06-06 15:58:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/headless-operation-with-radiopi/</loc>
+		<lastmod>2020-06-06 16:58:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/faq-two-questions-about-radiopi-sound/</loc>
+		<lastmod>2020-06-15 06:56:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/faq-could-gpio-of-raspberry-ri-be-used-to-control-transceivers/</loc>
+		<lastmod>2020-06-16 01:07:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/</loc>
+		<lastmod>2020-06-26 14:39:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/</loc>
+		<lastmod>2020-07-05 12:28:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/</loc>
+		<lastmod>2020-12-18 01:19:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/</loc>
+		<lastmod>2021-03-26 16:39:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/building-a-counterpoise-with-network-cable/</loc>
+		<lastmod>2021-04-20 03:55:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/building-the-huanghe-741-radio-kit-a-journey-into-semiconductor-archaeology/</loc>
+		<lastmod>2021-06-04 15:45:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/a-3d-printed-enclosure-for-usdx-sdr/</loc>
+		<lastmod>2021-07-03 16:12:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/cqww-vhf-contest-grid-square-challenge/</loc>
+		<lastmod>2021-07-16 15:19:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/a-terrifying-accident-in-my-ham-shack/</loc>
+		<lastmod>2021-08-15 04:00:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/about-gawant-antenna/</loc>
+		<lastmod>2021-09-14 23:28:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/experiencing-on-gawant/</loc>
+		<lastmod>2021-10-02 16:49:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/saving-ic-7000-power-amplifier-board/</loc>
+		<lastmod>2021-11-07 00:07:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/</loc>
+		<lastmod>2021-11-10 10:46:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/why-are-hf-transceivers-over-15-watts-regulated-by-miit-in-china/</loc>
+		<lastmod>2022-01-15 16:50:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/hunting-wo22-winter-olympics-2022-special-station/</loc>
+		<lastmod>2022-02-22 18:04:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/</loc>
+		<lastmod>2022-04-12 16:12:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/i-smoked-ftdx10-amplifier-twice/</loc>
+		<lastmod>2022-07-15 18:11:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/</loc>
+		<lastmod>2022-08-31 19:11:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/</loc>
+		<lastmod>2022-10-05 05:19:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/null-modem-rs232c-connector-of-ftdx10/</loc>
+		<lastmod>2022-11-11 17:39:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/</loc>
+		<lastmod>2022-11-17 01:37:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/</loc>
+		<lastmod>2023-03-10 18:11:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/</loc>
+		<lastmod>2023-03-20 15:58:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/</loc>
+		<lastmod>2023-04-07 20:04:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/</loc>
+		<lastmod>2023-04-15 02:37:00 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/en/about/</loc>
+		<lastmod>2025-06-09 05:23:57 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/en/blog/</loc>
+		<lastmod>2025-06-09 05:23:57 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/en/</loc>
+		<lastmod>2025-06-09 05:23:57 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/about/</loc>
+		<lastmod>2025-06-09 05:23:57 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/blog/</loc>
+		<lastmod>2025-06-09 05:23:57 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/</loc>
+		<lastmod>2025-06-09 05:23:57 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/zh-CN/tags/</loc>
+		<lastmod>2025-06-09 05:23:57 UTC</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://bg6lh.github.io/feed/feed.xml</loc>
+		<lastmod>2025-06-09 05:24:14 UTC</lastmod>
+	</url>
+</urlset>

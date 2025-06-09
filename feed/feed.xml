@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="pretty-atom-feed.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+  <title>BG6LH的数字花园</title>
+  <subtitle>CQ DE BG6LH K，欢迎访问我的数字花园！我的业余无线电笔记。Copyright © 2025 BG6LH</subtitle>
+  <link href="https://bg6lh.github.io/feed/feed.xml" rel="self" />
+  <link href="https://bg6lh.github.io/" />
+  <updated>2023-04-15T02:37:00Z</updated>
+  <id>https://bg6lh.github.io/</id>
+  <author>
+    <name>BG6LH</name>
+  </author>
+  <entry>
+    <title>测试WB2CBA的40米低通滤波器</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/" />
+    <updated>2023-04-15T02:37:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/</id>
+    <content type="html">&lt;p&gt;今天用上次做的 &lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247484333&amp;amp;idx=1&amp;amp;sn=72d0f35f86cbf629e927a46ff3d5b425&amp;amp;chksm=e9498527de3e0c311a0d879dd0c0129ece11f00ad103e123b52f8029824a38e331369f6f1bb9&amp;amp;scene=21#wechat_redirect&quot;&gt;WB2CBA低通滤波器测试板&lt;/a&gt; ，测了WB2CBA两个版本的40米波段低通滤波器（Low Pass Filter，LPF）。第一版是他设计μsdx时做的，后来他参考DL2MAN的设计省了一个磁环电感。我是在做BD6CR的ADX-S时认识了他的第二版，所以简化起见，我把第一版称作μSDX版LPF，第二版称为ADX版LPF。&lt;/p&gt;
+&lt;h2 id=&quot;%E4%BB%BF%E7%9C%9F%E5%AF%B9%E6%AF%94&quot; tabindex=&quot;-1&quot;&gt;仿真对比&lt;/h2&gt;
+&lt;p&gt;对照他的ADX版LPF设计图，我用LTspice做了一个仿真。元件的参数来自WB2CBA的网站和JH1LHV对磁环电感量的计算。先 来一张原始的原理图：&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/ZFKtMW8h-f-720.avif 720w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/ZFKtMW8h-f-720.webp 720w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/ZFKtMW8h-f-720.png&quot; alt=&quot;图片&quot; width=&quot;720&quot; height=&quot;316&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;在仿真电路上省去了磁环L3。因为它只是一个射频扼流圈（上一篇说是匹配电路12.5Ω阻抗用的，但是经BD6CR和BG8NSK提示，它就是个RFC），在射频测试环境下要短路掉。测试板上的+12V接口就是对地短路这个RFC的。补偿三个BS170的电容应该加上。不加的话，插损会变大，二倍频的抑制会变小。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/ulpQOsHY1B-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/ulpQOsHY1B-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/ulpQOsHY1B-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;839&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/avejPsnKat-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/avejPsnKat-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/avejPsnKat-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;815&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/gqxhGg-usP-1016.avif 1016w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/gqxhGg-usP-1016.webp 1016w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/gqxhGg-usP-1016.png&quot; alt=&quot;图片&quot; width=&quot;1016&quot; height=&quot;1032&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;从仿真的结果看，在40米的7.090MHz附近，插入损耗-1.55dB，在2倍频的14.180MHz的插损是50.66dB。&lt;/p&gt;
+&lt;h2 id=&quot;nanovna%E6%B5%8B%E8%AF%95adx%E7%89%88lpf&quot; tabindex=&quot;-1&quot;&gt;nanoVNA测试ADX版LPF&lt;/h2&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/p-b4aXBdnC-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/p-b4aXBdnC-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/p-b4aXBdnC-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;接着我用电脑连接nanoVNA，做了一番校准之后，测试了自己做的ADX版40米LPF。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/4R_K5Ndym_-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/4R_K5Ndym_-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/4R_K5Ndym_-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;824&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;看来起很不错哦，跟仿真对比性能十分接近，甚至在二倍频的抑制性能还多了6dB。&lt;/p&gt;
+&lt;h2 id=&quot;%E7%9F%AD%E8%B7%AFrfc%E7%9A%84%E4%BD%9C%E7%94%A8&quot; tabindex=&quot;-1&quot;&gt;短路RFC的作用&lt;/h2&gt;
+&lt;p&gt;短路RFC的确有改善，但几乎看不出来。上图实际有一根蓝色的线，是被短路以后的追踪线。但是被粉色（未短路RFC）压住了。在一倍频上的插损不能判定有变化，在二倍频上的变化大概能再降低1dB，这跟线一直到30MHz能看到明显有变化，至少比不短路降低了2dB。&lt;/p&gt;
+&lt;h2 id=&quot;%E6%B5%8B%E8%AF%95%CE%BCsdx%E7%89%88lpf&quot; tabindex=&quot;-1&quot;&gt;测试μSDX版LPF&lt;/h2&gt;
+&lt;p&gt;再测测前年做的 &lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247484023&amp;amp;idx=1&amp;amp;sn=1d8e48ba9c94b8f0a2e2201425764b30&amp;amp;chksm=e94984fdde3e0debe137a50ae3a7a206c649776e69c48045c01cd42426c87f69a755e9b42354&amp;amp;token=1713095798&amp;amp;lang=zh_CN&amp;amp;scene=21#wechat_redirect&quot;&gt;μsdx&lt;/a&gt; 用第一版LPF。这是一个四个磁环的版本，其中一个也是RFC。测试结果，插损低于ADX版，但是二倍频抑制不如第二版，可以想见发射杂散会更高一些。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/NJoWDHP7vb-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/NJoWDHP7vb-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/NJoWDHP7vb-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;824&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;你可能发现两个LPF测试的曲线完全不是一个风格。这可能得去问问切比雪夫或者巴特沃斯了。&lt;/p&gt;
+&lt;h2 id=&quot;%E6%95%B4%E7%90%86%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C&quot; tabindex=&quot;-1&quot;&gt;整理测试结果&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;版本&lt;/th&gt;
+&lt;th&gt;LTspice仿真LPF40&lt;/th&gt;
+&lt;th&gt;ADX版LPF40&lt;/th&gt;
+&lt;th&gt;μSDX版LPF40&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;7.090MHz插损&lt;/td&gt;
+&lt;td&gt;-1.55dB&lt;/td&gt;
+&lt;td&gt;-1.60dB&lt;/td&gt;
+&lt;td&gt;-0.51dB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14.180MHz插损&lt;/td&gt;
+&lt;td&gt;-50.66dB&lt;/td&gt;
+&lt;td&gt;-56.71dB&lt;/td&gt;
+&lt;td&gt;-40.38dB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;因为仿真软件和nanoVNA的 采 样频率步长 并不完全一样， 所以采样点频率的 零头有几kHz的差异，暂且忽略不计了。&lt;/p&gt;
+&lt;h2 id=&quot;tinysa%E5%8F%91%E5%B0%84%E6%B5%8B%E8%AF%95&quot; tabindex=&quot;-1&quot;&gt;tinySA发射测试&lt;/h2&gt;
+&lt;p&gt;装上以后发射性能如何？我用tinySA测了一下ADX版LPF在40米波段的发射。 加了20dB衰减器的测试， 所以发射功率可以达到15.7+20=35.7(dBm)，3.7瓦哦！ 二次谐波的差距有-58.8dBc，很接近nanoVNA的测试结果。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/TrRIgBaKq7-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/TrRIgBaKq7-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/TrRIgBaKq7-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;h2 id=&quot;%E6%8E%A8%E8%8D%90%E4%B8%80%E4%B8%8Bjh1lhv%E7%9A%84blog&quot; tabindex=&quot;-1&quot;&gt;推荐一下JH1LHV的Blog&lt;/h2&gt;
+&lt;p&gt;他一年前就在研究WB2CBA的低通滤波器，并且给出了调整的建议。他的网站上也有大量的无线电文章可以读，有兴趣的可以去看看。下边推荐的这篇就是在分析ADX版的40米LPF。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.jh1lhv.tokyo/entry/2022/06/04/200749&quot;&gt;https://www.jh1lhv.tokyo/entry/2022/06/04/200749&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>WB2CBA低通滤波器测试板</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/" />
+    <updated>2023-04-07T20:04:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/</id>
+    <content type="html">&lt;p&gt;最近对WB2CBA的低通滤波器(LPF)产生了浓厚的兴趣。为了更准确测试它们的性能，我特意做了一套测试治具。今天闲话少说，直接上图。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/gb6QPPqv_a-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/gb6QPPqv_a-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/gb6QPPqv_a-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;h2 id=&quot;wb2cba-lpf%E8%AE%BE%E8%AE%A1&quot; tabindex=&quot;-1&quot;&gt;WB2CBA LPF设计&lt;/h2&gt;
+&lt;p&gt;准确测试WB2CBA的低通的前提，是要先理解他的设计。以下是他的第二版LPF原理图&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/#footnote1&quot;&gt;[1]&lt;/a&gt;&lt;a class=&quot;footnote-anchor&quot; id=&quot;footnote-ref1&quot;&gt;&lt;/a&gt;&lt;/sup&gt;。信号从右侧输入后，有一个FT37-43的磁环电感L3， 这是个梗。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/1Z3MB9uHSZ-720.avif 720w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/1Z3MB9uHSZ-720.webp 720w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/1Z3MB9uHSZ-720.png&quot; alt=&quot;图片&quot; width=&quot;720&quot; height=&quot;316&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;div class=&quot;callout callout-info&quot;&gt;
+&lt;p&gt;L3是为了匹配BS170部分的阻抗(12.5Ω）到L1、L2的阻抗(50Ω)。此外BS170有部分额外的电容 ，大约150～180p ，会并联在整个LPF上。在 WB2CBA的讨论组里，他确认了这部分电容的确是被考虑到设计里了。&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;ph2lb%E8%AE%BE%E8%AE%A1%E7%9A%84%E6%B5%8B%E8%AF%95%E6%9D%BF&quot; tabindex=&quot;-1&quot;&gt;PH2LB设计的测试板&lt;/h2&gt;
+&lt;p&gt;所以，才有以下的这个设计。原理图很简单。 对应 WB2CBA LPF 上的8个针脚； 在治具上分别提供了短路、负载、隔离、 直通的跳线。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/8OB3JqcpzO-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/8OB3JqcpzO-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/8OB3JqcpzO-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;548&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;这里有一个J10，乍一看以为是给LPF测试板通12V电压的跳线。但是分析之后， &lt;strong&gt;这应该是为了短路L3用的跳线接口&lt;/strong&gt; 。&lt;/p&gt;
+&lt;p&gt;要声明，这不是我的原创，这是PH2LB的设计&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/#footnote2&quot;&gt;[2]&lt;/a&gt;&lt;a class=&quot;footnote-anchor&quot; id=&quot;footnote-ref2&quot;&gt;&lt;/a&gt;&lt;/sup&gt;。我曾想自己设计一个不一样的，但是跟BG8NSK高老师讨论了好久，发现PH2LB的布局已经很合理了，任何改动都没有意义。我只是发现，应该给板子开个大口，这样可以方便调整磁环上的线圈。&lt;/p&gt;
+&lt;div class=&quot;callout callout-warning&quot;&gt;
+&lt;h3 class=&quot;callout-title&quot; id=&quot;&quot;&gt;尊重原创：&lt;/h3&gt;&lt;p&gt;PH2LB的设计不是开源的，并且在自己网站上销售这个套件。他声明了CC-BY-NC-ND协议，意思是，创作共用-署名-不可商业化-不可传播。为此我给PH2LB发了邮件，取得了他的认可后，我可以做我的开口板子，并在我的板子上打上“(c) PH2LB modified by BG6LH”，然后同样要声明CC-BY-NC-ND协议。&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;下图是PH2LB最后做出来的样子。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/9401gBBBzN-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/9401gBBBzN-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/9401gBBBzN-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;607&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;h2 id=&quot;%E6%88%91%E7%9A%84%E6%9D%BF%E5%AD%90%E9%95%BF%E8%BF%99%E6%A0%B7&quot; tabindex=&quot;-1&quot;&gt;我的板子长这样&lt;/h2&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/3MIOjygi77-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/3MIOjygi77-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/3MIOjygi77-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;两个SMA边座可以对准nanoVNA的接口，这样可以免除两根长长的测试电缆。 我用了 测试座， 替换了PH2LB的 排针，外露的 金 属部分 更短。 左侧的四联测试座 J9， 是用来 放 跳线的。在放LPF之前，要先对nanoVNA做一轮校准。开路校准，什么都不用插，其余的则需要把短路条线，分别插在短路、负载、隔离、直通对应的测试座上。&lt;/p&gt;
+&lt;p&gt;下图是把两个跳线插在了最右侧的测试座上。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/XsUkxQomeb-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/XsUkxQomeb-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/XsUkxQomeb-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;这 两个跳线是 用排针 做的， 前边的是 在排针上焊了一个150p的贴片电容，插在“短路”上，用于补偿LPF上的电容 。 后 边的是 做成 了短路条线，插在“+ 12 V”上，用于短路L3（但实测 对 结 果几 乎没有 影 响） 。&lt;/p&gt;
+&lt;p&gt;下图是插上LPF以后的效果。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/_H1yhYtaHB-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/_H1yhYtaHB-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/_H1yhYtaHB-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;下图是反面。大豁口方便下镊子去调整磁环L1，L2上的线圈。以获得最低的插损，最大的输出功率。并且有nanoVNA测试格式的提示。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Me9UqpSpbN-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Me9UqpSpbN-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Me9UqpSpbN-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;下图是用nanoVNA测试40米波段LPF的结果。插损在7090附近只有1.6dB，在14340上有67dB！很好的抑制了二次谐波。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/LvHHOzWcG7-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/LvHHOzWcG7-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/LvHHOzWcG7-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt; &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/BhI1jLoEv1-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/BhI1jLoEv1-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/BhI1jLoEv1-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;最后来张全家福。我的新老两种版本的WB2CBA LPF，和专用测试工具。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Jewu1kJSxT-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Jewu1kJSxT-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Jewu1kJSxT-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;参考资料：&lt;/p&gt;
+&lt;hr class=&quot;footnotes-sep&quot;&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;footnote1&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;WB2CBA的LPF设计：&lt;a href=&quot;https://antrak.org.tr/blog/usdx-multiband-low-pass-filter/&quot;&gt;https://antrak.org.tr/blog/usdx-multiband-low-pass-filter/&lt;/a&gt; &lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/#footnote-ref1&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&quot;footnote2&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;PH2LB的测试治具：&lt;a href=&quot;https://ph2lb.nl/blog/index.php?page=wb2cba-lpb-adapter-for-nanovna&quot;&gt;https://ph2lb.nl/blog/index.php?page=wb2cba-lpb-adapter-for-nanovna&lt;/a&gt; &lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/#footnote-ref2&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+  </entry>
+  <entry>
+    <title>nanoVNA的测试板小套件</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/" />
+    <updated>2023-03-20T15:58:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/</id>
+    <content type="html">&lt;p&gt;在淘宝店买了一个nanoVNA的Testboard套件。 可以辅助nanoVNA测量一些元件的射频性能，测试一些电路的反射系数和插损。看起来很方便的样子。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/LPSncFnrP8-552.avif 552w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/LPSncFnrP8-552.webp 552w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/LPSncFnrP8-552.jpeg&quot; alt=&quot;图片&quot; width=&quot;552&quot; height=&quot;414&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;来自第一个把nanoVNA开源项目做成产品的&lt;a href=&quot;https://gen111.taobao.com&quot;&gt;Hugen的店&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;买回来有点懵圈，里边有两个0805的贴片49Ω电阻，贴哪儿？ 整个板子上还有一个七七四十九的排母阵列，怎么用？ 于是上网收集了一些资料。 在这里做一个笔记。&lt;/p&gt;
+&lt;p&gt;首先找到一张&lt;code&gt;KL0S&lt;/code&gt;画的nanoVNA测试板的草图&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/#footnote1&quot;&gt;[1]&lt;/a&gt;&lt;a class=&quot;footnote-anchor&quot; id=&quot;footnote-ref1&quot;&gt;&lt;/a&gt;&lt;/sup&gt;。下边这张图是完全按照比照测试板画的。有三对儿SMA母座是作为测试的接口。但是上下两对儿其实是预留给某种目的的校准、或匹配电路的。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/QberJVz-EH-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/QberJVz-EH-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/QberJVz-EH-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1388&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;中间一对儿SMA母座连接着7x7的测试排母阵列。但是这个阵列不是完全独立或者联通的。它有一定排布的结构 ， 用来 跨 接各种可能的 组 合 。&lt;/p&gt;
+&lt;p&gt;测试板的核心设计，其实是参考了DG8SAQ设计SDR-Kits的测试板&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/#footnote2&quot;&gt;[2]&lt;/a&gt;&lt;a class=&quot;footnote-anchor&quot; id=&quot;footnote-ref2&quot;&gt;&lt;/a&gt;&lt;/sup&gt;。下边这张图是测试排母焊盘结构。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/yVGFS5jkeH-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/yVGFS5jkeH-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/yVGFS5jkeH-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;787&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;那两个0805的49Ω贴片电阻，也可以直接用来做成测试用的小工具，和测试电路组合使用。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/8oqRfBo8c--1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/8oqRfBo8c--1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/8oqRfBo8c--1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;842&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;上图：《VNWA Testboard kit for Ham Radio Workshop》by DG8SAQ  &lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/#footnote2&quot;&gt;[2:1]&lt;/a&gt;&lt;a class=&quot;footnote-anchor&quot; id=&quot;footnote-ref2:1&quot;&gt;&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;最后，为了从正面容易识别排母之间的关系，我用娃的琉金彩绘笔给它们上了点颜色。是不是很好看？&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/9UEG28F5Nb-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/9UEG28F5Nb-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/9UEG28F5Nb-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;关于具体的测试实验，DG8SAQ写过一个PPT，详细介绍了如何使用，如何DIY一些小零件辅助测试：&lt;strong&gt;Experiments with the DG8SAQ VNWA and the SDR-Kits Test Board&lt;/strong&gt; 。&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/#footnote3&quot;&gt;[3]&lt;/a&gt;&lt;a class=&quot;footnote-anchor&quot; id=&quot;footnote-ref3&quot;&gt;&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;以上资料都在本文末尾脚注里，有兴趣的朋友可以去看看。&lt;/p&gt;
+&lt;hr class=&quot;footnotes-sep&quot;&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;footnote1&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://groups.io/g/nanovna-users/attachment/25683/0/NanoVNA%20Test%20Kit%20_KL0S_.pdf&quot;&gt;https://groups.io/g/nanovna-users/attachment/25683/0/NanoVNA%20Test%20Kit%20_KL0S_.pdf&lt;/a&gt; &lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/#footnote-ref1&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&quot;footnote2&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://www.sdr-kits.net/documents/Testboard_kit.pdf&quot;&gt;https://www.sdr-kits.net/documents/Testboard_kit.pdf&lt;/a&gt; &lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/#footnote-ref2&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt; &lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/#footnote-ref2:1&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&quot;footnote3&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;Experiments with the DG8SAQ VNWA and the SDR-Kits Test Board, By Tom BAIER DG8SAQ：&lt;a href=&quot;https://groups.io/g/nanovna-users/attachment/14860/1/VNWA_Experiments.pdf&quot;&gt;https://groups.io/g/nanovna-users/attachment/14860/1/VNWA_Experiments.pdf&lt;/a&gt; &lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/#footnote-ref3&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+  </entry>
+  <entry>
+    <title>GAWANT天线三脚架安装板</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/" />
+    <updated>2023-03-10T18:11:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/</id>
+    <content type="html">&lt;p&gt;为了更好地体验BD6CR的 &lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzU1MDk5Mzg4Mg==&amp;amp;mid=2247486193&amp;amp;idx=1&amp;amp;sn=e387952c96f33d6ef81aa89106d2235f&amp;amp;scene=21#wechat_redirect&quot;&gt;ADX-S&lt;/a&gt; 收发器，我做了一个3D打印的三脚架安装板。可以把 &lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247484070&amp;amp;idx=1&amp;amp;sn=00a6a242207ba50364b176d01e343010&amp;amp;scene=21#wechat_redirect&quot;&gt;GAWANT天线&lt;/a&gt; 支起来用。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/xOm32FSAXN-628.avif 628w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/xOm32FSAXN-628.webp 628w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/xOm32FSAXN-628.png&quot; alt=&quot;图片&quot; width=&quot;628&quot; height=&quot;472&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;这是受Elecraft的AX1天线适配器的启发，它用了个金属的小片片固定了一个BNC双母头的直通连接器。我碰巧有个3D打印机，于是就做了这么个设计，半小时就搞定了。&lt;/p&gt;
+&lt;p&gt;BNC双通型号是SL16-KKY。 有的店也标做 SL1 6-KKY-1， SL16 -KKY/母 。 中间 螺纹部分 的直径是12.9mm。&lt;/p&gt;
+&lt;p&gt;为了增加支撑强度，我给四周加了一圈3mm高的墙。三脚架安装部分正好可以加厚，放一个预埋螺母进去。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/83f8x0ymWV-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/83f8x0ymWV-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/83f8x0ymWV-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;碰巧我还有几个预埋螺母。 外径8mm。 所以我设计的预埋孔上开口9mm，下开口6mm。 把螺母在上开口放平，用一只加热的烙铁，抵住螺母顶部，轻轻往下推，时刻注意保持螺母水平。&lt;/p&gt;
+&lt;p&gt;留意烙铁的温度，比3D打印材料的打印温度稍高一点就好。 我用的PLA材料打印温度是220°C，所以埋螺母时，我把烙铁加热到了240°C。如果太热，材料液化的太快、螺母进的也太快、四周容易变形。&lt;/p&gt;
+&lt;p&gt;这个结构支撑2米以内的拉杆天线问题不大。但是天线想横着有点难。即便是2米拉杆横在这么短的结构上产生的力矩也很大。我在一个球形的小云台上做了实验，结果是小板子还好，但是云台的球抗不住了。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/eSMMMyI7gD-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/eSMMMyI7gD-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/eSMMMyI7gD-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1440&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;支撑GAWANT天线的效果。我的ADX-S还没调试好，所以背景是个QCX-mini。周末打算带到杭州桐庐的茶山上玩玩。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/M_Bd9wvFNn-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/M_Bd9wvFNn-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/M_Bd9wvFNn-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;感兴趣的朋友可以到Thingiverse.com上下载去，地址是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;BNC antenna tripod adapter&lt;/strong&gt;: &lt;a href=&quot;https://www.thingiverse.com/thing:5899922&quot;&gt;https://www.thingiverse.com/thing:5899922&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;扫码也可以哦。我的空间里也有QCX-mini的外壳，免费下，别客气。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/hbR7dzy9qM-200.avif 200w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/hbR7dzy9qM-200.webp 200w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/hbR7dzy9qM-200.png&quot; alt=&quot;图片&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>SCU-LAN10远程操作FTDX10的组网实践</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/" />
+    <updated>2022-11-17T01:37:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/</id>
+    <content type="html">&lt;p&gt;我的FTDX10和天线都在ON80fa，平时大部分时间住在&lt;code&gt;OM89hu&lt;/code&gt;，工作在&lt;code&gt;OM89it&lt;/code&gt;，还经常出差，一年到头FTDX10没开过几天，&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247484186&amp;amp;idx=1&amp;amp;sn=4587a8e29c3f55153ac5b67853325061&amp;amp;chksm=e9498590de3e0c8619b3b1453bd1a61daffce85117634f64ca09453121ec6184ee09314808cc&amp;amp;scene=21#wechat_redirect&quot;&gt;就这还烧了两次功放&lt;/a&gt;。为了解决远程摸黑儿操作这个痛点，我部署了一个SCU-LAN10和SCU-17支撑的FTDX10远程操作网络，达成了实时电台监控、远程参加了CQWW SSB比赛、还能继续远程FT8、自动日志，真是相当开心。&lt;/p&gt;
+&lt;p&gt;SCU-LAN10是八重洲专门为SDR架构的收发信机推出的网络控制模块，支持FTDX10、101D、101MP，以及新出的FT-710。真是SDR时代来了，频谱数据可以在网上到处飞了。&lt;/p&gt;
+&lt;h2 id=&quot;%E4%BD%BF%E7%94%A8%E4%BD%93%E4%BC%9A&quot; tabindex=&quot;-1&quot;&gt;使用体会&lt;/h2&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/NhcF0k4rdG-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/NhcF0k4rdG-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/NhcF0k4rdG-1080.png&quot; alt=&quot;用SCU-LAN10软件观察7MHz业余频段全段的频谱&quot; width=&quot;1080&quot; height=&quot;607&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;SCU-LAN10（它的硬件软件都叫SCU-LAN10）是个相当不错的远程电台操作、监控系统。它可以实时呈现FTDX10当前的所有状态，尤其是那些非常重要的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;天调开关、驻波、功率、ALC、VFO-A/B切换、Split状态；&lt;/li&gt;
+&lt;li&gt;最重要的，还有声音和频谱；&lt;/li&gt;
+&lt;li&gt;它几乎覆盖了FTDX10里的所有功能，至少业务操作该有的全有；&lt;/li&gt;
+&lt;li&gt;新的固件还支持了远程关机；&lt;/li&gt;
+&lt;li&gt;比起FTDX10外接显示器提供了更丰富的操作界面；&lt;/li&gt;
+&lt;li&gt;在电脑的大屏幕上可以直接操作3D频谱，如果是配合FTDX101则有两个频谱窗口可用，信息量巨大；&lt;/li&gt;
+&lt;li&gt;它还支持鼠标操作，选择各种功能参数，拨动鼠标滚选频，快捷直观。终于不用小心翼翼地躲开大拨轮，在一堆旋钮和按键里找功能了。&lt;/li&gt;
+&lt;li&gt;SCU-LAN10提供了远程的SSB通讯的能力。你可以按着电脑的空格键当PTT，或者打开VOX直接对着电脑呼叫。今年的CQWW SSB比赛，我拿它远程扫地搞了69个QSO。顺便说，比赛时3D频谱选频其实并不是很实用。还是2D的频谱容易准确定位。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;小遗憾的是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;时至今日SCU-LAN10只支持&lt;strong&gt;SSB话&lt;/strong&gt;业务的全功能收发。&lt;/li&gt;
+&lt;li&gt;CW只能收听，且没有解码功能。&lt;/li&gt;
+&lt;li&gt;FT8、RTTY、SSTV这些操作则完全不支持。至少不能靠SCU-LAN10直接的功能实现，只能寻找别的解决方案。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;为啥不给CW、Digital的全功能发送？有人猜测是网络延时会影响CW开关信号的准确性，听起来有点道理。可是SCU-LAN10又提供了丰富的CW相关功能，比如ZIN、APF、CW Pitch甚至WPM速度设定。或许未来的固件升级会逐步打开一些新功能？SCU-LAN10似乎是正在演进中的产品。&lt;/p&gt;
+&lt;h2 id=&quot;%E8%BF%9C%E7%A8%8B%E7%BB%84%E7%BD%91%E7%AD%96%E7%95%A5&quot; tabindex=&quot;-1&quot;&gt;远程组网策略&lt;/h2&gt;
+&lt;p&gt;由于SCU-LAN10占用了FTDX10上唯一的USB CAT端口，以前比较成熟的&lt;em&gt;&lt;strong&gt;台站侧值班电脑&lt;/strong&gt;&lt;/em&gt; + &lt;em&gt;&lt;strong&gt;远程桌面软件&lt;/strong&gt;&lt;/em&gt;实现的远程控制也不行了。破题思路只剩下利用FTDX10机器上空闲的R-S232C和RTTY/DATA接口，实现第二组“USB串口+声卡”通道。&lt;strong&gt;这时SCU-17成了首选&lt;/strong&gt;。&lt;/p&gt;
+&lt;div class=&quot;callout callout-tip&quot;&gt;
+&lt;p&gt;FTDX系列机器上还有两个USB-A的端口，那是给键盘鼠标用的，没有音频IO，也不能做CAT控制，估计电流不会超过500mA，或许可以接个LED台灯或者呼号灯牌啥的。&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;安装SCU-LAN10，并不像买个天调接上那么简单。想用上它至少得有点网络管理的经验，知道怎么设置IP地址，什么是端口转发，这涉及到安装和日后使用。想完成跨局域网的远程操作还是有相当的技术门槛。在这里我只分享一下我的基本解决思路，供大家一起讨论。详细设置请参考说明书。&lt;/p&gt;
+&lt;h2 id=&quot;scu-lan10%E5%92%8Cscu-17%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%93%8D%E4%BD%9C%E7%9A%84%E7%BB%84%E7%BD%91%E6%96%B9%E6%A1%88&quot; tabindex=&quot;-1&quot;&gt;SCU-LAN10和SCU-17实现远程操作的组网方案&lt;/h2&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/bX4kcUGJa_-809.avif 809w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/bX4kcUGJa_-809.webp 809w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/bX4kcUGJa_-809.png&quot; alt=&quot;图片&quot; width=&quot;809&quot; height=&quot;572&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;这个方案需要SCU-LAN10、SCU-17和两台电脑，直接组成了通过互联网的远程操作方案。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;红色线&lt;/strong&gt;是SCU-LAN10的连接方式；&lt;/li&gt;
+&lt;li&gt;在台站之外，&lt;strong&gt;电脑A&lt;/strong&gt;通过互联网连接到SCU-LAN10，实现监控、操作FTDX10的目标；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;绿色线&lt;/strong&gt;是SCU-17的连接方式；&lt;/li&gt;
+&lt;li&gt;它在台站侧，和收发信机、电脑B，保持物理连接；&lt;/li&gt;
+&lt;li&gt;在台站侧的电脑B，运行各种HAM软件，比如FT8。&lt;/li&gt;
+&lt;li&gt;在电脑A、B上，安装远程桌面软，实现从电脑A上操作电脑B上的各种HAM软件。&lt;/li&gt;
+&lt;li&gt;CW怎么办？我还没实验过，后续再探讨吧。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;敲黑板，下面说几个要点：&lt;/p&gt;
+&lt;h3 id=&quot;%E8%BF%9E%E6%8E%A5-scu-lan10-%E7%9A%84%E6%AD%A5%E9%AA%A4&quot; tabindex=&quot;-1&quot;&gt;连接 SCU-LAN10 的步骤&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;SCU-LAN10联网&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;SCU-LAN10是个固定IP设备，而且只能通过IP地址访问。所以设置前要先把自己电脑的IP，改成跟它出厂预设的IP地址（192.168.49.1）在一个网段（比如192.168.49.73），然后就可以用YAESU提供的设置软件，直接登录进去了。&lt;/li&gt;
+&lt;li&gt;通过一根网线，把SCU-LAN10和家里的路由器下行接口（LAN口）连起来。你可能不得不把一个Wi-Fi路由器摆到它附近。&lt;/li&gt;
+&lt;li&gt;一般的Wi-Fi路由器，使用的是动态分配的IP地址，要确保给SCU-LAN10预留一个固定IP地址。这要看路由器的说明书。&lt;/li&gt;
+&lt;li&gt;如果要从台站以外访问SCU-LAN10，还需要记得打开路由器的防火墙，把50000～50003四个UDP端口，转发到SCU-LAN10的固定IP上去。&lt;/li&gt;
+&lt;li&gt;从外部访问台站上的SCU-LAN10，还需知道自家的公网IP地址。有些路由器提供手机管理软件，可以查询到家里最新的IP地址；也可以琢磨在家里部署一个虚拟专网。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;把随机提供的USB CAT线、ACC线接到收发信机后边的相应接口。&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;FTDX系列提供了一个13芯的ACC接口，看起来它是传输电台状态数据的，并给SCU-LAN10供电的。电台控制、音频数据、频谱数据则是通过USB完成的。&lt;/li&gt;
+&lt;li&gt;FT-710没有ACC接口。数据采集、收发信机控制、音频传输、频谱数据完全通过USB实现，但是需要给SCU-LAN10加一个12V电源。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;连接SCU-17相对简单，把随机提供的USB CAT线，RS-232C电缆，DATA电缆，跟FTDX10背面对应的接口连接好。但是有两个重要的提示：&lt;/p&gt;
+&lt;h3 id=&quot;%E8%BF%9E%E6%8E%A5scu-17%E7%9A%84%E8%A6%81%E7%82%B9&quot; tabindex=&quot;-1&quot;&gt;连接SCU-17的要点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;没有声音输出？&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;刚连上SCU-17，直接发射可能没有音频输出，调整SCU-17的音量旋钮也不行。这可能是因为收发机上的DATA模式选择了USB。因为SCU-17是从DATA接口获取的音频，应该把收发机的切换到DATA。设置路径是&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;功能菜单：Radio Setting &amp;gt; MODE PSK/DATA &amp;gt; REAR SELECT = DATA&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;由于FTDX系列的新固件附加了一组**“PRESET”**预设值（主要针对FT8等DATA模式）。它把相应的设置预存好了批处理一下，切换到DATA模式就启动，切换其它模式再恢复之前的设置。“PRESET”是给收发信机上的主USB接口设计的，它默认会把REAR SELECT换成USB。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;莫名其妙的自动发射？&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;在电脑开机时，接了RS-232C电缆的收发信机可能会有几秒钟处在发射状态。我猜或许是因为电脑启动时串口初始化会上电，此时触发了RTS发射。&lt;/li&gt;
+&lt;li&gt;你可以关掉RTS。“PRESET”预设的 CAT RTS 就是关闭的。&lt;/li&gt;
+&lt;li&gt;手动关闭收发机 CAT RTS 的路径是：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;功能菜单：Operation Setting &amp;gt; General &amp;gt; CAT RTS = OFF&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;但是关掉它会不会不影响其它玩具？比如fldigi发射CW？这些要以后慢慢研究了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;好了，关于SCU-LAN10和SCU-17部署上的坑，基本上就这些。&lt;/p&gt;
+&lt;h3 id=&quot;%E5%BF%85%E9%A1%BB%E7%94%A8scu-17%E5%90%97%EF%BC%9F&quot; tabindex=&quot;-1&quot;&gt;必须用SCU-17吗？&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;当然不是&lt;/strong&gt;。熟悉数据盒子的人自然知道要怎么做。心灵手巧的无线电老中医也可以自己DIY接口电缆、音频线，实现和SCU-17同样的能力。我用FT-818ND玩FT8时，还在用自己两年前DIY两根数据线和一个USB声卡。我也买过数据盒子，后来玩烧了。窃以为SCU-17是这些产品里最靠谱的设备。&lt;/p&gt;
+&lt;div class=&quot;callout callout-tip&quot;&gt;
+&lt;h3 class=&quot;callout-title&quot; id=&quot;rs-232c-ftdx10&quot;&gt;通过RS-232C连接FTDX10电台&lt;/h3&gt;&lt;p&gt;通过RS-232C和DATA接口实现CAT是业余无线电二十年的老话题。如果你的电脑还有RS-232C接口，你可以用一根标准RS-232C电缆直连收发机。现代电脑基本只有USB接口了，这时需要买一根RS-232C转USB的串口线，请注意这种RS-232C接口的2、3针脚要交差。请参考上一篇&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247484237&amp;amp;idx=1&amp;amp;sn=ee1d4b5b356ed77a9b7aacb50cd1ecc2&amp;amp;chksm=e94985c7de3e0cd1f104ffc7984e5d3c4632afa2845a2f36551434ff5df7487320b7a425e696&amp;amp;scene=21#wechat_redirect&quot;&gt;《FTDX10使用RS-232C接口CAT操作指北》&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;在QRO和不谐振天线的设备组合上，直接用RS-232C电缆连电脑，有高度的RFI风险。建议选FTDI芯片的工业级电缆，最好再配一个隔离器。DIY的DATA音频线倒是不会有大问题，但也最好缠几圈磁环。&lt;/p&gt;
+&lt;p&gt;FTDX10支持101项CAT操作，FTDX101支持105项，通过RS-232C电缆控制收发机，只有一项开关机不支持，其它都支持。&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%8F%B0%E7%AB%99%E5%AE%9E%E6%99%AF&quot; tabindex=&quot;-1&quot;&gt;远程控制台站实景&lt;/h2&gt;
+&lt;p&gt;下边这张图就是我的书房远程控制台站，此时是在家里的局域网环境下。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/WAMhT6wemS-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/WAMhT6wemS-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/WAMhT6wemS-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;608&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;由于我工作的电脑主要是Mac OS和Linux的系统，所以我部署了三台电脑：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一台&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247483860&amp;amp;idx=1&amp;amp;sn=706a4c29d4198a667f89a0db5e684c30&amp;amp;chksm=e949875ede3e0e48f9818a0faaa78362e81d1ad60599a916438273a5e7620f0a0ca6842a6c86&amp;amp;scene=21#wechat_redirect&quot;&gt;RadioPi，在阳台跟FTDX一起做值班电脑&lt;/a&gt;，这张图里看不到它。大屏幕上的JTDX软件，就是从它那边通过远程桌面投射过来的。&lt;/li&gt;
+&lt;li&gt;一台Macbook是我工作时随身带的，主要用来运行远程桌面，查看RadioPi的运行情况。同时运行着RUMLogNG，Mac世界里最好用的日志软件。RadioPi上的JTDX通过UDP端口，把DX提醒、QSO记录传送给RUMLogNG。&lt;/li&gt;
+&lt;li&gt;另有一台Tinkpad X230是专门用来运行SCU-LAN10软件监控电台的。当然X230也可以跑远程桌面，那样Macbook就可以下班了。只是我得找一个在Windows上好用的日志软件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我尝试过在Macbook Pro 16上，运行Windows虚拟机跑SCU-LAN10。给虚拟机分配了一半的运算力，4个CPU内核、8G内存。但是SCU-LAN10对系统的消耗相当大，没十分钟它自己就挂了。还把Mac给累坏了，风扇嗷嗷转了好久才缓过劲儿来。&lt;/p&gt;
+&lt;p&gt;下边这张气氛诡异的图就是我神秘的阳台壁橱台站。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/46BbURJ7p--1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/46BbURJ7p--1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/46BbURJ7p--1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;809&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RadioPi藏在第三层，电源GSV-3000右边，有一个63电报机挡住了它，那个红色的光就是它。&lt;/li&gt;
+&lt;li&gt;第二层是电源线的扼流磁环、SCU-LAN10、SCU-17。&lt;/li&gt;
+&lt;li&gt;第一层是FTDX10，驻波表，1973年的常熟K4手键。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;scu-lan10%E7%9A%84%E6%9C%80%E4%BD%B3%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF&quot; tabindex=&quot;-1&quot;&gt;SCU-LAN10的最佳应用场景&lt;/h2&gt;
+&lt;p&gt;SCU-LAN10的最佳应用场景应该还是在局域网，要不怎么叫“LAN10”呢。当电台收发信机不适合放在书房，或者没有一个舒服的操作位置时，这玩意儿大幅提升了操作体验。还节约了几十米电缆，降低了RFI治理成本。&lt;/p&gt;
+&lt;p&gt;当把家里的局域网跟公共广域网打通之后，还可以在更远的地方操作。虽然难免会有延时，但还能接受，用来收听、监控设备状态还是没问题的。&lt;/p&gt;
+&lt;h2 id=&quot;scu-lan10%E7%9A%84%E5%BB%B6%E6%97%B6%E8%83%BD%E6%9C%89%E5%A4%9A%E5%A4%A7%EF%BC%9F&quot; tabindex=&quot;-1&quot;&gt;SCU-LAN10的延时能有多大？&lt;/h2&gt;
+&lt;p&gt;我在局域网环境下做了个对比实验。结果感人！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在安装了SCU-LAN10软件的ThinkPad X230上，把电脑音量开到最大；启动WSJT-X v2.54软件，对操作系统麦克风收到所有声音信号解码，所以信噪比就不用比了，只看延时。&lt;/li&gt;
+&lt;li&gt;在阳台的值班电脑RadioPi上，也运行着WSJT-X v2.54，通过远程桌面观察解码结果。&lt;/li&gt;
+&lt;li&gt;对比两个窗口解码出的相同信号，查看延时的情况。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/QoRvpSPQfm-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/QoRvpSPQfm-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/QoRvpSPQfm-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;607&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;通过局域网传到SCU-LAN10软件的信号比FTDX10上的信号慢了0.8秒！这是有点头大了。再慢点WSJT-X就不解码了。可能这会儿家人在刷手机视频吧，早先看才0.3秒左右。&lt;/p&gt;
+&lt;p&gt;我的SCU-LAN10硬件连的是百兆交换机，X230连的是百兆无线网，看来是时候考虑全屋的千兆网升级、VLAN优化了。&lt;/p&gt;
+&lt;h2 id=&quot;%E5%85%B3%E4%BA%8Escu-lan10%E7%9A%84%E4%B8%80%E4%BA%9B%E6%9C%9F%E5%BE%85&quot; tabindex=&quot;-1&quot;&gt;关于SCU-LAN10的一些期待&lt;/h2&gt;
+&lt;h3 id=&quot;%E6%8E%A8%E6%B5%8B%E4%B8%80%E4%B8%8Bscu-lan10%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84&quot; tabindex=&quot;-1&quot;&gt;推测一下SCU-LAN10的软件架构&lt;/h3&gt;
+&lt;p&gt;SCU-LAN10是一个封闭的软件架构，而且只支持Window操作系统。一般来说，如果想在跟SCU-LAN10的同一台电脑上实现CW信号传输，应该依赖SCU-LAN10提供的软件API接口、或DLL动态调用库，或者SCU-LAN10直接兼容最通用的标准软件库，比如Hamlib。可我在Windows里翻了翻，没看到它跟Hamlib这类软件库有关联。说明这很可能是YAESU自己开发的一套黑盒应用。QST杂志研究说，或许可以通过在Windows上改变声卡配置，把音频分享给类似WSJT-X这类软件，再通过SCU-LAN10的VOX方式发射。这听起来应该能实现，但是VOX不太靠谱啊。所以目前各种常见的HAM软件，比如WSJT-X、N1MN、WINTEST、RUMLog，fldigi这些，基本没法跟SCU-LAN10一起用。&lt;/p&gt;
+&lt;p&gt;可以研究一下SCU-LAN10的网络数据传输接口。它依赖50000～50003这四个UDP协议端口，依次传输控制、CAT、音频和频谱数据。如果有人能从这一层截取数据，并做成开放接口，倒是一个有趣的破题路线。总之，还是期待YAESU能主动开放软件接口，提供给HAM世界更多的可玩性。&lt;/p&gt;
+&lt;h3 id=&quot;%E5%85%B3%E4%BA%8Escu-lan10%E7%9A%84%E6%8E%A5%E5%8F%A3%E7%8C%9C%E6%83%B3&quot; tabindex=&quot;-1&quot;&gt;关于SCU-LAN10的接口猜想&lt;/h3&gt;
+&lt;p&gt;SCU-LAN10上还有一个RS-232C接口，我曾尝试用RS-232C电缆代替USB，接到电脑上看看会有啥反应？结果是SCU-LAN10报错，说没找到USB，必须用USB。但是它的确识别出来了有RS-232C设备接入。&lt;/p&gt;
+&lt;p&gt;我还发现最早出厂的SCU-LAN10带有一个音频输入输出的接口，但是新出厂的产品，这个接口取消了。打开盒子看电路板，那里还有一个4脚的Audio插座的位置。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/1u4eFYgANu-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/1u4eFYgANu-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/1u4eFYgANu-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;右下角就是音频接口的位置&lt;/p&gt;
+&lt;p&gt;不知道YAESU葫芦里卖的什么药。莫非是用来配合值班电脑实现DATA模式？&lt;strong&gt;如果你手边有老的SCU-LAN10，可以试一试哦！&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8Bcw%EF%BC%9F&quot; tabindex=&quot;-1&quot;&gt;如何实现远程CW？&lt;/h2&gt;
+&lt;p&gt;上边分析过了，这个路径可能还得依赖值班电脑上的软件，比如fldigi通过RTS发CW。如果想在本地操作手键，控制远端的收发机发射，有一个思路跟大家探讨：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首先要组好一个“鲁棒性佳”的虚拟专网，要靠谱，比如千兆有线局域网。&lt;/li&gt;
+&lt;li&gt;值班电脑B上运行Hamlib Net rigctl，把FTDX10虚拟成一台网络电台；&lt;/li&gt;
+&lt;li&gt;然后在本地电脑A上，通过Winkey这类软件，连一个K3NG这类keyer，再连手键、自动键。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;等我把BG6JJI的K3NG套件完成了就试试这个思路。如果你已经知道这一条弯路，请告诉我。&lt;/p&gt;
+&lt;p&gt;这些年YAESU的产品作风一直很保守，世人有目共睹。它好像把电台当钢琴来做了，带着一身老工匠的矜持，闷头打磨一台古典乐器。SCU-LAN10好比给钢琴加装了个蓝牙模块，可以用Pad示谱，增加了练习的趣味性。可是竞争对手直接在量产数字钢琴了。或许YAESU能想明白，尽快给SCU-LAN10软件开放接口，让大家玩的开心。它再不搞，ICOM、Flexradio、Elecraft就搞出来了。&lt;/p&gt;
+&lt;h2 id=&quot;%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99&quot; tabindex=&quot;-1&quot;&gt;相关资料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://static.dxengineering.com/global/images/technicalarticles/ysu-scu-lan10.pdf?_gl=1*1em267r*_ga*MTM4NTA4NDI3MS4xNjUyOTc3NTIy*_ga_NZB590FMHY*MTY2ODYwNjg4Ny43LjEuMTY2ODYwNjkxMi4zNS4wLjA&quot;&gt;QST杂志SCU-LAN10的评测，2021年5月&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.yaesu.com/downloadFile.cfm?FileID=16693&amp;amp;FileCatID=158&amp;amp;FileName=SCU%2DLAN10%5FInstallation%5FManual%5FENG%5F2012%2DB.pdf&amp;amp;FileContentType=application%2Fpdf&quot;&gt;YAESU SCU-LAN10安装手册&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.yaesu.com/downloadFile.cfm?FileID=16690&amp;amp;FileCatID=158&amp;amp;FileName=SCU%2DLAN10%5FOperation%5FManual%5FENG%5F2012%2DB.pdf&amp;amp;FileContentType=application%2Fpdf&quot;&gt;YAESU SCU-LAN10操作手册&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://yaesu.com/jp/manuals/yaesu_m/SCU-17_OM_ENG_JPN.pdf&quot;&gt;YAESU SCU-17操作手册&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>FTDX10使用RS-232C接口CAT操作指北</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/null-modem-rs232c-connector-of-ftdx10/" />
+    <updated>2022-11-11T17:39:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/null-modem-rs232c-connector-of-ftdx10/</id>
+    <content type="html">&lt;p&gt;因为要腾出FTDX10的USB接口，给SCU-LAN10做远程控制，我就琢磨用RS-232C电缆控制FTDX10。&lt;/p&gt;
+&lt;p&gt;逛了几个FTDX10的论坛，发现关于电缆的选择众说纷纭。ftdx10@groups.io 有两个人为这事儿还较真儿了。Bob KC9RF 说，应该用第2、3针脚交叉的。他专门测试了是2-3，3-2的，并验证成功。另一个叫Franco的说不能用交叉的，他就是用一根RS-232C直连的电缆，直接用在电脑上完全没问题，还测试了电缆的针脚，真的是2-2，3-3的。而且八重洲出的 FTDX10 CAT 操作参考手册，第3页说，一定要用标准的RS-232C电缆，不是那种被称作“非modem”的电缆。它说“非猫”就那种2、3针交叉的RS-232C电缆。&lt;/p&gt;
+&lt;p&gt;我找来这份英文版的《FTDX10 CAT operation Reference Manual》，上边果然是这么说的。那好吧，我就买根标准的RS-232C转USB的电缆，买的时候还专门跟客服反复确认了，它不是2-3交叉的。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/null-modem-rs232c-connector-of-ftdx10/WodhnLWHav-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/null-modem-rs232c-connector-of-ftdx10/WodhnLWHav-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/null-modem-rs232c-connector-of-ftdx10/WodhnLWHav-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;774&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;等电缆到货，把它跟FTDX10和RadioPi接上，打开WSJT-X，不灵。于是我花了一晚上研究树莓派世界的USB驱动、Hamlib rigctl、设备模块加载、 修改了N种设置……也没搞定。&lt;/p&gt;
+&lt;p&gt;再次翻出论坛帖子仔细看，我发现Franco的是两头都是RS-232C的电缆，直接连电脑的RS-232C接口。但 Bob买的是一根RS-232C转USB的电缆， 莫非是转USB之后接口的定义不一样？&lt;/p&gt;
+&lt;p&gt;于是我从抽屉里翻出来一根旧RS-232C电缆，改造成2-3针交叉的转接头，接上FTDX10和RadioPi…… &lt;em&gt;&lt;strong&gt;IT WORKS！&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/null-modem-rs232c-connector-of-ftdx10/mH2sY_YP5E-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/null-modem-rs232c-connector-of-ftdx10/mH2sY_YP5E-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/null-modem-rs232c-connector-of-ftdx10/mH2sY_YP5E-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1920&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;这是多么完美的一天，两个吵架的人都没错，连八重洲都是对的，就我这个看热闹的错了！&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>再次认识端馈半波天线(EFHW)</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/" />
+    <updated>2022-10-05T05:19:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/</id>
+    <content type="html">&lt;p&gt;国庆期间调试好了一条水平架设的 20 米 端馈半波天线 EFHW4010 ，让电台在 40/20/15/10 米上工作的非常出色 ，FTDX 10 重装上阵 。从1区通联了几个4区、6区、9区的SSB，都给了我59+的信号报告。&lt;/p&gt;
+&lt;p&gt;先发一张我的天线部署图。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/vtgZ-cFH7n-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/vtgZ-cFH7n-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/vtgZ-cFH7n-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;607&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;天线从我家阳台水平横拉到对面楼上，振子的长度20米整，这正好是40米波端的半个波长，一个谐振的尺寸。馈电点电压最高，电流最低，需要一个1:49的变压器来匹配。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/BHwbifa2UO-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/BHwbifa2UO-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/BHwbifa2UO-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;608&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;上图是BI1EIH做的两个1:49变压器。左边是13:2圈的，匹配完的阻抗还是偏高。我用的是右边这个， 14:2圈，匹配的阻抗很完美。&lt;/p&gt;
+&lt;p&gt;严谨地说，这是一个1:49的串联谐振变压器，跟1897年特斯拉申请的特斯拉线圈专利的是一回事儿。它负责把电台输出的电压，转换为和天线阻抗匹配的电压。因为天线振子是一根独立完整的半波振子，不存在与另外的零件之间的电势平衡。所以，这种天线理论上不需要“地线”。&lt;/p&gt;
+&lt;p&gt;但实际操作上，唯一的振子不可能在频段上每一点都是完全谐振的。所以还是需要一点点“平衡”的补偿。实践中经常以同轴电缆的外皮作为“地线”。但是我的馈线部分加了不少磁环，原本是希望扼制不平衡天线的共模电流。对于EFHW天线来说，这些磁环可能会影响电缆外皮的“平衡”作用。所以我又做了一根“平衡器”（图中蓝色的部分）。它是一组各波段1/4波长的导线组合，基本可以给每个波段提供一个低阻抗的环境。我认为大功率、固定台站有必要加这个，这可能会让工作带宽更大一些。目前我也没有量化测量过，纯属 无线电老中医的思维方式。&lt;/p&gt;
+&lt;p&gt;我本想给电源和电台设备加上“电气接地”（图中黄色的部分）。但是因为家住12层的6层，实在没有办法就近接入大地。况且，EFHW天线是谐振天线，整个台站上的共模电流影响微乎其微。所以“电气接地”的想法也就放弃了。但是，安全接地、防雷接地还是要注意，能做到尽量做。我家里能保证电器都接到三头插座的零线，防雷么，主要靠旁边高楼替我扛了。&lt;/p&gt;
+&lt;p&gt;下边是整个天线架设的示意图。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/ZzmmzaWuok-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/ZzmmzaWuok-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/ZzmmzaWuok-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;606&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;近场辐射的影响&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我的电台设备距离天线很近，不到2米。它们会不会受到天线近场辐射的影响？在天线中间正下方不到一个波长的地方，应该会的。但是，碰巧我的设备都在天线振子的延长线上，这是半波谐振天线的零点方向，在这个范围内不会有辐射场，所以也不会影响到电台设备。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;未来的扩展：EFHW8010&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;现在这根20米长的天线只能工作在40/20/15/10米四个波段，典型的EFHW4010天线，如果还想工作在80/30/17/12米波段，升级为EFHW8010天线，要么换40米振子，要么加一段电感。详细方案可以参考我翻译的文章，主要讲天线的原理，和1:49变压器的制作。有兴趣的朋友可以访问下边的二维码，或者原文链接。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不得不说，对于住在高楼中间楼层的老中医来说，EFHW是最理想的天线。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/M8Fuf7wpu9-732.avif 732w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/M8Fuf7wpu9-732.webp 732w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/M8Fuf7wpu9-732.png&quot; alt=&quot;图片&quot; width=&quot;732&quot; height=&quot;960&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>时速350公里的高铁上能打卡APRS吗？</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/" />
+    <updated>2022-08-31T19:11:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/</id>
+    <content type="html">&lt;p&gt;&lt;strong&gt;2025-05-27更新&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;原文的多普勒频移在线计算器有错误，导致计算结果大了一倍，现已经更新。并且采取了新的计算公式。&lt;/li&gt;
+&lt;li&gt;原文围绕多普勒效，应仅讨论了对载频的影响，未讨论对APRS信号音频的影响，本次补充了讨论。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;带着这个问题和对讲机FT3DR，我登上了从北京西到郑州东的复兴号高铁。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/Nkds72XlXK-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/Nkds72XlXK-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/Nkds72XlXK-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;608&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;从北京出发， 在西边高山上就有几个APRS基站，我正好坐在列车西侧靠窗位置，基本可以目视通信。河北的APRS普及的不错，一路上 有很多业余爱好者建立的基站。沿路的几个大城市，保定、石家庄、邢台、邯郸，也都在铁路以西。&lt;/p&gt;
+&lt;p&gt;我把对讲机设置为每分钟发送一次信标。 然鹅，一小时后到了石家庄，竟然一个信标都没打上。只收到过4条1区呼号的APRS信标。要知道这几个基站，平时在市区里用对讲机都能轻松打卡。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/Z1DVfzcX1G-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/Z1DVfzcX1G-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/Z1DVfzcX1G-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;809&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;h2 id=&quot;%E9%9A%BE%E9%81%93%E6%98%AF%E9%AB%98%E9%93%81%E9%80%9F%E5%BA%A6%E5%A4%AA%E5%BF%AB%E4%BA%86%E5%90%97%EF%BC%9F&quot; tabindex=&quot;-1&quot;&gt;难道是高铁速度太快了吗？&lt;/h2&gt;
+&lt;h3 id=&quot;%E5%A4%9A%E6%99%AE%E5%8B%92%E6%95%88%E5%BA%94&quot; tabindex=&quot;-1&quot;&gt;多普勒效应&lt;/h3&gt;
+&lt;p&gt;所谓多普勒效应就是，当声音，光和无线电波等振动源与观测者以相对速度V相对运动时，观测者所收到的振动频率与振动源所发出的频率有所不同。因为这一现象是奥地利科学家多普勒最早发现的，所以称之为多普勒效应。由多普勒效应所形成的频率变化叫做多普勒频移，它与相对速度V成正比，与振动的频率成反比。&lt;/p&gt;
+&lt;p&gt;高铁时速350千米/小时(km/h) = 0.0972千米/秒(km/s)=97.2米/秒。APRS用的是144.640MHz的频率，波长是2米左右，这么一算移动一个波长大概是1/50秒。这大约是50Hz的样子。&lt;/p&gt;
+&lt;p&gt;找了一个在线的多普勒频移计算器，验证了一下，算出来的频率误差是46.8Hz，相当于0.32ppm，这点误差几乎可以忽略不计了。&lt;/p&gt;
+&lt;p&gt;对于速度远小于光速的情况，经典多普勒频移近似公式：&lt;math&gt;&lt;mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mfrac&gt;&lt;mi&gt;v&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;/mfrac&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/math&gt;&lt;/p&gt;
+&lt;p&gt;其中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;math&gt;&lt;msub&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;/msub&gt;&lt;/math&gt;：多普勒频移（Hz）&lt;/li&gt;
+&lt;li&gt;&lt;math&gt;&lt;mrow&gt;&lt;mi&gt;v&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;350&lt;/mn&gt;&lt;mi&gt;K&lt;/mi&gt;&lt;mi&gt;M&lt;/mi&gt;&lt;mi&gt;/&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;97.2&lt;/mn&gt;&lt;mspace width=&quot;0.1667em&quot;&gt;&lt;/mspace&gt;&lt;mtext&gt;m/s&lt;/mtext&gt;&lt;/mrow&gt;&lt;/math&gt;：为高铁的移动的速度&lt;/li&gt;
+&lt;li&gt;&lt;math&gt;&lt;mrow&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mo&gt;×&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;8&lt;/mn&gt;&lt;/msup&gt;&lt;mspace width=&quot;0.1667em&quot;&gt;&lt;/mspace&gt;&lt;mtext&gt;m/s&lt;/mtext&gt;&lt;/mrow&gt;&lt;/math&gt;：为无线电波的速度、光速&lt;/li&gt;
+&lt;li&gt;&lt;math&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;144.640&lt;/mn&gt;&lt;mo&gt;×&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;6&lt;/mn&gt;&lt;/msup&gt;&lt;mspace width=&quot;0.1667em&quot;&gt;&lt;/mspace&gt;&lt;mtext&gt;Hz&lt;/mtext&gt;&lt;/mrow&gt;&lt;/math&gt;：为信号的载频&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;代入数值：&lt;math&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mfrac&gt;&lt;mn&gt;97.2&lt;/mn&gt;&lt;mrow&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mo&gt;×&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;8&lt;/mn&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;144.640&lt;/mn&gt;&lt;mo&gt;×&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;6&lt;/mn&gt;&lt;/msup&gt;&lt;mo&gt;≈&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;46.8&lt;/mn&gt;&lt;mspace width=&quot;0.1667em&quot;&gt;&lt;/mspace&gt;&lt;mtext&gt;Hz&lt;/mtext&gt;&lt;/mrow&gt;&lt;/math&gt;&lt;/p&gt;
+&lt;p&gt;&lt;math&gt;&lt;mrow&gt;&lt;mtext&gt;频&lt;/mtext&gt;&lt;mtext&gt;率&lt;/mtext&gt;&lt;mtext&gt;误&lt;/mtext&gt;&lt;mtext&gt;差&lt;/mtext&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mfrac&gt;&lt;mn&gt;46.8&lt;/mn&gt;&lt;mn&gt;144640000&lt;/mn&gt;&lt;/mfrac&gt;&lt;mo&gt;×&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;6&lt;/mn&gt;&lt;/msup&gt;&lt;mo&gt;≈&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;0.3236&lt;/mn&gt;&lt;mspace width=&quot;0.1667em&quot;&gt;&lt;/mspace&gt;&lt;mtext&gt;ppm&lt;/mtext&gt;&lt;/mrow&gt;&lt;/math&gt;&lt;/p&gt;
+&lt;h3 id=&quot;%E5%AF%B9aprs%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%BD%B1%E5%93%8D&quot; tabindex=&quot;-1&quot;&gt;对APRS信号的影响&lt;/h3&gt;
+&lt;p&gt;46.8Hz的频偏，对于APRS信号的144.640MHz载频来说，影响微乎其微。&lt;/p&gt;
+&lt;p&gt;但是这个频偏一般会传导到信号的音频部分会怎样？&lt;/p&gt;
+&lt;p&gt;APRS信号使用的是AX.25协议帧格式的AFSK，Audio Frequency-Shift Keying，音频频移键控进行调制的。分别用1200Hz的音频表示1，2200Hz音频表示0。46.8Hz的误差并不是很突出。&lt;/p&gt;
+&lt;p&gt;此外IARU第1区对VHF技术建议中，对信标台的频率容错要求是±200Hz，对音频响应的范围是300～3000Hz，这些也都包容了46.8Hz那点误差。&lt;/p&gt;
+&lt;h2 id=&quot;%E9%80%9F%E5%BA%A6%E4%B8%8D%E6%98%AF%E5%85%B3%E9%94%AE%E5%BD%B1%E5%93%8D&quot; tabindex=&quot;-1&quot;&gt;速度不是关键影响&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;看来350公里/小时的速度对VHF通信影响微乎其微。&lt;/strong&gt; 空间站的速度是27000多公里/小时，这才有多普勒效应的影响，不得不做频率补偿的话题。&lt;/p&gt;
+&lt;p&gt;眼看到了邢台，我用手动模式持续发了十几个。终于在BI1ACW-15基站上打上了两个点，说明使点劲儿还是能通的。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/6NWYuSWKZE-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/6NWYuSWKZE-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/6NWYuSWKZE-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;2337&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;有RAW数据为证。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/cJ47XL9qz9-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/cJ47XL9qz9-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/cJ47XL9qz9-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;739&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;h2 id=&quot;%E7%AA%97%E6%88%B7%E5%8F%AF%E8%83%BD%E6%98%AF%E6%A0%B8%E5%BF%83%E9%97%AE%E9%A2%98&quot; tabindex=&quot;-1&quot;&gt;窗户可能是核心问题&lt;/h2&gt;
+&lt;p&gt;为啥高铁上这么难打卡APRS，想来想去，恐怕还是 &lt;strong&gt;高铁玻璃对无线电信号衰减的太大&lt;/strong&gt; 。那玻璃是多层的，有金属镀膜，还有电加热丝……最终辐射出去的信号很弱了。&lt;/p&gt;
+&lt;p&gt;如果你有更好的办法在高铁上打卡APRS，欢迎分享！&lt;/p&gt;
+&lt;h2 id=&quot;%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99&quot; tabindex=&quot;-1&quot;&gt;参考资料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.omnicalculator.com/physics/doppler-effect&quot;&gt;https://www.omnicalculator.com/physics/doppler-effect&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;s&gt;原文的多普勒雷达在线计算工具不准:https://www.osgeo.cn/app/sc416&lt;/s&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;IARU-R1 VHF Handbook: &lt;a href=&quot;https://www.iaru-r1.org/wp-content/uploads/2024/11/VHF_Handbook_V10_02.pdf&quot;&gt;https://www.iaru-r1.org/wp-content/uploads/2024/11/VHF_Handbook_V10_02.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
+    <title>烧了两次FTDX10的功放</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/i-smoked-ftdx10-amplifier-twice/" />
+    <updated>2022-07-15T18:11:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/i-smoked-ftdx10-amplifier-twice/</id>
+    <content type="html">&lt;p&gt;有几个月没出来吹牛了。最近唯一值得吹吹的事儿就是我把YAESU FTDX10的功放烧了，而且还烧了两次。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/i-smoked-ftdx10-amplifier-twice/lGSgA-6MwN-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/i-smoked-ftdx10-amplifier-twice/lGSgA-6MwN-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/i-smoked-ftdx10-amplifier-twice/lGSgA-6MwN-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;h2 id=&quot;%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%83%A7&quot; tabindex=&quot;-1&quot;&gt;第一次烧&lt;/h2&gt;
+&lt;p&gt;第一次是哪天烧的我已经不能确认了。&lt;/p&gt;
+&lt;p&gt;话说今年春节前的某一天，我刚把一条22.5米的随机长线天线，换成了20米的端馈天线。随后测试FTDX10在各波段发射的驻波比，居然都不起表，甚至160米波段也很“优秀”。欣喜之余，猛然惊醒， 这不科学啊？ ！&lt;/p&gt;
+&lt;p&gt;仔细 用外置驻波表检查了所有频段的输出 功率，都 只测出来0.5瓦， 难怪机内检测不到高驻波。 我只好联系八重洲的售后，工程师说： 把机器寄回来吧……&lt;/p&gt;
+&lt;p&gt;当时他们没有功放管配件，需要从日本总部订货。 本来他们答应发一个备用机器给我用，结果只剩一台FT-991A，也没有功率输出了。看来 都在等功放管啊。 于是开始了漫长的等待，一等就是四个月。&lt;/p&gt;
+&lt;p&gt;八重洲中国的售后在苏州，这里也是它们在国内的生产厂。每月他们汇总一次需要的配件清单，报给日本总部。总部在下个月会把配件发回来。这中间经历了春节假期，再一个月上报，一个月下发，然后又遇到疫情，配件卡在浦东机场海关出不来，好不容易出关了，苏州又居家办公了……终于，到了劳动节，机器修好发回来了。&lt;/p&gt;
+&lt;h2 id=&quot;%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%83%A7&quot; tabindex=&quot;-1&quot;&gt;第二次烧&lt;/h2&gt;
+&lt;p&gt;在这段等待的时间里，我 买了一个YAESU FC-40自动天调。&lt;/p&gt;
+&lt;p&gt;初夏的北京，秋高气爽，春意盎然。&lt;/p&gt;
+&lt;p&gt;我把修回来的FTDX10恭恭敬敬地摆回了机位。把阳台外端馈天线的20米振子，从1:49巴伦上拿下来，绑在了FC-40天调上。 然后打开了FTDX10， 美丽的3D频谱显示了出来。&lt;/p&gt;
+&lt;p&gt;我拿起电键，调到了40米波段CW频点附近，把输出功率降低到20瓦，随手发了一个VVV。然后……又没有功率输出了。&lt;/p&gt;
+&lt;h2 id=&quot;%E4%B8%BA%E4%BB%80%E4%B9%88ftdx10%E4%BC%9A%E7%83%A7%E5%8A%9F%E6%94%BE&quot; tabindex=&quot;-1&quot;&gt;为什么FTDX10会烧功放&lt;/h2&gt;
+&lt;p&gt;这是我半年来一直思考的问题。&lt;/p&gt;
+&lt;p&gt;第一次烧，我当时在用22.5米长线，1:9巴伦，这套天馈曾经用VNA检查过，各波段驻波比都在1:3～1:8之间。也就是各波段都不太谐振，但驻波也不是高的很离谱。这根天线斜拉到楼下的树上，冬天曾经遭遇狂风大作，再加上FT8、远程操作，不知道哪下可能就给烧了。&lt;/p&gt;
+&lt;p&gt;第二次烧，纯粹是我大意了。我把20米的天线振子，接到了一个 全新的、 还 没 调过的 FC-40天调上，这相当于是直通振子的状态。大家都知道，20米天线在40米波段正好是半个波长，端馈输入的驻波是1:49，电压可以高达2450V上下……&lt;/p&gt;
+&lt;h2 id=&quot;%E5%87%A0%E4%B8%AA%E5%85%B3%E4%BA%8Eftdx10%E5%92%8Cfc-40%E7%9A%84%E9%87%8D%E8%A6%81%E4%BA%8B%E5%AE%9E&quot; tabindex=&quot;-1&quot;&gt;几个关于FTDX10和FC-40的重要事实&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;FTDX10只有驻波检测，没有高驻波保护&lt;/strong&gt;。它只负责告诉你驻波是高还是低，即便是高驻波，它也会继续发射，直到功放管烧掉。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FTDX10在无法调谐的频点，就放弃调谐了&lt;/strong&gt;。当你看到调谐停止时，不代表调到了谐振。注意观察机内驻波表的指针，如果它调到最后又跳了一下，很可能没谐振。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FTDX10不会自动识别是否接入了外置天调&lt;/strong&gt;。它需要在机器菜单里手动选择使用内置还是外置天调；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FTDX10不会在高驻波时自动启调，而是每个频点都要人工调好&lt;/strong&gt;。甚至同一频段，不同频点上，都需要耐心调谐一下。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FTDX10每个频段的天调开关状态是分别存储的&lt;/strong&gt;。而且不止是天调，包括BK-IN，KEYER，操作模式这些状态都是各频段分别记忆的。 这一点特别要留心，简言之40米波段设置好了，到了20米还要再搞一遍。 下次开机它也能记住。 如果重置了电台，别忘了各频段都要再搞一遍。&lt;/li&gt;
+&lt;li&gt;FTDX10在&lt;strong&gt;异频操作&lt;/strong&gt;时，尤其要注意&lt;strong&gt;发射频点是否调谐，是否开启了天调&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;全新的FC-40天调是直通的&lt;/strong&gt;，必须调谐过才会有记忆；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FC-40天调没接控制线是直通的&lt;/strong&gt;。它没有用磁保持继电器，如果天调控制线没插好，既无法识别发射频点，也不能保持在上次的调谐状态，相当于直通。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;就说这么多吧。这样的系统在电信运营商眼里叫 &lt;strong&gt;“鲁棒性低”&lt;/strong&gt; 是不是？&lt;/p&gt;
+&lt;p&gt;毕竟FTDX10是个业余机，不是业务机。基本上它预设的操作场景，是一个老司机开着个八缸手动挡切诺基。相比之下，一套ICOM的系统，比如典型的IC-7300配一个AH-120自动天调，应用起来要轻松多了，有自动启调，有高驻波保护，几乎是傻瓜型的。&lt;/p&gt;
+&lt;p&gt;另外，我是从FT-817ND开始入坑的。玩QRP小功率，不需要太关注高驻波，这也留下很多坏毛病。两次烧功放的经历，算是把我的毛病治好了， 要认真度量系统冗余 ， &lt;strong&gt;要敬畏驻波&lt;/strong&gt; 。&lt;/p&gt;
+&lt;h2 id=&quot;%E9%82%A3%E4%B9%88%EF%BC%8C%E5%85%AB%E9%87%8D%E6%B4%B2%E8%BF%98%E5%80%BC%E5%BE%97%E4%BF%A1%E4%BB%BB%E5%90%97%EF%BC%9F&quot; tabindex=&quot;-1&quot;&gt;那么，八重洲还值得信任吗？&lt;/h2&gt;
+&lt;p&gt;这一点毋庸置疑。如果在“性能”和“应用”之间选择，性能还是首选。业余无线电，玩的就是个寂寞……更何况，八重洲给了&lt;em&gt;&lt;strong&gt;三年免费保修&lt;/strong&gt;&lt;/em&gt;（包邮换功放）服务，三年调教一个老司机足够了。&lt;/p&gt;
+&lt;h2 id=&quot;ftdx10%E5%BC%80%E6%9C%BA%E6%A3%80%E6%9F%A5%E5%8D%95&quot; tabindex=&quot;-1&quot;&gt;FTDX10开机检查单&lt;/h2&gt;
+&lt;p&gt;最后，我总结了一个FTDX10开机检查单，希望能改善自己的操作习惯。 也欢迎大家一起来交流操作心得。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;GSV3000电源检查
+&lt;ol class=&quot;task-list-container&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-0&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-0&quot;&gt; 电源电压旋钮是否在13.8V位置&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-1&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-1&quot;&gt; 电源引线接头是否有容易引起短路的异物&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-2&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-2&quot;&gt; 电源引线接头是否牢固&lt;/label&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;天馈系统检查
+&lt;ol class=&quot;task-list-container&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-3&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-3&quot;&gt; 检查天线振子是否在恰当的位置&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-4&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-4&quot;&gt; 检查天线馈线回路是否正常&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-5&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-5&quot;&gt; 检查平衡器是否正常连接&lt;/label&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;电台开机前检查
+&lt;ol class=&quot;task-list-container&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-6&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-6&quot;&gt; 外置天调接口是否牢固&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-7&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-7&quot;&gt; 驻波表接口是否牢固&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-8&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-8&quot;&gt; 电台端电源插头是否牢固&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-9&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-9&quot;&gt; 次第检查CW/USB/RTTY/DVI等外置设备接头是否牢固&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-10&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-10&quot;&gt; 检查手咪/耳机等接头是否接妥，确认无短路或接线干涉&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-11&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-11&quot;&gt; 音量旋钮位置&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-12&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-12&quot;&gt; SQL旋钮位置&lt;/label&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;电台开机后检查
+&lt;ol class=&quot;task-list-container&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-13&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-13&quot;&gt; 发射模式&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-14&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-14&quot;&gt; 发射功率&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-15&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-15&quot;&gt; 是否关闭异频工作模式&lt;/label&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;发射前检查
+&lt;ol class=&quot;task-list-container&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-16&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-16&quot;&gt; 天调设定位置：内置/外置&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-17&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-17&quot;&gt; 当前频段天调Tune开关状态&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-18&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-18&quot;&gt; 确认异频发射频率是否调谐&lt;/label&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;发射驻波检测（以CW模式）
+&lt;ol class=&quot;task-list-container&quot;&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-19&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-19&quot;&gt; 确认发射功率设定，是否小于等于5瓦&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-20&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-20&quot;&gt; 是否打开BK-IN&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-21&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-21&quot;&gt; KEYER开关状态&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-22&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-22&quot;&gt; 短按“点”，观察驻波&lt;/label&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+  </entry>
+  <entry>
+    <title>用巧克力洞洞板做LM386音频放大器</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/" />
+    <updated>2022-04-12T16:12:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/</id>
+    <content type="html">&lt;p&gt;看过汽车节目《Top Gear》的人都知道大嘴杰瑞米·克拉克森(Jeremy Clarkson)吧？他今年都62了，我的老天鹅。他算是赶上了燃油车的巅峰时代。如今已经满世界都是电动车了，所以他可能觉得自己out了。前几天他在生日之际谈起了对变老和死亡看法。最后一句话令人印象深刻：“我认为这就是老年的定义。 &lt;strong&gt;我以前认为无聊的所有东西现在都是一种‘可爱’的打发时间的方式。&lt;/strong&gt; ”&lt;/p&gt;
+&lt;p&gt;可能我也老了。最近做了一个自以为很可爱的实验，一个LM386的音频放大电路。这是2块9毛8包邮就能搞定的事情。但是我却安装了KiCad 6，自己画了原理图，在 BD6CR 设计的巧克力洞洞板上完成了制作。其间BI1EIH对我的电路设计给予了不少指导。其实也没啥可设计，因为任何LM386芯片的Datasheet 最后都有那个放大电路。有意思的是接不同的零件能产生不同的放大效果。不同的应用，侧重点不太一样。考虑到我打算给QCX-mini做个外放的便携音箱，所以我加了一个9V的电池供电、一个LED指示灯，以及几个高低频的滤波电容。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;545&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;LM386的1、8脚之间的C5是可选的，可以把电路的放大增益从20dB提升到200dB。实验结果证明，20dB已经很响了，加了C5之后有点辣耳朵了。&lt;/p&gt;
+&lt;p&gt;其实 我真 的不是 一个那么闲的人。 我只是希望在日子过的越来越复杂时，让自己能安静下来几分钟，体会一下自麦克斯韦以降，人类智慧的那点结晶。&lt;/p&gt;
+&lt;p&gt;BD6CR设计的巧克力洞洞板很好玩。它的焊盘不像普通洞洞板那样简单排列，而是在一小块4x3cm见方的板子上分布了大约13x10个焊盘，外围一圈是接地，里边又分成几组，有的串联，有的独立，每组还有就近接地。仔细观察它，你能体会到很多来自作者的巧思。这就是为电子爱好者精心设计的小玩具。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/_q0XB47wzI-561.avif 561w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/_q0XB47wzI-561.webp 561w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/_q0XB47wzI-561.png&quot; alt=&quot;图片&quot; width=&quot;561&quot; height=&quot;656&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;为了布置元件方便，我用KiCad画了一片巧克力板，就为了能事先把原件摆一摆，提高一下制作效率。 个人很享受这个过程，仿佛在玩 无线电老中医的乐高积木。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/PtcYyV5Irg-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/PtcYyV5Irg-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/PtcYyV5Irg-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;919&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/B1T8NVz0pp-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/B1T8NVz0pp-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/B1T8NVz0pp-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;919&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;下边是完成后的作业。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/IvUGL4UtRM-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/IvUGL4UtRM-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/IvUGL4UtRM-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;看看背面，没咋飞线就搞定了。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/Mo8wiyQTC9-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/Mo8wiyQTC9-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/Mo8wiyQTC9-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;再来段视频，证明我弄响了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;哪儿能买到巧克力洞洞板？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这玩意儿目前没得卖！&lt;/strong&gt; 但是BD6CR分享了他的巧克力洞洞板设计。大家可以下载了自己去JLC打印。 一张PCB上有六块上边说的小板，中间用邮票孔分开，可以根据需要掰下一块就用。 &lt;strong&gt;它的尺寸特意控制在10x10cm之内，你懂的。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;BD6CR还写了一本《巧克力洞洞板制作》的电子书，里边有好多他用巧克力板做的小玩具，包括SSB接收机、皮鞋这些经典设备。&lt;/p&gt;
+&lt;p&gt;免费PCB文件、电子书，可以读BD6CR的文章： &lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzU1MDk5Mzg4Mg==&amp;amp;mid=2247485305&amp;amp;idx=1&amp;amp;sn=9735498aa9ef2a2e2302eaa405810007&amp;amp;chksm=fb996dcccceee4da959902b53d0836de17b90a8895edafcd62bd99953281cc0d68f4b72ad233&amp;amp;scene=21#wechat_redirect&quot;&gt;免费巧克力洞洞板&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+</feed>

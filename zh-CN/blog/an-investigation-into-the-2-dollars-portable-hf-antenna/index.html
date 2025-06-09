@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>关于2美元便携短波天线的调查</title>
+		<meta name="description" content="这两天在hellocq.net跟人讨论他的迷之馈线，暮然发现他用的是一根：2美元的螺旋便携式短波天线。">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="BG6LH">
+		<link rel="stylesheet" href="/css/style.out.css">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+		
+        <!-- favicon -->
+        <link rel="icon" href="/img/me.svg" type="image/svg+xml">
+
+        <!-- Open graph -->
+        <meta property="og:title" content="关于2美元便携短波天线的调查">
+        <meta property="og:description" content="这两天在hellocq.net跟人讨论他的迷之馈线，暮然发现他用的是一根：2美元的螺旋便携式短波天线。">
+        <meta property="og:type" content="article">
+        <meta property="article:tag" content="posts,天线">
+        <meta property="og:url" content="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/">
+        <meta property="og:site_name" content="BG6LH">
+        <meta property="og:locale" content="zh_CN">
+        <meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHoyby2SQ0aXS4Mib0lm3DMvTvgcfQcNVlAS3Kbe4PHbZoib9YSicPsXGqIjA7FINld0ic8FQNibmQBkILzg/0?wx_fmt=jpeg">
+        <!-- Twitter -->
+        <meta name="twitter:title" content="关于2美元便携短波天线的调查">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@jamflying">
+        <meta name="twitter:description" content="这两天在hellocq.net跟人讨论他的迷之馈线，暮然发现他用的是一根：2美元的螺旋便携式短波天线。">
+        <meta name="twitter:image" content="http://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHoyby2SQ0aXS4Mib0lm3DMvTvgcfQcNVlAS3Kbe4PHbZoib9YSicPsXGqIjA7FINld0ic8FQNibmQBkILzg/0?wx_fmt=jpeg">
+	</head>
+	<body class="bg-white dark:bg-slate-800 overflow-auto dark:text-white dark:text-gray-900" x-data="{
+	        open: false,
+	        darkMode: localStorage.getItem('theme') === 'dark',
+	      }" x-init="
+	        $watch('open', value => {
+	          if (value) {
+	            document.body.classList.add('overflow-hidden', 'md:overflow-auto');
+	          } else {
+	            document.body.classList.remove('overflow-hidden', 'md:overflow-auto');
+	          }
+	        });
+	        $watch('darkMode', value => {
+	          if (value) {
+	            document.documentElement.classList.add('dark');
+	            localStorage.setItem('theme', 'dark');
+	          } else {
+	            document.documentElement.classList.remove('dark');
+	            localStorage.setItem('theme', 'light');
+	          }
+	        });
+	        if (darkMode) document.documentElement.classList.add('dark');
+	        else document.documentElement.classList.remove('dark');
+	      ">
+		<header class="fixed top-0 left-0 right-0 z-50 flex flex-row p-3 w-full 
+                items-center  px-15
+                text-sm text-neutral-800 bg-neutral-100
+                dark:text-neutral-100 dark:bg-neutral-950
+              ">
+    <div class="container mx-auto flex flex-row w-full items-center justify-between">
+        <!--  site logo and title : start -->
+        <div class="flex flex-row items-center">
+            
+                <figure class="flex p-1 inline-block h-8 w-8 mr-2">
+                    <picture><source type="image/avif" srcset="/img/P2oVwTwU_L-601.avif 601w"><source type="image/webp" srcset="/img/P2oVwTwU_L-601.webp 601w"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-601.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601"></picture>
+                </figure>
+            
+            <a class="flex p-1 home-link href=" "="">BG6LH</a>
+        </div>
+        <!-- site logo and title : end -->
+
+        
+
+        <div class="flex items-center space-x-4">
+            
+            
+            
+
+            
+            
+
+            
+            <!-- Theme toggle: visible on all screens -->
+            <div id="theme-toggle" class="z-50">
+                <button @click="darkMode = !darkMode" class="w-6 h-6 flex items-center justify-center" aria-label="Toggle theme">
+                    <span x-show="!darkMode">
+                        
+<!-- @license lucide-static v0.511.0 - ISC -->
+<svg class="w-5 h-5 icon icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="4"></circle>
+  <path d="M12 2v2"></path>
+  <path d="M12 20v2"></path>
+  <path d="m4.93 4.93 1.41 1.41"></path>
+  <path d="m17.66 17.66 1.41 1.41"></path>
+  <path d="M2 12h2"></path>
+  <path d="M20 12h2"></path>
+  <path d="m6.34 17.66-1.41 1.41"></path>
+  <path d="m19.07 4.93-1.41 1.41"></path>
+</svg>
+                    </span>
+                    <span x-show="darkMode">
+                        
+<!-- @license lucide-static v0.511.0 - ISC -->
+<svg class="w-5 h-5 icon icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+</svg>
+                    </span>
+                </button>
+            </div>
+
+            <!-- Mobile menu icon : start -->
+            <button class="md:hidden z-50" @click="open = !open">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <path x-show="!open" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path x-show="open" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <!-- mobile menu icon : end -->
+
+            <!-- Navigation: wide screen : start -->
+            <nav class="hidden md:flex space-x-6">
+                
+                
+                
+                
+                <a href="/">首页</a>
+                
+                
+                
+                
+                
+                <a href="/zh-CN/blog/">归档</a>
+                
+                
+                
+                
+                
+                <a href="/zh-CN/about/">关于</a>
+                
+                
+                
+                
+            </nav>
+            <!-- Navigation: wide screen : end -->
+        </div>
+    </div>
+</header>
+
+<!-- Fullscreen Menu Overlay: mobile only , start -->
+<div class="fixed inset-x-0 top-15 bottom-0 z-40 flex flex-col
+md:hidden items-center w-full h-auto
+border-t-1 border-neutral-800
+text-sm text-neutral-800 bg-neutral-100 px-15
+ dark:text-neutral-100 dark:bg-neutral-950
+font-medium transition-all duration-100" x-show="open" x-transition:enter="transform transition ease-out duration-300" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 scale-100" @click.outside="open = false">
+		
+            
+		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/" @click="open = false">首页</a>
+                </div>
+            
+		
+            
+		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/zh-CN/blog/" @click="open = false">归档</a>
+                </div>
+            
+		
+            
+		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/zh-CN/about/" @click="open = false">关于</a>
+                </div>
+            
+		
+            
+		
+</div>
+<!-- Fullscreen Menu Overlay: mobile only , end -->
+
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<main class="flex-grow pt-15">
+			<heading-anchors class="">
+				
+
+
+
+    
+        <figure class="w-full h-36 object-contain overflow-hidden md:h-96 ">
+            <img src="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/IERe_nnWlU-482.webp" class="w-full blur-xs brightness-75 scale-105" alt="关于2美元便携短波天线的调查 image" loading="lazy" decoding="async" width="482" height="205">
+        </figure>
+    
+<div class="mx-auto grid w-full max-w-4xl grid-cols-1 gap-4 md:grid-cols-[minmax(800px,1fr)_240px]">
+    <article class="bg-white p-8 md:p-12 mx-auto max-w-4xl prose prose-neutral">
+        <!-- article header : begin-->
+        <header class="flex flex-col mx-auto mb-12 border-t-neutral-500 border-b-1">
+            <div class="mx-auto font-bold md:text-xl text-center text-neutral-800">
+                <h1 id="2">关于2美元便携短波天线的调查</h1>
+            </div>
+            <time class="text-sm mx-auto text-neutral-400" datetime="2021-11-10 10:46:00 UTC">2021-11-10 10:46:00 UTC</time>
+            <span class="post-metadata flex flex-row mx-auto p-0">
+                关键词:
+                <a href="/zh-CN/tags/tian-xian/" class="post-tag">天线</a>
+            </span>
+        </header>
+        <!-- article header : end-->
+
+
+        <!-- article content : begin-->
+        <div class="mx-auto">
+            <p>这两天在hellocq.net跟人讨论他的迷之馈线，暮然发现他用的是一根： <strong>2美元的螺旋便携式短波天线</strong> ，这是一个2008年流行的DIY天线。物理总长度只有2米出头，工作在20米波段。</p>
+<p>起初我以为这是1/4波长GP天线的变种，但又看到好多人说这是1/2波长端馈。弄得我也含糊了，于是花了点时间做研究。</p>
+<h2 id="%E5%85%88%E8%AF%B4%E7%BB%93%E8%AE%BA" tabindex="-1">先说结论</h2>
+<p>这的确是一副以1/4波长GP为原型的天线，它曾经在上世纪70年代流行过一阵子。到今天有几种和它相关的名字，提起来可能大家都会感到亲切：</p>
+<ul>
+<li>连续加载天线：Continually Loaded Vertical，CLV</li>
+<li>螺旋缠绕天线：Helically Wound Vertical，HWV</li>
+<li>橡皮鸭天线：对讲机上常见的螺旋振子套一个橡皮套的短天线</li>
+<li>鱼竿天线：在高楼中间架设短波缩短天线的常见形式</li>
+</ul>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/t82Odw-Amw-786.avif 786w"><source type="image/webp" srcset="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/t82Odw-Amw-786.webp 786w"><img loading="lazy" decoding="async" src="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/t82Odw-Amw-786.png" alt="图片" width="786" height="328"></picture></p>
+<p>BG3MDO随手画的这个天线的等效电路图</p>
+<p>这种天线也可以叫做 <strong>谐振电感</strong> 。大多数案例都使用了1/2波长的导线，绕制出 <strong>1/4波长电气长度</strong> 的天线。</p>
+<p>这种天线可以肯定是 <strong>负增益</strong> 的，依赖于不同的材料和绕制工艺。基本上它损失一半效率。而且效率 <strong>受地网形态的影响很大</strong> 。它的Q值高，所以带宽很窄。</p>
+<p>它的优点也很明显：省地方， 小！驾驭它最简单的办法是 <strong>用天调</strong> ，想玩明白至少也得有一个天分。</p>
+<h2 id="2%E7%BE%8E%E5%85%83%E8%9E%BA%E6%97%8B%E4%BE%BF%E6%90%BA%E5%A4%A9%E7%BA%BF%E7%9A%84%E7%89%B9%E5%BE%81" tabindex="-1">2美元螺旋便携天线的特征</h2>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/HPBQpx3MsL-522.avif 522w"><source type="image/webp" srcset="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/HPBQpx3MsL-522.webp 522w"><img loading="lazy" decoding="async" src="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/HPBQpx3MsL-522.png" alt="图片" width="522" height="205"></picture></p>
+<p>这个天线用了将近9米多、约半个波长的导线，绕制了一个1.2米长的线圈，这部分很像典型的“连续加载”天线。但是它还有一个0.91米长的直线振子。导线总长度的确是1/2个波长。</p>
+<p>但是它又有几个属于1/4波长GP天线的显著特征：单极、一端1:1馈电、使用1/4波长地网……馈电点电压低，电流高，阻抗低。</p>
+<h2 id="2%E7%BE%8E%E5%85%83%E8%9E%BA%E6%97%8B%E5%A4%A9%E7%BA%BF%E7%9A%84%E5%87%BA%E5%A4%84" tabindex="-1">2美元螺旋天线的出处</h2>
+<p>我找到了这个天线的原始出处，2001年9月，AH6NF和WH6GS发表在夏威夷业余无线电网站的帖子：</p>
+<p><a href="http://ham.aditl.com/ham/helical-antenna/index.html">http://ham.aditl.com/ham/helical-antenna/index.html</a></p>
+<p>这个帖子和Hellocq.net上说的细节完全一致。同时它提到了：The design is a <strong>continuously loaded</strong>, <strong>helically wound vertical</strong> antenna with a three-foot stinger……关键字： <strong>连续加载</strong> 、 <strong>螺旋缠绕</strong> ，此外还带有一根3英尺(0.91米)长的直线振子(stinger)。</p>
+<p>我按照“连续加载”这个关键字，寻找这个天线的理论模型，大部分是谈论电小天线、手机、Wi-Fi天线的设计。按照“螺旋缠绕”找，找出来好多业余届讨论过的帖子。他们大部分都是按照1/4波长GP天线为模型去设计的。</p>
+<h2 id="%E6%A1%88%E4%BE%8B%EF%BC%9Akk6gxg%E7%9A%8440%E7%B1%B3%E6%B3%A2%E6%AE%B5%E8%9E%BA%E6%97%8B%E7%BC%A0%E7%BB%95%E5%A4%A9%E7%BA%BF" tabindex="-1">案例：KK6GXG的40米波段螺旋缠绕天线</h2>
+<p>典型案例是KK6GXG的40米波段螺旋缠绕天线，他在2015年4月份做了一副。</p>
+<p><a href="http://www.kk6gxg.com/40-meter-antenna/">http://www.kk6gxg.com/40-meter-antenna/</a></p>
+<p>他的资料来自1975年的ARRL业余无线电手册，第606页的一张原理图：</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/lWl6jLVVX3-918.avif 918w"><source type="image/webp" srcset="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/lWl6jLVVX3-918.webp 918w"><img loading="lazy" decoding="async" src="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/lWl6jLVVX3-918.png" alt="图片" width="918" height="1068"></picture></p>
+<p>注意三个关键信息：</p>
+<ul>
+<li>这天线原型图的年份是 <strong>“1975年”</strong></li>
+<li>缠绕电感部分，1975年的这张图上是建议用4到20英尺(1.5～6米)长的杆子，缠绕1/2波长长度的14AWG(2平方)的导线。而KK6GXG的实操，是用了66.5英尺(20米，40米 <strong>波长的一半</strong>)的导线绕在一根6英尺(1.8米)的杆子上。</li>
+<li>最后，KK6GXG计划用一个 <strong>Z-Match天调</strong> 。1975年这张图用了一个可变电感，也推荐再用一个天调。</li>
+</ul>
+<h2 id="%E8%9E%BA%E6%97%8B%E7%BC%A0%E7%BB%95%E7%9A%84gp%E5%A4%A9%E7%BA%BF" tabindex="-1">螺旋缠绕的GP天线</h2>
+<p>这些案例的原型显然都基于一个GP天线，因为他们都用到了1/4波长的地网，来提供一个“地平面”，以“镜像”另外一半虚拟的天线，达到一个偶极天线的“平衡”状态，所以他们都是低阻抗馈电的案例。</p>
+<p>它到底是一个1/4GP？1/2GP？还是5/8GP？还是一个端馈的长线？ <strong>还是要看它的理论模型的电气长度</strong> 。</p>
+<p>我们回顾一下1/4波长的GP天线模型：</p>
+<ul>
+<li>1/4波长的GP天线，馈电点的电压最低，电流最高；</li>
+<li>1/4GP的容抗和感抗组成的电抗为0，呈现出纯电阻性，这是所谓“谐振”的电学意义。</li>
+<li>当天线短于1/4波长时，天线上的容抗增加，感抗减少，整体呈现的电抗增大——天线不谐振了；</li>
+<li>通过加入串联电感，抵消掉多余容抗，让它整体呈现出0电抗——天线又回到“谐振”状态；</li>
+<li>持续缩短，并增加电感，直到全都变成电感，感抗有可能大于容抗了——天线仍不“谐振”；</li>
+<li>松绕电感线圈，可以减少感抗、增加容抗，理论上总电抗又可以归0——这就是“螺旋缠绕”；</li>
+<li>如果电抗还没归0，那可以在另一头增加一根直线导体，它会带来一些容性的电抗，再抵消一部分感抗。</li>
+<li>如果总电抗还没回归到0，那就可以上天调了……</li>
+</ul>
+<h2 id="%E4%B8%BA%E5%95%A5%E7%94%A8%E4%BA%861%2F2%E6%B3%A2%E9%95%BF%E7%9A%84%E5%AF%BC%E7%BA%BF%EF%BC%9F" tabindex="-1">为啥用了1/2波长的导线？</h2>
+<p>现在我大概理解了“螺旋缠绕”的意义了：</p>
+<ul>
+<li>把拉直的天线缠绕起来，使整个天线的物理长度变短，可以节约物理空间；</li>
+<li>缠绕起来的天线就是一个大号的电感器；</li>
+<li>如果是密绕，电磁波就憋在电感器里出不来；</li>
+<li>松绕才能让电磁波辐射出来；</li>
+<li>但是松绕电感又减少了，所以就要多绕更多导线；</li>
+<li>完全绕成松绕的电感，要达到谐振，大约需要1/2波长的导线；</li>
+</ul>
+<p><strong>为啥用了1/2波长？这个长度似乎没有一个硬性的规定</strong> ， 参考2009年7月的QST杂志的封面文章，K6MM的160米HWV天线讨论，他用的是G4FGQ的建模工具计算的，相应的参数是导线的直径、线圈的直径、每圈之间的间隙等，算出来正好是大约1/2波长。</p>
+<p><a href="https://hamuniverse.com/k6mm160metervertical.html">https://hamuniverse.com/k6mm160metervertical.html</a></p>
+<p>至少，不能简单地、把导线的长度当作天线模型的波长。 <strong>因为它的模型是按照谐振的1/4波长电气长度计算的。</strong> 有兴趣深挖这个话题的， 可以去研究一下G4 FGQ的 建模工具， 文末有提及。</p>
+<p>从这一点上，我也大致体会了一下“鱼竿天线”。 有人说“玩业余无线电的”很多零件都可以去“玩钓鱼的”那里找； 如果去“玩摄影的”那里找，相同功能的零件要贵上十几倍。</p>
+<ul>
+<li>鱼竿天线就是把长长的天线缠在鱼竿上；</li>
+<li>它可以从阳台伸出去，不至于下垂太严重；</li>
+<li>导线缠绕的疏密，带来了额外的感抗和容抗， 电抗变化 不 容易被 量化；</li>
+<li>因此很难给出一 个标准模型、 能做到多波段谐振的天线， 只能是“盐少许，蒜蓉一小撮，烧至七成热……”，这时候可以用天 分 来做参考；</li>
+<li>实在不行，交给天调吧。</li>
+</ul>
+<h2 id="%E9%AB%98q%E5%80%BC%E5%A4%A9%E7%BA%BF%EF%BC%8C%E6%8E%A5%E5%9C%B0%E6%8D%9F%E8%80%97%E5%B7%AE%E5%BC%82%E5%A4%A7%EF%BC%8C%E6%95%88%E7%8E%87%E4%BD%8E" tabindex="-1">高Q值天线，接地损耗差异大，效率低</h2>
+<p>螺旋缠绕天线一般都是高Q值的，因为一大半都是电感嘛。想象一个很硬的弹簧，使劲按压到标定长度，很难保持是吧。 这就类似高Q值，高Q值表示可调谐的带宽会非常窄。 一些案例甚至说在LF和MF波段的应用上，都不能保证一个SSB的3000Hz语音的带宽，玩CW还凑合，FT8足够了。</p>
+<p><a href="https://www.smeter.net/antennas/helical-modeling.php">https://www.smeter.net/antennas/helical-modeling.php</a></p>
+<p>上边这篇文章还提到它的“接地损耗”琢磨不定，不同质量、不同面积的“地”，带来的损耗差异很大。</p>
+<p>和常规的加感天线相比，它的效率并不高，有评价说它的分布 <strong>损耗和增益基本上相当</strong> ，后来人们建模和实际应用都证明了这一点。这是一个2012年，QRZ.com论坛上的讨论：</p>
+<p><a href="https://forums.qrz.com/index.php?threads/helical-hf-antennas-%E2%80%93-anyone.358209/#post-2628608">https://forums.qrz.com/index.php?threads/helical-hf-antennas-%E2%80%93-anyone.358209/#post-2628608</a></p>
+<h2 id="%E5%90%84%E7%A7%8D%E7%BC%A0%E7%BB%95%E5%8F%98%E5%BD%A2" tabindex="-1">各种缠绕变形</h2>
+<p>这个天线流行于上世纪70年代，那个年代还流行Slinky偶极天线。就是用两个松松的螺旋弹簧做的偶极天线。</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/M3yvlS8yaL-1000.avif 1000w"><source type="image/webp" srcset="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/M3yvlS8yaL-1000.webp 1000w"><img loading="lazy" decoding="async" src="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/M3yvlS8yaL-1000.png" alt="图片" width="1000" height="545"></picture></p>
+<p>现在这种天线也有人玩，不仅仅是因为好玩，毕竟各种缠绕之后，它省地方啊，尤其是长波和中波，这些需要大尺寸空间的波段。</p>
+<h2 id="g4fgq%E8%9E%BA%E7%BA%BF%E7%BC%A0%E7%BB%95%E5%A4%A9%E7%BA%BF%E7%9A%84%E5%BB%BA%E6%A8%A1%E5%B7%A5%E5%85%B7" tabindex="-1">G4FGQ螺线缠绕天线的建模工具</h2>
+<p>G4FGQ有一个关于HWV天线的电感导线长度的计算公式：</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/75qG0QEWdR-720.avif 720w"><source type="image/webp" srcset="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/75qG0QEWdR-720.webp 720w"><img loading="lazy" decoding="async" src="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/75qG0QEWdR-720.png" alt="图片" width="720" height="540"></picture></p>
+<p>G4FGQ关于HWV的导线尺寸的计算公式</p>
+<p>这里有G4FGQ的HWV天线建模计算器：</p>
+<p><a href="http://static.smeter.net/software/helical3.exe">http://static.smeter.net/software/helical3.exe</a></p>
+<p>可惜我没下载下来，也不知道它该怎么用。它只是出现在跟这个话题相关的一个1997年的网页上，欢迎有兴趣的朋友去试试。</p>
+<p><a href="https://www.smeter.net/antennas/helical-modeling.php">https://www.smeter.net/antennas/helical-modeling.php</a></p>
+<h2 id="%E7%9B%B8%E5%85%B3%E6%A1%88%E4%BE%8B%E6%B1%87%E6%80%BB" tabindex="-1">相关案例汇总</h2>
+<ul>
+<li>
+<p>AH6NF和WH6GS发表在夏威夷业余无线电网站的帖子：<a href="http://ham.aditl.com/ham/helical-antenna/index.html">http://ham.aditl.com/ham/helical-antenna/index.html</a></p>
+</li>
+<li>
+<p>KK6GXG的40米波段螺旋缠绕天线：<a href="http://www.kk6gxg.com/40-meter-antenna/">http://www.kk6gxg.com/40-meter-antenna/</a></p>
+</li>
+<li>
+<p>M0MCX的40米波段螺旋缠绕垂直天线：<a href="https://www.m0mcx.co.uk/helically-wound-40m-vertical/">https://www.m0mcx.co.uk/helically-wound-40m-vertical/</a></p>
+<ul>
+<li><picture><source type="image/avif" srcset="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/02J_N1H1Zg-450.avif 450w"><source type="image/webp" srcset="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/02J_N1H1Zg-450.webp 450w"><img loading="lazy" decoding="async" src="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/02J_N1H1Zg-450.png" alt="图片" width="450" height="600"></picture></li>
+</ul>
+</li>
+<li>
+<p>VA3ZNW的20米波段螺旋缠绕垂直天线：<a href="http://www.antentop.org/017/files/va3znw_017.pdf">http://www.antentop.org/017/files/va3znw_017.pdf</a></p>
+</li>
+<li>
+<p>VE3YXO的2个160米波段螺旋缠绕天线：他用了一段阻抗为450Ω的梯子线做馈线，所以他同时用了1:1和1:9的两个巴伦。<a href="http://www.antentop.org/021/files/VE3YXO_021.pdf">http://www.antentop.org/021/files/VE3YXO_021.pdf</a></p>
+</li>
+<li>
+<p>M0TCF的图腾柱天线，工作在80米波段，使用了四种共9个线圈，还包括一段1:4的自由变压器UNUN馈电。
+<a href="http://www.torbayars.org.uk/down/totem%20pole.pdf">http://www.torbayars.org.uk/down/totem%20pole.pdf</a></p>
+<ul>
+<li><picture><source type="image/avif" srcset="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/HN8_0gnKyf-764.avif 764w"><source type="image/webp" srcset="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/HN8_0gnKyf-764.webp 764w"><img loading="lazy" decoding="async" src="/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/HN8_0gnKyf-764.png" alt="图片" width="764" height="1272"></picture></li>
+</ul>
+</li>
+<li>
+<p>ARRL的20美元车载天线，使用了三个不同疏密程度电感
+<a href="http://www.arrl.org/files/file/Technology/tis/info/pdf/0004033.pdf">http://www.arrl.org/files/file/Technology/tis/info/pdf/0004033.pdf</a></p>
+</li>
+</ul>
+
+            
+              <hr class="border-t-neutral-500 mb-2">
+              <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/Rx5klKuPlmX7ghvrFOJEzQ" target="_blank">BG6LH - 关于2美元便携短波天线的调查</a></span>
+            
+        </div>
+        <!-- article content : end-->
+
+        <!-- 翻页器 begin -->
+        <div class="mx-auto grid grid-cols-1 gap-2 py-12
+                    md:grid-cols-2
+                ">
+                        <a href="/zh-CN/blog/saving-ic-7000-power-amplifier-board/" class="
+                        flex flex-col left-0 p-2 block hover:bg-neutral-100
+                        ">
+                            < 上一篇
+                            <br>
+                            拯救iCOM IC-7000功放板
+                        </a>
+                    
+                        <a href="/zh-CN/blog/why-are-hf-transceivers-over-15-watts-regulated-by-miit-in-china/" class="
+                        flex flex-col md:text-right right-0 p-2 hover:bg-neutral-100
+                        ">
+                            下一篇 >
+                            <br>
+                            为啥15瓦以上短波电台归工信部管？
+                        </a>
+                    
+        </div>
+        <!-- 翻页器 end -->
+
+        <!-- Giscus : begin -->
+        <div class="mx-auto">
+        <div id="giscus_thread"></div>
+
+        </div>
+        <!-- Giscus : end -->
+
+    </article>
+
+        <!-- toc begin -->
+        
+        <aside id="artical-toc" class="sticky top-14 max-h-[calc(100svh-3.5rem)] overflow-x-hidden
+                    px-0 pt-10 pb-24 prose prose-neutral text-sm
+                    dark:prose-invert
+                    max-xl:hidden
+                    ">
+        <p class="font-bold">内容目录</p>
+        <nav class="toc">
+        <ul><li><a href="#%E5%85%88%E8%AF%B4%E7%BB%93%E8%AE%BA">先说结论</a></li><li><a href="#2%E7%BE%8E%E5%85%83%E8%9E%BA%E6%97%8B%E4%BE%BF%E6%90%BA%E5%A4%A9%E7%BA%BF%E7%9A%84%E7%89%B9%E5%BE%81">2美元螺旋便携天线的特征</a></li><li><a href="#2%E7%BE%8E%E5%85%83%E8%9E%BA%E6%97%8B%E5%A4%A9%E7%BA%BF%E7%9A%84%E5%87%BA%E5%A4%84">2美元螺旋天线的出处</a></li><li><a href="#%E6%A1%88%E4%BE%8B%EF%BC%9Akk6gxg%E7%9A%8440%E7%B1%B3%E6%B3%A2%E6%AE%B5%E8%9E%BA%E6%97%8B%E7%BC%A0%E7%BB%95%E5%A4%A9%E7%BA%BF">案例：KK6GXG的40米波段螺旋缠绕天线</a></li><li><a href="#%E8%9E%BA%E6%97%8B%E7%BC%A0%E7%BB%95%E7%9A%84gp%E5%A4%A9%E7%BA%BF">螺旋缠绕的GP天线</a></li><li><a href="#%E4%B8%BA%E5%95%A5%E7%94%A8%E4%BA%861%2F2%E6%B3%A2%E9%95%BF%E7%9A%84%E5%AF%BC%E7%BA%BF%EF%BC%9F">为啥用了1/2波长的导线？</a></li><li><a href="#%E9%AB%98q%E5%80%BC%E5%A4%A9%E7%BA%BF%EF%BC%8C%E6%8E%A5%E5%9C%B0%E6%8D%9F%E8%80%97%E5%B7%AE%E5%BC%82%E5%A4%A7%EF%BC%8C%E6%95%88%E7%8E%87%E4%BD%8E">高Q值天线，接地损耗差异大，效率低</a></li><li><a href="#%E5%90%84%E7%A7%8D%E7%BC%A0%E7%BB%95%E5%8F%98%E5%BD%A2">各种缠绕变形</a></li><li><a href="#g4fgq%E8%9E%BA%E7%BA%BF%E7%BC%A0%E7%BB%95%E5%A4%A9%E7%BA%BF%E7%9A%84%E5%BB%BA%E6%A8%A1%E5%B7%A5%E5%85%B7">G4FGQ螺线缠绕天线的建模工具</a></li><li><a href="#%E7%9B%B8%E5%85%B3%E6%A1%88%E4%BE%8B%E6%B1%87%E6%80%BB">相关案例汇总</a></li></ul>
+      </nav>
+        </aside>
+        
+        <!-- toc end -->
+
+
+</div>
+			</heading-anchors>
+		</main>
+		<footer class="flex w-full text-neutral-800 dark:text-neutral-100 bg-neutral-100 dark:bg-neutral-800">
+			<section class="flex flex-col max-w-4xl mx-auto p-0 py-12
+            grid grid-cols-1 gap-6
+            text-xs text-center justify-start
+            md:flex-row md:grid-cols-3 md:text-left
+        ">
+
+    <!-- 网站栏目 -->
+    <div class="">
+        <h3 class="font-bold mb-4" id="">网站导航</h3>
+        <nav class="list-none flex flex-row justify-center md:justify-start md:flex-col">
+            
+            
+             
+            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/">首页</a>
+            
+            
+            
+            
+             
+            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/zh-CN/blog/">归档</a>
+            
+            
+            
+            
+             
+            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/zh-CN/about/">关于</a>
+            
+            
+            
+            
+        </nav>
+
+
+    </div>
+
+    <!-- 社交媒体 -->
+    <div class="">
+        <h3 class="font-bold mb-4" id="social-links">Social Links</h3>
+        <div class="flex flex-row mx-auto justify-center md:justify-start">
+
+            
+            <a href="https://github.com/" aria-label="Open github profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-github">
+  <title>GitHub</title>
+  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+</svg>
+            </a> 
+            
+            <a href="https://x.com/jamflying" aria-label="Open x profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-x">
+  <title>X</title>
+  <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path>
+</svg>
+            </a> 
+            
+            <a href="https://instagram.com/bg6lh" aria-label="Open instagram profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-instagram">
+  <title>Instagram</title>
+  <path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"></path>
+</svg>
+            </a> 
+            
+            <a href="https://ko-fi.com/T6T01D9CDW" aria-label="Open kofi profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-kofi">
+  <title>Ko-fi</title>
+  <path d="M11.351 2.715c-2.7 0-4.986.025-6.83.26C2.078 3.285 0 5.154 0 8.61c0 3.506.182 6.13 1.585 8.493 1.584 2.701 4.233 4.182 7.662 4.182h.83c4.209 0 6.494-2.234 7.637-4a9.5 9.5 0 0 0 1.091-2.338C21.792 14.688 24 12.22 24 9.208v-.415c0-3.247-2.13-5.507-5.792-5.87-1.558-.156-2.65-.208-6.857-.208m0 1.947c4.208 0 5.09.052 6.571.182 2.624.311 4.13 1.584 4.13 4v.39c0 2.156-1.792 3.844-3.87 3.844h-.935l-.156.649c-.208 1.013-.597 1.818-1.039 2.546-.909 1.428-2.545 3.064-5.922 3.064h-.805c-2.571 0-4.831-.883-6.078-3.195-1.09-2-1.298-4.155-1.298-7.506 0-2.181.857-3.402 3.012-3.714 1.533-.233 3.559-.26 6.39-.26m6.547 2.287c-.416 0-.65.234-.65.546v2.935c0 .311.234.545.65.545 1.324 0 2.051-.754 2.051-2s-.727-2.026-2.052-2.026m-10.39.182c-1.818 0-3.013 1.48-3.013 3.142 0 1.533.858 2.857 1.949 3.897.727.701 1.87 1.429 2.649 1.896a1.47 1.47 0 0 0 1.507 0c.78-.467 1.922-1.195 2.623-1.896 1.117-1.039 1.974-2.364 1.974-3.897 0-1.662-1.247-3.142-3.039-3.142-1.065 0-1.792.545-2.338 1.298-.493-.753-1.246-1.298-2.312-1.298"></path>
+</svg>
+            </a> 
+            
+            
+        </div>
+        <br>
+        <h3 class="font-bold mb-4" id="bg6lh">微信公众号 BG6LH</h3>
+        <div class="flex flex-row mx-auto justify-center md:justify-start">
+            <picture><source type="image/avif" srcset="/img/ul2gn8FVCu-430.avif 430w"><source type="image/webp" srcset="/img/ul2gn8FVCu-430.webp 430w"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-430.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430"></picture>
+        </div>
+
+    </div>
+
+    <!-- 基本信息 -->
+    <div class="flex flex-col items-center md:items-start">
+
+            <!-- copyright -->
+    <div class="mx-auto m-3">
+        <p>Copyright © 2025 BG6LH All rights reserved.</p>
+        <p>Powered by Eleventy 3.1.0 & Tailwind CSS 4.1.7</p>
+        <a href="https://github.com/BG6LH/bg6lh.github.io/tree/main/./content/zh-CN/blog/关于2美元便携短波天线的调查.md">Edit this page on GitHub</a>
+    </div>
+    <!-- copyright -->
+    </div>
+
+
+
+</section>
+
+		</footer>
+		<!-- This page `/zh-CN/blog/an-investigation-into-the-2-dollars-portable-hf-antenna/` was built on 2025-06-09T00:00:00.000Z -->
+<!-- Alpine 状态定义 -->
+		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
+		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>
+		<script type="module" src="/dist/uM5at4w28x.js"></script>
+
+	</body>
+</html>
