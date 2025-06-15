@@ -1,10 +1,10 @@
 {
-  "app_lotw_lastQsoRx": "2025-06-10 12:19:02",
-  "app_lotw_lastQsl": "2025-06-14 23:52:19",
-  "last_updated": "2025-06-15T12:18:25.911Z",
-  "last_updated_timestamp": 1749989905911,
-  "total_qso": 5939,
-  "total_qsl": 4088,
+  "app_lotw_lastQsoRx": "2025-06-15 12:48:33",
+  "app_lotw_lastQsl": "2025-06-15 12:48:32",
+  "last_updated": "2025-06-15T12:53:05.609Z",
+  "last_updated_timestamp": 1749991985609,
+  "total_qso": 5943,
+  "total_qsl": 4089,
   "dxcc_confirmed": 193,
   "dxcc_stats": {
     "1": {
@@ -568,7 +568,7 @@
       "qsl": 1
     },
     "318": {
-      "qso": 1274,
+      "qso": 1275,
       "qsl": 1
     },
     "321": {
