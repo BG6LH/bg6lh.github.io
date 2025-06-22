@@ -5,11 +5,85 @@
   <subtitle>CQ DE BG6LH K，欢迎访问我的数字花园！我的业余无线电笔记。Copyright © 2025 BG6LH</subtitle>
   <link href="https://bg6lh.github.io/feed/feed.xml" rel="self" />
   <link href="https://bg6lh.github.io/" />
-  <updated>2024-05-21T08:02:00Z</updated>
+  <updated>2024-09-25T23:59:00Z</updated>
   <id>https://bg6lh.github.io/</id>
   <author>
     <name>BG6LH</name>
   </author>
+  <entry>
+    <title>皮鞋的工作原理</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/" />
+    <updated>2024-09-25T23:59:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/</id>
+    <content type="html">&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/tQDXhsQKs3-1264.avif 1264w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/tQDXhsQKs3-1264.webp 1264w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/tQDXhsQKs3-1264.jpeg&quot; alt=&quot;cover_image&quot; width=&quot;1264&quot; height=&quot;538&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;原创 BG6LH &lt;a href=&quot;https://mp.weixin.qq.com/s/&quot;&gt;BG6LH&lt;/a&gt; &lt;em&gt;2024年09月26日 07:59&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;皮鞋(Pixie) 是个“一石二鸟”的设计，它把信号放大和混频集合在同一个三极管上，大大缩小了电路的体积。四十多年过去了，它已经 是 业余 界 的 传家宝。很多基于它的衍生设计流行于世。甚至还有人把皮鞋穿到了树莓派脚上做SDR。&lt;/p&gt;
+&lt;p&gt;最近翻到一份介绍Pixie工作原理的资料，来自北卡罗来纳州无线电俱乐部。言简意赅地介绍了这个精妙的电路设计。我粗暴地翻译了一下。希望你也能体会到这个设计的用心之处。&lt;/p&gt;
+&lt;p&gt;这里摘录关键的几页：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/q9PiiYiggb-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/q9PiiYiggb-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/q9PiiYiggb-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;833&quot;&gt;&lt;/picture&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;上图：这个 电键开合是重点，它决定了好几个功能。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/WJTgyGWT6d-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/WJTgyGWT6d-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/WJTgyGWT6d-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;833&quot;&gt;&lt;/picture&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;上图：电键按下，音频电路关闭，进入发射状态。本振产生的震荡经过Q2放大，由C5耦合到C6、L3、C7组成的低通滤波器上，从天线发射出去。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/uaY7flwgyf-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/uaY7flwgyf-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/uaY7flwgyf-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;833&quot;&gt;&lt;/picture&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;上图，电键松开，进入接收状态。 射频 信号和本振的信号在Q2发生 混频。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/jllOP5sg0p-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/jllOP5sg0p-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/jllOP5sg0p-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;833&quot;&gt;&lt;/picture&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;上图，混频之后的信号被C4过滤掉其它分量，只剩下射频和本振的差分分量，即音频，流进音频功放。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/neJBxfNGvC-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/neJBxfNGvC-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/neJBxfNGvC-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;833&quot;&gt;&lt;/picture&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;上图：电键按下前后，二极管上的电压不同，电容也不同，能带来收发频率的差异，这就是所谓的“RIT”， &lt;strong&gt;R&lt;/strong&gt; eceiver &lt;strong&gt;I&lt;/strong&gt; ncremental &lt;strong&gt;T&lt;/strong&gt; uning，你说这都咋想到的！&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;废话不多说了， 扫码可以直接微信阅读。原文链接也可以直接打开PDF。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/RlK5ZIUgs0-886.avif 886w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/RlK5ZIUgs0-886.webp 886w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/RlK5ZIUgs0-886.png&quot; alt=&quot;图片&quot; width=&quot;886&quot; height=&quot;443&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>业余无线电不可忽视的真相</title>
     <link href="https://bg6lh.github.io/zh-CN/blog/k3ng-inconvenient-truths-in-amateur-radio/" />
@@ -593,97 +667,6 @@
 &lt;p&gt;IARU-R1 VHF Handbook: &lt;a href=&quot;https://www.iaru-r1.org/wp-content/uploads/2024/11/VHF_Handbook_V10_02.pdf&quot;&gt;https://www.iaru-r1.org/wp-content/uploads/2024/11/VHF_Handbook_V10_02.pdf&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>烧了两次FTDX10的功放</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/i-smoked-ftdx10-amplifier-twice/" />
-    <updated>2022-07-15T18:11:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/i-smoked-ftdx10-amplifier-twice/</id>
-    <content type="html">&lt;p&gt;有几个月没出来吹牛了。最近唯一值得吹吹的事儿就是我把YAESU FTDX10的功放烧了，而且还烧了两次。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/i-smoked-ftdx10-amplifier-twice/lGSgA-6MwN-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/i-smoked-ftdx10-amplifier-twice/lGSgA-6MwN-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/i-smoked-ftdx10-amplifier-twice/lGSgA-6MwN-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;h2 id=&quot;%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%83%A7&quot; tabindex=&quot;-1&quot;&gt;第一次烧&lt;/h2&gt;
-&lt;p&gt;第一次是哪天烧的我已经不能确认了。&lt;/p&gt;
-&lt;p&gt;话说今年春节前的某一天，我刚把一条22.5米的随机长线天线，换成了20米的端馈天线。随后测试FTDX10在各波段发射的驻波比，居然都不起表，甚至160米波段也很“优秀”。欣喜之余，猛然惊醒， 这不科学啊？ ！&lt;/p&gt;
-&lt;p&gt;仔细 用外置驻波表检查了所有频段的输出 功率，都 只测出来0.5瓦， 难怪机内检测不到高驻波。 我只好联系八重洲的售后，工程师说： 把机器寄回来吧……&lt;/p&gt;
-&lt;p&gt;当时他们没有功放管配件，需要从日本总部订货。 本来他们答应发一个备用机器给我用，结果只剩一台FT-991A，也没有功率输出了。看来 都在等功放管啊。 于是开始了漫长的等待，一等就是四个月。&lt;/p&gt;
-&lt;p&gt;八重洲中国的售后在苏州，这里也是它们在国内的生产厂。每月他们汇总一次需要的配件清单，报给日本总部。总部在下个月会把配件发回来。这中间经历了春节假期，再一个月上报，一个月下发，然后又遇到疫情，配件卡在浦东机场海关出不来，好不容易出关了，苏州又居家办公了……终于，到了劳动节，机器修好发回来了。&lt;/p&gt;
-&lt;h2 id=&quot;%E7%AC%AC%E4%BA%8C%E6%AC%A1%E7%83%A7&quot; tabindex=&quot;-1&quot;&gt;第二次烧&lt;/h2&gt;
-&lt;p&gt;在这段等待的时间里，我 买了一个YAESU FC-40自动天调。&lt;/p&gt;
-&lt;p&gt;初夏的北京，秋高气爽，春意盎然。&lt;/p&gt;
-&lt;p&gt;我把修回来的FTDX10恭恭敬敬地摆回了机位。把阳台外端馈天线的20米振子，从1:49巴伦上拿下来，绑在了FC-40天调上。 然后打开了FTDX10， 美丽的3D频谱显示了出来。&lt;/p&gt;
-&lt;p&gt;我拿起电键，调到了40米波段CW频点附近，把输出功率降低到20瓦，随手发了一个VVV。然后……又没有功率输出了。&lt;/p&gt;
-&lt;h2 id=&quot;%E4%B8%BA%E4%BB%80%E4%B9%88ftdx10%E4%BC%9A%E7%83%A7%E5%8A%9F%E6%94%BE&quot; tabindex=&quot;-1&quot;&gt;为什么FTDX10会烧功放&lt;/h2&gt;
-&lt;p&gt;这是我半年来一直思考的问题。&lt;/p&gt;
-&lt;p&gt;第一次烧，我当时在用22.5米长线，1:9巴伦，这套天馈曾经用VNA检查过，各波段驻波比都在1:3～1:8之间。也就是各波段都不太谐振，但驻波也不是高的很离谱。这根天线斜拉到楼下的树上，冬天曾经遭遇狂风大作，再加上FT8、远程操作，不知道哪下可能就给烧了。&lt;/p&gt;
-&lt;p&gt;第二次烧，纯粹是我大意了。我把20米的天线振子，接到了一个 全新的、 还 没 调过的 FC-40天调上，这相当于是直通振子的状态。大家都知道，20米天线在40米波段正好是半个波长，端馈输入的驻波是1:49，电压可以高达2450V上下……&lt;/p&gt;
-&lt;h2 id=&quot;%E5%87%A0%E4%B8%AA%E5%85%B3%E4%BA%8Eftdx10%E5%92%8Cfc-40%E7%9A%84%E9%87%8D%E8%A6%81%E4%BA%8B%E5%AE%9E&quot; tabindex=&quot;-1&quot;&gt;几个关于FTDX10和FC-40的重要事实&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;FTDX10只有驻波检测，没有高驻波保护&lt;/strong&gt;。它只负责告诉你驻波是高还是低，即便是高驻波，它也会继续发射，直到功放管烧掉。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;FTDX10在无法调谐的频点，就放弃调谐了&lt;/strong&gt;。当你看到调谐停止时，不代表调到了谐振。注意观察机内驻波表的指针，如果它调到最后又跳了一下，很可能没谐振。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;FTDX10不会自动识别是否接入了外置天调&lt;/strong&gt;。它需要在机器菜单里手动选择使用内置还是外置天调；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;FTDX10不会在高驻波时自动启调，而是每个频点都要人工调好&lt;/strong&gt;。甚至同一频段，不同频点上，都需要耐心调谐一下。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;FTDX10每个频段的天调开关状态是分别存储的&lt;/strong&gt;。而且不止是天调，包括BK-IN，KEYER，操作模式这些状态都是各频段分别记忆的。 这一点特别要留心，简言之40米波段设置好了，到了20米还要再搞一遍。 下次开机它也能记住。 如果重置了电台，别忘了各频段都要再搞一遍。&lt;/li&gt;
-&lt;li&gt;FTDX10在&lt;strong&gt;异频操作&lt;/strong&gt;时，尤其要注意&lt;strong&gt;发射频点是否调谐，是否开启了天调&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;全新的FC-40天调是直通的&lt;/strong&gt;，必须调谐过才会有记忆；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;FC-40天调没接控制线是直通的&lt;/strong&gt;。它没有用磁保持继电器，如果天调控制线没插好，既无法识别发射频点，也不能保持在上次的调谐状态，相当于直通。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;就说这么多吧。这样的系统在电信运营商眼里叫 &lt;strong&gt;“鲁棒性低”&lt;/strong&gt; 是不是？&lt;/p&gt;
-&lt;p&gt;毕竟FTDX10是个业余机，不是业务机。基本上它预设的操作场景，是一个老司机开着个八缸手动挡切诺基。相比之下，一套ICOM的系统，比如典型的IC-7300配一个AH-120自动天调，应用起来要轻松多了，有自动启调，有高驻波保护，几乎是傻瓜型的。&lt;/p&gt;
-&lt;p&gt;另外，我是从FT-817ND开始入坑的。玩QRP小功率，不需要太关注高驻波，这也留下很多坏毛病。两次烧功放的经历，算是把我的毛病治好了， 要认真度量系统冗余 ， &lt;strong&gt;要敬畏驻波&lt;/strong&gt; 。&lt;/p&gt;
-&lt;h2 id=&quot;%E9%82%A3%E4%B9%88%EF%BC%8C%E5%85%AB%E9%87%8D%E6%B4%B2%E8%BF%98%E5%80%BC%E5%BE%97%E4%BF%A1%E4%BB%BB%E5%90%97%EF%BC%9F&quot; tabindex=&quot;-1&quot;&gt;那么，八重洲还值得信任吗？&lt;/h2&gt;
-&lt;p&gt;这一点毋庸置疑。如果在“性能”和“应用”之间选择，性能还是首选。业余无线电，玩的就是个寂寞……更何况，八重洲给了&lt;em&gt;&lt;strong&gt;三年免费保修&lt;/strong&gt;&lt;/em&gt;（包邮换功放）服务，三年调教一个老司机足够了。&lt;/p&gt;
-&lt;h2 id=&quot;ftdx10%E5%BC%80%E6%9C%BA%E6%A3%80%E6%9F%A5%E5%8D%95&quot; tabindex=&quot;-1&quot;&gt;FTDX10开机检查单&lt;/h2&gt;
-&lt;p&gt;最后，我总结了一个FTDX10开机检查单，希望能改善自己的操作习惯。 也欢迎大家一起来交流操作心得。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;GSV3000电源检查
-&lt;ol class=&quot;task-list-container&quot;&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-0&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-0&quot;&gt; 电源电压旋钮是否在13.8V位置&lt;/label&gt;&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-1&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-1&quot;&gt; 电源引线接头是否有容易引起短路的异物&lt;/label&gt;&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-2&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-2&quot;&gt; 电源引线接头是否牢固&lt;/label&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;天馈系统检查
-&lt;ol class=&quot;task-list-container&quot;&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-3&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-3&quot;&gt; 检查天线振子是否在恰当的位置&lt;/label&gt;&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-4&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-4&quot;&gt; 检查天线馈线回路是否正常&lt;/label&gt;&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-5&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-5&quot;&gt; 检查平衡器是否正常连接&lt;/label&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;电台开机前检查
-&lt;ol class=&quot;task-list-container&quot;&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-6&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-6&quot;&gt; 外置天调接口是否牢固&lt;/label&gt;&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-7&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-7&quot;&gt; 驻波表接口是否牢固&lt;/label&gt;&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-8&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-8&quot;&gt; 电台端电源插头是否牢固&lt;/label&gt;&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-9&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-9&quot;&gt; 次第检查CW/USB/RTTY/DVI等外置设备接头是否牢固&lt;/label&gt;&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-10&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-10&quot;&gt; 检查手咪/耳机等接头是否接妥，确认无短路或接线干涉&lt;/label&gt;&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-11&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-11&quot;&gt; 音量旋钮位置&lt;/label&gt;&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-12&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-12&quot;&gt; SQL旋钮位置&lt;/label&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;电台开机后检查
-&lt;ol class=&quot;task-list-container&quot;&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-13&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-13&quot;&gt; 发射模式&lt;/label&gt;&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-14&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-14&quot;&gt; 发射功率&lt;/label&gt;&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-15&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-15&quot;&gt; 是否关闭异频工作模式&lt;/label&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;发射前检查
-&lt;ol class=&quot;task-list-container&quot;&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-16&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-16&quot;&gt; 天调设定位置：内置/外置&lt;/label&gt;&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-17&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-17&quot;&gt; 当前频段天调Tune开关状态&lt;/label&gt;&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-18&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-18&quot;&gt; 确认异频发射频率是否调谐&lt;/label&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;发射驻波检测（以CW模式）
-&lt;ol class=&quot;task-list-container&quot;&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-19&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-19&quot;&gt; 确认发射功率设定，是否小于等于5瓦&lt;/label&gt;&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-20&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-20&quot;&gt; 是否打开BK-IN&lt;/label&gt;&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-21&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-21&quot;&gt; KEYER开关状态&lt;/label&gt;&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; id=&quot;task-item-22&quot; disabled=&quot;disabled&quot;&gt;&lt;label class=&quot;task-list-item-label&quot; for=&quot;task-item-22&quot;&gt; 短按“点”，观察驻波&lt;/label&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
 </content>
   </entry>
 </feed>

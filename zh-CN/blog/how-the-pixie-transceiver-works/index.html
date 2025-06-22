@@ -3,33 +3,201 @@
 <head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Tagged &#39;Clippings&#39;</title>
+		<title>皮鞋的工作原理</title>
 		<meta name="description" content="CQ DE BG6LH K，欢迎访问我的数字花园！我的业余无线电笔记。">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="BG6LH">
 		<link rel="stylesheet" href="/css/style.out.css">
 		
 		
 		
-		<style>/* This is an arbitrary CSS string added to the bundle */</style>
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
 		
         <!-- favicon -->
         <link rel="icon" href="/img/me.svg" type="image/svg+xml">
 
         <!-- Open graph -->
-        <meta property="og:title" content="Tagged &#39;Clippings&#39;">
-        <meta property="og:description" content="Tagged &#39;Clippings&#39;">
+        <meta property="og:title" content="皮鞋的工作原理">
+        <meta property="og:description" content="皮鞋的工作原理">
         <meta property="og:type" content="article">
-        <meta property="article:tag" content="">
-        <meta property="og:url" content="/zh-CN/tags/clippings/">
+        <meta property="article:tag" content="posts,Clippings">
+        <meta property="og:url" content="/zh-CN/blog/how-the-pixie-transceiver-works/">
         <meta property="og:site_name" content="BG6LH">
         <meta property="og:locale" content="zh_CN">
-        <meta property="og:image" content="">
+        <meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_jpg/8havQfBUHoxr4FFIBII33XtibwR5h0ydJ7xS686wkuuwQzYYs5XrTEJ06sOdVjic3xoH7V0mVPObcmsGeBfAfrxA/0?wx_fmt=jpeg">
         <!-- Twitter -->
-        <meta name="twitter:title" content="Tagged &#39;Clippings&#39;">
+        <meta name="twitter:title" content="皮鞋的工作原理">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@jamflying">
-        <meta name="twitter:description" content="Tagged &#39;Clippings&#39;">
-        <meta name="twitter:image" content="">
+        <meta name="twitter:description" content="皮鞋的工作原理">
+        <meta name="twitter:image" content="https://mmbiz.qpic.cn/sz_mmbiz_jpg/8havQfBUHoxr4FFIBII33XtibwR5h0ydJ7xS686wkuuwQzYYs5XrTEJ06sOdVjic3xoH7V0mVPObcmsGeBfAfrxA/0?wx_fmt=jpeg">
 	</head>
 	<body class="bg-white dark:bg-slate-800 overflow-auto dark:text-white dark:text-gray-900" x-data="{
 	        open: false,
@@ -76,132 +244,6 @@
         <div class="flex items-center space-x-4">
             
             
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
             
 
             
@@ -318,86 +360,135 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 				
 
 
-<section id="mainContent" class="flex-col mx-auto p-0  dark:text-neutral-100">
-	<div class="mx-auto max-w-4xl p-0">
-		<div class="mx-auto p-6 my-0 text-2xl font-bold">
-			<h1 id="tagged-clippings">Tagged “Clippings”</h1>
-		</div>
-	</div>
-	<div class="mx-auto px-4 prose prose-neutral ">
 
-
-
-
-
-<article class="flex flex-row mx-auto mb-6 max-w-4xl
-                overflow-hidden rounded-md bg-white shadow-md
-                md:max-w-4xl md:h-64
-            ">
-    <div class="md:flex">
-        
-        
-        <div class="md:shrink-0 md:h-64 md:w-64 overflow-hidden">
-            <a href="/zh-CN/blog/how-the-pixie-transceiver-works/">
-                <picture><source type="image/avif" srcset="/zh-CN/tags/clippings/tQDXhsQKs3-1264.avif 1264w"><source type="image/webp" srcset="/zh-CN/tags/clippings/tQDXhsQKs3-1264.webp 1264w"><img loading="lazy" decoding="async" src="/zh-CN/tags/clippings/tQDXhsQKs3-1264.jpeg" class="object-cover md:aspect-square md:object-cover" alt="皮鞋的工作原理 image" width="1264" height="538"></picture>
-            </a>
-        </div>
-        
-        
-        <div class="p-8 pt-12 sm:pt-8 sm:pb-10">
-            <time class="text-xs font-semibold tracking-wide text-neutral-500 uppercase" datetime="2024-09-25 23:59:00 UTC">2024-09-25 23:59:00 UTC</time>
-            <h2 class="mb-2 font-bold uppercase text-xl text-neutral-800" id="">
-				<a href="/zh-CN/blog/how-the-pixie-transceiver-works/">皮鞋的工作原理</a>
-            </h2>
-            <div class="mx-auto prose prose-neutral">
-
-				
-                
-                    <p>原创 BG6LH BG6LH 2024年09月26日 07:59 皮鞋(Pixie) 是个“一石二鸟”的设计，它把信号放大和混频集合在同一个三极管上，大大缩小了电路的体积。四十多年过去了，它已经 是 业余 界 的...</p>
-                
-
+    
+        <figure class="w-full h-36 object-contain overflow-hidden md:h-96 ">
+            <img src="/zh-CN/blog/how-the-pixie-transceiver-works/tQDXhsQKs3-960.webp" class="w-full blur-xs brightness-75 scale-105" alt="皮鞋的工作原理 image" loading="lazy" decoding="async" width="960" height="408">
+        </figure>
+    
+<div class="mx-auto grid w-full max-w-4xl grid-cols-1 gap-4 md:grid-cols-[minmax(800px,1fr)_240px]">
+    <article class="bg-white p-8 md:p-12 mx-auto max-w-4xl prose prose-neutral">
+        <!-- article header : begin-->
+        <header class="flex flex-col mx-auto mb-12 border-t-neutral-500 border-b-1">
+            <div class="mx-auto font-bold md:text-xl text-center text-neutral-800">
+                <h1 id="">皮鞋的工作原理</h1>
             </div>
+            <time class="text-sm mx-auto text-neutral-400" datetime="2024-09-25 23:59:00 UTC">2024-09-25 23:59:00 UTC</time>
+            <span class="post-metadata flex flex-row mx-auto p-0">
+                关键词:
+                <a href="/zh-CN/tags/clippings/" class="post-tag">Clippings</a>
+            </span>
+        </header>
+        <!-- article header : end-->
+
+
+        <!-- article content : begin-->
+        <div class="mx-auto">
+            <p><picture><source type="image/avif" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/tQDXhsQKs3-1264.avif 1264w"><source type="image/webp" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/tQDXhsQKs3-1264.webp 1264w"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-the-pixie-transceiver-works/tQDXhsQKs3-1264.jpeg" alt="cover_image" width="1264" height="538"></picture></p>
+<p>原创 BG6LH <a href="https://mp.weixin.qq.com/s/">BG6LH</a> <em>2024年09月26日 07:59</em></p>
+<p>皮鞋(Pixie) 是个“一石二鸟”的设计，它把信号放大和混频集合在同一个三极管上，大大缩小了电路的体积。四十多年过去了，它已经 是 业余 界 的 传家宝。很多基于它的衍生设计流行于世。甚至还有人把皮鞋穿到了树莓派脚上做SDR。</p>
+<p>最近翻到一份介绍Pixie工作原理的资料，来自北卡罗来纳州无线电俱乐部。言简意赅地介绍了这个精妙的电路设计。我粗暴地翻译了一下。希望你也能体会到这个设计的用心之处。</p>
+<p>这里摘录关键的几页：</p>
+<table>
+<thead>
+<tr>
+<th><picture><source type="image/avif" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/q9PiiYiggb-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/q9PiiYiggb-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-the-pixie-transceiver-works/q9PiiYiggb-1080.png" alt="图片" width="1080" height="833"></picture></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>上图：这个 电键开合是重点，它决定了好几个功能。</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><picture><source type="image/avif" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/WJTgyGWT6d-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/WJTgyGWT6d-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-the-pixie-transceiver-works/WJTgyGWT6d-1080.png" alt="图片" width="1080" height="833"></picture></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>上图：电键按下，音频电路关闭，进入发射状态。本振产生的震荡经过Q2放大，由C5耦合到C6、L3、C7组成的低通滤波器上，从天线发射出去。</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><picture><source type="image/avif" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/uaY7flwgyf-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/uaY7flwgyf-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-the-pixie-transceiver-works/uaY7flwgyf-1080.png" alt="图片" width="1080" height="833"></picture></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>上图，电键松开，进入接收状态。 射频 信号和本振的信号在Q2发生 混频。</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><picture><source type="image/avif" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/jllOP5sg0p-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/jllOP5sg0p-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-the-pixie-transceiver-works/jllOP5sg0p-1080.png" alt="图片" width="1080" height="833"></picture></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>上图，混频之后的信号被C4过滤掉其它分量，只剩下射频和本振的差分分量，即音频，流进音频功放。</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><picture><source type="image/avif" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/neJBxfNGvC-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/neJBxfNGvC-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-the-pixie-transceiver-works/neJBxfNGvC-1080.png" alt="图片" width="1080" height="833"></picture></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>上图：电键按下前后，二极管上的电压不同，电容也不同，能带来收发频率的差异，这就是所谓的“RIT”， <strong>R</strong> eceiver <strong>I</strong> ncremental <strong>T</strong> uning，你说这都咋想到的！</td>
+</tr>
+</tbody>
+</table>
+<p>废话不多说了， 扫码可以直接微信阅读。原文链接也可以直接打开PDF。</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/RlK5ZIUgs0-886.avif 886w"><source type="image/webp" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/RlK5ZIUgs0-886.webp 886w"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-the-pixie-transceiver-works/RlK5ZIUgs0-886.png" alt="图片" width="886" height="443"></picture></p>
+
+            
+              <hr class="border-t-neutral-500 mb-2">
+              <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/p7bZWVGbLj-UsrpKK4nzDw" target="_blank">BG6LH - 皮鞋的工作原理</a></span>
+            
         </div>
-    </div>
-</article>
-<article class="flex flex-row mx-auto mb-6 max-w-4xl
-                overflow-hidden rounded-md bg-white shadow-md
-                md:max-w-4xl md:h-64
-            ">
-    <div class="md:flex">
-        
-        
-        <div class="md:shrink-0 md:h-64 md:w-64 overflow-hidden">
-            <a href="/zh-CN/blog/k3ng-inconvenient-truths-in-amateur-radio/">
-                <picture><source type="image/avif" srcset="/zh-CN/tags/clippings/NOGSHJHhyq-1280.avif 1280w"><source type="image/webp" srcset="/zh-CN/tags/clippings/NOGSHJHhyq-1280.webp 1280w"><img loading="lazy" decoding="async" src="/zh-CN/tags/clippings/NOGSHJHhyq-1280.jpeg" class="object-cover md:aspect-square md:object-cover" alt="业余无线电不可忽视的真相 image" width="1280" height="543"></picture>
-            </a>
+        <!-- article content : end-->
+
+        <!-- 翻页器 begin -->
+        <div class="mx-auto grid grid-cols-1 gap-2 py-12
+                    md:grid-cols-2
+                ">
+                        <a href="/zh-CN/blog/k3ng-inconvenient-truths-in-amateur-radio/" class="
+                        flex flex-col left-0 p-2 block hover:bg-neutral-100
+                        ">
+                            < 上一篇
+                            <br>
+                            业余无线电不可忽视的真相
+                        </a>
+                    
         </div>
-        
-        
-        <div class="p-8 pt-12 sm:pt-8 sm:pb-10">
-            <time class="text-xs font-semibold tracking-wide text-neutral-500 uppercase" datetime="2024-05-21 08:02:00 UTC">2024-05-21 08:02:00 UTC</time>
-            <h2 class="mb-2 font-bold uppercase text-xl text-neutral-800" id="-2">
-				<a href="/zh-CN/blog/k3ng-inconvenient-truths-in-amateur-radio/">业余无线电不可忽视的真相</a>
-            </h2>
-            <div class="mx-auto prose prose-neutral">
+        <!-- 翻页器 end -->
 
-				
-                
-                    <p>这是K3NG网站上一篇小作文，全文没有连贯的段落，但句句表达到位。K3NG是开源的Arduino CW Keyer的作者。</p><p>
-				
-                
+        <!-- Giscus : begin -->
+        <div class="mx-auto">
+        <div id="giscus_thread"></div>
 
-            </p></div>
         </div>
-    </div>
-</article>
+        <!-- Giscus : end -->
 
-<p>See <a href="/zh-CN/tags/">all tags</a>.</p>
+    </article>
+
+        <!-- toc begin -->
+        
+        <!-- toc end -->
 
 
-	</div>
-</section>
-
+</div>
 			</heading-anchors>
 		</main>
 		<footer class="flex w-full text-neutral-800 dark:text-neutral-100 bg-neutral-100 dark:bg-neutral-800">
@@ -409,7 +500,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 
     <!-- 网站栏目 -->
     <div class="">
-        <h3 class="font-bold mb-4" id="-3">网站导航</h3>
+        <h3 class="font-bold mb-4" id="-2">网站导航</h3>
         <nav class="list-none flex flex-row justify-center md:justify-start md:flex-col">
             
             
@@ -491,7 +582,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
     <div class="mx-auto m-3">
         <p>Copyright © 2025 BG6LH All rights reserved.</p>
         <p>Powered by Eleventy 3.1.0 & Tailwind CSS 4.1.7</p>
-        <a href="https://github.com/BG6LH/bg6lh.github.io/tree/main/./content/zh-CN/tag-pages.njk">Edit this page on GitHub</a>
+        <a href="https://github.com/BG6LH/bg6lh.github.io/tree/main/./content/zh-CN/blog/皮鞋的工作原理.md">Edit this page on GitHub</a>
     </div>
     <!-- copyright -->
     </div>
@@ -501,11 +592,11 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/tags/clippings/` was built on 2025-06-22T00:00:00.000Z -->
+		<!-- This page `/zh-CN/blog/how-the-pixie-transceiver-works/` was built on 2025-06-22T00:00:00.000Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>
-		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+		<script type="module" src="/dist/ffw-ctNm7S.js"></script>
 
 	</body>
 </html>
