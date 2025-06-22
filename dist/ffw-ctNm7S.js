@@ -229,9 +229,9 @@ window.addEventListener('load', function () {
     const giscus = document.createElement('script');
     giscus.src = 'https://giscus.app/client.js';
     giscus.setAttribute('data-repo', 'BG6LH/bg6lh.github.io'); // 替换为您的仓库信息
-    giscus.setAttribute('data-repo-id', 'R_kgDOOrq3kA');
+    giscus.setAttribute('data-repo-id', 'R_kgDOO4bJqA');
     giscus.setAttribute('data-category', 'General');
-    giscus.setAttribute('data-category-id', 'DIC_kwDOOrq3kM4Cqihn');
+    giscus.setAttribute('data-category-id', 'DIC_kwDOO4bJqM4CrdWE');
     giscus.setAttribute('data-mapping', 'pathname');
     giscus.setAttribute('data-strict', '0');
     giscus.setAttribute('data-reactions-enabled', '1');
