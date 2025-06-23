@@ -338,6 +338,54 @@ AI跟PD0R的QSO
 </content>
   </entry>
   <entry>
+    <title>YAESU调AMC，ICOM玩DPD</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/digital-pre-distortion-and-its-impact-on-amateur-radio-transmissions/" />
+    <updated>2024-06-09T12:38:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/digital-pre-distortion-and-its-impact-on-amateur-radio-transmissions/</id>
+    <content type="html">&lt;p&gt;有多少人注意到 ICOM 7610最新的固件更新中，已经增加了数字预失真(Digital Pre-Distortion)功能？&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/digital-pre-distortion-and-its-impact-on-amateur-radio-transmissions/uj-QOwyoPd-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/digital-pre-distortion-and-its-impact-on-amateur-radio-transmissions/uj-QOwyoPd-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/digital-pre-distortion-and-its-impact-on-amateur-radio-transmissions/uj-QOwyoPd-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;532&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;h2 id=&quot;yaesu%E7%9A%84amc&quot; tabindex=&quot;-1&quot;&gt;YAESU的AMC&lt;/h2&gt;
+&lt;p&gt;很多用YAESU FTDX系列机器老中医都有一个体会，当在SSB上嚼碎布的时候，喊的全楼都听见了，但“功率表”还是打不到头。这时你可能需要调整一下AMC了。&lt;/p&gt;
+&lt;p&gt;AMC，自动麦克风增益控制，这是FTDX系列机器上的一个新功能。它其实不是控制麦克风增益的，它是一个可以影响发射信号增益的参数。旨在控制发射信号不要失真，不要产生意外的杂散信号。网上有个段子说，如果你看到了“8KHz”的SSB信号，这人十有八九在用YAESU。&lt;/p&gt;
+&lt;p&gt;AMC要跟ALC配合着调。一般来说观察ALC读数在75上下，再把AMC参数设置在55上下，发射的信号和功率能相对完美一些。但这只是自己看到了，并不代表别人收到你的信号是不是干净。所以两套参数互相叠加，这又成了玄学了。为什么会这样？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;今天越来越多的收发信机采用数字技术，整个电路的复合噪声水平越来越高。&lt;/li&gt;
+&lt;li&gt;大部分机器都采用固态MOSFET功放，线性度比电子管差。&lt;/li&gt;
+&lt;li&gt;常规射频架构下，信号和功放叠加，难免会产生互调、交调，导致发射出去的信号“非线形失真”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;控制不好这个失真，结果就是“无意间”产生的各种信号“飞溅”、过饱和调制、带外杂散、鬼影……更重要的是，由于发射信号失真，实际的发射功率也打了折扣，比如设计2倍3dB的放大率，最后输出可能1dB都没有，消失的那部分功率被浪费去发热了。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/digital-pre-distortion-and-its-impact-on-amateur-radio-transmissions/ELCfowBvsc-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/digital-pre-distortion-and-its-impact-on-amateur-radio-transmissions/ELCfowBvsc-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/digital-pre-distortion-and-its-impact-on-amateur-radio-transmissions/ELCfowBvsc-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;675&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;玩过鱼洗吗？是不是感觉有点像。&lt;/p&gt;
+&lt;h2 id=&quot;%E5%85%B3%E4%BA%8E%E6%95%B0%E5%AD%97%E9%A2%84%E5%A4%B1%E7%9C%9F&quot; tabindex=&quot;-1&quot;&gt;关于数字预失真&lt;/h2&gt;
+&lt;p&gt;按道理说，这类失真对于数字化程度高的SDR是个软肋。但SDR却有先天优势来解决：它只要给FPGA加个算法，计算好失真度，反向补偿给功放，就能发射出一个完美的“纯信号”。&lt;/p&gt;
+&lt;p&gt;这就是所谓“Digital Pre-Distortion (DPD)”，有的地方也叫“Adaptive Digital Pre-distortion”，ADP，自适应数字预失真。&lt;/p&gt;
+&lt;p&gt;DPD的信号不仅纯净，还能发挥功放几乎百分之百的功率，信号增益至少提升几个dB。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/digital-pre-distortion-and-its-impact-on-amateur-radio-transmissions/ocBO6WwtY8-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/digital-pre-distortion-and-its-impact-on-amateur-radio-transmissions/ocBO6WwtY8-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/digital-pre-distortion-and-its-impact-on-amateur-radio-transmissions/ocBO6WwtY8-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;478&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;上边这张图是ICOM-7610在炫耀的DPD效果。信号波形的“裙摆”效应明显削弱了。&lt;/p&gt;
+&lt;h2 id=&quot;arrl%E7%9A%84%E7%BA%AF%E5%87%80%E4%BF%A1%E5%8F%B7%E5%80%A1%E8%AE%AE%EF%BC%88csi%EF%BC%89&quot; tabindex=&quot;-1&quot;&gt;ARRL的纯净信号倡议（CSI）&lt;/h2&gt;
+&lt;p&gt;今天在专业无线电领域，比如蜂窝、5G、WiFi，DPD已经司空见惯了。但在业余无线电领域还很少见。&lt;/p&gt;
+&lt;p&gt;DPD技术是在纯粹的“软件无线电”领域才有的概念。之前只有ANAN的Apache用到了，现在ICOM 7610刚刚跟进。FlexRadio很早就提了ADP，但好像一直跳票到现在。这些都是收、发全是SDR的设备。&lt;/p&gt;
+&lt;p&gt;毕竟老中医们更关心设备的接收 性能，很少有人关注发射性能——因为“接收”的感官体验更直接，发射成啥样自己感觉不到。&lt;/p&gt;
+&lt;p&gt;于是ARRL认为在SDR时代到来之际，提高信号纯净度是一个机遇。2023年他们提出了“纯净信号倡议”，Clean Signal Initiative（CSI）。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/digital-pre-distortion-and-its-impact-on-amateur-radio-transmissions/sZjzNYsJE3-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/digital-pre-distortion-and-its-impact-on-amateur-radio-transmissions/sZjzNYsJE3-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/digital-pre-distortion-and-its-impact-on-amateur-radio-transmissions/sZjzNYsJE3-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;403&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;一方面，CSI倡导爱好者关注发射参数调试，另一方面，CSI也会通过增加信号纯净度测评等手段，鼓励厂商纠正发射指标和特性。&lt;/p&gt;
+&lt;h2 id=&quot;%E5%AF%B9yaesu%E7%9A%84%E4%B8%AD%E8%82%AF%E8%AF%84%E4%BB%B7&quot; tabindex=&quot;-1&quot;&gt;对YAESU的中肯评价&lt;/h2&gt;
+&lt;p&gt;对于业余无线电老中医，大家都遇见过发射过饱和、过调制、带外杂散等等现象吧。它不仅仅在SSB模式上有，在FT8、RTTY、FM上也有，甚至CW模式上都有可能发生。改善 手段基本是调整各种音频的增益和AGC参数，并关注ALC表的指示。&lt;/p&gt;
+&lt;p&gt;YAESU的AMC功能出现之后，网上有丰富讨论、测评，FTDX系列的发射指标有了显著的提升。我们也替YAESU找补一下哈，毕竟我自己也在用FTDX10。&lt;/p&gt;
+&lt;p&gt;在模拟世界，对信号纯净度的极致追求，YAESU是认真的。&lt;/p&gt;
+&lt;p&gt;哦？这说明FTDX只有接收是SDR，发射还是模拟的。&lt;/p&gt;
+&lt;p&gt;电子管功放是个好东西。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;参考资料&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.icomjapan.com/lineup/products/IC-7610/&quot;&gt;ICOM 7610 网站&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.arrl.org/files/file/QST/This%20Month%20in%20QST/2023/06%20june%2023/0623%20article%20Ritz.pdf&quot;&gt;ARRL 干净信号倡议&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.analog.com/cn/resources/analog-dialogue/articles/digital-predistortion-for-rf-communication.html&quot;&gt;RF通信的数字预失真：从等式到实现方案&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.analog.com/cn/resources/analog-dialogue/articles/how-to-make-a-digital-predistortion-solution-practical-and-relevant.html&quot;&gt;如何实现实用且有效的数字预失真解决方案&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.wirelessgirl.net/Projects/FTDX101D_AudioSetup.html&quot;&gt;探索八重洲 FTDX101D在FTDX101、FTDX10、FT710 中传输音频麦克风增益、AMC、处理、均衡器、飞溅、失真固化飞溅&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry>
     <title>业余无线电不可忽视的真相</title>
     <link href="https://bg6lh.github.io/zh-CN/blog/k3ng-inconvenient-truths-in-amateur-radio/" />
     <updated>2024-05-21T08:02:00Z</updated>
@@ -501,6 +549,74 @@ AI跟PD0R的QSO
 </content>
   </entry>
   <entry>
+    <title>DL8MRE的USB电键接头</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/" />
+    <updated>2024-05-19T11:54:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/</id>
+    <content type="html">&lt;p&gt;DL8MRE给FlexRadio、Icom和YAESU各做了一套远程操作软件。几个软件都提到一个USB的电键接头，姑且叫它&lt;strong&gt;DL8MRE接头&lt;/strong&gt;吧，有了它就可以使用外置电键远程CW，这个太诱人了。&lt;/p&gt;
+&lt;h2 id=&quot;dl8mre%E7%9A%84%E8%BF%9C%E7%A8%8Bcw%E5%B7%A5%E5%85%B7&quot; tabindex=&quot;-1&quot;&gt;DL8MRE的远程CW工具&lt;/h2&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/0zMvM-2DDJ-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/0zMvM-2DDJ-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/0zMvM-2DDJ-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;758&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;先看看他的远程CW工具，这是一个CW软件Keyer，附加在前边说的三个远程SDR控制软件中。&lt;/p&gt;
+&lt;p&gt;它支持两种输入CW的方式：&lt;strong&gt;键盘、外置双桨电键&lt;/strong&gt;。然后它把输入的CW键控指令发给本地的收发信机，同时在远程电脑上产生CW侧音。但是DL8MRE没有公开这个“键控”的产生、传输过程，我很好奇它发出去的是什么信号，是FSK？音频？还PTT？&lt;/p&gt;
+&lt;div class=&quot;callout callout-info&quot;&gt;
+&lt;p&gt;注意：讨论远程操作时一般把收发信机那头叫“本地、Local”，远离收发信机那头，叫“远程、Remote”。&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;下图是CW工具的设置。可以调整CW的速度、音调，还有侧音。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/cqaipht-uS-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/cqaipht-uS-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/cqaipht-uS-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;883&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;但他的文档里，没说支持任何第三方键控器，比如Winkeyer、K3NG Keyer、魔键，这类的。&lt;/p&gt;
+&lt;h2 id=&quot;dl8mre%E7%9A%84usb%E4%B8%B2%E5%8F%A3%E8%BF%9E%E6%8E%A5%E6%96%B9%E6%B3%95&quot; tabindex=&quot;-1&quot;&gt;DL8MRE的USB串口连接方法&lt;/h2&gt;
+&lt;p&gt;他用了一个USB转DB9的电缆，把CW双桨电键连到了DCD、RTS、CTS三个针脚上。并且在CW工具里对针脚的通断做了识别。这是一种通过串行接口(COM)接入电脑的方案。&lt;/p&gt;
+&lt;p&gt;我手边正好有一块微雪的USB转UART(TTL)的实验板。芯片还是CP2102的，和FTDX10的USB接口一样，Icom用的也是这个，所以Mac驱动可以省了。副厂的板子更便宜，不到10块钱就搞定，还能买个Type-C的。 &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/rrUeNKkne_-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/rrUeNKkne_-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/rrUeNKkne_-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;431&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;从正面看，这个板上有RTS和CTS针脚，也预留了DCD针脚，只是标记在背面。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/XB2rweCm9d-1024.avif 1024w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/XB2rweCm9d-1024.webp 1024w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/XB2rweCm9d-1024.jpeg&quot; alt=&quot;图片&quot; width=&quot;1024&quot; height=&quot;344&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;因为针脚功能的定义是DL8MRE软件里写好的，所以踏踏实实按照他的接法做就行。以下是他文档里建议的接法：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;电键&lt;/th&gt;
+&lt;th&gt;3.5mm插头&lt;/th&gt;
+&lt;th&gt;USB-TTL板子&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;嘀&lt;/td&gt;
+&lt;td&gt;Tip&lt;/td&gt;
+&lt;td&gt;CTS，CTS和GND之间接10nF的电容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;嗒&lt;/td&gt;
+&lt;td&gt;Ring&lt;/td&gt;
+&lt;td&gt;DCD ，DCD和GND之间接10nF的电容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;公共&lt;/td&gt;
+&lt;td&gt;Sleeve&lt;/td&gt;
+&lt;td&gt;RTS&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;电容用来消除电键通断时的信号抖动，我选了两个瓷片104，直接焊在了板子背面。&lt;/p&gt;
+&lt;p&gt;下边是接好的样子。以及背面的电容。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/7IccOUvEcQ-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/7IccOUvEcQ-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/7IccOUvEcQ-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;607&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/4yOBHA4cOs-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/4yOBHA4cOs-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/4yOBHA4cOs-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;607&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;这个接头也可以接一个脚踏板，在SSB模式下当作PTT的远程开关用。 &lt;strong&gt;但是，它 居然 不支持直键 。&lt;/strong&gt; 这有点遗憾。&lt;/p&gt;
+&lt;h2 id=&quot;%E8%BF%9C%E7%A8%8B%E6%89%8B%E9%94%AEcw%E4%BD%BF%E7%94%A8%E4%BD%93%E4%BC%9A&quot; tabindex=&quot;-1&quot;&gt;远程手键CW使用体会&lt;/h2&gt;
+&lt;p&gt;我在局域网、广域网环境下都做了测试。 &lt;strong&gt;总的来说很爽。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/S448Wavv5H-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/S448Wavv5H-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/S448Wavv5H-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;607&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;上图是我把这套全接好的场景。我另开了一个Windows上的SCU-LAN10想做个监控。可惜它跟FT-Control不能同时接入。&lt;/p&gt;
+&lt;p&gt;F T-Control for Mac对FTDX10的操作很准确， 本地MONI正常，CW编码、发射也正常，没有出现意想不到的情况。 从S pots上， 也看到了别人准确地识别了我。很靠谱。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/mHa8gkPFmW-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/mHa8gkPFmW-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/dl8mres-usb-keyer-for-remote-cw-operation/mHa8gkPFmW-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;70&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;h2 id=&quot;flexradio%E5%92%8Cicom%E4%B9%9F%E8%83%BD%E7%94%A8&quot; tabindex=&quot;-1&quot;&gt;FlexRadio和Icom也能用&lt;/h2&gt;
+&lt;p&gt;从DL8MRE的文档上看，Icom和 FlexRadio都有提到做这么个接头。&lt;s&gt;而且包括FTDX系列的文档里也都提到，它能支持直键&lt;/s&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://documents.roskosch.de/smartsdr-mac/index.html#document-10_usb_serial_cable&quot;&gt;FlexRadio的SmartSDR for Mac（官方认证版）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://documents.roskosch.de/sdr-control-mac/index.html#document-10_usb_serial_cable&quot;&gt;Icom的SDR-Control for Mac文档&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但是到今天直键还不能用。或许以后更新了可以用？因为我没有FlexRadio，和Icom，所以也不知道他俩究竟能不能用，体验如何。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
     <title>拼插玩具：天线入户板</title>
     <link href="https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/" />
     <updated>2023-04-28T00:09:00Z</updated>
@@ -638,65 +754,6 @@ AI跟PD0R的QSO
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
-</content>
-  </entry>
-  <entry>
-    <title>nanoVNA的测试板小套件</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/" />
-    <updated>2023-03-20T15:58:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/</id>
-    <content type="html">&lt;p&gt;在淘宝店买了一个nanoVNA的Testboard套件。 可以辅助nanoVNA测量一些元件的射频性能，测试一些电路的反射系数和插损。看起来很方便的样子。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/LPSncFnrP8-552.avif 552w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/LPSncFnrP8-552.webp 552w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/LPSncFnrP8-552.jpeg&quot; alt=&quot;图片&quot; width=&quot;552&quot; height=&quot;414&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;来自第一个把nanoVNA开源项目做成产品的&lt;a href=&quot;https://gen111.taobao.com&quot;&gt;Hugen的店&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;买回来有点懵圈，里边有两个0805的贴片49Ω电阻，贴哪儿？ 整个板子上还有一个七七四十九的排母阵列，怎么用？ 于是上网收集了一些资料。 在这里做一个笔记。&lt;/p&gt;
-&lt;p&gt;首先找到一张&lt;code&gt;KL0S&lt;/code&gt;画的nanoVNA测试板的草图&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/#footnote1&quot;&gt;[1]&lt;/a&gt;&lt;a class=&quot;footnote-anchor&quot; id=&quot;footnote-ref1&quot;&gt;&lt;/a&gt;&lt;/sup&gt;。下边这张图是完全按照比照测试板画的。有三对儿SMA母座是作为测试的接口。但是上下两对儿其实是预留给某种目的的校准、或匹配电路的。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/QberJVz-EH-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/QberJVz-EH-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/QberJVz-EH-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1388&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;中间一对儿SMA母座连接着7x7的测试排母阵列。但是这个阵列不是完全独立或者联通的。它有一定排布的结构 ， 用来 跨 接各种可能的 组 合 。&lt;/p&gt;
-&lt;p&gt;测试板的核心设计，其实是参考了DG8SAQ设计SDR-Kits的测试板&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/#footnote2&quot;&gt;[2]&lt;/a&gt;&lt;a class=&quot;footnote-anchor&quot; id=&quot;footnote-ref2&quot;&gt;&lt;/a&gt;&lt;/sup&gt;。下边这张图是测试排母焊盘结构。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/yVGFS5jkeH-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/yVGFS5jkeH-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/yVGFS5jkeH-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;787&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;那两个0805的49Ω贴片电阻，也可以直接用来做成测试用的小工具，和测试电路组合使用。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/8oqRfBo8c--1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/8oqRfBo8c--1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/8oqRfBo8c--1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;842&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;上图：《VNWA Testboard kit for Ham Radio Workshop》by DG8SAQ  &lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/#footnote2&quot;&gt;[2:1]&lt;/a&gt;&lt;a class=&quot;footnote-anchor&quot; id=&quot;footnote-ref2:1&quot;&gt;&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;最后，为了从正面容易识别排母之间的关系，我用娃的琉金彩绘笔给它们上了点颜色。是不是很好看？&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/9UEG28F5Nb-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/9UEG28F5Nb-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/9UEG28F5Nb-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;关于具体的测试实验，DG8SAQ写过一个PPT，详细介绍了如何使用，如何DIY一些小零件辅助测试：&lt;strong&gt;Experiments with the DG8SAQ VNWA and the SDR-Kits Test Board&lt;/strong&gt; 。&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/#footnote3&quot;&gt;[3]&lt;/a&gt;&lt;a class=&quot;footnote-anchor&quot; id=&quot;footnote-ref3&quot;&gt;&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;以上资料都在本文末尾脚注里，有兴趣的朋友可以去看看。&lt;/p&gt;
-&lt;hr class=&quot;footnotes-sep&quot;&gt;
-&lt;section class=&quot;footnotes&quot;&gt;
-&lt;ol class=&quot;footnotes-list&quot;&gt;
-&lt;li id=&quot;footnote1&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://groups.io/g/nanovna-users/attachment/25683/0/NanoVNA%20Test%20Kit%20_KL0S_.pdf&quot;&gt;https://groups.io/g/nanovna-users/attachment/25683/0/NanoVNA%20Test%20Kit%20_KL0S_.pdf&lt;/a&gt; &lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/#footnote-ref1&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&quot;footnote2&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://www.sdr-kits.net/documents/Testboard_kit.pdf&quot;&gt;https://www.sdr-kits.net/documents/Testboard_kit.pdf&lt;/a&gt; &lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/#footnote-ref2&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt; &lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/#footnote-ref2:1&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&quot;footnote3&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;Experiments with the DG8SAQ VNWA and the SDR-Kits Test Board, By Tom BAIER DG8SAQ：&lt;a href=&quot;https://groups.io/g/nanovna-users/attachment/14860/1/VNWA_Experiments.pdf&quot;&gt;https://groups.io/g/nanovna-users/attachment/14860/1/VNWA_Experiments.pdf&lt;/a&gt; &lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/nanovna-testboard-kit/#footnote-ref3&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/section&gt;
-</content>
-  </entry>
-  <entry>
-    <title>GAWANT天线三脚架安装板</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/" />
-    <updated>2023-03-10T18:11:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/</id>
-    <content type="html">&lt;p&gt;为了更好地体验BD6CR的 &lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzU1MDk5Mzg4Mg==&amp;amp;mid=2247486193&amp;amp;idx=1&amp;amp;sn=e387952c96f33d6ef81aa89106d2235f&amp;amp;scene=21#wechat_redirect&quot;&gt;ADX-S&lt;/a&gt; 收发器，我做了一个3D打印的三脚架安装板。可以把 &lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247484070&amp;amp;idx=1&amp;amp;sn=00a6a242207ba50364b176d01e343010&amp;amp;scene=21#wechat_redirect&quot;&gt;GAWANT天线&lt;/a&gt; 支起来用。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/xOm32FSAXN-628.avif 628w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/xOm32FSAXN-628.webp 628w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/xOm32FSAXN-628.png&quot; alt=&quot;图片&quot; width=&quot;628&quot; height=&quot;472&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;这是受Elecraft的AX1天线适配器的启发，它用了个金属的小片片固定了一个BNC双母头的直通连接器。我碰巧有个3D打印机，于是就做了这么个设计，半小时就搞定了。&lt;/p&gt;
-&lt;p&gt;BNC双通型号是SL16-KKY。 有的店也标做 SL1 6-KKY-1， SL16 -KKY/母 。 中间 螺纹部分 的直径是12.9mm。&lt;/p&gt;
-&lt;p&gt;为了增加支撑强度，我给四周加了一圈3mm高的墙。三脚架安装部分正好可以加厚，放一个预埋螺母进去。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/83f8x0ymWV-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/83f8x0ymWV-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/83f8x0ymWV-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;碰巧我还有几个预埋螺母。 外径8mm。 所以我设计的预埋孔上开口9mm，下开口6mm。 把螺母在上开口放平，用一只加热的烙铁，抵住螺母顶部，轻轻往下推，时刻注意保持螺母水平。&lt;/p&gt;
-&lt;p&gt;留意烙铁的温度，比3D打印材料的打印温度稍高一点就好。 我用的PLA材料打印温度是220°C，所以埋螺母时，我把烙铁加热到了240°C。如果太热，材料液化的太快、螺母进的也太快、四周容易变形。&lt;/p&gt;
-&lt;p&gt;这个结构支撑2米以内的拉杆天线问题不大。但是天线想横着有点难。即便是2米拉杆横在这么短的结构上产生的力矩也很大。我在一个球形的小云台上做了实验，结果是小板子还好，但是云台的球抗不住了。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/eSMMMyI7gD-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/eSMMMyI7gD-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/eSMMMyI7gD-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1440&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;支撑GAWANT天线的效果。我的ADX-S还没调试好，所以背景是个QCX-mini。周末打算带到杭州桐庐的茶山上玩玩。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/M_Bd9wvFNn-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/M_Bd9wvFNn-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/M_Bd9wvFNn-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;感兴趣的朋友可以到Thingiverse.com上下载去，地址是：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;BNC antenna tripod adapter&lt;/strong&gt;: &lt;a href=&quot;https://www.thingiverse.com/thing:5899922&quot;&gt;https://www.thingiverse.com/thing:5899922&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;扫码也可以哦。我的空间里也有QCX-mini的外壳，免费下，别客气。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/hbR7dzy9qM-200.avif 200w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/hbR7dzy9qM-200.webp 200w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/hbR7dzy9qM-200.png&quot; alt=&quot;图片&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>
