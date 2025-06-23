@@ -5,11 +5,80 @@
   <subtitle>CQ DE BG6LH K，欢迎访问我的数字花园！我的业余无线电笔记。Copyright © 2025 BG6LH</subtitle>
   <link href="https://bg6lh.github.io/feed/feed.xml" rel="self" />
   <link href="https://bg6lh.github.io/" />
-  <updated>2024-09-25T23:59:00Z</updated>
+  <updated>2025-04-28T04:42:00Z</updated>
   <id>https://bg6lh.github.io/</id>
   <author>
     <name>BG6LH</name>
   </author>
+  <entry>
+    <title>AI已经开始参加无线电比赛了</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/ai-operator-in-the-2025-eudx-contest/" />
+    <updated>2025-04-28T04:42:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/ai-operator-in-the-2025-eudx-contest/</id>
+    <content type="html">&lt;p&gt;2025年的EUDX比赛中，来自奥地利业余无线电台OE1GAQ利用AI参加了SSB比赛，从他分享的内容看，AI至少可以“摆摊儿”了。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ai-operator-in-the-2025-eudx-contest/-3fjM9v0Gy-519.avif 519w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ai-operator-in-the-2025-eudx-contest/-3fjM9v0Gy-519.webp 519w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ai-operator-in-the-2025-eudx-contest/-3fjM9v0Gy-519.png&quot; alt=&quot;图片&quot; width=&quot;519&quot; height=&quot;292&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;OE1GAQ的照片，来自QRZ.com/db/QE1GAQ&lt;/p&gt;
+&lt;h2 id=&quot;ai%E6%AF%94%E8%B5%9B%E8%A7%86%E9%A2%91&quot; tabindex=&quot;-1&quot;&gt;AI比赛视频&lt;/h2&gt;
+&lt;p&gt;先看个热闹，这三个视频来自OE1GAQ在个人网站上的分享，AI扮演了一个叫Talos的女话务员，业务相当老练。&lt;/p&gt;
+&lt;div style=&quot;position: relative; padding: 30% 45%;&quot;&gt;
+		  &lt;iframe style=&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot; src=&quot;https://player.bilibili.com/player.html?bvid=BV1V7N9zuE1j&amp;cid=30639654002&amp;page=1&amp;high_quality=1&amp;autoplay=false&quot; frameborder=&quot;no&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;true&quot;&gt;
+	      &lt;/iframe&gt;
+		&lt;/div&gt;
+AI跟GX3WTP的QSO
+&lt;div style=&quot;position: relative; padding: 30% 45%;&quot;&gt;
+		  &lt;iframe style=&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot; src=&quot;https://player.bilibili.com/player.html?bvid=BV1V7N9zuE1c&amp;cid=30639653150&amp;page=1&amp;high_quality=1&amp;autoplay=false&quot; frameborder=&quot;no&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;true&quot;&gt;
+	      &lt;/iframe&gt;
+		&lt;/div&gt;
+AI跟G1ZHD的QSO
+&lt;div style=&quot;position: relative; padding: 30% 45%;&quot;&gt;
+		  &lt;iframe style=&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot; src=&quot;https://player.bilibili.com/player.html?bvid=BV197N9zMEw1&amp;cid=30639653359&amp;page=1&amp;high_quality=1&amp;autoplay=false&quot; frameborder=&quot;no&quot; scrolling=&quot;no&quot; allowfullscreen=&quot;true&quot;&gt;
+	      &lt;/iframe&gt;
+		&lt;/div&gt;
+AI跟PD0R的QSO
+&lt;p&gt;在比赛里，AI跟PD0R、GX3WTP、G1ZHD自动完成了QSO。其中和G1ZHD的通联，AI说完对方可能有点懵，OE1GAQ人工插进去救场。&lt;/p&gt;
+&lt;h2 id=&quot;oe1gaq%E7%9A%84%E4%BD%93%E4%BC%9A&quot; tabindex=&quot;-1&quot;&gt;OE1GAQ的体会&lt;/h2&gt;
+&lt;p&gt;信号好AI表现就好。信号59+的QSO，AI都完成得很轻松。&lt;/p&gt;
+&lt;p&gt;但AI也会出现幻觉。比如，报完“CQ Contest……”，不等别人应答，就自己来了句：“请使用国际无线电话拼写字母表缓慢地重复您的呼号。 完毕……”&lt;/p&gt;
+&lt;p&gt;AI“摆摊儿”(Calling CQ，Running，主叫)的表现更好，这离不开他的人为干预。比如，对方信号很弱，AI语音识别很困难的时候，他干脆就跳过去、别浪费时间了。&lt;/p&gt;
+&lt;p&gt;相比来说“扫地”(Search&amp;amp;Pounce，搜索并应答)的时候就尴尬了。主叫都问了三遍，AI这边还没计算好答案……深度思考中么？相对比赛来说，这反应太慢了。不过他觉得改改程序应该能有提升。&lt;/p&gt;
+&lt;h2 id=&quot;%E4%BD%A0%E4%B9%9F%E8%83%BD%E6%95%B4%E4%B8%AAai%E8%AF%9D%E5%8A%A1%E5%91%98&quot; tabindex=&quot;-1&quot;&gt;你也能整个AI话务员&lt;/h2&gt;
+&lt;p&gt;从QE1GAQ分享内容看，他这套系统的要点是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用python做了全套控制脚本；&lt;/li&gt;
+&lt;li&gt;通过CAT控制IC-7300收发SSB；&lt;/li&gt;
+&lt;li&gt;使用付费版的ChatGPT API和Google的语音合成API；&lt;/li&gt;
+&lt;li&gt;发射时，用ChatGPT先产生文本，再交给Google的语音合成生成一段MP3文件，最后交给IC-7300发射出去；&lt;/li&gt;
+&lt;li&gt;接收时，把IC-7300收到的音频录成文件WAV，交给Google语音分析转为文字，作为提示词(Prompt)交给ChatGPT去执行动作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;他没有详细介绍程序的逻辑，也没有提到是否在自己的电脑上部署了大模型，是否做了模型微调。看起来只是简单实现了自动化的SSB语音收发、和QSL记录。说白了就是让AI通过SSB跟人聊天。这在奥地利得花钱买API才能实现？&lt;/p&gt;
+&lt;p&gt;在国内，AI领域卷的一塌糊涂，这些能力都是免费的。如果你也想试试，可以直接拿着元宝或者豆包，用声控发射(VOX)搞一波。要不要趁“五·五节”凑个热闹？&lt;/p&gt;
+&lt;h2 id=&quot;%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%AE%BE%E8%AE%A1&quot; tabindex=&quot;-1&quot;&gt;提示词设计&lt;/h2&gt;
+&lt;p&gt;提示词就是你跟AI的对话。你想让大语言模型听话，就要精心设计提示词。一方面要让它按照业余无线电的规则交流，另一方面，防止它自由发挥。OE1GAQ的实验里，就出现过AI用文本输出了一堆仿CW信号、滴哒哒哒哒这样的文字，还用文字把载波信号给写出来了……&lt;/p&gt;
+&lt;p&gt;下边我直接把OE1GAQ设计的提示词翻译成了中文，大家可以发给自己的AI试试：&lt;/p&gt;
+&lt;p&gt;以下是“摆摊儿”的提示词：&lt;/p&gt;
+&lt;pre class=&quot;language-markdown&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; 你是一个业余无线电单边带（SSB）电台。
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; 你的呼号是 OE1GAQ。
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; 你是一个主叫台：CQ Contest，Oscar Echo One Golf Alpha Quebec，Oscar Echo One Golf Alpha Quebec，Contest。
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; 交换信号报告 59 AT01（五九，Αlpha Tango Zero One）。
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; 你的名字是 Talos。
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; 使用国际无线电通话中的&lt;span class=&quot;token italic&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token content&quot;&gt;语音字母表&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;*&lt;/span&gt;&lt;/span&gt;拼读呼号。
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; 你正在参加竞赛，请保持通联简短。
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; 若无法理解对方呼号，请持续询问直至获得完整呼号和报告。&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;EUDX的比赛中，QSO的交换信息是双方的地区编码，AT01是奥地利维也纳的编码。这跟咱们的WAPC规则很像，咱们交换的是省份的简写。&lt;/p&gt;
+&lt;p&gt;以下是“扫地”的提示词：&lt;/p&gt;
+&lt;pre class=&quot;language-markdown&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; 你是一个业余无线电 SSB 电台。
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; 你的呼号是 Oscar Echo One Golf Alpha Quebec。
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; 你是一个“搜索应答模式”的电台，仅说出你的呼号。
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; 若对方说出你的呼号，告知对方你的呼号和报告。
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; 若未收到回复，重复你的呼号。
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; 发送信号报告 59 AT01。
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; 使用国际无线电通话中的&lt;span class=&quot;token italic&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token content&quot;&gt;语音字母表&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;*&lt;/span&gt;&lt;/span&gt;拼读呼号。&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我承认，我不知道该怎么简单地教会国内的AI什么是摆摊儿，什么是扫地。希望它们能自学成才。&lt;/p&gt;
+&lt;h2 id=&quot;%E7%BB%93%E6%9D%9F%E8%AF%AD&quot; tabindex=&quot;-1&quot;&gt;结束语&lt;/h2&gt;
+&lt;p&gt;OE1GAQ的这套玩意儿算不算AI话务员？应该算。毕竟他用到了大语言模型和语音合成技术。这些都是AI的典型应用场景。这可能不是第一个AI值机员，但肯定不会是最后一个。用 AI 玩无线电有意思吗？挺有意思的啊。 科技 + 热爱 = 无限可能 ，就像辣条配可乐——主打一个奇妙混搭！业余无线电可不是老古董，新技术来了随时可以精神焕发。你怎么看？&lt;/p&gt;
+&lt;p&gt;OE1GAQ的小站： &lt;a href=&quot;https://www.geraldartner.at/&quot;&gt;https://www.geraldartner.at/&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>皮鞋的工作原理</title>
     <link href="https://bg6lh.github.io/zh-CN/blog/how-the-pixie-transceiver-works/" />
@@ -608,65 +677,6 @@
 &lt;p&gt;现在这根20米长的天线只能工作在40/20/15/10米四个波段，典型的EFHW4010天线，如果还想工作在80/30/17/12米波段，升级为EFHW8010天线，要么换40米振子，要么加一段电感。详细方案可以参考我翻译的文章，主要讲天线的原理，和1:49变压器的制作。有兴趣的朋友可以访问下边的二维码，或者原文链接。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;不得不说，对于住在高楼中间楼层的老中医来说，EFHW是最理想的天线。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/M8Fuf7wpu9-732.avif 732w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/M8Fuf7wpu9-732.webp 732w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/M8Fuf7wpu9-732.png&quot; alt=&quot;图片&quot; width=&quot;732&quot; height=&quot;960&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>时速350公里的高铁上能打卡APRS吗？</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/" />
-    <updated>2022-08-31T19:11:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/</id>
-    <content type="html">&lt;p&gt;&lt;strong&gt;2025-05-27更新&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;原文的多普勒频移在线计算器有错误，导致计算结果大了一倍，现已经更新。并且采取了新的计算公式。&lt;/li&gt;
-&lt;li&gt;原文围绕多普勒效，应仅讨论了对载频的影响，未讨论对APRS信号音频的影响，本次补充了讨论。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;带着这个问题和对讲机FT3DR，我登上了从北京西到郑州东的复兴号高铁。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/Nkds72XlXK-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/Nkds72XlXK-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/Nkds72XlXK-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;608&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;从北京出发， 在西边高山上就有几个APRS基站，我正好坐在列车西侧靠窗位置，基本可以目视通信。河北的APRS普及的不错，一路上 有很多业余爱好者建立的基站。沿路的几个大城市，保定、石家庄、邢台、邯郸，也都在铁路以西。&lt;/p&gt;
-&lt;p&gt;我把对讲机设置为每分钟发送一次信标。 然鹅，一小时后到了石家庄，竟然一个信标都没打上。只收到过4条1区呼号的APRS信标。要知道这几个基站，平时在市区里用对讲机都能轻松打卡。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/Z1DVfzcX1G-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/Z1DVfzcX1G-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/Z1DVfzcX1G-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;809&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;h2 id=&quot;%E9%9A%BE%E9%81%93%E6%98%AF%E9%AB%98%E9%93%81%E9%80%9F%E5%BA%A6%E5%A4%AA%E5%BF%AB%E4%BA%86%E5%90%97%EF%BC%9F&quot; tabindex=&quot;-1&quot;&gt;难道是高铁速度太快了吗？&lt;/h2&gt;
-&lt;h3 id=&quot;%E5%A4%9A%E6%99%AE%E5%8B%92%E6%95%88%E5%BA%94&quot; tabindex=&quot;-1&quot;&gt;多普勒效应&lt;/h3&gt;
-&lt;p&gt;所谓多普勒效应就是，当声音，光和无线电波等振动源与观测者以相对速度V相对运动时，观测者所收到的振动频率与振动源所发出的频率有所不同。因为这一现象是奥地利科学家多普勒最早发现的，所以称之为多普勒效应。由多普勒效应所形成的频率变化叫做多普勒频移，它与相对速度V成正比，与振动的频率成反比。&lt;/p&gt;
-&lt;p&gt;高铁时速350千米/小时(km/h) = 0.0972千米/秒(km/s)=97.2米/秒。APRS用的是144.640MHz的频率，波长是2米左右，这么一算移动一个波长大概是1/50秒。这大约是50Hz的样子。&lt;/p&gt;
-&lt;p&gt;找了一个在线的多普勒频移计算器，验证了一下，算出来的频率误差是46.8Hz，相当于0.32ppm，这点误差几乎可以忽略不计了。&lt;/p&gt;
-&lt;p&gt;对于速度远小于光速的情况，经典多普勒频移近似公式：&lt;math&gt;&lt;mrow&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mfrac&gt;&lt;mi&gt;v&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;/mfrac&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;/math&gt;&lt;/p&gt;
-&lt;p&gt;其中：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;math&gt;&lt;msub&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;/msub&gt;&lt;/math&gt;：多普勒频移（Hz）&lt;/li&gt;
-&lt;li&gt;&lt;math&gt;&lt;mrow&gt;&lt;mi&gt;v&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;350&lt;/mn&gt;&lt;mi&gt;K&lt;/mi&gt;&lt;mi&gt;M&lt;/mi&gt;&lt;mi&gt;/&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;97.2&lt;/mn&gt;&lt;mspace width=&quot;0.1667em&quot;&gt;&lt;/mspace&gt;&lt;mtext&gt;m/s&lt;/mtext&gt;&lt;/mrow&gt;&lt;/math&gt;：为高铁的移动的速度&lt;/li&gt;
-&lt;li&gt;&lt;math&gt;&lt;mrow&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mo&gt;×&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;8&lt;/mn&gt;&lt;/msup&gt;&lt;mspace width=&quot;0.1667em&quot;&gt;&lt;/mspace&gt;&lt;mtext&gt;m/s&lt;/mtext&gt;&lt;/mrow&gt;&lt;/math&gt;：为无线电波的速度、光速&lt;/li&gt;
-&lt;li&gt;&lt;math&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;144.640&lt;/mn&gt;&lt;mo&gt;×&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;6&lt;/mn&gt;&lt;/msup&gt;&lt;mspace width=&quot;0.1667em&quot;&gt;&lt;/mspace&gt;&lt;mtext&gt;Hz&lt;/mtext&gt;&lt;/mrow&gt;&lt;/math&gt;：为信号的载频&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;代入数值：&lt;math&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mfrac&gt;&lt;mn&gt;97.2&lt;/mn&gt;&lt;mrow&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mo&gt;×&lt;/mo&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;8&lt;/mn&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;mo&gt;⋅&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;144.640&lt;/mn&gt;&lt;mo&gt;×&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;6&lt;/mn&gt;&lt;/msup&gt;&lt;mo&gt;≈&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;46.8&lt;/mn&gt;&lt;mspace width=&quot;0.1667em&quot;&gt;&lt;/mspace&gt;&lt;mtext&gt;Hz&lt;/mtext&gt;&lt;/mrow&gt;&lt;/math&gt;&lt;/p&gt;
-&lt;p&gt;&lt;math&gt;&lt;mrow&gt;&lt;mtext&gt;频&lt;/mtext&gt;&lt;mtext&gt;率&lt;/mtext&gt;&lt;mtext&gt;误&lt;/mtext&gt;&lt;mtext&gt;差&lt;/mtext&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mfrac&gt;&lt;mn&gt;46.8&lt;/mn&gt;&lt;mn&gt;144640000&lt;/mn&gt;&lt;/mfrac&gt;&lt;mo&gt;×&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mn&gt;10&lt;/mn&gt;&lt;mn&gt;6&lt;/mn&gt;&lt;/msup&gt;&lt;mo&gt;≈&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;0.3236&lt;/mn&gt;&lt;mspace width=&quot;0.1667em&quot;&gt;&lt;/mspace&gt;&lt;mtext&gt;ppm&lt;/mtext&gt;&lt;/mrow&gt;&lt;/math&gt;&lt;/p&gt;
-&lt;h3 id=&quot;%E5%AF%B9aprs%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%BD%B1%E5%93%8D&quot; tabindex=&quot;-1&quot;&gt;对APRS信号的影响&lt;/h3&gt;
-&lt;p&gt;46.8Hz的频偏，对于APRS信号的144.640MHz载频来说，影响微乎其微。&lt;/p&gt;
-&lt;p&gt;但是这个频偏一般会传导到信号的音频部分会怎样？&lt;/p&gt;
-&lt;p&gt;APRS信号使用的是AX.25协议帧格式的AFSK，Audio Frequency-Shift Keying，音频频移键控进行调制的。分别用1200Hz的音频表示1，2200Hz音频表示0。46.8Hz的误差并不是很突出。&lt;/p&gt;
-&lt;p&gt;此外IARU第1区对VHF技术建议中，对信标台的频率容错要求是±200Hz，对音频响应的范围是300～3000Hz，这些也都包容了46.8Hz那点误差。&lt;/p&gt;
-&lt;h2 id=&quot;%E9%80%9F%E5%BA%A6%E4%B8%8D%E6%98%AF%E5%85%B3%E9%94%AE%E5%BD%B1%E5%93%8D&quot; tabindex=&quot;-1&quot;&gt;速度不是关键影响&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;看来350公里/小时的速度对VHF通信影响微乎其微。&lt;/strong&gt; 空间站的速度是27000多公里/小时，这才有多普勒效应的影响，不得不做频率补偿的话题。&lt;/p&gt;
-&lt;p&gt;眼看到了邢台，我用手动模式持续发了十几个。终于在BI1ACW-15基站上打上了两个点，说明使点劲儿还是能通的。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/6NWYuSWKZE-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/6NWYuSWKZE-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/6NWYuSWKZE-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;2337&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;有RAW数据为证。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/cJ47XL9qz9-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/cJ47XL9qz9-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/can-aprs-work-on-a-high-speed-train-at-350kmph/cJ47XL9qz9-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;739&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;h2 id=&quot;%E7%AA%97%E6%88%B7%E5%8F%AF%E8%83%BD%E6%98%AF%E6%A0%B8%E5%BF%83%E9%97%AE%E9%A2%98&quot; tabindex=&quot;-1&quot;&gt;窗户可能是核心问题&lt;/h2&gt;
-&lt;p&gt;为啥高铁上这么难打卡APRS，想来想去，恐怕还是 &lt;strong&gt;高铁玻璃对无线电信号衰减的太大&lt;/strong&gt; 。那玻璃是多层的，有金属镀膜，还有电加热丝……最终辐射出去的信号很弱了。&lt;/p&gt;
-&lt;p&gt;如果你有更好的办法在高铁上打卡APRS，欢迎分享！&lt;/p&gt;
-&lt;h2 id=&quot;%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99&quot; tabindex=&quot;-1&quot;&gt;参考资料&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.omnicalculator.com/physics/doppler-effect&quot;&gt;https://www.omnicalculator.com/physics/doppler-effect&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;s&gt;原文的多普勒雷达在线计算工具不准:https://www.osgeo.cn/app/sc416&lt;/s&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;IARU-R1 VHF Handbook: &lt;a href=&quot;https://www.iaru-r1.org/wp-content/uploads/2024/11/VHF_Handbook_V10_02.pdf&quot;&gt;https://www.iaru-r1.org/wp-content/uploads/2024/11/VHF_Handbook_V10_02.pdf&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 </content>
   </entry>
 </feed>

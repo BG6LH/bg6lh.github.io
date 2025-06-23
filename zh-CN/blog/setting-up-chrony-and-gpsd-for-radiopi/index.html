@@ -366,7 +366,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
             <img src="/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/mCHcFPFs9a-960.webp" class="w-full blur-xs brightness-75 scale-105" alt="给RadioPi添加USB GPS image" loading="lazy" decoding="async" width="960" height="409">
         </figure>
     
-<div class="mx-auto grid w-full max-w-4xl grid-cols-1 gap-4 md:grid-cols-[minmax(800px,1fr)_240px]">
+<div class="mx-auto grid w-full max-w-4xl grid-cols-1 gap-4 md:grid-cols-[minmax(720px,1fr)_240px]">
     <article class="bg-white p-8 md:p-12 mx-auto max-w-4xl prose prose-neutral">
         <!-- article header : begin-->
         <header class="flex flex-col mx-auto mb-12 border-t-neutral-500 border-b-1">
@@ -385,7 +385,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 
 
         <!-- article content : begin-->
-        <div class="mx-auto">
+        <div class="">
             <p>众所周知，WSJT-X解码对时间的精度要求较高，而树莓派本身不带硬件时钟。 为了使WSJT-X能获得精确的时间，我们给 RadioPi预装了chrony。这可以使RadioPi通过互联网获得准确时间。此外，我们还预装了gpsd，你只需购买一个廉价的USB GPS，做一点额外的配置，即 可以获得更精确的GPS时间，同时还使RadioPi具备了卫星定位的能力，一举两得。</p>
 <p>RadioPi使用chrony替代nptd执行时间同步。 在有互联网连接时，chrony可以从支持ntp协议的网络时间服务器获取时间； 没有互联网时，比如在野外，chrony可以从USB GPS获取时间。 以下是一个简明的配置 操 作说明。</p>
 <p><picture><source type="image/avif" srcset="/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/C-tOf0xPmY-1024.avif 1024w"><source type="image/webp" srcset="/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/C-tOf0xPmY-1024.webp 1024w"><img loading="lazy" decoding="async" src="/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/C-tOf0xPmY-1024.png" alt="图片" width="1024" height="768"></picture></p>
@@ -576,7 +576,7 @@ systemctl is-active chronyd</code></pre>
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/` was built on 2025-06-22T00:00:00.000Z -->
+		<!-- This page `/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/` was built on 2025-06-23T00:00:00.000Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>
