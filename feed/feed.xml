@@ -154,6 +154,190 @@ AI跟PD0R的QSO
 </content>
   </entry>
   <entry>
+    <title>DIY Eurorack机箱</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/" />
+    <updated>2024-09-22T00:19:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/</id>
+    <content type="html">&lt;p&gt;最近给自己挖了个坑，做了一个 Eurorack机箱 。&lt;/p&gt;
+&lt;p&gt;起因是，我想用19寸机柜的零件，优化一下我家 &lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247484186&amp;amp;idx=1&amp;amp;sn=4587a8e29c3f55153ac5b67853325061&amp;amp;chksm=e9498590de3e0c8619b3b1453bd1a61daffce85117634f64ca09453121ec6184ee09314808cc&amp;amp;scene=21#wechat_redirect&quot;&gt;无线电壁橱&lt;/a&gt; 的运维方案。它里边宽度是456mm，和标准19寸机架(482.6mm)很接近，可惜还是小了。但是正好可以做成“子机架”(SubRack)，就是工控插箱。不带“耳朵”的插箱箱体，尺寸通常都小于450mm。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/VJxj9QUU-C-632.avif 632w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/VJxj9QUU-C-632.webp 632w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/VJxj9QUU-C-632.jpeg&quot; alt=&quot;图片&quot; width=&quot;632&quot; height=&quot;444&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;在研究插箱系统期间，偶然发现了一种木头盒子机架，有数不清的旋钮，密密麻麻的飞线，好酷啊！&lt;/p&gt;
+&lt;p&gt;这玩意儿就是Eurorack，模块化电子合成器平台。&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/#footnote1&quot;&gt;[1]&lt;/a&gt;&lt;a class=&quot;footnote-anchor&quot; id=&quot;footnote-ref1&quot;&gt;&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/TtrfRufwJ5-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/TtrfRufwJ5-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/TtrfRufwJ5-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;div class=&quot;callout callout-info&quot;&gt;
+&lt;p&gt;Eruorack是一种音乐电子合成器的模块化规范。1995年由德国人 Doepfer Musikelektronik 定义，并且发布了他的产品家族A-100。今天Eurorack已经发展成了世界上最流行的电子合成器模块化系统，据说有15000多个模块，1000多个制造商，包括Roland在内的厂家和个人都在制作Eurorack标准的模块。&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;这些 模块通过 改 变音频信号的 电 压 、电流、频率 、相 位 ，制造出稀奇古怪的声音。 最 基础的几个 模 块 是 电压控制、频率调制、 噪声源、滤波器、放大器、衰减器......这跟无线电很像啊， 声波电波它都是波 。&lt;/p&gt;
+&lt;p&gt;作为一个无线电老中医，我发现这些音频玩具贵的有点离谱。 一个3U84TE(84个安装孔位)、19寸木头插箱的价格，能买个车 台了 …… 我研究了Doepfer网站上的Eurorack规范，它的机械结构跟什么 CPCI、VPX、VME、PXIe、ATCA插箱模块完全兼容 。 这些机箱的零件已经是白菜价了。&lt;/p&gt;
+&lt;p&gt;唉，不怪玩音乐的败家，只能怪电子音乐领域，供应链完全依靠老外。 谁让这个文化是人家创造的呢？ 于是我一气之下自己做了一个。&lt;/p&gt;
+&lt;p&gt;下边就是做好的样子，帅不帅？ 可以完美塞进中国空间站的独立载荷机架！&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/r-J74bFPT3-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/r-J74bFPT3-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/r-J74bFPT3-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;607&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;h2 id=&quot;diy%E8%A6%81%E7%82%B9%EF%BC%9A%E9%80%89%E5%AF%B9%E6%A8%AA%E6%A2%81&quot; tabindex=&quot;-1&quot;&gt;DIY要点：选对横梁&lt;/h2&gt;
+&lt;p&gt;我做的是单排的箱子，3U的模块高度。下图是 Doepfer 网站上的标准机箱，双排6U，但是每一排也是3U模块的高度。关键 零件是固定模块的横梁，关键信息就是横梁安装打孔的位置。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/mBs2aJ24xx-616.avif 616w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/mBs2aJ24xx-616.webp 616w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/mBs2aJ24xx-616.png&quot; alt=&quot;图片&quot; width=&quot;616&quot; height=&quot;397&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;h2 id=&quot;%E4%B9%B0%E6%A8%AA%E6%A2%81%E9%81%BF%E5%9D%91%E6%8C%87%E5%8D%97&quot; tabindex=&quot;-1&quot;&gt;买横梁避坑指南&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;第一个坑是：不同供应商的横梁尺寸略有不同。&lt;/strong&gt; 我是按照 &lt;strong&gt;“威图(Rittal)”&lt;/strong&gt; 规范画的机箱，如果用其他品牌的横梁，以后的模块面板不一定能装的顺溜。&lt;/p&gt;
+&lt;p&gt;淘宝上比较常见的品牌还有艺玛(Elma)和Schroff。无论是谁，装好的箱子对第三方模块都是兼容的。&lt;/p&gt;
+&lt;p&gt;下边是威图的 &lt;strong&gt;“前横梁-带小嘴唇”&lt;/strong&gt; CAD图纸，来自Pixus网站上的公开手册。Pixus曾经是威图的子公司。&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/#footnote2&quot;&gt;[2]&lt;/a&gt;&lt;a class=&quot;footnote-anchor&quot; id=&quot;footnote-ref2&quot;&gt;&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/AUr0Kdgm0o-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/AUr0Kdgm0o-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/AUr0Kdgm0o-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;699&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;它长这个样子：&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/0rt1-8eGkh-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/0rt1-8eGkh-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/0rt1-8eGkh-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;930&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;所谓带小嘴唇，就是 上边略多出来一点的边， 用来收容 模块 面板 的。 还有一种更长的“大嘴唇”，很有气势， 那部分是 用来 固定面板 助 拔器的 ，对于Eurorack来说没必要。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第二个坑是螺母条 。&lt;/strong&gt; 它插在横梁里， 用来拧面板螺丝。工控机箱的面板 螺丝大部分是M2.5， 但Eurorack用的是M3。 我最终选了M2.5，因为我是无线电老中医，我相信供应链的力量。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/ZBI3fB4q3--1056.avif 1056w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/ZBI3fB4q3--1056.webp 1056w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/ZBI3fB4q3--1056.png&quot; alt=&quot;图片&quot; width=&quot;1056&quot; height=&quot;596&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;总结一下&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;横梁和螺母条 长：431.5mm&lt;/li&gt;
+&lt;li&gt;螺母条高6mm，厚2mm，孔距5.08mm，孔径M2.5/M3自选&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;%E6%8B%BC%E6%9D%BF%E6%9C%A8%E7%AE%B1&quot; tabindex=&quot;-1&quot;&gt;拼板木箱&lt;/h2&gt;
+&lt;p&gt;我选了9mm的手工板(hobby board)做了个拼插木箱。这个厚度可以把总尺寸控制在449.8x149.9x150mm，既能塞进我的壁橱，也能塞进中国空间站的独立载荷机架。&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/#footnote3&quot;&gt;[3]&lt;/a&gt;&lt;a class=&quot;footnote-anchor&quot; id=&quot;footnote-ref3&quot;&gt;&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;div class=&quot;callout callout-info&quot;&gt;
+&lt;p&gt;中国空间站上的独立载荷机架，可以安装标准载荷单元(SPU)、标准抽屉单元(SDU)等标准模块的组合。规格要求是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SPU： 460.0mm×273.0mm×545.0mm，&amp;lt;32.5kg&lt;/li&gt;
+&lt;li&gt;SDU： 482.6mm×173.4mm×684.2mm，&amp;lt;16kg&lt;br&gt;
+中国空间站上还有6个科学方向的12组机架，和4组跨科学方向的共用机架。这些机架对载荷模块规格另有要求。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;我用CAD画了一个拼插箱图纸，送到马云家用激光切割出来。 用 木工胶少许粘好，用伞绳绑紧，放阴凉处晾制一宿……第二天，装了个从NI仪表箱上拆下来的挡板，完美贴合！&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/uFKFCm6BLV-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/uFKFCm6BLV-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/uFKFCm6BLV-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;607&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;机箱图纸我开源了，文末有下载地址。&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/#footnote4&quot;&gt;[4]&lt;/a&gt;&lt;a class=&quot;footnote-anchor&quot; id=&quot;footnote-ref4&quot;&gt;&lt;/a&gt;&lt;/sup&gt;
+要不要来一个？把dwg文件丢给卖家就好。&lt;/p&gt;
+&lt;h2 id=&quot;%E7%AE%97%E7%AE%97%E8%B4%A6&quot; tabindex=&quot;-1&quot;&gt;算算账&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;项目&lt;/th&gt;
+&lt;th&gt;价格&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;9mm椴木手工板，带激光切割&lt;/td&gt;
+&lt;td&gt;¥90&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;两根“前横梁-带小嘴唇”&lt;/td&gt;
+&lt;td&gt;¥30&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;两根螺母条&lt;/td&gt;
+&lt;td&gt;¥6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;运费&lt;/td&gt;
+&lt;td&gt;¥12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;总成本&lt;/td&gt;
+&lt;td&gt;¥138&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;%E4%BD%93%E9%AA%8Ceurorack%E7%9A%84%E6%8D%B7%E5%BE%84&quot; tabindex=&quot;-1&quot;&gt;体验Eurorack的捷径&lt;/h2&gt;
+&lt;p&gt;如果你对电子音乐世界充满了好奇，但是对制作Eurorack模块又没有足够耐心。那老中医这里有一款软件适合你：虚拟Eurorack模块化系统，VCV Rack2。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/thsqjfZaD2-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/thsqjfZaD2-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/thsqjfZaD2-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;678&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;这软件界面完全“拟物”地模仿了Eurorack，连飞线都没放过。 还是免费开源的 ！&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/#footnote5&quot;&gt;[5]&lt;/a&gt;&lt;a class=&quot;footnote-anchor&quot; id=&quot;footnote-ref5&quot;&gt;&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;它其实是一个生态平台，任何人都可以写一个合成音乐的模块，“安装”在自己的架子上。平台上已经有了3454个有趣的模块，能让你迅速体会到玩Eurorack的乐趣。这也从侧面证明了Eurorack对音乐世界的影响力。&lt;/p&gt;
+&lt;p&gt;如果你愿意投入一点时间，去理解电压、电流、频率、相位如何改变了声音，VCV Rack真的可以帮到你。&lt;/p&gt;
+&lt;p&gt;合着说了这么热闹， 做完了箱子 ，就改玩软的了？！&lt;/p&gt;
+&lt;h2 id=&quot;%E6%88%91%E7%9A%84radiorack%E9%87%8E%E6%9C%9B&quot; tabindex=&quot;-1&quot;&gt;我的Radiorack野望&lt;/h2&gt;
+&lt;p&gt;其实我对DIY 电子音乐合成器兴趣不是特别大。 第一眼看到Eurorack时，我 想 的是，这玩意儿要是用在业余无线电上，香不香？&lt;/p&gt;
+&lt;p&gt;一个木头架子上，依次排开：电源模块、驻波检测、天调、音频放大电路、可更换的低通滤波器、CW键控器、QRP功放……然后接上这些年我做过的各种套件，D4D、13T、皮鞋、月季、玫瑰、牛牛、usdx、丢丢机……光想想就睡不着了。&lt;/p&gt;
+&lt;p&gt;这是一个Radiorack啊！&lt;/p&gt;
+&lt;p&gt;万事开头难，要相信光的力量。下个项目，先做个电源模块吧。&lt;/p&gt;
+&lt;hr class=&quot;footnotes-sep&quot;&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;footnote1&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://www.doepfer.de/a100e.htm&quot;&gt;Eurorack：A-100 模拟电子模块化系统&lt;/a&gt; &lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/#footnote-ref1&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&quot;footnote2&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://pixustechnologies.com/products/custom-chassis-solutions-4/components/rails-and-card-guides/&quot;&gt;Pixus机箱横梁产品&lt;/a&gt; &lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/#footnote-ref2&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&quot;footnote3&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://www.cmse.ac.cn/gfgg/201904/P020200225328481496691.pdf&quot;&gt;中国空间站科学实验资源手册&lt;/a&gt; &lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/#footnote-ref3&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&quot;footnote4&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://www.thingiverse.com/thing:6772861&quot;&gt;我的Eurorack拼板机箱CAD图纸下载&lt;/a&gt; &lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/#footnote-ref4&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&quot;footnote5&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://vcvrack.com/&quot;&gt;VCV Rack，虚拟Eurorack电子音乐模块系统&lt;/a&gt; &lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/diy-an-eurorack-module-box/#footnote-ref5&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+  </entry>
+  <entry>
+    <title>海边的UHF实验</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/" />
+    <updated>2024-08-23T04:12:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/</id>
+    <content type="html">&lt;p&gt;忙里偷闲，去秦皇岛海边度了个假。&lt;/p&gt;
+&lt;p&gt;当地朋友说，只有你们外地人才喜欢海，本地人都嫌弃海，搞对象都不爱去海边，洗个海澡浑身粘呼叽叽的多麻烦。这就是见多不怪嘛。在北京我也不爱去天安门、天坛这些地方，人太多了，尤其是暑假。&lt;/p&gt;
+&lt;p&gt;最近公司搬回了天坛附近，上下班坐8号线地铁，一路经过鸟巢、鼓楼大街、什刹海、南锣鼓巷、美术馆、王府井、前门、天桥……车厢里满眼望去都是游客。游客和本地人很容易辨认，游客的目光都是亮晶晶的，本地人则一副刚睡醒的“打工狗”模样。出地铁走在珠市口大街上，游客们纷纷改换共享单车，三三两两，朝着天坛、大栅栏、崇文门、虎坊桥方向各自散去。看来地铁8号线的确非常适合北京Citywalk。只是现在游客很难看到想象中的“老北京”气氛了，更多看到的是我这样没睡醒的“打工狗”在挤地铁。我成了他们眼里的北京NPC了。&lt;/p&gt;
+&lt;p&gt;歪楼歪的有点多。收回来说说我打算在秦皇岛昌黎县海边做的UHF通信实验吧。&lt;/p&gt;
+&lt;h2 id=&quot;%E5%90%88%E8%A7%84%E8%87%AA%E6%A3%80&quot; tabindex=&quot;-1&quot;&gt;合规自检&lt;/h2&gt;
+&lt;p&gt;自&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247484443&amp;amp;idx=1&amp;amp;sn=d719d380772817d0e7c5e78b887e8420&amp;amp;chksm=e9498291de3e0b87cae95b9b63b9dc79645a41907cb17a7ee28bd9bab7cd9bd75a04e6804c03&amp;amp;scene=21#wechat_redirect&quot;&gt;“金华火腿”&lt;/a&gt;之后，凡带电台出门都先看黄历，哦不，看地方条例。&lt;/p&gt;
+&lt;p&gt;在河北省、秦皇岛市政府的网站上找了一番，重点看了行政审批、处罚的法律依据，没有发现额外的业余无线电地方法规。如果有，那就是我没查到，不能怪人家的搜索引擎做的不好、或者没有公示。&lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/#footnote1&quot;&gt;[1]&lt;/a&gt;&lt;a class=&quot;footnote-anchor&quot; id=&quot;footnote-ref1&quot;&gt;&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;我小执照也更新成了“全国”，在北京，用呼号BG6LH申请的。“秘籍”就是去市政府网站上，直接申请个人设台行政审批。效率极高，还有结果公示可查。&lt;/p&gt;
+&lt;h2 id=&quot;%E5%AE%9E%E9%AA%8C%E8%AE%A1%E5%88%92&quot; tabindex=&quot;-1&quot;&gt;实验计划&lt;/h2&gt;
+&lt;p&gt;在申请“全国”小执照时，按要求需提交《跨省级行政区设置使用业余无线电台必要性说明材料》。我是这么写的：拟在秦皇岛昌黎县展开海边低功率中波通信实验，以及在米波/分米波段展开跨渤海湾、月面反射、卫星及空间站通信实验……”&lt;/p&gt;
+&lt;p&gt;想法很饱满，现实是至今80米长的中波天线、大功率UHF设备、天线旋转器，一样都没搞定。&lt;/p&gt;
+&lt;p&gt;好在还有一副洛阳协会的四单元UHF八木天线，两根钻石的苗子，一根AZ504，一根NR770H。&lt;/p&gt;
+&lt;p&gt;所以我把实验目标调整为：沿路APRS打卡，业余中继打卡，跨海中继打卡。&lt;/p&gt;
+&lt;h2 id=&quot;%E4%B8%80%E8%B7%AF%E4%B8%8A%E7%9A%84aprs&quot; tabindex=&quot;-1&quot;&gt;一路上的APRS&lt;/h2&gt;
+&lt;p&gt;从北京出发，沿着G1京哈高速，一路向东，有3个多小时车程。&lt;/p&gt;
+&lt;p&gt;结果刚出北京就没有APRS站能收到我了。直到昌黎，碣石山下，有一个DIGI repeater收到了一次。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/j_qErKZlZE-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/j_qErKZlZE-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/j_qErKZlZE-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;499&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;在http://aprs.tv上查询，这中间真没有一个靠谱的APRS DIGI repeater。有一些mmdvm自带的igate网关，海拔都很低，只能接收家门口一片。在路上，我的确收到过别人的信标，但我没打上卡。&lt;/p&gt;
+&lt;p&gt;其实我的天线增益也不够好。AZ504在VHF上增益0dBi。通常，无线电老中医都拿DP天线当杆秤，任何低于DP的2.15dBi增益的天线，都算是赔了。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/MRoD7ZJMK6-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/MRoD7ZJMK6-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/MRoD7ZJMK6-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;374&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;144MHz的0dBi增益，钻石的网页上都没好意思直接写出来。&lt;/p&gt;
+&lt;p&gt;AZ504主打一个短小精悍，U段尚可，V段能用。为啥不用770H？因为这次用了一个快拆夹边座。770H长1米，装上去晃悠的厉害。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/8so1vamyDk-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/8so1vamyDk-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/8so1vamyDk-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1921&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;h2 id=&quot;%E6%B2%BF%E9%80%94%E7%9A%84uhf%E4%B8%AD%E7%BB%A7&quot; tabindex=&quot;-1&quot;&gt;沿途的UHF中继&lt;/h2&gt;
+&lt;p&gt;出发前，查询了沿途各地中继台的信息。有两个公众号，其中一个不怎么更新了。另外一个还活跃着，可数据怎么看怎么像扒上一家的。扒完也不提人家一句。说句谢谢不费啥事嘛。&lt;/p&gt;
+&lt;p&gt;唐山的970中继很活跃，一叫就通了。唐山北边的几十公里路上，都能听到中继上的活动。卢龙的应急、秦皇岛协会的中继也通了，守听的还是当地大佬级HAM。&lt;/p&gt;
+&lt;p&gt;一路我没关APRS。在唐山970中继上被人批评了。赶紧承认，道歉。我的车台是FTM100D，APRS不能单独设置频段，这是它最大痛点。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;唐山： 438.970/ -6.3/ TSQ88.5&lt;/li&gt;
+&lt;li&gt;卢龙应急： 439.400/ -8/T 91.5（单向发射亚音）&lt;/li&gt;
+&lt;li&gt;秦皇岛协会BR3QQ： 439.800/ -8/TSQ 88.5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;%E6%9C%89%E5%91%BC%E5%8F%B7%E7%9A%84%E4%B8%AD%E7%BB%A7&quot; tabindex=&quot;-1&quot;&gt;有呼号的中继&lt;/h2&gt;
+&lt;p&gt;秦皇岛协会中继有呼号BR3QQ，每10来分钟用CW发送一次呼号。这对应急、导航很有意义。&lt;/p&gt;
+&lt;p&gt;北京协会中继也有呼号，BR1BJ。返程时，我尝试守听北京协会中继的CW，关掉静噪，一直到G1高速80公里处，第一次清晰收到。到了西集检查站附近，可以叫通北京中继，这里大约是G1高速40公里左右。&lt;/p&gt;
+&lt;div class=&quot;callout callout-info&quot;&gt;
+&lt;p&gt;&lt;strong&gt;给中继台一个协调建议&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;总体感觉，各地中继的下差、亚音选择，没有规律。
+有个现实的教训。郑州7·21内涝灾害期间，外地救援队找本地中继台很难。网上的信息不准确、不及时，中继台分布没有规则，让现场寻找中继几乎不可能。
+建议重点的中继台，比如有呼号的那些，能主动协调一下，统一下差、亚音的设定，其它中继台可以参考重点台。以后找中继就可以变得很简单了，只要找到下行频率就行了。&lt;/p&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;%E6%B5%B7%E8%BE%B9%E7%9A%84uhf%E8%A7%86%E8%B7%9D%E9%80%9A%E4%BF%A1%E5%AE%9E%E9%AA%8C&quot; tabindex=&quot;-1&quot;&gt;海边的UHF视距通信实验&lt;/h2&gt;
+&lt;p&gt;UHF电波遇到电离层会穿过去，这一点和短波(HF)不一样，短波可以靠电离层与地面之间的来回反射，传播到很远的地方，甚至绕地球几圈又回来了。UHF 主要的传播特性是&lt;strong&gt;视距传播&lt;/strong&gt;，所以在UHF上能通空间站，不一定能通海对岸。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/hgjgpPkwrN-772.avif 772w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/hgjgpPkwrN-772.webp 772w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/hgjgpPkwrN-772.jpeg&quot; alt=&quot;图片&quot; width=&quot;772&quot; height=&quot;297&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;渤海湾没有任何遮挡，但是地球有曲率。一个人站在海滩边，看到的地平线只有几公里远。两个身高1米75的人，站在海平面上用UHF通信，最远也只能通10公里。&lt;/p&gt;
+&lt;p&gt;昌黎海滩距离大连210公里，葫芦岛170公里，秦皇岛40公里，烟台290公里。我在海边站着，除了秦皇岛中继BR3QQ，其它地方的中继一个都没通上。后来得知BR3QQ在22层楼顶，如果它高70米，刚好可以覆盖三四十公里。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/m6kjGjo_zl-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/m6kjGjo_zl-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/m6kjGjo_zl-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1123&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;想要通的远，就要站的高。昌黎的碣石山海拔695米，单向覆盖半径109公里。如果对面的中继台在22层70米高的楼上，两边加起来至少可以通143公里远。但也不够通到葫芦岛了。听说葫芦岛有个烽火山中继，还也挺高，但是我站在海滩上肯定够不着它。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/QX0yg4HelV-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/QX0yg4HelV-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/QX0yg4HelV-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;547&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;视距通信实验到此结束。成果是验证了昌黎海滩只能通到40公里外的秦皇岛。下次找机会上碣石山试试。&lt;/p&gt;
+&lt;h2 id=&quot;uhf-%E8%B6%85%E8%A7%86%E8%B7%9D%E9%80%9A%E4%BF%A1&quot; tabindex=&quot;-1&quot;&gt;UHF 超视距通信&lt;/h2&gt;
+&lt;p&gt;很多人都体验过**“超视距”**的VHF、UHF通信。比如，秦皇岛的BR3QQ中继，就有烟台、大连的HAM通联过。在VHF有人用FT8模式通联过日本、俄罗斯，甚至西亚、东欧。以前还见过北京的APRS收到了俄罗斯的信标。&lt;/p&gt;
+&lt;p&gt;但这些情况往往没有啥规律，像是偶然发生的。究其原因，这是电波在对流层内发生的散射、波导、反射等现象。&lt;/p&gt;
+&lt;p&gt;还记得水杯里折断的筷子吗。这是光线穿过水面和空间之间的介质时，发生的折射现象。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/MrW_3CQLvj-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/MrW_3CQLvj-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/MrW_3CQLvj-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;474&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;对流层内不同高度的空气、地面、海水的温度、密度不一样，形成了不同的介质层。电波就像光一样，在不同介质之间穿过时，也会发生折射、反射、散射等现象。现在对流层散射研究很热门，可以写博士论文了。&lt;/p&gt;
+&lt;p&gt;想利用对流层实现可靠的通信，基本上都靠大力出奇迹，用千瓦级大功率。NVIS，EME，也都是典型的大力出奇迹。&lt;/p&gt;
+&lt;p&gt;看来我一不小心给自己挖了个&lt;strong&gt;超视距通信&lt;/strong&gt;实验的坑。下一步试试对流层散射通信？&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/jydNSeuydO-800.avif 800w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/jydNSeuydO-800.webp 800w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/jydNSeuydO-800.jpeg&quot; alt=&quot;图片&quot; width=&quot;800&quot; height=&quot;527&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;hr class=&quot;footnotes-sep&quot;&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;footnote1&quot; class=&quot;footnote-item&quot;&gt;&lt;p&gt;&lt;a href=&quot;https://www.hebei.gov.cn/columns/6052e3fd-eafb-407d-b348-9010162e5985/202308/23/b6ca5c6c-6181-415b-a09a-eea885d6130f.html&quot;&gt;《河北省无线电管理规定(2021)》&lt;/a&gt; &lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/uhf-experiment-on-the-coast/#footnote-ref1&quot; class=&quot;footnote-backref&quot;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+  </entry>
+  <entry>
     <title>业余无线电不可忽视的真相</title>
     <link href="https://bg6lh.github.io/zh-CN/blog/k3ng-inconvenient-truths-in-amateur-radio/" />
     <updated>2024-05-21T08:02:00Z</updated>
@@ -314,6 +498,38 @@ AI跟PD0R的QSO
 &lt;/blockquote&gt;
 &lt;p&gt;业余无线电的问题，不是增长、不是缺年轻人，而是文化。&lt;/p&gt;
 &lt;p&gt;原文在K3NG的网站：&lt;a href=&quot;https://blog.radioartisan.com/inconvenient-truths-in-amateur-radio/&quot;&gt;https://blog.radioartisan.com/inconvenient-truths-in-amateur-radio/&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>拼插玩具：天线入户板</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/" />
+    <updated>2023-04-28T00:09:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/</id>
+    <content type="html">&lt;p&gt;画PCB容易上瘾，说着说着就顺手画了一个天线入户板。&lt;/p&gt;
+&lt;h2 id=&quot;%E4%B8%BA%E5%95%A5%E8%A6%81%E5%81%9A%E5%A4%A9%E7%BA%BF%E5%85%A5%E6%88%B7%E6%9D%BF%EF%BC%9F&quot; tabindex=&quot;-1&quot;&gt;为啥要做天线入户板？&lt;/h2&gt;
+&lt;p&gt;我的目标是将电台的&lt;strong&gt;底噪&lt;/strong&gt;（Noise Floor）降到尽可能低。设想的方法是：在天线进屋的一个恰当的点位上，把&lt;strong&gt;共模电流&lt;/strong&gt;隔绝到室外，并且在这个点上，给电台室内的所有设备提供一个&lt;strong&gt;等电势、零电位、低阻抗&lt;/strong&gt;的平面。&lt;/p&gt;
+&lt;p&gt;这个后续要接着实践，高楼接地、消除静电、定性定量……说了这么多，第一步是要买一块紫铜的接地排。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/3tt9h-7Z3k-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/3tt9h-7Z3k-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/3tt9h-7Z3k-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1291&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;但是网上的紫铜接地排都是给电力设备用的。安装的孔径太小，天线电缆连接器一般都是直径16mm起步。难道需要我自己打孔吗？&lt;/p&gt;
+&lt;p&gt;网上看到过一些射频工程用不锈钢板、热镀锌板、铝板做天线入户的跳线板再接地的。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/yRkgtoXzlE-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/yRkgtoXzlE-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/yRkgtoXzlE-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;这些方案都不错。紫铜的电阻率应该比这些都低。但是中国缺铜，所以紫铜件成本高，只有在高压、防雷这种安全要求更高的地方才用，射频件就用铜包钢、热镀锌了。本来射频电流也有趋肤效应。总之是要做一个零电位，还能泄放静电、隔绝共模电流。&lt;/p&gt;
+&lt;p&gt;如果只是隔离共模电流的话，做一个1:1巴伦也不错。F5NPV就做了一串1:1，把不同波段的共模电流都隔离了。感兴趣的可以去看看&lt;a href=&quot;https://f5npv.wordpress.com/endfed-cmc/&quot;&gt;他的博客&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/HHb0n55XoD-1024.avif 1024w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/HHb0n55XoD-1024.webp 1024w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/HHb0n55XoD-1024.jpeg&quot; alt=&quot;图片&quot; width=&quot;1024&quot; height=&quot;576&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;不过话说回来，只做1:1巴伦还不够，因为还有接地的问题。&lt;/p&gt;
+&lt;h2 id=&quot;%E5%98%89%E7%AB%8B%E5%88%9Bpcb%E6%89%93%E6%9D%BF&quot; tabindex=&quot;-1&quot;&gt;嘉立创PCB打板&lt;/h2&gt;
+&lt;p&gt;我只有三条电缆入户，花小几百定制一个紫铜板，不如用嘉立创的优惠券做一个PCB的。说干就干，打开 KiCad 画了一个。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/1JkF_QLpZ_-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/1JkF_QLpZ_-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/1JkF_QLpZ_-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1080&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;设计主要兼容了大多数直径16mm的双头射频连接器、以及25x25mm的带法兰的射频接头。板子所有的连接只有一个网络，GND。两面完全覆铜，中间布满过孔，任意一处流露的金属都可以接地。&lt;/p&gt;
+&lt;p&gt;考虑到嘉立创的免费板子是10x10cm见方，所以花了点心思，做成了几块可以掰开再拼插在一起，通过焊接加固，多套板子还能拼成出更多的连接单元。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/eeo9zOWyPL-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/eeo9zOWyPL-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/eeo9zOWyPL-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1080&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;然鹅，按照嘉立创的规则，&lt;strong&gt;拼板不免费&lt;/strong&gt;。只要设计里有一个邮票孔、一条开槽，系统就先自动判定为拼板。找人工审核也说不过去。唉，画都画了，还是自己花钱做吧。&lt;/p&gt;
+&lt;p&gt;不到两天，做好的板子就寄来了。这也太快了！智能制造让梦想照进现实！&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/wpNfpaTnRN-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/wpNfpaTnRN-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/wpNfpaTnRN-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1080&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;下边是做好的样子，看着还挺精神哈！&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/1MrHYeYpoD-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/1MrHYeYpoD-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/1MrHYeYpoD-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1080&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;其实，不做拼接的话，在 10x10cm 见方的优惠券范围内，可以做成更大的、至少6个连接单元的独立板子。之后，买一个成品的紫铜汇流排，把这个板子拦腰固定在紫铜汇流排上。这样，接地、等电位，一次搞定。而且免费5张哦！&lt;/p&gt;
+&lt;p&gt;入户板的应用是下一阶段的事。回归初心，治理底噪才是出发点。这套入户板权当是个拼插玩具了。&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -481,202 +697,6 @@ AI跟PD0R的QSO
 &lt;/ul&gt;
 &lt;p&gt;扫码也可以哦。我的空间里也有QCX-mini的外壳，免费下，别客气。&lt;/p&gt;
 &lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/hbR7dzy9qM-200.avif 200w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/hbR7dzy9qM-200.webp 200w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/hbR7dzy9qM-200.png&quot; alt=&quot;图片&quot; width=&quot;200&quot; height=&quot;200&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>SCU-LAN10远程操作FTDX10的组网实践</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/" />
-    <updated>2022-11-17T01:37:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/</id>
-    <content type="html">&lt;p&gt;我的FTDX10和天线都在ON80fa，平时大部分时间住在&lt;code&gt;OM89hu&lt;/code&gt;，工作在&lt;code&gt;OM89it&lt;/code&gt;，还经常出差，一年到头FTDX10没开过几天，&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247484186&amp;amp;idx=1&amp;amp;sn=4587a8e29c3f55153ac5b67853325061&amp;amp;chksm=e9498590de3e0c8619b3b1453bd1a61daffce85117634f64ca09453121ec6184ee09314808cc&amp;amp;scene=21#wechat_redirect&quot;&gt;就这还烧了两次功放&lt;/a&gt;。为了解决远程摸黑儿操作这个痛点，我部署了一个SCU-LAN10和SCU-17支撑的FTDX10远程操作网络，达成了实时电台监控、远程参加了CQWW SSB比赛、还能继续远程FT8、自动日志，真是相当开心。&lt;/p&gt;
-&lt;p&gt;SCU-LAN10是八重洲专门为SDR架构的收发信机推出的网络控制模块，支持FTDX10、101D、101MP，以及新出的FT-710。真是SDR时代来了，频谱数据可以在网上到处飞了。&lt;/p&gt;
-&lt;h2 id=&quot;%E4%BD%BF%E7%94%A8%E4%BD%93%E4%BC%9A&quot; tabindex=&quot;-1&quot;&gt;使用体会&lt;/h2&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/NhcF0k4rdG-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/NhcF0k4rdG-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/NhcF0k4rdG-1080.png&quot; alt=&quot;用SCU-LAN10软件观察7MHz业余频段全段的频谱&quot; width=&quot;1080&quot; height=&quot;607&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;SCU-LAN10（它的硬件软件都叫SCU-LAN10）是个相当不错的远程电台操作、监控系统。它可以实时呈现FTDX10当前的所有状态，尤其是那些非常重要的：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;天调开关、驻波、功率、ALC、VFO-A/B切换、Split状态；&lt;/li&gt;
-&lt;li&gt;最重要的，还有声音和频谱；&lt;/li&gt;
-&lt;li&gt;它几乎覆盖了FTDX10里的所有功能，至少业务操作该有的全有；&lt;/li&gt;
-&lt;li&gt;新的固件还支持了远程关机；&lt;/li&gt;
-&lt;li&gt;比起FTDX10外接显示器提供了更丰富的操作界面；&lt;/li&gt;
-&lt;li&gt;在电脑的大屏幕上可以直接操作3D频谱，如果是配合FTDX101则有两个频谱窗口可用，信息量巨大；&lt;/li&gt;
-&lt;li&gt;它还支持鼠标操作，选择各种功能参数，拨动鼠标滚选频，快捷直观。终于不用小心翼翼地躲开大拨轮，在一堆旋钮和按键里找功能了。&lt;/li&gt;
-&lt;li&gt;SCU-LAN10提供了远程的SSB通讯的能力。你可以按着电脑的空格键当PTT，或者打开VOX直接对着电脑呼叫。今年的CQWW SSB比赛，我拿它远程扫地搞了69个QSO。顺便说，比赛时3D频谱选频其实并不是很实用。还是2D的频谱容易准确定位。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;小遗憾的是：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;时至今日SCU-LAN10只支持&lt;strong&gt;SSB话&lt;/strong&gt;业务的全功能收发。&lt;/li&gt;
-&lt;li&gt;CW只能收听，且没有解码功能。&lt;/li&gt;
-&lt;li&gt;FT8、RTTY、SSTV这些操作则完全不支持。至少不能靠SCU-LAN10直接的功能实现，只能寻找别的解决方案。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;为啥不给CW、Digital的全功能发送？有人猜测是网络延时会影响CW开关信号的准确性，听起来有点道理。可是SCU-LAN10又提供了丰富的CW相关功能，比如ZIN、APF、CW Pitch甚至WPM速度设定。或许未来的固件升级会逐步打开一些新功能？SCU-LAN10似乎是正在演进中的产品。&lt;/p&gt;
-&lt;h2 id=&quot;%E8%BF%9C%E7%A8%8B%E7%BB%84%E7%BD%91%E7%AD%96%E7%95%A5&quot; tabindex=&quot;-1&quot;&gt;远程组网策略&lt;/h2&gt;
-&lt;p&gt;由于SCU-LAN10占用了FTDX10上唯一的USB CAT端口，以前比较成熟的&lt;em&gt;&lt;strong&gt;台站侧值班电脑&lt;/strong&gt;&lt;/em&gt; + &lt;em&gt;&lt;strong&gt;远程桌面软件&lt;/strong&gt;&lt;/em&gt;实现的远程控制也不行了。破题思路只剩下利用FTDX10机器上空闲的R-S232C和RTTY/DATA接口，实现第二组“USB串口+声卡”通道。&lt;strong&gt;这时SCU-17成了首选&lt;/strong&gt;。&lt;/p&gt;
-&lt;div class=&quot;callout callout-tip&quot;&gt;
-&lt;p&gt;FTDX系列机器上还有两个USB-A的端口，那是给键盘鼠标用的，没有音频IO，也不能做CAT控制，估计电流不会超过500mA，或许可以接个LED台灯或者呼号灯牌啥的。&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;安装SCU-LAN10，并不像买个天调接上那么简单。想用上它至少得有点网络管理的经验，知道怎么设置IP地址，什么是端口转发，这涉及到安装和日后使用。想完成跨局域网的远程操作还是有相当的技术门槛。在这里我只分享一下我的基本解决思路，供大家一起讨论。详细设置请参考说明书。&lt;/p&gt;
-&lt;h2 id=&quot;scu-lan10%E5%92%8Cscu-17%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8B%E6%93%8D%E4%BD%9C%E7%9A%84%E7%BB%84%E7%BD%91%E6%96%B9%E6%A1%88&quot; tabindex=&quot;-1&quot;&gt;SCU-LAN10和SCU-17实现远程操作的组网方案&lt;/h2&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/bX4kcUGJa_-809.avif 809w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/bX4kcUGJa_-809.webp 809w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/bX4kcUGJa_-809.png&quot; alt=&quot;图片&quot; width=&quot;809&quot; height=&quot;572&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;这个方案需要SCU-LAN10、SCU-17和两台电脑，直接组成了通过互联网的远程操作方案。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;红色线&lt;/strong&gt;是SCU-LAN10的连接方式；&lt;/li&gt;
-&lt;li&gt;在台站之外，&lt;strong&gt;电脑A&lt;/strong&gt;通过互联网连接到SCU-LAN10，实现监控、操作FTDX10的目标；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;绿色线&lt;/strong&gt;是SCU-17的连接方式；&lt;/li&gt;
-&lt;li&gt;它在台站侧，和收发信机、电脑B，保持物理连接；&lt;/li&gt;
-&lt;li&gt;在台站侧的电脑B，运行各种HAM软件，比如FT8。&lt;/li&gt;
-&lt;li&gt;在电脑A、B上，安装远程桌面软，实现从电脑A上操作电脑B上的各种HAM软件。&lt;/li&gt;
-&lt;li&gt;CW怎么办？我还没实验过，后续再探讨吧。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;敲黑板，下面说几个要点：&lt;/p&gt;
-&lt;h3 id=&quot;%E8%BF%9E%E6%8E%A5-scu-lan10-%E7%9A%84%E6%AD%A5%E9%AA%A4&quot; tabindex=&quot;-1&quot;&gt;连接 SCU-LAN10 的步骤&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;SCU-LAN10联网&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;SCU-LAN10是个固定IP设备，而且只能通过IP地址访问。所以设置前要先把自己电脑的IP，改成跟它出厂预设的IP地址（192.168.49.1）在一个网段（比如192.168.49.73），然后就可以用YAESU提供的设置软件，直接登录进去了。&lt;/li&gt;
-&lt;li&gt;通过一根网线，把SCU-LAN10和家里的路由器下行接口（LAN口）连起来。你可能不得不把一个Wi-Fi路由器摆到它附近。&lt;/li&gt;
-&lt;li&gt;一般的Wi-Fi路由器，使用的是动态分配的IP地址，要确保给SCU-LAN10预留一个固定IP地址。这要看路由器的说明书。&lt;/li&gt;
-&lt;li&gt;如果要从台站以外访问SCU-LAN10，还需要记得打开路由器的防火墙，把50000～50003四个UDP端口，转发到SCU-LAN10的固定IP上去。&lt;/li&gt;
-&lt;li&gt;从外部访问台站上的SCU-LAN10，还需知道自家的公网IP地址。有些路由器提供手机管理软件，可以查询到家里最新的IP地址；也可以琢磨在家里部署一个虚拟专网。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;把随机提供的USB CAT线、ACC线接到收发信机后边的相应接口。&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;FTDX系列提供了一个13芯的ACC接口，看起来它是传输电台状态数据的，并给SCU-LAN10供电的。电台控制、音频数据、频谱数据则是通过USB完成的。&lt;/li&gt;
-&lt;li&gt;FT-710没有ACC接口。数据采集、收发信机控制、音频传输、频谱数据完全通过USB实现，但是需要给SCU-LAN10加一个12V电源。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;连接SCU-17相对简单，把随机提供的USB CAT线，RS-232C电缆，DATA电缆，跟FTDX10背面对应的接口连接好。但是有两个重要的提示：&lt;/p&gt;
-&lt;h3 id=&quot;%E8%BF%9E%E6%8E%A5scu-17%E7%9A%84%E8%A6%81%E7%82%B9&quot; tabindex=&quot;-1&quot;&gt;连接SCU-17的要点&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;没有声音输出？&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;刚连上SCU-17，直接发射可能没有音频输出，调整SCU-17的音量旋钮也不行。这可能是因为收发机上的DATA模式选择了USB。因为SCU-17是从DATA接口获取的音频，应该把收发机的切换到DATA。设置路径是&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;功能菜单：Radio Setting &amp;gt; MODE PSK/DATA &amp;gt; REAR SELECT = DATA&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;由于FTDX系列的新固件附加了一组**“PRESET”**预设值（主要针对FT8等DATA模式）。它把相应的设置预存好了批处理一下，切换到DATA模式就启动，切换其它模式再恢复之前的设置。“PRESET”是给收发信机上的主USB接口设计的，它默认会把REAR SELECT换成USB。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;莫名其妙的自动发射？&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;在电脑开机时，接了RS-232C电缆的收发信机可能会有几秒钟处在发射状态。我猜或许是因为电脑启动时串口初始化会上电，此时触发了RTS发射。&lt;/li&gt;
-&lt;li&gt;你可以关掉RTS。“PRESET”预设的 CAT RTS 就是关闭的。&lt;/li&gt;
-&lt;li&gt;手动关闭收发机 CAT RTS 的路径是：
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;功能菜单：Operation Setting &amp;gt; General &amp;gt; CAT RTS = OFF&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;但是关掉它会不会不影响其它玩具？比如fldigi发射CW？这些要以后慢慢研究了。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;好了，关于SCU-LAN10和SCU-17部署上的坑，基本上就这些。&lt;/p&gt;
-&lt;h3 id=&quot;%E5%BF%85%E9%A1%BB%E7%94%A8scu-17%E5%90%97%EF%BC%9F&quot; tabindex=&quot;-1&quot;&gt;必须用SCU-17吗？&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;当然不是&lt;/strong&gt;。熟悉数据盒子的人自然知道要怎么做。心灵手巧的无线电老中医也可以自己DIY接口电缆、音频线，实现和SCU-17同样的能力。我用FT-818ND玩FT8时，还在用自己两年前DIY两根数据线和一个USB声卡。我也买过数据盒子，后来玩烧了。窃以为SCU-17是这些产品里最靠谱的设备。&lt;/p&gt;
-&lt;div class=&quot;callout callout-tip&quot;&gt;
-&lt;h3 class=&quot;callout-title&quot; id=&quot;rs-232c-ftdx10&quot;&gt;通过RS-232C连接FTDX10电台&lt;/h3&gt;&lt;p&gt;通过RS-232C和DATA接口实现CAT是业余无线电二十年的老话题。如果你的电脑还有RS-232C接口，你可以用一根标准RS-232C电缆直连收发机。现代电脑基本只有USB接口了，这时需要买一根RS-232C转USB的串口线，请注意这种RS-232C接口的2、3针脚要交差。请参考上一篇&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247484237&amp;amp;idx=1&amp;amp;sn=ee1d4b5b356ed77a9b7aacb50cd1ecc2&amp;amp;chksm=e94985c7de3e0cd1f104ffc7984e5d3c4632afa2845a2f36551434ff5df7487320b7a425e696&amp;amp;scene=21#wechat_redirect&quot;&gt;《FTDX10使用RS-232C接口CAT操作指北》&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;在QRO和不谐振天线的设备组合上，直接用RS-232C电缆连电脑，有高度的RFI风险。建议选FTDI芯片的工业级电缆，最好再配一个隔离器。DIY的DATA音频线倒是不会有大问题，但也最好缠几圈磁环。&lt;/p&gt;
-&lt;p&gt;FTDX10支持101项CAT操作，FTDX101支持105项，通过RS-232C电缆控制收发机，只有一项开关机不支持，其它都支持。&lt;/p&gt;
-&lt;/div&gt;
-&lt;h2 id=&quot;%E8%BF%9C%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%8F%B0%E7%AB%99%E5%AE%9E%E6%99%AF&quot; tabindex=&quot;-1&quot;&gt;远程控制台站实景&lt;/h2&gt;
-&lt;p&gt;下边这张图就是我的书房远程控制台站，此时是在家里的局域网环境下。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/WAMhT6wemS-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/WAMhT6wemS-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/WAMhT6wemS-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;608&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;由于我工作的电脑主要是Mac OS和Linux的系统，所以我部署了三台电脑：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;一台&lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247483860&amp;amp;idx=1&amp;amp;sn=706a4c29d4198a667f89a0db5e684c30&amp;amp;chksm=e949875ede3e0e48f9818a0faaa78362e81d1ad60599a916438273a5e7620f0a0ca6842a6c86&amp;amp;scene=21#wechat_redirect&quot;&gt;RadioPi，在阳台跟FTDX一起做值班电脑&lt;/a&gt;，这张图里看不到它。大屏幕上的JTDX软件，就是从它那边通过远程桌面投射过来的。&lt;/li&gt;
-&lt;li&gt;一台Macbook是我工作时随身带的，主要用来运行远程桌面，查看RadioPi的运行情况。同时运行着RUMLogNG，Mac世界里最好用的日志软件。RadioPi上的JTDX通过UDP端口，把DX提醒、QSO记录传送给RUMLogNG。&lt;/li&gt;
-&lt;li&gt;另有一台Tinkpad X230是专门用来运行SCU-LAN10软件监控电台的。当然X230也可以跑远程桌面，那样Macbook就可以下班了。只是我得找一个在Windows上好用的日志软件。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;我尝试过在Macbook Pro 16上，运行Windows虚拟机跑SCU-LAN10。给虚拟机分配了一半的运算力，4个CPU内核、8G内存。但是SCU-LAN10对系统的消耗相当大，没十分钟它自己就挂了。还把Mac给累坏了，风扇嗷嗷转了好久才缓过劲儿来。&lt;/p&gt;
-&lt;p&gt;下边这张气氛诡异的图就是我神秘的阳台壁橱台站。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/46BbURJ7p--1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/46BbURJ7p--1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/46BbURJ7p--1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;809&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;RadioPi藏在第三层，电源GSV-3000右边，有一个63电报机挡住了它，那个红色的光就是它。&lt;/li&gt;
-&lt;li&gt;第二层是电源线的扼流磁环、SCU-LAN10、SCU-17。&lt;/li&gt;
-&lt;li&gt;第一层是FTDX10，驻波表，1973年的常熟K4手键。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;scu-lan10%E7%9A%84%E6%9C%80%E4%BD%B3%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF&quot; tabindex=&quot;-1&quot;&gt;SCU-LAN10的最佳应用场景&lt;/h2&gt;
-&lt;p&gt;SCU-LAN10的最佳应用场景应该还是在局域网，要不怎么叫“LAN10”呢。当电台收发信机不适合放在书房，或者没有一个舒服的操作位置时，这玩意儿大幅提升了操作体验。还节约了几十米电缆，降低了RFI治理成本。&lt;/p&gt;
-&lt;p&gt;当把家里的局域网跟公共广域网打通之后，还可以在更远的地方操作。虽然难免会有延时，但还能接受，用来收听、监控设备状态还是没问题的。&lt;/p&gt;
-&lt;h2 id=&quot;scu-lan10%E7%9A%84%E5%BB%B6%E6%97%B6%E8%83%BD%E6%9C%89%E5%A4%9A%E5%A4%A7%EF%BC%9F&quot; tabindex=&quot;-1&quot;&gt;SCU-LAN10的延时能有多大？&lt;/h2&gt;
-&lt;p&gt;我在局域网环境下做了个对比实验。结果感人！&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;在安装了SCU-LAN10软件的ThinkPad X230上，把电脑音量开到最大；启动WSJT-X v2.54软件，对操作系统麦克风收到所有声音信号解码，所以信噪比就不用比了，只看延时。&lt;/li&gt;
-&lt;li&gt;在阳台的值班电脑RadioPi上，也运行着WSJT-X v2.54，通过远程桌面观察解码结果。&lt;/li&gt;
-&lt;li&gt;对比两个窗口解码出的相同信号，查看延时的情况。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/QoRvpSPQfm-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/QoRvpSPQfm-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/QoRvpSPQfm-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;607&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;通过局域网传到SCU-LAN10软件的信号比FTDX10上的信号慢了0.8秒！这是有点头大了。再慢点WSJT-X就不解码了。可能这会儿家人在刷手机视频吧，早先看才0.3秒左右。&lt;/p&gt;
-&lt;p&gt;我的SCU-LAN10硬件连的是百兆交换机，X230连的是百兆无线网，看来是时候考虑全屋的千兆网升级、VLAN优化了。&lt;/p&gt;
-&lt;h2 id=&quot;%E5%85%B3%E4%BA%8Escu-lan10%E7%9A%84%E4%B8%80%E4%BA%9B%E6%9C%9F%E5%BE%85&quot; tabindex=&quot;-1&quot;&gt;关于SCU-LAN10的一些期待&lt;/h2&gt;
-&lt;h3 id=&quot;%E6%8E%A8%E6%B5%8B%E4%B8%80%E4%B8%8Bscu-lan10%E7%9A%84%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84&quot; tabindex=&quot;-1&quot;&gt;推测一下SCU-LAN10的软件架构&lt;/h3&gt;
-&lt;p&gt;SCU-LAN10是一个封闭的软件架构，而且只支持Window操作系统。一般来说，如果想在跟SCU-LAN10的同一台电脑上实现CW信号传输，应该依赖SCU-LAN10提供的软件API接口、或DLL动态调用库，或者SCU-LAN10直接兼容最通用的标准软件库，比如Hamlib。可我在Windows里翻了翻，没看到它跟Hamlib这类软件库有关联。说明这很可能是YAESU自己开发的一套黑盒应用。QST杂志研究说，或许可以通过在Windows上改变声卡配置，把音频分享给类似WSJT-X这类软件，再通过SCU-LAN10的VOX方式发射。这听起来应该能实现，但是VOX不太靠谱啊。所以目前各种常见的HAM软件，比如WSJT-X、N1MN、WINTEST、RUMLog，fldigi这些，基本没法跟SCU-LAN10一起用。&lt;/p&gt;
-&lt;p&gt;可以研究一下SCU-LAN10的网络数据传输接口。它依赖50000～50003这四个UDP协议端口，依次传输控制、CAT、音频和频谱数据。如果有人能从这一层截取数据，并做成开放接口，倒是一个有趣的破题路线。总之，还是期待YAESU能主动开放软件接口，提供给HAM世界更多的可玩性。&lt;/p&gt;
-&lt;h3 id=&quot;%E5%85%B3%E4%BA%8Escu-lan10%E7%9A%84%E6%8E%A5%E5%8F%A3%E7%8C%9C%E6%83%B3&quot; tabindex=&quot;-1&quot;&gt;关于SCU-LAN10的接口猜想&lt;/h3&gt;
-&lt;p&gt;SCU-LAN10上还有一个RS-232C接口，我曾尝试用RS-232C电缆代替USB，接到电脑上看看会有啥反应？结果是SCU-LAN10报错，说没找到USB，必须用USB。但是它的确识别出来了有RS-232C设备接入。&lt;/p&gt;
-&lt;p&gt;我还发现最早出厂的SCU-LAN10带有一个音频输入输出的接口，但是新出厂的产品，这个接口取消了。打开盒子看电路板，那里还有一个4脚的Audio插座的位置。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/1u4eFYgANu-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/1u4eFYgANu-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/setting-up-the-sculan10-for-ftdx10-remote-control/1u4eFYgANu-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;右下角就是音频接口的位置&lt;/p&gt;
-&lt;p&gt;不知道YAESU葫芦里卖的什么药。莫非是用来配合值班电脑实现DATA模式？&lt;strong&gt;如果你手边有老的SCU-LAN10，可以试一试哦！&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E8%BF%9C%E7%A8%8Bcw%EF%BC%9F&quot; tabindex=&quot;-1&quot;&gt;如何实现远程CW？&lt;/h2&gt;
-&lt;p&gt;上边分析过了，这个路径可能还得依赖值班电脑上的软件，比如fldigi通过RTS发CW。如果想在本地操作手键，控制远端的收发机发射，有一个思路跟大家探讨：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;首先要组好一个“鲁棒性佳”的虚拟专网，要靠谱，比如千兆有线局域网。&lt;/li&gt;
-&lt;li&gt;值班电脑B上运行Hamlib Net rigctl，把FTDX10虚拟成一台网络电台；&lt;/li&gt;
-&lt;li&gt;然后在本地电脑A上，通过Winkey这类软件，连一个K3NG这类keyer，再连手键、自动键。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;等我把BG6JJI的K3NG套件完成了就试试这个思路。如果你已经知道这一条弯路，请告诉我。&lt;/p&gt;
-&lt;p&gt;这些年YAESU的产品作风一直很保守，世人有目共睹。它好像把电台当钢琴来做了，带着一身老工匠的矜持，闷头打磨一台古典乐器。SCU-LAN10好比给钢琴加装了个蓝牙模块，可以用Pad示谱，增加了练习的趣味性。可是竞争对手直接在量产数字钢琴了。或许YAESU能想明白，尽快给SCU-LAN10软件开放接口，让大家玩的开心。它再不搞，ICOM、Flexradio、Elecraft就搞出来了。&lt;/p&gt;
-&lt;h2 id=&quot;%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99&quot; tabindex=&quot;-1&quot;&gt;相关资料&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://static.dxengineering.com/global/images/technicalarticles/ysu-scu-lan10.pdf?_gl=1*1em267r*_ga*MTM4NTA4NDI3MS4xNjUyOTc3NTIy*_ga_NZB590FMHY*MTY2ODYwNjg4Ny43LjEuMTY2ODYwNjkxMi4zNS4wLjA&quot;&gt;QST杂志SCU-LAN10的评测，2021年5月&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.yaesu.com/downloadFile.cfm?FileID=16693&amp;amp;FileCatID=158&amp;amp;FileName=SCU%2DLAN10%5FInstallation%5FManual%5FENG%5F2012%2DB.pdf&amp;amp;FileContentType=application%2Fpdf&quot;&gt;YAESU SCU-LAN10安装手册&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.yaesu.com/downloadFile.cfm?FileID=16690&amp;amp;FileCatID=158&amp;amp;FileName=SCU%2DLAN10%5FOperation%5FManual%5FENG%5F2012%2DB.pdf&amp;amp;FileContentType=application%2Fpdf&quot;&gt;YAESU SCU-LAN10操作手册&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://yaesu.com/jp/manuals/yaesu_m/SCU-17_OM_ENG_JPN.pdf&quot;&gt;YAESU SCU-17操作手册&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  <entry>
-    <title>FTDX10使用RS-232C接口CAT操作指北</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/null-modem-rs232c-connector-of-ftdx10/" />
-    <updated>2022-11-11T17:39:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/null-modem-rs232c-connector-of-ftdx10/</id>
-    <content type="html">&lt;p&gt;因为要腾出FTDX10的USB接口，给SCU-LAN10做远程控制，我就琢磨用RS-232C电缆控制FTDX10。&lt;/p&gt;
-&lt;p&gt;逛了几个FTDX10的论坛，发现关于电缆的选择众说纷纭。ftdx10@groups.io 有两个人为这事儿还较真儿了。Bob KC9RF 说，应该用第2、3针脚交叉的。他专门测试了是2-3，3-2的，并验证成功。另一个叫Franco的说不能用交叉的，他就是用一根RS-232C直连的电缆，直接用在电脑上完全没问题，还测试了电缆的针脚，真的是2-2，3-3的。而且八重洲出的 FTDX10 CAT 操作参考手册，第3页说，一定要用标准的RS-232C电缆，不是那种被称作“非modem”的电缆。它说“非猫”就那种2、3针交叉的RS-232C电缆。&lt;/p&gt;
-&lt;p&gt;我找来这份英文版的《FTDX10 CAT operation Reference Manual》，上边果然是这么说的。那好吧，我就买根标准的RS-232C转USB的电缆，买的时候还专门跟客服反复确认了，它不是2-3交叉的。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/null-modem-rs232c-connector-of-ftdx10/WodhnLWHav-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/null-modem-rs232c-connector-of-ftdx10/WodhnLWHav-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/null-modem-rs232c-connector-of-ftdx10/WodhnLWHav-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;774&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;等电缆到货，把它跟FTDX10和RadioPi接上，打开WSJT-X，不灵。于是我花了一晚上研究树莓派世界的USB驱动、Hamlib rigctl、设备模块加载、 修改了N种设置……也没搞定。&lt;/p&gt;
-&lt;p&gt;再次翻出论坛帖子仔细看，我发现Franco的是两头都是RS-232C的电缆，直接连电脑的RS-232C接口。但 Bob买的是一根RS-232C转USB的电缆， 莫非是转USB之后接口的定义不一样？&lt;/p&gt;
-&lt;p&gt;于是我从抽屉里翻出来一根旧RS-232C电缆，改造成2-3针交叉的转接头，接上FTDX10和RadioPi…… &lt;em&gt;&lt;strong&gt;IT WORKS！&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/null-modem-rs232c-connector-of-ftdx10/mH2sY_YP5E-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/null-modem-rs232c-connector-of-ftdx10/mH2sY_YP5E-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/null-modem-rs232c-connector-of-ftdx10/mH2sY_YP5E-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1920&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;这是多么完美的一天，两个吵架的人都没错，连八重洲都是对的，就我这个看热闹的错了！&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>再次认识端馈半波天线(EFHW)</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/" />
-    <updated>2022-10-05T05:19:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/</id>
-    <content type="html">&lt;p&gt;国庆期间调试好了一条水平架设的 20 米 端馈半波天线 EFHW4010 ，让电台在 40/20/15/10 米上工作的非常出色 ，FTDX 10 重装上阵 。从1区通联了几个4区、6区、9区的SSB，都给了我59+的信号报告。&lt;/p&gt;
-&lt;p&gt;先发一张我的天线部署图。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/vtgZ-cFH7n-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/vtgZ-cFH7n-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/vtgZ-cFH7n-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;607&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;天线从我家阳台水平横拉到对面楼上，振子的长度20米整，这正好是40米波端的半个波长，一个谐振的尺寸。馈电点电压最高，电流最低，需要一个1:49的变压器来匹配。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/BHwbifa2UO-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/BHwbifa2UO-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/BHwbifa2UO-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;608&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;上图是BI1EIH做的两个1:49变压器。左边是13:2圈的，匹配完的阻抗还是偏高。我用的是右边这个， 14:2圈，匹配的阻抗很完美。&lt;/p&gt;
-&lt;p&gt;严谨地说，这是一个1:49的串联谐振变压器，跟1897年特斯拉申请的特斯拉线圈专利的是一回事儿。它负责把电台输出的电压，转换为和天线阻抗匹配的电压。因为天线振子是一根独立完整的半波振子，不存在与另外的零件之间的电势平衡。所以，这种天线理论上不需要“地线”。&lt;/p&gt;
-&lt;p&gt;但实际操作上，唯一的振子不可能在频段上每一点都是完全谐振的。所以还是需要一点点“平衡”的补偿。实践中经常以同轴电缆的外皮作为“地线”。但是我的馈线部分加了不少磁环，原本是希望扼制不平衡天线的共模电流。对于EFHW天线来说，这些磁环可能会影响电缆外皮的“平衡”作用。所以我又做了一根“平衡器”（图中蓝色的部分）。它是一组各波段1/4波长的导线组合，基本可以给每个波段提供一个低阻抗的环境。我认为大功率、固定台站有必要加这个，这可能会让工作带宽更大一些。目前我也没有量化测量过，纯属 无线电老中医的思维方式。&lt;/p&gt;
-&lt;p&gt;我本想给电源和电台设备加上“电气接地”（图中黄色的部分）。但是因为家住12层的6层，实在没有办法就近接入大地。况且，EFHW天线是谐振天线，整个台站上的共模电流影响微乎其微。所以“电气接地”的想法也就放弃了。但是，安全接地、防雷接地还是要注意，能做到尽量做。我家里能保证电器都接到三头插座的零线，防雷么，主要靠旁边高楼替我扛了。&lt;/p&gt;
-&lt;p&gt;下边是整个天线架设的示意图。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/ZzmmzaWuok-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/ZzmmzaWuok-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/ZzmmzaWuok-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;606&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;近场辐射的影响&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;我的电台设备距离天线很近，不到2米。它们会不会受到天线近场辐射的影响？在天线中间正下方不到一个波长的地方，应该会的。但是，碰巧我的设备都在天线振子的延长线上，这是半波谐振天线的零点方向，在这个范围内不会有辐射场，所以也不会影响到电台设备。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;未来的扩展：EFHW8010&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;现在这根20米长的天线只能工作在40/20/15/10米四个波段，典型的EFHW4010天线，如果还想工作在80/30/17/12米波段，升级为EFHW8010天线，要么换40米振子，要么加一段电感。详细方案可以参考我翻译的文章，主要讲天线的原理，和1:49变压器的制作。有兴趣的朋友可以访问下边的二维码，或者原文链接。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;不得不说，对于住在高楼中间楼层的老中医来说，EFHW是最理想的天线。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/M8Fuf7wpu9-732.avif 732w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/M8Fuf7wpu9-732.webp 732w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/understanding-the-efhw-antenna-once-more/M8Fuf7wpu9-732.png&quot; alt=&quot;图片&quot; width=&quot;732&quot; height=&quot;960&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>
