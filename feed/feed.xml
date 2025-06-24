@@ -661,94 +661,123 @@ AI跟PD0R的QSO
 </content>
   </entry>
   <entry>
-    <title>拼插玩具：天线入户板</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/" />
-    <updated>2023-04-28T00:09:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/</id>
-    <content type="html">&lt;p&gt;画PCB容易上瘾，说着说着就顺手画了一个天线入户板。&lt;/p&gt;
-&lt;h2 id=&quot;%E4%B8%BA%E5%95%A5%E8%A6%81%E5%81%9A%E5%A4%A9%E7%BA%BF%E5%85%A5%E6%88%B7%E6%9D%BF%EF%BC%9F&quot; tabindex=&quot;-1&quot;&gt;为啥要做天线入户板？&lt;/h2&gt;
-&lt;p&gt;我的目标是将电台的&lt;strong&gt;底噪&lt;/strong&gt;（Noise Floor）降到尽可能低。设想的方法是：在天线进屋的一个恰当的点位上，把&lt;strong&gt;共模电流&lt;/strong&gt;隔绝到室外，并且在这个点上，给电台室内的所有设备提供一个&lt;strong&gt;等电势、零电位、低阻抗&lt;/strong&gt;的平面。&lt;/p&gt;
-&lt;p&gt;这个后续要接着实践，高楼接地、消除静电、定性定量……说了这么多，第一步是要买一块紫铜的接地排。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/3tt9h-7Z3k-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/3tt9h-7Z3k-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/3tt9h-7Z3k-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1291&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;但是网上的紫铜接地排都是给电力设备用的。安装的孔径太小，天线电缆连接器一般都是直径16mm起步。难道需要我自己打孔吗？&lt;/p&gt;
-&lt;p&gt;网上看到过一些射频工程用不锈钢板、热镀锌板、铝板做天线入户的跳线板再接地的。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/yRkgtoXzlE-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/yRkgtoXzlE-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/yRkgtoXzlE-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;这些方案都不错。紫铜的电阻率应该比这些都低。但是中国缺铜，所以紫铜件成本高，只有在高压、防雷这种安全要求更高的地方才用，射频件就用铜包钢、热镀锌了。本来射频电流也有趋肤效应。总之是要做一个零电位，还能泄放静电、隔绝共模电流。&lt;/p&gt;
-&lt;p&gt;如果只是隔离共模电流的话，做一个1:1巴伦也不错。F5NPV就做了一串1:1，把不同波段的共模电流都隔离了。感兴趣的可以去看看&lt;a href=&quot;https://f5npv.wordpress.com/endfed-cmc/&quot;&gt;他的博客&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/HHb0n55XoD-1024.avif 1024w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/HHb0n55XoD-1024.webp 1024w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/HHb0n55XoD-1024.jpeg&quot; alt=&quot;图片&quot; width=&quot;1024&quot; height=&quot;576&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;不过话说回来，只做1:1巴伦还不够，因为还有接地的问题。&lt;/p&gt;
-&lt;h2 id=&quot;%E5%98%89%E7%AB%8B%E5%88%9Bpcb%E6%89%93%E6%9D%BF&quot; tabindex=&quot;-1&quot;&gt;嘉立创PCB打板&lt;/h2&gt;
-&lt;p&gt;我只有三条电缆入户，花小几百定制一个紫铜板，不如用嘉立创的优惠券做一个PCB的。说干就干，打开 KiCad 画了一个。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/1JkF_QLpZ_-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/1JkF_QLpZ_-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/1JkF_QLpZ_-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1080&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;设计主要兼容了大多数直径16mm的双头射频连接器、以及25x25mm的带法兰的射频接头。板子所有的连接只有一个网络，GND。两面完全覆铜，中间布满过孔，任意一处流露的金属都可以接地。&lt;/p&gt;
-&lt;p&gt;考虑到嘉立创的免费板子是10x10cm见方，所以花了点心思，做成了几块可以掰开再拼插在一起，通过焊接加固，多套板子还能拼成出更多的连接单元。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/eeo9zOWyPL-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/eeo9zOWyPL-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/eeo9zOWyPL-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1080&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;然鹅，按照嘉立创的规则，&lt;strong&gt;拼板不免费&lt;/strong&gt;。只要设计里有一个邮票孔、一条开槽，系统就先自动判定为拼板。找人工审核也说不过去。唉，画都画了，还是自己花钱做吧。&lt;/p&gt;
-&lt;p&gt;不到两天，做好的板子就寄来了。这也太快了！智能制造让梦想照进现实！&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/wpNfpaTnRN-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/wpNfpaTnRN-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/wpNfpaTnRN-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1080&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;下边是做好的样子，看着还挺精神哈！&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/1MrHYeYpoD-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/1MrHYeYpoD-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/Antenna-Entrance-Panel-PCB/1MrHYeYpoD-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1080&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;其实，不做拼接的话，在 10x10cm 见方的优惠券范围内，可以做成更大的、至少6个连接单元的独立板子。之后，买一个成品的紫铜汇流排，把这个板子拦腰固定在紫铜汇流排上。这样，接地、等电位，一次搞定。而且免费5张哦！&lt;/p&gt;
-&lt;p&gt;入户板的应用是下一阶段的事。回归初心，治理底噪才是出发点。这套入户板权当是个拼插玩具了。&lt;/p&gt;
+    <title>FT-817/818蓝牙板(7)电源电阻参数更正！</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/" />
+    <updated>2024-01-20T15:38:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/</id>
+    <content type="html">&lt;p&gt;&lt;strong&gt;FT-817/818的蓝牙板合集&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/&quot;&gt;FT-817/818的蓝牙DIGI模式试验板(1)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/&quot;&gt;FT-817/818的蓝牙DIGI模式试验板(2)优化更新&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/&quot;&gt;FT-817/818的蓝牙DIGI模式试验板(3)紧急更新&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-4-mini-din-connectors/&quot;&gt;FT-817/818的蓝牙DIGI模式试验板(4)Mini DIN插头&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/&quot;&gt;FT-817/818的蓝牙DIGI模式试验板(5)蓝牙模块JDY-67&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/&quot;&gt;FT-817/818蓝牙板(6)拯救R1235&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/&quot;&gt;FT-817/818蓝牙板(7)电源电阻参数更正！&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;%E5%85%88%E8%AF%B4%E7%BB%93%E8%AE%BA&quot; tabindex=&quot;-1&quot;&gt;先说结论&lt;/h2&gt;
+&lt;p&gt;建 议 ： 最终 保护电阻和 软 开关电阻的选择&lt;/p&gt;
+&lt;pre class=&quot;language-makefile&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-makefile&quot;&gt;R6 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; 10Ω
+R10 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; 100KΩ
+R11 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; 100KΩ
+R12 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; 1KΩ
+此外，U2依然可以选择 LM1117-3.3V&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;%E8%A8%80%E5%BD%92%E6%AD%A3%E4%BC%A0&quot; tabindex=&quot;-1&quot;&gt;言归正传&lt;/h2&gt;
+&lt;p&gt;前几天自己又做了一个，把最后一块JDY-67用上了， 然鹅竟没有成功。&lt;/p&gt;
+&lt;p&gt;我是按照已经发布在Github上的BOM List做的。这说明BOM List上还有不正确的元件配置。 &lt;strong&gt;这里跟各位先道个歉&lt;/strong&gt; 。&lt;/p&gt;
+&lt;p&gt;我用万用表测量了LM1117-5V的输入输出电压，都低得离谱。 这个板 子 最 主要 的功 能就是从 ACC 取电，给LM1117供电；再 借用 PT T 接口电压的通断情况， 给取电 电 路 加了一个 软开关 。所以大概率还是这里的问题。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/7OGmIErGRH-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/7OGmIErGRH-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/7OGmIErGRH-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;494&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;供电部分原理图&lt;/p&gt;
+&lt;p&gt;回顾最后一次成功 &lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247484438&amp;amp;idx=1&amp;amp;sn=b9d2181a3110e7b25d20ae7037cb843e&amp;amp;chksm=e949829cde3e0b8a535c0dcf4bd899bc6ad73052f3558a8f570879a436099b9d323c12931070&amp;amp;scene=21#wechat_redirect&quot;&gt;《拯救R1235》&lt;/a&gt; ，当时其实我已经把软开关里的几个电阻都做了调整。成功时它们的值分别是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;R6 = 10 Ω&lt;/li&gt;
+&lt;li&gt;R10 = 100KΩ&lt;/li&gt;
+&lt;li&gt;R11 = 100 KΩ&lt;/li&gt;
+&lt;li&gt;R12 = 10 KΩ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;然后我才发现FT-818的R1235坏了，更换了之后就成功了。 所以 这几个阻值的变化带来的功效被忽略了。&lt;/p&gt;
+&lt;h2 id=&quot;%E7%94%B5%E9%98%BB%E9%80%89%E6%8B%A9&quot; tabindex=&quot;-1&quot;&gt;电阻选择&lt;/h2&gt;
+&lt;p&gt;说实话“软开关”是我的知识盲点，我是依葫芦画瓢的。有几个无线电老中医都给了我葫芦。R10/R11的推荐都是 100 KΩ ，但是R12， 一位老中医用仿真软件实验了一下，认为1KΩ最佳。 另外一个老中医开的方子是10KΩ 。&lt;/p&gt;
+&lt;p&gt;正好我手边还有另外一个不工作的板子，于是 我按照大家的方子，改出了两套组合。他们目前都正常工作了，而且 看起来差别不大。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/0pGA6IwQO5-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/0pGA6IwQO5-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/0pGA6IwQO5-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;187&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;压降的差别应该就是在R6的10Ω和22Ω的选择上。 所以建议还是用第一套组合，用仿真跑过的。&lt;/p&gt;
+&lt;p&gt;最后，还是分享一下PCB打板的Gerber下载地址：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Gitee &lt;a href=&quot;https://gitee.com/bg6lh/FT-81x-BT-DIGI-Adaptor&quot;&gt;https://gitee.com/bg6lh/FT-81x-BT-DIGI-Adaptor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Github &lt;a href=&quot;https://github.com/BG6LH/FT-81x-BT-DIGI-Adaptor&quot;&gt;https://github.com/BG6LH/FT-81x-BT-DIGI-Adaptor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;以及3D打印文件下载地址：&lt;a href=&quot;https://www.thingiverse.com/thing:6116435&quot;&gt;https://www.thingiverse.com/thing:6116435&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最新版设计文件都发布在了Github上，并正式发布了Release v1.0.0。Gitee是自动同步的版本。&lt;/p&gt;
+&lt;p&gt;至此，这个基于JDY-67蓝牙模块的FT-817/818 DIGI适配器设计，正式告一段落。&lt;/p&gt;
 </content>
   </entry>
   <entry>
-    <title>测试WB2CBA的40米低通滤波器</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/" />
-    <updated>2023-04-15T02:37:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/</id>
-    <content type="html">&lt;p&gt;今天用上次做的 &lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247484333&amp;amp;idx=1&amp;amp;sn=72d0f35f86cbf629e927a46ff3d5b425&amp;amp;chksm=e9498527de3e0c311a0d879dd0c0129ece11f00ad103e123b52f8029824a38e331369f6f1bb9&amp;amp;scene=21#wechat_redirect&quot;&gt;WB2CBA低通滤波器测试板&lt;/a&gt; ，测了WB2CBA两个版本的40米波段低通滤波器（Low Pass Filter，LPF）。第一版是他设计μsdx时做的，后来他参考DL2MAN的设计省了一个磁环电感。我是在做BD6CR的ADX-S时认识了他的第二版，所以简化起见，我把第一版称作μSDX版LPF，第二版称为ADX版LPF。&lt;/p&gt;
-&lt;h2 id=&quot;%E4%BB%BF%E7%9C%9F%E5%AF%B9%E6%AF%94&quot; tabindex=&quot;-1&quot;&gt;仿真对比&lt;/h2&gt;
-&lt;p&gt;对照他的ADX版LPF设计图，我用LTspice做了一个仿真。元件的参数来自WB2CBA的网站和JH1LHV对磁环电感量的计算。先 来一张原始的原理图：&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/ZFKtMW8h-f-720.avif 720w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/ZFKtMW8h-f-720.webp 720w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/ZFKtMW8h-f-720.png&quot; alt=&quot;图片&quot; width=&quot;720&quot; height=&quot;316&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;在仿真电路上省去了磁环L3。因为它只是一个射频扼流圈（上一篇说是匹配电路12.5Ω阻抗用的，但是经BD6CR和BG8NSK提示，它就是个RFC），在射频测试环境下要短路掉。测试板上的+12V接口就是对地短路这个RFC的。补偿三个BS170的电容应该加上。不加的话，插损会变大，二倍频的抑制会变小。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/ulpQOsHY1B-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/ulpQOsHY1B-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/ulpQOsHY1B-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;839&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/avejPsnKat-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/avejPsnKat-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/avejPsnKat-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;815&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/gqxhGg-usP-1016.avif 1016w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/gqxhGg-usP-1016.webp 1016w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/gqxhGg-usP-1016.png&quot; alt=&quot;图片&quot; width=&quot;1016&quot; height=&quot;1032&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;从仿真的结果看，在40米的7.090MHz附近，插入损耗-1.55dB，在2倍频的14.180MHz的插损是50.66dB。&lt;/p&gt;
-&lt;h2 id=&quot;nanovna%E6%B5%8B%E8%AF%95adx%E7%89%88lpf&quot; tabindex=&quot;-1&quot;&gt;nanoVNA测试ADX版LPF&lt;/h2&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/p-b4aXBdnC-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/p-b4aXBdnC-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/p-b4aXBdnC-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;接着我用电脑连接nanoVNA，做了一番校准之后，测试了自己做的ADX版40米LPF。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/4R_K5Ndym_-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/4R_K5Ndym_-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/4R_K5Ndym_-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;824&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;看来起很不错哦，跟仿真对比性能十分接近，甚至在二倍频的抑制性能还多了6dB。&lt;/p&gt;
-&lt;h2 id=&quot;%E7%9F%AD%E8%B7%AFrfc%E7%9A%84%E4%BD%9C%E7%94%A8&quot; tabindex=&quot;-1&quot;&gt;短路RFC的作用&lt;/h2&gt;
-&lt;p&gt;短路RFC的确有改善，但几乎看不出来。上图实际有一根蓝色的线，是被短路以后的追踪线。但是被粉色（未短路RFC）压住了。在一倍频上的插损不能判定有变化，在二倍频上的变化大概能再降低1dB，这跟线一直到30MHz能看到明显有变化，至少比不短路降低了2dB。&lt;/p&gt;
-&lt;h2 id=&quot;%E6%B5%8B%E8%AF%95%CE%BCsdx%E7%89%88lpf&quot; tabindex=&quot;-1&quot;&gt;测试μSDX版LPF&lt;/h2&gt;
-&lt;p&gt;再测测前年做的 &lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247484023&amp;amp;idx=1&amp;amp;sn=1d8e48ba9c94b8f0a2e2201425764b30&amp;amp;chksm=e94984fdde3e0debe137a50ae3a7a206c649776e69c48045c01cd42426c87f69a755e9b42354&amp;amp;token=1713095798&amp;amp;lang=zh_CN&amp;amp;scene=21#wechat_redirect&quot;&gt;μsdx&lt;/a&gt; 用第一版LPF。这是一个四个磁环的版本，其中一个也是RFC。测试结果，插损低于ADX版，但是二倍频抑制不如第二版，可以想见发射杂散会更高一些。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/NJoWDHP7vb-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/NJoWDHP7vb-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/NJoWDHP7vb-1080.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;824&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;你可能发现两个LPF测试的曲线完全不是一个风格。这可能得去问问切比雪夫或者巴特沃斯了。&lt;/p&gt;
-&lt;h2 id=&quot;%E6%95%B4%E7%90%86%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C&quot; tabindex=&quot;-1&quot;&gt;整理测试结果&lt;/h2&gt;
+    <title>FT-817/818蓝牙板(6)拯救R1235</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/" />
+    <updated>2023-08-04T21:23:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/</id>
+    <content type="html">&lt;p&gt;&lt;strong&gt;FT-817/818的蓝牙板合集&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/&quot;&gt;FT-817/818的蓝牙DIGI模式试验板(1)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/&quot;&gt;FT-817/818的蓝牙DIGI模式试验板(2)优化更新&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/&quot;&gt;FT-817/818的蓝牙DIGI模式试验板(3)紧急更新&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-4-mini-din-connectors/&quot;&gt;FT-817/818的蓝牙DIGI模式试验板(4)Mini DIN插头&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/&quot;&gt;FT-817/818的蓝牙DIGI模式试验板(5)蓝牙模块JDY-67&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/&quot;&gt;FT-817/818蓝牙板(6)拯救R1235&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/&quot;&gt;FT-817/818蓝牙板(7)电源电阻参数更正！&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;两个月前发布了0609版，BI1EIH给增加了软开关电路。对于电池没开关的用户，在关机后蓝牙板也会断电，这是个对QRP十分友好的设计。&lt;/p&gt;
+&lt;h2 id=&quot;r1235%E7%83%A7%E4%BA%86&quot; tabindex=&quot;-1&quot;&gt;R1235烧了&lt;/h2&gt;
+&lt;p&gt;起初 我做的0609 验证板一直没能成功，手机搜不到蓝牙，蓝牙似乎没启动。在不装蓝牙板的空载状态，电压是足的。一旦挂上负载，开机电压就掉的厉害。几个无线电老中医一起分析了很多原因，直到用12V 实验电源做了一次测试，0609版完美连接了手机蓝牙，而且启动电流只有30mA。&lt;/p&gt;
+&lt;p&gt;看来问题锁定在了FT-818的CAT接口供电上。这让人不得不面对一个现实，CAT接口的Pin1后边的那个10Ω电阻R1235可能挂了。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/iFS2gwxMFg-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/iFS2gwxMFg-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/iFS2gwxMFg-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;946&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;上图是FT-817/817ND维修手册2005版里的原理图。 CAT 接口的Pin 1对外输出13.8V的电压，它和电池的正极之间，只有一个起着分压限流作用的电阻R1235（红圈处），阻值10Ω。&lt;/p&gt;
+&lt;div class=&quot;callout callout-info&quot;&gt;
+&lt;p&gt;二十年来有不少有趣的817野生外设——诸如蓝牙CAT尾巴、快捷键盘、附加显示器等等——都在从这里取电。&lt;/p&gt;
+&lt;p&gt;这里的设计也一直在优化。传说最早的R1235是75Ω的。很多老的817ND这个电阻在PCB板的背面，新一点的设计改到了上面。&lt;/p&gt;
+&lt;p&gt;一些老文章里说R1235是起保护作用的，防止短路意外，那为什么不用一个保险丝呢？兴许YAESU的设计只是为了给CAT或者功放提供一个波段识别的参考电压？&lt;/p&gt;
+&lt;p&gt;至少第一目标并不是给外接设备供电的。因为这里只有区区百十毫安的电流输出。一旦跟旁边的Pin3（机壳地）短路，至少1A的电流经过，远远高出这个1/16W的电阻承受能力，它肯定就先烧了。这么看的确也保护了后边的电路。&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;为了验证它是不是烧了，BI1EIH设计了一个实验：用一个1KΩ的电阻并联在13.8V针脚和地之间，测量并联前后的电压变化，推算出了R1235现在实际的阻值，结果是大约207Ω……&lt;/p&gt;
+&lt;p&gt;阻值增大了20倍，要让蓝牙板有足够的电压，只能继续增大蓝牙板上的分压电阻R6，跟FT-817抢电压，最后整体的电阻上去了，起动电流又不够了……这下终于想明白了从第一版到最后一版那些莫名其妙的问题是为啥了。&lt;/p&gt;
+&lt;h2 id=&quot;%E6%9B%B4%E6%8D%A2r1235&quot; tabindex=&quot;-1&quot;&gt;更换R1235&lt;/h2&gt;
+&lt;p&gt;有很多人直接把R1235换成了一个自恢复保险丝。为了验证蓝牙板设计，我决定还是换10Ω电阻。&lt;/p&gt;
+&lt;p&gt;但是拆开FT-818我傻眼了，R1235的位置跟FT-817ND维修手册里的完全不一样。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th&gt;版本&lt;/th&gt;
-&lt;th&gt;LTspice仿真LPF40&lt;/th&gt;
-&lt;th&gt;ADX版LPF40&lt;/th&gt;
-&lt;th&gt;μSDX版LPF40&lt;/th&gt;
+&lt;th&gt;FT-817维修手册里的位置&lt;/th&gt;
+&lt;th&gt;FT-818的PCB照片&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;7.090MHz插损&lt;/td&gt;
-&lt;td&gt;-1.55dB&lt;/td&gt;
-&lt;td&gt;-1.60dB&lt;/td&gt;
-&lt;td&gt;-0.51dB&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;14.180MHz插损&lt;/td&gt;
-&lt;td&gt;-50.66dB&lt;/td&gt;
-&lt;td&gt;-56.71dB&lt;/td&gt;
-&lt;td&gt;-40.38dB&lt;/td&gt;
+&lt;td&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/ZpkcW6gWxF-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/ZpkcW6gWxF-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/ZpkcW6gWxF-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;888&quot;&gt;&lt;/picture&gt;&lt;/td&gt;
+&lt;td&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/zaeEBFcgTp-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/zaeEBFcgTp-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/zaeEBFcgTp-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1126&quot;&gt;&lt;/picture&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;因为仿真软件和nanoVNA的 采 样频率步长 并不完全一样， 所以采样点频率的 零头有几kHz的差异，暂且忽略不计了。&lt;/p&gt;
-&lt;h2 id=&quot;tinysa%E5%8F%91%E5%B0%84%E6%B5%8B%E8%AF%95&quot; tabindex=&quot;-1&quot;&gt;tinySA发射测试&lt;/h2&gt;
-&lt;p&gt;装上以后发射性能如何？我用tinySA测了一下ADX版LPF在40米波段的发射。 加了20dB衰减器的测试， 所以发射功率可以达到15.7+20=35.7(dBm)，3.7瓦哦！ 二次谐波的差距有-58.8dBc，很接近nanoVNA的测试结果。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/TrRIgBaKq7-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/TrRIgBaKq7-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/40m-band-low-pass-filter-test/TrRIgBaKq7-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;h2 id=&quot;%E6%8E%A8%E8%8D%90%E4%B8%80%E4%B8%8Bjh1lhv%E7%9A%84blog&quot; tabindex=&quot;-1&quot;&gt;推荐一下JH1LHV的Blog&lt;/h2&gt;
-&lt;p&gt;他一年前就在研究WB2CBA的低通滤波器，并且给出了调整的建议。他的网站上也有大量的无线电文章可以读，有兴趣的可以去看看。下边推荐的这篇就是在分析ADX版的40米LPF。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.jh1lhv.tokyo/entry/2022/06/04/200749&quot;&gt;https://www.jh1lhv.tokyo/entry/2022/06/04/200749&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;查阅网上的文章，发现FT-817/817ND系列的PCB至少有四个版本。而全世界只能找到最早两个版本的维修手册，上边的R1235都是在PCB的反面。传说最新的FT-817ND的R1235在正面。而全世界都找不到FT-818的维修手册。这下连FT-818是否有R1235都成了谣言了……&lt;/p&gt;
+&lt;p&gt;对比Dan YO3GGX给FT-817ND换自恢复保险丝的一张照片，他的FT-817ND的PCB跟我的FT-818一毛一样。&lt;/p&gt;
+&lt;p&gt;我只能赌FT-818是FT-817ND的马甲了。用万用表测量了跟 CAT的 Pin1 最近距离的电阻 ，只有下图里黄圈、红圈处跟CAT的 Pin1 是直通的。那红圈这个电阻应该就是FT-818的R1235 了。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/vm2zIYydaw-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/vm2zIYydaw-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/vm2zIYydaw-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1229&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;赌一下吧，抄起烙铁就把它换了。&lt;/p&gt;
+&lt;p&gt;然后，装上我们的0609版JDY-67蓝牙板， &lt;strong&gt;大成功！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/mQTm7NBFYi-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/mQTm7NBFYi-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/mQTm7NBFYi-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;h2 id=&quot;3d%E4%BF%9D%E6%8A%A4%E5%A4%96%E5%A3%B3&quot; tabindex=&quot;-1&quot;&gt;3D保护外壳&lt;/h2&gt;
+&lt;p&gt;FT-817/817ND/818的CAT接口，13.8V跟GND的针脚挨在一起，稍有不慎就容易短路电池。此时第一个献身的就是那个10Ω电阻R1235。&lt;/p&gt;
+&lt;p&gt;为了保护PCB上裸露的针脚，我画了一个3D打印的外壳，扣在FT-818屁股后边刚刚好。有需要的老朋友可以下载了打印一个。&lt;/p&gt;
+&lt;p&gt;原文链接是3D打印文件下载地址： &lt;a href=&quot;https://www.thingiverse.com/thing:6116435&quot;&gt;https://www.thingiverse.com/thing:6116435&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/gHIBfmnlrm-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/gHIBfmnlrm-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/gHIBfmnlrm-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;至此，这个项目可以告一段落了。后续使用中如果发现新问题，再继续跟大家扯。&lt;/p&gt;
+&lt;p&gt;最后，还是分享一下 PCB打板的Gerber下载地址：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Gitee &lt;a href=&quot;https://gitee.com/bg6lh/FT-81x-BT-DIGI-Adaptor&quot;&gt;https://gitee.com/bg6lh/FT-81x-BT-DIGI-Adaptor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Github &lt;a href=&quot;https://github.com/BG6LH/FT-81x-BT-DIGI-Adaptor&quot;&gt;https://github.com/BG6LH/FT-81x-BT-DIGI-Adaptor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;以及3D打印文件下载地址：&lt;a href=&quot;https://www.thingiverse.com/thing:6116435&quot;&gt;https://www.thingiverse.com/thing:6116435&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
   </entry>
 </feed>

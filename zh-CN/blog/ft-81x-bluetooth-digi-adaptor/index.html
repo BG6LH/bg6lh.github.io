@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>FT-817/818的蓝牙DIGI模式试验板(1)</title>
+		<meta name="description" content="最近做了一个可以直插在FT-81x系列收发信机后面板上的蓝牙DIGI模块。">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="BG6LH">
+		<link rel="stylesheet" href="/css/style.out.css">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+		
+        <!-- favicon -->
+        <link rel="icon" href="/img/me.svg" type="image/svg+xml">
+
+        <!-- Open graph -->
+        <meta property="og:title" content="FT-817/818的蓝牙DIGI模式试验板(1)">
+        <meta property="og:description" content="最近做了一个可以直插在FT-81x系列收发信机后面板上的蓝牙DIGI模块。">
+        <meta property="og:type" content="article">
+        <meta property="article:tag" content="posts,Bluetooth,DIGI,FT-817,FT-818,JDY-67">
+        <meta property="og:url" content="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/">
+        <meta property="og:site_name" content="BG6LH">
+        <meta property="og:locale" content="zh_CN">
+        <meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHozKLNV4Fw503uGxnVYZXrFnjSTibuyCt0J7Oy5GZYpXIpEQfN0MT1amnq0QoicsJvO8tJnjbhIfiaJ2A/0?wx_fmt=jpeg">
+        <!-- Twitter -->
+        <meta name="twitter:title" content="FT-817/818的蓝牙DIGI模式试验板(1)">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@jamflying">
+        <meta name="twitter:description" content="最近做了一个可以直插在FT-81x系列收发信机后面板上的蓝牙DIGI模块。">
+        <meta name="twitter:image" content="https://mmbiz.qpic.cn/mmbiz_jpg/8havQfBUHozKLNV4Fw503uGxnVYZXrFnjSTibuyCt0J7Oy5GZYpXIpEQfN0MT1amnq0QoicsJvO8tJnjbhIfiaJ2A/0?wx_fmt=jpeg">
+	</head>
+	<body class="bg-white dark:bg-slate-800 overflow-auto dark:text-white dark:text-gray-900" x-data="{
+	        open: false,
+	        darkMode: localStorage.getItem('theme') === 'dark',
+	      }" x-init="
+	        $watch('open', value => {
+	          if (value) {
+	            document.body.classList.add('overflow-hidden', 'md:overflow-auto');
+	          } else {
+	            document.body.classList.remove('overflow-hidden', 'md:overflow-auto');
+	          }
+	        });
+	        $watch('darkMode', value => {
+	          if (value) {
+	            document.documentElement.classList.add('dark');
+	            localStorage.setItem('theme', 'dark');
+	          } else {
+	            document.documentElement.classList.remove('dark');
+	            localStorage.setItem('theme', 'light');
+	          }
+	        });
+	        if (darkMode) document.documentElement.classList.add('dark');
+	        else document.documentElement.classList.remove('dark');
+	      ">
+		<header class="fixed top-0 left-0 right-0 z-50 flex flex-row p-3 w-full 
+                items-center  px-15
+                text-sm text-neutral-800 bg-neutral-100
+                dark:text-neutral-100 dark:bg-neutral-950
+              ">
+    <div class="container mx-auto flex flex-row w-full items-center justify-between">
+        <!--  site logo and title : start -->
+        <div class="flex flex-row items-center">
+            
+                <figure class="flex p-1 inline-block h-8 w-8 mr-2">
+                    <picture><source type="image/avif" srcset="/img/P2oVwTwU_L-601.avif 601w"><source type="image/webp" srcset="/img/P2oVwTwU_L-601.webp 601w"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-601.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601"></picture>
+                </figure>
+            
+            <a class="flex p-1 home-link href=" "="">BG6LH</a>
+        </div>
+        <!-- site logo and title : end -->
+
+        
+
+        <div class="flex items-center space-x-4">
+            
+            
+            
+
+            
+            
+
+            
+            <!-- Theme toggle: visible on all screens -->
+            <div id="theme-toggle" class="z-50">
+                <button @click="darkMode = !darkMode" class="w-6 h-6 flex items-center justify-center" aria-label="Toggle theme">
+                    <span x-show="!darkMode">
+                        
+<!-- @license lucide-static v0.511.0 - ISC -->
+<svg class="w-5 h-5 icon icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="4"></circle>
+  <path d="M12 2v2"></path>
+  <path d="M12 20v2"></path>
+  <path d="m4.93 4.93 1.41 1.41"></path>
+  <path d="m17.66 17.66 1.41 1.41"></path>
+  <path d="M2 12h2"></path>
+  <path d="M20 12h2"></path>
+  <path d="m6.34 17.66-1.41 1.41"></path>
+  <path d="m19.07 4.93-1.41 1.41"></path>
+</svg>
+                    </span>
+                    <span x-show="darkMode">
+                        
+<!-- @license lucide-static v0.511.0 - ISC -->
+<svg class="w-5 h-5 icon icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+</svg>
+                    </span>
+                </button>
+            </div>
+
+            <!-- Mobile menu icon : start -->
+            <button class="md:hidden z-50" @click="open = !open">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <path x-show="!open" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path x-show="open" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <!-- mobile menu icon : end -->
+
+            <!-- Navigation: wide screen : start -->
+            <nav class="hidden md:flex space-x-6">
+                
+                
+                
+                
+                <a href="/">首页</a>
+                
+                
+                
+                
+                
+                <a href="/zh-CN/blog/">归档</a>
+                
+                
+                
+                
+                
+                <a href="/zh-CN/about/">关于</a>
+                
+                
+                
+                
+            </nav>
+            <!-- Navigation: wide screen : end -->
+        </div>
+    </div>
+</header>
+
+<!-- Fullscreen Menu Overlay: mobile only , start -->
+<div class="fixed inset-x-0 top-15 bottom-0 z-40 flex flex-col
+md:hidden items-center w-full h-auto
+border-t-1 border-neutral-800
+text-sm text-neutral-800 bg-neutral-100 px-15
+ dark:text-neutral-100 dark:bg-neutral-950
+font-medium transition-all duration-100" x-show="open" x-transition:enter="transform transition ease-out duration-300" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 scale-100" @click.outside="open = false">
+		
+            
+		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/" @click="open = false">首页</a>
+                </div>
+            
+		
+            
+		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/zh-CN/blog/" @click="open = false">归档</a>
+                </div>
+            
+		
+            
+		
+            
+                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
+                <a class="block" href="/zh-CN/about/" @click="open = false">关于</a>
+                </div>
+            
+		
+            
+		
+</div>
+<!-- Fullscreen Menu Overlay: mobile only , end -->
+
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<main class="flex-grow pt-15">
+			<heading-anchors class="">
+				
+
+
+
+    
+        <figure class="w-full h-36 object-contain overflow-hidden md:h-96 ">
+            <img src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/piPv9rgn1_-960.webp" class="w-full blur-xs brightness-75 scale-105" alt="FT-817/818的蓝牙DIGI模式试验板(1) image" loading="lazy" decoding="async" width="960" height="408">
+        </figure>
+    
+<div class="mx-auto grid w-full max-w-4xl grid-cols-1 gap-4 md:grid-cols-[minmax(720px,1fr)_240px]">
+    <article class="bg-white p-8 md:p-12 mx-auto max-w-4xl prose prose-neutral">
+        <!-- article header : begin-->
+        <header class="flex flex-col mx-auto mb-12 border-t-neutral-500 border-b-1">
+            <div class="mx-auto font-bold md:text-xl text-center text-neutral-800">
+                <h1 id="ft-817-818-digi-1">FT-817/818的蓝牙DIGI模式试验板(1)</h1>
+            </div>
+            <time class="text-sm mx-auto text-neutral-400" datetime="2023-05-27 18:02:00 UTC">2023-05-27 18:02:00 UTC</time>
+            <span class="post-metadata flex flex-row mx-auto p-0">
+                关键词:
+                <a href="/zh-CN/tags/bluetooth/" class="post-tag">Bluetooth</a>, 
+                <a href="/zh-CN/tags/digi/" class="post-tag">DIGI</a>, 
+                <a href="/zh-CN/tags/ft-817/" class="post-tag">FT-817</a>, 
+                <a href="/zh-CN/tags/ft-818/" class="post-tag">FT-818</a>, 
+                <a href="/zh-CN/tags/jdy-67/" class="post-tag">JDY-67</a>
+            </span>
+        </header>
+        <!-- article header : end-->
+
+
+        <!-- article content : begin-->
+        <div class="">
+            <p><strong>FT-817/818的蓝牙板合集</strong></p>
+<ul>
+<li><a href="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/">FT-817/818的蓝牙DIGI模式试验板(1)</a></li>
+<li><a href="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/">FT-817/818的蓝牙DIGI模式试验板(2)优化更新</a></li>
+<li><a href="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/">FT-817/818的蓝牙DIGI模式试验板(3)紧急更新</a></li>
+<li><a href="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-4-mini-din-connectors/">FT-817/818的蓝牙DIGI模式试验板(4)Mini DIN插头</a></li>
+<li><a href="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/">FT-817/818的蓝牙DIGI模式试验板(5)蓝牙模块JDY-67</a></li>
+<li><a href="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/">FT-817/818蓝牙板(6)拯救R1235</a></li>
+<li><a href="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/">FT-817/818蓝牙板(7)电源电阻参数更正！</a></li>
+</ul>
+<hr>
+<p>最近做了一个可以直插在FT-81x系列收发信机后面板上的蓝牙DIGI模块。玩数字模式，省去了一大堆数据线、数据盒子。出门野外摆摊儿FT8，只需要带个安卓手机就行了。</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/waDZ_bcfrB-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/waDZ_bcfrB-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/waDZ_bcfrB-1080.png" alt="图片" width="1080" height="810"></picture></p>
+<h2 id="%E8%83%8C%E6%99%AF" tabindex="-1">背景</h2>
+<p>年初看到老朋友BG6JJI设计的一个蓝牙DIGI适配器，可以用在一些老的收发信机上，让它们具备了无线传输音频和CAT的能力。他用了一个叫JDY-67的蓝牙模块。我不确定这个JDY-67是哪个厂生产的，但是它真的很便宜，而且真的能同时蓝牙音频、串口协议通信。只是BG6JJI的适配器需要外接一 个锂电池。</p>
+<p>FT-818后边直接就有13.8V的常电压输出，这应该能让这个模块更简洁。我曾经测量过FT-818后面板上DATA和ACC接口的尺寸，参考了FT-817ND的服务手册（Service Manual），画过一个可以装在后面板上的PCB。当时的初衷是做一个USB的外接板，用一条USB线取代那些数据线、盒子……如今有了JDY-67，连USB都省了。</p>
+<p>还有最关键的一点，BG7YOZ做了FT8CN。从此，HAM社群有了免费的手机FT8软件！尽管它只支持安卓手机，但是出门不用带电脑了！</p>
+<p>现在，是时候彻底摆脱数据线了！</p>
+<h2 id="%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1" tabindex="-1">电路设计</h2>
+<p>电路设计方面我并不专业，但是这个直插PCB的思路引起了好多人的共鸣。很多高手给了我很多有益的建议。</p>
+<p>设计 过程不在这里赘述了，我已经把这个板子的原理图、PCB布局、Gerber文件、特殊符号、封装等等，分享在了两个代码仓库：</p>
+<ul>
+<li>Gitee https://gitee.com/bg6lh/FT-81x-BT-DIGI-Adaptor</li>
+<li>Github https://github.com/BG6LH/FT-81x-BT-DIGI-Adaptor</li>
+</ul>
+<p>尽管FT-817/818系列收发信机今年停产了。但是这个产品热卖了二十几年，有广泛的群众基础，深厚的产品文化。**有兴趣的朋友，欢迎一起研究。你可以随便改设计，发布自己的产品。**我提倡“CC-BY-NC-SA 4.0”许可协议，希望大家也能坚持。</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/oJLeoZOohQ-841.avif 841w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/oJLeoZOohQ-841.webp 841w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/oJLeoZOohQ-841.png" alt="图片" width="841" height="595"></picture></p>
+<p>原理图</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/qfTuLe0223-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/qfTuLe0223-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/qfTuLe0223-1080.png" alt="图片" width="1080" height="474"></picture></p>
+<p>PCB布局</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/y_3nQyH9-z-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/y_3nQyH9-z-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/y_3nQyH9-z-1080.png" alt="图片" width="1080" height="474"></picture></p>
+<p>3D模型</p>
+<h2 id="%E5%AE%9E%E9%AA%8C%E6%9D%BF%E7%9A%84%E5%AE%9E%E9%AA%8C" tabindex="-1">实验板的实验</h2>
+<p>我前后打了三次板，制成了两版成品，并做了几轮实验，每次都能发现一些问题，并调整了部分设计。</p>
+<p>最终，在美丽的萧太后河畔，成功实现了一次野外QSO，用的是 <a href="http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;mid=2247484070&amp;idx=1&amp;sn=00a6a242207ba50364b176d01e343010&amp;chksm=e949842cde3e0d3a6dc3f1e2654c6a241a0a4ab3418943c8a0f451326fb4ab7d722b78b1d8b5&amp;scene=21#wechat_redirect">品川天线</a> 。实现了“不带一根线，随时随地FT8”的梦想。</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/ZeADRtQohd-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/ZeADRtQohd-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/ZeADRtQohd-1080.png" alt="图片" width="1080" height="1439"></picture></p>
+<p>FT-818 蓝牙FT8 Go-Pack</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/es5NyW8G8x-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/es5NyW8G8x-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/es5NyW8G8x-1080.png" alt="图片" width="1080" height="1439"></picture></p>
+<p>萧太后河畔</p>
+<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/kbfGNB9ucg-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/kbfGNB9ucg-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/kbfGNB9ucg-1080.png" alt="图片" width="1080" height="1439"></picture></p>
+<p>当天下午有韩国、日本、四川的十来个HAM收到了我的信号。最终成功和DS4OMS取得QSO。毕竟品川天线还是弱了点，能通上靠的是缘分。</p>
+<h2 id="%E4%B8%80%E7%82%B9%E9%81%97%E6%86%BE" tabindex="-1">一点遗憾</h2>
+<p>我尝试在电脑上使用这个实验板，但是没成功。无论是Mac还是PC，蓝牙连接之后还是有各种问题。有时候是音频忽然断开，有时候CAT不能发射，有时候连VOX都不支持……还有驱动问题，WSJT-X会识别出cu. tty.两个设备，不过倒是RumlogNG能把两个设备识别为一个。不知道是不是因为JDY-67这个模块的问题。</p>
+<p>但是，安卓手机上就挺稳定，野外玩了半个多小时，<strong>FT8CN始终没遇到过任何问题，真香！</strong></p>
+<p>目前，BG6JJI和BG7IKK已经转向BT401模块了。更通用的蓝牙模块才是解决问题的方向。</p>
+<p>如果能够在电脑上稳定地执行蓝牙的音频+CAT，那可玩的就多了，APRS、RTTY、fldigi的音频CW……只要是基于音频的数字模式基本都可以玩了。</p>
+<p>最后，我<strong>不打算做成品或者套件</strong>。所以别问我这板子卖不卖了。大家可以去下载我打包好的Gerber文件，自己打板做一套玩玩。想买成品的，大家可以去找闲鱼号**“杰瑞和汤姆”**试试那套带电池的啦。</p>
+
+            
+              <hr class="border-t-neutral-500 mb-2">
+              <span class="text-sm">原文发表于我的微信公众号 <a href="https://mp.weixin.qq.com/s/fIXGel0xPK9CLo3urJQYfg" target="_blank">BG6LH - FT-817/818的蓝牙DIGI模式试验板(1)</a></span>
+            
+        </div>
+        <!-- article content : end-->
+
+        <!-- 翻页器 begin -->
+        <div class="mx-auto grid grid-cols-1 gap-2 py-12
+                    md:grid-cols-2
+                ">
+                        <a href="/zh-CN/blog/Antenna-Entrance-Panel-PCB/" class="
+                        flex flex-col left-0 p-2 block hover:bg-neutral-100
+                        ">
+                            < 上一篇
+                            <br>
+                            拼插玩具：天线入户板
+                        </a>
+                    
+                        <a href="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/" class="
+                        flex flex-col md:text-right right-0 p-2 hover:bg-neutral-100
+                        ">
+                            下一篇 >
+                            <br>
+                            FT-817/818的蓝牙DIGI模式试验板(2)优化更新
+                        </a>
+                    
+        </div>
+        <!-- 翻页器 end -->
+
+        <!-- Giscus : begin -->
+        <div class="mx-auto">
+        <div id="giscus_thread"></div>
+
+        </div>
+        <!-- Giscus : end -->
+
+    </article>
+
+        <!-- toc begin -->
+        
+        <aside id="artical-toc" class="sticky top-14 max-h-[calc(100svh-3.5rem)] overflow-x-hidden
+                    px-0 pt-10 pb-24 prose prose-neutral text-sm
+                    dark:prose-invert
+                    max-xl:hidden
+                    ">
+        <p class="font-bold">内容目录</p>
+        <nav class="toc">
+        <ul><li><a href="#%E8%83%8C%E6%99%AF">背景</a></li><li><a href="#%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1">电路设计</a></li><li><a href="#%E5%AE%9E%E9%AA%8C%E6%9D%BF%E7%9A%84%E5%AE%9E%E9%AA%8C">实验板的实验</a></li><li><a href="#%E4%B8%80%E7%82%B9%E9%81%97%E6%86%BE">一点遗憾</a></li></ul>
+      </nav>
+        </aside>
+        
+        <!-- toc end -->
+
+
+</div>
+			</heading-anchors>
+		</main>
+		<footer class="flex w-full text-neutral-800 dark:text-neutral-100 bg-neutral-100 dark:bg-neutral-800">
+			<section class="flex flex-col max-w-4xl mx-auto p-0 py-12
+            grid grid-cols-1 gap-6
+            text-xs text-center justify-start
+            md:flex-row md:grid-cols-3 md:text-left
+        ">
+
+    <!-- 网站栏目 -->
+    <div class="">
+        <h3 class="font-bold mb-4" id="">网站导航</h3>
+        <nav class="list-none flex flex-row justify-center md:justify-start md:flex-col">
+            
+            
+             
+            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/">首页</a>
+            
+            
+            
+            
+             
+            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/zh-CN/blog/">归档</a>
+            
+            
+            
+            
+             
+            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/zh-CN/about/">关于</a>
+            
+            
+            
+            
+        </nav>
+
+
+    </div>
+
+    <!-- 社交媒体 -->
+    <div class="">
+        <h3 class="font-bold mb-4" id="social-links">Social Links</h3>
+        <div class="flex flex-row mx-auto justify-center md:justify-start">
+
+            
+            <a href="https://github.com/" aria-label="Open github profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-github">
+  <title>GitHub</title>
+  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+</svg>
+            </a> 
+            
+            <a href="https://x.com/jamflying" aria-label="Open x profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-x">
+  <title>X</title>
+  <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"></path>
+</svg>
+            </a> 
+            
+            <a href="https://instagram.com/bg6lh" aria-label="Open instagram profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-instagram">
+  <title>Instagram</title>
+  <path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"></path>
+</svg>
+            </a> 
+            
+            <a href="https://ko-fi.com/T6T01D9CDW" aria-label="Open kofi profile" target="_blank" rel="noopener">
+                
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-3 md:m-0 md:mr-3 fill-neutral-800 dark:fill-neutral-100 icon icon-kofi">
+  <title>Ko-fi</title>
+  <path d="M11.351 2.715c-2.7 0-4.986.025-6.83.26C2.078 3.285 0 5.154 0 8.61c0 3.506.182 6.13 1.585 8.493 1.584 2.701 4.233 4.182 7.662 4.182h.83c4.209 0 6.494-2.234 7.637-4a9.5 9.5 0 0 0 1.091-2.338C21.792 14.688 24 12.22 24 9.208v-.415c0-3.247-2.13-5.507-5.792-5.87-1.558-.156-2.65-.208-6.857-.208m0 1.947c4.208 0 5.09.052 6.571.182 2.624.311 4.13 1.584 4.13 4v.39c0 2.156-1.792 3.844-3.87 3.844h-.935l-.156.649c-.208 1.013-.597 1.818-1.039 2.546-.909 1.428-2.545 3.064-5.922 3.064h-.805c-2.571 0-4.831-.883-6.078-3.195-1.09-2-1.298-4.155-1.298-7.506 0-2.181.857-3.402 3.012-3.714 1.533-.233 3.559-.26 6.39-.26m6.547 2.287c-.416 0-.65.234-.65.546v2.935c0 .311.234.545.65.545 1.324 0 2.051-.754 2.051-2s-.727-2.026-2.052-2.026m-10.39.182c-1.818 0-3.013 1.48-3.013 3.142 0 1.533.858 2.857 1.949 3.897.727.701 1.87 1.429 2.649 1.896a1.47 1.47 0 0 0 1.507 0c.78-.467 1.922-1.195 2.623-1.896 1.117-1.039 1.974-2.364 1.974-3.897 0-1.662-1.247-3.142-3.039-3.142-1.065 0-1.792.545-2.338 1.298-.493-.753-1.246-1.298-2.312-1.298"></path>
+</svg>
+            </a> 
+            
+            
+        </div>
+        <br>
+        <h3 class="font-bold mb-4" id="bg6lh">微信公众号 BG6LH</h3>
+        <div class="flex flex-row mx-auto justify-center md:justify-start">
+            <picture><source type="image/avif" srcset="/img/ul2gn8FVCu-430.avif 430w"><source type="image/webp" srcset="/img/ul2gn8FVCu-430.webp 430w"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-430.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430"></picture>
+        </div>
+
+    </div>
+
+    <!-- 基本信息 -->
+    <div class="flex flex-col items-center md:items-start">
+
+            <!-- copyright -->
+    <div class="mx-auto m-3">
+        <p>Copyright © 2025 BG6LH All rights reserved.</p>
+        <p>Powered by Eleventy 3.1.0 & Tailwind CSS 4.1.7</p>
+        <a href="https://github.com/BG6LH/bg6lh.github.io/tree/main/./content/zh-CN/blog/FT-817818的蓝牙DIGI模式试验板(1).md">Edit this page on GitHub</a>
+    </div>
+    <!-- copyright -->
+    </div>
+
+
+
+</section>
+
+		</footer>
+		<!-- This page `/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/` was built on 2025-06-24T00:00:00.000Z -->
+<!-- Alpine 状态定义 -->
+		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
+		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>
+		<script type="module" src="/dist/ffw-ctNm7S.js"></script>
+
+	</body>
+</html>
