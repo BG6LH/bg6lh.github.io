@@ -226,7 +226,7 @@ pre[class*="language-diff-"] {
                 items-center  px-15
                 text-sm text-neutral-800 bg-neutral-100
                 dark:text-neutral-100 dark:bg-neutral-950
-              ">
+                ">
     <div class="container mx-auto flex flex-row w-full items-center justify-between">
         <!--  site logo and title : start -->
         <div class="flex flex-row items-center">
@@ -306,21 +306,11 @@ pre[class*="language-diff-"] {
             <!-- Navigation: wide screen : start -->
             <nav class="hidden md:flex space-x-6">
                 
-                
-                
-                
                 <a href="/">首页</a>
                 
+                <a href="/zh-CN/about/" aria-current="page">关于</a>
                 
-                
-                
-                
-                <a href="/zh-CN/blog/">归档</a>
-                
-                
-                
-                
-                
+                <a href="/zh-CN/blog/">博客</a>
                 
             </nav>
             <!-- Navigation: wide screen : end -->
@@ -336,20 +326,6 @@ text-sm text-neutral-800 bg-neutral-100 px-15
  dark:text-neutral-100 dark:bg-neutral-950
 font-medium transition-all duration-100" x-show="open" x-transition:enter="transform transition ease-out duration-300" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 scale-100" @click.outside="open = false">
 		
-            
-		
-            
-                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
-                <a class="block" href="/" @click="open = false">首页</a>
-                </div>
-            
-		
-            
-		
-            
-                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
-                <a class="block" href="/zh-CN/blog/" @click="open = false">归档</a>
-                </div>
             
 		
             
@@ -370,7 +346,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
     
 
 <div class="mx-auto grid w-full max-w-4xl grid-cols-1 gap-4 md:grid-cols-[minmax(720px,1fr)_240px]">
-    <article class="bg-white p-8 md:p-12 mx-auto max-w-4xl prose prose-neutral">
+    <article class="w-full min-w-0 flex-shrink-0 justify-start items-start bg-white p-8 md:p-12 mx-auto max-w-4xl prose prose-neutral">
         <!-- article header : begin-->
         <header class="flex flex-col mx-auto mb-12 border-t-neutral-500 border-b-1">
             <div class="mx-auto font-bold md:text-xl text-center text-neutral-800">
@@ -380,25 +356,23 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <!-- article header : end-->
 
         <!-- article content : begin-->
-        <div class="">
-            <h2 id="%E5%85%B3%E4%BA%8E%E6%88%91" tabindex="-1">关于我</h2>
+        <div class="w-full">
+            <h2 id="welcome-to-my-digital-garden" tabindex="-1">Welcome to my Digital Garden</h2>
+<object class="badges" data="https://img.shields.io/badge/dynamic/json.svg?label=DXCC%20Confirmed&url=http%3A%2F%2Fbg6lh.github.io%2Fjs%2FlotwDxcc.json&query=dxcc_confirmed" type="image/svg+xml">
+  <picture><source type="image/avif" srcset="/zh-CN/about/G0J0ZsQk-C-134.avif 134w"><source type="image/webp" srcset="/zh-CN/about/G0J0ZsQk-C-134.webp 134w"><img loading="lazy" decoding="async" src="/zh-CN/about/G0J0ZsQk-C-134.svg" alt="DXCC Confirmed Badge" width="134" height="20"></picture>
+</object>
+<object class="badges" data="https://img.shields.io/badge/dynamic/json.svg?label=LoTW%20QSO&url=http%3A%2F%2Fbg6lh.github.io%2Fjs%2FlotwDxcc.json&query=total_qso" type="image/svg+xml">
+  <picture><source type="image/avif" srcset="/zh-CN/about/XisFtaywvX-106.avif 106w"><source type="image/webp" srcset="/zh-CN/about/XisFtaywvX-106.webp 106w"><img loading="lazy" decoding="async" src="/zh-CN/about/XisFtaywvX-106.svg" alt="LoTW QSO Badge" width="106" height="20"></picture>
+</object>
+<object class="badges" data="https://img.shields.io/badge/dynamic/json.svg?label=LoTW%20QSL&url=http%3A%2F%2Fbg6lh.github.io%2Fjs%2FlotwDxcc.json&query=total_qsl" type="image/svg+xml">
+  <picture><source type="image/avif" srcset="/zh-CN/about/Yy33delYvt-112.avif 112w"><source type="image/webp" srcset="/zh-CN/about/Yy33delYvt-112.webp 112w"><img loading="lazy" decoding="async" src="/zh-CN/about/Yy33delYvt-112.svg" alt="LoTW QSL Badge" width="112" height="20"></picture>
+</object>
 <p>这里是BG6LH，一个位于中国的业余无线电爱好者。</p>
-<picture><source type="image/avif" srcset="/zh-CN/about/wjdkKpzKiL-132.avif 132w"><source type="image/webp" srcset="/zh-CN/about/wjdkKpzKiL-132.webp 132w"><img loading="lazy" decoding="async" src="/zh-CN/about/wjdkKpzKiL-132.svg" alt="Dynamic JSON Badge" width="132" height="20"></picture>
-<picture><source type="image/avif" srcset="/zh-CN/about/TJimUY_ncA-106.avif 106w"><source type="image/webp" srcset="/zh-CN/about/TJimUY_ncA-106.webp 106w"><img loading="lazy" decoding="async" src="/zh-CN/about/TJimUY_ncA-106.svg" alt="Dynamic JSON Badge" width="106" height="20"></picture>
-<picture><source type="image/avif" srcset="/zh-CN/about/e9aH4lXmyr-104.avif 104w"><source type="image/webp" srcset="/zh-CN/about/e9aH4lXmyr-104.webp 104w"><img loading="lazy" decoding="async" src="/zh-CN/about/e9aH4lXmyr-104.svg" alt="Dynamic JSON Badge" width="104" height="20"></picture>
-<p><picture><source type="image/avif" srcset="/zh-CN/about/wjdkKpzKiL-132.avif 132w"><source type="image/webp" srcset="/zh-CN/about/wjdkKpzKiL-132.webp 132w"><img loading="lazy" decoding="async" src="/zh-CN/about/wjdkKpzKiL-132.svg" alt="Dynamic JSON Badge" width="132" height="20"></picture></p>
-<p><picture><source type="image/avif" srcset="/zh-CN/about/PM-efpkvGe-306.avif 306w"><source type="image/webp" srcset="/zh-CN/about/PM-efpkvGe-306.webp 306w"><img loading="lazy" decoding="async" src="/zh-CN/about/PM-efpkvGe-306.svg" alt="LoTW Confirmed Badge" width="306" height="20"></picture></p>
-<p><picture><source type="image/avif" srcset="/zh-CN/about/wjdkKpzKiL-120.avif 120w"><source type="image/webp" srcset="/zh-CN/about/wjdkKpzKiL-120.webp 120w"><img loading="lazy" decoding="async" src="/zh-CN/about/wjdkKpzKiL-132.svg" alt="LoTW Confirmed" width="132" height="20" style="image-rendering: crisp-edges;"></picture></p>
 
         </div>
         <!-- article content : end-->
 
-        <!-- Giscus : begin -->
-        <div class="mx-auto">
-        <div id="giscus_thread"></div>
 
-        </div>
-        <!-- Giscus : end -->
 
     </article>
 
@@ -411,7 +385,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
                     ">
         <p class="font-bold">内容目录</p>
         <nav class="toc">
-        <ul><li><a href="#%E5%85%B3%E4%BA%8E%E6%88%91">关于我</a></li></ul>
+        <ul><li><a href="#welcome-to-my-digital-garden">Welcome to my Digital Garden</a></li></ul>
       </nav>
         </aside>
         
@@ -432,21 +406,11 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
     <div class="">
         <h3 class="font-bold mb-4" id="-2">网站导航</h3>
         <nav class="list-none flex flex-row justify-center md:justify-start md:flex-col">
-            
-            
-             
             <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/">首页</a>
             
+            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/zh-CN/about/" aria-current="page">关于</a>
             
-            
-            
-             
-            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/zh-CN/blog/">归档</a>
-            
-            
-            
-            
-            
+            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/zh-CN/blog/">博客</a>
             
         </nav>
 
@@ -521,7 +485,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 		<!-- This page `/zh-CN/about/` was built on 2025-06-25T00:00:00.000Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
-		<script type="module" src="/dist/aH5wquAXZ9.js"></script>
+		<script type="module" src="/dist/TLgfEA8OmV.js"></script>
 <!--umami stats-->
 
 
