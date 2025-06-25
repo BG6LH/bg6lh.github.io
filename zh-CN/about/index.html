@@ -3,21 +3,189 @@
 <head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>BG6LH</title>
+		<title>关于我</title>
 		<meta name="description" content="CQ DE BG6LH K，欢迎访问我的数字花园！我的业余无线电笔记。">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="BG6LH">
 		<link rel="stylesheet" href="/css/style.out.css">
 		
 		
 		
-		<style>/* This is an arbitrary CSS string added to the bundle */</style>
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
 		
         <!-- favicon -->
         <link rel="icon" href="/img/me.svg" type="image/svg+xml">
 
         <!-- Open graph -->
-        <meta property="og:title" content="BG6LH">
-        <meta property="og:description" content="">
+        <meta property="og:title" content="关于我">
+        <meta property="og:description" content="关于我">
         <meta property="og:type" content="article">
         <meta property="article:tag" content="">
         <meta property="og:url" content="/zh-CN/about/">
@@ -25,10 +193,10 @@
         <meta property="og:locale" content="zh_CN">
         <meta property="og:image" content="">
         <!-- Twitter -->
-        <meta name="twitter:title" content="">
+        <meta name="twitter:title" content="关于我">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@jamflying">
-        <meta name="twitter:description" content="">
+        <meta name="twitter:description" content="关于我">
         <meta name="twitter:image" content="">
 	</head>
 	<body class="bg-white dark:bg-slate-800 overflow-auto dark:text-white dark:text-gray-900" x-data="{
@@ -153,10 +321,6 @@
                 
                 
                 
-                <a href="/zh-CN/about/" aria-current="page">关于</a>
-                
-                
-                
                 
             </nav>
             <!-- Navigation: wide screen : end -->
@@ -191,12 +355,6 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
             
 		
             
-                <div class="mx-15 my-0 py-3 left-0 w-full border-b-neutral-400 border-b-1">
-                <a class="block" href="/zh-CN/about/" aria-current="page" @click="open = false">关于</a>
-                </div>
-            
-		
-            
 		
 </div>
 <!-- Fullscreen Menu Overlay: mobile only , end -->
@@ -206,22 +364,61 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 		<main class="flex-grow pt-15">
 			<heading-anchors class="">
 				
-<section id="mainContent" class="flex-col mx-auto p-0">
-	<div class="mx-auto max-w-4xl p-0">
-		<div class="mx-auto p-6 my-0 text-2xl font-bold dark:text-neutral-100">
-			<h1 id="">我是谁？</h1>
-		</div>
-	</div>
-<p></p><div class="mx-auto px-4 prose dark:prose-invert"><p></p>
-<h2 id="%E5%85%B3%E4%BA%8E%E6%88%91" tabindex="-1">关于我</h2>
+
+
+
+    
+
+<div class="mx-auto grid w-full max-w-4xl grid-cols-1 gap-4 md:grid-cols-[minmax(720px,1fr)_240px]">
+    <article class="bg-white p-8 md:p-12 mx-auto max-w-4xl prose prose-neutral">
+        <!-- article header : begin-->
+        <header class="flex flex-col mx-auto mb-12 border-t-neutral-500 border-b-1">
+            <div class="mx-auto font-bold md:text-xl text-center text-neutral-800">
+                <h1 id="">关于我</h1>
+            </div>
+        </header>
+        <!-- article header : end-->
+
+        <!-- article content : begin-->
+        <div class="">
+            <h2 id="%E5%85%B3%E4%BA%8E%E6%88%91" tabindex="-1">关于我</h2>
 <p>这里是BG6LH，一个位于中国的业余无线电爱好者。</p>
-<picture><source type="image/avif" srcset="/zh-CN/about/Pnn5W5cmJG-132.avif 132w"><source type="image/webp" srcset="/zh-CN/about/Pnn5W5cmJG-132.webp 132w"><img loading="lazy" decoding="async" src="/zh-CN/about/Pnn5W5cmJG-132.svg" alt="Dynamic JSON Badge" width="132" height="20"></picture>
+<picture><source type="image/avif" srcset="/zh-CN/about/wjdkKpzKiL-132.avif 132w"><source type="image/webp" srcset="/zh-CN/about/wjdkKpzKiL-132.webp 132w"><img loading="lazy" decoding="async" src="/zh-CN/about/wjdkKpzKiL-132.svg" alt="Dynamic JSON Badge" width="132" height="20"></picture>
 <picture><source type="image/avif" srcset="/zh-CN/about/TJimUY_ncA-106.avif 106w"><source type="image/webp" srcset="/zh-CN/about/TJimUY_ncA-106.webp 106w"><img loading="lazy" decoding="async" src="/zh-CN/about/TJimUY_ncA-106.svg" alt="Dynamic JSON Badge" width="106" height="20"></picture>
 <picture><source type="image/avif" srcset="/zh-CN/about/e9aH4lXmyr-104.avif 104w"><source type="image/webp" srcset="/zh-CN/about/e9aH4lXmyr-104.webp 104w"><img loading="lazy" decoding="async" src="/zh-CN/about/e9aH4lXmyr-104.svg" alt="Dynamic JSON Badge" width="104" height="20"></picture>
-<p></p></div><p></p>
-</section>
+<p><picture><source type="image/avif" srcset="/zh-CN/about/wjdkKpzKiL-132.avif 132w"><source type="image/webp" srcset="/zh-CN/about/wjdkKpzKiL-132.webp 132w"><img loading="lazy" decoding="async" src="/zh-CN/about/wjdkKpzKiL-132.svg" alt="Dynamic JSON Badge" width="132" height="20"></picture></p>
+<p><picture><source type="image/avif" srcset="/zh-CN/about/PM-efpkvGe-306.avif 306w"><source type="image/webp" srcset="/zh-CN/about/PM-efpkvGe-306.webp 306w"><img loading="lazy" decoding="async" src="/zh-CN/about/PM-efpkvGe-306.svg" alt="LoTW Confirmed Badge" width="306" height="20"></picture></p>
+<p><picture><source type="image/avif" srcset="/zh-CN/about/wjdkKpzKiL-120.avif 120w"><source type="image/webp" srcset="/zh-CN/about/wjdkKpzKiL-120.webp 120w"><img loading="lazy" decoding="async" src="/zh-CN/about/wjdkKpzKiL-132.svg" alt="LoTW Confirmed" width="132" height="20" style="image-rendering: crisp-edges;"></picture></p>
+
+        </div>
+        <!-- article content : end-->
+
+        <!-- Giscus : begin -->
+        <div class="mx-auto">
+        <div id="giscus_thread"></div>
+
+        </div>
+        <!-- Giscus : end -->
+
+    </article>
+
+        <!-- toc begin -->
+        
+        <aside id="artical-toc" class="sticky top-14 max-h-[calc(100svh-3.5rem)] overflow-x-hidden
+                    px-0 pt-10 pb-24 prose prose-neutral text-sm
+                    dark:prose-invert
+                    max-xl:hidden
+                    ">
+        <p class="font-bold">内容目录</p>
+        <nav class="toc">
+        <ul><li><a href="#%E5%85%B3%E4%BA%8E%E6%88%91">关于我</a></li></ul>
+      </nav>
+        </aside>
+        
+        <!-- toc end -->
 
 
+</div>
 			</heading-anchors>
 		</main>
 		<footer class="flex w-full text-neutral-800 dark:text-neutral-100 bg-neutral-100 dark:bg-neutral-800">
@@ -247,10 +444,6 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
             <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/zh-CN/blog/">归档</a>
             
             
-            
-            
-             
-            <a class=" p-2 md:m-0 md:px-0 md:py-1" href="/zh-CN/about/" aria-current="page">关于</a>
             
             
             
@@ -328,8 +521,10 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 		<!-- This page `/zh-CN/about/` was built on 2025-06-25T00:00:00.000Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
-		<script defer="" src="https://cloud.umami.is/script.js" data-website-id="e7795679-6456-4a17-819f-508502dac125"></script>
-		<script type="module" src="/dist/xbxy_EL6cU.js"></script>
+		<script type="module" src="/dist/aH5wquAXZ9.js"></script>
+<!--umami stats-->
+
+
 
 	</body>
 </html>
