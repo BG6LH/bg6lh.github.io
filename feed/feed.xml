@@ -5,11 +5,36 @@
   <subtitle>CQ DE BG6LH K，欢迎访问我的数字花园！我的业余无线电笔记。Copyright © 2025 BG6LH</subtitle>
   <link href="https://bg6lh.github.io/feed/feed.xml" rel="self" />
   <link href="https://bg6lh.github.io/" />
-  <updated>2025-04-28T04:42:00Z</updated>
+  <updated>2025-07-06T23:20:00Z</updated>
   <id>https://bg6lh.github.io/</id>
   <author>
     <name>BG6LH</name>
   </author>
+  <entry>
+    <title>为DXCC而生的Shields.io徽章</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/lotw-dxcc-stats-shields-io-badges/" />
+    <updated>2025-07-06T23:20:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/lotw-dxcc-stats-shields-io-badges/</id>
+    <content type="html">&lt;p&gt;我花了两个月，给自己搭建了一个数字花园。为了庆祝小花园开张，特意做了一个Node.js项目，可以把 DXCC 挂出来秀一下，像这样：&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/lotw-dxcc-stats-shields-io-badges/8lK9lQEvNW-752.avif 752w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/lotw-dxcc-stats-shields-io-badges/8lK9lQEvNW-752.webp 752w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/lotw-dxcc-stats-shields-io-badges/8lK9lQEvNW-752.png&quot; alt=&quot;图片&quot; width=&quot;752&quot; height=&quot;680&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;h2 id=&quot;%E6%96%B0%E9%A1%B9%E7%9B%AE-lotw-dxcc-stats&quot; tabindex=&quot;-1&quot;&gt;新项目 LoTW-DXCC-Stats&lt;/h2&gt;
+&lt;p&gt;无线电老中医们都知道， &lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/k3ng-inconvenient-truths-in-amateur-radio/&quot;&gt;DXCC是用生命换来的&lt;/a&gt; ，所以挂出来秀一下不过分吧。&lt;/p&gt;
+&lt;p&gt;这个项目可以帮你从LoTW获取最新的通联统计，生成JSON数据文件。然后，你就可以拥有 为DXCC而生的 Shields.io 徽章 了。&lt;/p&gt;
+&lt;p&gt;当然，这个项目有点小门槛，它属于程序猿的小美满，懂的来吧。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/BG6LH/lotw-dxcc-stats&quot;&gt;https://github.com/BG6LH/lotw-dxcc-stats&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;喜欢它的话，可以请我喝杯咖啡。&lt;/p&gt;
+&lt;h2 id=&quot;%E6%88%91%E7%9A%84%E6%95%B0%E5%AD%97%E8%8A%B1%E5%9B%AD&quot; tabindex=&quot;-1&quot;&gt;我的数字花园&lt;/h2&gt;
+&lt;p&gt;话说，不知不觉在微信公众号上搬砖六年了。&lt;/p&gt;
+&lt;p&gt;回想当初，娃的降生，让我重新捡回了业余无线电这个爱好。你不要不信，真的是托娃的福。&lt;/p&gt;
+&lt;p&gt;我跟家里人说，希望给他留下一个“为人生带来增值”的业余爱好。我用排除法排除了摄影、钓鱼、麻将……掼蛋……最后就剩下业余无线电了。&lt;/p&gt;
+&lt;p&gt;一边玩一边学，我从网上翻出来不少无线电老中医的偏方，整理成自己的学习笔记，又发回到网上。我始终信奉，好记性不如烂笔头。六年间笔耕不辍，业余无线电也给我的生活带来不少温度，尤其在那些戴着口罩度过的时光里。&lt;/p&gt;
+&lt;p&gt;六年前的AI远不像今天这般高歌猛进。当时能把英语翻译成利索的中文就已经很难得了。而如今娃才刚上小学，AI不仅能精准检索丰富的业余无线电知识，还能像个老中医一样，像模像样地解答你的问题。这变化简直是一日千里，乃至于唤醒了我内心里那个“沉睡的小五郎”。&lt;/p&gt;
+&lt;p&gt;作为一个互联网老兵，我深谙 “不懂摩尔斯电码的前端工程师不是好司机” 这个道理。于是，今年劳动节，我决心重建自己的数字小花园，把那些曾经敝帚自珍、如今发霉在“微信公众号”这个小作坊里的80多篇笔记，重新整理出来，放归属于人民互联网的数字海洋。&lt;/p&gt;
+&lt;p&gt;我的技术栈选的是 11ty + tailwind，欢迎随时来逛逛。&lt;/p&gt;
+&lt;p&gt;我不会放弃微信公众号这个阵地，两边会保持同步更新。至少有些写错的文章，我可以在花园里纠正过来。慢慢拾掇吧。&lt;/p&gt;
+&lt;p&gt;花园西门在 &lt;a href=&quot;https://bg6lh.github.io&quot;&gt;https://bg6lh.github.io&lt;/a&gt;  。当然还有一个东门，据说不出院墙也可推门而入  &lt;a href=&quot;https://bg6lh.netlify.app/&quot;&gt;https://bg6lh.netlify.app/&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>AI已经开始参加无线电比赛了</title>
     <link href="https://bg6lh.github.io/zh-CN/blog/ai-operator-in-the-2025-eudx-contest/" />
@@ -710,74 +735,6 @@ R12 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; 1KΩ
 &lt;/ul&gt;
 &lt;p&gt;最新版设计文件都发布在了Github上，并正式发布了Release v1.0.0。Gitee是自动同步的版本。&lt;/p&gt;
 &lt;p&gt;至此，这个基于JDY-67蓝牙模块的FT-817/818 DIGI适配器设计，正式告一段落。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>FT-817/818蓝牙板(6)拯救R1235</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/" />
-    <updated>2023-08-04T21:23:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/</id>
-    <content type="html">&lt;p&gt;&lt;strong&gt;FT-817/818的蓝牙板合集&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/&quot;&gt;FT-817/818的蓝牙DIGI模式试验板(1)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/&quot;&gt;FT-817/818的蓝牙DIGI模式试验板(2)优化更新&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/&quot;&gt;FT-817/818的蓝牙DIGI模式试验板(3)紧急更新&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-4-mini-din-connectors/&quot;&gt;FT-817/818的蓝牙DIGI模式试验板(4)Mini DIN插头&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/&quot;&gt;FT-817/818的蓝牙DIGI模式试验板(5)蓝牙模块JDY-67&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/&quot;&gt;FT-817/818蓝牙板(6)拯救R1235&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/&quot;&gt;FT-817/818蓝牙板(7)电源电阻参数更正！&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;两个月前发布了0609版，BI1EIH给增加了软开关电路。对于电池没开关的用户，在关机后蓝牙板也会断电，这是个对QRP十分友好的设计。&lt;/p&gt;
-&lt;h2 id=&quot;r1235%E7%83%A7%E4%BA%86&quot; tabindex=&quot;-1&quot;&gt;R1235烧了&lt;/h2&gt;
-&lt;p&gt;起初 我做的0609 验证板一直没能成功，手机搜不到蓝牙，蓝牙似乎没启动。在不装蓝牙板的空载状态，电压是足的。一旦挂上负载，开机电压就掉的厉害。几个无线电老中医一起分析了很多原因，直到用12V 实验电源做了一次测试，0609版完美连接了手机蓝牙，而且启动电流只有30mA。&lt;/p&gt;
-&lt;p&gt;看来问题锁定在了FT-818的CAT接口供电上。这让人不得不面对一个现实，CAT接口的Pin1后边的那个10Ω电阻R1235可能挂了。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/iFS2gwxMFg-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/iFS2gwxMFg-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/iFS2gwxMFg-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;946&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;上图是FT-817/817ND维修手册2005版里的原理图。 CAT 接口的Pin 1对外输出13.8V的电压，它和电池的正极之间，只有一个起着分压限流作用的电阻R1235（红圈处），阻值10Ω。&lt;/p&gt;
-&lt;div class=&quot;callout callout-info&quot;&gt;
-&lt;p&gt;二十年来有不少有趣的817野生外设——诸如蓝牙CAT尾巴、快捷键盘、附加显示器等等——都在从这里取电。&lt;/p&gt;
-&lt;p&gt;这里的设计也一直在优化。传说最早的R1235是75Ω的。很多老的817ND这个电阻在PCB板的背面，新一点的设计改到了上面。&lt;/p&gt;
-&lt;p&gt;一些老文章里说R1235是起保护作用的，防止短路意外，那为什么不用一个保险丝呢？兴许YAESU的设计只是为了给CAT或者功放提供一个波段识别的参考电压？&lt;/p&gt;
-&lt;p&gt;至少第一目标并不是给外接设备供电的。因为这里只有区区百十毫安的电流输出。一旦跟旁边的Pin3（机壳地）短路，至少1A的电流经过，远远高出这个1/16W的电阻承受能力，它肯定就先烧了。这么看的确也保护了后边的电路。&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;为了验证它是不是烧了，BI1EIH设计了一个实验：用一个1KΩ的电阻并联在13.8V针脚和地之间，测量并联前后的电压变化，推算出了R1235现在实际的阻值，结果是大约207Ω……&lt;/p&gt;
-&lt;p&gt;阻值增大了20倍，要让蓝牙板有足够的电压，只能继续增大蓝牙板上的分压电阻R6，跟FT-817抢电压，最后整体的电阻上去了，起动电流又不够了……这下终于想明白了从第一版到最后一版那些莫名其妙的问题是为啥了。&lt;/p&gt;
-&lt;h2 id=&quot;%E6%9B%B4%E6%8D%A2r1235&quot; tabindex=&quot;-1&quot;&gt;更换R1235&lt;/h2&gt;
-&lt;p&gt;有很多人直接把R1235换成了一个自恢复保险丝。为了验证蓝牙板设计，我决定还是换10Ω电阻。&lt;/p&gt;
-&lt;p&gt;但是拆开FT-818我傻眼了，R1235的位置跟FT-817ND维修手册里的完全不一样。&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;FT-817维修手册里的位置&lt;/th&gt;
-&lt;th&gt;FT-818的PCB照片&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/ZpkcW6gWxF-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/ZpkcW6gWxF-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/ZpkcW6gWxF-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;888&quot;&gt;&lt;/picture&gt;&lt;/td&gt;
-&lt;td&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/zaeEBFcgTp-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/zaeEBFcgTp-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/zaeEBFcgTp-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1126&quot;&gt;&lt;/picture&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;查阅网上的文章，发现FT-817/817ND系列的PCB至少有四个版本。而全世界只能找到最早两个版本的维修手册，上边的R1235都是在PCB的反面。传说最新的FT-817ND的R1235在正面。而全世界都找不到FT-818的维修手册。这下连FT-818是否有R1235都成了谣言了……&lt;/p&gt;
-&lt;p&gt;对比Dan YO3GGX给FT-817ND换自恢复保险丝的一张照片，他的FT-817ND的PCB跟我的FT-818一毛一样。&lt;/p&gt;
-&lt;p&gt;我只能赌FT-818是FT-817ND的马甲了。用万用表测量了跟 CAT的 Pin1 最近距离的电阻 ，只有下图里黄圈、红圈处跟CAT的 Pin1 是直通的。那红圈这个电阻应该就是FT-818的R1235 了。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/vm2zIYydaw-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/vm2zIYydaw-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/vm2zIYydaw-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;1229&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;赌一下吧，抄起烙铁就把它换了。&lt;/p&gt;
-&lt;p&gt;然后，装上我们的0609版JDY-67蓝牙板， &lt;strong&gt;大成功！&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/mQTm7NBFYi-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/mQTm7NBFYi-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/mQTm7NBFYi-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;h2 id=&quot;3d%E4%BF%9D%E6%8A%A4%E5%A4%96%E5%A3%B3&quot; tabindex=&quot;-1&quot;&gt;3D保护外壳&lt;/h2&gt;
-&lt;p&gt;FT-817/817ND/818的CAT接口，13.8V跟GND的针脚挨在一起，稍有不慎就容易短路电池。此时第一个献身的就是那个10Ω电阻R1235。&lt;/p&gt;
-&lt;p&gt;为了保护PCB上裸露的针脚，我画了一个3D打印的外壳，扣在FT-818屁股后边刚刚好。有需要的老朋友可以下载了打印一个。&lt;/p&gt;
-&lt;p&gt;原文链接是3D打印文件下载地址： &lt;a href=&quot;https://www.thingiverse.com/thing:6116435&quot;&gt;https://www.thingiverse.com/thing:6116435&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/gHIBfmnlrm-1080.avif 1080w&quot;&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/gHIBfmnlrm-1080.webp 1080w&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/gHIBfmnlrm-1080.jpeg&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;810&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;至此，这个项目可以告一段落了。后续使用中如果发现新问题，再继续跟大家扯。&lt;/p&gt;
-&lt;p&gt;最后，还是分享一下 PCB打板的Gerber下载地址：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Gitee &lt;a href=&quot;https://gitee.com/bg6lh/FT-81x-BT-DIGI-Adaptor&quot;&gt;https://gitee.com/bg6lh/FT-81x-BT-DIGI-Adaptor&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Github &lt;a href=&quot;https://github.com/BG6LH/FT-81x-BT-DIGI-Adaptor&quot;&gt;https://github.com/BG6LH/FT-81x-BT-DIGI-Adaptor&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;以及3D打印文件下载地址：&lt;a href=&quot;https://www.thingiverse.com/thing:6116435&quot;&gt;https://www.thingiverse.com/thing:6116435&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </content>
   </entry>
 </feed>
