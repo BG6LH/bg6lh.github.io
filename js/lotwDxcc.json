@@ -1,10 +1,9 @@
 {
   "app_lotw_lastQsoRx": "2025-06-15 13:12:02",
-  "app_lotw_lastQsl": "2025-07-04 13:53:50",
-  "last_updated": "2025-07-05T08:23:23.322Z",
-  "last_updated_timestamp": 1751703803322,
+  "app_lotw_lastQsl": "2025-07-06 11:33:10",
+  "last_updated": "2025-07-08T17:24:42.204Z",
   "total_qso": 5946,
-  "total_qsl": 4097,
+  "total_qsl": 4099,
   "dxcc_confirmed": 194,
   "dxcc_stats": {
     "1": {
@@ -88,7 +87,7 @@
       "qsl": 1
     },
     "38": {
-      "qso": 2,
+      "qso": 4,
       "qsl": 1
     },
     "40": {
