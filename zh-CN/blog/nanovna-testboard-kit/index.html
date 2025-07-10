@@ -187,7 +187,7 @@ pre[class*="language-diff-"] {
         <meta property="og:title" content="nanoVNA的测试板小套件">
         <meta property="og:description" content="nanoVNA Testboard买回来有点懵圈，里边有两个0805的贴片49Ω电阻，贴哪儿？整个板子上还有一个七七四十九的排母阵列，怎么用？">
         <meta property="og:type" content="article">
-        <meta property="article:tag" content="posts,nanoVNA">
+        <meta property="article:tag" content="nanoVNA">
         <meta property="og:url" content="/zh-CN/blog/nanovna-testboard-kit/">
         <meta property="og:site_name" content="BG6LH">
         <meta property="og:locale" content="zh_CN">
@@ -232,7 +232,7 @@ pre[class*="language-diff-"] {
         <div class="flex flex-row items-center">
             
                 <figure class="flex p-1 inline-block h-8 w-8 mr-2">
-                    <picture><source type="image/avif" srcset="/img/P2oVwTwU_L-601.avif 601w"><source type="image/webp" srcset="/img/P2oVwTwU_L-601.webp 601w"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-601.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601"></picture>
+                    <picture><source type="image/webp" srcset="/img/P2oVwTwU_L-400.webp 400w, /img/P2oVwTwU_L-601.webp 601w" sizes="auto"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-400.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601" srcset="/img/P2oVwTwU_L-400.png 400w, /img/P2oVwTwU_L-601.png 601w" sizes="auto"></picture>
                 </figure>
             
             <a class="flex p-1 home-link" href="/">BG6LH</a>
@@ -357,19 +357,19 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <!-- article content : begin-->
         <div class="">
             <p>在淘宝店买了一个nanoVNA的Testboard套件。 可以辅助nanoVNA测量一些元件的射频性能，测试一些电路的反射系数和插损。看起来很方便的样子。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/nanovna-testboard-kit/LPSncFnrP8-552.avif 552w"><source type="image/webp" srcset="/zh-CN/blog/nanovna-testboard-kit/LPSncFnrP8-552.webp 552w"><img loading="lazy" decoding="async" src="/zh-CN/blog/nanovna-testboard-kit/LPSncFnrP8-552.jpeg" alt="图片" width="552" height="414"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/nanovna-testboard-kit/LPSncFnrP8-400.webp 400w, /zh-CN/blog/nanovna-testboard-kit/LPSncFnrP8-552.webp 552w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/nanovna-testboard-kit/LPSncFnrP8-400.jpeg" alt="图片" width="552" height="414" srcset="/zh-CN/blog/nanovna-testboard-kit/LPSncFnrP8-400.jpeg 400w, /zh-CN/blog/nanovna-testboard-kit/LPSncFnrP8-552.jpeg 552w" sizes="auto"></picture></p>
 <p>来自第一个把nanoVNA开源项目做成产品的<a href="https://gen111.taobao.com">Hugen的店</a></p>
 <p>买回来有点懵圈，里边有两个0805的贴片49Ω电阻，贴哪儿？ 整个板子上还有一个七七四十九的排母阵列，怎么用？ 于是上网收集了一些资料。 在这里做一个笔记。</p>
 <p>首先找到一张<code>KL0S</code>画的nanoVNA测试板的草图<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup>。下边这张图是完全按照比照测试板画的。有三对儿SMA母座是作为测试的接口。但是上下两对儿其实是预留给某种目的的校准、或匹配电路的。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/nanovna-testboard-kit/QberJVz-EH-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/nanovna-testboard-kit/QberJVz-EH-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/nanovna-testboard-kit/QberJVz-EH-1080.png" alt="图片" width="1080" height="1388"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/nanovna-testboard-kit/QberJVz-EH-400.webp 400w, /zh-CN/blog/nanovna-testboard-kit/QberJVz-EH-800.webp 800w, /zh-CN/blog/nanovna-testboard-kit/QberJVz-EH-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/nanovna-testboard-kit/QberJVz-EH-400.png" alt="图片" width="1080" height="1388" srcset="/zh-CN/blog/nanovna-testboard-kit/QberJVz-EH-400.png 400w, /zh-CN/blog/nanovna-testboard-kit/QberJVz-EH-800.png 800w, /zh-CN/blog/nanovna-testboard-kit/QberJVz-EH-1080.png 1080w" sizes="auto"></picture></p>
 <p>中间一对儿SMA母座连接着7x7的测试排母阵列。但是这个阵列不是完全独立或者联通的。它有一定排布的结构 ， 用来 跨 接各种可能的 组 合 。</p>
 <p>测试板的核心设计，其实是参考了DG8SAQ设计SDR-Kits的测试板<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup>。下边这张图是测试排母焊盘结构。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/nanovna-testboard-kit/yVGFS5jkeH-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/nanovna-testboard-kit/yVGFS5jkeH-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/nanovna-testboard-kit/yVGFS5jkeH-1080.png" alt="图片" width="1080" height="787"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/nanovna-testboard-kit/yVGFS5jkeH-400.webp 400w, /zh-CN/blog/nanovna-testboard-kit/yVGFS5jkeH-800.webp 800w, /zh-CN/blog/nanovna-testboard-kit/yVGFS5jkeH-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/nanovna-testboard-kit/yVGFS5jkeH-400.png" alt="图片" width="1080" height="787" srcset="/zh-CN/blog/nanovna-testboard-kit/yVGFS5jkeH-400.png 400w, /zh-CN/blog/nanovna-testboard-kit/yVGFS5jkeH-800.png 800w, /zh-CN/blog/nanovna-testboard-kit/yVGFS5jkeH-1080.png 1080w" sizes="auto"></picture></p>
 <p>那两个0805的49Ω贴片电阻，也可以直接用来做成测试用的小工具，和测试电路组合使用。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/nanovna-testboard-kit/8oqRfBo8c--1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/nanovna-testboard-kit/8oqRfBo8c--1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/nanovna-testboard-kit/8oqRfBo8c--1080.png" alt="图片" width="1080" height="842"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/nanovna-testboard-kit/8oqRfBo8c--400.webp 400w, /zh-CN/blog/nanovna-testboard-kit/8oqRfBo8c--800.webp 800w, /zh-CN/blog/nanovna-testboard-kit/8oqRfBo8c--1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/nanovna-testboard-kit/8oqRfBo8c--400.png" alt="图片" width="1080" height="842" srcset="/zh-CN/blog/nanovna-testboard-kit/8oqRfBo8c--400.png 400w, /zh-CN/blog/nanovna-testboard-kit/8oqRfBo8c--800.png 800w, /zh-CN/blog/nanovna-testboard-kit/8oqRfBo8c--1080.png 1080w" sizes="auto"></picture></p>
 <p>上图：《VNWA Testboard kit for Ham Radio Workshop》by DG8SAQ  <sup class="footnote-ref"><a href="#footnote2">[2:1]</a><a class="footnote-anchor" id="footnote-ref2:1"></a></sup></p>
 <p>最后，为了从正面容易识别排母之间的关系，我用娃的琉金彩绘笔给它们上了点颜色。是不是很好看？</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/nanovna-testboard-kit/9UEG28F5Nb-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/nanovna-testboard-kit/9UEG28F5Nb-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/nanovna-testboard-kit/9UEG28F5Nb-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/nanovna-testboard-kit/9UEG28F5Nb-400.webp 400w, /zh-CN/blog/nanovna-testboard-kit/9UEG28F5Nb-800.webp 800w, /zh-CN/blog/nanovna-testboard-kit/9UEG28F5Nb-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/nanovna-testboard-kit/9UEG28F5Nb-400.jpeg" alt="图片" width="1080" height="810" srcset="/zh-CN/blog/nanovna-testboard-kit/9UEG28F5Nb-400.jpeg 400w, /zh-CN/blog/nanovna-testboard-kit/9UEG28F5Nb-800.jpeg 800w, /zh-CN/blog/nanovna-testboard-kit/9UEG28F5Nb-1080.jpeg 1080w" sizes="auto"></picture></p>
 <p>关于具体的测试实验，DG8SAQ写过一个PPT，详细介绍了如何使用，如何DIY一些小零件辅助测试：<strong>Experiments with the DG8SAQ VNWA and the SDR-Kits Test Board</strong> 。<sup class="footnote-ref"><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3"></a></sup></p>
 <p>以上资料都在本文末尾脚注里，有兴趣的朋友可以去看看。</p>
 <hr class="footnotes-sep">
@@ -395,22 +395,6 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <div class="mx-auto grid grid-cols-1 gap-2 py-12
                     md:grid-cols-2
                 ">
-                        <a href="/zh-CN/blog/3d-printed-tripod-adapter-for-gawant/" class="
-                        flex flex-col left-0 p-2 block hover:bg-neutral-100
-                        ">
-                            < 上一篇
-                            <br>
-                            GAWANT天线三脚架安装板
-                        </a>
-                    
-                        <a href="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/" class="
-                        flex flex-col md:text-right right-0 p-2 hover:bg-neutral-100
-                        ">
-                            下一篇 >
-                            <br>
-                            WB2CBA低通滤波器测试板
-                        </a>
-                    
         </div>
         <!-- 翻页器 end -->
 
@@ -496,7 +480,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <br>
         <h3 class="font-bold mb-4" id="bg6lh">微信公众号 BG6LH</h3>
         <div class="flex flex-row mx-auto justify-center md:justify-start">
-            <picture><source type="image/avif" srcset="/img/ul2gn8FVCu-430.avif 430w"><source type="image/webp" srcset="/img/ul2gn8FVCu-430.webp 430w"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-430.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430"></picture>
+            <picture><source type="image/webp" srcset="/img/ul2gn8FVCu-400.webp 400w, /img/ul2gn8FVCu-430.webp 430w" sizes="auto"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-400.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430" srcset="/img/ul2gn8FVCu-400.jpeg 400w, /img/ul2gn8FVCu-430.jpeg 430w" sizes="auto"></picture>
         </div>
 
     </div>
@@ -518,7 +502,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/nanovna-testboard-kit/` was built on 2025-07-09T00:00:00.000Z -->
+		<!-- This page `/zh-CN/blog/nanovna-testboard-kit/` was built on 2025-07-10T00:00:00.000Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script type="module" src="/dist/ffw-ctNm7S.js"></script>

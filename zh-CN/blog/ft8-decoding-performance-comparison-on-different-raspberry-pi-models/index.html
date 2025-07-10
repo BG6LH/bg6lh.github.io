@@ -187,7 +187,7 @@ pre[class*="language-diff-"] {
         <meta property="og:title" content="树莓派解码FT8的性能评估">
         <meta property="og:description" content="树莓派的性能究竟能不能满足FT8通联？为此我们设计了尽可能接近实际解码的场景，使用同一套模型对不同版本的树莓派和PC进行了一次FT8解码性能横向大比拼。">
         <meta property="og:type" content="article">
-        <meta property="article:tag" content="posts,FT8,radiopi,rpi">
+        <meta property="article:tag" content="FT8,radiopi,rpi">
         <meta property="og:url" content="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/">
         <meta property="og:site_name" content="BG6LH">
         <meta property="og:locale" content="zh_CN">
@@ -232,7 +232,7 @@ pre[class*="language-diff-"] {
         <div class="flex flex-row items-center">
             
                 <figure class="flex p-1 inline-block h-8 w-8 mr-2">
-                    <picture><source type="image/avif" srcset="/img/P2oVwTwU_L-601.avif 601w"><source type="image/webp" srcset="/img/P2oVwTwU_L-601.webp 601w"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-601.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601"></picture>
+                    <picture><source type="image/webp" srcset="/img/P2oVwTwU_L-400.webp 400w, /img/P2oVwTwU_L-601.webp 601w" sizes="auto"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-400.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601" srcset="/img/P2oVwTwU_L-400.png 400w, /img/P2oVwTwU_L-601.png 601w" sizes="auto"></picture>
                 </figure>
             
             <a class="flex p-1 home-link" href="/">BG6LH</a>
@@ -393,19 +393,19 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <h3 id="%E7%94%A8%E4%BE%8B1%E3%80%81%E4%BD%BF%E7%94%A8%E6%A0%87%E5%87%86%E8%A7%A3%E7%A0%81%E6%B7%B1%E5%BA%A6%EF%BC%8C%E5%AF%B9%E5%85%A8%E9%83%A812%E4%B8%AA%E4%BF%A1%E5%8F%B7%E7%89%87%E6%AE%B5%E8%BF%9B%E8%A1%8C%E8%A7%A3%E7%A0%81%E7%9A%84%E5%B9%B3%E5%9D%87%E6%97%B6%E9%97%B4" tabindex="-1">用例1、使用标准解码深度，对全部12个信号片段进行解码的平均时间</h3>
 <p>首先，使用以下命令，对所有12个信号片段，进行解码。</p>
 <pre class="language-js" tabindex="0"><code class="language-js"><span class="token operator">~</span><span class="token operator">/</span>ft8_samples $ jt9 <span class="token operator">-</span><span class="token number">8</span> <span class="token operator">-</span>d <span class="token number">1</span> <span class="token operator">*</span><span class="token punctuation">.</span>wav</code></pre>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/2uCefg5Hw5-783.avif 783w"><source type="image/webp" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/2uCefg5Hw5-783.webp 783w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/2uCefg5Hw5-783.png" alt="图片" width="783" height="516"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/2uCefg5Hw5-400.webp 400w, /zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/2uCefg5Hw5-783.webp 783w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/2uCefg5Hw5-400.png" alt="图片" width="783" height="516" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/2uCefg5Hw5-400.png 400w, /zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/2uCefg5Hw5-783.png 783w" sizes="auto"></picture></p>
 <p>上图：使用命令行对12个信号片段进行解码</p>
 <p>执行完后目录下会生成一个timer.out 的汇总文件，红圈中的数据就是我们需要的解码总时间。这个数值除以12得到每片段的 <strong>平均解码时间</strong> 。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/BKUyqFDCBn-795.avif 795w"><source type="image/webp" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/BKUyqFDCBn-795.webp 795w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/BKUyqFDCBn-795.png" alt="图片" width="795" height="527"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/BKUyqFDCBn-400.webp 400w, /zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/BKUyqFDCBn-795.webp 795w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/BKUyqFDCBn-400.png" alt="图片" width="795" height="527" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/BKUyqFDCBn-400.png 400w, /zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/BKUyqFDCBn-795.png 795w" sizes="auto"></picture></p>
 <p>上图：查看12个信号片段的总解码时间</p>
 <h3 id="%E7%94%A8%E4%BE%8B2%E3%80%81%E5%AF%B9%E5%B9%B6%E8%A1%8C%E4%BF%A1%E5%8F%B7%E6%9C%80%E5%A4%9A%E7%9A%84%E5%8D%95%E4%B8%80%E7%89%87%E6%AE%B5%EF%BC%8C%E8%BF%9B%E8%A1%8C%E6%B7%B1%E5%BA%A6%E8%A7%A3%E7%A0%81" tabindex="-1">用例2、对并行信号最多的单一片段，进行深度解码</h3>
 <p>首先删除上个用例生成的解码预测文件<code>jt9\_wisdom.dat</code>：</p>
 <pre class="language-js" tabindex="0"><code class="language-js"><span class="token operator">~</span><span class="token operator">/</span>ft8_samples $ rm jt9_wisdom<span class="token punctuation">.</span>dat</code></pre>
 <p>然后对信号片段<code>200614\_153000.wav</code>执行深度解码：</p>
 <pre class="language-js" tabindex="0"><code class="language-js"><span class="token operator">~</span><span class="token operator">/</span>ft8_samples $ jt9 <span class="token operator">-</span><span class="token number">8</span> <span class="token operator">-</span>d <span class="token number">3</span> <span class="token number">200614_153000</span><span class="token punctuation">.</span>wav</code></pre>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/kjQHbafGlv-729.avif 729w"><source type="image/webp" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/kjQHbafGlv-729.webp 729w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/kjQHbafGlv-729.png" alt="图片" width="729" height="220"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/kjQHbafGlv-400.webp 400w, /zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/kjQHbafGlv-729.webp 729w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/kjQHbafGlv-400.png" alt="图片" width="729" height="220" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/kjQHbafGlv-400.png 400w, /zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/kjQHbafGlv-729.png 729w" sizes="auto"></picture></p>
 <p>上图： 使用命令行对单段信号片段进行解码</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/sEKiMp9vHi-727.avif 727w"><source type="image/webp" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/sEKiMp9vHi-727.webp 727w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/sEKiMp9vHi-727.png" alt="图片" width="727" height="529"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/sEKiMp9vHi-400.webp 400w, /zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/sEKiMp9vHi-727.webp 727w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/sEKiMp9vHi-400.png" alt="图片" width="727" height="529" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/sEKiMp9vHi-400.png 400w, /zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/sEKiMp9vHi-727.png 727w" sizes="auto"></picture></p>
 <p>上图：查看单段信号片段的总解码时间</p>
 <h2 id="%E8%AF%95%E9%AA%8C%E7%BB%93%E6%9E%9C%E6%B1%87%E6%80%BB" tabindex="-1">试验结果汇总</h2>
 <p>我们一共测试了：</p>
@@ -414,9 +414,9 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <li>以及两个Thinkpad型号，作为对比参考。</li>
 </ul>
 <p>以下是测试结果的图表汇总。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/6ocguoAy6T-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/6ocguoAy6T-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/6ocguoAy6T-1080.png" alt="图片" width="1080" height="462"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/6ocguoAy6T-400.webp 400w, /zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/6ocguoAy6T-800.webp 800w, /zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/6ocguoAy6T-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/6ocguoAy6T-400.png" alt="图片" width="1080" height="462" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/6ocguoAy6T-400.png 400w, /zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/6ocguoAy6T-800.png 800w, /zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/6ocguoAy6T-1080.png 1080w" sizes="auto"></picture></p>
 <p>上表：各型号对FT8解码的性能汇总(单位：秒) ，其中单段深度解码的21个，表示解码出21个呼叫。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/oAwI5B-oXS-775.avif 775w"><source type="image/webp" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/oAwI5B-oXS-775.webp 775w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/oAwI5B-oXS-775.png" alt="图片" width="775" height="1062"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/oAwI5B-oXS-400.webp 400w, /zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/oAwI5B-oXS-775.webp 775w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/oAwI5B-oXS-400.png" alt="图片" width="775" height="1062" srcset="/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/oAwI5B-oXS-400.png 400w, /zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/oAwI5B-oXS-775.png 775w" sizes="auto"></picture></p>
 <p>上图：各型号对FT8解码的性能对比(单位：秒)。<br>
 注： 统计条形图越长，说明所消耗的时间越多，越不适合用于FT8解码。</p>
 <p>可见对于标准解码来说，树莓派 4代B型2G内存版是很合适的。4G内存版的性能已经不亚于Thinkpad X61，略逊于Thinkpad X280。</p>
@@ -439,22 +439,6 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <div class="mx-auto grid grid-cols-1 gap-2 py-12
                     md:grid-cols-2
                 ">
-                        <a href="/zh-CN/blog/faq-could-gpio-of-raspberry-ri-be-used-to-control-transceivers/" class="
-                        flex flex-col left-0 p-2 block hover:bg-neutral-100
-                        ">
-                            < 上一篇
-                            <br>
-                            FAQ：可以用树莓派的GPIO串口控制电台吗？
-                        </a>
-                    
-                        <a href="/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/" class="
-                        flex flex-col md:text-right right-0 p-2 hover:bg-neutral-100
-                        ">
-                            下一篇 >
-                            <br>
-                            给RadioPi添加USB GPS
-                        </a>
-                    
         </div>
         <!-- 翻页器 end -->
 
@@ -551,7 +535,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <br>
         <h3 class="font-bold mb-4" id="bg6lh">微信公众号 BG6LH</h3>
         <div class="flex flex-row mx-auto justify-center md:justify-start">
-            <picture><source type="image/avif" srcset="/img/ul2gn8FVCu-430.avif 430w"><source type="image/webp" srcset="/img/ul2gn8FVCu-430.webp 430w"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-430.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430"></picture>
+            <picture><source type="image/webp" srcset="/img/ul2gn8FVCu-400.webp 400w, /img/ul2gn8FVCu-430.webp 430w" sizes="auto"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-400.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430" srcset="/img/ul2gn8FVCu-400.jpeg 400w, /img/ul2gn8FVCu-430.jpeg 430w" sizes="auto"></picture>
         </div>
 
     </div>
@@ -573,7 +557,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/` was built on 2025-07-09T00:00:00.000Z -->
+		<!-- This page `/zh-CN/blog/ft8-decoding-performance-comparison-on-different-raspberry-pi-models/` was built on 2025-07-10T00:00:00.000Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script type="module" src="/dist/ffw-ctNm7S.js"></script>

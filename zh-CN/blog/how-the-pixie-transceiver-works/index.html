@@ -187,7 +187,7 @@ pre[class*="language-diff-"] {
         <meta property="og:title" content="皮鞋的工作原理">
         <meta property="og:description" content="皮鞋的工作原理">
         <meta property="og:type" content="article">
-        <meta property="article:tag" content="posts,Pixie,QRP">
+        <meta property="article:tag" content="Pixie,QRP">
         <meta property="og:url" content="/zh-CN/blog/how-the-pixie-transceiver-works/">
         <meta property="og:site_name" content="BG6LH">
         <meta property="og:locale" content="zh_CN">
@@ -232,7 +232,7 @@ pre[class*="language-diff-"] {
         <div class="flex flex-row items-center">
             
                 <figure class="flex p-1 inline-block h-8 w-8 mr-2">
-                    <picture><source type="image/avif" srcset="/img/P2oVwTwU_L-601.avif 601w"><source type="image/webp" srcset="/img/P2oVwTwU_L-601.webp 601w"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-601.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601"></picture>
+                    <picture><source type="image/webp" srcset="/img/P2oVwTwU_L-400.webp 400w, /img/P2oVwTwU_L-601.webp 601w" sizes="auto"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-400.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601" srcset="/img/P2oVwTwU_L-400.png 400w, /img/P2oVwTwU_L-601.png 601w" sizes="auto"></picture>
                 </figure>
             
             <a class="flex p-1 home-link" href="/">BG6LH</a>
@@ -357,7 +357,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 
         <!-- article content : begin-->
         <div class="">
-            <p><picture><source type="image/avif" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/tQDXhsQKs3-1264.avif 1264w"><source type="image/webp" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/tQDXhsQKs3-1264.webp 1264w"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-the-pixie-transceiver-works/tQDXhsQKs3-1264.jpeg" alt="cover_image" width="1264" height="538"></picture></p>
+            <p><picture><source type="image/webp" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/tQDXhsQKs3-400.webp 400w, /zh-CN/blog/how-the-pixie-transceiver-works/tQDXhsQKs3-800.webp 800w, /zh-CN/blog/how-the-pixie-transceiver-works/tQDXhsQKs3-1264.webp 1264w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-the-pixie-transceiver-works/tQDXhsQKs3-400.jpeg" alt="cover_image" width="1264" height="538" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/tQDXhsQKs3-400.jpeg 400w, /zh-CN/blog/how-the-pixie-transceiver-works/tQDXhsQKs3-800.jpeg 800w, /zh-CN/blog/how-the-pixie-transceiver-works/tQDXhsQKs3-1264.jpeg 1264w" sizes="auto"></picture></p>
 <p>原创 BG6LH <a href="https://mp.weixin.qq.com/s/">BG6LH</a> <em>2024年09月26日 07:59</em></p>
 <p>皮鞋(Pixie) 是个“一石二鸟”的设计，它把信号放大和混频集合在同一个三极管上，大大缩小了电路的体积。四十多年过去了，它已经 是 业余 界 的 传家宝。很多基于它的衍生设计流行于世。甚至还有人把皮鞋穿到了树莓派脚上做SDR。</p>
 <p>最近翻到一份介绍Pixie工作原理的资料，来自北卡罗来纳州无线电俱乐部。言简意赅地介绍了这个精妙的电路设计。我粗暴地翻译了一下。希望你也能体会到这个设计的用心之处。</p>
@@ -365,7 +365,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <table>
 <thead>
 <tr>
-<th><picture><source type="image/avif" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/q9PiiYiggb-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/q9PiiYiggb-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-the-pixie-transceiver-works/q9PiiYiggb-1080.png" alt="图片" width="1080" height="833"></picture></th>
+<th><picture><source type="image/webp" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/q9PiiYiggb-400.webp 400w, /zh-CN/blog/how-the-pixie-transceiver-works/q9PiiYiggb-800.webp 800w, /zh-CN/blog/how-the-pixie-transceiver-works/q9PiiYiggb-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-the-pixie-transceiver-works/q9PiiYiggb-400.png" alt="图片" width="1080" height="833" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/q9PiiYiggb-400.png 400w, /zh-CN/blog/how-the-pixie-transceiver-works/q9PiiYiggb-800.png 800w, /zh-CN/blog/how-the-pixie-transceiver-works/q9PiiYiggb-1080.png 1080w" sizes="auto"></picture></th>
 </tr>
 </thead>
 <tbody>
@@ -377,7 +377,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <table>
 <thead>
 <tr>
-<th><picture><source type="image/avif" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/WJTgyGWT6d-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/WJTgyGWT6d-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-the-pixie-transceiver-works/WJTgyGWT6d-1080.png" alt="图片" width="1080" height="833"></picture></th>
+<th><picture><source type="image/webp" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/WJTgyGWT6d-400.webp 400w, /zh-CN/blog/how-the-pixie-transceiver-works/WJTgyGWT6d-800.webp 800w, /zh-CN/blog/how-the-pixie-transceiver-works/WJTgyGWT6d-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-the-pixie-transceiver-works/WJTgyGWT6d-400.png" alt="图片" width="1080" height="833" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/WJTgyGWT6d-400.png 400w, /zh-CN/blog/how-the-pixie-transceiver-works/WJTgyGWT6d-800.png 800w, /zh-CN/blog/how-the-pixie-transceiver-works/WJTgyGWT6d-1080.png 1080w" sizes="auto"></picture></th>
 </tr>
 </thead>
 <tbody>
@@ -389,7 +389,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <table>
 <thead>
 <tr>
-<th><picture><source type="image/avif" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/uaY7flwgyf-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/uaY7flwgyf-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-the-pixie-transceiver-works/uaY7flwgyf-1080.png" alt="图片" width="1080" height="833"></picture></th>
+<th><picture><source type="image/webp" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/uaY7flwgyf-400.webp 400w, /zh-CN/blog/how-the-pixie-transceiver-works/uaY7flwgyf-800.webp 800w, /zh-CN/blog/how-the-pixie-transceiver-works/uaY7flwgyf-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-the-pixie-transceiver-works/uaY7flwgyf-400.png" alt="图片" width="1080" height="833" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/uaY7flwgyf-400.png 400w, /zh-CN/blog/how-the-pixie-transceiver-works/uaY7flwgyf-800.png 800w, /zh-CN/blog/how-the-pixie-transceiver-works/uaY7flwgyf-1080.png 1080w" sizes="auto"></picture></th>
 </tr>
 </thead>
 <tbody>
@@ -401,7 +401,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <table>
 <thead>
 <tr>
-<th><picture><source type="image/avif" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/jllOP5sg0p-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/jllOP5sg0p-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-the-pixie-transceiver-works/jllOP5sg0p-1080.png" alt="图片" width="1080" height="833"></picture></th>
+<th><picture><source type="image/webp" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/jllOP5sg0p-400.webp 400w, /zh-CN/blog/how-the-pixie-transceiver-works/jllOP5sg0p-800.webp 800w, /zh-CN/blog/how-the-pixie-transceiver-works/jllOP5sg0p-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-the-pixie-transceiver-works/jllOP5sg0p-400.png" alt="图片" width="1080" height="833" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/jllOP5sg0p-400.png 400w, /zh-CN/blog/how-the-pixie-transceiver-works/jllOP5sg0p-800.png 800w, /zh-CN/blog/how-the-pixie-transceiver-works/jllOP5sg0p-1080.png 1080w" sizes="auto"></picture></th>
 </tr>
 </thead>
 <tbody>
@@ -413,7 +413,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <table>
 <thead>
 <tr>
-<th><picture><source type="image/avif" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/neJBxfNGvC-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/neJBxfNGvC-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-the-pixie-transceiver-works/neJBxfNGvC-1080.png" alt="图片" width="1080" height="833"></picture></th>
+<th><picture><source type="image/webp" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/neJBxfNGvC-400.webp 400w, /zh-CN/blog/how-the-pixie-transceiver-works/neJBxfNGvC-800.webp 800w, /zh-CN/blog/how-the-pixie-transceiver-works/neJBxfNGvC-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-the-pixie-transceiver-works/neJBxfNGvC-400.png" alt="图片" width="1080" height="833" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/neJBxfNGvC-400.png 400w, /zh-CN/blog/how-the-pixie-transceiver-works/neJBxfNGvC-800.png 800w, /zh-CN/blog/how-the-pixie-transceiver-works/neJBxfNGvC-1080.png 1080w" sizes="auto"></picture></th>
 </tr>
 </thead>
 <tbody>
@@ -423,7 +423,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </tbody>
 </table>
 <p>废话不多说了， 扫码可以直接微信阅读。原文链接也可以直接打开PDF。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/RlK5ZIUgs0-886.avif 886w"><source type="image/webp" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/RlK5ZIUgs0-886.webp 886w"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-the-pixie-transceiver-works/RlK5ZIUgs0-886.png" alt="图片" width="886" height="443"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/RlK5ZIUgs0-400.webp 400w, /zh-CN/blog/how-the-pixie-transceiver-works/RlK5ZIUgs0-800.webp 800w, /zh-CN/blog/how-the-pixie-transceiver-works/RlK5ZIUgs0-886.webp 886w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-the-pixie-transceiver-works/RlK5ZIUgs0-400.png" alt="图片" width="886" height="443" srcset="/zh-CN/blog/how-the-pixie-transceiver-works/RlK5ZIUgs0-400.png 400w, /zh-CN/blog/how-the-pixie-transceiver-works/RlK5ZIUgs0-800.png 800w, /zh-CN/blog/how-the-pixie-transceiver-works/RlK5ZIUgs0-886.png 886w" sizes="auto"></picture></p>
 
             
               <hr class="border-t-neutral-500 mb-2">
@@ -436,22 +436,6 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <div class="mx-auto grid grid-cols-1 gap-2 py-12
                     md:grid-cols-2
                 ">
-                        <a href="/zh-CN/blog/diy-an-eurorack-module-box/" class="
-                        flex flex-col left-0 p-2 block hover:bg-neutral-100
-                        ">
-                            < 上一篇
-                            <br>
-                            DIY Eurorack机箱
-                        </a>
-                    
-                        <a href="/zh-CN/blog/ai-operator-in-the-2025-eudx-contest/" class="
-                        flex flex-col md:text-right right-0 p-2 hover:bg-neutral-100
-                        ">
-                            下一篇 >
-                            <br>
-                            AI已经开始参加无线电比赛了
-                        </a>
-                    
         </div>
         <!-- 翻页器 end -->
 
@@ -537,7 +521,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <br>
         <h3 class="font-bold mb-4" id="bg6lh">微信公众号 BG6LH</h3>
         <div class="flex flex-row mx-auto justify-center md:justify-start">
-            <picture><source type="image/avif" srcset="/img/ul2gn8FVCu-430.avif 430w"><source type="image/webp" srcset="/img/ul2gn8FVCu-430.webp 430w"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-430.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430"></picture>
+            <picture><source type="image/webp" srcset="/img/ul2gn8FVCu-400.webp 400w, /img/ul2gn8FVCu-430.webp 430w" sizes="auto"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-400.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430" srcset="/img/ul2gn8FVCu-400.jpeg 400w, /img/ul2gn8FVCu-430.jpeg 430w" sizes="auto"></picture>
         </div>
 
     </div>
@@ -559,7 +543,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/how-the-pixie-transceiver-works/` was built on 2025-07-09T00:00:00.000Z -->
+		<!-- This page `/zh-CN/blog/how-the-pixie-transceiver-works/` was built on 2025-07-10T00:00:00.000Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script type="module" src="/dist/ffw-ctNm7S.js"></script>

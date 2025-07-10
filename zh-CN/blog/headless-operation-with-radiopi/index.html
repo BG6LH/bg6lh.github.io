@@ -187,7 +187,7 @@ pre[class*="language-diff-"] {
         <meta property="og:title" content="无头(Headless)操作RadioPi">
         <meta property="og:description" content="所谓“无头”就是不给RadioPi准备显示器、键盘和鼠标，而是用另外一台电脑或者手机，通过网络来操作它。">
         <meta property="og:type" content="article">
-        <meta property="article:tag" content="posts,radiopi,VNC,headless,FT8">
+        <meta property="article:tag" content="radiopi,VNC,headless,FT8">
         <meta property="og:url" content="/zh-CN/blog/headless-operation-with-radiopi/">
         <meta property="og:site_name" content="BG6LH">
         <meta property="og:locale" content="zh_CN">
@@ -232,7 +232,7 @@ pre[class*="language-diff-"] {
         <div class="flex flex-row items-center">
             
                 <figure class="flex p-1 inline-block h-8 w-8 mr-2">
-                    <picture><source type="image/avif" srcset="/img/P2oVwTwU_L-601.avif 601w"><source type="image/webp" srcset="/img/P2oVwTwU_L-601.webp 601w"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-601.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601"></picture>
+                    <picture><source type="image/webp" srcset="/img/P2oVwTwU_L-400.webp 400w, /img/P2oVwTwU_L-601.webp 601w" sizes="auto"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-400.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601" srcset="/img/P2oVwTwU_L-400.png 400w, /img/P2oVwTwU_L-601.png 601w" sizes="auto"></picture>
                 </figure>
             
             <a class="flex p-1 home-link" href="/">BG6LH</a>
@@ -365,12 +365,12 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <li>野外通联时，力求极致的便携</li>
 <li>远程控制时，咱也用不上家里的显示器啊……</li>
 </ul>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/headless-operation-with-radiopi/_WLsl3-AZ_-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/_WLsl3-AZ_-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/_WLsl3-AZ_-1080.jpeg" alt="图片" width="1080" height="626"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/_WLsl3-AZ_-400.webp 400w, /zh-CN/blog/headless-operation-with-radiopi/_WLsl3-AZ_-800.webp 800w, /zh-CN/blog/headless-operation-with-radiopi/_WLsl3-AZ_-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/_WLsl3-AZ_-400.jpeg" alt="图片" width="1080" height="626" srcset="/zh-CN/blog/headless-operation-with-radiopi/_WLsl3-AZ_-400.jpeg 400w, /zh-CN/blog/headless-operation-with-radiopi/_WLsl3-AZ_-800.jpeg 800w, /zh-CN/blog/headless-operation-with-radiopi/_WLsl3-AZ_-1080.jpeg 1080w" sizes="auto"></picture></p>
 <p>一套RadioPi和FT-818的便携集成</p>
 <p>为简化表达，接下来我们把运行RadioPi的树莓派电脑简称为RadioPi。</p>
 <h2 id="vnc%EF%BC%8C%E6%97%A0%E5%A4%B4%E6%93%8D%E4%BD%9C%E7%9A%84%E5%85%B3%E9%94%AE%E5%B7%A5%E5%85%B7" tabindex="-1">VNC，无头操作的关键工具</h2>
 <p>VNC是Virtual Network Console的缩写，虚拟网络控制台。简言之，它类似QQ的“远程协助”，能把RadioPi“投射”到另外一台电脑上或手机上，实现远程操作。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/headless-operation-with-radiopi/KtZhnRPUIb-654.avif 654w"><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/KtZhnRPUIb-654.webp 654w"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/KtZhnRPUIb-654.png" alt="图片" width="654" height="207"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/KtZhnRPUIb-400.webp 400w, /zh-CN/blog/headless-operation-with-radiopi/KtZhnRPUIb-654.webp 654w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/KtZhnRPUIb-400.png" alt="图片" width="654" height="207" srcset="/zh-CN/blog/headless-operation-with-radiopi/KtZhnRPUIb-400.png 400w, /zh-CN/blog/headless-operation-with-radiopi/KtZhnRPUIb-654.png 654w" sizes="auto"></picture></p>
 <p>上图：VNC的基本概念，取自realvnc.com</p>
 <p>我们在RadioPi上配置好了 VNC Server 以及相关的服务。接下来还需要你在另外一台电脑或者手机上， 安装VNC Viewer。</p>
 <p>VNC Viewer的 下载地址：<a href="https://www.realvnc.com/en/connect/download/viewer/">https://www.realvnc.com/en/connect/download/viewer/</a></p>
@@ -378,7 +378,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <p>对于安卓手机用户，国内的应用商店可能没有。 推荐从RealVNC公司直接下载安装包：<a href="https://help.realvnc.com/hc/en-us/articles/360002762697">https://help.realvnc.com/hc/en-us/articles/360002762697</a></p>
 <h2 id="%E7%BB%99%E6%97%A0%E5%A4%B4radiopi%E8%BF%9E%E4%B8%8A%E5%B1%80%E5%9F%9F%E7%BD%91" tabindex="-1">给无头RadioPi连上局域网</h2>
 <p>第一次启动RadioPi时，推荐把它连上家里的局域网。通常你家的Wi-Fi网络就是一个局域网，所有的电脑、手机、RadioPi，都在这个网上。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/headless-operation-with-radiopi/C9yH1cC0mI-300.avif 300w"><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/C9yH1cC0mI-300.webp 300w"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/C9yH1cC0mI-300.png" alt="图片" width="300" height="188"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/C9yH1cC0mI-300.webp 300w"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/C9yH1cC0mI-300.png" alt="图片" width="300" height="188"></picture></p>
 <p>上图：局域网里的VNC连接 取自realvnc.com</p>
 <p>让RadioPi联网很简单： <strong>用网线把RadioPi和Wi-Fi路由器连起来。</strong></p>
 <h3 id="%E5%9C%A8%E5%B1%80%E5%9F%9F%E7%BD%91%E9%87%8C%E6%89%BE%E5%88%B0radiopi" tabindex="-1">在局域网里找到RadioPi</h3>
@@ -386,15 +386,15 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <li><strong>在路由器上找radiopi</strong></li>
 </ul>
 <p>找到RadioPi的最简单方案，是到路由器上看看分给它的IP地址是什么。 RadioPi的默认主机 名是小写的radiopi。找到它对应的IP。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/headless-operation-with-radiopi/jQKmArNVXM-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/jQKmArNVXM-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/jQKmArNVXM-1080.png" alt="图片" width="1080" height="724"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/jQKmArNVXM-400.webp 400w, /zh-CN/blog/headless-operation-with-radiopi/jQKmArNVXM-800.webp 800w, /zh-CN/blog/headless-operation-with-radiopi/jQKmArNVXM-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/jQKmArNVXM-400.png" alt="图片" width="1080" height="724" srcset="/zh-CN/blog/headless-operation-with-radiopi/jQKmArNVXM-400.png 400w, /zh-CN/blog/headless-operation-with-radiopi/jQKmArNVXM-800.png 800w, /zh-CN/blog/headless-operation-with-radiopi/jQKmArNVXM-1080.png 1080w" sizes="auto"></picture></p>
 <p>上图：在路由器上找到radiopi对应的IP地址</p>
 <p>然后打开VNC Viewer，在地址栏直接输入这个IP地址，即可访问到RadioPi。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/headless-operation-with-radiopi/O4FNCMPUvA-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/O4FNCMPUvA-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/O4FNCMPUvA-1080.png" alt="图片" width="1080" height="825"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/O4FNCMPUvA-400.webp 400w, /zh-CN/blog/headless-operation-with-radiopi/O4FNCMPUvA-800.webp 800w, /zh-CN/blog/headless-operation-with-radiopi/O4FNCMPUvA-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/O4FNCMPUvA-400.png" alt="图片" width="1080" height="825" srcset="/zh-CN/blog/headless-operation-with-radiopi/O4FNCMPUvA-400.png 400w, /zh-CN/blog/headless-operation-with-radiopi/O4FNCMPUvA-800.png 800w, /zh-CN/blog/headless-operation-with-radiopi/O4FNCMPUvA-1080.png 1080w" sizes="auto"></picture></p>
 <p>上图： 在VNC Viewer地址栏直接输入IP地址</p>
 <ul>
 <li><strong>在局域网里扫描IP地址</strong></li>
 </ul>
-<p>如果你无法登录路由器，还可以用IP扫描工具在局域网里扫出radiopi的IP地址。这里推荐的软件是：IP Angry Scanner， 它把你的电脑所在的局域网整个扫一遍，列出来结果。 <picture><source type="image/avif" srcset="/zh-CN/blog/headless-operation-with-radiopi/5kYU5TLPo6-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/5kYU5TLPo6-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/5kYU5TLPo6-1080.png" alt="图片" width="1080" height="665"></picture></p>
+<p>如果你无法登录路由器，还可以用IP扫描工具在局域网里扫出radiopi的IP地址。这里推荐的软件是：IP Angry Scanner， 它把你的电脑所在的局域网整个扫一遍，列出来结果。 <picture><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/5kYU5TLPo6-400.webp 400w, /zh-CN/blog/headless-operation-with-radiopi/5kYU5TLPo6-800.webp 800w, /zh-CN/blog/headless-operation-with-radiopi/5kYU5TLPo6-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/5kYU5TLPo6-400.png" alt="图片" width="1080" height="665" srcset="/zh-CN/blog/headless-operation-with-radiopi/5kYU5TLPo6-400.png 400w, /zh-CN/blog/headless-operation-with-radiopi/5kYU5TLPo6-800.png 800w, /zh-CN/blog/headless-operation-with-radiopi/5kYU5TLPo6-1080.png 1080w" sizes="auto"></picture></p>
 <p>上图： 在Angry IP Scanner中，扫到radiopi主机的IP地址</p>
 <p>它扫到了RadioPi 的IP地址是 192.16 8.32.209。</p>
 <p>Angry IP Scanner的下载地址：<br>
@@ -403,7 +403,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <li><strong>在支持mDNS的设备上直接访问radiopi.local</strong></li>
 </ul>
 <p>在苹果的电脑、手机、iPad上，打开VNC Viewer，在地址栏中直接输入radiopi.local，即可访问到RadioPi。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/headless-operation-with-radiopi/MShmy9-Bjn-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/MShmy9-Bjn-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/MShmy9-Bjn-1080.png" alt="图片" width="1080" height="825"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/MShmy9-Bjn-400.webp 400w, /zh-CN/blog/headless-operation-with-radiopi/MShmy9-Bjn-800.webp 800w, /zh-CN/blog/headless-operation-with-radiopi/MShmy9-Bjn-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/MShmy9-Bjn-400.png" alt="图片" width="1080" height="825" srcset="/zh-CN/blog/headless-operation-with-radiopi/MShmy9-Bjn-400.png 400w, /zh-CN/blog/headless-operation-with-radiopi/MShmy9-Bjn-800.png 800w, /zh-CN/blog/headless-operation-with-radiopi/MShmy9-Bjn-1080.png 1080w" sizes="auto"></picture></p>
 <p>上图：在VNC Viewer地址栏直接输入radiopi.local</p>
 <div class="callout callout-note">
 <p><strong>RadioPi上的自动广播主机名服务</strong></p>
@@ -432,22 +432,22 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <p>此外，RealVNC提供一种“云连接”的方式访问RadioPi。在完成设置之后，可以简化查找IP地址的过程。稍后会 介绍。</p>
 </div>
 <p>第一次与RadioPi建立连接时，VNC Viewer 会有一个安全提示，选择Continue继续。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/headless-operation-with-radiopi/3cGnz8AGfH-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/3cGnz8AGfH-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/3cGnz8AGfH-1080.png" alt="图片" width="1080" height="861"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/3cGnz8AGfH-400.webp 400w, /zh-CN/blog/headless-operation-with-radiopi/3cGnz8AGfH-800.webp 800w, /zh-CN/blog/headless-operation-with-radiopi/3cGnz8AGfH-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/3cGnz8AGfH-400.png" alt="图片" width="1080" height="861" srcset="/zh-CN/blog/headless-operation-with-radiopi/3cGnz8AGfH-400.png 400w, /zh-CN/blog/headless-operation-with-radiopi/3cGnz8AGfH-800.png 800w, /zh-CN/blog/headless-operation-with-radiopi/3cGnz8AGfH-1080.png 1080w" sizes="auto"></picture></p>
 <p>上图：第一次连接VNC的安全提示</p>
 <p>接下来VNC Viewer会提示你输入登录radiopi.local的用户名和密码。我们用RadioPi的默认用户pi登录。</p>
 <ul>
 <li>用户名： pi</li>
 <li>密码： radiopi599</li>
 </ul>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/headless-operation-with-radiopi/Xn2br1X5tJ-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/Xn2br1X5tJ-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/Xn2br1X5tJ-1080.png" alt="图片" width="1080" height="861"></picture>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/Xn2br1X5tJ-400.webp 400w, /zh-CN/blog/headless-operation-with-radiopi/Xn2br1X5tJ-800.webp 800w, /zh-CN/blog/headless-operation-with-radiopi/Xn2br1X5tJ-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/Xn2br1X5tJ-400.png" alt="图片" width="1080" height="861" srcset="/zh-CN/blog/headless-operation-with-radiopi/Xn2br1X5tJ-400.png 400w, /zh-CN/blog/headless-operation-with-radiopi/Xn2br1X5tJ-800.png 800w, /zh-CN/blog/headless-operation-with-radiopi/Xn2br1X5tJ-1080.png 1080w" sizes="auto"></picture>
 上图：输入登录RadioPi的用户名密码</p>
 <p>然后你就会在VNC Viewer的窗口里看到RadioPi的桌面。你可以像操作普通的电脑一样操作它了。至此，你已经实现了局域网内的RadioPi远程控制。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/headless-operation-with-radiopi/qe5jjK39CL-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/qe5jjK39CL-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/qe5jjK39CL-1080.png" alt="图片" width="1080" height="851"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/qe5jjK39CL-400.webp 400w, /zh-CN/blog/headless-operation-with-radiopi/qe5jjK39CL-800.webp 800w, /zh-CN/blog/headless-operation-with-radiopi/qe5jjK39CL-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/qe5jjK39CL-400.png" alt="图片" width="1080" height="851" srcset="/zh-CN/blog/headless-operation-with-radiopi/qe5jjK39CL-400.png 400w, /zh-CN/blog/headless-operation-with-radiopi/qe5jjK39CL-800.png 800w, /zh-CN/blog/headless-operation-with-radiopi/qe5jjK39CL-1080.png 1080w" sizes="auto"></picture></p>
 <p>上图：第一次登录到RadioPi的桌面</p>
 <p>现在你可以通过VNC Viewer给RadioPi添加Wi-Fi无线网络，甩掉网线吧。</p>
 <h2 id="%E4%BB%8E%E5%85%AC%E5%9B%AD%E9%81%A5%E6%8E%A7%E5%AE%B6%E9%87%8C%E7%9A%84radiopi" tabindex="-1">从公园遥控家里的RadioPi</h2>
 <p>如果想实现更远的(跨互联网)远程控制——从公园里控制家里的树莓派——那就需要 注册RealVNC提供 <strong>“云连接(Cloud Connect)”</strong> 服务。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/headless-operation-with-radiopi/wruMAtj31U-376.avif 376w"><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/wruMAtj31U-376.webp 376w"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/wruMAtj31U-376.png" alt="图片" width="376" height="188"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/wruMAtj31U-376.webp 376w"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/wruMAtj31U-376.png" alt="图片" width="376" height="188"></picture></p>
 <p>上图：通过互联网访问家里的VNC Server 取自realvnc.com</p>
 <p>你需要在去公园之前，要完成以下操作：</p>
 <ul>
@@ -456,7 +456,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <li>在手机的VNC Viewer上也登录这个账号。</li>
 </ul>
 <p>每台设备第一次登录时，RealVNC都会要求用电子邮件进行安全验证。验证完之后，远程的RadioPi就会出自动现在VNC Viewer的地址簿中，下次访问时直接点击它就好。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/headless-operation-with-radiopi/Q5Epaeh_mY-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/Q5Epaeh_mY-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/Q5Epaeh_mY-1080.png" alt="图片" width="1080" height="825"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/headless-operation-with-radiopi/Q5Epaeh_mY-400.webp 400w, /zh-CN/blog/headless-operation-with-radiopi/Q5Epaeh_mY-800.webp 800w, /zh-CN/blog/headless-operation-with-radiopi/Q5Epaeh_mY-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/headless-operation-with-radiopi/Q5Epaeh_mY-400.png" alt="图片" width="1080" height="825" srcset="/zh-CN/blog/headless-operation-with-radiopi/Q5Epaeh_mY-400.png 400w, /zh-CN/blog/headless-operation-with-radiopi/Q5Epaeh_mY-800.png 800w, /zh-CN/blog/headless-operation-with-radiopi/Q5Epaeh_mY-1080.png 1080w" sizes="auto"></picture></p>
 <p>上图：建立云连接之后的VNC Viewer窗口</p>
 <h2 id="%E9%AB%98%E7%BA%A7%E6%94%BB%E7%95%A5%EF%BC%9A%E9%87%8E%E5%A4%96%E6%93%8D%E4%BD%9Cradiopi" tabindex="-1">高级攻略：野外操作RadioPi</h2>
 <p>终于说到了野外通联。无头的RadioPi和手机或者P ad配合起来，可以完全取代笔记本电脑。</p>
@@ -510,22 +510,6 @@ psk="Wi-Fi密码"
         <div class="mx-auto grid grid-cols-1 gap-2 py-12
                     md:grid-cols-2
                 ">
-                        <a href="/zh-CN/blog/radiopi-a-raspberry-pi-system-for-ham-radio/" class="
-                        flex flex-col left-0 p-2 block hover:bg-neutral-100
-                        ">
-                            < 上一篇
-                            <br>
-                            RadioPi，Ham的树莓派懒人包
-                        </a>
-                    
-                        <a href="/zh-CN/blog/faq-two-questions-about-radiopi-sound/" class="
-                        flex flex-col md:text-right right-0 p-2 hover:bg-neutral-100
-                        ">
-                            下一篇 >
-                            <br>
-                            FAQ：关于RadioPi声音的两个问题
-                        </a>
-                    
         </div>
         <!-- 翻页器 end -->
 
@@ -622,7 +606,7 @@ psk="Wi-Fi密码"
         <br>
         <h3 class="font-bold mb-4" id="bg6lh">微信公众号 BG6LH</h3>
         <div class="flex flex-row mx-auto justify-center md:justify-start">
-            <picture><source type="image/avif" srcset="/img/ul2gn8FVCu-430.avif 430w"><source type="image/webp" srcset="/img/ul2gn8FVCu-430.webp 430w"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-430.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430"></picture>
+            <picture><source type="image/webp" srcset="/img/ul2gn8FVCu-400.webp 400w, /img/ul2gn8FVCu-430.webp 430w" sizes="auto"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-400.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430" srcset="/img/ul2gn8FVCu-400.jpeg 400w, /img/ul2gn8FVCu-430.jpeg 430w" sizes="auto"></picture>
         </div>
 
     </div>
@@ -644,7 +628,7 @@ psk="Wi-Fi密码"
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/headless-operation-with-radiopi/` was built on 2025-07-09T00:00:00.000Z -->
+		<!-- This page `/zh-CN/blog/headless-operation-with-radiopi/` was built on 2025-07-10T00:00:00.000Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script type="module" src="/dist/ffw-ctNm7S.js"></script>

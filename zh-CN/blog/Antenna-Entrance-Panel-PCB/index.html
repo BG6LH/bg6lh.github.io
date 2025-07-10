@@ -187,7 +187,7 @@ pre[class*="language-diff-"] {
         <meta property="og:title" content="拼插玩具：天线入户板">
         <meta property="og:description" content="画PCB容易上瘾，说这说着就顺手画了一个天线入户板。">
         <meta property="og:type" content="article">
-        <meta property="article:tag" content="posts,Antenna,PCB">
+        <meta property="article:tag" content="Antenna,PCB">
         <meta property="og:url" content="/zh-CN/blog/Antenna-Entrance-Panel-PCB/">
         <meta property="og:site_name" content="BG6LH">
         <meta property="og:locale" content="zh_CN">
@@ -232,7 +232,7 @@ pre[class*="language-diff-"] {
         <div class="flex flex-row items-center">
             
                 <figure class="flex p-1 inline-block h-8 w-8 mr-2">
-                    <picture><source type="image/avif" srcset="/img/P2oVwTwU_L-601.avif 601w"><source type="image/webp" srcset="/img/P2oVwTwU_L-601.webp 601w"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-601.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601"></picture>
+                    <picture><source type="image/webp" srcset="/img/P2oVwTwU_L-400.webp 400w, /img/P2oVwTwU_L-601.webp 601w" sizes="auto"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-400.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601" srcset="/img/P2oVwTwU_L-400.png 400w, /img/P2oVwTwU_L-601.png 601w" sizes="auto"></picture>
                 </figure>
             
             <a class="flex p-1 home-link" href="/">BG6LH</a>
@@ -361,25 +361,25 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <h2 id="%E4%B8%BA%E5%95%A5%E8%A6%81%E5%81%9A%E5%A4%A9%E7%BA%BF%E5%85%A5%E6%88%B7%E6%9D%BF%EF%BC%9F" tabindex="-1">为啥要做天线入户板？</h2>
 <p>我的目标是将电台的<strong>底噪</strong>（Noise Floor）降到尽可能低。设想的方法是：在天线进屋的一个恰当的点位上，把<strong>共模电流</strong>隔绝到室外，并且在这个点上，给电台室内的所有设备提供一个<strong>等电势、零电位、低阻抗</strong>的平面。</p>
 <p>这个后续要接着实践，高楼接地、消除静电、定性定量……说了这么多，第一步是要买一块紫铜的接地排。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/3tt9h-7Z3k-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/3tt9h-7Z3k-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/Antenna-Entrance-Panel-PCB/3tt9h-7Z3k-1080.jpeg" alt="图片" width="1080" height="1291"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/3tt9h-7Z3k-400.webp 400w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/3tt9h-7Z3k-800.webp 800w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/3tt9h-7Z3k-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/Antenna-Entrance-Panel-PCB/3tt9h-7Z3k-400.jpeg" alt="图片" width="1080" height="1291" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/3tt9h-7Z3k-400.jpeg 400w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/3tt9h-7Z3k-800.jpeg 800w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/3tt9h-7Z3k-1080.jpeg 1080w" sizes="auto"></picture></p>
 <p>但是网上的紫铜接地排都是给电力设备用的。安装的孔径太小，天线电缆连接器一般都是直径16mm起步。难道需要我自己打孔吗？</p>
 <p>网上看到过一些射频工程用不锈钢板、热镀锌板、铝板做天线入户的跳线板再接地的。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/yRkgtoXzlE-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/yRkgtoXzlE-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/Antenna-Entrance-Panel-PCB/yRkgtoXzlE-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/yRkgtoXzlE-400.webp 400w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/yRkgtoXzlE-800.webp 800w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/yRkgtoXzlE-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/Antenna-Entrance-Panel-PCB/yRkgtoXzlE-400.jpeg" alt="图片" width="1080" height="810" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/yRkgtoXzlE-400.jpeg 400w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/yRkgtoXzlE-800.jpeg 800w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/yRkgtoXzlE-1080.jpeg 1080w" sizes="auto"></picture></p>
 <p>这些方案都不错。紫铜的电阻率应该比这些都低。但是中国缺铜，所以紫铜件成本高，只有在高压、防雷这种安全要求更高的地方才用，射频件就用铜包钢、热镀锌了。本来射频电流也有趋肤效应。总之是要做一个零电位，还能泄放静电、隔绝共模电流。</p>
 <p>如果只是隔离共模电流的话，做一个1:1巴伦也不错。F5NPV就做了一串1:1，把不同波段的共模电流都隔离了。感兴趣的可以去看看<a href="https://f5npv.wordpress.com/endfed-cmc/">他的博客</a>。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/HHb0n55XoD-1024.avif 1024w"><source type="image/webp" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/HHb0n55XoD-1024.webp 1024w"><img loading="lazy" decoding="async" src="/zh-CN/blog/Antenna-Entrance-Panel-PCB/HHb0n55XoD-1024.jpeg" alt="图片" width="1024" height="576"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/HHb0n55XoD-400.webp 400w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/HHb0n55XoD-800.webp 800w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/HHb0n55XoD-1024.webp 1024w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/Antenna-Entrance-Panel-PCB/HHb0n55XoD-400.jpeg" alt="图片" width="1024" height="576" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/HHb0n55XoD-400.jpeg 400w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/HHb0n55XoD-800.jpeg 800w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/HHb0n55XoD-1024.jpeg 1024w" sizes="auto"></picture></p>
 <p>不过话说回来，只做1:1巴伦还不够，因为还有接地的问题。</p>
 <h2 id="%E5%98%89%E7%AB%8B%E5%88%9Bpcb%E6%89%93%E6%9D%BF" tabindex="-1">嘉立创PCB打板</h2>
 <p>我只有三条电缆入户，花小几百定制一个紫铜板，不如用嘉立创的优惠券做一个PCB的。说干就干，打开 KiCad 画了一个。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/1JkF_QLpZ_-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/1JkF_QLpZ_-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/Antenna-Entrance-Panel-PCB/1JkF_QLpZ_-1080.png" alt="图片" width="1080" height="1080"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/1JkF_QLpZ_-400.webp 400w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/1JkF_QLpZ_-800.webp 800w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/1JkF_QLpZ_-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/Antenna-Entrance-Panel-PCB/1JkF_QLpZ_-400.png" alt="图片" width="1080" height="1080" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/1JkF_QLpZ_-400.png 400w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/1JkF_QLpZ_-800.png 800w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/1JkF_QLpZ_-1080.png 1080w" sizes="auto"></picture></p>
 <p>设计主要兼容了大多数直径16mm的双头射频连接器、以及25x25mm的带法兰的射频接头。板子所有的连接只有一个网络，GND。两面完全覆铜，中间布满过孔，任意一处流露的金属都可以接地。</p>
 <p>考虑到嘉立创的免费板子是10x10cm见方，所以花了点心思，做成了几块可以掰开再拼插在一起，通过焊接加固，多套板子还能拼成出更多的连接单元。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/eeo9zOWyPL-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/eeo9zOWyPL-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/Antenna-Entrance-Panel-PCB/eeo9zOWyPL-1080.jpeg" alt="图片" width="1080" height="1080"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/eeo9zOWyPL-400.webp 400w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/eeo9zOWyPL-800.webp 800w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/eeo9zOWyPL-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/Antenna-Entrance-Panel-PCB/eeo9zOWyPL-400.jpeg" alt="图片" width="1080" height="1080" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/eeo9zOWyPL-400.jpeg 400w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/eeo9zOWyPL-800.jpeg 800w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/eeo9zOWyPL-1080.jpeg 1080w" sizes="auto"></picture></p>
 <p>然鹅，按照嘉立创的规则，<strong>拼板不免费</strong>。只要设计里有一个邮票孔、一条开槽，系统就先自动判定为拼板。找人工审核也说不过去。唉，画都画了，还是自己花钱做吧。</p>
 <p>不到两天，做好的板子就寄来了。这也太快了！智能制造让梦想照进现实！</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/wpNfpaTnRN-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/wpNfpaTnRN-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/Antenna-Entrance-Panel-PCB/wpNfpaTnRN-1080.jpeg" alt="图片" width="1080" height="1080"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/wpNfpaTnRN-400.webp 400w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/wpNfpaTnRN-800.webp 800w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/wpNfpaTnRN-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/Antenna-Entrance-Panel-PCB/wpNfpaTnRN-400.jpeg" alt="图片" width="1080" height="1080" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/wpNfpaTnRN-400.jpeg 400w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/wpNfpaTnRN-800.jpeg 800w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/wpNfpaTnRN-1080.jpeg 1080w" sizes="auto"></picture></p>
 <p>下边是做好的样子，看着还挺精神哈！</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/1MrHYeYpoD-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/1MrHYeYpoD-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/Antenna-Entrance-Panel-PCB/1MrHYeYpoD-1080.jpeg" alt="图片" width="1080" height="1080"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/1MrHYeYpoD-400.webp 400w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/1MrHYeYpoD-800.webp 800w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/1MrHYeYpoD-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/Antenna-Entrance-Panel-PCB/1MrHYeYpoD-400.jpeg" alt="图片" width="1080" height="1080" srcset="/zh-CN/blog/Antenna-Entrance-Panel-PCB/1MrHYeYpoD-400.jpeg 400w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/1MrHYeYpoD-800.jpeg 800w, /zh-CN/blog/Antenna-Entrance-Panel-PCB/1MrHYeYpoD-1080.jpeg 1080w" sizes="auto"></picture></p>
 <p>其实，不做拼接的话，在 10x10cm 见方的优惠券范围内，可以做成更大的、至少6个连接单元的独立板子。之后，买一个成品的紫铜汇流排，把这个板子拦腰固定在紫铜汇流排上。这样，接地、等电位，一次搞定。而且免费5张哦！</p>
 <p>入户板的应用是下一阶段的事。回归初心，治理底噪才是出发点。这套入户板权当是个拼插玩具了。</p>
 
@@ -394,22 +394,6 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <div class="mx-auto grid grid-cols-1 gap-2 py-12
                     md:grid-cols-2
                 ">
-                        <a href="/zh-CN/blog/40m-band-low-pass-filter-test/" class="
-                        flex flex-col left-0 p-2 block hover:bg-neutral-100
-                        ">
-                            < 上一篇
-                            <br>
-                            测试WB2CBA的40米低通滤波器
-                        </a>
-                    
-                        <a href="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/" class="
-                        flex flex-col md:text-right right-0 p-2 hover:bg-neutral-100
-                        ">
-                            下一篇 >
-                            <br>
-                            FT-817/818的蓝牙DIGI模式试验板(1)
-                        </a>
-                    
         </div>
         <!-- 翻页器 end -->
 
@@ -506,7 +490,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <br>
         <h3 class="font-bold mb-4" id="bg6lh">微信公众号 BG6LH</h3>
         <div class="flex flex-row mx-auto justify-center md:justify-start">
-            <picture><source type="image/avif" srcset="/img/ul2gn8FVCu-430.avif 430w"><source type="image/webp" srcset="/img/ul2gn8FVCu-430.webp 430w"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-430.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430"></picture>
+            <picture><source type="image/webp" srcset="/img/ul2gn8FVCu-400.webp 400w, /img/ul2gn8FVCu-430.webp 430w" sizes="auto"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-400.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430" srcset="/img/ul2gn8FVCu-400.jpeg 400w, /img/ul2gn8FVCu-430.jpeg 430w" sizes="auto"></picture>
         </div>
 
     </div>
@@ -528,7 +512,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/Antenna-Entrance-Panel-PCB/` was built on 2025-07-09T00:00:00.000Z -->
+		<!-- This page `/zh-CN/blog/Antenna-Entrance-Panel-PCB/` was built on 2025-07-10T00:00:00.000Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script type="module" src="/dist/ffw-ctNm7S.js"></script>

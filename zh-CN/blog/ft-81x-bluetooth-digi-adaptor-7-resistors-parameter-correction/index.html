@@ -187,7 +187,7 @@ pre[class*="language-diff-"] {
         <meta property="og:title" content="FT-817/818蓝牙板(7)电源电阻参数更正！">
         <meta property="og:description" content="前传：不了解这个蓝牙DIGI板故事的朋友可以先回顾一下之前的文章。">
         <meta property="og:type" content="article">
-        <meta property="article:tag" content="posts,Bluetooth,DIGI,FT-817,FT-818,JDY-67">
+        <meta property="article:tag" content="Bluetooth,DIGI,FT-817,FT-818,JDY-67">
         <meta property="og:url" content="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/">
         <meta property="og:site_name" content="BG6LH">
         <meta property="og:locale" content="zh_CN">
@@ -232,7 +232,7 @@ pre[class*="language-diff-"] {
         <div class="flex flex-row items-center">
             
                 <figure class="flex p-1 inline-block h-8 w-8 mr-2">
-                    <picture><source type="image/avif" srcset="/img/P2oVwTwU_L-601.avif 601w"><source type="image/webp" srcset="/img/P2oVwTwU_L-601.webp 601w"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-601.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601"></picture>
+                    <picture><source type="image/webp" srcset="/img/P2oVwTwU_L-400.webp 400w, /img/P2oVwTwU_L-601.webp 601w" sizes="auto"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-400.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601" srcset="/img/P2oVwTwU_L-400.png 400w, /img/P2oVwTwU_L-601.png 601w" sizes="auto"></picture>
                 </figure>
             
             <a class="flex p-1 home-link" href="/">BG6LH</a>
@@ -382,7 +382,7 @@ R12 <span class="token operator">=</span> 1KΩ
 <p>前几天自己又做了一个，把最后一块JDY-67用上了， 然鹅竟没有成功。</p>
 <p>我是按照已经发布在Github上的BOM List做的。这说明BOM List上还有不正确的元件配置。 <strong>这里跟各位先道个歉</strong> 。</p>
 <p>我用万用表测量了LM1117-5V的输入输出电压，都低得离谱。 这个板 子 最 主要 的功 能就是从 ACC 取电，给LM1117供电；再 借用 PT T 接口电压的通断情况， 给取电 电 路 加了一个 软开关 。所以大概率还是这里的问题。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/7OGmIErGRH-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/7OGmIErGRH-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/7OGmIErGRH-1080.png" alt="图片" width="1080" height="494"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/7OGmIErGRH-400.webp 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/7OGmIErGRH-800.webp 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/7OGmIErGRH-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/7OGmIErGRH-400.png" alt="图片" width="1080" height="494" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/7OGmIErGRH-400.png 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/7OGmIErGRH-800.png 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/7OGmIErGRH-1080.png 1080w" sizes="auto"></picture></p>
 <p>供电部分原理图</p>
 <p>回顾最后一次成功 <a href="http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;mid=2247484438&amp;idx=1&amp;sn=b9d2181a3110e7b25d20ae7037cb843e&amp;chksm=e949829cde3e0b8a535c0dcf4bd899bc6ad73052f3558a8f570879a436099b9d323c12931070&amp;scene=21#wechat_redirect">《拯救R1235》</a> ，当时其实我已经把软开关里的几个电阻都做了调整。成功时它们的值分别是：</p>
 <ul>
@@ -395,7 +395,7 @@ R12 <span class="token operator">=</span> 1KΩ
 <h2 id="%E7%94%B5%E9%98%BB%E9%80%89%E6%8B%A9" tabindex="-1">电阻选择</h2>
 <p>说实话“软开关”是我的知识盲点，我是依葫芦画瓢的。有几个无线电老中医都给了我葫芦。R10/R11的推荐都是 100 KΩ ，但是R12， 一位老中医用仿真软件实验了一下，认为1KΩ最佳。 另外一个老中医开的方子是10KΩ 。</p>
 <p>正好我手边还有另外一个不工作的板子，于是 我按照大家的方子，改出了两套组合。他们目前都正常工作了，而且 看起来差别不大。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/0pGA6IwQO5-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/0pGA6IwQO5-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/0pGA6IwQO5-1080.png" alt="图片" width="1080" height="187"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/0pGA6IwQO5-400.webp 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/0pGA6IwQO5-800.webp 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/0pGA6IwQO5-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/0pGA6IwQO5-400.png" alt="图片" width="1080" height="187" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/0pGA6IwQO5-400.png 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/0pGA6IwQO5-800.png 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/0pGA6IwQO5-1080.png 1080w" sizes="auto"></picture></p>
 <p>压降的差别应该就是在R6的10Ω和22Ω的选择上。 所以建议还是用第一套组合，用仿真跑过的。</p>
 <p>最后，还是分享一下PCB打板的Gerber下载地址：</p>
 <ul>
@@ -417,22 +417,6 @@ R12 <span class="token operator">=</span> 1KΩ
         <div class="mx-auto grid grid-cols-1 gap-2 py-12
                     md:grid-cols-2
                 ">
-                        <a href="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/" class="
-                        flex flex-col left-0 p-2 block hover:bg-neutral-100
-                        ">
-                            < 上一篇
-                            <br>
-                            FT-817/818蓝牙板(6)拯救R1235
-                        </a>
-                    
-                        <a href="/zh-CN/blog/dl8mre-ft-control-yaesu-for-mac/" class="
-                        flex flex-col md:text-right right-0 p-2 hover:bg-neutral-100
-                        ">
-                            下一篇 >
-                            <br>
-                            Mac机上的YAESU远程软件就要来了！
-                        </a>
-                    
         </div>
         <!-- 翻页器 end -->
 
@@ -529,7 +513,7 @@ R12 <span class="token operator">=</span> 1KΩ
         <br>
         <h3 class="font-bold mb-4" id="bg6lh">微信公众号 BG6LH</h3>
         <div class="flex flex-row mx-auto justify-center md:justify-start">
-            <picture><source type="image/avif" srcset="/img/ul2gn8FVCu-430.avif 430w"><source type="image/webp" srcset="/img/ul2gn8FVCu-430.webp 430w"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-430.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430"></picture>
+            <picture><source type="image/webp" srcset="/img/ul2gn8FVCu-400.webp 400w, /img/ul2gn8FVCu-430.webp 430w" sizes="auto"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-400.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430" srcset="/img/ul2gn8FVCu-400.jpeg 400w, /img/ul2gn8FVCu-430.jpeg 430w" sizes="auto"></picture>
         </div>
 
     </div>
@@ -551,7 +535,7 @@ R12 <span class="token operator">=</span> 1KΩ
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/` was built on 2025-07-09T00:00:00.000Z -->
+		<!-- This page `/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/` was built on 2025-07-10T00:00:00.000Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script type="module" src="/dist/ffw-ctNm7S.js"></script>

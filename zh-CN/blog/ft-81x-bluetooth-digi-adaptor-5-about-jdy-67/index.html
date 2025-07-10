@@ -187,7 +187,7 @@ pre[class*="language-diff-"] {
         <meta property="og:title" content="FT-817/818的蓝牙DIGI模式试验板(5)蓝牙模块JDY-67">
         <meta property="og:description" content="今天接着讲讲JDY-67这个蓝牙模块。想要做蓝牙DIGI板的朋友肯定要趟这个水，我把我踩过的坑先说说吧。">
         <meta property="og:type" content="article">
-        <meta property="article:tag" content="posts,Bluetooth,DIGI,FT-817,FT-818,JDY-67">
+        <meta property="article:tag" content="Bluetooth,DIGI,FT-817,FT-818,JDY-67">
         <meta property="og:url" content="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/">
         <meta property="og:site_name" content="BG6LH">
         <meta property="og:locale" content="zh_CN">
@@ -232,7 +232,7 @@ pre[class*="language-diff-"] {
         <div class="flex flex-row items-center">
             
                 <figure class="flex p-1 inline-block h-8 w-8 mr-2">
-                    <picture><source type="image/avif" srcset="/img/P2oVwTwU_L-601.avif 601w"><source type="image/webp" srcset="/img/P2oVwTwU_L-601.webp 601w"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-601.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601"></picture>
+                    <picture><source type="image/webp" srcset="/img/P2oVwTwU_L-400.webp 400w, /img/P2oVwTwU_L-601.webp 601w" sizes="auto"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-400.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601" srcset="/img/P2oVwTwU_L-400.png 400w, /img/P2oVwTwU_L-601.png 601w" sizes="auto"></picture>
                 </figure>
             
             <a class="flex p-1 home-link" href="/">BG6LH</a>
@@ -374,22 +374,22 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <p>今天接着讲讲JDY-67这个蓝牙模块，把我踩过的坑先说说。 想要做蓝牙DIGI板的朋友肯定要趟这个水。</p>
 <h2 id="%E4%B8%BA%E5%95%A5%E6%98%AFjdy-67%EF%BC%9F" tabindex="-1">为啥是JDY-67？</h2>
 <p>JDY-67蓝牙模块是一个魔幻现实主义的存在。到现在也没弄明白JDY-67是哪家产的。它被描述为“三模音频+BLE+SPP蓝牙模块”，也有说双模，这个矛盾甚至体现在商品名称和描述里。关于它的应用电压到底是3.3、4.2还是5V，也在同一个PDF文档里出现过三种不同的说法，耗电电流也是个迷。它还支持SD卡，和预存MP3语音提示，蓝牙接打电话估计还能报手机号……但是<strong>它真便宜，几块钱的东西可以解决“声卡+无线”的DIGI模式</strong>。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/hmHhV_nonx-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/hmHhV_nonx-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/hmHhV_nonx-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/hmHhV_nonx-400.webp 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/hmHhV_nonx-800.webp 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/hmHhV_nonx-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/hmHhV_nonx-400.jpeg" alt="图片" width="1080" height="810" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/hmHhV_nonx-400.jpeg 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/hmHhV_nonx-800.jpeg 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/hmHhV_nonx-1080.jpeg 1080w" sizes="auto"></picture></p>
 <p>小小的JDY-67蓝牙模块</p>
 <p>业余无线电圈里最早研究它的可能是大佬BG7IKK。2022年9月4日，他在hellocq.net的 QRP and DIY分区发了一篇帖子《临时搭建蓝牙场景，玩转手机无线FT8通联》。他至少实验了四种以上的蓝牙模块， JDY-67 是其中之一。<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup></p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/K_7SWVJb9P-640.avif 640w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/K_7SWVJb9P-640.webp 640w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/K_7SWVJb9P-640.jpeg" alt="图片" width="640" height="480"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/K_7SWVJb9P-400.webp 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/K_7SWVJb9P-640.webp 640w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/K_7SWVJb9P-400.jpeg" alt="图片" width="640" height="480" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/K_7SWVJb9P-400.jpeg 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/K_7SWVJb9P-640.jpeg 640w" sizes="auto"></picture></p>
 <p>BG7IKK后期做的基于BT401蓝牙芯片的、带独立电池供电的蓝牙DIGI适配器</p>
 <p>再后来又出现了好几个实用的蓝牙DIGI+CAT方案，大多都在JDY-67的花园里挖呀挖呀挖。</p>
 <p>BG7IKK和FT8CN的作者BG7YOZ反复测试修改软件代码，解决了android手机蓝牙连接蓝牙模块的问题。所以<strong>FT8CN是我见过的跟唯一能跟JDY-67配合默契的FT8软件。</strong></p>
 <p>JDY-67的核心芯片是BEKEN的BK3266L。最近的网红手台K5的核心芯片也是这个BEKEN家的。它能让一个手台便宜到二位数，还支持从18MHz到1.3GHz的FSK，太魔幻了。</p>
 <p>能找到的JDY-67的资料是一份简单的PDF，只介绍了引脚，几种应用电路，以及设置的AT命令。<strong>这几份资料在我的Git仓库resources目录里都可以下载。</strong></p>
 <p>最后，在大佬们趟水过河的基础上，我们可以<strong>把JDY-67当成一个黑盒子</strong>。只要做好它外围的电源、音频、控制信号、以及状态灯就可以了。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/d87tZ_gWzA-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/d87tZ_gWzA-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/d87tZ_gWzA-1080.png" alt="图片" width="1080" height="429"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/d87tZ_gWzA-400.webp 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/d87tZ_gWzA-800.webp 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/d87tZ_gWzA-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/d87tZ_gWzA-400.png" alt="图片" width="1080" height="429" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/d87tZ_gWzA-400.png 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/d87tZ_gWzA-800.png 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/d87tZ_gWzA-1080.png 1080w" sizes="auto"></picture></p>
 <p>最新版设计的带有软开关的蓝牙DIGI适配器</p>
 <h2 id="jdy-67%E7%9A%84at%E5%91%BD%E4%BB%A4%E8%AE%BE%E7%BD%AE" tabindex="-1">JDY-67的AT命令设置</h2>
 <p>JDY-67的默认出厂设置是停留在一个BLE蓝牙音箱的假想应用场景上。用在电台上的蓝牙CAT控制时，需要用串口调试软件，关闭/打开一些功能。这时不要直接用电脑建立蓝牙连接去做设置。**要用USB串口线连接JDY-67的串口引脚，用电脑上的串口调试软件去设置。**它底边的5个2.54mm间距的大圆孔就是串口引脚。</p>
 <p>我在前人的实验基础上，简单总结了一下：</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/0Vxgf7tc_D-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/0Vxgf7tc_D-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/0Vxgf7tc_D-1080.png" alt="图片" width="1080" height="840"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/0Vxgf7tc_D-400.webp 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/0Vxgf7tc_D-800.webp 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/0Vxgf7tc_D-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/0Vxgf7tc_D-400.png" alt="图片" width="1080" height="840" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/0Vxgf7tc_D-400.png 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/0Vxgf7tc_D-800.png 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/0Vxgf7tc_D-1080.png 1080w" sizes="auto"></picture></p>
 <ul>
 <li>先确认一下JDY-67的固件版本号，据说比1.3更低的固件不可用。</li>
 <li>JDY-67的默认波特率是9600bps起步。须注意FT-817/818的出厂设置是4800bps，要把这两个速率设置致。</li>
@@ -398,19 +398,19 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </ul>
 <h2 id="%E7%84%8A%E6%8E%A5jdy-67" tabindex="-1">焊接JDY-67</h2>
 <p>做这个蓝牙板，一般是<strong>最后焊JDY-67模块</strong>。我们给每个引脚都做了对应的焊盘，但是电路并没有用到所有的引脚。用不上的引脚已经按照“文档”的要求悬空了。所以可以无脑地把所有引脚都焊上。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/DphvQAFpy0-671.avif 671w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/DphvQAFpy0-671.webp 671w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/DphvQAFpy0-671.jpeg" alt="图片" width="671" height="377"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/DphvQAFpy0-400.webp 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/DphvQAFpy0-671.webp 671w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/DphvQAFpy0-400.jpeg" alt="图片" width="671" height="377" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/DphvQAFpy0-400.jpeg 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/DphvQAFpy0-671.jpeg 671w" sizes="auto"></picture></p>
 <p>这是20230522版设计中的JDY-67，绿色LED状态灯指示建立了音频链接</p>
 <h2 id="%E6%B5%8B%E8%AF%95%E8%93%9D%E7%89%99%E8%BF%9E%E6%8E%A5" tabindex="-1">测试蓝牙连接</h2>
 <p><strong>先不着急用Windows或者Mac电脑去连，大概率得不到满意的结果</strong>。因为FT8CN对JDY-67有针对性地做过优化，所以<strong>先用手机连，验证制作是否成功</strong>。大概率会大成功。</p>
 <p>看BG7IKK的帖子，目前在鸿蒙和Color OS上都成功了。我用的是华为P10，很成功。</p>
 <p>但是在Mate40上，有丢失蓝牙音频的现象，怀疑是权限或者省电模式之类的问题，暂时没有排除。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/NVaG0WmOXt-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/NVaG0WmOXt-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/NVaG0WmOXt-1080.jpeg" alt="图片" width="1080" height="1920"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/NVaG0WmOXt-400.webp 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/NVaG0WmOXt-800.webp 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/NVaG0WmOXt-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/NVaG0WmOXt-400.jpeg" alt="图片" width="1080" height="1920" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/NVaG0WmOXt-400.jpeg 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/NVaG0WmOXt-800.jpeg 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/NVaG0WmOXt-1080.jpeg 1080w" sizes="auto"></picture></p>
 <p>在华为P10上FT8CN与JDY-67建立连接</p>
 <p><strong>注意：天线驻波太大导致严重的共模电流干扰，会影响蓝牙的连接，JDY-67会掉线。</strong> 这是必须关注的问题。毕竟一般的蓝牙模块都不是为大功率射频环境设计的。</p>
 <h2 id="%E7%94%B5%E5%8E%8B%2F%E7%94%B5%E6%B5%81%E9%97%AE%E9%A2%98" tabindex="-1">电压/电流问题</h2>
 <p>因为这个板子很简单，蓝牙是个黑盒，其它没啥了。总结目前遇到的最多的坑，都在板子的电源部分。<strong>几乎所有的锅都在电阻R6身上。</strong></p>
 <p>如果开机以后发现BLE指示灯不亮、或者闪烁，手机也搜不到蓝牙设备，大概率是电源的电压、电流不够，不足以驱动蓝牙模块。可以用万用表看一下电源电路各个部分的电压，是否在理想值，是否有跳变。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/NjjxlidExF-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/NjjxlidExF-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/NjjxlidExF-1080.png" alt="图片" width="1080" height="763"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/NjjxlidExF-400.webp 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/NjjxlidExF-800.webp 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/NjjxlidExF-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/NjjxlidExF-400.png" alt="图片" width="1080" height="763" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/NjjxlidExF-400.png 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/NjjxlidExF-800.png 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/NjjxlidExF-1080.png 1080w" sizes="auto"></picture></p>
 <p>在JDY-67的Vcc(引脚12)，应该有4.9V以上不到5V的稳定电压。</p>
 <p>如果电压明显不够，首先看看是否FT-817没电了。<s>20230609这个版本的板子改为LM1117-5V的LDO以后，JDY-67几乎不会因为FT-817没电而不启动。很可能是LDO坏了，或者两端的电容失效了</s>。</p>
 <div class="callout callout-warning">
@@ -420,7 +420,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <p>如果电压在跳变，大概率是因为JDY-67的启动电流不够。</p>
 <p>我们在FT-817的ACC接口引出的部分，加了一个缓冲电阻R6，主要是怕外接模块短路对FT-817/818的电流冲击太大。但它同时也有分压、限流的作用。</p>
 <p>判定R6该不该背锅很简单，用镊子把它两端短路，如果蓝牙连接正常，说明R6的阻值可能太大了。目前<strong>在20230609这个版本上，感觉150Ω还是有点大</strong>，会影响JDY-67的启动电流，100Ω可能更理想。要拿捏准JDY-67这个黑盒不太容易。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/jiZEwzNmIc-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/jiZEwzNmIc-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/jiZEwzNmIc-1080.jpeg" alt="图片" width="1080" height="608"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/jiZEwzNmIc-400.webp 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/jiZEwzNmIc-800.webp 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/jiZEwzNmIc-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/jiZEwzNmIc-400.jpeg" alt="图片" width="1080" height="608" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/jiZEwzNmIc-400.jpeg 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/jiZEwzNmIc-800.jpeg 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/jiZEwzNmIc-1080.jpeg 1080w" sizes="auto"></picture></p>
 <p>曾经把几个贴片电阻摞在一起实现电阻并联，测试不同阻值的效果</p>
 <p>最后，还是分享一下PCB打板的Gerber下载地址：</p>
 <ul>
@@ -446,22 +446,6 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <div class="mx-auto grid grid-cols-1 gap-2 py-12
                     md:grid-cols-2
                 ">
-                        <a href="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-4-mini-din-connectors/" class="
-                        flex flex-col left-0 p-2 block hover:bg-neutral-100
-                        ">
-                            < 上一篇
-                            <br>
-                            FT-817/818的蓝牙DIGI模式试验板(4)Mini DIN插头
-                        </a>
-                    
-                        <a href="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/" class="
-                        flex flex-col md:text-right right-0 p-2 hover:bg-neutral-100
-                        ">
-                            下一篇 >
-                            <br>
-                            FT-817/818蓝牙板(6)拯救R1235
-                        </a>
-                    
         </div>
         <!-- 翻页器 end -->
 
@@ -558,7 +542,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <br>
         <h3 class="font-bold mb-4" id="bg6lh">微信公众号 BG6LH</h3>
         <div class="flex flex-row mx-auto justify-center md:justify-start">
-            <picture><source type="image/avif" srcset="/img/ul2gn8FVCu-430.avif 430w"><source type="image/webp" srcset="/img/ul2gn8FVCu-430.webp 430w"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-430.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430"></picture>
+            <picture><source type="image/webp" srcset="/img/ul2gn8FVCu-400.webp 400w, /img/ul2gn8FVCu-430.webp 430w" sizes="auto"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-400.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430" srcset="/img/ul2gn8FVCu-400.jpeg 400w, /img/ul2gn8FVCu-430.jpeg 430w" sizes="auto"></picture>
         </div>
 
     </div>
@@ -580,7 +564,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/` was built on 2025-07-09T00:00:00.000Z -->
+		<!-- This page `/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/` was built on 2025-07-10T00:00:00.000Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script type="module" src="/dist/ffw-ctNm7S.js"></script>

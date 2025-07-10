@@ -187,7 +187,7 @@ pre[class*="language-diff-"] {
         <meta property="og:title" content="WB2CBA低通滤波器测试板">
         <meta property="og:description" content="最近对WB2CBA的低通滤波器(LPF)产生了浓厚的兴趣。为了更准确测试它们的性能，我特意做了一套测试治具。">
         <meta property="og:type" content="article">
-        <meta property="article:tag" content="posts,LPF,WB2CBA,nanoVNA">
+        <meta property="article:tag" content="LPF,WB2CBA,nanoVNA">
         <meta property="og:url" content="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/">
         <meta property="og:site_name" content="BG6LH">
         <meta property="og:locale" content="zh_CN">
@@ -232,7 +232,7 @@ pre[class*="language-diff-"] {
         <div class="flex flex-row items-center">
             
                 <figure class="flex p-1 inline-block h-8 w-8 mr-2">
-                    <picture><source type="image/avif" srcset="/img/P2oVwTwU_L-601.avif 601w"><source type="image/webp" srcset="/img/P2oVwTwU_L-601.webp 601w"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-601.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601"></picture>
+                    <picture><source type="image/webp" srcset="/img/P2oVwTwU_L-400.webp 400w, /img/P2oVwTwU_L-601.webp 601w" sizes="auto"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-400.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601" srcset="/img/P2oVwTwU_L-400.png 400w, /img/P2oVwTwU_L-601.png 601w" sizes="auto"></picture>
                 </figure>
             
             <a class="flex p-1 home-link" href="/">BG6LH</a>
@@ -359,37 +359,37 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <!-- article content : begin-->
         <div class="">
             <p>最近对WB2CBA的低通滤波器(LPF)产生了浓厚的兴趣。为了更准确测试它们的性能，我特意做了一套测试治具。今天闲话少说，直接上图。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/gb6QPPqv_a-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/gb6QPPqv_a-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/gb6QPPqv_a-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/gb6QPPqv_a-400.webp 400w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/gb6QPPqv_a-800.webp 800w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/gb6QPPqv_a-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/gb6QPPqv_a-400.jpeg" alt="图片" width="1080" height="810" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/gb6QPPqv_a-400.jpeg 400w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/gb6QPPqv_a-800.jpeg 800w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/gb6QPPqv_a-1080.jpeg 1080w" sizes="auto"></picture></p>
 <h2 id="wb2cba-lpf%E8%AE%BE%E8%AE%A1" tabindex="-1">WB2CBA LPF设计</h2>
 <p>准确测试WB2CBA的低通的前提，是要先理解他的设计。以下是他的第二版LPF原理图<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup>。信号从右侧输入后，有一个FT37-43的磁环电感L3， 这是个梗。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/1Z3MB9uHSZ-720.avif 720w"><source type="image/webp" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/1Z3MB9uHSZ-720.webp 720w"><img loading="lazy" decoding="async" src="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/1Z3MB9uHSZ-720.png" alt="图片" width="720" height="316"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/1Z3MB9uHSZ-400.webp 400w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/1Z3MB9uHSZ-720.webp 720w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/1Z3MB9uHSZ-400.png" alt="图片" width="720" height="316" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/1Z3MB9uHSZ-400.png 400w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/1Z3MB9uHSZ-720.png 720w" sizes="auto"></picture></p>
 <div class="callout callout-info">
 <p>L3是为了匹配BS170部分的阻抗(12.5Ω）到L1、L2的阻抗(50Ω)。此外BS170有部分额外的电容 ，大约150～180p ，会并联在整个LPF上。在 WB2CBA的讨论组里，他确认了这部分电容的确是被考虑到设计里了。</p>
 </div>
 <h2 id="ph2lb%E8%AE%BE%E8%AE%A1%E7%9A%84%E6%B5%8B%E8%AF%95%E6%9D%BF" tabindex="-1">PH2LB设计的测试板</h2>
 <p>所以，才有以下的这个设计。原理图很简单。 对应 WB2CBA LPF 上的8个针脚； 在治具上分别提供了短路、负载、隔离、 直通的跳线。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/8OB3JqcpzO-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/8OB3JqcpzO-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/8OB3JqcpzO-1080.png" alt="图片" width="1080" height="548"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/8OB3JqcpzO-400.webp 400w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/8OB3JqcpzO-800.webp 800w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/8OB3JqcpzO-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/8OB3JqcpzO-400.png" alt="图片" width="1080" height="548" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/8OB3JqcpzO-400.png 400w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/8OB3JqcpzO-800.png 800w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/8OB3JqcpzO-1080.png 1080w" sizes="auto"></picture></p>
 <p>这里有一个J10，乍一看以为是给LPF测试板通12V电压的跳线。但是分析之后， <strong>这应该是为了短路L3用的跳线接口</strong> 。</p>
 <p>要声明，这不是我的原创，这是PH2LB的设计<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup>。我曾想自己设计一个不一样的，但是跟BG8NSK高老师讨论了好久，发现PH2LB的布局已经很合理了，任何改动都没有意义。我只是发现，应该给板子开个大口，这样可以方便调整磁环上的线圈。</p>
 <div class="callout callout-warning">
 <h3 class="callout-title" id="">尊重原创：</h3><p>PH2LB的设计不是开源的，并且在自己网站上销售这个套件。他声明了CC-BY-NC-ND协议，意思是，创作共用-署名-不可商业化-不可传播。为此我给PH2LB发了邮件，取得了他的认可后，我可以做我的开口板子，并在我的板子上打上“(c) PH2LB modified by BG6LH”，然后同样要声明CC-BY-NC-ND协议。</p>
 </div>
 <p>下图是PH2LB最后做出来的样子。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/9401gBBBzN-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/9401gBBBzN-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/9401gBBBzN-1080.jpeg" alt="图片" width="1080" height="607"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/9401gBBBzN-400.webp 400w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/9401gBBBzN-800.webp 800w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/9401gBBBzN-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/9401gBBBzN-400.jpeg" alt="图片" width="1080" height="607" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/9401gBBBzN-400.jpeg 400w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/9401gBBBzN-800.jpeg 800w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/9401gBBBzN-1080.jpeg 1080w" sizes="auto"></picture></p>
 <h2 id="%E6%88%91%E7%9A%84%E6%9D%BF%E5%AD%90%E9%95%BF%E8%BF%99%E6%A0%B7" tabindex="-1">我的板子长这样</h2>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/3MIOjygi77-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/3MIOjygi77-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/3MIOjygi77-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/3MIOjygi77-400.webp 400w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/3MIOjygi77-800.webp 800w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/3MIOjygi77-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/3MIOjygi77-400.jpeg" alt="图片" width="1080" height="810" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/3MIOjygi77-400.jpeg 400w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/3MIOjygi77-800.jpeg 800w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/3MIOjygi77-1080.jpeg 1080w" sizes="auto"></picture></p>
 <p>两个SMA边座可以对准nanoVNA的接口，这样可以免除两根长长的测试电缆。 我用了 测试座， 替换了PH2LB的 排针，外露的 金 属部分 更短。 左侧的四联测试座 J9， 是用来 放 跳线的。在放LPF之前，要先对nanoVNA做一轮校准。开路校准，什么都不用插，其余的则需要把短路条线，分别插在短路、负载、隔离、直通对应的测试座上。</p>
 <p>下图是把两个跳线插在了最右侧的测试座上。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/XsUkxQomeb-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/XsUkxQomeb-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/XsUkxQomeb-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/XsUkxQomeb-400.webp 400w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/XsUkxQomeb-800.webp 800w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/XsUkxQomeb-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/XsUkxQomeb-400.jpeg" alt="图片" width="1080" height="810" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/XsUkxQomeb-400.jpeg 400w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/XsUkxQomeb-800.jpeg 800w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/XsUkxQomeb-1080.jpeg 1080w" sizes="auto"></picture></p>
 <p>这 两个跳线是 用排针 做的， 前边的是 在排针上焊了一个150p的贴片电容，插在“短路”上，用于补偿LPF上的电容 。 后 边的是 做成 了短路条线，插在“+ 12 V”上，用于短路L3（但实测 对 结 果几 乎没有 影 响） 。</p>
 <p>下图是插上LPF以后的效果。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/_H1yhYtaHB-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/_H1yhYtaHB-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/_H1yhYtaHB-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/_H1yhYtaHB-400.webp 400w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/_H1yhYtaHB-800.webp 800w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/_H1yhYtaHB-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/_H1yhYtaHB-400.jpeg" alt="图片" width="1080" height="810" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/_H1yhYtaHB-400.jpeg 400w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/_H1yhYtaHB-800.jpeg 800w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/_H1yhYtaHB-1080.jpeg 1080w" sizes="auto"></picture></p>
 <p>下图是反面。大豁口方便下镊子去调整磁环L1，L2上的线圈。以获得最低的插损，最大的输出功率。并且有nanoVNA测试格式的提示。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Me9UqpSpbN-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Me9UqpSpbN-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Me9UqpSpbN-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Me9UqpSpbN-400.webp 400w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Me9UqpSpbN-800.webp 800w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Me9UqpSpbN-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Me9UqpSpbN-400.jpeg" alt="图片" width="1080" height="810" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Me9UqpSpbN-400.jpeg 400w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Me9UqpSpbN-800.jpeg 800w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Me9UqpSpbN-1080.jpeg 1080w" sizes="auto"></picture></p>
 <p>下图是用nanoVNA测试40米波段LPF的结果。插损在7090附近只有1.6dB，在14340上有67dB！很好的抑制了二次谐波。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/LvHHOzWcG7-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/LvHHOzWcG7-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/LvHHOzWcG7-1080.jpeg" alt="图片" width="1080" height="810"></picture> <picture><source type="image/avif" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/BhI1jLoEv1-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/BhI1jLoEv1-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/BhI1jLoEv1-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/LvHHOzWcG7-400.webp 400w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/LvHHOzWcG7-800.webp 800w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/LvHHOzWcG7-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/LvHHOzWcG7-400.jpeg" alt="图片" width="1080" height="810" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/LvHHOzWcG7-400.jpeg 400w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/LvHHOzWcG7-800.jpeg 800w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/LvHHOzWcG7-1080.jpeg 1080w" sizes="auto"></picture> <picture><source type="image/webp" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/BhI1jLoEv1-400.webp 400w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/BhI1jLoEv1-800.webp 800w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/BhI1jLoEv1-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/BhI1jLoEv1-400.jpeg" alt="图片" width="1080" height="810" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/BhI1jLoEv1-400.jpeg 400w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/BhI1jLoEv1-800.jpeg 800w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/BhI1jLoEv1-1080.jpeg 1080w" sizes="auto"></picture></p>
 <p>最后来张全家福。我的新老两种版本的WB2CBA LPF，和专用测试工具。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Jewu1kJSxT-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Jewu1kJSxT-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Jewu1kJSxT-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Jewu1kJSxT-400.webp 400w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Jewu1kJSxT-800.webp 800w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Jewu1kJSxT-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Jewu1kJSxT-400.jpeg" alt="图片" width="1080" height="810" srcset="/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Jewu1kJSxT-400.jpeg 400w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Jewu1kJSxT-800.jpeg 800w, /zh-CN/blog/wb2cba-low-pass-filter-testing-kit/Jewu1kJSxT-1080.jpeg 1080w" sizes="auto"></picture></p>
 <p>参考资料：</p>
 <hr class="footnotes-sep">
 <section class="footnotes">
@@ -412,22 +412,6 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <div class="mx-auto grid grid-cols-1 gap-2 py-12
                     md:grid-cols-2
                 ">
-                        <a href="/zh-CN/blog/nanovna-testboard-kit/" class="
-                        flex flex-col left-0 p-2 block hover:bg-neutral-100
-                        ">
-                            < 上一篇
-                            <br>
-                            nanoVNA的测试板小套件
-                        </a>
-                    
-                        <a href="/zh-CN/blog/40m-band-low-pass-filter-test/" class="
-                        flex flex-col md:text-right right-0 p-2 hover:bg-neutral-100
-                        ">
-                            下一篇 >
-                            <br>
-                            测试WB2CBA的40米低通滤波器
-                        </a>
-                    
         </div>
         <!-- 翻页器 end -->
 
@@ -524,7 +508,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <br>
         <h3 class="font-bold mb-4" id="bg6lh">微信公众号 BG6LH</h3>
         <div class="flex flex-row mx-auto justify-center md:justify-start">
-            <picture><source type="image/avif" srcset="/img/ul2gn8FVCu-430.avif 430w"><source type="image/webp" srcset="/img/ul2gn8FVCu-430.webp 430w"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-430.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430"></picture>
+            <picture><source type="image/webp" srcset="/img/ul2gn8FVCu-400.webp 400w, /img/ul2gn8FVCu-430.webp 430w" sizes="auto"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-400.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430" srcset="/img/ul2gn8FVCu-400.jpeg 400w, /img/ul2gn8FVCu-430.jpeg 430w" sizes="auto"></picture>
         </div>
 
     </div>
@@ -546,7 +530,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/` was built on 2025-07-09T00:00:00.000Z -->
+		<!-- This page `/zh-CN/blog/wb2cba-low-pass-filter-testing-kit/` was built on 2025-07-10T00:00:00.000Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script type="module" src="/dist/ffw-ctNm7S.js"></script>

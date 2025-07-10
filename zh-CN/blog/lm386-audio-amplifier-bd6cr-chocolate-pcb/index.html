@@ -187,7 +187,7 @@ pre[class*="language-diff-"] {
         <meta property="og:title" content="用巧克力洞洞板做LM386音频放大器">
         <meta property="og:description" content="我以前认为无聊的所有东西现在都是一种可爱的打发时间的方式。">
         <meta property="og:type" content="article">
-        <meta property="article:tag" content="posts,LM386,巧克力洞洞板,BD6CR">
+        <meta property="article:tag" content="LM386,巧克力洞洞板,BD6CR">
         <meta property="og:url" content="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/">
         <meta property="og:site_name" content="BG6LH">
         <meta property="og:locale" content="zh_CN">
@@ -232,7 +232,7 @@ pre[class*="language-diff-"] {
         <div class="flex flex-row items-center">
             
                 <figure class="flex p-1 inline-block h-8 w-8 mr-2">
-                    <picture><source type="image/avif" srcset="/img/P2oVwTwU_L-601.avif 601w"><source type="image/webp" srcset="/img/P2oVwTwU_L-601.webp 601w"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-601.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601"></picture>
+                    <picture><source type="image/webp" srcset="/img/P2oVwTwU_L-400.webp 400w, /img/P2oVwTwU_L-601.webp 601w" sizes="auto"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-400.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601" srcset="/img/P2oVwTwU_L-400.png 400w, /img/P2oVwTwU_L-601.png 601w" sizes="auto"></picture>
                 </figure>
             
             <a class="flex p-1 home-link" href="/">BG6LH</a>
@@ -360,18 +360,18 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <div class="">
             <p>看过汽车节目《Top Gear》的人都知道大嘴杰瑞米·克拉克森(Jeremy Clarkson)吧？他今年都62了，我的老天鹅。他算是赶上了燃油车的巅峰时代。如今已经满世界都是电动车了，所以他可能觉得自己out了。前几天他在生日之际谈起了对变老和死亡看法。最后一句话令人印象深刻：“我认为这就是老年的定义。 <strong>我以前认为无聊的所有东西现在都是一种‘可爱’的打发时间的方式。</strong> ”</p>
 <p>可能我也老了。最近做了一个自以为很可爱的实验，一个LM386的音频放大电路。这是2块9毛8包邮就能搞定的事情。但是我却安装了KiCad 6，自己画了原理图，在 BD6CR 设计的巧克力洞洞板上完成了制作。其间BI1EIH对我的电路设计给予了不少指导。其实也没啥可设计，因为任何LM386芯片的Datasheet 最后都有那个放大电路。有意思的是接不同的零件能产生不同的放大效果。不同的应用，侧重点不太一样。考虑到我打算给QCX-mini做个外放的便携音箱，所以我加了一个9V的电池供电、一个LED指示灯，以及几个高低频的滤波电容。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-1080.png" alt="图片" width="1080" height="545"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-400.webp 400w, /zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-800.webp 800w, /zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-400.png" alt="图片" width="1080" height="545" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-400.png 400w, /zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-800.png 800w, /zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/X6xVJvhB5X-1080.png 1080w" sizes="auto"></picture></p>
 <p>LM386的1、8脚之间的C5是可选的，可以把电路的放大增益从20dB提升到200dB。实验结果证明，20dB已经很响了，加了C5之后有点辣耳朵了。</p>
 <p>其实 我真 的不是 一个那么闲的人。 我只是希望在日子过的越来越复杂时，让自己能安静下来几分钟，体会一下自麦克斯韦以降，人类智慧的那点结晶。</p>
 <p>BD6CR设计的巧克力洞洞板很好玩。它的焊盘不像普通洞洞板那样简单排列，而是在一小块4x3cm见方的板子上分布了大约13x10个焊盘，外围一圈是接地，里边又分成几组，有的串联，有的独立，每组还有就近接地。仔细观察它，你能体会到很多来自作者的巧思。这就是为电子爱好者精心设计的小玩具。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/_q0XB47wzI-561.avif 561w"><source type="image/webp" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/_q0XB47wzI-561.webp 561w"><img loading="lazy" decoding="async" src="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/_q0XB47wzI-561.png" alt="图片" width="561" height="656"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/_q0XB47wzI-400.webp 400w, /zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/_q0XB47wzI-561.webp 561w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/_q0XB47wzI-400.png" alt="图片" width="561" height="656" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/_q0XB47wzI-400.png 400w, /zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/_q0XB47wzI-561.png 561w" sizes="auto"></picture></p>
 <p>为了布置元件方便，我用KiCad画了一片巧克力板，就为了能事先把原件摆一摆，提高一下制作效率。 个人很享受这个过程，仿佛在玩 无线电老中医的乐高积木。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/PtcYyV5Irg-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/PtcYyV5Irg-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/PtcYyV5Irg-1080.png" alt="图片" width="1080" height="919"></picture></p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/B1T8NVz0pp-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/B1T8NVz0pp-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/B1T8NVz0pp-1080.png" alt="图片" width="1080" height="919"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/PtcYyV5Irg-400.webp 400w, /zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/PtcYyV5Irg-800.webp 800w, /zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/PtcYyV5Irg-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/PtcYyV5Irg-400.png" alt="图片" width="1080" height="919" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/PtcYyV5Irg-400.png 400w, /zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/PtcYyV5Irg-800.png 800w, /zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/PtcYyV5Irg-1080.png 1080w" sizes="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/B1T8NVz0pp-400.webp 400w, /zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/B1T8NVz0pp-800.webp 800w, /zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/B1T8NVz0pp-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/B1T8NVz0pp-400.png" alt="图片" width="1080" height="919" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/B1T8NVz0pp-400.png 400w, /zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/B1T8NVz0pp-800.png 800w, /zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/B1T8NVz0pp-1080.png 1080w" sizes="auto"></picture></p>
 <p>下边是完成后的作业。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/IvUGL4UtRM-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/IvUGL4UtRM-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/IvUGL4UtRM-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/IvUGL4UtRM-400.webp 400w, /zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/IvUGL4UtRM-800.webp 800w, /zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/IvUGL4UtRM-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/IvUGL4UtRM-400.jpeg" alt="图片" width="1080" height="810" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/IvUGL4UtRM-400.jpeg 400w, /zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/IvUGL4UtRM-800.jpeg 800w, /zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/IvUGL4UtRM-1080.jpeg 1080w" sizes="auto"></picture></p>
 <p>看看背面，没咋飞线就搞定了。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/Mo8wiyQTC9-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/Mo8wiyQTC9-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/Mo8wiyQTC9-1080.jpeg" alt="图片" width="1080" height="810"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/Mo8wiyQTC9-400.webp 400w, /zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/Mo8wiyQTC9-800.webp 800w, /zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/Mo8wiyQTC9-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/Mo8wiyQTC9-400.jpeg" alt="图片" width="1080" height="810" srcset="/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/Mo8wiyQTC9-400.jpeg 400w, /zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/Mo8wiyQTC9-800.jpeg 800w, /zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/Mo8wiyQTC9-1080.jpeg 1080w" sizes="auto"></picture></p>
 <p>再来段视频，证明我弄响了。</p>
 <p><strong>哪儿能买到巧克力洞洞板？</strong></p>
 <p><strong>这玩意儿目前没得卖！</strong> 但是BD6CR分享了他的巧克力洞洞板设计。大家可以下载了自己去JLC打印。 一张PCB上有六块上边说的小板，中间用邮票孔分开，可以根据需要掰下一块就用。 <strong>它的尺寸特意控制在10x10cm之内，你懂的。</strong></p>
@@ -389,22 +389,6 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <div class="mx-auto grid grid-cols-1 gap-2 py-12
                     md:grid-cols-2
                 ">
-                        <a href="/zh-CN/blog/hunting-wo22-winter-olympics-2022-special-station/" class="
-                        flex flex-col left-0 p-2 block hover:bg-neutral-100
-                        ">
-                            < 上一篇
-                            <br>
-                            冬奥追台记
-                        </a>
-                    
-                        <a href="/zh-CN/blog/i-smoked-ftdx10-amplifier-twice/" class="
-                        flex flex-col md:text-right right-0 p-2 hover:bg-neutral-100
-                        ">
-                            下一篇 >
-                            <br>
-                            烧了两次FTDX10的功放
-                        </a>
-                    
         </div>
         <!-- 翻页器 end -->
 
@@ -490,7 +474,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <br>
         <h3 class="font-bold mb-4" id="bg6lh">微信公众号 BG6LH</h3>
         <div class="flex flex-row mx-auto justify-center md:justify-start">
-            <picture><source type="image/avif" srcset="/img/ul2gn8FVCu-430.avif 430w"><source type="image/webp" srcset="/img/ul2gn8FVCu-430.webp 430w"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-430.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430"></picture>
+            <picture><source type="image/webp" srcset="/img/ul2gn8FVCu-400.webp 400w, /img/ul2gn8FVCu-430.webp 430w" sizes="auto"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-400.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430" srcset="/img/ul2gn8FVCu-400.jpeg 400w, /img/ul2gn8FVCu-430.jpeg 430w" sizes="auto"></picture>
         </div>
 
     </div>
@@ -512,7 +496,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/` was built on 2025-07-09T00:00:00.000Z -->
+		<!-- This page `/zh-CN/blog/lm386-audio-amplifier-bd6cr-chocolate-pcb/` was built on 2025-07-10T00:00:00.000Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script type="module" src="/dist/ffw-ctNm7S.js"></script>

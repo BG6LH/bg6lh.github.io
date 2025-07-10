@@ -187,7 +187,7 @@ pre[class*="language-diff-"] {
         <meta property="og:title" content="FT-817/818的蓝牙DIGI模式试验板(3)紧急更新">
         <meta property="og:description" content="昨天发布的FT-81x蓝牙DIGI板 20230608 版本有问题，今天紧急更新了一下。">
         <meta property="og:type" content="article">
-        <meta property="article:tag" content="posts,Bluetooth,DIGI,FT-817,FT-818,JDY-67">
+        <meta property="article:tag" content="Bluetooth,DIGI,FT-817,FT-818,JDY-67">
         <meta property="og:url" content="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/">
         <meta property="og:site_name" content="BG6LH">
         <meta property="og:locale" content="zh_CN">
@@ -232,7 +232,7 @@ pre[class*="language-diff-"] {
         <div class="flex flex-row items-center">
             
                 <figure class="flex p-1 inline-block h-8 w-8 mr-2">
-                    <picture><source type="image/avif" srcset="/img/P2oVwTwU_L-601.avif 601w"><source type="image/webp" srcset="/img/P2oVwTwU_L-601.webp 601w"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-601.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601"></picture>
+                    <picture><source type="image/webp" srcset="/img/P2oVwTwU_L-400.webp 400w, /img/P2oVwTwU_L-601.webp 601w" sizes="auto"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-400.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601" srcset="/img/P2oVwTwU_L-400.png 400w, /img/P2oVwTwU_L-601.png 601w" sizes="auto"></picture>
                 </figure>
             
             <a class="flex p-1 home-link" href="/">BG6LH</a>
@@ -375,7 +375,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <p>问题出在软开关的两个MOS管Q1和Q2，引脚编号跟市面上能买到的不一致。</p>
 <p>原因很简单，无线电老中医没从KiCad元件库里抓药，而是凭着对软开关电路的经验开了个方子，选的是N、P沟道MOS的SOT-23-3通用符号。哪成想引脚顺序居然不一样，翻车了。</p>
 <p>总结一下教训，画KiCad 还是尽量先从库里找元件；实在找不到再用通用符号；用通用符号时务必先找元件的datasheet确认。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/NjjxlidExF-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/NjjxlidExF-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/NjjxlidExF-1080.png" alt="图片" width="1080" height="763"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/NjjxlidExF-400.webp 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/NjjxlidExF-800.webp 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/NjjxlidExF-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/NjjxlidExF-400.png" alt="图片" width="1080" height="763" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/NjjxlidExF-400.png 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/NjjxlidExF-800.png 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/NjjxlidExF-1080.png 1080w" sizes="auto"></picture></p>
 <p>最新更新 20230609 已经发布，取代20230608版，欢迎各位指正。</p>
 <p>本次更新包括：</p>
 <ol>
@@ -389,8 +389,8 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <li>Gitee <a href="https://gitee.com/bg6lh/FT-81x-BT-DIGI-Adaptor">https://gitee.com/bg6lh/FT-81x-BT-DIGI-Adaptor</a></li>
 <li>Github <a href="https://github.com/BG6LH/FT-81x-BT-DIGI-Adaptor">https://github.com/BG6LH/FT-81x-BT-DIGI-Adaptor</a></li>
 </ul>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/22_cHvmg0x-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/22_cHvmg0x-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/22_cHvmg0x-1080.png" alt="图片" width="1080" height="429"></picture></p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/d87tZ_gWzA-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/d87tZ_gWzA-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/d87tZ_gWzA-1080.png" alt="图片" width="1080" height="429"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/22_cHvmg0x-400.webp 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/22_cHvmg0x-800.webp 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/22_cHvmg0x-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/22_cHvmg0x-400.png" alt="图片" width="1080" height="429" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/22_cHvmg0x-400.png 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/22_cHvmg0x-800.png 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/22_cHvmg0x-1080.png 1080w" sizes="auto"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/d87tZ_gWzA-400.webp 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/d87tZ_gWzA-800.webp 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/d87tZ_gWzA-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/d87tZ_gWzA-400.png" alt="图片" width="1080" height="429" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/d87tZ_gWzA-400.png 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/d87tZ_gWzA-800.png 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/d87tZ_gWzA-1080.png 1080w" sizes="auto"></picture></p>
 
             
               <hr class="border-t-neutral-500 mb-2">
@@ -403,22 +403,6 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <div class="mx-auto grid grid-cols-1 gap-2 py-12
                     md:grid-cols-2
                 ">
-                        <a href="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/" class="
-                        flex flex-col left-0 p-2 block hover:bg-neutral-100
-                        ">
-                            < 上一篇
-                            <br>
-                            FT-817/818的蓝牙DIGI模式试验板(2)优化更新
-                        </a>
-                    
-                        <a href="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-4-mini-din-connectors/" class="
-                        flex flex-col md:text-right right-0 p-2 hover:bg-neutral-100
-                        ">
-                            下一篇 >
-                            <br>
-                            FT-817/818的蓝牙DIGI模式试验板(4)Mini DIN插头
-                        </a>
-                    
         </div>
         <!-- 翻页器 end -->
 
@@ -504,7 +488,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <br>
         <h3 class="font-bold mb-4" id="bg6lh">微信公众号 BG6LH</h3>
         <div class="flex flex-row mx-auto justify-center md:justify-start">
-            <picture><source type="image/avif" srcset="/img/ul2gn8FVCu-430.avif 430w"><source type="image/webp" srcset="/img/ul2gn8FVCu-430.webp 430w"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-430.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430"></picture>
+            <picture><source type="image/webp" srcset="/img/ul2gn8FVCu-400.webp 400w, /img/ul2gn8FVCu-430.webp 430w" sizes="auto"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-400.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430" srcset="/img/ul2gn8FVCu-400.jpeg 400w, /img/ul2gn8FVCu-430.jpeg 430w" sizes="auto"></picture>
         </div>
 
     </div>
@@ -526,7 +510,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/` was built on 2025-07-09T00:00:00.000Z -->
+		<!-- This page `/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/` was built on 2025-07-10T00:00:00.000Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script type="module" src="/dist/ffw-ctNm7S.js"></script>

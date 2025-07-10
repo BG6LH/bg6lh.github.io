@@ -187,7 +187,7 @@ pre[class*="language-diff-"] {
         <meta property="og:title" content="我是如何给微信小程序审核员普及业余无线电知识的">
         <meta property="og:description" content="这都2020年了，玩业余无线电的还是会受到群众的质疑和警惕。我遇到了更与时俱进的：做了个无线电相关的微信小程序被审核员给毙了。">
         <meta property="og:type" content="article">
-        <meta property="article:tag" content="posts,Maidenhead,火腿网格">
+        <meta property="article:tag" content="Maidenhead,火腿网格">
         <meta property="og:url" content="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/">
         <meta property="og:site_name" content="BG6LH">
         <meta property="og:locale" content="zh_CN">
@@ -232,7 +232,7 @@ pre[class*="language-diff-"] {
         <div class="flex flex-row items-center">
             
                 <figure class="flex p-1 inline-block h-8 w-8 mr-2">
-                    <picture><source type="image/avif" srcset="/img/P2oVwTwU_L-601.avif 601w"><source type="image/webp" srcset="/img/P2oVwTwU_L-601.webp 601w"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-601.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601"></picture>
+                    <picture><source type="image/webp" srcset="/img/P2oVwTwU_L-400.webp 400w, /img/P2oVwTwU_L-601.webp 601w" sizes="auto"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-400.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601" srcset="/img/P2oVwTwU_L-400.png 400w, /img/P2oVwTwU_L-601.png 601w" sizes="auto"></picture>
                 </figure>
             
             <a class="flex p-1 home-link" href="/">BG6LH</a>
@@ -360,7 +360,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
             <p>这都2020年了，玩业余无线电的还是会受到群众的质疑和警惕。有在家里玩被邻居投诉的；有跑楼顶架设天线被物业阻挠的；有去山里玩电台被村民当间谍举报的……我遇到了更与时俱进的：做了个无线电相关的微信小程序被审核员给毙了。</p>
 <p>事情是这样的。单位要上马一个微信小程序项目，我想先熟悉一下开发流程，于是就顺手做了一个非常简单的小程序。题材是业余无线电里常用到的“梅登海德网格”转换。这是一种用了几十年的简化位置表示法。它把一长串的经纬度，转换成4到6位字母和数字。</p>
 <p>写代码的过程很简单，从微信官方的位置接口里获得手机的经纬度数据，再用两个开源的js脚本，分别转换成“度分秒”格式和“梅登海德”格式，最后显示在微信自带的地图上。用户可以靠拖拽屏幕上的地图，查询新位置的信息。全程就一个界面。如下图：</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/EdKCl9fOmC-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/EdKCl9fOmC-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/EdKCl9fOmC-1080.png" alt="图片" width="1080" height="2339"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/EdKCl9fOmC-400.webp 400w, /zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/EdKCl9fOmC-800.webp 800w, /zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/EdKCl9fOmC-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/EdKCl9fOmC-400.png" alt="图片" width="1080" height="2339" srcset="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/EdKCl9fOmC-400.png 400w, /zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/EdKCl9fOmC-800.png 800w, /zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/EdKCl9fOmC-1080.png 1080w" sizes="auto"></picture></p>
 <p>因为业余无线电玩家都自称为HAM、火腿，所以这个小程序就起名叫“火腿网格”。</p>
 <p>我把体验版发到一些业余无线电玩家的群里，大伙儿评价还都挺好。于是我兴致勃勃地把正式版提给了微信的小程序审核平台。一经他们审核通过，就可以正式给公众使用了。</p>
 <p>然鹅，没成想，下午收到了审核失败的通知：</p>
@@ -377,14 +377,14 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <p>于是我就跟微信的审核员进行了在线沟通。我说，这个小程序不涉及任何存储、传递用户位置和数据的功能，所以不涉及“不正当使用用户隐私信息”。并请他们说明，哪些信息算是“暴露用户地理位置信息”？显示经纬度坐标算吗？</p>
 <p>他们应该内部沟通了好一阵，还是不能给通过，理由仍然是“暴露位置信息”。却又不能解释我对外卖、快递的同类功能的质疑。</p>
 <p>又过了半天，他们给我发了一个截图，问：图片中红框内的信息是什么意思呢？</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/3KQXxV3Sq7-864.avif 864w"><source type="image/webp" srcset="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/3KQXxV3Sq7-864.webp 864w"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/3KQXxV3Sq7-864.png" alt="图片" width="864" height="788"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/3KQXxV3Sq7-400.webp 400w, /zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/3KQXxV3Sq7-800.webp 800w, /zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/3KQXxV3Sq7-864.webp 864w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/3KQXxV3Sq7-400.png" alt="图片" width="864" height="788" srcset="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/3KQXxV3Sq7-400.png 400w, /zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/3KQXxV3Sq7-800.png 800w, /zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/3KQXxV3Sq7-864.png 864w" sizes="auto"></picture></p>
 <p>我恍然大悟，原来他们质疑的是 <strong>“梅登海德网格”</strong> 啊……</p>
 <p>此时已经是下班时间，对方已经离线。晚上回到家，我整理了一小段“梅登海德网格”的简短介绍。</p>
 <div class="callout callout-quote">
 <p>红框里的字母，是“梅登海德网格”，我有一篇公众号文章专门介绍这个。
 <a href="https://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;mid=2247483672&amp;idx=1&amp;sn=54b09c008bee364b6dd6a68e2b6235dc&amp;scene=21#wechat_redirect">https://mp.weixin.qq.com/s/B2e7b50gVE-VNvZmxx3zyQ</a>  但是这个可能写的比较晦涩，偏技术性。</p>
 <p>关于梅登海德网格的使用，是国际业余无线电联盟(IARU)推行的一种方案。用4-6个字母和数字，就能告诉对方自己的位置，而不用报出一长串经纬度数字。  在《业余无线电手册(第四版)》第30页提到过这个话题。  https://item.jd.com/11695330.html</p>
-<p>我国也是IARU的成员国。代表中国加入IARU的是“中国无线电协会业余无线电分会”，简称CRAC。CRAC是在工信部的委托下，指导和组织中国业余无线电活动的社团(社政字号4873-1号)。详情请见CRAC的网站： http://crac.org.cn/  中国对梅登海德网格的应用，可以参见CRAC的操作证书考试题库。  这页是CRAC公布的操作证书考试题库：  http://crac.org.cn/News/Detail?ID=1862  请参见《2017-1031 题库电子版(v171031)》中的LK0862、LK0863、LK0864 三题。  总题库文件中，每道题的正确答案选择都是[A]。  <picture><source type="image/avif" srcset="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/0pgaOIvbr0-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/0pgaOIvbr0-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/0pgaOIvbr0-1080.png" alt="图片" width="1080" height="659"></picture>  也就是说，这是国家鼓励大家使用的，一种表明自己位置用的方式。  <strong>这不是密码，也不是暗语，更不涉及国家安全和机密。</strong>  大家也可以通过收到的“梅登海德网格”，反过来查询对方的位置。有很多网站、软件、APP都支持这个功能。您可以在各大应用商店，搜索“Maidenhead”关键字，就能找出来很多。  我做的这个小程序，就是用来方便大家在做无线电通信时，查询自己的网格用的。  目前做的只是查询用户“自己的”网格信息。</p>
+<p>我国也是IARU的成员国。代表中国加入IARU的是“中国无线电协会业余无线电分会”，简称CRAC。CRAC是在工信部的委托下，指导和组织中国业余无线电活动的社团(社政字号4873-1号)。详情请见CRAC的网站： http://crac.org.cn/  中国对梅登海德网格的应用，可以参见CRAC的操作证书考试题库。  这页是CRAC公布的操作证书考试题库：  http://crac.org.cn/News/Detail?ID=1862  请参见《2017-1031 题库电子版(v171031)》中的LK0862、LK0863、LK0864 三题。  总题库文件中，每道题的正确答案选择都是[A]。  <picture><source type="image/webp" srcset="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/0pgaOIvbr0-400.webp 400w, /zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/0pgaOIvbr0-800.webp 800w, /zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/0pgaOIvbr0-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/0pgaOIvbr0-400.png" alt="图片" width="1080" height="659" srcset="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/0pgaOIvbr0-400.png 400w, /zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/0pgaOIvbr0-800.png 800w, /zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/0pgaOIvbr0-1080.png 1080w" sizes="auto"></picture>  也就是说，这是国家鼓励大家使用的，一种表明自己位置用的方式。  <strong>这不是密码，也不是暗语，更不涉及国家安全和机密。</strong>  大家也可以通过收到的“梅登海德网格”，反过来查询对方的位置。有很多网站、软件、APP都支持这个功能。您可以在各大应用商店，搜索“Maidenhead”关键字，就能找出来很多。  我做的这个小程序，就是用来方便大家在做无线电通信时，查询自己的网格用的。  目前做的只是查询用户“自己的”网格信息。</p>
 </div>
 <p>第二天一早，我又联系到了前一天的审核员，然后把准备好的文字发给他。又过了好一会儿，我收到了回复：</p>
 <div class="callout callout-quote">
@@ -394,7 +394,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <p>今天这个小程序正式发布了。这番折腾后，我还是有点开心的。不仅是因为审核通过了，还因为这世界上又多了几个知道“业余无线电”的小伙伴，而且他们接受的很快。</p>
 <p>这件事说大不大，说小也不小吧。如今个人的通信手段太发达了，电子产品也不那么神秘了。但民间对无线电的关注和理解似乎并没有多大变化。至今全国加入CRAC的各级会员也就是17万多人(A类15万，B类2.2万人，C类只有733人)。可见我们的土壤里多么缺少无线电文化的养分啊。 怎么说，业余无线电也算是工业文明的一部分吧。 国家刚开始提的“需求侧”改革， 工业文明是多好的抓手啊，里边有说不完的话题，业余无线电文化就是其一 。 这些可都是看得见、 摸得着 的“诗和远方”啊。这难道 不比“盲盒”香吗？</p>
 <p>文末，给自己的小程序做个广告，欢迎大家来体验一下 <strong>“火腿网格”</strong> 。</p>
-<picture><source type="image/avif" srcset="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/tI5VUI93hB-1280.avif 1280w"><source type="image/webp" srcset="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/tI5VUI93hB-1280.webp 1280w"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/tI5VUI93hB-1280.jpeg" alt="火腿网格" style="zoom:30%;" width="1280" height="1280"></picture>
+<picture><source type="image/webp" srcset="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/tI5VUI93hB-400.webp 400w, /zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/tI5VUI93hB-800.webp 800w, /zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/tI5VUI93hB-1280.webp 1280w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/tI5VUI93hB-400.jpeg" alt="火腿网格" style="zoom:30%;" width="1280" height="1280" srcset="/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/tI5VUI93hB-400.jpeg 400w, /zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/tI5VUI93hB-800.jpeg 800w, /zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/tI5VUI93hB-1280.jpeg 1280w" sizes="auto"></picture>
 
             
               <hr class="border-t-neutral-500 mb-2">
@@ -407,22 +407,6 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <div class="mx-auto grid grid-cols-1 gap-2 py-12
                     md:grid-cols-2
                 ">
-                        <a href="/zh-CN/blog/setting-up-chrony-and-gpsd-for-radiopi/" class="
-                        flex flex-col left-0 p-2 block hover:bg-neutral-100
-                        ">
-                            < 上一篇
-                            <br>
-                            给RadioPi添加USB GPS
-                        </a>
-                    
-                        <a href="/zh-CN/blog/simple-crystal-radio-childhood-memory-comes-full-circle/" class="
-                        flex flex-col md:text-right right-0 p-2 hover:bg-neutral-100
-                        ">
-                            下一篇 >
-                            <br>
-                            终于响了！一个元件的矿石收音机
-                        </a>
-                    
         </div>
         <!-- 翻页器 end -->
 
@@ -508,7 +492,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <br>
         <h3 class="font-bold mb-4" id="bg6lh">微信公众号 BG6LH</h3>
         <div class="flex flex-row mx-auto justify-center md:justify-start">
-            <picture><source type="image/avif" srcset="/img/ul2gn8FVCu-430.avif 430w"><source type="image/webp" srcset="/img/ul2gn8FVCu-430.webp 430w"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-430.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430"></picture>
+            <picture><source type="image/webp" srcset="/img/ul2gn8FVCu-400.webp 400w, /img/ul2gn8FVCu-430.webp 430w" sizes="auto"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-400.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430" srcset="/img/ul2gn8FVCu-400.jpeg 400w, /img/ul2gn8FVCu-430.jpeg 430w" sizes="auto"></picture>
         </div>
 
     </div>
@@ -530,7 +514,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/` was built on 2025-07-09T00:00:00.000Z -->
+		<!-- This page `/zh-CN/blog/how-i-educated-wechat-auditors-about-amateur-radio/` was built on 2025-07-10T00:00:00.000Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script type="module" src="/dist/ffw-ctNm7S.js"></script>

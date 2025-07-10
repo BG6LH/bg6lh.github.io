@@ -187,7 +187,7 @@ pre[class*="language-diff-"] {
         <meta property="og:title" content="FT-817/818的蓝牙DIGI模式试验板(2)优化更新">
         <meta property="og:description" content="上一篇介绍《FT-817/818的蓝牙DIGI模式试验板》提到“一点遗憾”，今天做了一次重要更新。">
         <meta property="og:type" content="article">
-        <meta property="article:tag" content="posts,Bluetooth,DIGI,FT-817,FT-818,JDY-67">
+        <meta property="article:tag" content="Bluetooth,DIGI,FT-817,FT-818,JDY-67">
         <meta property="og:url" content="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/">
         <meta property="og:site_name" content="BG6LH">
         <meta property="og:locale" content="zh_CN">
@@ -232,7 +232,7 @@ pre[class*="language-diff-"] {
         <div class="flex flex-row items-center">
             
                 <figure class="flex p-1 inline-block h-8 w-8 mr-2">
-                    <picture><source type="image/avif" srcset="/img/P2oVwTwU_L-601.avif 601w"><source type="image/webp" srcset="/img/P2oVwTwU_L-601.webp 601w"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-601.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601"></picture>
+                    <picture><source type="image/webp" srcset="/img/P2oVwTwU_L-400.webp 400w, /img/P2oVwTwU_L-601.webp 601w" sizes="auto"><img loading="lazy" decoding="async" src="/img/P2oVwTwU_L-400.png" class="h-8 w-8 rounded-full shadow-lg" alt="BG6LH" width="601" height="601" srcset="/img/P2oVwTwU_L-400.png 400w, /img/P2oVwTwU_L-601.png 601w" sizes="auto"></picture>
                 </figure>
             
             <a class="flex p-1 home-link" href="/">BG6LH</a>
@@ -372,7 +372,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </ul>
 <hr>
 <p>上一篇介绍 <a href="zh-CN/blog/ft-81x-bluetooth-digi-adaptor">《FT-817/818的蓝牙DIGI模式试验板》</a> 提到“一点遗憾”，今天做了一次重要更新。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/waDZ_bcfrB-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/waDZ_bcfrB-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/waDZ_bcfrB-1080.png" alt="图片" width="1080" height="810"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/waDZ_bcfrB-400.webp 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/waDZ_bcfrB-800.webp 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/waDZ_bcfrB-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/waDZ_bcfrB-400.png" alt="图片" width="1080" height="810" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/waDZ_bcfrB-400.png 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/waDZ_bcfrB-800.png 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/waDZ_bcfrB-1080.png 1080w" sizes="auto"></picture></p>
 <h2 id="%E7%94%B5%E6%BA%90%E6%9B%B4%E6%96%B0" tabindex="-1"><s>电源更新</s></h2>
 <div class="callout callout-warning">
 <p></p>
@@ -390,11 +390,11 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <p>几个无线电老中医们凑在一起会诊了这个现象。我们找到一份JDY-67的核心芯片BEKEN BK3266的Datasheet，发现里边应该有一个LDO稳压电路。JDY-67是个给山寨蓝牙音箱做的方案，它必然有山寨的绝活。或许为了适应各种锂电池，它可以适配更宽泛的电压。那本Datasheet里在不同地方提到了三种Vcc电压，3.3V、4.2V、5V。好吧，那我们就换个5V的LDO试试。</p>
 <p><strong>果然，药到病除。</strong></p>
 <p>现在蓝牙的Vcc上是4.99V。一直用到FT-818没电，自动关机，蓝牙连接再也没断过。后来BI1EIH优化了这部分电路。去掉了齐纳管，增加了一个滤波电感。通过MD6的PTT针脚引出信号，给电源增加了一个软开关。这样，在FT-818关机的时候，蓝牙板也会断电。野外架台，电池能省就省。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/hZ2ollQ-We-841.avif 841w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/hZ2ollQ-We-841.webp 841w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/hZ2ollQ-We-841.png" alt="图片" width="841" height="595"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/hZ2ollQ-We-400.webp 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/hZ2ollQ-We-800.webp 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/hZ2ollQ-We-841.webp 841w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/hZ2ollQ-We-400.png" alt="图片" width="841" height="595" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/hZ2ollQ-We-400.png 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/hZ2ollQ-We-800.png 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/hZ2ollQ-We-841.png 841w" sizes="auto"></picture></p>
 <h2 id="%E5%85%B6%E5%AE%83%E4%BC%98%E5%8C%96" tabindex="-1">其它优化</h2>
 <p>音频部分的可调电阻，测试之后发现没有啥必要，改成了固定值。软件调音量就好了； 之前个 别接地的焊盘不太容易上锡，这次优化了一下PCB覆铜的散热规则，接地焊盘做了热隔离，再焊接会容易多了。</p>
 <p>这次还特别把音频和信号的布线分别做在了PCB的正反两面。希望有更好的射频隔离。</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/5Y22EOaXt6-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/5Y22EOaXt6-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/5Y22EOaXt6-1080.png" alt="图片" width="1080" height="439"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/5Y22EOaXt6-400.webp 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/5Y22EOaXt6-800.webp 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/5Y22EOaXt6-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/5Y22EOaXt6-400.png" alt="图片" width="1080" height="439" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/5Y22EOaXt6-400.png 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/5Y22EOaXt6-800.png 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/5Y22EOaXt6-1080.png 1080w" sizes="auto"></picture></p>
 <h2 id="%E8%BD%AF%E4%BB%B6%E5%92%8C%E9%A9%B1%E5%8A%A8%E7%9A%84%E9%97%AE%E9%A2%98" tabindex="-1">软件和驱动的问题</h2>
 <p>新板(20230608)刚下单，还没做出来。但是在上一版(20230527)PCB的基础上升压以后，做了一系列测试，至少可以排除一些硬件问题，区分出来一些软件问题。</p>
 <h3 id="ft8cn" tabindex="-1">FT8CN</h3>
@@ -409,7 +409,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 <p>之所以说是一部分，因为Mac版WSJT-X还不能直接获得JDY-67的音频。必须要打开Mac的系统音量设置面板才行。这太奇怪了吧。</p>
 <p>其实在WSJT-X的音频设置里，的确识别出来了一个叫JDY-67-Audio的设备。但是，它没法区分哪个输入、哪个是输出。我猜想，可能是系统音量设置可以区别出JDY-67的输入和输出。所以打开那个面板之后，WSJT-X才能分出来输入输出。不过就算打开了系统音量设置面板，一旦发射几轮之后，JDY-67也会掉线。只能重启蓝牙，重启一系列软件工具链，重新连接。</p>
 <p>结合上述复杂的体验，我感觉JDY-67过于强(山)大(寨)，可兼容的方案太多，设备名称好几个，所以在不同的操作系统里的识别结果有点乱了。至少目前看来，软件问题大部分还是设备识别的问题。暂时不能定性为电台的射频RFI问题。要不要去Linux宇宙看看，要不要这么自虐？或许Linux的开放性能帮助分析这些稀奇古怪的问题？</p>
-<p><picture><source type="image/avif" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/1Cd8ugn-_L-1080.avif 1080w"><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/1Cd8ugn-_L-1080.webp 1080w"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/1Cd8ugn-_L-1080.png" alt="图片" width="1080" height="439"></picture></p>
+<p><picture><source type="image/webp" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/1Cd8ugn-_L-400.webp 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/1Cd8ugn-_L-800.webp 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/1Cd8ugn-_L-1080.webp 1080w" sizes="auto"><img loading="lazy" decoding="async" src="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/1Cd8ugn-_L-400.png" alt="图片" width="1080" height="439" srcset="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/1Cd8ugn-_L-400.png 400w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/1Cd8ugn-_L-800.png 800w, /zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/1Cd8ugn-_L-1080.png 1080w" sizes="auto"></picture></p>
 <p>最后，目前发布的蓝牙DIGI板设计，基本接近硬件的理想性能了。大家一起下手试一下吧。</p>
 <ul>
 <li>Gitee <a href="https://gitee.com/bg6lh/FT-81x-BT-DIGI-Adaptor">https://gitee.com/bg6lh/FT-81x-BT-DIGI-Adaptor</a></li>
@@ -427,22 +427,6 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <div class="mx-auto grid grid-cols-1 gap-2 py-12
                     md:grid-cols-2
                 ">
-                        <a href="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/" class="
-                        flex flex-col left-0 p-2 block hover:bg-neutral-100
-                        ">
-                            < 上一篇
-                            <br>
-                            FT-817/818的蓝牙DIGI模式试验板(1)
-                        </a>
-                    
-                        <a href="/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/" class="
-                        flex flex-col md:text-right right-0 p-2 hover:bg-neutral-100
-                        ">
-                            下一篇 >
-                            <br>
-                            FT-817/818的蓝牙DIGI模式试验板(3)紧急更新
-                        </a>
-                    
         </div>
         <!-- 翻页器 end -->
 
@@ -539,7 +523,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
         <br>
         <h3 class="font-bold mb-4" id="bg6lh">微信公众号 BG6LH</h3>
         <div class="flex flex-row mx-auto justify-center md:justify-start">
-            <picture><source type="image/avif" srcset="/img/ul2gn8FVCu-430.avif 430w"><source type="image/webp" srcset="/img/ul2gn8FVCu-430.webp 430w"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-430.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430"></picture>
+            <picture><source type="image/webp" srcset="/img/ul2gn8FVCu-400.webp 400w, /img/ul2gn8FVCu-430.webp 430w" sizes="auto"><img loading="lazy" decoding="async" src="/img/ul2gn8FVCu-400.jpeg" alt="" class="w-32 sm:w-32" width="430" height="430" srcset="/img/ul2gn8FVCu-400.jpeg 400w, /img/ul2gn8FVCu-430.jpeg 430w" sizes="auto"></picture>
         </div>
 
     </div>
@@ -561,7 +545,7 @@ font-medium transition-all duration-100" x-show="open" x-transition:enter="trans
 </section>
 
 		</footer>
-		<!-- This page `/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/` was built on 2025-07-09T00:00:00.000Z -->
+		<!-- This page `/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/` was built on 2025-07-10T00:00:00.000Z -->
 <!-- Alpine 状态定义 -->
 		<script defer="" src="/js/alpinejs@3.x.x.js"></script>
 		<script type="module" src="/dist/ffw-ctNm7S.js"></script>
