@@ -225,3 +225,26 @@ class HeadingAnchors extends HTMLElement {
 HeadingAnchors.register();
 
 export { HeadingAnchors }
+window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-W8B7NZXYLN');
+window.addEventListener('load', function () {
+    const giscus = document.createElement('script');
+    giscus.src = 'https://giscus.app/client.js';
+    giscus.setAttribute('data-repo', 'BG6LH/bg6lh.github.io'); // 替换为您的仓库信息
+    giscus.setAttribute('data-repo-id', 'R_kgDOO4bJqA');
+    giscus.setAttribute('data-category', 'General');
+    giscus.setAttribute('data-category-id', 'DIC_kwDOO4bJqM4CrdWE');
+    giscus.setAttribute('data-mapping', 'pathname');
+    giscus.setAttribute('data-strict', '0');
+    giscus.setAttribute('data-reactions-enabled', '1');
+    giscus.setAttribute('data-emit-metadata', '1');
+    giscus.setAttribute('data-input-position', 'top');
+    giscus.setAttribute('data-theme', 'preferred_color_scheme');
+    giscus.setAttribute('data-lang', 'zh-CN');
+    giscus.setAttribute('data-loading', 'lazy');
+    giscus.async = true;
+    giscus.crossOrigin = 'anonymous';
+    document.getElementById('giscus_thread').appendChild(giscus);
+  });
