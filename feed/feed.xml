@@ -5,11 +5,50 @@
   <subtitle>CQ DE BG6LH K，欢迎访问我的数字花园！我的业余无线电笔记。Copyright © 2025 BG6LH</subtitle>
   <link href="https://bg6lh.github.io/feed/feed.xml" rel="self" />
   <link href="https://bg6lh.github.io/" />
-  <updated>2025-07-06T23:20:00Z</updated>
+  <updated>2025-09-28T04:19:00Z</updated>
   <id>https://bg6lh.github.io/</id>
   <author>
     <name>BG6LH</name>
   </author>
+  <entry>
+    <title>傻瓜DX徽章生成器</title>
+    <link href="https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/" />
+    <updated>2025-09-28T04:19:00Z</updated>
+    <id>https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/</id>
+    <content type="html">&lt;p&gt;傻瓜式DX徽章生成器上线了！如果你有LoTW账户，来给自己弄一套漂亮的徽章，贴在QRZ的Bio页面上，喜洋洋、 迎国庆吧～&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/I5Q52lhyzC-400.webp 400w, https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/I5Q52lhyzC-800.webp 800w, https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/I5Q52lhyzC-1046.webp 1046w&quot; sizes=&quot;auto&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/I5Q52lhyzC-400.png&quot; alt=&quot;Image&quot; width=&quot;1046&quot; height=&quot;1026&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/I5Q52lhyzC-400.png 400w, https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/I5Q52lhyzC-800.png 800w, https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/I5Q52lhyzC-1046.png 1046w&quot; sizes=&quot;auto&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;h2 id=&quot;dx%E5%BE%BD%E7%AB%A0%E7%BC%96%E8%BE%91%E5%99%A8&quot; tabindex=&quot;-1&quot;&gt;DX徽章编辑器&lt;/h2&gt;
+&lt;p&gt;我把上一篇文章里提到的《 &lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/lotw-dxcc-stats-shields-io-badges/&quot;&gt;为DXCC而生的Shields.io徽章&lt;/a&gt; 》改成了一个人人都能用的傻瓜工具。 网址：&lt;a href=&quot;https://dxbadges.vercel.app/&quot;&gt;https://dxbadges.vercel.app/&lt;/a&gt;
+电脑上体验更佳，因为有拖拽编辑功能。你想要哪些徽章、用什么样的顺序、风格，拖拽几下就好，下边立刻自动输出用于QRZ的代码。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/_Xc1qdfjc9-400.webp 400w, https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/_Xc1qdfjc9-800.webp 800w, https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/_Xc1qdfjc9-1075.webp 1075w&quot; sizes=&quot;auto&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/_Xc1qdfjc9-400.png&quot; alt=&quot;Image&quot; width=&quot;1075&quot; height=&quot;1111&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/_Xc1qdfjc9-400.png 400w, https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/_Xc1qdfjc9-800.png 800w, https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/_Xc1qdfjc9-1075.png 1075w&quot; sizes=&quot;auto&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;h2 id=&quot;%E8%87%AA%E5%8A%A8%E6%9F%A5%E8%AF%A2lotw&quot; tabindex=&quot;-1&quot;&gt;自动查询LoTW&lt;/h2&gt;
+&lt;p&gt;这是一个基于LoTW系统的衍生服务， 你只要输入自己的LoTW账户和密码，给一个通联开始日期，它就可以替你完成LoTW的通联记录统计。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/D_SllxwqMh-400.webp 400w, https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/D_SllxwqMh-800.webp 800w, https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/D_SllxwqMh-1061.webp 1061w&quot; sizes=&quot;auto&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/D_SllxwqMh-400.png&quot; alt=&quot;Image&quot; width=&quot;1061&quot; height=&quot;874&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/D_SllxwqMh-400.png 400w, https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/D_SllxwqMh-800.png 800w, https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/D_SllxwqMh-1061.png 1061w&quot; sizes=&quot;auto&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;h2 id=&quot;%E7%9B%AE%E5%89%8D%E5%8F%AF%E4%BB%A5%E7%94%9F%E6%88%9010%E4%B8%AA%E5%BE%BD%E7%AB%A0%EF%BC%9A&quot; tabindex=&quot;-1&quot;&gt;目前可以生成10个徽章：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;DXCC，确认的DXCC实体数&lt;/li&gt;
+&lt;li&gt;QSO，上传到LoTW的通联总数&lt;/li&gt;
+&lt;li&gt;QSL，在LoTW上确认的总数&lt;/li&gt;
+&lt;li&gt;WPX，确认的CQ杂志呼号字头&lt;/li&gt;
+&lt;li&gt;WAZ，确认的CQ杂志分区数&lt;/li&gt;
+&lt;li&gt;IOTA，确认海岛总数&lt;/li&gt;
+&lt;li&gt;GRIDS，确认的 &lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247483672&amp;amp;idx=1&amp;amp;sn=54b09c008bee364b6dd6a68e2b6235dc&amp;amp;scene=21#wechat_redirect&quot;&gt;梅登黑德网格&lt;/a&gt; 数&lt;/li&gt;
+&lt;li&gt;ITU Zone，确认的ITU分区数&lt;/li&gt;
+&lt;li&gt;WAS，确认的美国50个州数&lt;/li&gt;
+&lt;li&gt;WAPC，通联中国之省徽章，这是 专门为中国定制 的，帮你统计通联过多少个中国的省、自治区、直辖市、特别行政区，且必须包含中国台湾地区。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所有以上统计都严格遵循了每个奖项的官方规则。未来会逐步增加一些新徽章，基于LoTW的统计的，比如VUCC那些，看群众呼声了。&lt;/p&gt;
+&lt;h2 id=&quot;qrz%E4%BB%A3%E7%A0%81&quot; tabindex=&quot;-1&quot;&gt;QRZ代码&lt;/h2&gt;
+&lt;p&gt;统计完成，它会给你两种主流的嵌入网页用的代码。&lt;/p&gt;
+&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/IqDPlSdj_Z-400.webp 400w, https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/IqDPlSdj_Z-800.webp 800w, https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/IqDPlSdj_Z-963.webp 963w&quot; sizes=&quot;auto&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/IqDPlSdj_Z-400.png&quot; alt=&quot;Image&quot; width=&quot;963&quot; height=&quot;512&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/IqDPlSdj_Z-400.png 400w, https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/IqDPlSdj_Z-800.png 800w, https://bg6lh.github.io/zh-CN/blog/dx-badges-generator/IqDPlSdj_Z-963.png 963w&quot; sizes=&quot;auto&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
+&lt;p&gt;HTML直接贴到QRZ的Bio页面最合适不过了，拿走不谢！&lt;/p&gt;
+&lt;p&gt;Markdown是一种程序员喜欢的文档格式，可以用在Github的个人介绍页面上。&lt;/p&gt;
+&lt;h2 id=&quot;shields.io%E7%9A%84%E5%BE%BD%E7%AB%A0&quot; tabindex=&quot;-1&quot;&gt;Shields.io的徽章&lt;/h2&gt;
+&lt;p&gt;懂Morse的程序员发现了，徽章是用Shields.io的API，配合查到的LoTW统计生成。这种徽章程序员很喜欢用，所以我也就不再重复发明轮子了。&lt;/p&gt;
+&lt;p&gt;做一套跨界 无线电和程序员 的徽章，挂在自己的网站上，要不要这么酷啊？&lt;/p&gt;
+&lt;p&gt;最后再说一遍，傻瓜DX徽章编辑器 网址： &lt;a href=&quot;https://dxbadges.vercel.app/&quot;&gt;https://dxbadges.vercel.app/&lt;/a&gt;  电脑体验更佳，因为有拖拽功能。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>为DXCC而生的Shields.io徽章</title>
     <link href="https://bg6lh.github.io/zh-CN/blog/lotw-dxcc-stats-shields-io-badges/" />
@@ -683,58 +722,6 @@ AI跟PD0R的QSO
 &lt;p&gt;无论如何，这是一个真正的、基于SCU-LAN10的四个DUP端口完成的、 真真实实的远程操作。如果实时性还说得过去， 那些远程桌面软件看来可以下岗了。&lt;/p&gt;
 &lt;p&gt;终于有人搞明白了SCU-LAN10的协议，打开了第三方软件控制的大门。 目前还不知道这是不是YAESU授权的。但是这套软件，或许会把FTDX系列机的价值，提升到Flexradio体系的水平了。&lt;/p&gt;
 &lt;p&gt;这个神秘的文档网站在这里， 有兴趣了解这个软件细节的朋友，&lt;a href=&quot;https://documents.roskosch.de/ham-control-yaesu-mac/index.html&quot;&gt;可以去看看&lt;/a&gt;。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>FT-817/818蓝牙板(7)电源电阻参数更正！</title>
-    <link href="https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/" />
-    <updated>2024-01-20T15:38:00Z</updated>
-    <id>https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/</id>
-    <content type="html">&lt;p&gt;&lt;strong&gt;FT-817/818的蓝牙板合集&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor/&quot;&gt;FT-817/818的蓝牙DIGI模式试验板(1)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-2-update/&quot;&gt;FT-817/818的蓝牙DIGI模式试验板(2)优化更新&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-3-urgent-update/&quot;&gt;FT-817/818的蓝牙DIGI模式试验板(3)紧急更新&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-4-mini-din-connectors/&quot;&gt;FT-817/818的蓝牙DIGI模式试验板(4)Mini DIN插头&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-5-about-jdy-67/&quot;&gt;FT-817/818的蓝牙DIGI模式试验板(5)蓝牙模块JDY-67&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-6-saving-r1235/&quot;&gt;FT-817/818蓝牙板(6)拯救R1235&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/&quot;&gt;FT-817/818蓝牙板(7)电源电阻参数更正！&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;%E5%85%88%E8%AF%B4%E7%BB%93%E8%AE%BA&quot; tabindex=&quot;-1&quot;&gt;先说结论&lt;/h2&gt;
-&lt;p&gt;建 议 ： 最终 保护电阻和 软 开关电阻的选择&lt;/p&gt;
-&lt;pre class=&quot;language-makefile&quot; tabindex=&quot;0&quot;&gt;&lt;code class=&quot;language-makefile&quot;&gt;R6 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; 10Ω
-R10 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; 100KΩ
-R11 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; 100KΩ
-R12 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; 1KΩ
-此外，U2依然可以选择 LM1117-3.3V&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;%E8%A8%80%E5%BD%92%E6%AD%A3%E4%BC%A0&quot; tabindex=&quot;-1&quot;&gt;言归正传&lt;/h2&gt;
-&lt;p&gt;前几天自己又做了一个，把最后一块JDY-67用上了， 然鹅竟没有成功。&lt;/p&gt;
-&lt;p&gt;我是按照已经发布在Github上的BOM List做的。这说明BOM List上还有不正确的元件配置。 &lt;strong&gt;这里跟各位先道个歉&lt;/strong&gt; 。&lt;/p&gt;
-&lt;p&gt;我用万用表测量了LM1117-5V的输入输出电压，都低得离谱。 这个板 子 最 主要 的功 能就是从 ACC 取电，给LM1117供电；再 借用 PT T 接口电压的通断情况， 给取电 电 路 加了一个 软开关 。所以大概率还是这里的问题。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/7OGmIErGRH-400.webp 400w, https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/7OGmIErGRH-800.webp 800w, https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/7OGmIErGRH-1080.webp 1080w&quot; sizes=&quot;auto&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/7OGmIErGRH-400.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;494&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/7OGmIErGRH-400.png 400w, https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/7OGmIErGRH-800.png 800w, https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/7OGmIErGRH-1080.png 1080w&quot; sizes=&quot;auto&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;供电部分原理图&lt;/p&gt;
-&lt;p&gt;回顾最后一次成功 &lt;a href=&quot;http://mp.weixin.qq.com/s?__biz=MzI0NTgxNDI0NQ==&amp;amp;mid=2247484438&amp;amp;idx=1&amp;amp;sn=b9d2181a3110e7b25d20ae7037cb843e&amp;amp;chksm=e949829cde3e0b8a535c0dcf4bd899bc6ad73052f3558a8f570879a436099b9d323c12931070&amp;amp;scene=21#wechat_redirect&quot;&gt;《拯救R1235》&lt;/a&gt; ，当时其实我已经把软开关里的几个电阻都做了调整。成功时它们的值分别是：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;R6 = 10 Ω&lt;/li&gt;
-&lt;li&gt;R10 = 100KΩ&lt;/li&gt;
-&lt;li&gt;R11 = 100 KΩ&lt;/li&gt;
-&lt;li&gt;R12 = 10 KΩ&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;然后我才发现FT-818的R1235坏了，更换了之后就成功了。 所以 这几个阻值的变化带来的功效被忽略了。&lt;/p&gt;
-&lt;h2 id=&quot;%E7%94%B5%E9%98%BB%E9%80%89%E6%8B%A9&quot; tabindex=&quot;-1&quot;&gt;电阻选择&lt;/h2&gt;
-&lt;p&gt;说实话“软开关”是我的知识盲点，我是依葫芦画瓢的。有几个无线电老中医都给了我葫芦。R10/R11的推荐都是 100 KΩ ，但是R12， 一位老中医用仿真软件实验了一下，认为1KΩ最佳。 另外一个老中医开的方子是10KΩ 。&lt;/p&gt;
-&lt;p&gt;正好我手边还有另外一个不工作的板子，于是 我按照大家的方子，改出了两套组合。他们目前都正常工作了，而且 看起来差别不大。&lt;/p&gt;
-&lt;p&gt;&lt;picture&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/0pGA6IwQO5-400.webp 400w, https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/0pGA6IwQO5-800.webp 800w, https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/0pGA6IwQO5-1080.webp 1080w&quot; sizes=&quot;auto&quot;&gt;&lt;img loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/0pGA6IwQO5-400.png&quot; alt=&quot;图片&quot; width=&quot;1080&quot; height=&quot;187&quot; srcset=&quot;https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/0pGA6IwQO5-400.png 400w, https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/0pGA6IwQO5-800.png 800w, https://bg6lh.github.io/zh-CN/blog/ft-81x-bluetooth-digi-adaptor-7-resistors-parameter-correction/0pGA6IwQO5-1080.png 1080w&quot; sizes=&quot;auto&quot;&gt;&lt;/picture&gt;&lt;/p&gt;
-&lt;p&gt;压降的差别应该就是在R6的10Ω和22Ω的选择上。 所以建议还是用第一套组合，用仿真跑过的。&lt;/p&gt;
-&lt;p&gt;最后，还是分享一下PCB打板的Gerber下载地址：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Gitee &lt;a href=&quot;https://gitee.com/bg6lh/FT-81x-BT-DIGI-Adaptor&quot;&gt;https://gitee.com/bg6lh/FT-81x-BT-DIGI-Adaptor&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Github &lt;a href=&quot;https://github.com/BG6LH/FT-81x-BT-DIGI-Adaptor&quot;&gt;https://github.com/BG6LH/FT-81x-BT-DIGI-Adaptor&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;以及3D打印文件下载地址：&lt;a href=&quot;https://www.thingiverse.com/thing:6116435&quot;&gt;https://www.thingiverse.com/thing:6116435&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;最新版设计文件都发布在了Github上，并正式发布了Release v1.0.0。Gitee是自动同步的版本。&lt;/p&gt;
-&lt;p&gt;至此，这个基于JDY-67蓝牙模块的FT-817/818 DIGI适配器设计，正式告一段落。&lt;/p&gt;
 </content>
   </entry>
 </feed>
